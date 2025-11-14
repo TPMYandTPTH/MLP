@@ -1,20 +1,20 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>テレパフォーマンス採用 | マレーシア・タイで働く日本語スピーカー募集</title>
-<meta name="description" content="テレパフォーマンス（TP）マレーシア・タイの日本語スピーカー採用。世界100カ国以上で展開するグローバルBPO企業。就労ビザ・移住サポート完備。">
+<title>Teleperformance招聘 | 马来西亚·泰国中文职位</title>
+<meta name="description" content="Teleperformance（TP）马来西亚·泰国中文职位招聘。全球100多个国家的BPO企业。提供工作签证及移居支持。">
 <meta name="theme-color" content="#000000">
 <meta property="og:type" content="website">
-<meta property="og:locale" content="ja_JP">
-<meta property="og:title" content="テレパフォーマンス採用 | マレーシア・タイで働く">
-<meta property="og:description" content="日本語を活かして海外で働く。充実の福利厚生と移住サポート。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:title" content="Teleperformance招聘 | 马来西亚·泰国工作">
+<meta property="og:description" content="运用中文在海外工作。完善的福利待遇和移居支持。">
 <meta property="og:image" content="https://tpmyandtpth.github.io/JLP/photos/TPLogo11.png">
 <meta property="og:url" content="https://tpmyandtpth.github.io/JLP/">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="テレパフォーマンス採用 | マレーシア・タイで働く">
-<meta name="twitter:description" content="日本語を活かして海外で働く。充実の福利厚生と移住サポート。">
+<meta name="twitter:title" content="Teleperformance招聘 | 马来西亚·泰国工作">
+<meta name="twitter:description" content="运用中文在海外工作。完善的福利待遇和移居支持。">
 <meta name="twitter:image" content="https://tpmyandtpth.github.io/JLP/photos/TPLogo11.png">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://tpmyandtpth.github.io/JLP/">
@@ -26,8 +26,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<!-- Fonts (Optimized - only loading weights actually used) -->
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Zen+Maru+Gothic:wght@700&display=swap" rel="stylesheet">
+<!-- Fonts (Optimized) -->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700;900&display=swap" rel="stylesheet">
 
 <style>
 /* CSS Variables */
@@ -64,12 +64,11 @@ html {
 }
 
 body {
-  font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
   color: var(--tp-dark);
   line-height: 1.75;
   background: var(--tp-white);
   -webkit-font-smoothing: antialiased;
-  font-feature-settings: "palt" 1;
 }
 
 a {
@@ -321,7 +320,6 @@ nav a:focus {
   color: var(--tp-black);
   line-height: 1.3;
   margin-bottom: 1rem;
-  font-family: 'Zen Maru Gothic', serif;
   letter-spacing: -0.02em;
   min-height: 1.4em;
 }
@@ -597,6 +595,21 @@ nav a:focus {
   line-height: 1.5;
 }
 
+/* Coming Soon Badge */
+.coming-soon-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: var(--accent-purple);
+  color: var(--tp-white);
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  z-index: 1;
+  box-shadow: 0 2px 8px rgba(120,0,150,0.3);
+}
+
 /* Icon Grid */
 .icon-grid {
   padding: 56px 20px;
@@ -754,6 +767,7 @@ nav a:focus {
   border-radius: 8px;
   overflow: hidden;
   transition: all 0.3s;
+  position: relative;
 }
 
 .city-card:hover,
@@ -993,6 +1007,7 @@ nav a:focus {
   border-radius: 8px;
   overflow: hidden;
   transition: all 0.3s;
+  position: relative;
 }
 
 .office-card:hover {
@@ -1332,43 +1347,6 @@ nav a:focus {
   font-size: 0.85rem;
 }
 
-/* ChatGPT Section */
-.chatgpt-section {
-  padding: 56px 20px;
-  background: var(--tp-white);
-}
-
-.chatgpt-container {
-  max-width: 700px;
-  margin: 2rem auto 0;
-}
-
-.chatgpt-box {
-  background: var(--tp-off);
-  border: 1px solid var(--tp-light);
-  border-radius: 8px;
-  padding: 1.5rem;
-}
-
-.chatgpt-prompt {
-  width: 100%;
-  min-height: 160px;
-  padding: 0.75rem;
-  border: 1px solid var(--tp-light);
-  border-radius: 4px;
-  font-family: 'Courier New', monospace;
-  font-size: 0.8rem;
-  background: var(--tp-white);
-  resize: vertical;
-}
-
-.chatgpt-buttons {
-  display: flex;
-  gap: 0.75rem;
-  margin-top: 1rem;
-  flex-wrap: wrap;
-}
-
 /* Contact */
 .contact-min { 
   padding: 56px 20px; 
@@ -1552,7 +1530,7 @@ footer::before {
   outline: none;
 }
 
-/* Floating Buttons with Transparency */
+/* Floating Buttons */
 .floating-apply {
   position: fixed;
   bottom: 20px;
@@ -1578,7 +1556,6 @@ footer::before {
   outline: none;
 }
 
-/* Casual Interview Floating Button */
 .floating-casual {
   position: fixed;
   bottom: 20px;
@@ -1604,7 +1581,6 @@ footer::before {
   outline: none;
 }
 
-/* Back to Top Button with Transparency */
 .back-to-top {
   position: fixed;
   bottom: 80px;
@@ -1751,10 +1727,6 @@ footer::before {
     grid-template-columns: 1fr;
   }
   
-  .form-row {
-    grid-template-columns: 1fr;
-  }
-  
   .icon-grid-container {
     grid-template-columns: 1fr;
   }
@@ -1776,16 +1748,16 @@ footer::before {
 }
 </style>
 
-<!-- Structured Data (Fixed URLs) -->
+<!-- Structured Data -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "TP Japan",
-  "alternateName": "TP Japan",
+  "name": "TP中国",
+  "alternateName": "TP中国",
   "url": "https://tpmyandtpth.github.io/JLP/",
   "logo": "https://tpmyandtpth.github.io/JLP/photos/TPLogo11.png",
-  "description": "テレパフォーマンス（TP）マレーシア・タイの日本語スピーカー採用。世界100カ国以上で展開するグローバルBPO企業。",
+  "description": "Teleperformance（TP）马来西亚·泰国中文职位招聘。全球100多个国家的BPO企业。",
   "address": {
     "@type": "PostalAddress",
     "addressCountry": "MY"
@@ -1798,74 +1770,74 @@ footer::before {
 </head>
 <body>
 <!-- Skip Navigation -->
-<a href="#main" class="sr-only">メインコンテンツへスキップ</a>
+<a href="#main" class="sr-only">跳转到主要内容</a>
 
 <header role="banner">
   <div class="header-inner">
     <a class="brand" href="https://tpmyandtpth.github.io/JLP/index.html">
-      <img src="photos/TPLogo11.png" alt="TP Japan" width="40" height="40">
+      <img src="photos/TPLogo11.png" alt="TP China" width="40" height="40">
       <div class="brand-text">
         <span class="brand-name">TP</span>
-        <span class="brand-tagline">日本採用 — マレーシア・タイ</span>
+        <span class="brand-tagline">中文招聘 — 马来西亚·泰国</span>
       </div>
     </a>
 
-    <nav aria-label="メインナビゲーション">
+    <nav aria-label="主导航">
       <ul>
-        <li><a href="https://tpmyandtpth.github.io/JLP/index.html" aria-current="page">ホーム</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/about-tp.html">TPについて</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/salary-and-benefits.html">給与・福利厚生</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/interview-process.html">面接プロセス</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/why-malaysia-thailand.html">なぜマレーシア・タイ</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/relocation-visa.html">移住・ビザサポート</a></li>
-        <li><a href="https://careerseng-teleperformance.icims.com/jobs/49026/customer-service-representative---japanese-speaking-%28kl%29/job?mode=job&iis=LANDINGPAGE" target="_blank" rel="noopener noreferrer" class="apply-btn">応募する</a></li>
+        <li><a href="https://tpmyandtpth.github.io/JLP/index.html" aria-current="page">首页</a></li>
+        <li><a href="https://tpmyandtpth.github.io/JLP/about-tp.html">关于TP</a></li>
+        <li><a href="https://tpmyandtpth.github.io/JLP/salary-and-benefits.html">薪资福利</a></li>
+        <li><a href="https://tpmyandtpth.github.io/JLP/interview-process.html">面试流程</a></li>
+        <li><a href="https://tpmyandtpth.github.io/JLP/why-malaysia-thailand.html">为什么选择马来西亚·泰国</a></li>
+        <li><a href="https://tpmyandtpth.github.io/JLP/relocation-visa.html">移居签证支持</a></li>
+        <li><a href="https://careerseng-teleperformance.icims.com/jobs/49026/customer-service-representative---japanese-speaking-%28kl%29/job?mode=job&iis=LANDINGPAGE" target="_blank" rel="noopener noreferrer" class="apply-btn">立即申请</a></li>
       </ul>
     </nav>
 
-    <button class="mobile-toggle" id="mobileToggle" aria-label="メニューを開く" aria-expanded="false">
+    <button class="mobile-toggle" id="mobileToggle" aria-label="打开菜单" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
 
-  <nav class="mobile-menu" id="mobileMenu" aria-label="モバイルナビゲーション">
+  <nav class="mobile-menu" id="mobileMenu" aria-label="移动导航">
     <ul>
-      <li><a href="https://tpmyandtpth.github.io/JLP/index.html">ホーム</a></li>
-      <li><a href="https://tpmyandtpth.github.io/JLP/about-tp.html">TPについて</a></li>
-      <li><a href="https://tpmyandtpth.github.io/JLP/salary-and-benefits.html">給与・福利厚生 </a></li>
-      <li><a href="https://tpmyandtpth.github.io/JLP/interview-process.html">面接プロセス</a></li>
-      <li><a href="https://tpmyandtpth.github.io/JLP/why-malaysia-thailand.html">なぜマレーシア・タイ</a></li>
-      <li><a href="https://tpmyandtpth.github.io/JLP/relocation-visa.html">移住・ビザサポート</a></li>
-      <li><a href="https://careerseng-teleperformance.icims.com/jobs/49026/customer-service-representative---japanese-speaking-%28kl%29/job?mode=job&iis=LANDINGPAGE" target="_blank" rel="noopener noreferrer" class="apply-btn">応募する</a></li>
+      <li><a href="https://tpmyandtpth.github.io/JLP/index.html">首页</a></li>
+      <li><a href="https://tpmyandtpth.github.io/JLP/about-tp.html">关于TP</a></li>
+      <li><a href="https://tpmyandtpth.github.io/JLP/salary-and-benefits.html">薪资福利</a></li>
+      <li><a href="https://tpmyandtpth.github.io/JLP/interview-process.html">面试流程</a></li>
+      <li><a href="https://tpmyandtpth.github.io/JLP/why-malaysia-thailand.html">为什么选择马来西亚·泰国</a></li>
+      <li><a href="https://tpmyandtpth.github.io/JLP/relocation-visa.html">移居签证支持</a></li>
+      <li><a href="https://careerseng-teleperformance.icims.com/jobs/49026/customer-service-representative---japanese-speaking-%28kl%29/job?mode=job&iis=LANDINGPAGE" target="_blank" rel="noopener noreferrer" class="apply-btn">立即申请</a></li>
     </ul>
   </nav>
 </header>
 
 <main id="main">
-  <!-- Hero Section (Fixed links) -->
+  <!-- Hero Section -->
   <section class="hero">
     <div class="hero-container">
       <h1><span id="hero-rotate"></span></h1>
       <p class="hero-subtitle">
-        あなたの新しいキャリアの舞台に、マレーシアという選択を。<br>
-        多国籍な環境と、日本語を活かせる仕事。<br>
-        コストを抑えた快適な暮らし。そんな「ちょうどいい」海外生活、マレーシアで始めませんか？
+        您的新职业舞台，马来西亚是一个不错的选择。<br>
+        多元文化环境，发挥您的中文优势。<br>
+        经济实惠的舒适生活。在马来西亚开启"刚刚好"的海外生活吧！
       </p>
       <div class="hero-cta">
-        <a href="https://tpmyandtpth.github.io/JLP/open-jobs.html" class="btn btn-accent">求人を見る</a>
-        <a href="https://tpmyandtpth.github.io/JLP/relocation-visa.html" class="btn btn-secondary">移住サポートを見る</a>
+        <a href="https://tpmyandtpth.github.io/JLP/open-jobs.html" class="btn btn-accent">查看职位</a>
+        <a href="https://tpmyandtpth.github.io/JLP/relocation-visa.html" class="btn btn-secondary">查看移居支持</a>
       </div>
       <div class="hero-stats">
         <div class="stat-item">
           <span class="stat-number">100+</span>
-          <span class="stat-label">拠点国</span>
+          <span class="stat-label">业务国家</span>
         </div>
         <div class="stat-item">
-          <span class="stat-number">500K+</span>
-          <span class="stat-label">従業員数（グローバル）</span>
+          <span class="stat-number">50万+</span>
+          <span class="stat-label">全球员工</span>
         </div>
         <div class="stat-item">
           <span class="stat-number">7,000+</span>
-          <span class="stat-label">従業員（マレーシア/タイ）</span>
+          <span class="stat-label">马来西亚/泰国员工</span>
         </div>
       </div>
     </div>
@@ -1874,17 +1846,17 @@ footer::before {
   <!-- About Section -->
   <section class="about-section" id="about">
     <div class="container">
-      <h2 class="section-title">TPマレーシア・タイ採用へようこそ</h2>
-      <p class="section-subtitle">あなたの次のキャリアがここから始まります！</p>
+      <h2 class="section-title">欢迎来到TP马来西亚·泰国招聘</h2>
+      <p class="section-subtitle">您的下一个职业生涯从这里开始！</p>
       <div class="about-content">
         <div class="about-text">
-          <p>TPは1978年にフランス パリにて設立されたBPO（ビジネスプロセスアウトソーシング）企業です。テレパフォーマンスは、世界100カ国以上・50万人以上の従業員を擁する、グローバルなビジネスサービスのリーダー企業です。</p>
-          <p>最先端のテクノロジーと優れた人材を融合し、世界中の有名ブランドに最高のカスタマーエクスペリエンスを提供しています。現在、日本語スピーカーを対象に、タイおよびマレーシアにて積極的な採用を行っております。</p>
-          <p>新卒の方から経験豊富なプロフェッショナルまで、皆さまの語学力と個性が活かせる、多文化で働きやすい職場をご用意しています。マレーシアとタイを合わせて日本人スタッフが多数在籍し、現在も増加中です。</p>
-          <div id="gptwYears" class="gptw-years" aria-label="Great Place to Work 6年連続受賞"></div>
+          <p>TP于1978年在法国巴黎成立，是一家BPO（业务流程外包）企业。Teleperformance是全球领先的商业服务公司，在100多个国家拥有超过50万名员工。</p>
+          <p>我们将最先进的技术与优秀人才相结合，为全球知名品牌提供最佳的客户体验。目前，我们正在泰国和马来西亚积极招聘中文人才。</p>
+          <p>从应届毕业生到经验丰富的专业人士，我们都提供能够发挥您语言能力和个性的多元文化工作环境。在马来西亚和泰国，许多中文员工正在职，人数还在不断增加。</p>
+          <div id="gptwYears" class="gptw-years" aria-label="Great Place to Work连续6年获奖"></div>
         </div>
         <div class="about-image">
-          <img src="photos/great place to work.png" alt="Great Place to Work® 認定ロゴ" loading="lazy" decoding="async">
+          <img src="photos/great place to work.png" alt="Great Place to Work®认证标志" loading="lazy" decoding="async">
         </div>
       </div>
     </div>
@@ -1893,79 +1865,79 @@ footer::before {
   <!-- Priority Menu -->
   <section class="priority-menu">
     <div class="container">
-      <h2 class="section-title">優先メニュー</h2>
-      <p class="section-subtitle">知りたい情報へすぐにアクセス</p>
+      <h2 class="section-title">优先菜单</h2>
+      <p class="section-subtitle">快速访问您想了解的信息</p>
       
       <div class="cards" id="priorityGrid">
-        <a href="https://tpmyandtpth.github.io/JLP/about-tp.html" class="card sortable-item" data-title="会社紹介">
-          <img src="photos/GBS.jpeg" alt="TPとは" loading="lazy">
+        <a href="https://tpmyandtpth.github.io/JLP/about-tp.html" class="card">
+          <img src="photos/GBS.jpeg" alt="关于TP" loading="lazy">
           <div class="card-content">
-            <h3>TPについて</h3>
-            <p>世界最大級のBPO企業</p>
+            <h3>关于TP</h3>
+            <p>全球最大的BPO企业之一</p>
           </div>
         </a>
 
-        <a href="https://tpmyandtpth.github.io/JLP/open-jobs.html" class="card sortable-item" data-title="求人を見る">
-          <img src="photos/Reception.png" alt="求人情報" loading="lazy">
+        <a href="https://tpmyandtpth.github.io/JLP/open-jobs.html" class="card">
+          <img src="photos/Reception.png" alt="职位信息" loading="lazy">
           <div class="card-content">
-            <h3>求人を見る</h3>
-            <p>日本語スピーカー向けポジション</p>
+            <h3>查看职位</h3>
+            <p>中文职位</p>
           </div>
         </a>
 
-        <a href="https://tpmyandtpth.github.io/JLP/salary-and-benefits.html" class="card sortable-item" data-title="給与・福利厚生">
-          <img src="photos/Reception%20(1).png" alt="福利厚生" loading="lazy">
+        <a href="https://tpmyandtpth.github.io/JLP/salary-and-benefits.html" class="card">
+          <img src="photos/Reception%20(1).png" alt="福利待遇" loading="lazy">
           <div class="card-content">
-            <h3>給与・福利厚生</h3>
-            <p>充実した待遇とサポート</p>
+            <h3>薪资福利</h3>
+            <p>完善的待遇和支持</p>
           </div>
         </a>
 
-        <a href="https://tpmyandtpth.github.io/JLP/relocation-visa.html" class="card sortable-item" data-title="移住・ビザサポート">
-          <img src="photos/Condo.jpg" alt="移住サポート" loading="lazy">
+        <a href="https://tpmyandtpth.github.io/JLP/relocation-visa.html" class="card">
+          <img src="photos/Condo.jpg" alt="移居支持" loading="lazy">
           <div class="card-content">
-            <h3>移住・ビザサポート</h3>
-            <p>完全サポート体制</p>
+            <h3>移居签证支持</h3>
+            <p>全方位支持体系</p>
           </div>
         </a>
 
-        <a href="https://tpmyandtpth.github.io/JLP/interview-process.html" class="card sortable-item" data-title="面接プロセス">
-          <img src="photos/Reception%20(2).png" alt="面接プロセス" loading="lazy">
+        <a href="https://tpmyandtpth.github.io/JLP/interview-process.html" class="card">
+          <img src="photos/Reception%20(2).png" alt="面试流程" loading="lazy">
           <div class="card-content">
-            <h3>面接プロセス</h3>
-            <p>オンラインで完結</p>
+            <h3>面试流程</h3>
+            <p>在线完成</p>
           </div>
         </a>
 
-        <a href="https://tpmyandtpth.github.io/JLP/why-malaysia-thailand.html" class="card sortable-item" data-title="マレーシア・タイの魅力">
-          <img src="photos/KL%201.jpg" alt="勤務地" loading="lazy">
+        <a href="https://tpmyandtpth.github.io/JLP/why-malaysia-thailand.html" class="card">
+          <img src="photos/KL%201.jpg" alt="工作地点" loading="lazy">
           <div class="card-content">
-            <h3>マレーシア・タイの魅力</h3>
-            <p>暮らしやすさと成長機会</p>
+            <h3>马来西亚·泰国的魅力</h3>
+            <p>宜居性和成长机会</p>
           </div>
         </a>
 
-        <a href="https://tpmyandtpth.github.io/JLP/casual-interview.html" class="card sortable-item" data-title="カジュアル面談">
-          <img src="photos/Akito%20san.jpg" alt="カジュアル面談" loading="lazy">
+        <a href="https://tpmyandtpth.github.io/JLP/casual-interview.html" class="card">
+          <img src="photos/Akito%20san.jpg" alt="轻松面谈" loading="lazy">
           <div class="card-content">
-            <h3>カジュアル面談</h3>
-            <p>まずは気軽に相談</p>
+            <h3>轻松面谈</h3>
+            <p>先轻松咨询</p>
           </div>
         </a>
 
-        <a href="https://tpmyandtpth.github.io/JLP/testimonials.html" class="card sortable-item" data-title="社員の声">
-          <img src="photos/Maho.png" alt="社員の声" loading="lazy">
+        <a href="https://tpmyandtpth.github.io/JLP/testimonials.html" class="card">
+          <img src="photos/Maho.png" alt="员工心声" loading="lazy">
           <div class="card-content">
-            <h3>社員の声</h3>
-            <p>実際に働く人の体験談</p>
+            <h3>员工心声</h3>
+            <p>实际工作者的体验谈</p>
           </div>
         </a>
 
-        <a href="https://tpmyandtpth.github.io/JLP/office-environment.html" class="card sortable-item" data-title="働く環境・バーチャルツアー">
-          <img src="photos/G%20TOWER.jpg" alt="オフィス環境" loading="lazy">
+        <a href="https://tpmyandtpth.github.io/JLP/office-environment.html" class="card">
+          <img src="photos/G%20TOWER.jpg" alt="办公环境" loading="lazy">
           <div class="card-content">
-            <h3>働く環境・バーチャルツアー</h3>
-            <p>オフィス環境とキャリアパス</p>
+            <h3>工作环境·虚拟参观</h3>
+            <p>办公环境和职业发展</p>
           </div>
         </a>
       </div>
@@ -1975,169 +1947,164 @@ footer::before {
   <!-- Icon Grid -->
   <section class="icon-grid">
     <div class="container">
-      <h2 class="section-title">生活情報・サポート</h2>
-      <p class="section-subtitle">暮らしに役立つ情報とリソース</p>
+      <h2 class="section-title">生活信息·支持</h2>
+      <p class="section-subtitle">有助于生活的信息和资源</p>
       <div class="icon-grid-container">
         <a href="https://tpmyandtpth.github.io/JLP/cost-of-living.html" class="icon-card">
           <span class="icon-card-icon">💰</span>
           <div class="icon-card-meta">
-            <div class="icon-card-title">マレーシア生活コスト</div>
-            <div class="icon-card-desc">食事・交通・住まい</div>
+            <div class="icon-card-title">马来西亚生活成本</div>
+            <div class="icon-card-desc">餐饮·交通·住房</div>
           </div>
         </a>
 
         <a href="https://tpmyandtpth.github.io/JLP/ta-team.html" class="icon-card">
           <span class="icon-card-icon">🤝</span>
           <div class="icon-card-meta">
-            <div class="icon-card-title">採用チーム紹介</div>
-            <div class="icon-card-desc">日本語でサポート</div>
+            <div class="icon-card-title">招聘团队介绍</div>
+            <div class="icon-card-desc">中文支持</div>
           </div>
         </a>
 
         <a href="https://tpmyandtpth.github.io/JLP/area-around-office.html" class="icon-card">
           <span class="icon-card-icon">📍</span>
           <div class="icon-card-meta">
-            <div class="icon-card-title">周辺環境</div>
-            <div class="icon-card-desc">オフィス周りの情報</div>
+            <div class="icon-card-title">周边环境</div>
+            <div class="icon-card-desc">办公室周边信息</div>
           </div>
         </a>
 
         <a href="https://tpmyandtpth.github.io/JLP/daily-life-malaysia.html" class="icon-card">
           <span class="icon-card-icon">🇲🇾</span>
           <div class="icon-card-meta">
-            <div class="icon-card-title">現地生活</div>
-            <div class="icon-card-desc">食事・交通・住まい</div>
+            <div class="icon-card-title">当地生活</div>
+            <div class="icon-card-desc">餐饮·交通·住房</div>
           </div>
         </a>
 
         <a href="https://tpmyandtpth.github.io/JLP/career-growth.html" class="icon-card">
           <span class="icon-card-icon">📈</span>
           <div class="icon-card-meta">
-            <div class="icon-card-title">キャリアパス・昇進制度</div>
-            <div class="icon-card-desc">言語・トレーニングプログラム</div>
+            <div class="icon-card-title">职业发展·晋升制度</div>
+            <div class="icon-card-desc">语言·培训项目</div>
           </div>
         </a>
         
         <a href="https://tpmyandtpth.github.io/JLP/culture-and-events.html" class="icon-card">
           <span class="icon-card-icon">🎉</span>
           <div class="icon-card-meta">
-            <div class="icon-card-title">イベント・社内カルチャー</div>
-            <div class="icon-card-desc">楽しい職場環境</div>
+            <div class="icon-card-title">活动·公司文化</div>
+            <div class="icon-card-desc">愉快的工作环境</div>
           </div>
         </a>
 
         <a href="https://tpmyandtpth.github.io/JLP/faq.html" class="icon-card">
           <span class="icon-card-icon">❓</span>
           <div class="icon-card-meta">
-            <div class="icon-card-title">FAQ・よくある質問</div>
-            <div class="icon-card-desc">疑問を解決</div>
+            <div class="icon-card-title">常见问题</div>
+            <div class="icon-card-desc">解决疑问</div>
           </div>
         </a>
 
         <a href="https://tpmyandtpth.github.io/xRAF/" target="_blank" rel="noopener noreferrer" class="icon-card">
           <span class="icon-card-icon">🌐</span>
           <div class="icon-card-meta">
-            <div class="icon-card-title">External RAF</div>
-            <div class="icon-card-desc">採用ポータル</div>
+            <div class="icon-card-title">外部推荐</div>
+            <div class="icon-card-desc">招聘门户</div>
           </div>
         </a>
 
         <a href="https://tpmyandtpth.github.io/JLP/" class="icon-card">
           <span class="icon-card-icon">📝</span>
           <div class="icon-card-meta">
-            <div class="icon-card-title">ブログ・コラム</div>
-            <div class="icon-card-desc">役立つ記事</div>
+            <div class="icon-card-title">博客·专栏</div>
+            <div class="icon-card-desc">有用的文章</div>
           </div>
         </a>
         
         <a href="https://line.me/R/ti/p/@286nmdsd?from=page&searchId=286nmdsd" target="_blank" rel="noopener noreferrer" class="icon-card">
           <span class="icon-card-icon">💬</span>
           <div class="icon-card-meta">
-            <div class="icon-card-title">LINE公式アカウント</div>
-            <div class="icon-card-desc">最新情報配信</div>
+            <div class="icon-card-title">LINE官方账号</div>
+            <div class="icon-card-desc">最新信息发布</div>
           </div>
         </a>
-        
       </div>
     </div>
   </section>
 
-  <!-- Video Section with 2 columns -->
+  <!-- Video Section -->
   <section class="video-section" id="videos">
     <div class="container">
-      <h2 class="section-title">社員インタビュー（動画）</h2>
-      <p class="section-subtitle">現場の声を短い動画でご紹介します</p>
+      <h2 class="section-title">员工访谈（视频）</h2>
+      <p class="section-subtitle">通过短视频介绍现场声音</p>
 
       <div class="video-grid">
-        <!-- New Video -->
         <article class="video-card">
           <div class="video-embed">
             <iframe
               src="https://www.youtube.com/embed/N6l7PUQR0tw"
-              title="TP社員インタビュー：最新動画"
+              title="TP员工访谈：最新视频"
               loading="lazy"
               decoding="async"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowfullscreen></iframe>
           </div>
           <header class="video-meta">
-            <h3 class="video-title">TP社員インタビュー：最新動画</h3>
-            <p class="video-desc">実際に働く社員のリアルな声をお届け</p>
-            <a class="video-link" href="https://youtu.be/N6l7PUQR0tw" target="_blank" rel="noopener noreferrer">YouTubeで見る →</a>
+            <h3 class="video-title">TP员工访谈：最新视频</h3>
+            <p class="video-desc">听取实际工作员工的真实声音</p>
+            <a class="video-link" href="https://youtu.be/N6l7PUQR0tw" target="_blank" rel="noopener noreferrer">在YouTube上观看 →</a>
           </header>
         </article>
 
-        <!-- Agent Video -->
         <article class="video-card">
           <div class="video-embed">
             <iframe
               src="https://www.youtube.com/embed/H4SVUrCjTPM"
-              title="TP社員インタビュー：エージェント編"
+              title="TP员工访谈：客服专员篇"
               loading="lazy"
               decoding="async"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowfullscreen></iframe>
           </div>
           <header class="video-meta">
-            <h3 class="video-title">TP社員インタビュー：エージェント編</h3>
-            <p class="video-desc">採用の最前線で活躍するエージェントの視点</p>
-            <a class="video-link" href="https://youtu.be/H4SVUrCjTPM" target="_blank" rel="noopener noreferrer">YouTubeで見る →</a>
+            <h3 class="video-title">TP员工访谈：客服专员篇</h3>
+            <p class="video-desc">在招聘第一线活跃的员工视角</p>
+            <a class="video-link" href="https://youtu.be/H4SVUrCjTPM" target="_blank" rel="noopener noreferrer">在YouTube上观看 →</a>
           </header>
         </article>
 
-        <!-- Team Leader Video -->
         <article class="video-card">
           <div class="video-embed">
             <iframe
               src="https://www.youtube.com/embed/VB6KSdFYLdE"
-              title="TP社員インタビュー：チームリーダー編"
+              title="TP员工访谈：团队领导篇"
               loading="lazy"
               decoding="async"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowfullscreen></iframe>
           </div>
           <header class="video-meta">
-            <h3 class="video-title">TP社員インタビュー：チームリーダー編</h3>
-            <p class="video-desc">現場マネジメント・育成のリアル</p>
-            <a class="video-link" href="https://youtu.be/VB6KSdFYLdE" target="_blank" rel="noopener noreferrer">YouTubeで見る →</a>
+            <h3 class="video-title">TP员工访谈：团队领导篇</h3>
+            <p class="video-desc">现场管理·培训的真实情况</p>
+            <a class="video-link" href="https://youtu.be/VB6KSdFYLdE" target="_blank" rel="noopener noreferrer">在YouTube上观看 →</a>
           </header>
         </article>
 
-        <!-- Operations Manager Video -->
         <article class="video-card">
           <div class="video-embed">
             <iframe
               src="https://www.youtube.com/embed/pa-qdCGkxA4"
-              title="TP社員インタビュー：オペレーションマネージャー編"
+              title="TP员工访谈：运营经理篇"
               loading="lazy"
               decoding="async"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowfullscreen></iframe>
           </div>
           <header class="video-meta">
-            <h3 class="video-title">TP社員インタビュー：オペレーションマネージャー編</h3>
-            <p class="video-desc">品質・生産性を支えるオペレーションの舞台裏</p>
-            <a class="video-link" href="https://youtu.be/pa-qdCGkxA4" target="_blank" rel="noopener noreferrer">YouTubeで見る →</a>
+            <h3 class="video-title">TP员工访谈：运营经理篇</h3>
+            <p class="video-desc">支持质量·生产力的运营幕后</p>
+            <a class="video-link" href="https://youtu.be/pa-qdCGkxA4" target="_blank" rel="noopener noreferrer">在YouTube上观看 →</a>
           </header>
         </article>
       </div>
@@ -2147,10 +2114,10 @@ footer::before {
   <!-- World Map Section -->
   <section class="world-map-section">
     <div class="container">
-      <h2 class="section-title">世界に広がるTPネットワーク</h2>
-      <p class="section-subtitle">100カ国以上の拠点でグローバルサービスを提供</p>
+      <h2 class="section-title">遍布全球的TP网络</h2>
+      <p class="section-subtitle">在100多个国家提供全球服务</p>
       <div class="world-map-container">
-        <img src="photos/world map locations.png" alt="TP 世界拠点マップ" loading="lazy" decoding="async">
+        <img src="photos/world map locations.png" alt="TP全球据点地图" loading="lazy" decoding="async">
       </div>
     </div>
   </section>
@@ -2158,359 +2125,403 @@ footer::before {
   <!-- Cities Section -->
   <section class="cities" id="cities">
     <div class="container">
-      <h2 class="section-title">勤務先都市のご紹介</h2>
-      <p class="section-subtitle">マレーシア＆タイの魅力的な3都市</p>
+      <h2 class="section-title">工作城市介绍</h2>
+      <p class="section-subtitle">马来西亚和泰国的魅力城市</p>
 
       <div class="city-cards" id="cityGrid">
-        <article class="city-card sortable-item" data-title="クアラルンプール">
-          <img src="photos/KL%201.jpg" alt="クアラルンプール" loading="lazy">
+        <article class="city-card">
+          <img src="photos/KL%201.jpg" alt="吉隆坡" loading="lazy">
           <div class="city-card-content">
-            <h3>クアラルンプール（KL）</h3>
-            <p class="city-country">マレーシア</p>
+            <h3>吉隆坡（KL）</h3>
+            <p class="city-country">马来西亚</p>
             <ul class="city-features">
-              <li>多数の日本人が暮らすグローバル都市</li>
-              <li>ドン・キホーテ、AEON、伊勢丹あり</li>
-              <li>日本語対応の病院・クリニック充実</li>
-              <li>MRT・モノレールで通勤も便利</li>
+              <li>许多华人居住的全球化城市</li>
+              <li>有唐吉诃德、永旺、伊势丹</li>
+              <li>提供中文服务的医院·诊所齐全</li>
+              <li>MRT·单轨列车通勤便利</li>
             </ul>
-            <a href="https://tpmyandtpth.github.io/JLP/why-malaysia-thailand.html#kl" aria-label="クアラルンプールの詳細を見る">詳しく見る →</a>
+            <a href="https://tpmyandtpth.github.io/JLP/why-malaysia-thailand.html#kl" aria-label="查看吉隆坡详情">查看详情 →</a>
           </div>
         </article>
 
-        <article class="city-card sortable-item" data-title="ペナン">
-          <img src="photos/Penang.jpg" alt="ペナン" loading="lazy">
+        <article class="city-card">
+          <img src="photos/Penang.jpg" alt="槟城" loading="lazy">
           <div class="city-card-content">
-            <h3>ペナン（Penang）</h3>
-            <p class="city-country">マレーシア</p>
+            <h3>槟城（Penang）</h3>
+            <p class="city-country">马来西亚</p>
             <ul class="city-features">
-              <li>世界遺産ジョージタウンの歴史の街</li>
-              <li>リゾートと都市が融合した環境</li>
-              <li>物価が非常に安く生活しやすい</li>
-              <li>日本人コミュニティが充実</li>
+              <li>世界遗产乔治市的历史之城</li>
+              <li>度假胜地与城市融合的环境</li>
+              <li>物价非常便宜，生活便利</li>
+              <li>华人社区完善</li>
             </ul>
-            <a href="https://tpmyandtpth.github.io/JLP/why-malaysia-thailand.html#penang" aria-label="ペナンの詳細を見る">詳しく見る →</a>
+            <a href="https://tpmyandtpth.github.io/JLP/why-malaysia-thailand.html#penang" aria-label="查看槟城详情">查看详情 →</a>
           </div>
         </article>
 
-        <article class="city-card sortable-item" data-title="バンコク">
-          <img src="photos/Bangkok%202.jpg" alt="バンコク" loading="lazy">
-          <div class="city-card-content">
-            <h3>バンコク（Bangkok）</h3>
-            <p class="city-country">タイ</p>
+        <article class="city-card">
+          <img src="photos/Bangkok%202.jpg" alt="曼谷" loading="lazy">
+          <div class="card-content">
+            <h3>曼谷（Bangkok）</h3>
+            <p class="city-country">泰国</p>
             <ul class="city-features">
-              <li>約8万人以上の日本人が暮らす都市</li>
-              <li>フジスーパー、伊勢丹など充実</li>
-              <li>BTSやMRTで移動も快適</li>
-              <li>医療水準が非常に高い</li>
+              <li>超过8万华人居住的城市</li>
+              <li>富士超市、伊势丹等完善</li>
+              <li>BTS和MRT移动舒适</li>
+              <li>医疗水平非常高</li>
             </ul>
-            <a href="https://tpmyandtpth.github.io/JLP/why-malaysia-thailand.html#bangkok" aria-label="バンコクの詳細を見る">詳しく見る →</a>
+            <a href="https://tpmyandtpth.github.io/JLP/why-malaysia-thailand.html#bangkok" aria-label="查看曼谷详情">查看详情 →</a>
+          </div>
+        </article>
+
+        <article class="city-card">
+          <span class="coming-soon-badge">即将推出</span>
+          <img src="photos/KL%201.jpg" alt="双威" loading="lazy">
+          <div class="city-card-content">
+            <h3>双威（Sunway）</h3>
+            <p class="city-country">马来西亚</p>
+            <ul class="city-features">
+              <li>综合城镇发展区</li>
+              <li>毗邻双威金字塔购物中心</li>
+              <li>靠近双威大学</li>
+              <li>现代化办公环境</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="city-card">
+          <span class="coming-soon-badge">即将推出</span>
+          <img src="photos/KL%202.jpg" alt="柔佛" loading="lazy">
+          <div class="city-card-content">
+            <h3>柔佛（Johor）</h3>
+            <p class="city-country">马来西亚</p>
+            <ul class="city-features">
+              <li>靠近新加坡的战略位置</li>
+              <li>快速发展的商业中心</li>
+              <li>低生活成本</li>
+              <li>多元文化环境</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="city-card">
+          <img src="photos/Condo.jpg" alt="在家办公" loading="lazy">
+          <div class="city-card-content">
+            <h3>在家办公（WFH）</h3>
+            <p class="city-country">远程工作</p>
+            <ul class="city-features">
+              <li>灵活的工作安排</li>
+              <li>舒适的家庭环境</li>
+              <li>工作与生活平衡</li>
+              <li>选定职位可用</li>
+            </ul>
+            <a href="https://tpmyandtpth.github.io/JLP/open-jobs.html" aria-label="查看远程职位">查看职位 →</a>
           </div>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- Continue with all other sections... (truncated for space) -->
-    <!-- Benefits Section (Enhanced Design) -->
+  <!-- Benefits Section -->
   <section class="benefits" id="benefits">
     <div class="container">
-      <h2 class="section-title">福利厚生ハイライト</h2>
-      <p class="section-subtitle">安心・成長・楽しさを全方位でサポート</p>
+      <h2 class="section-title">福利亮点</h2>
+      <p class="section-subtitle">全方位支持安心、成长、快乐</p>
       <div class="benefits-list">
         <div class="benefit-item">
           <div class="benefit-icon">🏥</div>
           <div class="benefit-text">
-            <h4>医療保険完備</h4>
-            <p>入社初日から適用</p>
+            <h4>医疗保险</h4>
+            <p>入职第一天即适用</p>
           </div>
         </div>
         <div class="benefit-item">
           <div class="benefit-icon">✈️</div>
           <div class="benefit-text">
-            <h4>渡航サポート</h4>
-            <p>片道航空券・初期ホテル</p>
+            <h4>旅行支持</h4>
+            <p>单程机票·初期酒店</p>
           </div>
         </div>
         <div class="benefit-item">
           <div class="benefit-icon">💰</div>
           <div class="benefit-text">
-            <h4>各種手当</h4>
-            <p>夜勤・住宅・時間外</p>
+            <h4>各种补贴</h4>
+            <p>夜班·住房·加班</p>
           </div>
         </div>
         <div class="benefit-item">
           <div class="benefit-icon">📚</div>
           <div class="benefit-text">
-            <h4>語学研修</h4>
-            <p>GoFluent・Bootcamp</p>
+            <h4>语言培训</h4>
+            <p>GoFluent·Bootcamp</p>
           </div>
         </div>
         <div class="benefit-item">
           <div class="benefit-icon">🎯</div>
           <div class="benefit-text">
-            <h4>キャリア支援</h4>
-            <p>社内異動・昇進制度</p>
+            <h4>职业支持</h4>
+            <p>内部调动·晋升制度</p>
           </div>
         </div>
         <div class="benefit-item">
           <div class="benefit-icon">🏖️</div>
           <div class="benefit-text">
-            <h4>有給休暇</h4>
-            <p>年次有給でリフレッシュ</p>
+            <h4>年假</h4>
+            <p>带薪年假放松</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-<!-- Interview Process (Refined) -->
-<section class="interview-process" id="interview">
-  <div class="container">
-    <h2 class="section-title">面接プロセス</h2>
-    <p class="section-subtitle">すべてオンラインで完結。各ステップで日本語サポート</p>
+  <!-- Interview Process -->
+  <section class="interview-process" id="interview">
+    <div class="container">
+      <h2 class="section-title">面试流程</h2>
+      <p class="section-subtitle">全部在线完成。每个步骤都有中文支持</p>
 
-    <ol class="process-rail">
-      <li class="step-card">
-        <div class="step-head">
-          <span class="step-dot">1</span>
-          <h3 class="step-title">書類選考</h3>
-        </div>
-        <p class="step-desc">履歴書／職務経歴書をご提出ください。</p>
-      </li>
+      <ol class="process-rail">
+        <li class="step-card">
+          <div class="step-head">
+            <span class="step-dot">1</span>
+            <h3 class="step-title">简历筛选</h3>
+          </div>
+          <p class="step-desc">请提交简历/职业履历。</p>
+        </li>
 
-      <li class="step-card">
-        <div class="step-head">
-          <span class="step-dot">2</span>
-          <h3 class="step-title">オンラインテスト</h3>
-        </div>
-        <p class="step-desc">語学・適性のショートテスト（PC/スマホ可）。</p>
-      </li>
+        <li class="step-card">
+          <div class="step-head">
+            <span class="step-dot">2</span>
+            <h3 class="step-title">在线测试</h3>
+          </div>
+          <p class="step-desc">语言·适性短测试（PC/手机可）。</p>
+        </li>
 
-      <li class="step-card">
-        <div class="step-head">
-          <span class="step-dot">3</span>
-          <h3 class="step-title">一次面接（採用）</h3>
-        </div>
-        <p class="step-desc">仕事内容やご希望の確認。気になる点は何でもご相談ください。</p>
-      </li>
+        <li class="step-card">
+          <div class="step-head">
+            <span class="step-dot">3</span>
+            <h3 class="step-title">初试（招聘）</h3>
+          </div>
+          <p class="step-desc">确认工作内容和您的期望。有任何疑问请随时咨询。</p>
+        </li>
 
-      <li class="step-card">
-        <div class="step-head">
-          <span class="step-dot">4</span>
-          <h3 class="step-title">二次面接（配属）</h3>
-        </div>
-        <p class="step-desc">配属チームとの面談。働き方やシフトを具体化します。</p>
-      </li>
+        <li class="step-card">
+          <div class="step-head">
+            <span class="step-dot">4</span>
+            <h3 class="step-title">复试（分配）</h3>
+          </div>
+          <p class="step-desc">与分配团队面谈。具体化工作方式和班次。</p>
+        </li>
 
-      <li class="step-card">
-        <div class="step-head">
-          <span class="step-dot">5</span>
-          <h3 class="step-title">オファー・ビザ手続き</h3>
-        </div>
-        <p class="step-desc">条件確認後、就労ビザ申請〜渡航手配までを伴走します。</p>
-      </li>
-    </ol>
-  </div>
-</section>
+        <li class="step-card">
+          <div class="step-head">
+            <span class="step-dot">5</span>
+            <h3 class="step-title">录用·签证手续</h3>
+          </div>
+          <p class="step-desc">确认条件后，从工作签证申请到旅行安排全程陪同。</p>
+        </li>
+      </ol>
+    </div>
+  </section>
 
-  <!-- Office Environment (Enhanced) -->
+  <!-- Office Environment -->
   <section class="office-section" id="office">
     <div class="container">
-      <h2 class="section-title">働く環境</h2>
-      <p class="section-subtitle">快適でアクセス良好なワークプレイス</p>
+      <h2 class="section-title">工作环境</h2>
+      <p class="section-subtitle">舒适且交通便利的工作场所</p>
       
       <div class="office-grid" id="officeGrid">
-        <div class="office-card sortable-item" data-title="G Tower">
+        <div class="office-card">
           <img src="photos/G%20TOWER.jpg" alt="G Tower KL" class="office-image" loading="lazy">
           <div class="office-info">
-            <h3 class="office-name">G Tower（KL）</h3>
+            <h3 class="office-name">G Tower（吉隆坡）</h3>
             <ul class="office-features">
-              <li>Ampang Park駅直結</li>
-              <li>KLCC徒歩圏内</li>
-              <li>Grade Aオフィスビル</li>
+              <li>Ampang Park站直达</li>
+              <li>步行即可到达KLCC</li>
+              <li>A级办公楼</li>
             </ul>
           </div>
         </div>
-        <div class="office-card sortable-item" data-title="ペナン Livingston">
+        <div class="office-card">
           <img src="photos/Reception.png" alt="Penang Livingston" class="office-image" loading="lazy">
           <div class="office-info">
-            <h3 class="office-name">Livingston（ペナン）</h3>
+            <h3 class="office-name">Livingston（槟城）</h3>
             <ul class="office-features">
-              <li>静かな環境</li>
-              <li>飲食店・薬局近く</li>
-              <li>アクセス良好</li>
+              <li>安静的环境</li>
+              <li>餐厅·药店近在咫尺</li>
+              <li>交通便利</li>
             </ul>
           </div>
         </div>
-        <div class="office-card sortable-item" data-title="ペナン One Precinct">
+        <div class="office-card">
           <img src="photos/Reception%20(1).png" alt="Penang One Precinct" class="office-image" loading="lazy">
           <div class="office-info">
-            <h3 class="office-name">One Precinct（ペナン）</h3>
+            <h3 class="office-name">One Precinct（槟城）</h3>
             <ul class="office-features">
-              <li>Bayan Baruエリア</li>
-              <li>空港から15分</li>
-              <li>Queensbay Mall近く</li>
+              <li>Bayan Baru区域</li>
+              <li>距机场15分钟</li>
+              <li>靠近Queensbay Mall</li>
             </ul>
           </div>
         </div>
-        <div class="office-card sortable-item" data-title="GBS@Mahsuri">
+        <div class="office-card">
           <img src="photos/GBS.jpeg" alt="GBS@Mahsuri" class="office-image" loading="lazy">
           <div class="office-info">
-            <h3 class="office-name">GBS@Mahsuri（ペナン）</h3>
+            <h3 class="office-name">GBS@Mahsuri（槟城）</h3>
             <ul class="office-features">
-              <li>州のGBSハブ</li>
-              <li>IT/BPO集積地</li>
-              <li>生活インフラ充実</li>
+              <li>州GBS枢纽</li>
+              <li>IT/BPO集聚地</li>
+              <li>生活基础设施完善</li>
             </ul>
           </div>
         </div>
-        <div class="office-card sortable-item" data-title="KCP">
+        <div class="office-card">
           <img src="photos/KL%201.jpg" alt="KCP" class="office-image" loading="lazy">
           <div class="office-info">
-            <h3 class="office-name">KCP（KCP ケラナジャヤ センター ポイント）</h3>
+            <h3 class="office-name">KCP（八打灵再也中心点）</h3>
             <ul class="office-features">
-              <li>州のKCPハブ</li>
-              <li>IT/BPO集積地</li>
-              <li>生活インフラ充実</li>
+              <li>州KCP枢纽</li>
+              <li>IT/BPO集聚地</li>
+              <li>生活基础设施完善</li>
             </ul>
           </div>
         </div>
-        <div class="office-card sortable-item" data-title="Singha Complex">
+        <div class="office-card">
           <img src="photos/Singha%20Complex1.jpg" alt="Bangkok Singha Complex" class="office-image" loading="lazy">
           <div class="office-info">
-            <h3 class="office-name">Singha Complex（バンコク）</h3>
+            <h3 class="office-name">Singha Complex（曼谷）</h3>
             <ul class="office-features">
-              <li>BTS/MRT至近</li>
-              <li>日本人エリア</li>
-              <li>商業複合施設内</li>
+              <li>BTS/MRT就近</li>
+              <li>华人区域</li>
+              <li>商业综合设施内</li>
             </ul>
           </div>
         </div>
       </div>
       
       <div style="text-align: center; margin-top: 2rem;">
-        <a href="https://vtour.cloud/mh2n0j/ae5772z1/Bella%27s" target="_blank" rel="noopener noreferrer" class="btn btn-accent">バーチャルオフィスツアー →</a>
+        <a href="https://vtour.cloud/mh2n0j/ae5772z1/Bella%27s" target="_blank" rel="noopener noreferrer" class="btn btn-accent">虚拟办公室参观 →</a>
       </div>
     </div>
   </section>
 
-  <!-- Lifestyle Gallery (Complete) -->
+  <!-- Lifestyle Gallery -->
   <section class="lifestyle-section">
     <div class="container">
-      <h2 class="section-title">仕事だけじゃない。充実のアクティブライフ</h2>
-      <p class="section-subtitle">週末は島へ、平日夜はヨガやカフェ巡り</p>
+      <h2 class="section-title">不仅是工作。充实的活跃生活</h2>
+      <p class="section-subtitle">周末去岛屿，平日晚上瑜伽或咖啡馆巡游</p>
       <div class="lifestyle-grid">
         <div class="lifestyle-item">
-          <img src="photos/KL%202.jpg" alt="カフェ文化" loading="lazy">
-          <div class="lifestyle-caption">カフェ巡り</div>
+          <img src="photos/KL%202.jpg" alt="咖啡馆文化" loading="lazy">
+          <div class="lifestyle-caption">咖啡馆巡游</div>
         </div>
         <div class="lifestyle-item">
-          <img src="photos/Penang.jpg" alt="ビーチライフ" loading="lazy">
-          <div class="lifestyle-caption">ビーチでリラックス</div>
+          <img src="photos/Penang.jpg" alt="海滩生活" loading="lazy">
+          <div class="lifestyle-caption">在海滩放松</div>
         </div>
         <div class="lifestyle-item">
-          <img src="photos/Bangkok1.jpg" alt="ナイトマーケット" loading="lazy">
-          <div class="lifestyle-caption">ナイトマーケット</div>
+          <img src="photos/Bangkok1.jpg" alt="夜市" loading="lazy">
+          <div class="lifestyle-caption">夜市</div>
         </div>
         <div class="lifestyle-item">
-          <img src="photos/Condo.jpg" alt="プール付きコンド" loading="lazy">
-          <div class="lifestyle-caption">プール・ジム付き生活</div>
+          <img src="photos/Condo.jpg" alt="带泳池的公寓" loading="lazy">
+          <div class="lifestyle-caption">泳池·健身房生活</div>
         </div>
         <div class="lifestyle-item">
-          <img src="photos/KL%201.jpg" alt="朝のランニング" loading="lazy">
-          <div class="lifestyle-caption">朝のランニング</div>
+          <img src="photos/KL%201.jpg" alt="晨跑" loading="lazy">
+          <div class="lifestyle-caption">晨跑</div>
         </div>
         <div class="lifestyle-item">
-          <img src="photos/Bangkok%202.jpg" alt="ヨガでリフレッシュ" loading="lazy">
-          <div class="lifestyle-caption">ヨガでリフレッシュ</div>
+          <img src="photos/Bangkok%202.jpg" alt="瑜伽放松" loading="lazy">
+          <div class="lifestyle-caption">瑜伽放松</div>
         </div>
         <div class="lifestyle-item">
-          <img src="photos/Penang.jpg" alt="週末アイランドホッピング" loading="lazy">
-          <div class="lifestyle-caption">週末アイランドホッピング</div>
+          <img src="photos/Penang.jpg" alt="周末跳岛游" loading="lazy">
+          <div class="lifestyle-caption">周末跳岛游</div>
         </div>
         <div class="lifestyle-item">
-          <img src="photos/G%20TOWER.jpg" alt="近隣諸国へ週末旅行" loading="lazy">
-          <div class="lifestyle-caption">近隣諸国へ週末旅行</div>
+          <img src="photos/G%20TOWER.jpg" alt="周末邻国旅行" loading="lazy">
+          <div class="lifestyle-caption">周末邻国旅行</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Testimonials Section (Added) -->
+  <!-- Testimonials Section -->
   <section class="testimonials" id="testimonials">
     <div class="container">
-      <h2 class="section-title">社員の声</h2>
-      <p class="section-subtitle">実際に働くメンバーの"リアルな感想"</p>
+      <h2 class="section-title">员工心声</h2>
+      <p class="section-subtitle">实际工作成员的"真实感受"</p>
       <div class="testimonial-cards">
         <div class="testimonial">
           <p class="testimonial-content">
-            物価が安いから、カフェ巡りや外食が気軽に楽しめるようになりました。通勤ストレスがなくなり、平日の夜もヨガや友達との時間をゆったり過ごせます。
+            物价便宜，所以咖啡馆巡游和外出就餐变得轻松自如。通勤压力消失了，平日晚上也能从容地进行瑜伽和与朋友相处的时间。
           </p>
           <div class="testimonial-author">
-            <img src="photos/Maho.png" alt="Maho" class="author-img">
+            <img src="photos/Maho.png" alt="员工" class="author-img">
             <div class="author-info">
-              <strong>Maho</strong>
-              <span>採用チーム・20代女性</span>
+              <strong>员工A</strong>
+              <span>招聘团队·20多岁女性</span>
             </div>
           </div>
         </div>
         <div class="testimonial">
           <p class="testimonial-content">
-            毎週末にプール、サウナ、ジム。こんな暮らし、日本では考えられませんでした！休日は友達とビーチやナイトマーケットへ。仕事も遊びもバランスよく楽しめています！
+            每周末泳池、桑拿、健身房。这样的生活，在中国无法想象！假日和朋友去海滩或夜市。工作和娱乐都能平衡地享受！
           </p>
           <div class="testimonial-author">
-            <img src="photos/Joseph%20on%20vacation.jpg" alt="社員" class="author-img">
+            <img src="photos/Joseph%20on%20vacation.jpg" alt="员工" class="author-img">
             <div class="author-info">
-              <strong>田中さん</strong>
-              <span>カスタマーサポート・30代男性</span>
+              <strong>员工B</strong>
+              <span>客户支持·30多岁男性</span>
             </div>
           </div>
         </div>
         <div class="testimonial">
           <p class="testimonial-content">
-            英語が苦手でも、日本語メインの仕事からスタートできたので安心でした。段階的にスキルを伸ばせる環境で、今では英語でのコミュニケーションも楽しめるようになりました。
+            即使不擅长英语，也能从以中文为主的工作开始，所以很安心。在可以逐步提高技能的环境中，现在也能享受用英语交流了。
           </p>
           <div class="testimonial-author">
-            <img src="photos/Maho%20in%20front%20ofKLCC.jpg" alt="社員" class="author-img">
+            <img src="photos/Maho%20in%20front%20ofKLCC.jpg" alt="员工" class="author-img">
             <div class="author-info">
-              <strong>佐藤さん</strong>
-              <span>元営業職・30代</span>
+              <strong>员工C</strong>
+              <span>前销售职·30多岁</span>
             </div>
           </div>
         </div>
         <div class="testimonial">
           <p class="testimonial-content">
-            「違っていい」という価値観が、心を自由にしてくれました。日本にいるときより、周りの目を気にしなくなりましたね。多様性を尊重する文化が本当に心地よいです。
+            "可以不同"的价值观让心灵自由。比在中国时更不在意周围的目光了。尊重多样性的文化真的很舒适。
           </p>
           <div class="testimonial-author">
-            <img src="photos/Akito%20san.jpg" alt="Akito" class="author-img">
+            <img src="photos/Akito%20san.jpg" alt="员工" class="author-img">
             <div class="author-info">
-              <strong>Akito</strong>
-              <span>採用チーム</span>
+              <strong>员工D</strong>
+              <span>招聘团队</span>
             </div>
           </div>
         </div>
         <div class="testimonial">
           <p class="testimonial-content">
-            年齢や経歴に関係なく、頑張りが評価される社風が素晴らしいです。チームリーダーへの昇進も経験でき、キャリアの可能性が広がりました。
+            无论年龄或经历，努力都会得到评价的公司氛围非常棒。也经历了晋升为团队领导的机会，职业可能性扩大了。
           </p>
           <div class="testimonial-author">
-            <img src="photos/Reception.png" alt="社員" class="author-img">
+            <img src="photos/Reception.png" alt="员工" class="author-img">
             <div class="author-info">
-              <strong>山田さん</strong>
-              <span>チームリーダー・40代</span>
+              <strong>员工E</strong>
+              <span>团队领导·40多岁</span>
             </div>
           </div>
         </div>
         <div class="testimonial">
           <p class="testimonial-content">
-            マレーシアでの生活は想像以上に快適です。日本食も充実していて、ホームシックになることもありません。週末は近隣諸国への旅行も楽しんでいます。
+            在马来西亚的生活比想象中舒适。中国菜也很丰富，不会想家。周末也享受邻国旅行。
           </p>
           <div class="testimonial-author">
-            <img src="photos/GBS.jpeg" alt="社員" class="author-img">
+            <img src="photos/GBS.jpeg" alt="员工" class="author-img">
             <div class="author-info">
-              <strong>鈴木さん</strong>
-              <span>QAスペシャリスト・20代</span>
+              <strong>员工F</strong>
+              <span>QA专员·20多岁</span>
             </div>
           </div>
         </div>
@@ -2518,188 +2529,185 @@ footer::before {
     </div>
   </section>
 
-  <!-- TA Team Section (Added with bigger photos) -->
+  <!-- TA Team Section -->
   <section class="ta-team" id="ta-team">
     <div class="container">
-      <h2 class="section-title">採用チーム</h2>
-      <p class="section-subtitle">応募から入社まで、日本語で伴走します</p>
+      <h2 class="section-title">招聘团队</h2>
+      <p class="section-subtitle">从申请到入职，用中文陪伴</p>
       
       <div class="ta-team-container">
-<!-- Leader -->
-<div class="ta-leader" id="joseph">
-  <a href="https://tpmyandtpth.github.io/JLP/casual-interview.html#book" class="ta-leader-img-link" aria-label="ジョセフに相談（カジュアル面談を予約）">
-    <img src="photos/Joseph Hiroyuki Ueda.jpg"
-         alt="Joseph（ジョセフ）— シニアマネージャー｜タレントアクイジション"
-         class="ta-leader-img" loading="lazy" decoding="async">
-  </a>
-  <h3 class="ta-leader-name">Joseph（ジョセフ）</h3>
-  <p class="ta-leader-role">シニアマネージャー｜タレントアクイジション</p>
-  <p class="ta-leader-desc">
-    こんにちは。TP Malaysiaで日本語スピーカーをはじめとした多国籍人材の採用を担当している、シニアマネージャーのジョセフです。これまで約14年にわたり、APAC地域を中心に人材採用の業務に携わってきました。海外での転職は大きなチャレンジですが、新しい可能性を広げる素晴らしい機会でもあります。皆さまの挑戦が、より良い未来につながる第一歩となるよう、誠実にサポートさせていただきます。
-  </p>
-  <div class="ta-links">
-    <a class="btn btn-sm" href="https://tpmyandtpth.github.io/JLP/casual-interview.html#book">面談を予約</a>
-    <a class="btn btn-sm btn-ghost" href="https://line.me/R/ti/p/@286nmdsd" target="_blank" rel="noopener noreferrer">LINEで質問</a>
-    <a class="btn btn-sm btn-ghost" href="https://tpmyandtpth.github.io/JLP/open-jobs.html">求人を見る</a>
-  </div>
-</div>
+        <div class="ta-leader">
+          <a href="https://tpmyandtpth.github.io/JLP/casual-interview.html#book" class="ta-leader-img-link" aria-label="咨询招聘团队（预约轻松面谈）">
+            <img src="photos/Joseph Hiroyuki Ueda.jpg"
+                 alt="招聘团队领导"
+                 class="ta-leader-img" loading="lazy" decoding="async">
+          </a>
+          <h3 class="ta-leader-name">招聘团队</h3>
+          <p class="ta-leader-role">高级经理｜人才招聘</p>
+          <p class="ta-leader-desc">
+            您好。我是TP Malaysia负责中文人才招聘的团队。多年来，我们一直从事APAC地区为中心的人才招聘工作。海外转职是一个很大的挑战，但也是拓展新可能性的绝佳机会。我们将诚心支持您的挑战，成为通向更美好未来的第一步。
+          </p>
+          <div class="ta-links">
+            <a class="btn btn-sm" href="https://tpmyandtpth.github.io/JLP/casual-interview.html#book">预约面谈</a>
+            <a class="btn btn-sm btn-ghost" href="https://line.me/R/ti/p/@286nmdsd" target="_blank" rel="noopener noreferrer">LINE咨询</a>
+            <a class="btn btn-sm btn-ghost" href="https://tpmyandtpth.github.io/JLP/open-jobs.html">查看职位</a>
+          </div>
+        </div>
 
-<!-- Team Members -->
-<div class="ta-team-grid">
-  <article class="ta-member" id="maho">
-    <a href="https://tpmyandtpth.github.io/JLP/casual-interview.html#book" aria-label="Mahoに相談（カジュアル面談を予約）">
-      <img src="photos/Maho.png" alt="Maho — Talent Attraction｜Sourcing" class="ta-member-img" loading="lazy" decoding="async">
-    </a>
-    <h3 class="ta-member-name">Maho</h3>
-    <p class="ta-member-role">Talent Acquisition｜採用担当</p>
-    <p class="ta-member-desc">初めての海外就職も、日本語でしっかりサポートします。</p>
-    <div class="ta-member-links">
-      <a href="https://tpmyandtpth.github.io/JLP/casual-interview.html#book" class="text-link">面談を予約</a>
-      · <a href="https://tpmyandtpth.github.io/JLP/open-jobs.html" class="text-link">求人を見る</a>
+        <div class="ta-team-grid">
+          <article class="ta-member">
+            <a href="https://tpmyandtpth.github.io/JLP/casual-interview.html#book" aria-label="咨询招聘专员（预约轻松面谈）">
+              <img src="photos/Maho.png" alt="招聘专员" class="ta-member-img" loading="lazy" decoding="async">
+            </a>
+            <h3 class="ta-member-name">招聘专员</h3>
+            <p class="ta-member-role">人才招聘｜招聘负责人</p>
+            <p class="ta-member-desc">即使是第一次海外就业，我们也会用中文好好支持。</p>
+            <div class="ta-member-links">
+              <a href="https://tpmyandtpth.github.io/JLP/casual-interview.html#book" class="text-link">预约面谈</a>
+              · <a href="https://tpmyandtpth.github.io/JLP/open-jobs.html" class="text-link">查看职位</a>
+            </div>
+          </article>
+
+          <article class="ta-member">
+            <a href="https://tpmyandtpth.github.io/JLP/casual-interview.html#book" aria-label="咨询招聘专员（预约轻松面谈）">
+              <img src="photos/Akito%20san.jpg" alt="招聘专员" class="ta-member-img" loading="lazy" decoding="async">
+            </a>
+            <h3 class="ta-member-name">招聘专员</h3>
+            <p class="ta-member-role">人才招聘｜招聘负责人</p>
+            <p class="ta-member-desc">职业咨询，请随时联系。一起找到最佳道路。</p>
+            <div class="ta-member-links">
+              <a href="https://tpmyandtpth.github.io/JLP/casual-interview.html#book" class="text-link">预约面谈</a>
+              · <a href="https://tpmyandtpth.github.io/JLP/open-jobs.html" class="text-link">查看职位</a>
+            </div>
+          </article>
+
+          <article class="ta-member">
+            <a href="https://tpmyandtpth.github.io/JLP/casual-interview.html#book" aria-label="咨询招聘专员（预约轻松面谈）">
+              <img src="photos/Koyori.jpg" alt="招聘专员" class="ta-member-img" loading="lazy" decoding="async">
+            </a>
+            <h3 class="ta-member-name">招聘专员</h3>
+            <p class="ta-member-role">人才招聘｜招聘负责人</p>
+            <p class="ta-member-desc">旅行手续和当地生活也会跟进。</p>
+            <div class="ta-member-links">
+              <a href="https://tpmyandtpth.github.io/JLP/casual-interview.html#book" class="text-link">预约面谈</a>
+              · <a href="https://tpmyandtpth.github.io/JLP/open-jobs.html" class="text-link">查看职位</a>
+            </div>
+          </article>
+
+          <article class="ta-member">
+            <a href="https://tpmyandtpth.github.io/JLP/casual-interview.html#book" aria-label="咨询招聘专员（预约轻松面谈）">
+              <img src="photos/Maya.png" alt="招聘专员" class="ta-member-img" loading="lazy" decoding="async">
+            </a>
+            <h3 class="ta-member-name">招聘专员</h3>
+            <p class="ta-member-role">人才招聘｜招聘负责人</p>
+            <p class="ta-member-desc">一起寻找您期望的项目。</p>
+            <div class="ta-member-links">
+              <a href="https://tpmyandtpth.github.io/JLP/casual-interview.html#book" class="text-link">预约面谈</a>
+              · <a href="https://tpmyandtpth.github.io/JLP/open-jobs.html" class="text-link">查看职位</a>
+            </div>
+          </article>
+        </div>
+      </div>
     </div>
-  </article>
+  </section>
 
-  <article class="ta-member" id="akito">
-    <a href="https://tpmyandtpth.github.io/JLP/casual-interview.html#book" aria-label="Akitoに相談（カジュアル面談を予約）">
-      <img src="photos/Akito%20san.jpg" alt="Akito — Talent Acquisition｜採用担当" class="ta-member-img" loading="lazy" decoding="async">
-    </a>
-    <h3 class="ta-member-name">Akito</h3>
-    <p class="ta-member-role">Talent Acquisition｜採用担当</p>
-    <p class="ta-member-desc">キャリア相談、お気軽にどうぞ。一緒に最適な道を見つけましょう。</p>
-    <div class="ta-member-links">
-      <a href="https://tpmyandtpth.github.io/JLP/casual-interview.html#book" class="text-link">面談を予約</a>
-      · <a href="https://tpmyandtpth.github.io/JLP/open-jobs.html" class="text-link">求人を見る</a>
-    </div>
-  </article>
-
-  <article class="ta-member" id="koyori">
-    <a href="https://tpmyandtpth.github.io/JLP/casual-interview.html#book" aria-label="Koyoriに相談（カジュアル面談を予約）">
-      <img src="photos/Koyori.jpg" alt="Koyori — Talent Acquisition｜採用担当" class="ta-member-img" loading="lazy" decoding="async">
-    </a>
-    <h3 class="ta-member-name">Koyori</h3>
-    <p class="ta-member-role">Talent Acquisition｜採用担当</p>
-    <p class="ta-member-desc">渡航手続きや現地生活もフォローします。</p>
-    <div class="ta-member-links">
-      <a href="https://tpmyandtpth.github.io/JLP/casual-interview.html#book" class="text-link">面談を予約</a>
-      · <a href="https://tpmyandtpth.github.io/JLP/open-jobs.html" class="text-link">求人を見る</a>
-    </div>
-  </article>
-
-  <article class="ta-member" id="maya">
-    <a href="https://tpmyandtpth.github.io/JLP/casual-interview.html#book" aria-label="Mayaに相談（カジュアル面談を予約）">
-      <img src="photos/Maya.png" alt="Maya — マネージャー｜タレントアクイジション" class="ta-member-img" loading="lazy" decoding="async">
-    </a>
-    <h3 class="ta-member-name">Maya</h3>
-    <p class="ta-member-role">Talent Acquisition｜採用担当</p>
-    <p class="ta-member-desc">ご希望のプロジェクトを一緒に探します。</p>
-    <div class="ta-member-links">
-      <a href="https://tpmyandtpth.github.io/JLP/casual-interview.html#book" class="text-link">面談を予約</a>
-      · <a href="https://tpmyandtpth.github.io/JLP/open-jobs.html" class="text-link">求人を見る</a>
-    </div>
-  </article>
-</div>
-</div>          <!-- end .ta-team-container -->
-</div>          <!-- end .container -->
-</section>      <!-- end .ta-team -->
-
-  <!-- FAQ Section (Added) -->
+  <!-- FAQ Section -->
   <section class="faq-section" id="faq">
     <div class="container">
-      <h2 class="section-title">FAQ・よくある質問</h2>
-      <p class="section-subtitle">応募前の疑問にお答えします</p>
+      <h2 class="section-title">常见问题</h2>
+      <p class="section-subtitle">回答申请前的疑问</p>
       <div class="faq-container">
         <div class="faq-item">
-          <div class="faq-question">英語に自信がなくても応募できますか？</div>
+          <div class="faq-question">不擅长英语也可以申请吗？</div>
           <div class="faq-answer">
-            <p>はい、日本語中心のポジションが多数あります。入社後にGoFluentなどの英語学習支援プログラムもあるので、段階的にスキルを伸ばすことができます。</p>
+            <p>是的，有很多以中文为主的职位。入职后还有GoFluent等英语学习支持项目，可以逐步提高技能。</p>
           </div>
         </div>
         <div class="faq-item">
-          <div class="faq-question">就労ビザの手続きは難しいですか？</div>
+          <div class="faq-question">工作签证手续困难吗？</div>
           <div class="faq-answer">
-            <p>会社が申請を代行しますのでご安心ください。必要書類の準備も日本語でご案内し、申請から承認まで全てサポートいたします。</p>
+            <p>公司会代理申请，请放心。必要文件的准备也会用中文指导，从申请到批准全程支持。</p>
           </div>
         </div>
         <div class="faq-item">
-          <div class="faq-question">住居はどうやって探せば良いですか？</div>
+          <div class="faq-question">住所怎么找？</div>
           <div class="faq-answer">
-            <p>現地エージェントの紹介やオリエンテーションでのアドバイスを提供します。マレーシアでは一時滞在先の手配もあり、落ち着いて物件を探せます。</p>
+            <p>提供当地中介介绍和入职培训建议。在马来西亚还有临时住宿安排，可以从容地找房子。</p>
           </div>
         </div>
         <div class="faq-item">
-          <div class="faq-question">シフト勤務はありますか？</div>
+          <div class="faq-question">有轮班工作吗？</div>
           <div class="faq-answer">
-            <p>プロジェクトにより24/7サービスの夜勤・週末シフトがありますが、シフト手当が付きます。事前にシフト体系を確認できます。</p>
+            <p>根据项目有24/7服务的夜班·周末班，但有轮班补贴。可以事先确认轮班体系。</p>
           </div>
         </div>
         <div class="faq-item">
-          <div class="faq-question">日本語だけで仕事はできますか？</div>
+          <div class="faq-question">只用中文工作可以吗？</div>
           <div class="faq-answer">
-            <p>多くのポジションで日本語がメインです。社内コミュニケーションでは基本的な英語が必要な場合もありますが、語学サポートがあります。</p>
+            <p>许多职位以中文为主。公司内部交流有时需要基本英语，但有语言支持。</p>
           </div>
         </div>
         <div class="faq-item">
-          <div class="faq-question">福利厚生にはどんなものがありますか？</div>
+          <div class="faq-question">福利有哪些？</div>
           <div class="faq-answer">
-            <p>医療保険、有給休暇、各種手当（夜勤・住宅等）、語学研修（GoFluent）、社内イベント、キャリア開発プログラムなどがあります。</p>
+            <p>医疗保险、年假、各种补贴（夜班·住房等）、语言培训（GoFluent）、公司活动、职业发展项目等。</p>
           </div>
         </div>
         <div class="faq-item">
-          <div class="faq-question">応募から入社までの期間はどのくらいですか？</div>
+          <div class="faq-question">从申请到入职需要多长时间？</div>
           <div class="faq-answer">
-            <p>通常、応募から内定まで2-3週間、ビザ申請から承認まで4-6週間程度です。個人差がありますので、詳細はお問い合わせください。</p>
+            <p>通常从申请到录用2-3周，从签证申请到批准4-6周左右。因人而异，详情请咨询。</p>
           </div>
         </div>
         <div class="faq-item">
-          <div class="faq-question">カジュアル面談とは何ですか？</div>
+          <div class="faq-question">什么是轻松面谈？</div>
           <div class="faq-answer">
-            <p>面接ではなく、TPでの仕事や生活について気軽に相談できる30分程度のオンライン面談です。転職を迷っている方もお気軽にどうぞ。</p>
+            <p>不是面试，而是可以轻松咨询TP工作和生活的30分钟左右在线面谈。正在考虑转职的人也请随时联系。</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-<!-- Contact (3 Smart Links Only) -->
-<section class="contact-min" id="contact">
-  <div class="container">
-    <h2 class="section-title">お問い合わせ・各種リンク</h2>
-    <p class="section-subtitle">目的にあわせて、すぐアクセス</p>
+  <!-- Contact -->
+  <section class="contact-min" id="contact">
+    <div class="container">
+      <h2 class="section-title">联系方式·各种链接</h2>
+      <p class="section-subtitle">根据目的，立即访问</p>
 
-    <div class="cta-links">
-      <a class="cta-link" href="https://forms.office.com/e/2UvpbweQww" target="_blank" rel="noopener noreferrer">
-        <span class="cta-ico" aria-hidden="true">🗓️</span>
-        <span class="cta-main">
-          <strong>カジュアル面談予約</strong>
-          <em>30分オンラインで気軽に相談</em>
-        </span>
-        <span class="cta-arrow" aria-hidden="true">→</span>
-      </a>
+      <div class="cta-links">
+        <a class="cta-link" href="https://forms.office.com/e/2UvpbweQww" target="_blank" rel="noopener noreferrer">
+          <span class="cta-ico" aria-hidden="true">🗓️</span>
+          <span class="cta-main">
+            <strong>预约轻松面谈</strong>
+            <em>30分钟在线轻松咨询</em>
+          </span>
+          <span class="cta-arrow" aria-hidden="true">→</span>
+        </a>
 
-      <a class="cta-link" href="https://line.me/R/ti/p/@286nmdsd" target="_blank" rel="noopener noreferrer">
-        <span class="cta-ico" aria-hidden="true">💬</span>
-        <span class="cta-main">
-          <strong>LINE公式アカウント</strong>
-          <em>最新募集・イベント情報を配信</em>
-        </span>
-        <span class="cta-arrow" aria-hidden="true">→</span>
-      </a>
+        <a class="cta-link" href="https://line.me/R/ti/p/@286nmdsd" target="_blank" rel="noopener noreferrer">
+          <span class="cta-ico" aria-hidden="true">💬</span>
+          <span class="cta-main">
+            <strong>LINE官方账号</strong>
+            <em>发布最新招聘·活动信息</em>
+          </span>
+          <span class="cta-arrow" aria-hidden="true">→</span>
+        </a>
 
-      <a class="cta-link" href="https://careerseng-teleperformance.icims.com/jobs/49026/customer-service-representative---japanese-speaking-%28kl%29/job?mode=job&iis=LANDINGPAGE" target="_blank" rel="noopener noreferrer">
-        <span class="cta-ico" aria-hidden="true">✍️</span>
-        <span class="cta-main">
-          <strong>応募ページ</strong>
-          <em>履歴書アップロードで簡単エントリー</em>
-        </span>
-        <span class="cta-arrow" aria-hidden="true">→</span>
-      </a>
+        <a class="cta-link" href="https://careerseng-teleperformance.icims.com/jobs/49026/customer-service-representative---japanese-speaking-%28kl%29/job?mode=job&iis=LANDINGPAGE" target="_blank" rel="noopener noreferrer">
+          <span class="cta-ico" aria-hidden="true">✍️</span>
+          <span class="cta-main">
+            <strong>申请页面</strong>
+            <em>上传简历即可轻松申请</em>
+          </span>
+          <span class="cta-arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
     </div>
-  </div>
-</section>
-
+  </section>
 </main>
 
-<!-- Footer (Fixed links) -->
+<!-- Footer -->
 <footer>
   <div class="footer-content">
     <div class="footer-brand">
@@ -2708,77 +2716,77 @@ footer::before {
         <span class="footer-logo-text">TP</span>
       </div>
       <p class="footer-desc">
-        世界100カ国以上で展開するグローバルBPO企業。<br>
-        日本語スピーカーの皆様の新たなキャリアをサポートします。
+        在100多个国家开展业务的全球BPO企业。<br>
+        支持中文人才的新职业生涯。
       </p>
       <div class="badges">
-        <span class="badge-item">🏆 Great Place to Work® 6年連続</span>
+        <span class="badge-item">🏆 Great Place to Work®连续6年</span>
       </div>
       <div class="footer-cta">
-        <a href="https://careerseng-teleperformance.icims.com/jobs/49026/customer-service-representative---japanese-speaking-%28kl%29/job?mode=job&iis=LANDINGPAGE" target="_blank" rel="noopener noreferrer" class="btn btn-accent">ご応募はこちら</a>
+        <a href="https://careerseng-teleperformance.icims.com/jobs/49026/customer-service-representative---japanese-speaking-%28kl%29/job?mode=job&iis=LANDINGPAGE" target="_blank" rel="noopener noreferrer" class="btn btn-accent">点击申请</a>
       </div>
     </div>
     
     <div class="footer-section">
-      <h3>会社情報</h3>
+      <h3>公司信息</h3>
       <ul>
-        <li><a href="https://tpmyandtpth.github.io/JLP/about-tp.html">会社紹介</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/salary-and-benefits.html#benefits">福利厚生</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/office-environment.html">オフィス環境</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/ta-team.html">採用チーム</a></li>
+        <li><a href="https://tpmyandtpth.github.io/JLP/about-tp.html">公司介绍</a></li>
+        <li><a href="https://tpmyandtpth.github.io/JLP/salary-and-benefits.html#benefits">福利待遇</a></li>
+        <li><a href="https://tpmyandtpth.github.io/JLP/office-environment.html">办公环境</a></li>
+        <li><a href="https://tpmyandtpth.github.io/JLP/ta-team.html">招聘团队</a></li>
       </ul>
     </div>
 
     <div class="footer-section">
-      <h3>求人・応募</h3>
+      <h3>职位·申请</h3>
       <ul>
-        <li><a href="https://tpmyandtpth.github.io/JLP/open-jobs.html">求人一覧</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/interview-process.html">面接プロセス</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/faq.html">よくある質問</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/casual-interview.html">お問い合わせ</a></li>
+        <li><a href="https://tpmyandtpth.github.io/JLP/open-jobs.html">职位列表</a></li>
+        <li><a href="https://tpmyandtpth.github.io/JLP/interview-process.html">面试流程</a></li>
+        <li><a href="https://tpmyandtpth.github.io/JLP/faq.html">常见问题</a></li>
+        <li><a href="https://tpmyandtpth.github.io/JLP/casual-interview.html">联系我们</a></li>
       </ul>
     </div>
 
     <div class="footer-section">
-      <h3>生活情報</h3>
+      <h3>生活信息</h3>
       <ul>
-        <li><a href="https://tpmyandtpth.github.io/JLP/why-malaysia-thailand.html">勤務先都市</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/relocation-visa.html">移住サポート</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/daily-life-malaysia.html">ライフスタイル</a></li>
-        <li><a href="https://line.me/R/ti/p/@286nmdsd" target="_blank" rel="noopener noreferrer">LINE公式</a></li>
+        <li><a href="https://tpmyandtpth.github.io/JLP/why-malaysia-thailand.html">工作城市</a></li>
+        <li><a href="https://tpmyandtpth.github.io/JLP/relocation-visa.html">移居支持</a></li>
+        <li><a href="https://tpmyandtpth.github.io/JLP/daily-life-malaysia.html">生活方式</a></li>
+        <li><a href="https://line.me/R/ti/p/@286nmdsd" target="_blank" rel="noopener noreferrer">LINE官方</a></li>
       </ul>
     </div>
   </div>
   
   <div class="footer-bottom">
     <p>&copy; 2025 TP. All rights reserved. | 
-      <a href="#">プライバシーポリシー</a> | 
-      <a href="#">利用規約</a>
+      <a href="#">隐私政策</a> | 
+      <a href="#">使用条款</a>
     </p>
   </div>
 </footer>
 
 <!-- Floating Apply Button -->
-<a href="https://careerseng-teleperformance.icims.com/jobs/49026/customer-service-representative---japanese-speaking-%28kl%29/job?mode=job&iis=LANDINGPAGE" target="_blank" rel="noopener noreferrer" class="floating-apply" aria-label="今すぐ応募">応募する</a>
+<a href="https://careerseng-teleperformance.icims.com/jobs/49026/customer-service-representative---japanese-speaking-%28kl%29/job?mode=job&iis=LANDINGPAGE" target="_blank" rel="noopener noreferrer" class="floating-apply" aria-label="立即申请">立即申请</a>
 
 <!-- Floating Casual Interview Button -->
-<a href="https://forms.office.com/e/2UvpbweQww" target="_blank" rel="noopener noreferrer" class="floating-casual" aria-label="カジュアル面談">カジュアル面談</a>
+<a href="https://forms.office.com/e/2UvpbweQww" target="_blank" rel="noopener noreferrer" class="floating-casual" aria-label="轻松面谈">轻松面谈</a>
 
 <!-- Back to Top Button -->
-<button class="back-to-top" id="backToTop" aria-label="ページトップへ">↑</button>
+<button class="back-to-top" id="backToTop" aria-label="返回顶部">↑</button>
 
-<!-- JavaScript (with Error Handling Added) -->
+<!-- JavaScript -->
 <script>
-// Hero Typewriter Effect with Error Handling
+// Hero Typewriter Effect
 try {
   (function(){
     const el = document.getElementById('hero-rotate');
     if(!el) return;
     
     const lines = [
-      '暮らすように、海外で働く。',
-      '日本語で始める、グローバルキャリア。',
-      '東南アジアの"ちょうどいい"生活。'
+      '像生活一样，在海外工作。',
+      '用中文开始，全球职业生涯。',
+      '东南亚"刚刚好"的生活。'
     ];
     
     const speed = 46;
@@ -2810,12 +2818,11 @@ try {
   })();
 } catch(error) {
   console.warn('Typewriter effect failed:', error);
-  // Fallback: show static text
   const el = document.getElementById('hero-rotate');
-  if(el) el.textContent = '暮らすように、海外で働く。';
+  if(el) el.textContent = '像生活一样，在海外工作。';
 }
 
-// GPTW Years Animation with Error Handling
+// GPTW Years Animation
 try {
   (function(){
     const el = document.getElementById('gptwYears');
@@ -2831,13 +2838,12 @@ try {
       
       function step(){ 
         n++; 
-        el.innerHTML = `${logo}<span>Great Place to Work® <strong>${n}</strong> 年連続</span>`;
+        el.innerHTML = `${logo}<span>Great Place to Work® <strong>${n}</strong> 年连续</span>`;
         if(n < target) setTimeout(step, 240);
       }
       step();
     }
     
-    // Trigger on scroll into view
     const observer = new IntersectionObserver((entries) => {
       if(entries[0].isIntersecting) animate();
     });
@@ -2846,10 +2852,10 @@ try {
 } catch(error) {
   console.warn('GPTW animation failed:', error);
   const el = document.getElementById('gptwYears');
-  if(el) el.innerHTML = '<img src="photos/great place to work.png" alt="Great Place to Work®"><span>Great Place to Work® <strong>6</strong> 年連続</span>';
+  if(el) el.innerHTML = '<img src="photos/great place to work.png" alt="Great Place to Work®"><span>Great Place to Work® <strong>6</strong> 年连续</span>';
 }
 
-// Mobile Menu Toggle with Error Handling
+// Mobile Menu Toggle
 try {
   (function(){
     const toggle = document.getElementById('mobileToggle');
@@ -2862,7 +2868,6 @@ try {
         toggle.setAttribute('aria-expanded', menu.classList.contains('active'));
       });
       
-      // Close menu when clicking links
       menu.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
           toggle.classList.remove('active');
@@ -2871,7 +2876,6 @@ try {
         });
       });
       
-      // Close menu when clicking outside
       document.addEventListener('click', (e) => {
         if(!menu.contains(e.target) && !toggle.contains(e.target)) {
           menu.classList.remove('active');
@@ -2885,13 +2889,12 @@ try {
   console.warn('Mobile menu setup failed:', error);
 }
 
-// Back to Top Button with Error Handling
+// Back to Top Button
 try {
   (function(){
     const backToTop = document.getElementById('backToTop');
     if(!backToTop) return;
     
-    // Show/hide button on scroll
     window.addEventListener('scroll', () => {
       if(window.pageYOffset > 300){
         backToTop.classList.add('show');
@@ -2900,7 +2903,6 @@ try {
       }
     });
     
-    // Scroll to top when clicked
     backToTop.addEventListener('click', () => {
       window.scrollTo({ 
         top: 0, 
@@ -2912,7 +2914,7 @@ try {
   console.warn('Back to top button failed:', error);
 }
 
-// FAQ Accordion with Error Handling
+// FAQ Accordion
 try {
   (function(){
     const items = document.querySelectorAll('.faq-item');
@@ -2923,10 +2925,8 @@ try {
       question.addEventListener('click', () => {
         const isActive = item.classList.contains('active');
         
-        // Close all items
         items.forEach(i => i.classList.remove('active'));
         
-        // Open clicked item if it wasn't active
         if(!isActive) {
           item.classList.add('active');
         }
@@ -2937,7 +2937,7 @@ try {
   console.warn('FAQ accordion failed:', error);
 }
 
-// Smooth Scroll for Anchor Links with Error Handling
+// Smooth Scroll for Anchor Links
 try {
   (function(){
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -2948,7 +2948,7 @@ try {
         e.preventDefault();
         const target = document.querySelector(href);
         if(target){
-          const offset = 70; // Header height
+          const offset = 70;
           const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
           
           window.scrollTo({
@@ -2963,9 +2963,9 @@ try {
   console.warn('Smooth scroll failed:', error);
 }
 
-// Initialize when DOM is ready
+// Initialize
 document.addEventListener('DOMContentLoaded', function() {
-  console.log('TP Japan site initialized');
+  console.log('TP China site initialized');
 });
 </script>
 </body>
