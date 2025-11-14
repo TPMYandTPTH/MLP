@@ -1,0 +1,2930 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Teleperformance招聘 | 马来西亚·泰国中文职位</title>
+<meta name="description" content="Teleperformance（TP）马来西亚·泰国中文职位招聘。全球100多个国家的BPO企业。提供工作签证及移居支持。">
+<meta name="theme-color" content="#000000">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:title" content="Teleperformance招聘 | 马来西亚·泰国工作">
+<meta property="og:description" content="运用中文在海外工作。完善的福利待遇和移居支持。">
+<meta property="og:image" content="https://tpmyandtpth.github.io/JLP/photos/TPLogo11.png">
+<meta property="og:url" content="https://tpmyandtpth.github.io/JLP/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Teleperformance招聘 | 马来西亚·泰国工作">
+<meta name="twitter:description" content="运用中文在海外工作。完善的福利待遇和移居支持。">
+<meta name="twitter:image" content="https://tpmyandtpth.github.io/JLP/photos/TPLogo11.png">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://tpmyandtpth.github.io/JLP/">
+<link rel="icon" href="photos/TPLogo11.png">
+<link rel="apple-touch-icon" href="photos/TPLogo11.png">
+
+<!-- Preconnect for Performance -->
+<link rel="dns-prefetch" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+<style>
+/* CSS Variables - Minimalist Black & White */
+:root {
+  --black: #000000;
+  --white: #FFFFFF;
+  --gray-lightest: #F4F4F4;
+  --gray-light: #D1D1D1;
+  --gray: #888888;
+  --gray-dark: #333333;
+  --accent-color: #C41E3A; /* Chinese Red */
+  --accent-gold: #D4AF37;
+  --max-width: 1200px;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Base Reset & Typography */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--black);
+  line-height: 1.7;
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.sr-only {
+  position: absolute!important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Header - Minimalist */
+header {
+  position: sticky;
+  top: 0;
+  background: var(--white);
+  border-bottom: 2px solid var(--black);
+  z-index: 1000;
+}
+
+.header-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 900;
+  font-size: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.brand img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  filter: grayscale(100%);
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.brand-name {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--black);
+}
+
+.brand-tagline {
+  font-size: 0.7rem;
+  color: var(--gray);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  align-items: center;
+}
+
+nav a {
+  font-size: 0.9rem;
+  font-weight: 600;
+  position: relative;
+  padding: 0.5rem 0;
+  white-space: nowrap;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--black);
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after,
+nav a[aria-current="page"]::after {
+  width: 100%;
+}
+
+.apply-btn {
+  background: var(--black);
+  color: var(--white);
+  padding: 0.75rem 2rem;
+  font-weight: 700;
+  border: 2px solid var(--black);
+  transition: var(--transition);
+}
+
+.apply-btn:hover {
+  background: var(--white);
+  color: var(--black);
+}
+
+.apply-btn::after {
+  display: none;
+}
+
+/* Mobile Menu */
+.mobile-toggle {
+  display: none;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 2px solid var(--black);
+  cursor: pointer;
+  position: relative;
+}
+
+.mobile-toggle span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: var(--black);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: var(--transition);
+}
+
+.mobile-toggle span:nth-child(1) { top: 12px; }
+.mobile-toggle span:nth-child(2) { top: 19px; }
+.mobile-toggle span:nth-child(3) { bottom: 12px; }
+
+.mobile-toggle.active span:nth-child(1) {
+  transform: translateX(-50%) rotate(45deg);
+  top: 19px;
+}
+
+.mobile-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-toggle.active span:nth-child(3) {
+  transform: translateX(-50%) rotate(-45deg);
+  bottom: 19px;
+}
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 85px;
+  left: 0;
+  right: 0;
+  background: var(--white);
+  border-bottom: 2px solid var(--black);
+  max-height: calc(100vh - 85px);
+  overflow-y: auto;
+  z-index: 999;
+}
+
+.mobile-menu.active {
+  display: block;
+}
+
+.mobile-menu ul {
+  list-style: none;
+  padding: 1rem 0;
+}
+
+.mobile-menu a {
+  display: block;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid var(--gray-light);
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.mobile-menu a:hover {
+  background: var(--gray-lightest);
+  padding-left: 2.5rem;
+}
+
+/* Hero Section - Bold & Minimal */
+.hero {
+  min-height: 80vh;
+  background: var(--white);
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 4rem 2rem;
+  border-bottom: 2px solid var(--black);
+}
+
+.hero-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 900;
+  color: var(--black);
+  line-height: 1.1;
+  margin-bottom: 2rem;
+  letter-spacing: -0.03em;
+  min-height: 1.2em;
+}
+
+#hero-rotate {
+  display: inline-block;
+  min-width: 1px;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: var(--gray-dark);
+  max-width: 600px;
+  margin-bottom: 3rem;
+  line-height: 1.8;
+  font-weight: 400;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 4rem;
+}
+
+.btn {
+  padding: 1rem 2.5rem;
+  font-weight: 700;
+  display: inline-block;
+  transition: var(--transition);
+  text-align: center;
+  cursor: pointer;
+  font-size: 1rem;
+  border: 2px solid var(--black);
+}
+
+.btn-primary {
+  background: var(--black);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background: var(--white);
+  color: var(--black);
+}
+
+.btn-secondary {
+  background: var(--white);
+  color: var(--black);
+}
+
+.btn-secondary:hover {
+  background: var(--black);
+  color: var(--white);
+}
+
+.hero-stats {
+  display: flex;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  padding-right: 4rem;
+  border-right: 2px solid var(--black);
+}
+
+.stat-item:last-child {
+  border-right: none;
+}
+
+.stat-number {
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--black);
+  display: block;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: var(--gray);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+}
+
+/* Container */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Section Styles - Clean Separation */
+section {
+  padding: 5rem 2rem;
+  border-bottom: 2px solid var(--black);
+}
+
+section:nth-child(even) {
+  background: var(--gray-lightest);
+}
+
+.section-title {
+  text-align: center;
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 1rem;
+  font-weight: 900;
+  color: var(--black);
+  letter-spacing: -0.02em;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--gray);
+  margin-bottom: 3rem;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+/* About Section */
+.about-content {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.about-text {
+  color: var(--gray-dark);
+  line-height: 1.8;
+}
+
+.about-text p {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.about-image {
+  position: relative;
+  text-align: center;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  filter: grayscale(100%) contrast(1.2);
+  border: 2px solid var(--black);
+}
+
+.gptw-years {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--white);
+  border: 2px solid var(--black);
+  padding: 0.75rem 1.25rem;
+  margin-top: 1.5rem;
+  font-weight: 700;
+}
+
+.gptw-years img {
+  height: 30px;
+  width: auto;
+  filter: grayscale(100%);
+}
+
+.gptw-years strong {
+  font-weight: 900;
+}
+
+/* Cards Grid - Minimalist */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.card {
+  background: var(--white);
+  border: 2px solid var(--black);
+  overflow: hidden;
+  transition: var(--transition);
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 8px 8px 0 var(--black);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  filter: grayscale(100%) contrast(1.1);
+  border-bottom: 2px solid var(--black);
+}
+
+.card-content {
+  padding: 1.5rem;
+}
+
+.card h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.card p {
+  color: var(--gray);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* Coming Soon Badge */
+.coming-soon-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--accent-color);
+  color: var(--white);
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  z-index: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Icon Grid - Clean Layout */
+.icon-grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.icon-card {
+  background: var(--white);
+  border: 2px solid var(--black);
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.icon-card:hover {
+  background: var(--black);
+  color: var(--white);
+}
+
+.icon-card:hover .icon-card-desc {
+  color: var(--gray-light);
+}
+
+.icon-card-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.icon-card-meta {
+  flex: 1;
+}
+
+.icon-card-title {
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+}
+
+.icon-card-desc {
+  font-size: 0.8rem;
+  color: var(--gray);
+}
+
+/* Video Grid */
+.video-grid {
+  max-width: var(--max-width);
+  margin: 2rem auto 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.video-card {
+  background: var(--white);
+  border: 2px solid var(--black);
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.video-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 8px 8px 0 var(--black);
+}
+
+.video-embed {
+  aspect-ratio: 16 / 9;
+  background: var(--black);
+  border-bottom: 2px solid var(--black);
+}
+
+.video-embed iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+.video-meta {
+  padding: 1.5rem;
+}
+
+.video-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.video-desc {
+  font-size: 0.9rem;
+  color: var(--gray);
+  margin-bottom: 0.75rem;
+}
+
+.video-link {
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+/* City Cards */
+.city-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.city-card {
+  background: var(--white);
+  border: 2px solid var(--black);
+  overflow: hidden;
+  transition: var(--transition);
+  position: relative;
+}
+
+.city-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 8px 8px 0 var(--black);
+}
+
+.city-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  filter: grayscale(100%) contrast(1.1);
+  border-bottom: 2px solid var(--black);
+}
+
+.city-card-content {
+  padding: 1.5rem;
+}
+
+.city-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.city-country {
+  color: var(--gray);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.city-features {
+  list-style: none;
+  padding: 0;
+}
+
+.city-features li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--gray-light);
+  color: var(--gray-dark);
+  font-size: 0.9rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.city-features li:last-child {
+  border-bottom: none;
+}
+
+.city-features li:before {
+  content: '■';
+  position: absolute;
+  left: 0;
+  color: var(--black);
+  font-size: 0.7rem;
+}
+
+.city-card a {
+  color: var(--black);
+  font-weight: 700;
+  text-decoration: underline;
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+/* Benefits - Inverted Section */
+.benefits {
+  background: var(--black);
+  color: var(--white);
+}
+
+.benefits .section-title {
+  color: var(--white);
+}
+
+.benefits .section-subtitle {
+  color: var(--gray-light);
+}
+
+.benefits-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.benefit-item {
+  text-align: center;
+  padding: 2rem;
+  border: 2px solid var(--white);
+  background: transparent;
+  transition: var(--transition);
+}
+
+.benefit-item:hover {
+  background: var(--white);
+  color: var(--black);
+}
+
+.benefit-item:hover .benefit-text p {
+  color: var(--gray);
+}
+
+.benefit-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.benefit-text h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.benefit-text p {
+  color: var(--gray-light);
+  font-size: 0.9rem;
+}
+
+/* Process Steps */
+.process-rail {
+  counter-reset: step;
+  list-style: none;
+  max-width: var(--max-width);
+  margin: 2rem auto 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
+  position: relative;
+}
+
+.process-rail::before {
+  content: "";
+  position: absolute;
+  top: 35px;
+  left: 10px;
+  right: 10px;
+  height: 2px;
+  background: var(--black);
+  z-index: 0;
+}
+
+.step-card {
+  background: var(--white);
+  border: 2px solid var(--black);
+  padding: 1.5rem;
+  position: relative;
+  z-index: 1;
+  transition: var(--transition);
+}
+
+.step-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 8px 8px 0 var(--black);
+}
+
+.step-head {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.step-dot {
+  display: inline-grid;
+  place-items: center;
+  width: 50px;
+  height: 50px;
+  background: var(--black);
+  color: var(--white);
+  font-weight: 900;
+  font-size: 1.5rem;
+  border: 3px solid var(--white);
+  flex-shrink: 0;
+}
+
+.step-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.step-desc {
+  font-size: 0.9rem;
+  color: var(--gray-dark);
+}
+
+/* Office Grid */
+.office-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: var(--max-width);
+  margin: 2rem auto 0;
+}
+
+.office-card {
+  background: var(--white);
+  border: 2px solid var(--black);
+  overflow: hidden;
+  transition: var(--transition);
+  position: relative;
+}
+
+.office-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 8px 8px 0 var(--black);
+}
+
+.office-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  filter: grayscale(100%) contrast(1.1);
+  border-bottom: 2px solid var(--black);
+}
+
+.office-info {
+  padding: 1.5rem;
+}
+
+.office-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.office-features {
+  list-style: none;
+  padding: 0;
+}
+
+.office-features li {
+  font-size: 0.9rem;
+  color: var(--gray-dark);
+  padding: 0.4rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.office-features li:before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--black);
+  font-weight: 900;
+}
+
+/* Lifestyle Grid */
+.lifestyle-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  max-width: var(--max-width);
+  margin: 2rem auto 0;
+}
+
+.lifestyle-item {
+  position: relative;
+  overflow: hidden;
+  height: 250px;
+  background: var(--gray-lightest);
+  cursor: pointer;
+  transition: var(--transition);
+  border: 2px solid var(--black);
+}
+
+.lifestyle-item:hover {
+  transform: scale(1.02);
+  box-shadow: 8px 8px 0 var(--black);
+}
+
+.lifestyle-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%) contrast(1.1);
+}
+
+.lifestyle-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--black);
+  color: var(--white);
+  padding: 1rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+/* Testimonials */
+.testimonial-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.testimonial {
+  background: var(--white);
+  padding: 2rem;
+  border: 2px solid var(--black);
+  position: relative;
+  transition: var(--transition);
+}
+
+.testimonial:hover {
+  transform: translateY(-4px);
+  box-shadow: 8px 8px 0 var(--black);
+}
+
+.testimonial::before {
+  content: '"';
+  font-size: 4rem;
+  color: var(--gray-light);
+  position: absolute;
+  top: 0;
+  left: 1rem;
+  font-family: Georgia, serif;
+  line-height: 1;
+}
+
+.testimonial-content {
+  margin-bottom: 1.5rem;
+  padding-top: 2rem;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--gray-dark);
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.author-img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  filter: grayscale(100%) contrast(1.2);
+  border: 2px solid var(--black);
+}
+
+.author-info strong {
+  display: block;
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+  font-weight: 700;
+}
+
+.author-info span {
+  color: var(--gray);
+  font-size: 0.85rem;
+}
+
+/* TA Team */
+.ta-leader {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 3rem;
+  background: var(--white);
+  border: 2px solid var(--black);
+}
+
+.ta-leader-img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  margin: 0 auto 1.5rem;
+  border: 3px solid var(--black);
+  filter: grayscale(100%) contrast(1.2);
+}
+
+.ta-leader-name {
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin-bottom: 0.5rem;
+}
+
+.ta-leader-role {
+  font-size: 1rem;
+  color: var(--gray);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.ta-leader-desc {
+  font-size: 0.95rem;
+  color: var(--gray-dark);
+  line-height: 1.8;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.ta-links {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-sm {
+  padding: 0.75rem 1.5rem;
+  font-size: 0.9rem;
+}
+
+.btn-ghost {
+  background: transparent;
+  border: 2px solid var(--black);
+  color: var(--black);
+}
+
+.btn-ghost:hover {
+  background: var(--black);
+  color: var(--white);
+}
+
+.ta-team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.ta-member {
+  text-align: center;
+  background: var(--white);
+  border: 2px solid var(--black);
+  padding: 1.5rem;
+  transition: var(--transition);
+}
+
+.ta-member:hover {
+  transform: translateY(-4px);
+  box-shadow: 8px 8px 0 var(--black);
+}
+
+.ta-member-img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  margin: 0 auto 1rem;
+  border: 2px solid var(--black);
+  filter: grayscale(100%) contrast(1.2);
+}
+
+.ta-member-name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.ta-member-role {
+  font-size: 0.85rem;
+  color: var(--gray);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.ta-member-desc {
+  font-size: 0.85rem;
+  color: var(--gray-dark);
+  line-height: 1.6;
+}
+
+.ta-member-links {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+}
+
+.text-link {
+  color: var(--black);
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+/* FAQ */
+.faq-container {
+  max-width: 800px;
+  margin: 2rem auto 0;
+}
+
+.faq-item {
+  background: var(--white);
+  border: 2px solid var(--black);
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.faq-question {
+  padding: 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: var(--transition);
+  font-size: 1rem;
+}
+
+.faq-question:hover {
+  background: var(--gray-lightest);
+}
+
+.faq-question::after {
+  content: '+';
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.faq-item.active .faq-question::after {
+  content: '−';
+}
+
+.faq-answer {
+  padding: 0 1.5rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s, padding 0.3s;
+}
+
+.faq-item.active .faq-answer {
+  padding: 0 1.5rem 1.5rem;
+  max-height: 600px;
+}
+
+.faq-answer p {
+  color: var(--gray-dark);
+  line-height: 1.8;
+  font-size: 0.95rem;
+}
+
+/* Contact CTA Links */
+.cta-links {
+  max-width: 1000px;
+  margin: 2rem auto 0;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.cta-link {
+  display: grid;
+  grid-template-columns: 60px 1fr 40px;
+  align-items: center;
+  gap: 1.5rem;
+  background: var(--white);
+  border: 2px solid var(--black);
+  padding: 1.5rem;
+  transition: var(--transition);
+}
+
+.cta-link:hover {
+  transform: translateY(-4px);
+  box-shadow: 8px 8px 0 var(--black);
+}
+
+.cta-ico {
+  font-size: 2rem;
+}
+
+.cta-main strong {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 0.25rem;
+}
+
+.cta-main em {
+  display: block;
+  font-style: normal;
+  font-size: 0.9rem;
+  color: var(--gray);
+}
+
+.cta-arrow {
+  font-weight: 900;
+  font-size: 1.5rem;
+}
+
+/* Footer - Inverted */
+footer {
+  background: var(--black);
+  color: var(--white);
+  padding: 4rem 2rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--white);
+}
+
+.footer-content {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr repeat(3, 1fr);
+  gap: 3rem;
+  margin-bottom: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 2px solid var(--white);
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-logo img {
+  width: 50px;
+  height: 50px;
+  filter: brightness(0) invert(1);
+}
+
+.footer-logo-text {
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.footer-desc {
+  line-height: 1.8;
+  font-size: 0.95rem;
+  color: var(--gray-light);
+}
+
+.footer-section h3 {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+  color: var(--gray-light);
+  transition: var(--transition);
+  font-size: 0.9rem;
+}
+
+.footer-section a:hover {
+  color: var(--white);
+  padding-left: 0.5rem;
+}
+
+.badges {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.badge-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--gray-light);
+  font-weight: 600;
+}
+
+.footer-cta {
+  margin-top: 1.5rem;
+}
+
+.btn-accent {
+  background: var(--accent-color);
+  color: var(--white);
+  border-color: var(--accent-color);
+}
+
+.btn-accent:hover {
+  background: var(--white);
+  color: var(--accent-color);
+  border-color: var(--white);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 1.5rem;
+  font-size: 0.85rem;
+  color: var(--gray-light);
+}
+
+.footer-bottom a {
+  color: var(--white);
+  text-decoration: underline;
+  margin: 0 0.5rem;
+}
+
+/* Floating Buttons */
+.floating-apply {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: var(--black);
+  color: var(--white);
+  padding: 1rem 2rem;
+  font-weight: 700;
+  z-index: 999;
+  transition: var(--transition);
+  border: 2px solid var(--black);
+  font-size: 0.95rem;
+}
+
+.floating-apply:hover {
+  background: var(--white);
+  color: var(--black);
+  transform: translateY(-2px);
+  box-shadow: 8px 8px 0 var(--black);
+}
+
+.floating-casual {
+  position: fixed;
+  bottom: 2rem;
+  right: 180px;
+  background: var(--white);
+  color: var(--black);
+  padding: 1rem 2rem;
+  font-weight: 700;
+  z-index: 998;
+  transition: var(--transition);
+  border: 2px solid var(--black);
+  font-size: 0.95rem;
+}
+
+.floating-casual:hover {
+  background: var(--black);
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 8px 8px 0 var(--gray-dark);
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 6rem;
+  right: 2rem;
+  width: 50px;
+  height: 50px;
+  background: var(--white);
+  border: 2px solid var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition);
+  z-index: 997;
+  font-size: 1.2rem;
+  font-weight: 900;
+}
+
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.back-to-top:hover {
+  background: var(--black);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+/* 2026 Horse Popup */
+#horoscope-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.92);
+  z-index: 99999;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.horse-art {
+  width: 300px;
+  height: 300px;
+  animation: scaleIn 0.5s ease-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.horse-art svg {
+  width: 100%;
+  height: 100%;
+}
+
+.horse-year-text {
+  color: var(--accent-color);
+  font-size: 1.5rem;
+  font-weight: 900;
+  text-align: center;
+  letter-spacing: 0.2em;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.5); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* Responsive */
+@media (min-width: 720px){
+  .cta-links {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 980px){
+  .process-rail {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  nav {
+    display: none;
+  }
+
+  .mobile-toggle {
+    display: block;
+  }
+
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .floating-casual {
+    bottom: 6rem;
+    right: 2rem;
+  }
+
+  .back-to-top {
+    bottom: 10rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  .hero-stats {
+    justify-content: center;
+  }
+
+  .stat-item {
+    padding-right: 2rem;
+  }
+
+  .about-content {
+    grid-template-columns: 1fr;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .icon-grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .city-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .benefits-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .lifestyle-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ta-team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .floating-apply {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 640px){
+  .process-rail {
+    grid-template-columns: 1fr;
+  }
+
+  .process-rail::before {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .benefits-list {
+    grid-template-columns: 1fr;
+  }
+
+  .icon-grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .lifestyle-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
+</style>
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "TP中国",
+  "alternateName": "TP中国",
+  "url": "https://tpmyandtpth.github.io/JLP/",
+  "logo": "https://tpmyandtpth.github.io/JLP/photos/TPLogo11.png",
+  "description": "Teleperformance（TP）马来西亚·泰国中文职位招聘。全球100多个国家的BPO企业。",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "MY"
+  },
+  "sameAs": [
+    "https://line.me/R/ti/p/@286nmdsd"
+  ]
+}
+</script>
+</head>
+<body>
+<!-- Skip Navigation -->
+<a href="#main" class="sr-only">跳转到主要内容</a>
+
+<!-- 2026 Horse Year Popup -->
+<div id="horoscope-popup">
+  <div class="horse-art">
+    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <!-- Minimalist Horse in Chinese Brushstroke Style -->
+      <g fill="none" stroke="#C41E3A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+        <!-- Horse Body -->
+        <path d="M50,120 Q60,80 80,70 Q90,65 100,60 Q110,65 120,70 Q140,80 150,120"/>
+        <!-- Horse Neck and Head -->
+        <path d="M80,70 Q75,50 70,40 Q68,35 65,32"/>
+        <path d="M70,40 Q75,38 80,40"/>
+        <!-- Horse Mane -->
+        <path d="M75,50 Q70,45 65,48"/>
+        <path d="M77,55 Q72,50 67,53"/>
+        <path d="M79,60 Q74,55 69,58"/>
+        <!-- Horse Legs (Front) -->
+        <path d="M80,120 L85,150 L82,160"/>
+        <path d="M95,120 L98,150 L95,160"/>
+        <!-- Horse Legs (Back) -->
+        <path d="M120,120 L118,150 L120,160"/>
+        <path d="M135,120 L138,150 L135,160"/>
+        <!-- Horse Tail -->
+        <path d="M150,100 Q160,90 170,95 Q165,105 155,110"/>
+        <path d="M155,95 Q165,85 175,90"/>
+        <path d="M160,90 Q170,80 180,85"/>
+        <!-- Eye -->
+        <circle cx="68" cy="38" r="1.5" fill="#C41E3A"/>
+      </g>
+    </svg>
+    <div class="horse-year-text">2026 马年</div>
+  </div>
+</div>
+
+<header role="banner">
+  <div class="header-inner">
+    <a class="brand" href="https://tpmyandtpth.github.io/JLP/index.html">
+      <img src="photos/TPLogo11.png" alt="TP China" width="50" height="50">
+      <div class="brand-text">
+        <span class="brand-name">TP</span>
+        <span class="brand-tagline">中文招聘 — 马来西亚·泰国</span>
+      </div>
+    </a>
+
+    <nav aria-label="主导航">
+      <ul>
+        <li><a href="https://tpmyandtpth.github.io/JLP/index.html" aria-current="page">首页</a></li>
+        <li><a href="https://tpmyandtpth.github.io/JLP/about-tp.html">关于TP</a></li>
+        <li><a href="https://tpmyandtpth.github.io/JLP/salary-and-benefits.html">薪资福利</a></li>
+        <li><a href="https://tpmyandtpth.github.io/JLP/interview-process.html">面试流程</a></li>
+        <li><a href="https://tpmyandtpth.github.io/JLP/why-malaysia-thailand.html">为什么选择马来西亚·泰国</a></li>
+        <li><a href="https://tpmyandtpth.github.io/JLP/relocation-visa.html">移居签证支持</a></li>
+        <li><a href="https://careerseng-teleperformance.icims.com/jobs/49026/customer-service-representative---japanese-speaking-%28kl%29/job?mode=job&iis=LANDINGPAGE" target="_blank" rel="noopener noreferrer" class="apply-btn">立即申请</a></li>
+      </ul>
+    </nav>
+
+    <button class="mobile-toggle" id="mobileToggle" aria-label="打开菜单" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <nav class="mobile-menu" id="mobileMenu" aria-label="移动导航">
+    <ul>
+      <li><a href="https://tpmyandtpth.github.io/JLP/index.html">首页</a></li>
+      <li><a href="https://tpmyandtpth.github.io/JLP/about-tp.html">关于TP</a></li>
+      <li><a href="https://tpmyandtpth.github.io/JLP/salary-and-benefits.html">薪资福利</a></li>
+      <li><a href="https://tpmyandtpth.github.io/JLP/interview-process.html">面试流程</a></li>
+      <li><a href="https://tpmyandtpth.github.io/JLP/why-malaysia-thailand.html">为什么选择马来西亚·泰国</a></li>
+      <li><a href="https://tpmyandtpth.github.io/JLP/relocation-visa.html">移居签证支持</a></li>
+      <li><a href="https://careerseng-teleperformance.icims.com/jobs/49026/customer-service-representative---japanese-speaking-%28kl%29/job?mode=job&iis=LANDINGPAGE" target="_blank" rel="noopener noreferrer" class="apply-btn">立即申请</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-container">
+      <h1><span id="hero-rotate"></span></h1>
+      <p class="hero-subtitle">
+        您的新职业舞台，马来西亚是一个不错的选择。<br>
+        多元文化环境，发挥您的中文优势。<br>
+        经济实惠的舒适生活。在马来西亚开启"刚刚好"的海外生活吧！
+      </p>
+      <div class="hero-cta">
+        <a href="https://tpmyandtpth.github.io/JLP/open-jobs.html" class="btn btn-primary">查看职位</a>
+        <a href="https://tpmyandtpth.github.io/JLP/relocation-visa.html" class="btn btn-secondary">查看移居支持</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-number">100+</span>
+          <span class="stat-label">业务国家</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">50万+</span>
+          <span class="stat-label">全球员工</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">7,000+</span>
+          <span class="stat-label">马来西亚/泰国员工</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <h2 class="section-title">欢迎来到TP马来西亚·泰国招聘</h2>
+      <p class="section-subtitle">您的下一个职业生涯从这里开始！</p>
+      <div class="about-content">
+        <div class="about-text">
+          <p>TP于1978年在法国巴黎成立，是一家BPO（业务流程外包）企业。Teleperformance是全球领先的商业服务公司，在100多个国家拥有超过50万名员工。</p>
+          <p>我们将最先进的技术与优秀人才相结合，为全球知名品牌提供最佳的客户体验。目前，我们正在泰国和马来西亚积极招聘中文人才。</p>
+          <p>从应届毕业生到经验丰富的专业人士，我们都提供能够发挥您语言能力和个性的多元文化工作环境。在马来西亚和泰国，许多中文员工正在职，人数还在不断增加。</p>
+          <div id="gptwYears" class="gptw-years" aria-label="Great Place to Work连续6年获奖"></div>
+        </div>
+        <div class="about-image">
+          <img src="photos/great place to work.png" alt="Great Place to Work®认证标志" loading="lazy" decoding="async">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Priority Menu -->
+  <section class="priority-menu">
+    <div class="container">
+      <h2 class="section-title">优先菜单</h2>
+      <p class="section-subtitle">快速访问您想了解的信息</p>
+      
+      <div class="cards" id="priorityGrid">
+        <a href="https://tpmyandtpth.github.io/JLP/about-tp.html" class="card">
+          <img src="photos/GBS.jpeg" alt="关于TP" loading="lazy">
+          <div class="card-content">
+            <h3>关于TP</h3>
+            <p>全球最大的BPO企业之一</p>
+          </div>
+        </a>
+
+        <a href="https://tpmyandtpth.github.io/JLP/open-jobs.html" class="card">
+          <img src="photos/Reception.png" alt="职位信息" loading="lazy">
+          <div class="card-content">
+            <h3>查看职位</h3>
+            <p>中文职位</p>
+          </div>
+        </a>
+
+        <a href="https://tpmyandtpth.github.io/JLP/salary-and-benefits.html" class="card">
+          <img src="photos/Reception%20(1).png" alt="福利待遇" loading="lazy">
+          <div class="card-content">
+            <h3>薪资福利</h3>
+            <p>完善的待遇和支持</p>
+          </div>
+        </a>
+
+        <a href="https://tpmyandtpth.github.io/JLP/relocation-visa.html" class="card">
+          <img src="photos/Condo.jpg" alt="移居支持" loading="lazy">
+          <div class="card-content">
+            <h3>移居签证支持</h3>
+            <p>全方位支持体系</p>
+          </div>
+        </a>
+
+        <a href="https://tpmyandtpth.github.io/JLP/interview-process.html" class="card">
+          <img src="photos/Reception%20(2).png" alt="面试流程" loading="lazy">
+          <div class="card-content">
+            <h3>面试流程</h3>
+            <p>在线完成</p>
+          </div>
+        </a>
+
+        <a href="https://tpmyandtpth.github.io/JLP/why-malaysia-thailand.html" class="card">
+          <img src="photos/KL%201.jpg" alt="工作地点" loading="lazy">
+          <div class="card-content">
+            <h3>马来西亚·泰国的魅力</h3>
+            <p>宜居性和成长机会</p>
+          </div>
+        </a>
+
+        <a href="https://tpmyandtpth.github.io/JLP/casual-interview.html" class="card">
+          <img src="photos/Akito%20san.jpg" alt="轻松面谈" loading="lazy">
+          <div class="card-content">
+            <h3>轻松面谈</h3>
+            <p>先轻松咨询</p>
+          </div>
+        </a>
+
+        <a href="https://tpmyandtpth.github.io/JLP/testimonials.html" class="card">
+          <img src="photos/Maho.png" alt="员工心声" loading="lazy">
+          <div class="card-content">
+            <h3>员工心声</h3>
+            <p>实际工作者的体验谈</p>
+          </div>
+        </a>
+
+        <a href="https://tpmyandtpth.github.io/JLP/office-environment.html" class="card">
+          <img src="photos/G%20TOWER.jpg" alt="办公环境" loading="lazy">
+          <div class="card-content">
+            <h3>工作环境·虚拟参观</h3>
+            <p>办公环境和职业发展</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Icon Grid -->
+  <section class="icon-grid">
+    <div class="container">
+      <h2 class="section-title">生活信息·支持</h2>
+      <p class="section-subtitle">有助于生活的信息和资源</p>
+      <div class="icon-grid-container">
+        <a href="https://tpmyandtpth.github.io/JLP/cost-of-living.html" class="icon-card">
+          <span class="icon-card-icon">💰</span>
+          <div class="icon-card-meta">
+            <div class="icon-card-title">马来西亚生活成本</div>
+            <div class="icon-card-desc">餐饮·交通·住房</div>
+          </div>
+        </a>
+
+        <a href="https://tpmyandtpth.github.io/JLP/ta-team.html" class="icon-card">
+          <span class="icon-card-icon">🤝</span>
+          <div class="icon-card-meta">
+            <div class="icon-card-title">招聘团队介绍</div>
+            <div class="icon-card-desc">中文支持</div>
+          </div>
+        </a>
+
+        <a href="https://tpmyandtpth.github.io/JLP/area-around-office.html" class="icon-card">
+          <span class="icon-card-icon">📍</span>
+          <div class="icon-card-meta">
+            <div class="icon-card-title">周边环境</div>
+            <div class="icon-card-desc">办公室周边信息</div>
+          </div>
+        </a>
+
+        <a href="https://tpmyandtpth.github.io/JLP/daily-life-malaysia.html" class="icon-card">
+          <span class="icon-card-icon">🇲🇾</span>
+          <div class="icon-card-meta">
+            <div class="icon-card-title">当地生活</div>
+            <div class="icon-card-desc">餐饮·交通·住房</div>
+          </div>
+        </a>
+
+        <a href="https://tpmyandtpth.github.io/JLP/career-growth.html" class="icon-card">
+          <span class="icon-card-icon">📈</span>
+          <div class="icon-card-meta">
+            <div class="icon-card-title">职业发展·晋升制度</div>
+            <div class="icon-card-desc">语言·培训项目</div>
+          </div>
+        </a>
+        
+        <a href="https://tpmyandtpth.github.io/JLP/culture-and-events.html" class="icon-card">
+          <span class="icon-card-icon">🎉</span>
+          <div class="icon-card-meta">
+            <div class="icon-card-title">活动·公司文化</div>
+            <div class="icon-card-desc">愉快的工作环境</div>
+          </div>
+        </a>
+
+        <a href="https://tpmyandtpth.github.io/JLP/faq.html" class="icon-card">
+          <span class="icon-card-icon">❓</span>
+          <div class="icon-card-meta">
+            <div class="icon-card-title">常见问题</div>
+            <div class="icon-card-desc">解决疑问</div>
+          </div>
+        </a>
+
+        <a href="https://tpmyandtpth.github.io/xRAF/" target="_blank" rel="noopener noreferrer" class="icon-card">
+          <span class="icon-card-icon">🌐</span>
+          <div class="icon-card-meta">
+            <div class="icon-card-title">外部推荐</div>
+            <div class="icon-card-desc">招聘门户</div>
+          </div>
+        </a>
+
+        <a href="https://tpmyandtpth.github.io/JLP/" class="icon-card">
+          <span class="icon-card-icon">📝</span>
+          <div class="icon-card-meta">
+            <div class="icon-card-title">博客·专栏</div>
+            <div class="icon-card-desc">有用的文章</div>
+          </div>
+        </a>
+        
+        <a href="https://line.me/R/ti/p/@286nmdsd?from=page&searchId=286nmdsd" target="_blank" rel="noopener noreferrer" class="icon-card">
+          <span class="icon-card-icon">💬</span>
+          <div class="icon-card-meta">
+            <div class="icon-card-title">LINE官方账号</div>
+            <div class="icon-card-desc">最新信息发布</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Section -->
+  <section class="video-section" id="videos">
+    <div class="container">
+      <h2 class="section-title">员工访谈（视频）</h2>
+      <p class="section-subtitle">通过短视频介绍现场声音</p>
+
+      <div class="video-grid">
+        <article class="video-card">
+          <div class="video-embed">
+            <iframe
+              src="https://www.youtube.com/embed/N6l7PUQR0tw"
+              title="TP员工访谈：最新视频"
+              loading="lazy"
+              decoding="async"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+          </div>
+          <header class="video-meta">
+            <h3 class="video-title">TP员工访谈：最新视频</h3>
+            <p class="video-desc">听取实际工作员工的真实声音</p>
+            <a class="video-link" href="https://youtu.be/N6l7PUQR0tw" target="_blank" rel="noopener noreferrer">在YouTube上观看 →</a>
+          </header>
+        </article>
+
+        <article class="video-card">
+          <div class="video-embed">
+            <iframe
+              src="https://www.youtube.com/embed/H4SVUrCjTPM"
+              title="TP员工访谈：客服专员篇"
+              loading="lazy"
+              decoding="async"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+          </div>
+          <header class="video-meta">
+            <h3 class="video-title">TP员工访谈：客服专员篇</h3>
+            <p class="video-desc">在招聘第一线活跃的员工视角</p>
+            <a class="video-link" href="https://youtu.be/H4SVUrCjTPM" target="_blank" rel="noopener noreferrer">在YouTube上观看 →</a>
+          </header>
+        </article>
+
+        <article class="video-card">
+          <div class="video-embed">
+            <iframe
+              src="https://www.youtube.com/embed/VB6KSdFYLdE"
+              title="TP员工访谈：团队领导篇"
+              loading="lazy"
+              decoding="async"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+          </div>
+          <header class="video-meta">
+            <h3 class="video-title">TP员工访谈：团队领导篇</h3>
+            <p class="video-desc">现场管理·培训的真实情况</p>
+            <a class="video-link" href="https://youtu.be/VB6KSdFYLdE" target="_blank" rel="noopener noreferrer">在YouTube上观看 →</a>
+          </header>
+        </article>
+
+        <article class="video-card">
+          <div class="video-embed">
+            <iframe
+              src="https://www.youtube.com/embed/pa-qdCGkxA4"
+              title="TP员工访谈：运营经理篇"
+              loading="lazy"
+              decoding="async"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+          </div>
+          <header class="video-meta">
+            <h3 class="video-title">TP员工访谈：运营经理篇</h3>
+            <p class="video-desc">支持质量·生产力的运营幕后</p>
+            <a class="video-link" href="https://youtu.be/pa-qdCGkxA4" target="_blank" rel="noopener noreferrer">在YouTube上观看 →</a>
+          </header>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- World Map Section -->
+  <section class="world-map-section">
+    <div class="container">
+      <h2 class="section-title">遍布全球的TP网络</h2>
+      <p class="section-subtitle">在100多个国家提供全球服务</p>
+      <div style="max-width: var(--max-width); margin: 2rem auto 0; position: relative;">
+        <img src="photos/world map locations.png" alt="TP全球据点地图" loading="lazy" decoding="async" style="width: 100%; height: auto; filter: grayscale(100%) contrast(1.1); border: 2px solid var(--black);">
+      </div>
+    </div>
+  </section>
+
+  <!-- Cities Section -->
+  <section class="cities" id="cities">
+    <div class="container">
+      <h2 class="section-title">工作城市介绍</h2>
+      <p class="section-subtitle">马来西亚和泰国的魅力城市</p>
+
+      <div class="city-cards" id="cityGrid">
+        <article class="city-card">
+          <img src="photos/KL%201.jpg" alt="吉隆坡" loading="lazy">
+          <div class="city-card-content">
+            <h3>吉隆坡（KL）</h3>
+            <p class="city-country">马来西亚</p>
+            <ul class="city-features">
+              <li>许多华人居住的全球化城市</li>
+              <li>有唐吉诃德、永旺、伊势丹</li>
+              <li>提供中文服务的医院·诊所齐全</li>
+              <li>MRT·单轨列车通勤便利</li>
+            </ul>
+            <a href="https://tpmyandtpth.github.io/JLP/why-malaysia-thailand.html#kl">查看详情 →</a>
+          </div>
+        </article>
+
+        <article class="city-card">
+          <img src="photos/Penang.jpg" alt="槟城" loading="lazy">
+          <div class="city-card-content">
+            <h3>槟城（Penang）</h3>
+            <p class="city-country">马来西亚</p>
+            <ul class="city-features">
+              <li>世界遗产乔治市的历史之城</li>
+              <li>度假胜地与城市融合的环境</li>
+              <li>物价非常便宜，生活便利</li>
+              <li>华人社区完善</li>
+            </ul>
+            <a href="https://tpmyandtpth.github.io/JLP/why-malaysia-thailand.html#penang">查看详情 →</a>
+          </div>
+        </article>
+
+        <article class="city-card">
+          <img src="photos/Bangkok%202.jpg" alt="曼谷" loading="lazy">
+          <div class="city-card-content">
+            <h3>曼谷（Bangkok）</h3>
+            <p class="city-country">泰国</p>
+            <ul class="city-features">
+              <li>超过8万华人居住的城市</li>
+              <li>富士超市、伊势丹等完善</li>
+              <li>BTS和MRT移动舒适</li>
+              <li>医疗水平非常高</li>
+            </ul>
+            <a href="https://tpmyandtpth.github.io/JLP/why-malaysia-thailand.html#bangkok">查看详情 →</a>
+          </div>
+        </article>
+
+        <article class="city-card">
+          <span class="coming-soon-badge">即将推出</span>
+          <img src="photos/KL%201.jpg" alt="双威" loading="lazy">
+          <div class="city-card-content">
+            <h3>双威（Sunway）</h3>
+            <p class="city-country">马来西亚</p>
+            <ul class="city-features">
+              <li>综合城镇发展区</li>
+              <li>毗邻双威金字塔购物中心</li>
+              <li>靠近双威大学</li>
+              <li>现代化办公环境</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="city-card">
+          <span class="coming-soon-badge">即将推出</span>
+          <img src="photos/KL%202.jpg" alt="柔佛" loading="lazy">
+          <div class="city-card-content">
+            <h3>柔佛（Johor）</h3>
+            <p class="city-country">马来西亚</p>
+            <ul class="city-features">
+              <li>靠近新加坡的战略位置</li>
+              <li>快速发展的商业中心</li>
+              <li>低生活成本</li>
+              <li>多元文化环境</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="city-card">
+          <img src="photos/Condo.jpg" alt="在家办公" loading="lazy">
+          <div class="city-card-content">
+            <h3>在家办公（WFH）</h3>
+            <p class="city-country">远程工作</p>
+            <ul class="city-features">
+              <li>灵活的工作安排</li>
+              <li>舒适的家庭环境</li>
+              <li>工作与生活平衡</li>
+              <li>选定职位可用</li>
+            </ul>
+            <a href="https://tpmyandtpth.github.io/JLP/open-jobs.html">查看职位 →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="benefits" id="benefits">
+    <div class="container">
+      <h2 class="section-title">福利亮点</h2>
+      <p class="section-subtitle">全方位支持安心、成长、快乐</p>
+      <div class="benefits-list">
+        <div class="benefit-item">
+          <div class="benefit-icon">🏥</div>
+          <div class="benefit-text">
+            <h4>医疗保险</h4>
+            <p>入职第一天即适用</p>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">✈️</div>
+          <div class="benefit-text">
+            <h4>旅行支持</h4>
+            <p>单程机票·初期酒店</p>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">💰</div>
+          <div class="benefit-text">
+            <h4>各种补贴</h4>
+            <p>夜班·住房·加班</p>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">📚</div>
+          <div class="benefit-text">
+            <h4>语言培训</h4>
+            <p>GoFluent·Bootcamp</p>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">🎯</div>
+          <div class="benefit-text">
+            <h4>职业支持</h4>
+            <p>内部调动·晋升制度</p>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">🏖️</div>
+          <div class="benefit-text">
+            <h4>年假</h4>
+            <p>带薪年假放松</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interview Process -->
+  <section class="interview-process" id="interview">
+    <div class="container">
+      <h2 class="section-title">面试流程</h2>
+      <p class="section-subtitle">全部在线完成。每个步骤都有中文支持</p>
+
+      <ol class="process-rail">
+        <li class="step-card">
+          <div class="step-head">
+            <span class="step-dot">1</span>
+            <h3 class="step-title">简历筛选</h3>
+          </div>
+          <p class="step-desc">请提交简历/职业履历。</p>
+        </li>
+
+        <li class="step-card">
+          <div class="step-head">
+            <span class="step-dot">2</span>
+            <h3 class="step-title">在线测试</h3>
+          </div>
+          <p class="step-desc">语言·适性短测试（PC/手机可）。</p>
+        </li>
+
+        <li class="step-card">
+          <div class="step-head">
+            <span class="step-dot">3</span>
+            <h3 class="step-title">初试（招聘）</h3>
+          </div>
+          <p class="step-desc">确认工作内容和您的期望。有任何疑问请随时咨询。</p>
+        </li>
+
+        <li class="step-card">
+          <div class="step-head">
+            <span class="step-dot">4</span>
+            <h3 class="step-title">复试（分配）</h3>
+          </div>
+          <p class="step-desc">与分配团队面谈。具体化工作方式和班次。</p>
+        </li>
+
+        <li class="step-card">
+          <div class="step-head">
+            <span class="step-dot">5</span>
+            <h3 class="step-title">录用·签证手续</h3>
+          </div>
+          <p class="step-desc">确认条件后，从工作签证申请到旅行安排全程陪同。</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Office Environment -->
+  <section class="office-section" id="office">
+    <div class="container">
+      <h2 class="section-title">工作环境</h2>
+      <p class="section-subtitle">舒适且交通便利的工作场所</p>
+      
+      <div class="office-grid" id="officeGrid">
+        <div class="office-card">
+          <img src="photos/G%20TOWER.jpg" alt="G Tower KL" class="office-image" loading="lazy">
+          <div class="office-info">
+            <h3 class="office-name">G Tower（吉隆坡）</h3>
+            <ul class="office-features">
+              <li>Ampang Park站直达</li>
+              <li>步行即可到达KLCC</li>
+              <li>A级办公楼</li>
+            </ul>
+          </div>
+        </div>
+        <div class="office-card">
+          <img src="photos/Reception.png" alt="Penang Livingston" class="office-image" loading="lazy">
+          <div class="office-info">
+            <h3 class="office-name">Livingston（槟城）</h3>
+            <ul class="office-features">
+              <li>安静的环境</li>
+              <li>餐厅·药店近在咫尺</li>
+              <li>交通便利</li>
+            </ul>
+          </div>
+        </div>
+        <div class="office-card">
+          <img src="photos/Reception%20(1).png" alt="Penang One Precinct" class="office-image" loading="lazy">
+          <div class="office-info">
+            <h3 class="office-name">One Precinct（槟城）</h3>
+            <ul class="office-features">
+              <li>Bayan Baru区域</li>
+              <li>距机场15分钟</li>
+              <li>靠近Queensbay Mall</li>
+            </ul>
+          </div>
+        </div>
+        <div class="office-card">
+          <img src="photos/GBS.jpeg" alt="GBS@Mahsuri" class="office-image" loading="lazy">
+          <div class="office-info">
+            <h3 class="office-name">GBS@Mahsuri（槟城）</h3>
+            <ul class="office-features">
+              <li>州GBS枢纽</li>
+              <li>IT/BPO集聚地</li>
+              <li>生活基础设施完善</li>
+            </ul>
+          </div>
+        </div>
+        <div class="office-card">
+          <img src="photos/KL%201.jpg" alt="KCP" class="office-image" loading="lazy">
+          <div class="office-info">
+            <h3 class="office-name">KCP（八打灵再也中心点）</h3>
+            <ul class="office-features">
+              <li>州KCP枢纽</li>
+              <li>IT/BPO集聚地</li>
+              <li>生活基础设施完善</li>
+            </ul>
+          </div>
+        </div>
+        <div class="office-card">
+          <img src="photos/Singha%20Complex1.jpg" alt="Bangkok Singha Complex" class="office-image" loading="lazy">
+          <div class="office-info">
+            <h3 class="office-name">Singha Complex（曼谷）</h3>
+            <ul class="office-features">
+              <li>BTS/MRT就近</li>
+              <li>华人区域</li>
+              <li>商业综合设施内</li>
+            </ul>
+          </div>
+        </div>
+        <div class="office-card">
+          <span class="coming-soon-badge">即将推出</span>
+          <img src="photos/KL%201.jpg" alt="Sunway" class="office-image" loading="lazy">
+          <div class="office-info">
+            <h3 class="office-name">双威（Sunway）</h3>
+            <ul class="office-features">
+              <li>综合城镇发展区</li>
+              <li>毗邻双威金字塔购物中心</li>
+              <li>靠近双威大学</li>
+            </ul>
+          </div>
+        </div>
+        <div class="office-card">
+          <span class="coming-soon-badge">即将推出</span>
+          <img src="photos/KL%202.jpg" alt="Johor" class="office-image" loading="lazy">
+          <div class="office-info">
+            <h3 class="office-name">柔佛（Johor）</h3>
+            <ul class="office-features">
+              <li>靠近新加坡的战略位置</li>
+              <li>快速发展的商业中心</li>
+              <li>低生活成本</li>
+            </ul>
+          </div>
+        </div>
+        <div class="office-card">
+          <img src="photos/Condo.jpg" alt="Work from Home" class="office-image" loading="lazy">
+          <div class="office-info">
+            <h3 class="office-name">在家办公（WFH）</h3>
+            <ul class="office-features">
+              <li>灵活的工作安排</li>
+              <li>舒适的家庭环境</li>
+              <li>工作与生活平衡</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div style="text-align: center; margin-top: 3rem;">
+        <a href="https://vtour.cloud/mh2n0j/ae5772z1/Bella%27s" target="_blank" rel="noopener noreferrer" class="btn btn-primary">虚拟办公室参观 →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lifestyle Gallery -->
+  <section class="lifestyle-section">
+    <div class="container">
+      <h2 class="section-title">不仅是工作。充实的活跃生活</h2>
+      <p class="section-subtitle">周末去岛屿，平日晚上瑜伽或咖啡馆巡游</p>
+      <div class="lifestyle-grid">
+        <div class="lifestyle-item">
+          <img src="photos/KL%202.jpg" alt="咖啡馆文化" loading="lazy">
+          <div class="lifestyle-caption">咖啡馆巡游</div>
+        </div>
+        <div class="lifestyle-item">
+          <img src="photos/Penang.jpg" alt="海滩生活" loading="lazy">
+          <div class="lifestyle-caption">在海滩放松</div>
+        </div>
+        <div class="lifestyle-item">
+          <img src="photos/Bangkok1.jpg" alt="夜市" loading="lazy">
+          <div class="lifestyle-caption">夜市</div>
+        </div>
+        <div class="lifestyle-item">
+          <img src="photos/Condo.jpg" alt="带泳池的公寓" loading="lazy">
+          <div class="lifestyle-caption">泳池·健身房生活</div>
+        </div>
+        <div class="lifestyle-item">
+          <img src="photos/KL%201.jpg" alt="晨跑" loading="lazy">
+          <div class="lifestyle-caption">晨跑</div>
+        </div>
+        <div class="lifestyle-item">
+          <img src="photos/Bangkok%202.jpg" alt="瑜伽放松" loading="lazy">
+          <div class="lifestyle-caption">瑜伽放松</div>
+        </div>
+        <div class="lifestyle-item">
+          <img src="photos/Penang.jpg" alt="周末跳岛游" loading="lazy">
+          <div class="lifestyle-caption">周末跳岛游</div>
+        </div>
+        <div class="lifestyle-item">
+          <img src="photos/G%20TOWER.jpg" alt="周末邻国旅行" loading="lazy">
+          <div class="lifestyle-caption">周末邻国旅行</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <h2 class="section-title">员工心声</h2>
+      <p class="section-subtitle">实际工作成员的"真实感受"</p>
+      <div class="testimonial-cards">
+        <div class="testimonial">
+          <p class="testimonial-content">
+            物价便宜，所以咖啡馆巡游和外出就餐变得轻松自如。通勤压力消失了，平日晚上也能从容地进行瑜伽和与朋友相处的时间。
+          </p>
+          <div class="testimonial-author">
+            <img src="photos/Maho.png" alt="员工" class="author-img">
+            <div class="author-info">
+              <strong>员工A</strong>
+              <span>招聘团队·20多岁女性</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <p class="testimonial-content">
+            每周末泳池、桑拿、健身房。这样的生活，在中国无法想象！假日和朋友去海滩或夜市。工作和娱乐都能平衡地享受！
+          </p>
+          <div class="testimonial-author">
+            <img src="photos/Joseph%20on%20vacation.jpg" alt="员工" class="author-img">
+            <div class="author-info">
+              <strong>员工B</strong>
+              <span>客户支持·30多岁男性</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <p class="testimonial-content">
+            即使不擅长英语，也能从以中文为主的工作开始，所以很安心。在可以逐步提高技能的环境中，现在也能享受用英语交流了。
+          </p>
+          <div class="testimonial-author">
+            <img src="photos/Maho%20in%20front%20ofKLCC.jpg" alt="员工" class="author-img">
+            <div class="author-info">
+              <strong>员工C</strong>
+              <span>前销售职·30多岁</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <p class="testimonial-content">
+            "可以不同"的价值观让心灵自由。比在中国时更不在意周围的目光了。尊重多样性的文化真的很舒适。
+          </p>
+          <div class="testimonial-author">
+            <img src="photos/Akito%20san.jpg" alt="员工" class="author-img">
+            <div class="author-info">
+              <strong>员工D</strong>
+              <span>招聘团队</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <p class="testimonial-content">
+            无论年龄或经历，努力都会得到评价的公司氛围非常棒。也经历了晋升为团队领导的机会，职业可能性扩大了。
+          </p>
+          <div class="testimonial-author">
+            <img src="photos/Reception.png" alt="员工" class="author-img">
+            <div class="author-info">
+              <strong>员工E</strong>
+              <span>团队领导·40多岁</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <p class="testimonial-content">
+            在马来西亚的生活比想象中舒适。中国菜也很丰富，不会想家。周末也享受邻国旅行。
+          </p>
+          <div class="testimonial-author">
+            <img src="photos/GBS.jpeg" alt="员工" class="author-img">
+            <div class="author-info">
+              <strong>员工F</strong>
+              <span>QA专员·20多岁</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TA Team Section -->
+  <section class="ta-team" id="ta-team">
+    <div class="container">
+      <h2 class="section-title">招聘团队</h2>
+      <p class="section-subtitle">从申请到入职，用中文陪伴</p>
+      
+      <div class="ta-team-container">
+        <div class="ta-leader">
+          <a href="https://tpmyandtpth.github.io/JLP/casual-interview.html#book" class="ta-leader-img-link">
+            <img src="photos/Joseph Hiroyuki Ueda.jpg"
+                 alt="招聘团队领导"
+                 class="ta-leader-img" loading="lazy" decoding="async">
+          </a>
+          <h3 class="ta-leader-name">招聘团队</h3>
+          <p class="ta-leader-role">高级经理｜人才招聘</p>
+          <p class="ta-leader-desc">
+            您好。我是TP Malaysia负责中文人才招聘的团队。多年来，我们一直从事APAC地区为中心的人才招聘工作。海外转职是一个很大的挑战，但也是拓展新可能性的绝佳机会。我们将诚心支持您的挑战，成为通向更美好未来的第一步。
+          </p>
+          <div class="ta-links">
+            <a class="btn btn-sm btn-primary" href="https://tpmyandtpth.github.io/JLP/casual-interview.html#book">预约面谈</a>
+            <a class="btn btn-sm btn-ghost" href="https://line.me/R/ti/p/@286nmdsd" target="_blank" rel="noopener noreferrer">LINE咨询</a>
+            <a class="btn btn-sm btn-ghost" href="https://tpmyandtpth.github.io/JLP/open-jobs.html">查看职位</a>
+          </div>
+        </div>
+
+        <div class="ta-team-grid">
+          <article class="ta-member">
+            <a href="https://tpmyandtpth.github.io/JLP/casual-interview.html#book">
+              <img src="photos/Maho.png" alt="招聘专员" class="ta-member-img" loading="lazy" decoding="async">
+            </a>
+            <h3 class="ta-member-name">招聘专员</h3>
+            <p class="ta-member-role">人才招聘｜招聘负责人</p>
+            <p class="ta-member-desc">即使是第一次海外就业，我们也会用中文好好支持。</p>
+            <div class="ta-member-links">
+              <a href="https://tpmyandtpth.github.io/JLP/casual-interview.html#book" class="text-link">预约面谈</a>
+              · <a href="https://tpmyandtpth.github.io/JLP/open-jobs.html" class="text-link">查看职位</a>
+            </div>
+          </article>
+
+          <article class="ta-member">
+            <a href="https://tpmyandtpth.github.io/JLP/casual-interview.html#book">
+              <img src="photos/Akito%20san.jpg" alt="招聘专员" class="ta-member-img" loading="lazy" decoding="async">
+            </a>
+            <h3 class="ta-member-name">招聘专员</h3>
+            <p class="ta-member-role">人才招聘｜招聘负责人</p>
+            <p class="ta-member-desc">职业咨询，请随时联系。一起找到最佳道路。</p>
+            <div class="ta-member-links">
+              <a href="https://tpmyandtpth.github.io/JLP/casual-interview.html#book" class="text-link">预约面谈</a>
+              · <a href="https://tpmyandtpth.github.io/JLP/open-jobs.html" class="text-link">查看职位</a>
+            </div>
+          </article>
+
+          <article class="ta-member">
+            <a href="https://tpmyandtpth.github.io/JLP/casual-interview.html#book">
+              <img src="photos/Koyori.jpg" alt="招聘专员" class="ta-member-img" loading="lazy" decoding="async">
+            </a>
+            <h3 class="ta-member-name">招聘专员</h3>
+            <p class="ta-member-role">人才招聘｜招聘负责人</p>
+            <p class="ta-member-desc">旅行手续和当地生活也会跟进。</p>
+            <div class="ta-member-links">
+              <a href="https://tpmyandtpth.github.io/JLP/casual-interview.html#book" class="text-link">预约面谈</a>
+              · <a href="https://tpmyandtpth.github.io/JLP/open-jobs.html" class="text-link">查看职位</a>
+            </div>
+          </article>
+
+          <article class="ta-member">
+            <a href="https://tpmyandtpth.github.io/JLP/casual-interview.html#book">
+              <img src="photos/Maya.png" alt="招聘专员" class="ta-member-img" loading="lazy" decoding="async">
+            </a>
+            <h3 class="ta-member-name">招聘专员</h3>
+            <p class="ta-member-role">人才招聘｜招聘负责人</p>
+            <p class="ta-member-desc">一起寻找您期望的项目。</p>
+            <div class="ta-member-links">
+              <a href="https://tpmyandtpth.github.io/JLP/casual-interview.html#book" class="text-link">预约面谈</a>
+              · <a href="https://tpmyandtpth.github.io/JLP/open-jobs.html" class="text-link">查看职位</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <h2 class="section-title">常见问题</h2>
+      <p class="section-subtitle">回答申请前的疑问</p>
+      <div class="faq-container">
+        <div class="faq-item">
+          <div class="faq-question">不擅长英语也可以申请吗？</div>
+          <div class="faq-answer">
+            <p>是的，有很多以中文为主的职位。入职后还有GoFluent等英语学习支持项目，可以逐步提高技能。</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">工作签证手续困难吗？</div>
+          <div class="faq-answer">
+            <p>公司会代理申请，请放心。必要文件的准备也会用中文指导，从申请到批准全程支持。</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">住所怎么找？</div>
+          <div class="faq-answer">
+            <p>提供当地中介介绍和入职培训建议。在马来西亚还有临时住宿安排，可以从容地找房子。</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">有轮班工作吗？</div>
+          <div class="faq-answer">
+            <p>根据项目有24/7服务的夜班·周末班，但有轮班补贴。可以事先确认轮班体系。</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">只用中文工作可以吗？</div>
+          <div class="faq-answer">
+            <p>许多职位以中文为主。公司内部交流有时需要基本英语，但有语言支持。</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">福利有哪些？</div>
+          <div class="faq-answer">
+            <p>医疗保险、年假、各种补贴（夜班·住房等）、语言培训（GoFluent）、公司活动、职业发展项目等。</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">从申请到入职需要多长时间？</div>
+          <div class="faq-answer">
+            <p>通常从申请到录用2-3周，从签证申请到批准4-6周左右。因人而异，详情请咨询。</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">什么是轻松面谈？</div>
+          <div class="faq-answer">
+            <p>不是面试，而是可以轻松咨询TP工作和生活的30分钟左右在线面谈。正在考虑转职的人也请随时联系。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact-min" id="contact">
+    <div class="container">
+      <h2 class="section-title">联系方式·各种链接</h2>
+      <p class="section-subtitle">根据目的，立即访问</p>
+
+      <div class="cta-links">
+        <a class="cta-link" href="https://forms.office.com/e/2UvpbweQww" target="_blank" rel="noopener noreferrer">
+          <span class="cta-ico" aria-hidden="true">🗓️</span>
+          <span class="cta-main">
+            <strong>预约轻松面谈</strong>
+            <em>30分钟在线轻松咨询</em>
+          </span>
+          <span class="cta-arrow" aria-hidden="true">→</span>
+        </a>
+
+        <a class="cta-link" href="https://line.me/R/ti/p/@286nmdsd" target="_blank" rel="noopener noreferrer">
+          <span class="cta-ico" aria-hidden="true">💬</span>
+          <span class="cta-main">
+            <strong>LINE官方账号</strong>
+            <em>发布最新招聘·活动信息</em>
+          </span>
+          <span class="cta-arrow" aria-hidden="true">→</span>
+        </a>
+
+        <a class="cta-link" href="https://careerseng-teleperformance.icims.com/jobs/49026/customer-service-representative---japanese-speaking-%28kl%29/job?mode=job&iis=LANDINGPAGE" target="_blank" rel="noopener noreferrer">
+          <span class="cta-ico" aria-hidden="true">✍️</span>
+          <span class="cta-main">
+            <strong>申请页面</strong>
+            <em>上传简历即可轻松申请</em>
+          </span>
+          <span class="cta-arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-content">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <img src="photos/TPLogo11.png" alt="TP">
+        <span class="footer-logo-text">TP</span>
+      </div>
+      <p class="footer-desc">
+        在100多个国家开展业务的全球BPO企业。<br>
+        支持中文人才的新职业生涯。
+      </p>
+      <div class="badges">
+        <span class="badge-item">🏆 Great Place to Work®连续6年</span>
+      </div>
+      <div class="footer-cta">
+        <a href="https://careerseng-teleperformance.icims.com/jobs/49026/customer-service-representative---japanese-speaking-%28kl%29/job?mode=job&iis=LANDINGPAGE" target="_blank" rel="noopener noreferrer" class="btn btn-accent">点击申请</a>
+      </div>
+    </div>
+    
+    <div class="footer-section">
+      <h3>公司信息</h3>
+      <ul>
+        <li><a href="https://tpmyandtpth.github.io/JLP/about-tp.html">公司介绍</a></li>
+        <li><a href="https://tpmyandtpth.github.io/JLP/salary-and-benefits.html#benefits">福利待遇</a></li>
+        <li><a href="https://tpmyandtpth.github.io/JLP/office-environment.html">办公环境</a></li>
+        <li><a href="https://tpmyandtpth.github.io/JLP/ta-team.html">招聘团队</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>职位·申请</h3>
+      <ul>
+        <li><a href="https://tpmyandtpth.github.io/JLP/open-jobs.html">职位列表</a></li>
+        <li><a href="https://tpmyandtpth.github.io/JLP/interview-process.html">面试流程</a></li>
+        <li><a href="https://tpmyandtpth.github.io/JLP/faq.html">常见问题</a></li>
+        <li><a href="https://tpmyandtpth.github.io/JLP/casual-interview.html">联系我们</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>生活信息</h3>
+      <ul>
+        <li><a href="https://tpmyandtpth.github.io/JLP/why-malaysia-thailand.html">工作城市</a></li>
+        <li><a href="https://tpmyandtpth.github.io/JLP/relocation-visa.html">移居支持</a></li>
+        <li><a href="https://tpmyandtpth.github.io/JLP/daily-life-malaysia.html">生活方式</a></li>
+        <li><a href="https://line.me/R/ti/p/@286nmdsd" target="_blank" rel="noopener noreferrer">LINE官方</a></li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="footer-bottom">
+    <p>&copy; 2025 TP. All rights reserved. | 
+      <a href="#">隐私政策</a> | 
+      <a href="#">使用条款</a>
+    </p>
+  </div>
+</footer>
+
+<!-- Floating Apply Button -->
+<a href="https://careerseng-teleperformance.icims.com/jobs/49026/customer-service-representative---japanese-speaking-%28kl%29/job?mode=job&iis=LANDINGPAGE" target="_blank" rel="noopener noreferrer" class="floating-apply" aria-label="立即申请">立即申请</a>
+
+<!-- Floating Casual Interview Button -->
+<a href="https://forms.office.com/e/2UvpbweQww" target="_blank" rel="noopener noreferrer" class="floating-casual" aria-label="轻松面谈">轻松面谈</a>
+
+<!-- Back to Top Button -->
+<button class="back-to-top" id="backToTop" aria-label="返回顶部">↑</button>
+
+<!-- JavaScript -->
+<script>
+// 2026 Horse Year Popup
+window.addEventListener('load', () => {
+  const popup = document.getElementById('horoscope-popup');
+
+  // Show the popup after 2 seconds
+  setTimeout(() => {
+    popup.style.display = 'flex';
+
+    // Hide the popup after another 2 seconds
+    setTimeout(() => {
+      popup.style.animation = 'fadeOut 0.5s ease-in-out forwards';
+      // Ensure it's hidden from the DOM after animation
+      setTimeout(() => {
+        popup.style.display = 'none';
+      }, 500);
+    }, 2000); // 2-second visibility
+
+  }, 2000); // 2-second delay before showing
+});
+
+// Hero Typewriter Effect
+try {
+  (function(){
+    const el = document.getElementById('hero-rotate');
+    if(!el) return;
+    
+    const lines = [
+      '像生活一样，在海外工作。',
+      '用中文开始，全球职业生涯。',
+      '东南亚"刚刚好"的生活。'
+    ];
+    
+    const speed = 46;
+    const hold = 1400;
+    const gap = 350;
+    let i = 0, j = 0, del = false;
+
+    function tick(){
+      const text = lines[i];
+      el.textContent = del ? text.slice(0, j--) : text.slice(0, j++);
+      
+      if(!del && j > text.length){ 
+        del = true; 
+        setTimeout(tick, hold); 
+        return; 
+      }
+      
+      if(del && j < 0){ 
+        del = false; 
+        i = (i+1) % lines.length; 
+        setTimeout(tick, gap); 
+        return; 
+      }
+      
+      setTimeout(tick, speed);
+    }
+    
+    tick();
+  })();
+} catch(error) {
+  console.warn('Typewriter effect failed:', error);
+  const el = document.getElementById('hero-rotate');
+  if(el) el.textContent = '像生活一样，在海外工作。';
+}
+
+// GPTW Years Animation
+try {
+  (function(){
+    const el = document.getElementById('gptwYears');
+    if(!el) return;
+    
+    const logo = '<img src="photos/great place to work.png" alt="Great Place to Work®">';
+    let n = 0, target = 6;
+    let hasAnimated = false;
+    
+    function animate(){
+      if(hasAnimated) return;
+      hasAnimated = true;
+      
+      function step(){ 
+        n++; 
+        el.innerHTML = `${logo}<span>Great Place to Work® <strong>${n}</strong> 年连续</span>`;
+        if(n < target) setTimeout(step, 240);
+      }
+      step();
+    }
+    
+    const observer = new IntersectionObserver((entries) => {
+      if(entries[0].isIntersecting) animate();
+    });
+    observer.observe(el);
+  })();
+} catch(error) {
+  console.warn('GPTW animation failed:', error);
+  const el = document.getElementById('gptwYears');
+  if(el) el.innerHTML = '<img src="photos/great place to work.png" alt="Great Place to Work®"><span>Great Place to Work® <strong>6</strong> 年连续</span>';
+}
+
+// Mobile Menu Toggle
+try {
+  (function(){
+    const toggle = document.getElementById('mobileToggle');
+    const menu = document.getElementById('mobileMenu');
+    
+    if(toggle && menu){
+      toggle.addEventListener('click', function(){
+        toggle.classList.toggle('active');
+        menu.classList.toggle('active');
+        toggle.setAttribute('aria-expanded', menu.classList.contains('active'));
+      });
+      
+      menu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          toggle.classList.remove('active');
+          menu.classList.remove('active');
+          toggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+      
+      document.addEventListener('click', (e) => {
+        if(!menu.contains(e.target) && !toggle.contains(e.target)) {
+          menu.classList.remove('active');
+          toggle.classList.remove('active');
+          toggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
+  })();
+} catch(error) {
+  console.warn('Mobile menu setup failed:', error);
+}
+
+// Back to Top Button
+try {
+  (function(){
+    const backToTop = document.getElementById('backToTop');
+    if(!backToTop) return;
+    
+    window.addEventListener('scroll', () => {
+      if(window.pageYOffset > 300){
+        backToTop.classList.add('show');
+      } else {
+        backToTop.classList.remove('show');
+      }
+    });
+    
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ 
+        top: 0, 
+        behavior: 'smooth' 
+      });
+    });
+  })();
+} catch(error) {
+  console.warn('Back to top button failed:', error);
+}
+
+// FAQ Accordion
+try {
+  (function(){
+    const items = document.querySelectorAll('.faq-item');
+    
+    items.forEach(item => {
+      const question = item.querySelector('.faq-question');
+      
+      question.addEventListener('click', () => {
+        const isActive = item.classList.contains('active');
+        
+        items.forEach(i => i.classList.remove('active'));
+        
+        if(!isActive) {
+          item.classList.add('active');
+        }
+      });
+    });
+  })();
+} catch(error) {
+  console.warn('FAQ accordion failed:', error);
+}
+
+// Smooth Scroll for Anchor Links
+try {
+  (function(){
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if(href === '#') return;
+        
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if(target){
+          const offset = 70;
+          const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+          
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  })();
+} catch(error) {
+  console.warn('Smooth scroll failed:', error);
+}
+
+// Initialize
+document.addEventListener('DOMContentLoaded', function() {
+  console.log('TP China minimalist site initialized');
+});
+</script>
+</body>
+</html>
