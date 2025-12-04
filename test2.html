@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Teleperformance招聘 | 马来西亚·泰国中文职位</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --black: #000; --white: #FFF; --gray-50: #FAFAFA; --gray-100: #F5F5F5;
+  --gray-200: #E5E5E5; --gray-600: #6B7280; --gray-800: #1F2937;
+  --red: #C41E3A; --red-dark: #9A1528; --gold: #D4AF37;
+  --shadow: 0 4px 12px rgba(0,0,0,0.08); --shadow-lg: 0 10px 30px rgba(0,0,0,0.12);
+  --max: 1200px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Noto Sans SC', sans-serif; color: var(--gray-800);
+  line-height: 1.7; background: var(--white); overflow-x: hidden;
+}
+a { text-decoration: none; color: inherit; transition: all 0.3s; }
+
+/* Header */
+header {
+  position: sticky; top: 0; background: rgba(255,255,255,0.98);
+  backdrop-filter: blur(20px); z-index: 1000; border-bottom: 1px solid var(--gray-100);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.header-inner {
+  max-width: var(--max); margin: 0 auto; padding: 1.25rem 2rem;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.brand { display: flex; align-items: center; gap: 1rem; font-weight: 700; }
+.brand img { width: 50px; height: 50px; filter: drop-shadow(0 2px 8px rgba(0,0,0,0.1)); }
+.brand-name { font-size: 1.35rem; font-weight: 900; }
+.brand-tagline { font-size: 0.75rem; color: var(--gray-600); text-transform: uppercase; letter-spacing: 0.1em; }
+
+nav ul { display: flex; gap: 2rem; list-style: none; }
+nav a { font-size: 0.95rem; font-weight: 500; padding: 0.5rem 0; position: relative; }
+nav a::after {
+  content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%) scaleX(0);
+  width: 100%; height: 3px; background: var(--red); transition: transform 0.3s;
+}
+nav a:hover::after { transform: translateX(-50%) scaleX(1); }
+nav a:hover { color: var(--red); }
+
+.apply-btn {
+  background: linear-gradient(135deg, var(--red), var(--red-dark));
+  color: var(--white); padding: 0.75rem 1.75rem; border-radius: 8px;
+  font-weight: 600; box-shadow: 0 4px 14px rgba(196,30,58,0.35);
+}
+.apply-btn:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(196,30,58,0.45); }
+
+.mobile-toggle { display: none; }
+
+/* Hero */
+.hero {
+  min-height: 85vh; background: linear-gradient(135deg, var(--white), var(--gray-50));
+  display: flex; align-items: center; padding: 6rem 2rem; position: relative; overflow: hidden;
+}
+.hero::after {
+  content: '福'; position: absolute; bottom: 8%; right: 4%;
+  font-size: clamp(12rem, 20vw, 18rem); font-weight: 700;
+  color: rgba(196,30,58,0.03); pointer-events: none;
+}
+.hero-container { max-width: var(--max); margin: 0 auto; position: relative; z-index: 2; }
+.hero h1 {
+  font-size: clamp(2.75rem, 7vw, 4.5rem); font-weight: 900;
+  line-height: 1.15; margin-bottom: 2rem; position: relative; display: inline-block;
+}
+.hero h1::after {
+  content: ''; position: absolute; bottom: -12px; left: 0;
+  width: 100px; height: 5px;
+  background: linear-gradient(90deg, var(--red), var(--gold));
+  border-radius: 3px; box-shadow: 0 2px 8px rgba(196,30,58,0.3);
+}
+.hero-subtitle {
+  font-size: clamp(1rem, 2vw, 1.2rem); color: var(--gray-600);
+  max-width: 680px; margin-bottom: 3rem; line-height: 1.85;
+}
+.hero-cta { display: flex; gap: 1.25rem; flex-wrap: wrap; margin-bottom: 4rem; }
+
+.btn {
+  padding: 1.125rem 2.25rem; border-radius: 10px; font-weight: 600;
+  transition: all 0.3s; cursor: pointer; font-size: 1.05rem;
+  border: 2px solid transparent; box-shadow: var(--shadow);
+}
+.btn-accent {
+  background: linear-gradient(135deg, var(--red), var(--red-dark));
+  color: var(--white);
+}
+.btn-accent:hover { transform: translateY(-4px); box-shadow: 0 10px 25px rgba(196,30,58,0.35); }
+.btn-secondary { background: var(--white); color: var(--black); border-color: var(--black); }
+.btn-secondary:hover { background: var(--black); color: var(--white); transform: translateY(-4px); }
+
+.hero-stats { display: flex; gap: 4rem; flex-wrap: wrap; }
+.stat-item { position: relative; padding-right: 4rem; }
+.stat-item:not(:last-child)::after {
+  content: ''; position: absolute; right: 0; top: 50%; transform: translateY(-50%);
+  width: 3px; height: 70%;
+  background: linear-gradient(180deg, transparent, var(--red), transparent);
+}
+.stat-number {
+  font-size: clamp(2.25rem, 4vw, 3rem); font-weight: 900;
+  line-height: 1; margin-bottom: 0.625rem;
+}
+.stat-label {
+  font-size: 0.9rem; color: var(--gray-600);
+  text-transform: uppercase; letter-spacing: 0.1em;
+}
+
+/* Sections */
+section { padding: 6rem 2rem; position: relative; }
+section:nth-child(even) { background: var(--gray-50); }
+.container { max-width: var(--max); margin: 0 auto; }
+
+.section-title {
+  text-align: center; font-size: clamp(2.25rem, 5vw, 3.25rem);
+  margin-bottom: 1.25rem; font-weight: 900; position: relative; padding-bottom: 2rem;
+}
+.section-title::after {
+  content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
+  width: 80px; height: 5px;
+  background: linear-gradient(90deg, transparent 0%, var(--red) 30%, var(--red) 70%, transparent 100%);
+  border-radius: 3px;
+}
+.section-subtitle {
+  text-align: center; color: var(--gray-600); margin-bottom: 4rem;
+  font-size: 1.05rem; max-width: 700px; margin-left: auto; margin-right: auto;
+}
+
+/* Cards */
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; }
+.card {
+  background: var(--white); border: 2px solid var(--gray-100);
+  border-radius: 20px; overflow: hidden; transition: all 0.3s;
+  box-shadow: var(--shadow); position: relative;
+}
+.card::before {
+  content: ''; position: absolute; top: 0; left: 0; width: 50px; height: 50px;
+  border-top: 4px solid var(--red); border-left: 4px solid var(--red);
+  border-top-left-radius: 20px; opacity: 0; transition: opacity 0.3s; z-index: 2;
+}
+.card:hover::before { opacity: 1; }
+.card:hover { transform: translateY(-10px); box-shadow: var(--shadow-lg); border-color: var(--red); }
+.card img { width: 100%; height: 220px; object-fit: cover; transition: transform 0.5s; }
+.card:hover img { transform: scale(1.08); }
+.card-content { padding: 2rem; }
+.card h3 { margin-bottom: 0.75rem; font-size: 1.2rem; font-weight: 700; }
+.card p { color: var(--gray-600); font-size: 0.95rem; line-height: 1.7; }
+
+.coming-soon-badge {
+  position: absolute; top: 1.25rem; right: 1.25rem;
+  background: linear-gradient(135deg, var(--gold), #B8960F);
+  color: var(--white); padding: 0.5rem 1.25rem; border-radius: 25px;
+  font-size: 0.8rem; font-weight: 700; z-index: 3;
+  box-shadow: 0 4px 14px rgba(212,175,55,0.4);
+  text-transform: uppercase; letter-spacing: 0.08em;
+}
+
+/* Contact CTA */
+.cta-links {
+  max-width: 1000px; margin: 2rem auto 0;
+  display: grid; gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.cta-link {
+  display: grid; grid-template-columns: 60px 1fr 40px;
+  align-items: center; gap: 1.5rem;
+  background: var(--white); border: 2px solid var(--gray-100);
+  border-radius: 16px; padding: 2rem; transition: all 0.3s;
+  box-shadow: var(--shadow);
+}
+.cta-link:hover {
+  transform: translateY(-4px); box-shadow: var(--shadow-lg);
+  border-color: var(--red);
+}
+.cta-ico { font-size: 2.5rem; }
+.cta-main strong { display: block; font-size: 1.15rem; font-weight: 700; margin-bottom: 0.25rem; }
+.cta-main em { display: block; font-style: normal; font-size: 0.95rem; color: var(--gray-600); }
+.cta-arrow { font-weight: 900; font-size: 1.5rem; color: var(--red); }
+
+/* Footer */
+footer {
+  background: linear-gradient(135deg, #1a1a1a, #000);
+  color: var(--white); padding: 4rem 2rem 2rem; position: relative;
+}
+footer::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, transparent, var(--red), transparent);
+}
+.footer-content {
+  max-width: var(--max); margin: 0 auto;
+  display: grid; grid-template-columns: 2fr repeat(3, 1fr);
+  gap: 3rem; padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.footer-logo { display: flex; align-items: center; gap: 1rem; }
+.footer-logo img { width: 50px; height: 50px; filter: brightness(0) invert(1); }
+.footer-logo-text { font-size: 1.5rem; font-weight: 900; }
+.footer-desc { line-height: 1.8; font-size: 0.95rem; color: rgba(255,255,255,0.8); margin-top: 1rem; }
+.footer-section h3 {
+  margin-bottom: 1rem; font-size: 1rem; text-transform: uppercase;
+  letter-spacing: 0.1em; font-weight: 700;
+}
+.footer-section ul { list-style: none; }
+.footer-section li { margin-bottom: 0.625rem; }
+.footer-section a { color: rgba(255,255,255,0.7); font-size: 0.9rem; }
+.footer-section a:hover { color: var(--red); padding-left: 0.5rem; }
+.footer-bottom {
+  text-align: center; padding-top: 1.5rem; font-size: 0.85rem;
+  color: rgba(255,255,255,0.6); margin-top: 2rem;
+}
+
+/* Floating Buttons */
+.floating-apply {
+  position: fixed; bottom: 2rem; right: 2rem;
+  background: linear-gradient(135deg, var(--red), var(--red-dark));
+  color: var(--white); padding: 1rem 2rem; border-radius: 50px;
+  font-weight: 600; box-shadow: 0 4px 14px rgba(196,30,58,0.4);
+  z-index: 999; transition: all 0.3s;
+}
+.floating-apply:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(196,30,58,0.5); }
+
+/* Mobile Responsive */
+@media (max-width: 900px) {
+  nav { display: none; }
+  .mobile-toggle {
+    display: block; width: 44px; height: 44px; background: transparent;
+    border: 2px solid var(--black); border-radius: 8px; cursor: pointer;
+    position: relative;
+  }
+  .mobile-toggle span {
+    display: block; width: 22px; height: 2px; background: var(--black);
+    position: absolute; left: 50%; transform: translateX(-50%);
+    transition: all 0.3s;
+  }
+  .mobile-toggle span:nth-child(1) { top: 13px; }
+  .mobile-toggle span:nth-child(2) { top: 21px; }
+  .mobile-toggle span:nth-child(3) { bottom: 13px; }
+  .mobile-toggle.active span:nth-child(1) { transform: translateX(-50%) rotate(45deg); top: 21px; }
+  .mobile-toggle.active span:nth-child(2) { opacity: 0; }
+  .mobile-toggle.active span:nth-child(3) { transform: translateX(-50%) rotate(-45deg); bottom: 21px; }
+  
+  .hero-stats { gap: 2rem; justify-content: center; }
+  .stat-item { padding-right: 2rem; }
+  .footer-content { grid-template-columns: 1fr; text-align: center; }
+  .floating-apply { bottom: 1rem; right: 1rem; padding: 0.75rem 1.5rem; font-size: 0.9rem; }
+}
+
+@media (max-width: 768px) {
+  .header-inner { padding: 1rem 1.5rem; }
+  section { padding: 4rem 1.5rem; }
+  .hero { padding: 4rem 1.5rem; }
+  .cards { grid-template-columns: 1fr; }
+  .cta-links { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="brand" href="#">
+      <img src="photos/TPLogo11.png" alt="TP" width="50" height="50">
+      <div class="brand-text">
+        <div class="brand-name">TP</div>
+        <div class="brand-tagline">中文招聘 — 马来西亚·泰国</div>
+      </div>
+    </a>
+    
+    <nav>
+      <ul>
+        <li><a href="#">首页</a></li>
+        <li><a href="#">关于TP</a></li>
+        <li><a href="#">薪资福利</a></li>
+        <li><a href="#">面试流程</a></li>
+        <li><a href="#">为什么选择马来西亚·泰国</a></li>
+        <li><a href="#">移居签证支持</a></li>
+        <li><a href="#" class="apply-btn">立即申请</a></li>
+      </ul>
+    </nav>
+    
+    <button class="mobile-toggle" id="mobileToggle">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero-container">
+      <h1><span id="hero-rotate">像生活一样，在海外工作。</span></h1>
+      <p class="hero-subtitle">
+        您的新职业舞台，马来西亚是一个不错的选择。<br>
+        多元文化环境，发挥您的中文优势。<br>
+        经济实惠的舒适生活。在马来西亚开启"刚刚好"的海外生活吧！
+      </p>
+      <div class="hero-cta">
+        <a href="#" class="btn btn-accent">查看职位</a>
+        <a href="#" class="btn btn-secondary">查看移居支持</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-number">100+</span>
+          <span class="stat-label">业务国家</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">50万+</span>
+          <span class="stat-label">全球员工</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">7,000+</span>
+          <span class="stat-label">马来西亚/泰国员工</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title">优先菜单</h2>
+      <p class="section-subtitle">快速访问您想了解的信息</p>
+      
+      <div class="cards">
+        <a href="#" class="card">
+          <img src="photos/GBS.jpeg" alt="关于TP">
+          <div class="card-content">
+            <h3>关于TP</h3>
+            <p>全球最大的BPO企业之一</p>
+          </div>
+        </a>
+
+        <a href="#" class="card">
+          <img src="photos/Reception.png" alt="职位信息">
+          <div class="card-content">
+            <h3>查看职位</h3>
+            <p>中文职位</p>
+          </div>
+        </a>
+
+        <a href="#" class="card">
+          <img src="photos/Reception%20(1).png" alt="福利待遇">
+          <div class="card-content">
+            <h3>薪资福利</h3>
+            <p>完善的待遇和支持</p>
+          </div>
+        </a>
+
+        <a href="#" class="card">
+          <img src="photos/Condo.jpg" alt="移居支持">
+          <div class="card-content">
+            <h3>移居签证支持</h3>
+            <p>全方位支持体系</p>
+          </div>
+        </a>
+
+        <a href="#" class="card">
+          <img src="photos/Reception%20(2).png" alt="面试流程">
+          <div class="card-content">
+            <h3>面试流程</h3>
+            <p>在线完成</p>
+          </div>
+        </a>
+
+        <a href="#" class="card">
+          <img src="photos/KL%201.jpg" alt="工作地点">
+          <div class="card-content">
+            <h3>马来西亚·泰国的魅力</h3>
+            <p>宜居性和成长机会</p>
+          </div>
+        </a>
+
+        <a href="#" class="card">
+          <span class="coming-soon-badge">即将推出</span>
+          <img src="photos/KL%201.jpg" alt="双威">
+          <div class="card-content">
+            <h3>双威（Sunway）</h3>
+            <p>综合城镇发展区</p>
+          </div>
+        </a>
+
+        <a href="#" class="card">
+          <span class="coming-soon-badge">即将推出</span>
+          <img src="photos/KL%202.jpg" alt="柔佛">
+          <div class="card-content">
+            <h3>柔佛（Johor）</h3>
+            <p>靠近新加坡的战略位置</p>
+          </div>
+        </a>
+
+        <a href="#" class="card">
+          <img src="photos/Condo.jpg" alt="在家办公">
+          <div class="card-content">
+            <h3>在家办公（WFH）</h3>
+            <p>灵活的工作安排</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title">联系方式·各种链接</h2>
+      <p class="section-subtitle">根据目的，立即访问</p>
+
+      <div class="cta-links">
+        <a class="cta-link" href="#">
+          <span class="cta-ico">🗓️</span>
+          <span class="cta-main">
+            <strong>预约轻松面谈</strong>
+            <em>30分钟在线轻松咨询</em>
+          </span>
+          <span class="cta-arrow">→</span>
+        </a>
+
+        <a class="cta-link" href="#">
+          <span class="cta-ico">💬</span>
+          <span class="cta-main">
+            <strong>LINE官方账号</strong>
+            <em>发布最新招聘·活动信息</em>
+          </span>
+          <span class="cta-arrow">→</span>
+        </a>
+
+        <a class="cta-link" href="#">
+          <span class="cta-ico">✍️</span>
+          <span class="cta-main">
+            <strong>申请页面</strong>
+            <em>上传简历即可轻松申请</em>
+          </span>
+          <span class="cta-arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-content">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <img src="photos/TPLogo11.png" alt="TP">
+        <span class="footer-logo-text">TP</span>
+      </div>
+      <p class="footer-desc">
+        在100多个国家开展业务的全球BPO企业。<br>
+        支持中文人才的新职业生涯。
+      </p>
+    </div>
+    
+    <div class="footer-section">
+      <h3>公司信息</h3>
+      <ul>
+        <li><a href="#">公司介绍</a></li>
+        <li><a href="#">福利待遇</a></li>
+        <li><a href="#">办公环境</a></li>
+        <li><a href="#">招聘团队</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>职位·申请</h3>
+      <ul>
+        <li><a href="#">职位列表</a></li>
+        <li><a href="#">面试流程</a></li>
+        <li><a href="#">常见问题</a></li>
+        <li><a href="#">联系我们</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>生活信息</h3>
+      <ul>
+        <li><a href="#">工作城市</a></li>
+        <li><a href="#">移居支持</a></li>
+        <li><a href="#">生活方式</a></li>
+        <li><a href="#">LINE官方</a></li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="footer-bottom">
+    <p>&copy; 2025 TP. All rights reserved.</p>
+  </div>
+</footer>
+
+<a href="#" class="floating-apply">立即申请</a>
+
+<script>
+// Hero typewriter
+const lines = ['像生活一样，在海外工作。', '用中文开始，全球职业生涯。', '东南亚"刚刚好"的生活。'];
+let i = 0, j = 0, del = false;
+const el = document.getElementById('hero-rotate');
+function tick() {
+  const text = lines[i];
+  el.textContent = del ? text.slice(0, j--) : text.slice(0, j++);
+  if (!del && j > text.length) { del = true; setTimeout(tick, 1400); return; }
+  if (del && j < 0) { del = false; i = (i+1) % lines.length; setTimeout(tick, 350); return; }
+  setTimeout(tick, 46);
+}
+tick();
+
+// Mobile toggle
+const toggle = document.getElementById('mobileToggle');
+toggle?.addEventListener('click', () => toggle.classList.toggle('active'));
+</script>
+</body>
+</html>
