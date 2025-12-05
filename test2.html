@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TP 招聘 | 马来西亚·泰国中文职位</title>
+<title>Teleperformance招聘 | 马来西亚·泰国中文职位</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
@@ -224,6 +224,28 @@ footer::before {
 }
 .floating-apply:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(196,30,58,0.5); }
 
+/* Modern Icons - SVG Styles */
+.page-icon {
+  width: 48px; height: 48px; display: inline-flex;
+  align-items: center; justify-content: center;
+  background: var(--gray-50); border-radius: 12px;
+  transition: all 0.3s; position: relative;
+}
+.page-icon::before {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(135deg, var(--red), var(--red-dark));
+  opacity: 0; border-radius: 12px; transition: opacity 0.3s;
+}
+.page-icon svg { position: relative; z-index: 1; transition: all 0.3s; }
+.card:hover .page-icon::before,
+.icon-card:hover .page-icon::before { opacity: 1; }
+.card:hover .page-icon svg,
+.icon-card:hover .page-icon svg { filter: brightness(0) invert(1); transform: scale(1.1); }
+
+/* Icon Styles in Cards */
+.card-content { padding: 2rem; display: flex; flex-direction: column; gap: 1rem; }
+.card-header { display: flex; align-items: center; gap: 1.25rem; }
+
 /* Mobile Responsive */
 @media (max-width: 900px) {
   nav { display: none; }
@@ -328,48 +350,325 @@ footer::before {
         <a href="#" class="card">
           <img src="photos/GBS.jpeg" alt="关于TP">
           <div class="card-content">
-            <h3>关于TP</h3>
+            <div class="card-header">
+              <div class="page-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                  <polyline points="9 22 9 12 15 12 15 22"/>
+                </svg>
+              </div>
+              <h3>首页</h3>
+            </div>
+            <p>开始您的旅程</p>
+          </div>
+        </a>
+
+        <a href="#" class="card">
+          <img src="photos/Reception.png" alt="关于TP">
+          <div class="card-content">
+            <div class="card-header">
+              <div class="page-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="M12 16v-4M12 8h.01"/>
+                </svg>
+              </div>
+              <h3>关于TP</h3>
+            </div>
             <p>全球最大的BPO企业之一</p>
           </div>
         </a>
 
         <a href="#" class="card">
-          <img src="photos/Reception.png" alt="职位信息">
+          <img src="photos/Reception%20(1).png" alt="职位信息">
           <div class="card-content">
-            <h3>查看职位</h3>
+            <div class="card-header">
+              <div class="page-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="7" width="20" height="14" rx="2"/>
+                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                </svg>
+              </div>
+              <h3>查看职位</h3>
+            </div>
             <p>中文职位</p>
           </div>
         </a>
 
         <a href="#" class="card">
-          <img src="photos/Reception%20(1).png" alt="福利待遇">
+          <img src="photos/Condo.jpg" alt="薪资福利">
           <div class="card-content">
-            <h3>薪资福利</h3>
+            <div class="card-header">
+              <div class="page-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="12" y1="1" x2="12" y2="23"/>
+                  <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                </svg>
+              </div>
+              <h3>薪资福利</h3>
+            </div>
             <p>完善的待遇和支持</p>
           </div>
         </a>
 
         <a href="#" class="card">
-          <img src="photos/Condo.jpg" alt="移居支持">
+          <img src="photos/Reception%20(2).png" alt="移居支持">
           <div class="card-content">
-            <h3>移居签证支持</h3>
+            <div class="card-header">
+              <div class="page-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+              </div>
+              <h3>移居签证支持</h3>
+            </div>
             <p>全方位支持体系</p>
           </div>
         </a>
 
         <a href="#" class="card">
-          <img src="photos/Reception%20(2).png" alt="面试流程">
+          <img src="photos/KL%201.jpg" alt="面试流程">
           <div class="card-content">
-            <h3>面试流程</h3>
+            <div class="card-header">
+              <div class="page-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                </svg>
+              </div>
+              <h3>面试流程</h3>
+            </div>
             <p>在线完成</p>
           </div>
         </a>
 
         <a href="#" class="card">
-          <img src="photos/KL%201.jpg" alt="工作地点">
+          <img src="photos/KL%201.jpg" alt="马来西亚泰国">
           <div class="card-content">
-            <h3>马来西亚·泰国的魅力</h3>
+            <div class="card-header">
+              <div class="page-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <line x1="2" y1="12" x2="22" y2="12"/>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                </svg>
+              </div>
+              <h3>为什么选择马来西亚·泰国</h3>
+            </div>
             <p>宜居性和成长机会</p>
+          </div>
+        </a>
+
+        <a href="#" class="card">
+          <img src="photos/Akito%20san.jpg" alt="轻松面谈">
+          <div class="card-content">
+            <div class="card-header">
+              <div class="page-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                </svg>
+              </div>
+              <h3>轻松面谈</h3>
+            </div>
+            <p>先轻松咨询</p>
+          </div>
+        </a>
+
+        <a href="#" class="card">
+          <img src="photos/Maho.png" alt="员工心声">
+          <div class="card-content">
+            <div class="card-header">
+              <div class="page-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                  <circle cx="12" cy="7" r="4"/>
+                </svg>
+              </div>
+              <h3>员工心声</h3>
+            </div>
+            <p>实际工作者的体验谈</p>
+          </div>
+        </a>
+
+        <a href="#" class="card">
+          <img src="photos/G%20TOWER.jpg" alt="办公环境">
+          <div class="card-content">
+            <div class="card-header">
+              <div class="page-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="3" width="7" height="9"/>
+                  <rect x="14" y="3" width="7" height="5"/>
+                  <rect x="14" y="12" width="7" height="9"/>
+                  <rect x="3" y="16" width="7" height="5"/>
+                </svg>
+              </div>
+              <h3>办公环境·虚拟参观</h3>
+            </div>
+            <p>办公环境和职业发展</p>
+          </div>
+        </a>
+
+        <a href="#" class="card">
+          <img src="photos/Reception.png" alt="职业发展">
+          <div class="card-content">
+            <div class="card-header">
+              <div class="page-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="12" y1="20" x2="12" y2="10"/>
+                  <line x1="18" y1="20" x2="18" y2="4"/>
+                  <line x1="6" y1="20" x2="6" y2="16"/>
+                </svg>
+              </div>
+              <h3>职业发展·语言培训</h3>
+            </div>
+            <p>GoFluent培训项目</p>
+          </div>
+        </a>
+
+        <a href="#" class="card">
+          <img src="photos/KL%202.jpg" alt="生活成本">
+          <div class="card-content">
+            <div class="card-header">
+              <div class="page-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                </svg>
+              </div>
+              <h3>生活成本</h3>
+            </div>
+            <p>马来西亚生活开支</p>
+          </div>
+        </a>
+
+        <a href="#" class="card">
+          <img src="photos/Penang.jpg" alt="日常生活">
+          <div class="card-content">
+            <div class="card-header">
+              <div class="page-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20 9v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9"/>
+                  <path d="M9 22V12h6v10M2 10.6L12 2l10 8.6"/>
+                </svg>
+              </div>
+              <h3>马来西亚日常生活</h3>
+            </div>
+            <p>餐饮·交通·住房</p>
+          </div>
+        </a>
+
+        <a href="#" class="card">
+          <img src="photos/Joseph%20Hiroyuki%20Ueda.jpg" alt="招聘团队">
+          <div class="card-content">
+            <div class="card-header">
+              <div class="page-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+                </svg>
+              </div>
+              <h3>招聘团队介绍</h3>
+            </div>
+            <p>中文支持</p>
+          </div>
+        </a>
+
+        <a href="#" class="card">
+          <img src="photos/KL%201.jpg" alt="周边环境">
+          <div class="card-content">
+            <div class="card-header">
+              <div class="page-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+              </div>
+              <h3>周边环境</h3>
+            </div>
+            <p>办公室周边信息</p>
+          </div>
+        </a>
+
+        <a href="#" class="card">
+          <img src="photos/GBS.jpeg" alt="博客">
+          <div class="card-content">
+            <div class="card-header">
+              <div class="page-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                  <polyline points="14 2 14 8 20 8"/>
+                  <line x1="16" y1="13" x2="8" y2="13"/>
+                  <line x1="16" y1="17" x2="8" y2="17"/>
+                  <polyline points="10 9 9 9 8 9"/>
+                </svg>
+              </div>
+              <h3>博客·专栏</h3>
+            </div>
+            <p>有用的文章</p>
+          </div>
+        </a>
+
+        <a href="#" class="card">
+          <img src="photos/Reception%20(1).png" alt="LINE">
+          <div class="card-content">
+            <div class="card-header">
+              <div class="page-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+                </svg>
+              </div>
+              <h3>LINE官方账号</h3>
+            </div>
+            <p>最新信息发布</p>
+          </div>
+        </a>
+
+        <a href="#" class="card">
+          <img src="photos/Reception%20(2).png" alt="公司文化">
+          <div class="card-content">
+            <div class="card-header">
+              <div class="page-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/>
+                </svg>
+              </div>
+              <h3>活动·公司文化</h3>
+            </div>
+            <p>愉快的工作环境</p>
+          </div>
+        </a>
+
+        <a href="#" class="card">
+          <img src="photos/Condo.jpg" alt="FAQ">
+          <div class="card-content">
+            <div class="card-header">
+              <div class="page-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3M12 17h.01"/>
+                </svg>
+              </div>
+              <h3>常见问题</h3>
+            </div>
+            <p>解决疑问</p>
+          </div>
+        </a>
+
+        <a href="#" class="card">
+          <img src="photos/G%20TOWER.jpg" alt="外部推荐">
+          <div class="card-content">
+            <div class="card-header">
+              <div class="page-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                  <polyline points="15 3 21 3 21 9"/>
+                  <line x1="10" y1="14" x2="21" y2="3"/>
+                </svg>
+              </div>
+              <h3>外部推荐</h3>
+            </div>
+            <p>招聘门户</p>
           </div>
         </a>
 
@@ -377,7 +676,15 @@ footer::before {
           <span class="coming-soon-badge">即将推出</span>
           <img src="photos/KL%201.jpg" alt="双威">
           <div class="card-content">
-            <h3>双威（Sunway）</h3>
+            <div class="card-header">
+              <div class="page-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                  <path d="M2 17l10 5 10-5M2 12l10 5 10-5"/>
+                </svg>
+              </div>
+              <h3>双威（Sunway）</h3>
+            </div>
             <p>综合城镇发展区</p>
           </div>
         </a>
@@ -386,7 +693,15 @@ footer::before {
           <span class="coming-soon-badge">即将推出</span>
           <img src="photos/KL%202.jpg" alt="柔佛">
           <div class="card-content">
-            <h3>柔佛（Johor）</h3>
+            <div class="card-header">
+              <div class="page-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                  <path d="M2 17l10 5 10-5M2 12l10 5 10-5"/>
+                </svg>
+              </div>
+              <h3>柔佛（Johor）</h3>
+            </div>
             <p>靠近新加坡的战略位置</p>
           </div>
         </a>
@@ -394,7 +709,16 @@ footer::before {
         <a href="#" class="card">
           <img src="photos/Condo.jpg" alt="在家办公">
           <div class="card-content">
-            <h3>在家办公（WFH）</h3>
+            <div class="card-header">
+              <div class="page-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="3" width="20" height="14" rx="2"/>
+                  <line x1="8" y1="21" x2="16" y2="21"/>
+                  <line x1="12" y1="17" x2="12" y2="21"/>
+                </svg>
+              </div>
+              <h3>在家办公（WFH）</h3>
+            </div>
             <p>灵活的工作安排</p>
           </div>
         </a>
