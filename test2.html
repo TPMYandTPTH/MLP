@@ -6,278 +6,601 @@
 <title>Teleperformance招聘 | 马来西亚·泰国中文职位</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 <style>
 :root {
-  --black: #000; --white: #FFF; --gray-50: #FAFAFA; --gray-100: #F5F5F5;
-  --gray-200: #E5E5E5; --gray-600: #6B7280; --gray-800: #1F2937;
-  --red: #C41E3A; --red-dark: #9A1528; --gold: #D4AF37;
-  --shadow: 0 4px 12px rgba(0,0,0,0.08); --shadow-lg: 0 10px 30px rgba(0,0,0,0.12);
+  --black: #0a0a0a;
+  --white: #FFFFFF;
+  --gray-50: #FAFAFA;
+  --gray-100: #F5F5F5;
+  --gray-200: #E5E5E5;
+  --gray-300: #D4D4D4;
+  --gray-600: #525252;
+  --gray-800: #1C1917;
+  --red: #DC2626;
+  --red-dark: #991B1B;
+  --red-light: #FEE2E2;
+  --gold: #D97706;
+  --gold-light: #FEF3C7;
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+  --shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.1);
   --max: 1200px;
+  --radius: 16px;
+  --radius-sm: 8px;
 }
+
 * { margin: 0; padding: 0; box-sizing: border-box; }
+
 body {
-  font-family: 'Noto Sans SC', sans-serif; color: var(--gray-800);
-  line-height: 1.7; background: var(--white); overflow-x: hidden;
+  font-family: 'Noto Sans SC', 'Noto Sans TC', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--gray-800);
+  line-height: 1.7;
+  background: var(--white);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
 }
-a { text-decoration: none; color: inherit; transition: all 0.3s; }
+
+a { text-decoration: none; color: inherit; transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1); }
 
 /* Header */
 header {
-  position: sticky; top: 0; background: rgba(255,255,255,0.98);
-  backdrop-filter: blur(20px); z-index: 1000; border-bottom: 1px solid var(--gray-100);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  position: sticky;
+  top: 0;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  z-index: 1000;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
 }
+
 .header-inner {
-  max-width: var(--max); margin: 0 auto; padding: 1.25rem 2rem;
-  display: flex; justify-content: space-between; align-items: center;
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.brand { display: flex; align-items: center; gap: 1rem; font-weight: 700; }
-.brand img { width: 50px; height: 50px; filter: drop-shadow(0 2px 8px rgba(0,0,0,0.1)); }
-.brand-name { font-size: 1.35rem; font-weight: 900; }
-.brand-tagline { font-size: 0.75rem; color: var(--gray-600); text-transform: uppercase; letter-spacing: 0.1em; }
 
-nav ul { display: flex; gap: 2rem; list-style: none; }
-nav a { font-size: 0.95rem; font-weight: 500; padding: 0.5rem 0; position: relative; }
-nav a::after {
-  content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%) scaleX(0);
-  width: 100%; height: 3px; background: var(--red); transition: transform 0.3s;
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
 }
-nav a:hover::after { transform: translateX(-50%) scaleX(1); }
-nav a:hover { color: var(--red); }
 
-.apply-btn {
-  background: linear-gradient(135deg, var(--red), var(--red-dark));
-  color: var(--white); padding: 0.75rem 1.75rem; border-radius: 8px;
-  font-weight: 600; box-shadow: 0 4px 14px rgba(196,30,58,0.35);
+.brand-logo {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 900;
+  font-size: 1.25rem;
+  letter-spacing: -0.02em;
+  box-shadow: 0 4px 12px rgba(220,38,38,0.3);
 }
-.apply-btn:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(196,30,58,0.45); }
+
+.brand-text { display: flex; flex-direction: column; }
+.brand-name { font-size: 1.25rem; font-weight: 800; letter-spacing: -0.02em; }
+.brand-tagline { font-size: 0.7rem; color: var(--gray-600); letter-spacing: 0.05em; }
+
+nav ul { display: flex; gap: 2rem; list-style: none; align-items: center; }
+nav a {
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  position: relative;
+  color: var(--gray-600);
+}
+nav a:hover { color: var(--black); }
+
+.nav-apply {
+  background: var(--black);
+  color: var(--white) !important;
+  padding: 0.625rem 1.5rem !important;
+  border-radius: var(--radius-sm);
+  font-weight: 600 !important;
+}
+.nav-apply:hover {
+  background: var(--red);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(220,38,38,0.3);
+}
 
 .mobile-toggle { display: none; }
 
 /* Hero */
 .hero {
-  min-height: 85vh; background: linear-gradient(135deg, var(--white), var(--gray-50));
-  display: flex; align-items: center; padding: 6rem 2rem; position: relative; overflow: hidden;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  padding: 5rem 2rem;
+  position: relative;
+  background: linear-gradient(180deg, var(--white) 0%, var(--gray-50) 100%);
+  overflow: hidden;
 }
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 80%;
+  height: 150%;
+  background: radial-gradient(ellipse at center, rgba(220,38,38,0.03) 0%, transparent 70%);
+  pointer-events: none;
+}
+
 .hero::after {
-  content: '福'; position: absolute; bottom: 8%; right: 4%;
-  font-size: clamp(12rem, 20vw, 18rem); font-weight: 700;
-  color: rgba(196,30,58,0.03); pointer-events: none;
+  content: '福';
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  font-size: clamp(10rem, 18vw, 16rem);
+  font-weight: 900;
+  color: rgba(220,38,38,0.025);
+  pointer-events: none;
+  line-height: 1;
 }
-.hero-container { max-width: var(--max); margin: 0 auto; position: relative; z-index: 2; }
+
+.hero-container {
+  max-width: var(--max);
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--red-light);
+  color: var(--red);
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.hero-badge::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: var(--red);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 .hero h1 {
-  font-size: clamp(2.75rem, 7vw, 4.5rem); font-weight: 900;
-  line-height: 1.15; margin-bottom: 2rem; position: relative; display: inline-block;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 900;
+  line-height: 1.15;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.03em;
+  animation: fadeInUp 0.6s ease-out 0.1s both;
 }
-.hero h1::after {
-  content: ''; position: absolute; bottom: -12px; left: 0;
-  width: 100px; height: 5px;
-  background: linear-gradient(90deg, var(--red), var(--gold));
-  border-radius: 3px; box-shadow: 0 2px 8px rgba(196,30,58,0.3);
-}
+
 .hero-subtitle {
-  font-size: clamp(1rem, 2vw, 1.2rem); color: var(--gray-600);
-  max-width: 680px; margin-bottom: 3rem; line-height: 1.85;
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  color: var(--gray-600);
+  max-width: 600px;
+  margin-bottom: 2.5rem;
+  line-height: 1.9;
+  animation: fadeInUp 0.6s ease-out 0.2s both;
 }
-.hero-cta { display: flex; gap: 1.25rem; flex-wrap: wrap; margin-bottom: 4rem; }
+
+.hero-cta {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 4rem;
+  animation: fadeInUp 0.6s ease-out 0.3s both;
+}
 
 .btn {
-  padding: 1.125rem 2.25rem; border-radius: 10px; font-weight: 600;
-  transition: all 0.3s; cursor: pointer; font-size: 1.05rem;
-  border: 2px solid transparent; box-shadow: var(--shadow);
+  padding: 1rem 2rem;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  border: none;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
 }
-.btn-accent {
-  background: linear-gradient(135deg, var(--red), var(--red-dark));
+
+.btn-primary {
+  background: var(--black);
   color: var(--white);
 }
-.btn-accent:hover { transform: translateY(-4px); box-shadow: 0 10px 25px rgba(196,30,58,0.35); }
-.btn-secondary { background: var(--white); color: var(--black); border-color: var(--black); }
-.btn-secondary:hover { background: var(--black); color: var(--white); transform: translateY(-4px); }
-
-.hero-stats { display: flex; gap: 4rem; flex-wrap: wrap; }
-.stat-item { position: relative; padding-right: 4rem; }
-.stat-item:not(:last-child)::after {
-  content: ''; position: absolute; right: 0; top: 50%; transform: translateY(-50%);
-  width: 3px; height: 70%;
-  background: linear-gradient(180deg, transparent, var(--red), transparent);
+.btn-primary:hover {
+  background: var(--red);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(220,38,38,0.25);
 }
+
+.btn-secondary {
+  background: var(--white);
+  color: var(--black);
+  border: 2px solid var(--gray-200);
+}
+.btn-secondary:hover {
+  border-color: var(--black);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+
+.hero-stats {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  animation: fadeInUp 0.6s ease-out 0.4s both;
+}
+
+.stat-item { text-align: left; }
 .stat-number {
-  font-size: clamp(2.25rem, 4vw, 3rem); font-weight: 900;
-  line-height: 1; margin-bottom: 0.625rem;
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin-bottom: 0.25rem;
 }
 .stat-label {
-  font-size: 0.9rem; color: var(--gray-600);
-  text-transform: uppercase; letter-spacing: 0.1em;
+  font-size: 0.85rem;
+  color: var(--gray-600);
+  font-weight: 500;
 }
 
 /* Sections */
-section { padding: 6rem 2rem; position: relative; }
-section:nth-child(even) { background: var(--gray-50); }
+section { padding: 5rem 2rem; }
+.section-alt { background: var(--gray-50); }
 .container { max-width: var(--max); margin: 0 auto; }
 
+.section-header { text-align: center; margin-bottom: 3.5rem; }
 .section-title {
-  text-align: center; font-size: clamp(2.25rem, 5vw, 3.25rem);
-  margin-bottom: 1.25rem; font-weight: 900; position: relative; padding-bottom: 2rem;
-}
-.section-title::after {
-  content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
-  width: 80px; height: 5px;
-  background: linear-gradient(90deg, transparent 0%, var(--red) 30%, var(--red) 70%, transparent 100%);
-  border-radius: 3px;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 800;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.02em;
 }
 .section-subtitle {
-  text-align: center; color: var(--gray-600); margin-bottom: 4rem;
-  font-size: 1.05rem; max-width: 700px; margin-left: auto; margin-right: auto;
+  color: var(--gray-600);
+  font-size: 1rem;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
-/* Cards */
-.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; }
-.card {
-  background: var(--white); border: 2px solid var(--gray-100);
-  border-radius: 20px; overflow: hidden; transition: all 0.3s;
-  box-shadow: var(--shadow); position: relative;
-}
-.card::before {
-  content: ''; position: absolute; top: 0; left: 0; width: 50px; height: 50px;
-  border-top: 4px solid var(--red); border-left: 4px solid var(--red);
-  border-top-left-radius: 20px; opacity: 0; transition: opacity 0.3s; z-index: 2;
-}
-.card:hover::before { opacity: 1; }
-.card:hover { transform: translateY(-10px); box-shadow: var(--shadow-lg); border-color: var(--red); }
-.card img { width: 100%; height: 220px; object-fit: cover; transition: transform 0.5s; }
-.card:hover img { transform: scale(1.08); }
-.card-content { padding: 2rem; }
-.card h3 { margin-bottom: 0.75rem; font-size: 1.2rem; font-weight: 700; }
-.card p { color: var(--gray-600); font-size: 0.95rem; line-height: 1.7; }
-
-.coming-soon-badge {
-  position: absolute; top: 1.25rem; right: 1.25rem;
-  background: linear-gradient(135deg, var(--gold), #B8960F);
-  color: var(--white); padding: 0.5rem 1.25rem; border-radius: 25px;
-  font-size: 0.8rem; font-weight: 700; z-index: 3;
-  box-shadow: 0 4px 14px rgba(212,175,55,0.4);
-  text-transform: uppercase; letter-spacing: 0.08em;
+/* Icon Cards Grid */
+.icon-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
 }
 
-/* Contact CTA */
-.cta-links {
-  max-width: 1000px; margin: 2rem auto 0;
-  display: grid; gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+.icon-card {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
 }
-.cta-link {
-  display: grid; grid-template-columns: 60px 1fr 40px;
-  align-items: center; gap: 1.5rem;
-  background: var(--white); border: 2px solid var(--gray-100);
-  border-radius: 16px; padding: 2rem; transition: all 0.3s;
-  box-shadow: var(--shadow);
+
+.icon-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--red), var(--gold));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
 }
-.cta-link:hover {
-  transform: translateY(-4px); box-shadow: var(--shadow-lg);
+
+.icon-card:hover {
+  border-color: var(--gray-300);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+}
+
+.icon-card:hover::before { transform: scaleX(1); }
+
+.card-icon {
+  width: 52px;
+  height: 52px;
+  min-width: 52px;
+  background: var(--gray-50);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.card-icon svg {
+  width: 26px;
+  height: 26px;
+  stroke: var(--gray-800);
+  stroke-width: 1.75;
+  transition: all 0.3s ease;
+}
+
+.icon-card:hover .card-icon {
+  background: var(--red);
+  transform: scale(1.05);
+}
+
+.icon-card:hover .card-icon svg {
+  stroke: var(--white);
+}
+
+.card-content { flex: 1; min-width: 0; }
+.card-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 0.375rem;
+  letter-spacing: -0.01em;
+}
+.card-desc {
+  font-size: 0.875rem;
+  color: var(--gray-600);
+  line-height: 1.5;
+}
+
+.card-arrow {
+  position: absolute;
+  right: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%) translateX(-5px);
+  opacity: 0;
+  transition: all 0.3s ease;
+  color: var(--red);
+}
+
+.icon-card:hover .card-arrow {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
+}
+
+/* Coming Soon Badge */
+.badge-coming {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: linear-gradient(135deg, var(--gold), #B45309);
+  color: white;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 0.35rem 0.75rem;
+  border-radius: 50px;
+  letter-spacing: 0.03em;
+  box-shadow: 0 2px 8px rgba(217,119,6,0.35);
+}
+
+/* CTA Links */
+.cta-section { padding: 5rem 2rem; }
+
+.cta-grid {
+  max-width: 900px;
+  margin: 3rem auto 0;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.cta-card {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.75rem;
+  transition: all 0.3s ease;
+}
+
+.cta-card:hover {
   border-color: var(--red);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
 }
-.cta-ico { font-size: 2.5rem; }
-.cta-main strong { display: block; font-size: 1.15rem; font-weight: 700; margin-bottom: 0.25rem; }
-.cta-main em { display: block; font-style: normal; font-size: 0.95rem; color: var(--gray-600); }
-.cta-arrow { font-weight: 900; font-size: 1.5rem; color: var(--red); }
+
+.cta-icon {
+  width: 56px;
+  height: 56px;
+  min-width: 56px;
+  background: var(--gray-50);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.cta-card:hover .cta-icon {
+  background: var(--red-light);
+  transform: scale(1.05);
+}
+
+.cta-text { flex: 1; }
+.cta-title { font-weight: 700; font-size: 1rem; margin-bottom: 0.25rem; }
+.cta-subtitle { font-size: 0.85rem; color: var(--gray-600); }
+
+.cta-arrow {
+  color: var(--red);
+  font-size: 1.25rem;
+  font-weight: 600;
+  opacity: 0;
+  transform: translateX(-8px);
+  transition: all 0.3s ease;
+}
+
+.cta-card:hover .cta-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
 
 /* Footer */
 footer {
-  background: linear-gradient(135deg, #1a1a1a, #000);
-  color: var(--white); padding: 4rem 2rem 2rem; position: relative;
+  background: var(--black);
+  color: var(--white);
+  padding: 4rem 2rem 2rem;
 }
-footer::before {
-  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
-  background: linear-gradient(90deg, transparent, var(--red), transparent);
-}
-.footer-content {
-  max-width: var(--max); margin: 0 auto;
-  display: grid; grid-template-columns: 2fr repeat(3, 1fr);
-  gap: 3rem; padding-bottom: 3rem;
+
+.footer-grid {
+  max-width: var(--max);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr repeat(3, 1fr);
+  gap: 3rem;
+  padding-bottom: 3rem;
   border-bottom: 1px solid rgba(255,255,255,0.1);
 }
-.footer-logo { display: flex; align-items: center; gap: 1rem; }
-.footer-logo img { width: 50px; height: 50px; filter: brightness(0) invert(1); }
-.footer-logo-text { font-size: 1.5rem; font-weight: 900; }
-.footer-desc { line-height: 1.8; font-size: 0.95rem; color: rgba(255,255,255,0.8); margin-top: 1rem; }
-.footer-section h3 {
-  margin-bottom: 1rem; font-size: 1rem; text-transform: uppercase;
-  letter-spacing: 0.1em; font-weight: 700;
+
+.footer-brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
 }
-.footer-section ul { list-style: none; }
-.footer-section li { margin-bottom: 0.625rem; }
-.footer-section a { color: rgba(255,255,255,0.7); font-size: 0.9rem; }
-.footer-section a:hover { color: var(--red); padding-left: 0.5rem; }
+
+.footer-logo-icon {
+  width: 44px;
+  height: 44px;
+  background: var(--white);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--red);
+  font-weight: 900;
+  font-size: 1.1rem;
+}
+
+.footer-logo-text { font-size: 1.375rem; font-weight: 800; }
+.footer-desc { color: rgba(255,255,255,0.6); font-size: 0.9rem; line-height: 1.8; }
+
+.footer-col h4 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.25rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.4);
+}
+
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 0.75rem; }
+.footer-col a {
+  color: rgba(255,255,255,0.7);
+  font-size: 0.9rem;
+}
+.footer-col a:hover { color: var(--white); }
+
 .footer-bottom {
-  text-align: center; padding-top: 1.5rem; font-size: 0.85rem;
-  color: rgba(255,255,255,0.6); margin-top: 2rem;
+  text-align: center;
+  padding-top: 2rem;
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.4);
 }
 
-/* Floating Buttons */
-.floating-apply {
-  position: fixed; bottom: 2rem; right: 2rem;
-  background: linear-gradient(135deg, var(--red), var(--red-dark));
-  color: var(--white); padding: 1rem 2rem; border-radius: 50px;
-  font-weight: 600; box-shadow: 0 4px 14px rgba(196,30,58,0.4);
-  z-index: 999; transition: all 0.3s;
+/* Floating Button */
+.floating-btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: var(--red);
+  color: white;
+  padding: 0.875rem 1.75rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 20px rgba(220,38,38,0.4);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
-.floating-apply:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(196,30,58,0.5); }
 
-/* Modern Icons - SVG Styles */
-.page-icon {
-  width: 48px; height: 48px; display: inline-flex;
-  align-items: center; justify-content: center;
-  background: var(--gray-50); border-radius: 12px;
-  transition: all 0.3s; position: relative;
+.floating-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(220,38,38,0.5);
 }
-.page-icon::before {
-  content: ''; position: absolute; inset: 0;
-  background: linear-gradient(135deg, var(--red), var(--red-dark));
-  opacity: 0; border-radius: 12px; transition: opacity 0.3s;
+
+.floating-btn svg {
+  width: 18px;
+  height: 18px;
 }
-.page-icon svg { position: relative; z-index: 1; transition: all 0.3s; }
-.card:hover .page-icon::before,
-.icon-card:hover .page-icon::before { opacity: 1; }
-.card:hover .page-icon svg,
-.icon-card:hover .page-icon svg { filter: brightness(0) invert(1); transform: scale(1.1); }
 
-/* Icon Styles in Cards */
-.card-content { padding: 2rem; display: flex; flex-direction: column; gap: 1rem; }
-.card-header { display: flex; align-items: center; gap: 1.25rem; }
-
-/* Mobile Responsive */
+/* Mobile */
 @media (max-width: 900px) {
   nav { display: none; }
+  
   .mobile-toggle {
-    display: block; width: 44px; height: 44px; background: transparent;
-    border: 2px solid var(--black); border-radius: 8px; cursor: pointer;
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
   }
+  
   .mobile-toggle span {
-    display: block; width: 22px; height: 2px; background: var(--black);
-    position: absolute; left: 50%; transform: translateX(-50%);
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: var(--black);
     transition: all 0.3s;
   }
-  .mobile-toggle span:nth-child(1) { top: 13px; }
-  .mobile-toggle span:nth-child(2) { top: 21px; }
-  .mobile-toggle span:nth-child(3) { bottom: 13px; }
-  .mobile-toggle.active span:nth-child(1) { transform: translateX(-50%) rotate(45deg); top: 21px; }
-  .mobile-toggle.active span:nth-child(2) { opacity: 0; }
-  .mobile-toggle.active span:nth-child(3) { transform: translateX(-50%) rotate(-45deg); bottom: 21px; }
   
-  .hero-stats { gap: 2rem; justify-content: center; }
-  .stat-item { padding-right: 2rem; }
-  .footer-content { grid-template-columns: 1fr; text-align: center; }
-  .floating-apply { bottom: 1rem; right: 1rem; padding: 0.75rem 1.5rem; font-size: 0.9rem; }
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  
+  .footer-brand { grid-column: 1 / -1; }
 }
 
-@media (max-width: 768px) {
-  .header-inner { padding: 1rem 1.5rem; }
-  section { padding: 4rem 1.5rem; }
-  .hero { padding: 4rem 1.5rem; }
-  .cards { grid-template-columns: 1fr; }
-  .cta-links { grid-template-columns: 1fr; }
+@media (max-width: 640px) {
+  .header-inner { padding: 0.875rem 1.25rem; }
+  section { padding: 3.5rem 1.25rem; }
+  .hero { padding: 3rem 1.25rem; min-height: 70vh; }
+  .hero-stats { gap: 2rem; }
+  .icon-cards { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; text-align: center; }
+  .footer-brand-logo { justify-content: center; }
+  .floating-btn { bottom: 1rem; right: 1rem; padding: 0.75rem 1.25rem; font-size: 0.85rem; }
 }
 </style>
 </head>
@@ -286,10 +609,10 @@ footer::before {
 <header>
   <div class="header-inner">
     <a class="brand" href="#">
-      <img src="photos/TPLogo11.png" alt="TP" width="50" height="50">
+      <div class="brand-logo">TP</div>
       <div class="brand-text">
-        <div class="brand-name">TP</div>
-        <div class="brand-tagline">中文招聘 — 马来西亚·泰国</div>
+        <div class="brand-name">Teleperformance</div>
+        <div class="brand-tagline">中文招聘 · 马来西亚 · 泰国</div>
       </div>
     </a>
     
@@ -299,9 +622,8 @@ footer::before {
         <li><a href="#">关于TP</a></li>
         <li><a href="#">薪资福利</a></li>
         <li><a href="#">面试流程</a></li>
-        <li><a href="#">为什么选择马来西亚·泰国</a></li>
-        <li><a href="#">移居签证支持</a></li>
-        <li><a href="#" class="apply-btn">立即申请</a></li>
+        <li><a href="#">移居支持</a></li>
+        <li><a href="#" class="nav-apply">立即申请</a></li>
       </ul>
     </nav>
     
@@ -314,6 +636,7 @@ footer::before {
 <main>
   <section class="hero">
     <div class="hero-container">
+      <div class="hero-badge">正在招聘中文人才</div>
       <h1><span id="hero-rotate">像生活一样，在海外工作。</span></h1>
       <p class="hero-subtitle">
         您的新职业舞台，马来西亚是一个不错的选择。<br>
@@ -321,441 +644,432 @@ footer::before {
         经济实惠的舒适生活。在马来西亚开启"刚刚好"的海外生活吧！
       </p>
       <div class="hero-cta">
-        <a href="#" class="btn btn-accent">查看职位</a>
+        <a href="#" class="btn btn-primary">
+          查看职位
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
         <a href="#" class="btn btn-secondary">查看移居支持</a>
       </div>
       <div class="hero-stats">
         <div class="stat-item">
-          <span class="stat-number">100+</span>
-          <span class="stat-label">业务国家</span>
+          <div class="stat-number">100+</div>
+          <div class="stat-label">业务国家</div>
         </div>
         <div class="stat-item">
-          <span class="stat-number">50万+</span>
-          <span class="stat-label">全球员工</span>
+          <div class="stat-number">50万+</div>
+          <div class="stat-label">全球员工</div>
         </div>
         <div class="stat-item">
-          <span class="stat-number">7,000+</span>
-          <span class="stat-label">马来西亚/泰国员工</span>
+          <div class="stat-number">7,000+</div>
+          <div class="stat-label">马来西亚/泰国员工</div>
         </div>
       </div>
     </div>
   </section>
 
-  <section>
+  <section class="section-alt">
     <div class="container">
-      <h2 class="section-title">优先菜单</h2>
-      <p class="section-subtitle">快速访问您想了解的信息</p>
+      <div class="section-header">
+        <h2 class="section-title">优先菜单</h2>
+        <p class="section-subtitle">快速访问您想了解的信息</p>
+      </div>
       
-      <div class="cards">
-        <a href="#" class="card">
-          <img src="photos/TPLogo11.png" alt="关于TP">
-          <div class="card-content">
-            <div class="card-header">
-              <div class="page-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-                  <polyline points="9 22 9 12 15 12 15 22"/>
-                </svg>
-              </div>
-              <h3>首页</h3>
-            </div>
-            <p>开始您的旅程</p>
+      <div class="icon-cards">
+        <!-- 首页 -->
+        <a href="#" class="icon-card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+              <polyline points="9 22 9 12 15 12 15 22"/>
+            </svg>
           </div>
+          <div class="card-content">
+            <h3 class="card-title">首页</h3>
+            <p class="card-desc">开始您的旅程</p>
+          </div>
+          <span class="card-arrow">→</span>
         </a>
 
-        <a href="#" class="card">
-          <img src="photos/TPLogo11.png" alt="关于TP">
-          <div class="card-content">
-            <div class="card-header">
-              <div class="page-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="12" cy="12" r="10"/>
-                  <path d="M12 16v-4M12 8h.01"/>
-                </svg>
-              </div>
-              <h3>关于TP</h3>
-            </div>
-            <p>全球最大的BPO企业之一</p>
+        <!-- 关于TP -->
+        <a href="#" class="icon-card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <rect x="2" y="3" width="20" height="14" rx="2"/>
+              <path d="M8 21h8M12 17v4"/>
+              <circle cx="12" cy="10" r="2"/>
+            </svg>
           </div>
+          <div class="card-content">
+            <h3 class="card-title">关于TP</h3>
+            <p class="card-desc">全球最大的BPO企业之一</p>
+          </div>
+          <span class="card-arrow">→</span>
         </a>
 
-        <a href="#" class="card">
-          <img src="photos/TPLogo11.png" alt="职位信息">
-          <div class="card-content">
-            <div class="card-header">
-              <div class="page-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <rect x="2" y="7" width="20" height="14" rx="2"/>
-                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
-                </svg>
-              </div>
-              <h3>查看职位</h3>
-            </div>
-            <p>中文职位</p>
+        <!-- 查看职位 -->
+        <a href="#" class="icon-card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <rect x="2" y="7" width="20" height="14" rx="2"/>
+              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+            </svg>
           </div>
+          <div class="card-content">
+            <h3 class="card-title">查看职位</h3>
+            <p class="card-desc">中文职位招聘中</p>
+          </div>
+          <span class="card-arrow">→</span>
         </a>
 
-        <a href="#" class="card">
-          <img src="photos/TPLogo11.png" alt="薪资福利">
-          <div class="card-content">
-            <div class="card-header">
-              <div class="page-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <line x1="12" y1="1" x2="12" y2="23"/>
-                  <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
-                </svg>
-              </div>
-              <h3>薪资福利</h3>
-            </div>
-            <p>完善的待遇和支持</p>
+        <!-- 薪资福利 -->
+        <a href="#" class="icon-card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 6v12M8 10h8M8 14h8"/>
+            </svg>
           </div>
+          <div class="card-content">
+            <h3 class="card-title">薪资福利</h3>
+            <p class="card-desc">完善的待遇和支持</p>
+          </div>
+          <span class="card-arrow">→</span>
         </a>
 
-        <a href="#" class="card">
-          <img src="photos/TPLogo11.png" alt="移居支持">
-          <div class="card-content">
-            <div class="card-header">
-              <div class="page-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                  <circle cx="12" cy="10" r="3"/>
-                </svg>
-              </div>
-              <h3>移居签证支持</h3>
-            </div>
-            <p>全方位支持体系</p>
+        <!-- 移居签证支持 -->
+        <a href="#" class="icon-card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <rect x="3" y="4" width="18" height="16" rx="2"/>
+              <circle cx="9" cy="10" r="2"/>
+              <path d="M15 8h2M15 12h2"/>
+              <path d="M7 16h10"/>
+            </svg>
           </div>
+          <div class="card-content">
+            <h3 class="card-title">移居签证支持</h3>
+            <p class="card-desc">全方位支持体系</p>
+          </div>
+          <span class="card-arrow">→</span>
         </a>
 
-        <a href="#" class="card">
-          <img src="photos/TPLogo11.png" alt="面试流程">
-          <div class="card-content">
-            <div class="card-header">
-              <div class="page-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
-                </svg>
-              </div>
-              <h3>面试流程</h3>
-            </div>
-            <p>在线完成</p>
+        <!-- 面试流程 -->
+        <a href="#" class="icon-card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M9 11l3 3L22 4"/>
+              <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+            </svg>
           </div>
+          <div class="card-content">
+            <h3 class="card-title">面试流程</h3>
+            <p class="card-desc">在线完成申请</p>
+          </div>
+          <span class="card-arrow">→</span>
         </a>
 
-        <a href="#" class="card">
-          <img src="photos/TPLogo11.png" alt="马来西亚泰国">
-          <div class="card-content">
-            <div class="card-header">
-              <div class="page-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="12" cy="12" r="10"/>
-                  <line x1="2" y1="12" x2="22" y2="12"/>
-                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-                </svg>
-              </div>
-              <h3>为什么选择马来西亚·泰国</h3>
-            </div>
-            <p>宜居性和成长机会</p>
+        <!-- 为什么选择马来西亚·泰国 -->
+        <a href="#" class="icon-card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
           </div>
+          <div class="card-content">
+            <h3 class="card-title">为什么选择马来西亚·泰国</h3>
+            <p class="card-desc">宜居性和成长机会</p>
+          </div>
+          <span class="card-arrow">→</span>
         </a>
 
-        <a href="#" class="card">
-          <img src="photos/TPLogo11.png" alt="轻松面谈">
-          <div class="card-content">
-            <div class="card-header">
-              <div class="page-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-                </svg>
-              </div>
-              <h3>轻松面谈</h3>
-            </div>
-            <p>先轻松咨询</p>
+        <!-- 轻松面谈 -->
+        <a href="#" class="icon-card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+            </svg>
           </div>
+          <div class="card-content">
+            <h3 class="card-title">轻松面谈</h3>
+            <p class="card-desc">先轻松咨询</p>
+          </div>
+          <span class="card-arrow">→</span>
         </a>
 
-        <a href="#" class="card">
-          <img src="photos/TPLogo11.png" alt="员工心声">
-          <div class="card-content">
-            <div class="card-header">
-              <div class="page-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-                  <circle cx="12" cy="7" r="4"/>
-                </svg>
-              </div>
-              <h3>员工心声</h3>
-            </div>
-            <p>实际工作者的体验谈</p>
+        <!-- 员工心声 -->
+        <a href="#" class="icon-card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+              <circle cx="12" cy="7" r="4"/>
+            </svg>
           </div>
+          <div class="card-content">
+            <h3 class="card-title">员工心声</h3>
+            <p class="card-desc">实际工作者的体验谈</p>
+          </div>
+          <span class="card-arrow">→</span>
         </a>
 
-        <a href="#" class="card">
-          <img src="photos/TPLogo11.png" alt="办公环境">
-          <div class="card-content">
-            <div class="card-header">
-              <div class="page-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <rect x="3" y="3" width="7" height="9"/>
-                  <rect x="14" y="3" width="7" height="5"/>
-                  <rect x="14" y="12" width="7" height="9"/>
-                  <rect x="3" y="16" width="7" height="5"/>
-                </svg>
-              </div>
-              <h3>办公环境·虚拟参观</h3>
-            </div>
-            <p>办公环境和职业发展</p>
+        <!-- 办公环境·虚拟参观 -->
+        <a href="#" class="icon-card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <rect x="3" y="3" width="7" height="7"/>
+              <rect x="14" y="3" width="7" height="7"/>
+              <rect x="14" y="14" width="7" height="7"/>
+              <rect x="3" y="14" width="7" height="7"/>
+            </svg>
           </div>
+          <div class="card-content">
+            <h3 class="card-title">办公环境·虚拟参观</h3>
+            <p class="card-desc">办公环境和职业发展</p>
+          </div>
+          <span class="card-arrow">→</span>
         </a>
 
-        <a href="#" class="card">
-          <img src="photos/TPLogo11.png" alt="职业发展">
-          <div class="card-content">
-            <div class="card-header">
-              <div class="page-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <line x1="12" y1="20" x2="12" y2="10"/>
-                  <line x1="18" y1="20" x2="18" y2="4"/>
-                  <line x1="6" y1="20" x2="6" y2="16"/>
-                </svg>
-              </div>
-              <h3>职业发展·语言培训</h3>
-            </div>
-            <p>GoFluent培训项目</p>
+        <!-- 职业发展·语言培训 -->
+        <a href="#" class="icon-card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M12 20V10M18 20V4M6 20v-4"/>
+            </svg>
           </div>
+          <div class="card-content">
+            <h3 class="card-title">职业发展·语言培训</h3>
+            <p class="card-desc">GoFluent培训项目</p>
+          </div>
+          <span class="card-arrow">→</span>
         </a>
 
-        <a href="#" class="card">
-          <img src="photos/TPLogo11.png" alt="生活成本">
-          <div class="card-content">
-            <div class="card-header">
-              <div class="page-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
-                </svg>
-              </div>
-              <h3>生活成本</h3>
-            </div>
-            <p>马来西亚生活开支</p>
+        <!-- 生活成本 -->
+        <a href="#" class="icon-card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+            </svg>
           </div>
+          <div class="card-content">
+            <h3 class="card-title">生活成本</h3>
+            <p class="card-desc">马来西亚生活开支</p>
+          </div>
+          <span class="card-arrow">→</span>
         </a>
 
-        <a href="#" class="card">
-          <img src="photos/TPLogo11.png" alt="日常生活">
-          <div class="card-content">
-            <div class="card-header">
-              <div class="page-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M20 9v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9"/>
-                  <path d="M9 22V12h6v10M2 10.6L12 2l10 8.6"/>
-                </svg>
-              </div>
-              <h3>马来西亚日常生活</h3>
-            </div>
-            <p>餐饮·交通·住房</p>
+        <!-- 马来西亚日常生活 -->
+        <a href="#" class="icon-card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+              <path d="M9 22V12h6v10"/>
+            </svg>
           </div>
+          <div class="card-content">
+            <h3 class="card-title">马来西亚日常生活</h3>
+            <p class="card-desc">餐饮·交通·住房</p>
+          </div>
+          <span class="card-arrow">→</span>
         </a>
 
-        <a href="#" class="card">
-          <img src="photos/TPLogo11.png" alt="招聘团队">
-          <div class="card-content">
-            <div class="card-header">
-              <div class="page-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                  <circle cx="9" cy="7" r="4"/>
-                  <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
-                </svg>
-              </div>
-              <h3>招聘团队介绍</h3>
-            </div>
-            <p>中文支持</p>
+        <!-- 招聘团队介绍 -->
+        <a href="#" class="icon-card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
           </div>
+          <div class="card-content">
+            <h3 class="card-title">招聘团队介绍</h3>
+            <p class="card-desc">中文支持服务</p>
+          </div>
+          <span class="card-arrow">→</span>
         </a>
 
-        <a href="#" class="card">
-          <img src="photos/TPLogo11.png" alt="周边环境">
-          <div class="card-content">
-            <div class="card-header">
-              <div class="page-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                  <circle cx="12" cy="10" r="3"/>
-                </svg>
-              </div>
-              <h3>周边环境</h3>
-            </div>
-            <p>办公室周边信息</p>
+        <!-- 周边环境 -->
+        <a href="#" class="icon-card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
           </div>
+          <div class="card-content">
+            <h3 class="card-title">周边环境</h3>
+            <p class="card-desc">办公室周边信息</p>
+          </div>
+          <span class="card-arrow">→</span>
         </a>
 
-        <a href="#" class="card">
-          <img src="photos/TPLogo11.png" alt="博客">
-          <div class="card-content">
-            <div class="card-header">
-              <div class="page-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                  <polyline points="14 2 14 8 20 8"/>
-                  <line x1="16" y1="13" x2="8" y2="13"/>
-                  <line x1="16" y1="17" x2="8" y2="17"/>
-                  <polyline points="10 9 9 9 8 9"/>
-                </svg>
-              </div>
-              <h3>博客·专栏</h3>
-            </div>
-            <p>有用的文章</p>
+        <!-- 博客·专栏 -->
+        <a href="#" class="icon-card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="16" y1="13" x2="8" y2="13"/>
+              <line x1="16" y1="17" x2="8" y2="17"/>
+            </svg>
           </div>
+          <div class="card-content">
+            <h3 class="card-title">博客·专栏</h3>
+            <p class="card-desc">有用的文章</p>
+          </div>
+          <span class="card-arrow">→</span>
         </a>
 
-        <a href="#" class="card">
-          <img src="photos/TPLogo11.png" alt="LINE">
-          <div class="card-content">
-            <div class="card-header">
-              <div class="page-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
-                </svg>
-              </div>
-              <h3>LINE官方账号</h3>
-            </div>
-            <p>最新信息发布</p>
+        <!-- 微信公众号 -->
+        <a href="#" class="icon-card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M8.5 10a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+              <path d="M15.5 10a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+              <path d="M12 2C6.477 2 2 5.92 2 10.73c0 2.82 1.47 5.33 3.77 6.97l-.6 3.3 3.85-1.93c.9.24 1.87.38 2.98.38 5.523 0 10-3.92 10-8.72S17.523 2 12 2z"/>
+            </svg>
           </div>
+          <div class="card-content">
+            <h3 class="card-title">微信公众号</h3>
+            <p class="card-desc">最新信息发布</p>
+          </div>
+          <span class="card-arrow">→</span>
         </a>
 
-        <a href="#" class="card">
-          <img src="photos/TPLogo11.png" alt="公司文化">
-          <div class="card-content">
-            <div class="card-header">
-              <div class="page-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="12" cy="12" r="10"/>
-                  <path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/>
-                </svg>
-              </div>
-              <h3>活动·公司文化</h3>
-            </div>
-            <p>愉快的工作环境</p>
+        <!-- 活动·公司文化 -->
+        <a href="#" class="icon-card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+              <line x1="9" y1="9" x2="9.01" y2="9"/>
+              <line x1="15" y1="9" x2="15.01" y2="9"/>
+            </svg>
           </div>
+          <div class="card-content">
+            <h3 class="card-title">活动·公司文化</h3>
+            <p class="card-desc">愉快的工作环境</p>
+          </div>
+          <span class="card-arrow">→</span>
         </a>
 
-        <a href="#" class="card">
-          <img src="photos/TPLogo11.png" alt="FAQ">
-          <div class="card-content">
-            <div class="card-header">
-              <div class="page-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="12" cy="12" r="10"/>
-                  <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3M12 17h.01"/>
-                </svg>
-              </div>
-              <h3>常见问题</h3>
-            </div>
-            <p>解决疑问</p>
+        <!-- 常见问题 -->
+        <a href="#" class="icon-card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+              <line x1="12" y1="17" x2="12.01" y2="17"/>
+            </svg>
           </div>
+          <div class="card-content">
+            <h3 class="card-title">常见问题</h3>
+            <p class="card-desc">解决疑问</p>
+          </div>
+          <span class="card-arrow">→</span>
         </a>
 
-        <a href="#" class="card">
-          <img src="photos/TPLogo11.png" alt="外部推荐">
-          <div class="card-content">
-            <div class="card-header">
-              <div class="page-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-                  <polyline points="15 3 21 3 21 9"/>
-                  <line x1="10" y1="14" x2="21" y2="3"/>
-                </svg>
-              </div>
-              <h3>外部推荐</h3>
-            </div>
-            <p>招聘门户</p>
+        <!-- 外部推荐 -->
+        <a href="#" class="icon-card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+              <polyline points="15 3 21 3 21 9"/>
+              <line x1="10" y1="14" x2="21" y2="3"/>
+            </svg>
           </div>
+          <div class="card-content">
+            <h3 class="card-title">外部推荐</h3>
+            <p class="card-desc">招聘门户</p>
+          </div>
+          <span class="card-arrow">→</span>
         </a>
 
-        <a href="#" class="card">
-          <span class="coming-soon-badge">即将推出</span>
-          <img src="photos/TPLogo11.png" alt="双威">
-          <div class="card-content">
-            <div class="card-header">
-              <div class="page-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-                  <path d="M2 17l10 5 10-5M2 12l10 5 10-5"/>
-                </svg>
-              </div>
-              <h3>双威（Sunway）</h3>
-            </div>
-            <p>综合城镇发展区</p>
+        <!-- 双威（Sunway）- Coming Soon -->
+        <a href="#" class="icon-card">
+          <span class="badge-coming">即将推出</span>
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+              <path d="M2 17l10 5 10-5"/>
+              <path d="M2 12l10 5 10-5"/>
+            </svg>
           </div>
+          <div class="card-content">
+            <h3 class="card-title">双威（Sunway）</h3>
+            <p class="card-desc">综合城镇发展区</p>
+          </div>
+          <span class="card-arrow">→</span>
         </a>
 
-        <a href="#" class="card">
-          <span class="coming-soon-badge">即将推出</span>
-          <img src="photos/TPLogo11.png" alt="柔佛">
-          <div class="card-content">
-            <div class="card-header">
-              <div class="page-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-                  <path d="M2 17l10 5 10-5M2 12l10 5 10-5"/>
-                </svg>
-              </div>
-              <h3>柔佛（Johor）</h3>
-            </div>
-            <p>靠近新加坡的战略位置</p>
+        <!-- 柔佛（Johor）- Coming Soon -->
+        <a href="#" class="icon-card">
+          <span class="badge-coming">即将推出</span>
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"/>
+              <line x1="12" y1="22" x2="12" y2="15.5"/>
+              <polyline points="22 8.5 12 15.5 2 8.5"/>
+            </svg>
           </div>
+          <div class="card-content">
+            <h3 class="card-title">柔佛（Johor）</h3>
+            <p class="card-desc">靠近新加坡的战略位置</p>
+          </div>
+          <span class="card-arrow">→</span>
         </a>
 
-        <a href="#" class="card">
-          <img src="photos/TPLogo11.png" alt="在家办公">
-          <div class="card-content">
-            <div class="card-header">
-              <div class="page-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <rect x="2" y="3" width="20" height="14" rx="2"/>
-                  <line x1="8" y1="21" x2="16" y2="21"/>
-                  <line x1="12" y1="17" x2="12" y2="21"/>
-                </svg>
-              </div>
-              <h3>在家办公（WFH）</h3>
-            </div>
-            <p>灵活的工作安排</p>
+        <!-- 在家办公（WFH） -->
+        <a href="#" class="icon-card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <rect x="2" y="3" width="20" height="14" rx="2"/>
+              <line x1="8" y1="21" x2="16" y2="21"/>
+              <line x1="12" y1="17" x2="12" y2="21"/>
+            </svg>
           </div>
+          <div class="card-content">
+            <h3 class="card-title">在家办公（WFH）</h3>
+            <p class="card-desc">灵活的工作安排</p>
+          </div>
+          <span class="card-arrow">→</span>
         </a>
       </div>
     </div>
   </section>
 
-  <section>
+  <section class="cta-section">
     <div class="container">
-      <h2 class="section-title">联系方式·各种链接</h2>
-      <p class="section-subtitle">根据目的，立即访问</p>
+      <div class="section-header">
+        <h2 class="section-title">联系方式·各种链接</h2>
+        <p class="section-subtitle">根据目的，立即访问</p>
+      </div>
 
-      <div class="cta-links">
-        <a class="cta-link" href="#">
-          <span class="cta-ico">🗓️</span>
-          <span class="cta-main">
-            <strong>预约轻松面谈</strong>
-            <em>30分钟在线轻松咨询</em>
-          </span>
+      <div class="cta-grid">
+        <a class="cta-card" href="#">
+          <span class="cta-icon">📅</span>
+          <div class="cta-text">
+            <div class="cta-title">预约轻松面谈</div>
+            <div class="cta-subtitle">30分钟在线轻松咨询</div>
+          </div>
           <span class="cta-arrow">→</span>
         </a>
 
-        <a class="cta-link" href="#">
-          <span class="cta-ico">💬</span>
-          <span class="cta-main">
-            <strong>LINE官方账号</strong>
-            <em>发布最新招聘·活动信息</em>
-          </span>
+        <a class="cta-card" href="#">
+          <span class="cta-icon">💬</span>
+          <div class="cta-text">
+            <div class="cta-title">微信公众号</div>
+            <div class="cta-subtitle">发布最新招聘·活动信息</div>
+          </div>
           <span class="cta-arrow">→</span>
         </a>
 
-        <a class="cta-link" href="#">
-          <span class="cta-ico">✍️</span>
-          <span class="cta-main">
-            <strong>申请页面</strong>
-            <em>上传简历即可轻松申请</em>
-          </span>
+        <a class="cta-card" href="#">
+          <span class="cta-icon">📝</span>
+          <div class="cta-text">
+            <div class="cta-title">申请页面</div>
+            <div class="cta-subtitle">上传简历即可轻松申请</div>
+          </div>
           <span class="cta-arrow">→</span>
         </a>
       </div>
@@ -764,11 +1078,11 @@ footer::before {
 </main>
 
 <footer>
-  <div class="footer-content">
+  <div class="footer-grid">
     <div class="footer-brand">
-      <div class="footer-logo">
-        <img src="photos/TPLogo11.png" alt="TP">
-        <span class="footer-logo-text">TP</span>
+      <div class="footer-brand-logo">
+        <div class="footer-logo-icon">TP</div>
+        <span class="footer-logo-text">Teleperformance</span>
       </div>
       <p class="footer-desc">
         在100多个国家开展业务的全球BPO企业。<br>
@@ -776,8 +1090,8 @@ footer::before {
       </p>
     </div>
     
-    <div class="footer-section">
-      <h3>公司信息</h3>
+    <div class="footer-col">
+      <h4>公司信息</h4>
       <ul>
         <li><a href="#">公司介绍</a></li>
         <li><a href="#">福利待遇</a></li>
@@ -786,8 +1100,8 @@ footer::before {
       </ul>
     </div>
 
-    <div class="footer-section">
-      <h3>职位·申请</h3>
+    <div class="footer-col">
+      <h4>职位·申请</h4>
       <ul>
         <li><a href="#">职位列表</a></li>
         <li><a href="#">面试流程</a></li>
@@ -796,41 +1110,72 @@ footer::before {
       </ul>
     </div>
 
-    <div class="footer-section">
-      <h3>生活信息</h3>
+    <div class="footer-col">
+      <h4>生活信息</h4>
       <ul>
         <li><a href="#">工作城市</a></li>
         <li><a href="#">移居支持</a></li>
         <li><a href="#">生活方式</a></li>
-        <li><a href="#">LINE官方</a></li>
+        <li><a href="#">微信公众号</a></li>
       </ul>
     </div>
   </div>
   
   <div class="footer-bottom">
-    <p>&copy; 2025 TP. All rights reserved.</p>
+    <p>© 2025 Teleperformance. All rights reserved.</p>
   </div>
 </footer>
 
-<a href="#" class="floating-apply">立即申请</a>
+<a href="#" class="floating-btn">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+    <polyline points="14 2 14 8 20 8"/>
+    <line x1="12" y1="18" x2="12" y2="12"/>
+    <line x1="9" y1="15" x2="15" y2="15"/>
+  </svg>
+  立即申请
+</a>
 
 <script>
-// Hero typewriter
-const lines = ['像生活一样，在海外工作。', '用中文开始，全球职业生涯。', '东南亚"刚刚好"的生活。'];
-let i = 0, j = 0, del = false;
-const el = document.getElementById('hero-rotate');
-function tick() {
-  const text = lines[i];
-  el.textContent = del ? text.slice(0, j--) : text.slice(0, j++);
-  if (!del && j > text.length) { del = true; setTimeout(tick, 1400); return; }
-  if (del && j < 0) { del = false; i = (i+1) % lines.length; setTimeout(tick, 350); return; }
-  setTimeout(tick, 46);
+// Hero typewriter effect
+const lines = [
+  '像生活一样，在海外工作。',
+  '用中文开始，全球职业生涯。',
+  '东南亚"刚刚好"的生活。'
+];
+let lineIndex = 0, charIndex = 0, isDeleting = false;
+const heroEl = document.getElementById('hero-rotate');
+
+function typewriter() {
+  const currentLine = lines[lineIndex];
+  
+  if (isDeleting) {
+    heroEl.textContent = currentLine.slice(0, charIndex--);
+  } else {
+    heroEl.textContent = currentLine.slice(0, charIndex++);
+  }
+  
+  if (!isDeleting && charIndex > currentLine.length) {
+    isDeleting = true;
+    setTimeout(typewriter, 1800);
+    return;
+  }
+  
+  if (isDeleting && charIndex < 0) {
+    isDeleting = false;
+    lineIndex = (lineIndex + 1) % lines.length;
+    setTimeout(typewriter, 400);
+    return;
+  }
+  
+  setTimeout(typewriter, isDeleting ? 35 : 55);
 }
-tick();
+typewriter();
 
 // Mobile toggle
-const toggle = document.getElementById('mobileToggle');
-toggle?.addEventListener('click', () => toggle.classList.toggle('active'));
+document.getElementById('mobileToggle')?.addEventListener('click', function() {
+  this.classList.toggle('active');
+});
 </script>
 </body>
 </html>
