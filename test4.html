@@ -11,7 +11,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&family=Noto+Serif+SC:wght@700;900&display=swap" rel="stylesheet">
 <style>
-:root{--tp-black:#000;--tp-dark:#1a1a1a;--tp-charcoal:#2d2d2d;--tp-gray-dark:#4a4a4a;--tp-gray:#666;--tp-gray-light:#999;--tp-silver:#ccc;--tp-light:#e5e5e5;--tp-off:#f5f5f5;--tp-white:#fff;--gold-primary:#D4AF37;--gold-light:#F4D03F;--gold-dark:#B8960C;--gold-pale:#FDF6E3;--red-auspicious:#C41E3A;--max:1050px;--shadow-sm:0 2px 4px rgba(0,0,0,.08);--shadow-md:0 4px 8px rgba(0,0,0,.12);--shadow-lg:0 8px 16px rgba(0,0,0,.16);--shadow-gold:0 4px 12px rgba(212,175,55,.25)}
+:root{--tp-black:#000;--tp-dark:#1a1a1a;--tp-charcoal:#2d2d2d;--tp-gray-dark:#4a4a4a;--tp-gray:#666;--tp-gray-light:#999;--tp-silver:#ccc;--tp-light:#e5e5e5;--tp-off:#f5f5f5;--tp-white:#fff;--gold-primary:#FFD700;--gold-light:#FFAA00;--gold-dark:#E6B800;--gold-pale:#FFFBEB;--red-auspicious:#C41E3A;--max:1050px;--shadow-sm:0 2px 4px rgba(0,0,0,.08);--shadow-md:0 4px 8px rgba(0,0,0,.12);--shadow-lg:0 8px 16px rgba(0,0,0,.16);--shadow-gold:0 4px 12px rgba(255,215,0,.3)}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{font-family:'Noto Sans SC',-apple-system,BlinkMacSystemFont,"Microsoft YaHei",sans-serif;color:var(--tp-dark);line-height:1.8;background:var(--tp-white);-webkit-font-smoothing:antialiased}
@@ -131,6 +131,32 @@ nav a[aria-current="page"]::after{width:100%;background:var(--tp-black)}
 .community-stat-number{font-size:2rem;font-weight:900;color:var(--tp-black);font-family:'Noto Serif SC',serif}
 .community-stat-label{font-size:.85rem;color:var(--tp-gray);margin-top:.3rem}
 
+/* GPTW World Best Workplaces Section */
+.gptw-section{padding:60px 20px;background:var(--tp-silver);position:relative;overflow:hidden}
+.gptw-section::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:url('photos/World\'sBestWorkplaces.png') no-repeat center center;background-size:400px;opacity:.03;pointer-events:none}
+.gptw-header{display:flex;align-items:center;justify-content:center;gap:2rem;margin-bottom:2.5rem;flex-wrap:wrap}
+.gptw-badge{width:160px;height:auto;filter:drop-shadow(0 4px 20px rgba(255,215,0,.3));animation:glow 3s ease-in-out infinite}
+@keyframes glow{0%,100%{filter:drop-shadow(0 4px 20px rgba(255,215,0,.3))}50%{filter:drop-shadow(0 4px 30px rgba(255,215,0,.5))}}
+.gptw-title-block{text-align:left}
+.gptw-section .section-title{color:var(--tp-black);text-align:left;margin-bottom:.5rem}
+.gptw-section .section-subtitle{color:var(--tp-gray);text-align:left;margin-bottom:0}
+.gptw-highlight{display:inline-block;background:linear-gradient(90deg,#FFD700,#FFAA00);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-weight:900}
+.gptw-description{max-width:800px;margin:0 auto 2.5rem;text-align:center;color:var(--tp-gray-dark);font-size:1rem;line-height:1.8}
+.gptw-banner{width:100%;max-width:900px;margin:0 auto 2.5rem;border-radius:12px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.3)}
+.gptw-banner img{width:100%;height:auto;display:block}
+.gptw-gallery{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;max-width:var(--max);margin:0 auto}
+.gptw-gallery-item{border-radius:8px;overflow:hidden;box-shadow:0 4px 16px rgba(0,0,0,.2);transition:all .3s;cursor:pointer}
+.gptw-gallery-item:hover{transform:scale(1.05);box-shadow:0 8px 24px rgba(255,215,0,.3)}
+.gptw-gallery-item img{width:100%;height:auto;display:block}
+.gptw-stats{display:flex;justify-content:center;gap:3rem;margin-top:2.5rem;flex-wrap:wrap}
+.gptw-stat{text-align:center}
+.gptw-stat-number{font-size:3rem;font-weight:900;background:linear-gradient(90deg,#FFD700,#FFAA00);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;margin-bottom:.5rem;font-family:'Noto Serif SC',serif}
+.gptw-stat-label{color:var(--tp-gray-dark);font-size:.9rem}
+.gptw-announcement{background:rgba(255,255,255,.6);border-radius:12px;padding:1.5rem;margin-bottom:2rem;backdrop-filter:blur(10px);border:1px solid rgba(255,215,0,.3)}
+.gptw-announcement h3{color:var(--tp-black);font-size:1.2rem;margin-bottom:1rem;display:flex;align-items:center;gap:.5rem}
+.gptw-announcement p{color:var(--tp-gray-dark);line-height:1.6}
+.gptw-quote{font-style:italic;color:var(--tp-gray);margin:1rem 0;padding-left:1rem;border-left:3px solid rgba(255,215,0,.5)}
+
 /* Priority Menu */
 .priority-menu{padding:60px 20px;background:var(--tp-off)}
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
@@ -163,6 +189,43 @@ nav a[aria-current="page"]::after{width:100%;background:var(--tp-black)}
 .social-card-desc{font-size:.8rem;color:var(--tp-gray);margin-bottom:1rem}
 .social-qr{width:120px;height:120px;background:var(--tp-off);border:1px dashed var(--tp-silver);border-radius:8px;margin:0 auto .75rem;display:flex;align-items:center;justify-content:center;font-size:.7rem;color:var(--tp-gray)}
 
+/* World Map Section */
+.world-map-section{padding:60px 20px;background:var(--tp-white);text-align:center}
+.world-map-container{max-width:var(--max);margin:2rem auto 0;position:relative}
+.world-map-container img{width:100%;height:auto;border-radius:8px;box-shadow:var(--shadow-lg)}
+
+/* Office Section */
+.office-section{padding:60px 20px;background:var(--tp-off)}
+.office-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;max-width:var(--max);margin:1.5rem auto 0}
+.office-card{background:var(--tp-white);border:1px solid var(--tp-light);border-radius:8px;overflow:hidden;transition:all .3s}
+.office-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-gold);border-color:var(--gold-primary)}
+.office-image{width:100%;height:180px;object-fit:cover}
+.office-info{padding:1rem}
+.office-name{font-size:1rem;font-weight:700;margin-bottom:.3rem;color:var(--tp-black)}
+.office-features{list-style:none;padding:0}
+.office-features li{font-size:.8rem;color:var(--tp-gray);padding:.15rem 0;padding-left:.875rem;position:relative}
+.office-features li:before{content:'•';position:absolute;left:0;color:var(--gold-primary)}
+
+/* Lifestyle Section */
+.lifestyle-section{padding:60px 20px;background:var(--tp-white)}
+.lifestyle-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;max-width:var(--max);margin:2rem auto 0}
+.lifestyle-item{position:relative;overflow:hidden;border-radius:8px;height:200px;background:var(--tp-off);cursor:pointer;transition:all .3s}
+.lifestyle-item:hover{transform:scale(1.03);box-shadow:var(--shadow-lg)}
+.lifestyle-item img{width:100%;height:100%;object-fit:cover}
+.lifestyle-caption{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(0,0,0,.8),transparent);color:var(--tp-white);padding:1rem .75rem .75rem;font-size:.8rem;font-weight:500}
+
+/* Testimonials Section */
+.testimonials{padding:60px 20px;background:var(--tp-off)}
+.testimonial-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin-top:1.5rem}
+.testimonial{background:var(--tp-white);padding:1.5rem;border-radius:8px;position:relative;border:1px solid var(--tp-light);transition:all .3s}
+.testimonial:hover{box-shadow:var(--shadow-gold);transform:translateY(-2px);border-color:var(--gold-primary)}
+.testimonial::before{content:'"';font-size:3rem;color:var(--gold-primary);position:absolute;top:8px;left:16px;font-family:Georgia,serif;opacity:.5}
+.testimonial-content{margin-bottom:1rem;padding-top:1.5rem;font-size:.9rem;line-height:1.8;color:var(--tp-dark)}
+.testimonial-author{display:flex;align-items:center;gap:.75rem}
+.author-img{width:50px;height:50px;border-radius:50%;object-fit:cover;border:2px solid var(--gold-primary)}
+.author-info strong{display:block;font-size:.85rem;margin-bottom:.1rem}
+.author-info span{color:var(--tp-gray);font-size:.75rem}
+
 /* Video Section */
 .video-section{padding:60px 20px;background:var(--tp-white)}
 .video-grid{max-width:var(--max);margin:1.5rem auto 0;display:grid;grid-template-columns:repeat(2,1fr);gap:1.25rem}
@@ -174,216 +237,6 @@ nav a[aria-current="page"]::after{width:100%;background:var(--tp-black)}
 .video-title{font-size:.98rem;font-weight:800;color:var(--tp-black);margin:2px 0 6px}
 .video-desc{font-size:.82rem;color:var(--tp-gray);margin-bottom:8px}
 .video-link{font-size:.85rem;color:var(--gold-dark);text-decoration:underline}
-/* GPTW World Best Workplaces Section - Enhanced */
-.gptw-section {
-  padding: 56px 20px;
-  background: var(--tp-silver);
-  position: relative;
-  overflow: hidden;
-}
-
-.gptw-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url('photos/2025_World\'sBestWorkplaces.png') no-repeat center center;
-  background-size: 400px;
-  opacity: 0.03;
-  pointer-events: none;
-}
-
-.gptw-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-  margin-bottom: 2.5rem;
-  flex-wrap: wrap;
-}
-
-.gptw-badge {
-  width: 160px;
-  height: auto;
-  filter: drop-shadow(0 4px 20px rgba(255,255,255,0.2));
-  animation: glow 3s ease-in-out infinite;
-}
-
-@keyframes glow {
-  0%, 100% { filter: drop-shadow(0 4px 20px rgba(255,255,255,0.2)); }
-  50% { filter: drop-shadow(0 4px 30px rgba(255,255,255,0.4)); }
-}
-
-.gptw-title-block {
-  text-align: left;
-}
-
-.gptw-section .section-title {
-  color: var(--tp-black);
-  text-align: left;
-  margin-bottom: 0.5rem;
-}
-
-.gptw-section .section-subtitle {
-  color: var(--tp-gray);
-  text-align: left;
-  margin-bottom: 0;
-}
-
-.gptw-highlight {
-  display: inline-block;
-  background: linear-gradient(90deg, #ffd700, #ffaa00);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  font-weight: 900;
-}
-
-.gptw-description {
-  max-width: 800px;
-  margin: 0 auto 2.5rem;
-  text-align: center;
-  color: var(--tp-gray-dark);
-  font-size: 1rem;
-  line-height: 1.8;
-}
-
-.gptw-banner {
-  width: 100%;
-  max-width: 900px;
-  margin: 0 auto 2.5rem;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
-}
-
-.gptw-banner img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.gptw-gallery {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 1rem;
-  max-width: var(--max);
-  margin: 0 auto;
-}
-
-.gptw-gallery-item {
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
-  transition: all 0.3s;
-  cursor: pointer;
-}
-
-.gptw-gallery-item:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
-}
-
-.gptw-gallery-item img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.gptw-stats {
-  display: flex;
-  justify-content: center;
-  gap: 3rem;
-  margin-top: 2.5rem;
-  flex-wrap: wrap;
-}
-
-.gptw-stat {
-  text-align: center;
-}
-
-.gptw-stat-number {
-  font-size: 3rem;
-  font-weight: 900;
-  background: linear-gradient(90deg, #ffd700, #ffaa00);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  line-height: 1;
-  margin-bottom: 0.5rem;
-}
-
-.gptw-stat-label {
-  color: var(--tp-gray-dark);
-  font-size: 0.9rem;
-}
-
-.gptw-announcement {
-  background: rgba(255, 255, 255, 0.6);
-  border-radius: 12px;
-  padding: 1.5rem;
-  margin-bottom: 2rem;
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.gptw-announcement h3 {
-  color: var(--tp-blackv);
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.gptw-announcement p {
-  color: var(--tp-gray-dark);
-  line-height: 1.6;
-}
-
-.gptw-quote {
-  font-style: italic;
-  color: var(--tp-gray);
-  margin: 1rem 0;
-  padding-left: 1rem;
-  border-left: 3px solid rgba(255, 215, 0, 0.5);
-}
-
-@media (max-width: 768px) {
-  .gptw-header {
-    flex-direction: column;
-    text-align: center;
-  }
-  
-  .gptw-title-block {
-    text-align: center;
-  }
-  
-  .gptw-section .section-title,
-  .gptw-section .section-subtitle {
-    text-align: center;
-  }
-  
-  .gptw-gallery {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-  .gptw-gallery-item:nth-child(5) {
-    grid-column: span 2;
-    max-width: 50%;
-    margin: 0 auto;
-  }
-  
-  .gptw-stats {
-    gap: 1.5rem;
-  }
-  
-  .gptw-stat-number {
-    font-size: 2rem;
-  }
-  }
 
 /* Cities Section */
 .cities{padding:60px 20px;background:var(--tp-off)}
@@ -500,7 +353,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
 @media(min-width:720px){.cta-links{grid-template-columns:1fr 1fr 1fr}}
 @media(max-width:980px){.process-rail{grid-template-columns:1fr 1fr 1fr}.ta-team-grid{grid-template-columns:repeat(3,1fr)}.community-stats{grid-template-columns:repeat(2,1fr)}.social-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:900px){nav{display:none}.mobile-toggle{display:block}.lang-toggle-buttons{display:none}.lang-dropdown{display:block}.video-grid{grid-template-columns:1fr}.floating-casual{bottom:80px;right:20px}.back-to-top{bottom:140px}.lang-toggle-inner{justify-content:center}}
-@media(max-width:768px){.hero h1{font-size:1.8rem}.section-title{font-size:1.4rem}.hero-stats{justify-content:center}.stat-item{padding-right:1.25rem}.about-content{grid-template-columns:1fr}.cards{grid-template-columns:repeat(2,1fr)}.icon-grid-container{grid-template-columns:repeat(2,1fr)}.city-cards{grid-template-columns:1fr}.benefits-list{grid-template-columns:repeat(2,1fr)}.ta-team-grid{grid-template-columns:repeat(2,1fr)}.footer-content{grid-template-columns:1fr;text-align:center}.floating-apply{bottom:14px;right:14px;padding:.625rem 1rem;font-size:.8rem}.social-proof-inner{flex-direction:column;gap:.5rem}}
+@media(max-width:768px){.hero h1{font-size:1.8rem}.section-title{font-size:1.4rem}.hero-stats{justify-content:center}.stat-item{padding-right:1.25rem}.about-content{grid-template-columns:1fr}.cards{grid-template-columns:repeat(2,1fr)}.icon-grid-container{grid-template-columns:repeat(2,1fr)}.city-cards{grid-template-columns:1fr}.benefits-list{grid-template-columns:repeat(2,1fr)}.ta-team-grid{grid-template-columns:repeat(2,1fr)}.footer-content{grid-template-columns:1fr;text-align:center}.floating-apply{bottom:14px;right:14px;padding:.625rem 1rem;font-size:.8rem}.social-proof-inner{flex-direction:column;gap:.5rem}.gptw-header{flex-direction:column;text-align:center}.gptw-title-block{text-align:center}.gptw-section .section-title,.gptw-section .section-subtitle{text-align:center}.gptw-gallery{grid-template-columns:repeat(2,1fr)}.gptw-gallery-item:nth-child(5){grid-column:span 2;max-width:50%;margin:0 auto}.gptw-stats{gap:1.5rem}.gptw-stat-number{font-size:2rem}}
 @media(max-width:640px){.process-rail{grid-template-columns:1fr}.process-rail::before{display:none}.community-stats{grid-template-columns:1fr}.social-grid{grid-template-columns:1fr}}
 @media(max-width:480px){.cards{grid-template-columns:1fr}.benefits-list{grid-template-columns:1fr}.icon-grid-container{grid-template-columns:1fr}.ta-team-grid{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
@@ -610,71 +463,72 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
       </div>
     </div>
   </section>
-<!-- GPTW World Best Workplaces Section - Enhanced -->
-<section class="gptw-section" id="world-best-workplaces">
-  <div class="container">
-    <div class="gptw-announcement">
-      <h3>🎉 重要公告</h3>
-      <p>
-        官方发布：TP 荣获 Great Place to Work® 评选的「World's Best Workplaces™」，并已<strong>连续 5 年</strong>获得该认证！
+
+  <!-- GPTW World Best Workplaces Section -->
+  <section class="gptw-section" id="world-best-workplaces">
+    <div class="container">
+      <div class="gptw-announcement">
+        <h3>🎉 <span data-local="重要公告" data-expat="重要公告">重要公告</span></h3>
+        <p data-local="官方发布：TP 荣获 Great Place to Work® 评选的「World's Best Workplaces™」，并已<strong>连续 5 年</strong>获得该认证！" data-expat="官方发布：TP 荣获卓越职场研究机构评选的「全球最佳职场」，并已<strong>连续 5 年</strong>获得该认证！">
+          官方发布：TP 荣获 Great Place to Work® 评选的「World's Best Workplaces™」，并已<strong>连续 5 年</strong>获得该认证！
+        </p>
+        <p class="gptw-quote">
+          "这一认证基于员工的反馈与信任，充分展现了我们强大的企业文化。"
+        </p>
+      </div>
+      
+      <div class="gptw-header">
+        <img src="photos/World'sBestWorkplaces.png" alt="World's Best Workplaces 2025" class="gptw-badge">
+        <div class="gptw-title-block">
+          <h2 class="section-title" data-local="World's Best Workplaces™ <span class='gptw-highlight'>连续 5 年获奖</span>" data-expat="全球最佳职场 <span class='gptw-highlight'>连续 5 年获奖</span>">World's Best Workplaces™ <span class="gptw-highlight">连续 5 年获奖</span></h2>
+          <p class="section-subtitle">Great Place to Work® 认证</p>
+        </div>
+      </div>
+      
+      <p class="gptw-description" data-local="TP 荣获 Great Place to Work® 评选的「World's Best Workplaces™」，并已<strong>连续 5 年</strong>获得认证。<br>这一认证基于员工的 Feedback 与信任，体现了我们卓越而稳固的企业文化。<br>我们携手并进，Empower 员工，尊重多元文化，并每天为社会带来积极影响。" data-expat="TP 荣获卓越职场研究机构评选的「全球最佳职场」，并已<strong>连续 5 年</strong>获得认证。<br>这一认证基于员工的反馈与信任，体现了我们卓越而稳固的企业文化。<br>我们携手并进，赋能员工，尊重多元文化，并每天为社会带来积极影响。">
+        TP 荣获 Great Place to Work® 评选的「World's Best Workplaces™」，并已<strong>连续 5 年</strong>获得认证。<br>
+        这一认证基于员工的反馈与信任，体现了我们卓越而稳固的企业文化。<br>
+        我们携手并进，赋能员工，尊重多元文化，并每天为社会带来积极影响。
       </p>
-      <p class="gptw-quote">
-        “这一认证基于员工的反馈与信任，充分展现了我们强大的企业文化。”
-      </p>
-    </div>
-    
-    <div class="gptw-header">
-      <img src="photos/World’sBestWorkplaces.png" alt="World's Best Workplaces 2025" class="gptw-badge">
-      <div class="gptw-title-block">
-        <h2 class="section-title">World's Best Workplaces™ <span class="gptw-highlight">连续 5 年获奖</span></h2>
-        <p class="section-subtitle">Great Place to Work® 认证</p>
+      
+      <div class="gptw-banner">
+        <img src="photos/GMT_SoMe_GPTWWorldBestWorkplacesKit_November_2025_Banner.png" alt="GPTW World Best Workplaces Banner" loading="lazy">
+      </div>
+      
+      <div class="gptw-gallery">
+        <div class="gptw-gallery-item">
+          <img src="photos/GMT_SoMe_GPTWWorldBestWorkplacesKit_November_2025_1.png" alt="GPTW Image 1" loading="lazy">
+        </div>
+        <div class="gptw-gallery-item">
+          <img src="photos/GMT_SoMe_GPTWWorldBestWorkplacesKit_November_2025_2.png" alt="GPTW Image 2" loading="lazy">
+        </div>
+        <div class="gptw-gallery-item">
+          <img src="photos/GMT_SoMe_GPTWWorldBestWorkplacesKit_November_2025_3.png" alt="GPTW Image 3" loading="lazy">
+        </div>
+        <div class="gptw-gallery-item">
+          <img src="photos/GMT_SoMe_GPTWWorldBestWorkplacesKit_November_2025_4.png" alt="GPTW Image 4" loading="lazy">
+        </div>
+        <div class="gptw-gallery-item">
+          <img src="photos/GMT_SoMe_GPTWWorldBestWorkplacesKit_November_2025_5.png" alt="GPTW Image 5" loading="lazy">
+        </div>
+      </div>
+      
+      <div class="gptw-stats">
+        <div class="gptw-stat">
+          <div class="gptw-stat-number">5</div>
+          <div class="gptw-stat-label" data-local="连续获奖年数" data-expat="连续获奖年数">连续获奖年数</div>
+        </div>
+        <div class="gptw-stat">
+          <div class="gptw-stat-number">100+</div>
+          <div class="gptw-stat-label" data-local="业务覆盖国家" data-expat="业务覆盖国家">业务覆盖国家</div>
+        </div>
+        <div class="gptw-stat">
+          <div class="gptw-stat-number">500K+</div>
+          <div class="gptw-stat-label" data-local="全球 Employee 人数" data-expat="全球员工人数">全球员工人数</div>
+        </div>
       </div>
     </div>
-    
-    <p class="gptw-description">
-      TP 荣获 Great Place to Work® 评选的「World's Best Workplaces™」，并已<strong>连续 5 年</strong>获得认证。<br>
-      这一认证基于员工的反馈与信任，体现了我们卓越而稳固的企业文化。<br>
-      我们携手并进，赋能员工，尊重多元文化，并每天为社会带来积极影响。
-    </p>
-    
-    <div class="gptw-banner">
-      <img src="photos/GMT_SoMe_GPTWWorldBestWorkplacesKit_November_2025_Banner.png" alt="GPTW World Best Workplaces Banner" loading="lazy">
-    </div>
-    
-    <div class="gptw-gallery">
-      <div class="gptw-gallery-item">
-        <img src="photos/GMT_SoMe_GPTWWorldBestWorkplacesKit_November_2025_1.png" alt="GPTW Image 1" loading="lazy">
-      </div>
-      <div class="gptw-gallery-item">
-        <img src="photos/GMT_SoMe_GPTWWorldBestWorkplacesKit_November_2025_2.png" alt="GPTW Image 2" loading="lazy">
-      </div>
-      <div class="gptw-gallery-item">
-        <img src="photos/GMT_SoMe_GPTWWorldBestWorkplacesKit_November_2025_3.png" alt="GPTW Image 3" loading="lazy">
-      </div>
-      <div class="gptw-gallery-item">
-        <img src="photos/GMT_SoMe_GPTWWorldBestWorkplacesKit_November_2025_4.png" alt="GPTW Image 4" loading="lazy">
-      </div>
-      <div class="gptw-gallery-item">
-        <img src="photos/GMT_SoMe_GPTWWorldBestWorkplacesKit_November_2025_5.png" alt="GPTW Image 5" loading="lazy">
-      </div>
-    </div>
-    
-    <div class="gptw-stats">
-      <div class="gptw-stat">
-        <div class="gptw-stat-number">5</div>
-        <div class="gptw-stat-label">连续获奖年数</div>
-      </div>
-      <div class="gptw-stat">
-        <div class="gptw-stat-number">100+</div>
-        <div class="gptw-stat-label">业务覆盖国家</div>
-      </div>
-      <div class="gptw-stat">
-        <div class="gptw-stat-number">500K+</div>
-        <div class="gptw-stat-label">全球员工人数</div>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 
   <!-- Chinese Community Section -->
   <section class="chinese-community" id="chinese-community">
@@ -732,6 +586,112 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
         <article class="city-card"><img src="photos/KL%201.jpg" alt="吉隆坡" loading="lazy"><div class="city-card-content"><h3>吉隆坡（KL）</h3><p class="city-country">马来西亚</p><ul class="city-features"><li>大量华人居住的国际都市</li><li>唐吉诃德、永旺、伊势丹等购物中心</li><li>华语医院·诊所完善</li><li>地铁·单轨列车通勤便利</li></ul><a href="why-malaysia-thailand.html#kl">查看详情 →</a></div></article>
         <article class="city-card"><img src="photos/Penang.jpg" alt="槟城" loading="lazy"><div class="city-card-content"><h3>槟城（Penang）</h3><p class="city-country">马来西亚</p><ul class="city-features"><li>世界遗产乔治城历史之城</li><li>度假与都市融合的环境</li><li>物价非常实惠，生活舒适</li><li>华人社区活跃</li></ul><a href="why-malaysia-thailand.html#penang">查看详情 →</a></div></article>
         <article class="city-card"><img src="photos/Bangkok%202.jpg" alt="曼谷" loading="lazy"><div class="city-card-content"><h3>曼谷（Bangkok）</h3><p class="city-country">泰国</p><ul class="city-features"><li>超过8万华人居住的城市</li><li>华人超市、伊势丹等完善</li><li>轻轨和地铁出行便捷</li><li>医疗水平非常高</li></ul><a href="why-malaysia-thailand.html#bangkok">查看详情 →</a></div></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Section -->
+  <section class="video-section" id="videos">
+    <div class="container">
+      <h2 class="section-title section-title-decorated" data-local="员工 Interview（视频）" data-expat="员工访谈（视频）">员工访谈（视频）</h2>
+      <p class="section-subtitle" data-local="通过短视频了解真实的工作 Experience" data-expat="通过短视频了解真实的工作体验">通过短视频了解真实的工作体验</p>
+      <div class="video-grid">
+        <article class="video-card">
+          <div class="video-embed"><iframe src="https://www.youtube.com/embed/N6l7PUQR0tw" title="TP员工访谈：最新视频" loading="lazy" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+          <header class="video-meta"><h3 class="video-title">TP员工访谈：最新视频</h3><p class="video-desc">听听真实员工的声音</p><a class="video-link" href="https://youtu.be/N6l7PUQR0tw" target="_blank" rel="noopener noreferrer">在YouTube观看 →</a></header>
+        </article>
+        <article class="video-card">
+          <div class="video-embed"><iframe src="https://www.youtube.com/embed/H4SVUrCjTPM" title="TP员工访谈：客服代表篇" loading="lazy" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+          <header class="video-meta"><h3 class="video-title" data-local="TP员工 Interview：Agent 篇" data-expat="TP员工访谈：客服代表篇">TP员工访谈：客服代表篇</h3><p class="video-desc" data-local="一线 Agent 的工作日常" data-expat="一线客服代表的工作日常">一线客服代表的工作日常</p><a class="video-link" href="https://youtu.be/H4SVUrCjTPM" target="_blank" rel="noopener noreferrer">在YouTube观看 →</a></header>
+        </article>
+        <article class="video-card">
+          <div class="video-embed"><iframe src="https://www.youtube.com/embed/VB6KSdFYLdE" title="TP员工访谈：团队主管篇" loading="lazy" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+          <header class="video-meta"><h3 class="video-title" data-local="TP员工 Interview：Team Leader 篇" data-expat="TP员工访谈：团队主管篇">TP员工访谈：团队主管篇</h3><p class="video-desc" data-local="现场 Management 和培养的真实情况" data-expat="现场管理和人才培养的真实情况">现场管理和人才培养的真实情况</p><a class="video-link" href="https://youtu.be/VB6KSdFYLdE" target="_blank" rel="noopener noreferrer">在YouTube观看 →</a></header>
+        </article>
+        <article class="video-card">
+          <div class="video-embed"><iframe src="https://www.youtube.com/embed/pa-qdCGkxA4" title="TP员工访谈：运营经理篇" loading="lazy" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+          <header class="video-meta"><h3 class="video-title" data-local="TP员工 Interview：Operations Manager 篇" data-expat="TP员工访谈：运营经理篇">TP员工访谈：运营经理篇</h3><p class="video-desc" data-local="Quality 和 Productivity 的幕后支持" data-expat="质量和生产力的幕后支持">质量和生产力的幕后支持</p><a class="video-link" href="https://youtu.be/pa-qdCGkxA4" target="_blank" rel="noopener noreferrer">在YouTube观看 →</a></header>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- World Map Section -->
+  <section class="world-map-section">
+    <div class="container">
+      <h2 class="section-title section-title-decorated" data-local="TP 全球 Network" data-expat="TP 全球网络">TP 全球网络</h2>
+      <p class="section-subtitle" data-local="在 100 多个国家提供 Global Service" data-expat="在 100 多个国家提供全球服务">在 100 多个国家提供全球服务</p>
+      <div class="world-map-container">
+        <img src="photos/world map locations.png" alt="TP 全球分布地图" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- Office Section -->
+  <section class="office-section" id="office">
+    <div class="container">
+      <h2 class="section-title section-title-decorated">工作环境</h2>
+      <p class="section-subtitle" data-local="舒适且交通便利的 Workplace" data-expat="舒适且交通便利的工作场所">舒适且交通便利的工作场所</p>
+      <div class="office-grid">
+        <div class="office-card"><img src="photos/G%20TOWER.jpg" alt="G Tower KL" class="office-image" loading="lazy"><div class="office-info"><h3 class="office-name">G Tower（吉隆坡）</h3><ul class="office-features"><li data-local="Ampang Park 站直达" data-expat="安邦公园站直达">安邦公园站直达</li><li data-local="KLCC 步行可达" data-expat="双子塔步行可达">双子塔步行可达</li><li data-local="Grade A Office Building" data-expat="甲级办公楼">甲级办公楼</li></ul></div></div>
+        <div class="office-card"><img src="photos/Reception.png" alt="Penang Livingston" class="office-image" loading="lazy"><div class="office-info"><h3 class="office-name">Livingston（槟城）</h3><ul class="office-features"><li>安静的环境</li><li data-local="餐厅·Pharmacy nearby" data-expat="餐厅·药房近在咫尺">餐厅·药房近在咫尺</li><li>交通便利</li></ul></div></div>
+        <div class="office-card"><img src="photos/Reception%20(1).png" alt="Penang One Precinct" class="office-image" loading="lazy"><div class="office-info"><h3 class="office-name">One Precinct（槟城）</h3><ul class="office-features"><li data-local="Bayan Baru 区域" data-expat="峇央峇鲁区域">峇央峇鲁区域</li><li>距机场 15 分钟</li><li data-local="Queensbay Mall nearby" data-expat="皇后湾广场附近">皇后湾广场附近</li></ul></div></div>
+        <div class="office-card"><img src="photos/GBS.jpeg" alt="GBS@Mahsuri" class="office-image" loading="lazy"><div class="office-info"><h3 class="office-name">GBS@Mahsuri（槟城）</h3><ul class="office-features"><li data-local="州 GBS Hub" data-expat="州全球商务服务中心">州全球商务服务中心</li><li data-local="IT/BPO 集聚地" data-expat="IT/业务流程外包集聚地">IT/业务流程外包集聚地</li><li>生活设施完善</li></ul></div></div>
+        <div class="office-card"><img src="photos/KL%201.jpg" alt="KCP" class="office-image" loading="lazy"><div class="office-info"><h3 class="office-name">KCP（格拉那再也中心点）</h3><ul class="office-features"><li data-local="LRT 站附近" data-expat="轻轨站附近">轻轨站附近</li><li data-local="Shopping 便利" data-expat="购物便利">购物便利</li></ul></div></div>
+        <div class="office-card"><img src="photos/Singha%20Complex1.jpg" alt="Bangkok Singha Complex" class="office-image" loading="lazy"><div class="office-info"><h3 class="office-name">Singha Complex（曼谷）</h3><ul class="office-features"><li data-local="BTS/MRT nearby" data-expat="轻轨/地铁附近">轻轨/地铁附近</li><li>华人区域</li><li>商业综合体内</li></ul></div></div>
+      </div>
+      <div style="text-align:center;margin-top:2rem"><a href="https://vtour.cloud/mh2n0j/ae5772z1/Bella%27s" target="_blank" rel="noopener noreferrer" class="btn btn-gold" data-local="Virtual Office Tour →" data-expat="虚拟办公室参观 →">虚拟办公室参观 →</a></div>
+    </div>
+  </section>
+
+  <!-- Lifestyle Section -->
+  <section class="lifestyle-section">
+    <div class="container">
+      <h2 class="section-title section-title-decorated" data-local="不只是工作。充实的 Active Life" data-expat="不只是工作。充实的活力生活">不只是工作。充实的活力生活</h2>
+      <p class="section-subtitle" data-local="周末去 Travel。下班后 Enjoy 爱好和放松，每天都精彩。" data-expat="周末去旅行。下班后享受爱好和放松，每天都精彩。">周末去旅行。下班后享受爱好和放松，每天都精彩。</p>
+      <div class="lifestyle-grid">
+        <div class="lifestyle-item"><img src="photos/KL%202.jpg" alt="购物" loading="lazy"><div class="lifestyle-caption" data-local="Shopping 购物" data-expat="购物">购物</div></div>
+        <div class="lifestyle-item"><img src="photos/Penang.jpg" alt="海滩生活" loading="lazy"><div class="lifestyle-caption" data-local="Beach Relax" data-expat="海滩放松">海滩放松</div></div>
+        <div class="lifestyle-item"><img src="photos/Bangkok1.jpg" alt="夜市" loading="lazy"><div class="lifestyle-caption" data-local="Night Market 夜市" data-expat="夜市">夜市</div></div>
+        <div class="lifestyle-item"><img src="photos/Condo.jpg" alt="泳池公寓" loading="lazy"><div class="lifestyle-caption" data-local="Pool·Gym 生活" data-expat="泳池·健身房生活">泳池·健身房生活</div></div>
+        <div class="lifestyle-item"><img src="photos/KL%201.jpg" alt="城市风光" loading="lazy"><div class="lifestyle-caption" data-local="City View" data-expat="城市风光">城市风光</div></div>
+        <div class="lifestyle-item"><img src="photos/Bangkok%202.jpg" alt="文化体验" loading="lazy"><div class="lifestyle-caption" data-local="文化 Experience" data-expat="文化体验">文化体验</div></div>
+        <div class="lifestyle-item"><img src="photos/Penang.jpg" alt="周末出游" loading="lazy"><div class="lifestyle-caption" data-local="Weekend Trip" data-expat="周末出游">周末出游</div></div>
+        <div class="lifestyle-item"><img src="photos/CafepicbyKoyoriinPenang.jpg" alt="咖啡文化" loading="lazy"><div class="lifestyle-caption" data-local="Cafe Culture" data-expat="咖啡文化">咖啡文化</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <h2 class="section-title section-title-decorated">员工的声音</h2>
+      <p class="section-subtitle" data-local="来自真实员工的 "Real Feedback"" data-expat="来自真实员工的真实反馈">来自真实员工的真实反馈</p>
+      <div class="testimonial-cards">
+        <div class="testimonial">
+          <p class="testimonial-content" data-local="物价便宜，可以轻松享受 Cafe 和外食。通勤压力消失了，平时晚上也能悠闲地做 Yoga 或和朋友相聚。" data-expat="物价便宜，可以轻松享受咖啡厅和外食。通勤压力消失了，平时晚上也能悠闲地做瑜伽或和朋友相聚。">物价便宜，可以轻松享受咖啡厅和外食。通勤压力消失了，平时晚上也能悠闲地做瑜伽或和朋友相聚。</p>
+          <div class="testimonial-author"><img src="photos/TPLogo11.png" alt="TP" class="author-img"><div class="author-info"><strong>M.S</strong><span data-local="招聘 Team·20多岁女性" data-expat="招聘团队·20多岁女性">招聘团队·20多岁女性</span></div></div>
+        </div>
+        <div class="testimonial">
+          <p class="testimonial-content" data-local="每个周末都能去 Pool、Sauna、Gym。这种生活在中国想都不敢想！休息日和朋友去 Beach 或 Night Market。工作和生活 Balance 很好！" data-expat="每个周末都能去泳池、桑拿、健身房。这种生活在中国想都不敢想！休息日和朋友去海滩或夜市。工作和生活平衡很好！">每个周末都能去泳池、桑拿、健身房。这种生活在中国想都不敢想！休息日和朋友去海滩或夜市。工作和生活平衡很好！</p>
+          <div class="testimonial-author"><img src="photos/TPLogo11.png" alt="员工" class="author-img"><div class="author-info"><strong>A.T</strong><span data-local="Customer Support·30多岁男性" data-expat="客户支持·30多岁男性">客户支持·30多岁男性</span></div></div>
+        </div>
+        <div class="testimonial">
+          <p class="testimonial-content" data-local="英语不好也能从华语为主的 Job 开始，很安心。有循序渐进提升 Skill 的环境，现在已经能享受英语交流了。" data-expat="英语不好也能从华语为主的工作开始，很安心。有循序渐进提升技能的环境，现在已经能享受英语交流了。">英语不好也能从华语为主的工作开始，很安心。有循序渐进提升技能的环境，现在已经能享受英语交流了。</p>
+          <div class="testimonial-author"><img src="photos/TPLogo11.png" alt="员工" class="author-img"><div class="author-info"><strong>R.H</strong><span data-local="原 Sales·30多岁" data-expat="原销售·30多岁">原销售·30多岁</span></div></div>
+        </div>
+        <div class="testimonial">
+          <p class="testimonial-content">"可以不同"这种价值观让我心灵自由了。比在中国时更不在意周围的眼光。尊重多元的文化真的很舒适。</p>
+          <div class="testimonial-author"><img src="photos/TPLogo11.png" alt="员工" class="author-img"><div class="author-info"><strong>H.N</strong><span data-local="招聘 Team" data-expat="招聘团队">招聘团队</span></div></div>
+        </div>
+        <div class="testimonial">
+          <p class="testimonial-content" data-local="不论年龄和经历，努力就能得到认可的 Company 文化很棒。我也有了晋升到 Team Leader 的经历，Career 可能性扩大了。" data-expat="不论年龄和经历，努力就能得到认可的公司文化很棒。我也有了晋升到团队主管的经历，职业可能性扩大了。">不论年龄和经历，努力就能得到认可的公司文化很棒。我也有了晋升到团队主管的经历，职业可能性扩大了。</p>
+          <div class="testimonial-author"><img src="photos/TPLogo11.png" alt="员工" class="author-img"><div class="author-info"><strong>N.T</strong><span data-local="Team Leader·40多岁" data-expat="团队主管·40多岁">团队主管·40多岁</span></div></div>
+        </div>
+        <div class="testimonial">
+          <p class="testimonial-content" data-local="马来西亚的生活比想象中舒适。中餐也很丰富，不会 Homesick。周末还能去周边国家 Travel。" data-expat="马来西亚的生活比想象中舒适。中餐也很丰富，不会想家。周末还能去周边国家旅行。">马来西亚的生活比想象中舒适。中餐也很丰富，不会想家。周末还能去周边国家旅行。</p>
+          <div class="testimonial-author"><img src="photos/TPLogo11.png" alt="员工" class="author-img"><div class="author-info"><strong>H.K</strong><span data-local="QA Specialist·20多岁" data-expat="质量专员·20多岁">质量专员·20多岁</span></div></div>
+        </div>
       </div>
     </div>
   </section>
