@@ -174,6 +174,216 @@ nav a[aria-current="page"]::after{width:100%;background:var(--tp-black)}
 .video-title{font-size:.98rem;font-weight:800;color:var(--tp-black);margin:2px 0 6px}
 .video-desc{font-size:.82rem;color:var(--tp-gray);margin-bottom:8px}
 .video-link{font-size:.85rem;color:var(--gold-dark);text-decoration:underline}
+/* GPTW World Best Workplaces Section - Enhanced */
+.gptw-section {
+  padding: 56px 20px;
+  background: var(--tp-silver);
+  position: relative;
+  overflow: hidden;
+}
+
+.gptw-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('photos/2025_World\'sBestWorkplaces.png') no-repeat center center;
+  background-size: 400px;
+  opacity: 0.03;
+  pointer-events: none;
+}
+
+.gptw-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.gptw-badge {
+  width: 160px;
+  height: auto;
+  filter: drop-shadow(0 4px 20px rgba(255,255,255,0.2));
+  animation: glow 3s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0%, 100% { filter: drop-shadow(0 4px 20px rgba(255,255,255,0.2)); }
+  50% { filter: drop-shadow(0 4px 30px rgba(255,255,255,0.4)); }
+}
+
+.gptw-title-block {
+  text-align: left;
+}
+
+.gptw-section .section-title {
+  color: var(--tp-black);
+  text-align: left;
+  margin-bottom: 0.5rem;
+}
+
+.gptw-section .section-subtitle {
+  color: var(--tp-gray);
+  text-align: left;
+  margin-bottom: 0;
+}
+
+.gptw-highlight {
+  display: inline-block;
+  background: linear-gradient(90deg, #ffd700, #ffaa00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 900;
+}
+
+.gptw-description {
+  max-width: 800px;
+  margin: 0 auto 2.5rem;
+  text-align: center;
+  color: var(--tp-gray-dark);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.gptw-banner {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto 2.5rem;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+
+.gptw-banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.gptw-gallery {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  max-width: var(--max);
+  margin: 0 auto;
+}
+
+.gptw-gallery-item {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.gptw-gallery-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+}
+
+.gptw-gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.gptw-stats {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.gptw-stat {
+  text-align: center;
+}
+
+.gptw-stat-number {
+  font-size: 3rem;
+  font-weight: 900;
+  background: linear-gradient(90deg, #ffd700, #ffaa00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.gptw-stat-label {
+  color: var(--tp-gray-dark);
+  font-size: 0.9rem;
+}
+
+.gptw-announcement {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.gptw-announcement h3 {
+  color: var(--tp-blackv);
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.gptw-announcement p {
+  color: var(--tp-gray-dark);
+  line-height: 1.6;
+}
+
+.gptw-quote {
+  font-style: italic;
+  color: var(--tp-gray);
+  margin: 1rem 0;
+  padding-left: 1rem;
+  border-left: 3px solid rgba(255, 215, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+  .gptw-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .gptw-title-block {
+    text-align: center;
+  }
+  
+  .gptw-section .section-title,
+  .gptw-section .section-subtitle {
+    text-align: center;
+  }
+  
+  .gptw-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .gptw-gallery-item:nth-child(5) {
+    grid-column: span 2;
+    max-width: 50%;
+    margin: 0 auto;
+  }
+  
+  .gptw-stats {
+    gap: 1.5rem;
+  }
+  
+  .gptw-stat-number {
+    font-size: 2rem;
+  }
+  }
 
 /* Cities Section */
 .cities{padding:60px 20px;background:var(--tp-off)}
