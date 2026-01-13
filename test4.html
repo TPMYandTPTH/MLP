@@ -133,7 +133,7 @@ nav a[aria-current="page"]::after{width:100%;background:var(--tp-black)}
 
 /* GPTW World Best Workplaces Section */
 .gptw-section{padding:60px 20px;background:var(--tp-silver);position:relative;overflow:hidden}
-.gptw-section::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:url('photos/World’sBestWorkplaces.png') no-repeat center center;background-size:400px;opacity:.03;pointer-events:none}
+.gptw-section::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:url('photos/World\'sBestWorkplaces.png') no-repeat center center;background-size:400px;opacity:.03;pointer-events:none}
 .gptw-header{display:flex;align-items:center;justify-content:center;gap:2rem;margin-bottom:2.5rem;flex-wrap:wrap}
 .gptw-badge{width:160px;height:auto;filter:drop-shadow(0 4px 20px rgba(255,215,0,.3));animation:glow 3s ease-in-out infinite}
 @keyframes glow{0%,100%{filter:drop-shadow(0 4px 20px rgba(255,215,0,.3))}50%{filter:drop-shadow(0 4px 30px rgba(255,215,0,.5))}}
@@ -152,10 +152,12 @@ nav a[aria-current="page"]::after{width:100%;background:var(--tp-black)}
 .gptw-stat{text-align:center}
 .gptw-stat-number{font-size:3rem;font-weight:900;background:linear-gradient(90deg,#FFD700,#FFAA00);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;margin-bottom:.5rem;font-family:'Noto Serif SC',serif}
 .gptw-stat-label{color:var(--tp-gray-dark);font-size:.9rem}
-.gptw-announcement{background:rgba(255,255,255,.6);border-radius:12px;padding:1.5rem;margin-bottom:2rem;backdrop-filter:blur(10px);border:1px solid rgba(255,215,0,.3)}
-.gptw-announcement h3{color:var(--tp-black);font-size:1.2rem;margin-bottom:1rem;display:flex;align-items:center;gap:.5rem}
-.gptw-announcement p{color:var(--tp-gray-dark);line-height:1.6}
-.gptw-quote{font-style:italic;color:var(--tp-gray);margin:1rem 0;padding-left:1rem;border-left:3px solid rgba(255,215,0,.5)}
+.gptw-announcement{background:linear-gradient(135deg,rgba(255,215,0,.15),rgba(255,170,0,.1));border-radius:12px;padding:2rem;margin-bottom:2.5rem;backdrop-filter:blur(10px);border:3px solid var(--gold-primary);box-shadow:0 8px 32px rgba(255,215,0,.25);position:relative;overflow:hidden}
+.gptw-announcement::before{content:'🎉';position:absolute;top:-20px;right:-20px;font-size:8rem;opacity:.1;pointer-events:none}
+.gptw-announcement h3{color:var(--tp-black);font-size:1.5rem;margin-bottom:1rem;display:flex;align-items:center;gap:.5rem;font-weight:900}
+.gptw-announcement>p{color:var(--tp-dark);line-height:1.8;font-size:1.1rem}
+.gptw-announcement>p strong{color:var(--gold-dark);font-size:1.2rem}
+.gptw-quote{font-style:italic;color:var(--tp-gray-dark);margin:1.5rem 0 0;padding-left:1.5rem;border-left:4px solid var(--gold-primary);font-size:1rem}
 
 /* Priority Menu */
 .priority-menu{padding:60px 20px;background:var(--tp-off)}
@@ -205,6 +207,9 @@ nav a[aria-current="page"]::after{width:100%;background:var(--tp-black)}
 .office-features{list-style:none;padding:0}
 .office-features li{font-size:.8rem;color:var(--tp-gray);padding:.15rem 0;padding-left:.875rem;position:relative}
 .office-features li:before{content:'•';position:absolute;left:0;color:var(--gold-primary)}
+.office-card.coming-soon{position:relative;opacity:.85}
+.office-card.coming-soon::after{content:'即将开放';position:absolute;top:12px;right:12px;background:linear-gradient(135deg,var(--gold-primary),var(--gold-light));color:var(--tp-black);padding:.3rem .75rem;border-radius:20px;font-size:.7rem;font-weight:700;box-shadow:0 2px 8px rgba(255,215,0,.4)}
+.office-card.coming-soon .office-image{filter:grayscale(30%)}
 
 /* Lifestyle Section */
 .lifestyle-section{padding:60px 20px;background:var(--tp-white)}
@@ -252,6 +257,8 @@ nav a[aria-current="page"]::after{width:100%;background:var(--tp-black)}
 .city-features li:last-child{border-bottom:none}
 .city-features li:before{content:'◆';position:absolute;left:0;color:var(--gold-primary);font-size:.6rem}
 .city-card a{color:var(--tp-black);font-weight:600;text-decoration:underline;display:inline-block;margin-top:.75rem;font-size:.85rem}
+.city-card.coming-soon{position:relative}
+.city-card.coming-soon::before{content:'即将开放';position:absolute;top:12px;right:12px;background:linear-gradient(135deg,var(--gold-primary),var(--gold-light));color:var(--tp-black);padding:.3rem .75rem;border-radius:20px;font-size:.7rem;font-weight:700;z-index:2;box-shadow:0 2px 8px rgba(255,215,0,.4)}
 
 /* Benefits Section */
 .benefits{padding:60px 20px;background:var(--tp-black);color:var(--tp-white)}
@@ -559,6 +566,9 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
         <a href="casual-interview.html" class="card"><img src="photos/GTowerInside1.png" alt="轻松面谈" loading="lazy"><div class="card-content"><h3 data-local="Casual面谈" data-expat="轻松面谈">轻松面谈</h3><p>先聊聊，无压力咨询</p></div></a>
         <a href="hiring-process.html" class="card"><img src="photos/Reception%20(2).png" alt="招聘流程" loading="lazy"><div class="card-content"><h3 data-local="招聘Process" data-expat="招聘流程">招聘流程</h3><p data-local="Online完成全部流程" data-expat="在线完成全部流程">在线完成全部流程</p></div></a>
         <a href="office-environment.html" class="card"><img src="photos/G%20TOWER.jpg" alt="办公环境" loading="lazy"><div class="card-content"><h3 data-local="办公环境·Virtual Tour" data-expat="办公环境·虚拟参观">办公环境·虚拟参观</h3><p data-local="办公环境与Career Path" data-expat="办公环境与职业发展">办公环境与职业发展</p></div></a>
+        <a href="external-raf.html" class="card"><img src="photos/Reception.png" alt="推荐奖励" loading="lazy"><div class="card-content"><h3 data-local="推荐 Bonus" data-expat="推荐奖励">推荐奖励</h3><p data-local="推荐朋友获得 Reward" data-expat="推荐朋友获得奖励">推荐朋友获得奖励</p></div></a>
+        <a href="blog.html" class="card"><img src="photos/CafepicbyKoyoriinPenang.jpg" alt="博客" loading="lazy"><div class="card-content"><h3 data-local="Blog·最新消息" data-expat="博客·最新消息">博客·最新消息</h3><p>员工分享与公司动态</p></div></a>
+        <a href="faq.html" class="card"><img src="photos/GTowerInside1.png" alt="常见问题" loading="lazy"><div class="card-content"><h3>FAQ·常见问题</h3><p>申请前的疑问解答</p></div></a>
       </div>
     </div>
   </section>
@@ -577,6 +587,32 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
     </div>
   </section>
 
+  <!-- Icon Grid Section -->
+  <section class="icon-grid" id="resources">
+    <div class="container">
+      <h2 class="section-title section-title-decorated" data-local="生活信息·Support" data-expat="生活信息·支持">生活信息·支持</h2>
+      <p class="section-subtitle" data-local="实用生活信息和 Resource" data-expat="实用生活信息和资源">实用生活信息和资源</p>
+      <div class="icon-grid-container">
+        <a href="cost-of-living.html" class="icon-card"><span class="icon-card-icon">💰</span><div class="icon-card-meta"><div class="icon-card-title" data-local="MY 生活成本" data-expat="马来西亚生活成本">马来西亚生活成本</div><div class="icon-card-desc">餐饮·交通·住房</div></div></a>
+        <a href="ta-team.html" class="icon-card"><span class="icon-card-icon">🤝</span><div class="icon-card-meta"><div class="icon-card-title" data-local="招聘 Team 介绍" data-expat="招聘团队介绍">招聘团队介绍</div><div class="icon-card-desc" data-local="华语 Support" data-expat="华语支持">华语支持</div></div></a>
+        <a href="area-around-office.html" class="icon-card"><span class="icon-card-icon">📍</span><div class="icon-card-meta"><div class="icon-card-title" data-local="Office 周边" data-expat="办公室周边">办公室周边</div><div class="icon-card-desc">周边环境信息</div></div></a>
+        <a href="daily-life-malaysia.html" class="icon-card"><span class="icon-card-icon">🇲🇾</span><div class="icon-card-meta"><div class="icon-card-title">当地生活</div><div class="icon-card-desc">餐饮·交通·住房</div></div></a>
+        <a href="career-growth.html" class="icon-card"><span class="icon-card-icon">📈</span><div class="icon-card-meta"><div class="icon-card-title" data-local="Career Path·晋升" data-expat="职业发展·晋升">职业发展·晋升</div><div class="icon-card-desc" data-local="语言·Training Program" data-expat="语言·培训项目">语言·培训项目</div></div></a>
+        <a href="culture-and-events.html" class="icon-card"><span class="icon-card-icon">🎉</span><div class="icon-card-meta"><div class="icon-card-title" data-local="Event·企业文化" data-expat="活动·企业文化">活动·企业文化</div><div class="icon-card-desc">欢乐的工作环境</div></div></a>
+        <a href="chinese-community.html" class="icon-card"><span class="icon-card-icon">🏠</span><div class="icon-card-meta"><div class="icon-card-title" data-local="华语 Community" data-expat="华语社区">华语社区</div><div class="icon-card-desc">500+ 华语同事</div></div></a>
+        <a href="language-requirements.html" class="icon-card"><span class="icon-card-icon">🗣️</span><div class="icon-card-meta"><div class="icon-card-title">语言要求</div><div class="icon-card-desc">英语·华语·其他</div></div></a>
+        <a href="onboarding-guide.html" class="icon-card"><span class="icon-card-icon">📋</span><div class="icon-card-meta"><div class="icon-card-title" data-local="Onboarding 指南" data-expat="入职指南">入职指南</div><div class="icon-card-desc">入职流程详解</div></div></a>
+        <a href="my-vs-th.html" class="icon-card"><span class="icon-card-icon">🔄</span><div class="icon-card-meta"><div class="icon-card-title" data-local="MY vs TH 对比" data-expat="马来西亚 vs 泰国">马来西亚 vs 泰国</div><div class="icon-card-desc">两国差异比较</div></div></a>
+        <a href="success-stories.html" class="icon-card"><span class="icon-card-icon">⭐</span><div class="icon-card-meta"><div class="icon-card-title" data-local="Success Case" data-expat="成功案例">成功案例</div><div class="icon-card-desc">华人员工故事</div></div></a>
+        <a href="health-safety.html" class="icon-card"><span class="icon-card-icon">🏥</span><div class="icon-card-meta"><div class="icon-card-title">健康与安全</div><div class="icon-card-desc">医疗·保险·安全</div></div></a>
+        <a href="family-visa.html" class="icon-card"><span class="icon-card-icon">👨‍👩‍👧</span><div class="icon-card-meta"><div class="icon-card-title" data-local="家属 Visa" data-expat="家属签证">家属签证</div><div class="icon-card-desc">带家人一起来</div></div></a>
+        <a href="remote-work.html" class="icon-card"><span class="icon-card-icon">🏠</span><div class="icon-card-meta"><div class="icon-card-title" data-local="Remote Work" data-expat="远程办公">远程办公</div><div class="icon-card-desc" data-local="WFH Option" data-expat="居家办公选项">居家办公选项</div></div></a>
+        <a href="#" class="icon-card" id="wechatCard"><span class="icon-card-icon">💬</span><div class="icon-card-meta"><div class="icon-card-title" data-local="WeChat 官方账号" data-expat="微信官方账号">微信官方账号</div><div class="icon-card-desc">最新信息推送</div></div></a>
+        <a href="https://line.me/R/ti/p/@286nmdsd" target="_blank" rel="noopener noreferrer" class="icon-card"><span class="icon-card-icon">📱</span><div class="icon-card-meta"><div class="icon-card-title" data-local="LINE 官方 Account" data-expat="LINE 官方账号">LINE 官方账号</div><div class="icon-card-desc">最新信息推送</div></div></a>
+      </div>
+    </div>
+  </section>
+
   <!-- Cities Section -->
   <section class="cities" id="cities">
     <div class="container">
@@ -586,6 +622,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
         <article class="city-card"><img src="photos/KL%201.jpg" alt="吉隆坡" loading="lazy"><div class="city-card-content"><h3>吉隆坡（KL）</h3><p class="city-country">马来西亚</p><ul class="city-features"><li>大量华人居住的国际都市</li><li>唐吉诃德、永旺、伊势丹等购物中心</li><li>华语医院·诊所完善</li><li>地铁·单轨列车通勤便利</li></ul><a href="why-malaysia-thailand.html#kl">查看详情 →</a></div></article>
         <article class="city-card"><img src="photos/Penang.jpg" alt="槟城" loading="lazy"><div class="city-card-content"><h3>槟城（Penang）</h3><p class="city-country">马来西亚</p><ul class="city-features"><li>世界遗产乔治城历史之城</li><li>度假与都市融合的环境</li><li>物价非常实惠，生活舒适</li><li>华人社区活跃</li></ul><a href="why-malaysia-thailand.html#penang">查看详情 →</a></div></article>
         <article class="city-card"><img src="photos/Bangkok%202.jpg" alt="曼谷" loading="lazy"><div class="city-card-content"><h3>曼谷（Bangkok）</h3><p class="city-country">泰国</p><ul class="city-features"><li>超过8万华人居住的城市</li><li>华人超市、伊势丹等完善</li><li>轻轨和地铁出行便捷</li><li>医疗水平非常高</li></ul><a href="why-malaysia-thailand.html#bangkok">查看详情 →</a></div></article>
+        <article class="city-card coming-soon"><img src="photos/KL%202.jpg" alt="柔佛" loading="lazy"><div class="city-card-content"><h3>柔佛（Johor）</h3><p class="city-country">马来西亚</p><ul class="city-features"><li>靠近新加坡，交通便利</li><li>生活成本比吉隆坡更低</li><li>新兴发展区域</li><li data-local="即将 Open" data-expat="即将开放">即将开放</li></ul><a href="why-malaysia-thailand.html#johor">查看详情 →</a></div></article>
       </div>
     </div>
   </section>
@@ -639,6 +676,9 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
         <div class="office-card"><img src="photos/GBS.jpeg" alt="GBS@Mahsuri" class="office-image" loading="lazy"><div class="office-info"><h3 class="office-name">GBS@Mahsuri（槟城）</h3><ul class="office-features"><li data-local="州 GBS Hub" data-expat="州全球商务服务中心">州全球商务服务中心</li><li data-local="IT/BPO 集聚地" data-expat="IT/业务流程外包集聚地">IT/业务流程外包集聚地</li><li>生活设施完善</li></ul></div></div>
         <div class="office-card"><img src="photos/KL%201.jpg" alt="KCP" class="office-image" loading="lazy"><div class="office-info"><h3 class="office-name">KCP（格拉那再也中心点）</h3><ul class="office-features"><li data-local="LRT 站附近" data-expat="轻轨站附近">轻轨站附近</li><li data-local="Shopping 便利" data-expat="购物便利">购物便利</li></ul></div></div>
         <div class="office-card"><img src="photos/Singha%20Complex1.jpg" alt="Bangkok Singha Complex" class="office-image" loading="lazy"><div class="office-info"><h3 class="office-name">Singha Complex（曼谷）</h3><ul class="office-features"><li data-local="BTS/MRT nearby" data-expat="轻轨/地铁附近">轻轨/地铁附近</li><li>华人区域</li><li>商业综合体内</li></ul></div></div>
+        <div class="office-card coming-soon"><img src="photos/KL%202.jpg" alt="Sunway" class="office-image" loading="lazy"><div class="office-info"><h3 class="office-name">Sunway（双威）</h3><ul class="office-features"><li>双威金字塔购物中心附近</li><li data-local="BRT 直达" data-expat="快速公交直达">快速公交直达</li><li>新兴商业区</li></ul></div></div>
+        <div class="office-card coming-soon"><img src="photos/Penang.jpg" alt="Johor" class="office-image" loading="lazy"><div class="office-info"><h3 class="office-name">Johor（柔佛）</h3><ul class="office-features"><li>靠近新加坡</li><li>生活成本更低</li><li>新办公地点</li></ul></div></div>
+        <div class="office-card coming-soon"><img src="photos/Condo.jpg" alt="WFH" class="office-image" loading="lazy"><div class="office-info"><h3 class="office-name" data-local="WFH（居家办公）" data-expat="居家办公">居家办公</h3><ul class="office-features"><li data-local="Remote Work Option" data-expat="远程工作选项">远程工作选项</li><li>灵活工作安排</li><li>部分职位适用</li></ul></div></div>
       </div>
       <div style="text-align:center;margin-top:2rem"><a href="https://vtour.cloud/mh2n0j/ae5772z1/Bella%27s" target="_blank" rel="noopener noreferrer" class="btn btn-gold" data-local="Virtual Office Tour →" data-expat="虚拟办公室参观 →">虚拟办公室参观 →</a></div>
     </div>
@@ -800,7 +840,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
   </div>
   <div class="footer-bottom">
     <p class="ssm-info">Teleperformance Malaysia Sdn Bhd 的 SSM（马来西亚公司委员会）注册号为 201601023769 (1194708-K)。</p>
-    <p>&copy; 2025 TP. All rights reserved. | <a href="#">隐私政策</a> | <a href="#">使用条款</a></p>
+    <p>&copy; 2026 TP. All rights reserved. | <a href="#">隐私政策</a> | <a href="#">使用条款</a></p>
   </div>
 </footer>
 
