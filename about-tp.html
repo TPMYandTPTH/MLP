@@ -4,17 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>会社紹介｜TP採用 マレーシア・タイ</title>
-<meta name="description" content="テレパフォーマンスは世界100カ国以上で展開するグローバルBPO企業。日本語スピーカーの皆様の新たなキャリアをマレーシア・タイでサポートします。">
+<meta name="description" content="TPは世界100カ国以上で展開するグローバルBPO企業。日本語スピーカーの皆様の新たなキャリアをマレーシア・タイでサポートします。">
 <meta name="theme-color" content="#000000">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ja_JP">
 <meta property="og:title" content="会社紹介｜TP採用">
-<meta property="og:description" content="テレパフォーマンスは世界100カ国以上で展開するグローバルBPO企業。">
+<meta property="og:description" content="TPは世界100カ国以上で展開するグローバルBPO企業。">
 <meta property="og:image" content="https://tpmyandtpth.github.io/JLP/photos/TPLogo11.png">
 <meta property="og:url" content="https://tpmyandtpth.github.io/JLP/about-tp.html">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="会社紹介｜TP採用">
-<meta name="twitter:description" content="テレパフォーマンスは世界100カ国以上で展開するグローバルBPO企業。">
+<meta name="twitter:description" content="TPは世界100カ国以上で展開するグローバルBPO企業。">
 <meta name="twitter:image" content="https://tpmyandtpth.github.io/JLP/photos/TPLogo11.png">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://tpmyandtpth.github.io/JLP/about-tp.html">
@@ -466,6 +466,12 @@ footer::before {
   outline: none;
 }
 
+.ssm-info {
+  font-size: 0.75rem;
+  opacity: 0.5;
+  margin-bottom: 0.5rem;
+}
+
 /* Floating Buttons */
 .floating-apply {
   position: fixed;
@@ -750,10 +756,375 @@ footer::before {
   font-size: 0.85rem;
 }
 
+/* GPTW World Best Workplaces Section - Enhanced */
+.gptw-section {
+  padding: 56px 20px;
+  background: var(--tp-silver);
+  position: relative;
+  overflow: hidden;
+}
+
+.gptw-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('photos/2025_World\'sBestWorkplaces.png') no-repeat center center;
+  background-size: 400px;
+  opacity: 0.03;
+  pointer-events: none;
+}
+
+.gptw-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.gptw-badge {
+  width: 160px;
+  height: auto;
+  filter: drop-shadow(0 4px 20px rgba(255,255,255,0.2));
+  animation: glow 3s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0%, 100% { filter: drop-shadow(0 4px 20px rgba(255,255,255,0.2)); }
+  50% { filter: drop-shadow(0 4px 30px rgba(255,255,255,0.4)); }
+}
+
+.gptw-title-block {
+  text-align: left;
+}
+
+.gptw-section .section-title {
+  color: var(--tp-black);
+  text-align: left;
+  margin-bottom: 0.5rem;
+}
+
+.gptw-section .section-subtitle {
+  color: var(--tp-gray);
+  text-align: left;
+  margin-bottom: 0;
+}
+
+.gptw-highlight {
+  display: inline-block;
+  background: linear-gradient(90deg, #ffd700, #ffaa00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 900;
+}
+
+.gptw-description {
+  max-width: 800px;
+  margin: 0 auto 2.5rem;
+  text-align: center;
+  color: var(--tp-gray-dark);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.gptw-banner {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto 2.5rem;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+
+.gptw-banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.gptw-gallery {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  max-width: var(--max);
+  margin: 0 auto;
+}
+
+.gptw-gallery-item {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.gptw-gallery-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+}
+
+.gptw-gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.gptw-stats {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.gptw-stat {
+  text-align: center;
+}
+
+.gptw-stat-number {
+  font-size: 3rem;
+  font-weight: 900;
+  background: linear-gradient(90deg, #ffd700, #ffaa00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.gptw-stat-label {
+  color: var(--tp-gray-dark);
+  font-size: 0.9rem;
+}
+
+.gptw-announcement {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.gptw-announcement h3 {
+  color: var(--tp-blackv);
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.gptw-announcement p {
+  color: var(--tp-gray-dark);
+  line-height: 1.6;
+}
+
+.gptw-quote {
+  font-style: italic;
+  color: var(--tp-gray);
+  margin: 1rem 0;
+  padding-left: 1rem;
+  border-left: 3px solid rgba(255, 215, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+  .gptw-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .gptw-title-block {
+    text-align: center;
+  }
+  
+  .gptw-section .section-title,
+  .gptw-section .section-subtitle {
+    text-align: center;
+  }
+  
+  .gptw-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .gptw-gallery-item:nth-child(5) {
+    grid-column: span 2;
+    max-width: 50%;
+    margin: 0 auto;
+  }
+  
+  .gptw-stats {
+    gap: 1.5rem;
+  }
+  
+  .gptw-stat-number {
+    font-size: 2rem;
+  }
+}
+
+/* PDF Viewer Section - Enhanced for Horizontal View */
+.pdf-section {
+  padding: 56px 20px;
+  background: var(--tp-white);
+}
+
+.pdf-viewer-wrapper {
+  max-width: var(--max);
+  margin: 0 auto;
+}
+
+.pdf-container {
+  background: var(--tp-white);
+  border: 1px solid var(--tp-light);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.pdf-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: var(--tp-off);
+  border-bottom: 1px solid var(--tp-light);
+}
+
+.pdf-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 700;
+  color: var(--tp-black);
+}
+
+.pdf-title-icon {
+  font-size: 1.5rem;
+}
+
+.pdf-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.pdf-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.3s;
+  cursor: pointer;
+  border: none;
+}
+
+.pdf-btn-download {
+  background: var(--accent-purple);
+  color: var(--tp-white);
+}
+
+.pdf-btn-download:hover {
+  background: #5c0073;
+  transform: translateY(-1px);
+}
+
+.pdf-btn-fullscreen {
+  background: var(--tp-white);
+  color: var(--tp-black);
+  border: 1px solid var(--tp-light);
+}
+
+.pdf-btn-fullscreen:hover {
+  background: var(--tp-black);
+  color: var(--tp-white);
+}
+
+.pdf-embed-container {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio for horizontal view */
+  background: var(--tp-off);
+}
+
+.pdf-embed-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.pdf-embed-container object {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.pdf-fallback {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  background: linear-gradient(135deg, var(--tp-off) 0%, #fff 100%);
+  text-align: center;
+  padding: 2rem;
+}
+
+.pdf-fallback-icon {
+  font-size: 4rem;
+  opacity: 0.5;
+}
+
+.pdf-fallback p {
+  color: var(--tp-gray);
+  font-size: 0.95rem;
+  max-width: 400px;
+}
+
+/* Mobile PDF adjustments */
+@media (max-width: 768px) {
+  .pdf-header {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  
+  .pdf-actions {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .pdf-embed-container {
+    padding-bottom: 75%; /* Slightly taller on mobile but still horizontal */
+  }
+  
+  .pdf-btn {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.8rem;
+  }
+}
+
 /* Why TP Section */
 .why-tp { 
   padding: 56px 20px; 
-  background: var(--tp-white); 
+  background: var(--tp-off); 
 }
 
 .reasons-grid {
@@ -804,7 +1175,7 @@ footer::before {
   border: 1px solid var(--tp-light); 
   border-radius: 12px; 
   padding: 16px; 
-  background: var(--tp-off); 
+  background: var(--tp-white); 
 }
 
 .locations h3 { 
@@ -832,6 +1203,7 @@ footer::before {
   border: 1px solid var(--tp-light); 
   border-radius: 12px; 
   padding: 16px; 
+  background: var(--tp-white);
 }
 
 .checklist h3 { 
@@ -859,7 +1231,7 @@ footer::before {
 /* Testimonials Section */
 .testimonials {
   padding: 56px 20px;
-  background: var(--tp-off);
+  background: var(--tp-white);
 }
 
 .testimonial-cards {
@@ -870,7 +1242,7 @@ footer::before {
 }
 
 .testimonial {
-  background: var(--tp-white);
+  background: var(--tp-off);
   padding: 1.5rem;
   border-radius: 8px;
   position: relative;
@@ -928,7 +1300,7 @@ footer::before {
 /* Contact Cards */
 .contact {
   padding: 80px 20px;
-  background: linear-gradient(135deg, var(--tp-white) 0%, var(--tp-off) 100%);
+  background: linear-gradient(135deg, var(--tp-off) 0%, var(--tp-white) 100%);
   position: relative;
   overflow: hidden;
 }
@@ -1092,7 +1464,7 @@ footer::before {
       <img src="photos/TPLogo11.png" alt="TP Japan" width="40" height="40">
       <div class="brand-text">
         <span class="brand-name">TP</span>
-        <span class="brand-tagline">日本採用 — マレーシア・タイ</span>
+        <span class="brand-tagline">マレーシア・タイ</span>
       </div>
     </a>
 
@@ -1101,10 +1473,10 @@ footer::before {
         <li><a href="https://tpmyandtpth.github.io/JLP/index.html">ホーム</a></li>
         <li><a href="https://tpmyandtpth.github.io/JLP/about-tp.html" aria-current="page">TPについて</a></li>
         <li><a href="https://tpmyandtpth.github.io/JLP/salary-and-benefits.html">給与・福利厚生</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/interview-process.html">面接プロセス</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/why-malaysia-thailand.html">なぜマレーシア・タイ</a></li>
+        <li><a href="https://tpmyandtpth.github.io/JLP/hiring-process.html">選考プロセス</a></li>
+        <li><a href="https://tpmyandtpth.github.io/JLP/why-malaysia-thailand.html">マレーシアとタイの魅力</a></li>
         <li><a href="https://tpmyandtpth.github.io/JLP/relocation-visa.html">移住・ビザサポート</a></li>
-        <li><a href="https://careerseng-teleperformance.icims.com/jobs/49026/customer-service-representative---japanese-speaking-%28kl%29/job?mode=job&iis=LANDINGPAGE" target="_blank" rel="noopener noreferrer" class="apply-btn">応募する</a></li>
+        <li><a href="https://careerseng-teleperformance.icims.com/jobs/49026/customer-service-representative---japanese-speaking-%28kl%29/job?mode=job&iis=JPLandingPage&iisn=" target="_blank" rel="noopener noreferrer" class="apply-btn">応募する</a></li>
       </ul>
     </nav>
 
@@ -1118,10 +1490,10 @@ footer::before {
       <li><a href="https://tpmyandtpth.github.io/JLP/index.html">ホーム</a></li>
       <li><a href="https://tpmyandtpth.github.io/JLP/about-tp.html">TPについて</a></li>
       <li><a href="https://tpmyandtpth.github.io/JLP/salary-and-benefits.html">給与・福利厚生 </a></li>
-      <li><a href="https://tpmyandtpth.github.io/JLP/interview-process.html">面接プロセス</a></li>
-      <li><a href="https://tpmyandtpth.github.io/JLP/why-malaysia-thailand.html">なぜマレーシア・タイ</a></li>
+      <li><a href="https://tpmyandtpth.github.io/JLP/hiring-process.html">選考プロセス</a></li>
+      <li><a href="https://tpmyandtpth.github.io/JLP/why-malaysia-thailand.html">マレーシアとタイの魅力</a></li>
       <li><a href="https://tpmyandtpth.github.io/JLP/relocation-visa.html">移住・ビザサポート</a></li>
-      <li><a href="https://careerseng-teleperformance.icims.com/jobs/49026/customer-service-representative---japanese-speaking-%28kl%29/job?mode=job&iis=LANDINGPAGE" target="_blank" rel="noopener noreferrer" class="apply-btn">応募する</a></li>
+      <li><a href="https://careerseng-teleperformance.icims.com/jobs/49026/customer-service-representative---japanese-speaking-%28kl%29/job?mode=job&iis=JPLandingPage&iisn=" target="_blank" rel="noopener noreferrer" class="apply-btn">応募する</a></li>
     </ul>
   </nav>
 </header>
@@ -1139,9 +1511,9 @@ footer::before {
   <section style="padding: 0 20px;">
     <div class="about-content">
       <div class="about-text">
-        <h2>テレパフォーマンスについて</h2>
+        <h2>TP について</h2>
         <p>
-          テレパフォーマンス（TP）は1978年にフランス・パリで設立されたグローバルBPO企業です。
+          TPは1978年にフランス・パリで設立されたグローバルBPO企業です。
           世界100カ国以上、50万人以上の従業員を擁し、カスタマーエクスペリエンスの分野で
           世界をリードしています。
         </p>
@@ -1178,6 +1550,72 @@ footer::before {
           日本語スピーカーの皆様にとって、海外でのキャリア構築が
           より身近で魅力的な選択肢となるよう、充実したサポート体制を整えています。
         </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- GPTW World Best Workplaces Section - Enhanced -->
+  <section class="gptw-section" id="world-best-workplaces">
+    <div class="container">
+      <div class="gptw-announcement">
+        <h3>🎉 重要なお知らせ</h3>
+        <p>
+          公式発表：TPはGreat Place to Work®により「World's Best Workplaces™」として<strong>5年連続</strong>で認定されました！
+        </p>
+        <p class="gptw-quote">
+          "この認定は、私たちの従業員からのフィードバックと信頼に基づいており、私たちの企業文化の強さを示しています。"
+        </p>
+      </div>
+      
+      <div class="gptw-header">
+        <img src="photos/World’sBestWorkplaces.png" alt="World's Best Workplaces 2025" class="gptw-badge">
+        <div class="gptw-title-block">
+          <h2 class="section-title">World's Best Workplaces™ <span class="gptw-highlight">5年連続受賞</span></h2>
+          <p class="section-subtitle">Great Place to Work® 認定</p>
+        </div>
+      </div>
+      
+      <p class="gptw-description">
+        TPは、Great Place to Work®により「World's Best Workplaces™」として<strong>5年連続</strong>で認定されました。<br>
+        この認定は、社員の皆様からのフィードバックと信頼に基づいており、私たちの企業文化の強さを示しています。<br>
+        共に、人々を力づけ、多様性を尊重し、毎日ポジティブな影響を与える職場を築いています。
+      </p>
+      
+      <div class="gptw-banner">
+        <img src="photos/GMT_SoMe_GPTWWorldBestWorkplacesKit_November_2025_Banner.png" alt="GPTW World Best Workplaces Banner" loading="lazy">
+      </div>
+      
+      <div class="gptw-gallery">
+        <div class="gptw-gallery-item">
+          <img src="photos/GMT_SoMe_GPTWWorldBestWorkplacesKit_November_2025_1.png" alt="GPTW Image 1" loading="lazy">
+        </div>
+        <div class="gptw-gallery-item">
+          <img src="photos/GMT_SoMe_GPTWWorldBestWorkplacesKit_November_2025_2.png" alt="GPTW Image 2" loading="lazy">
+        </div>
+        <div class="gptw-gallery-item">
+          <img src="photos/GMT_SoMe_GPTWWorldBestWorkplacesKit_November_2025_3.png" alt="GPTW Image 3" loading="lazy">
+        </div>
+        <div class="gptw-gallery-item">
+          <img src="photos/GMT_SoMe_GPTWWorldBestWorkplacesKit_November_2025_4.png" alt="GPTW Image 4" loading="lazy">
+        </div>
+        <div class="gptw-gallery-item">
+          <img src="photos/GMT_SoMe_GPTWWorldBestWorkplacesKit_November_2025_5.png" alt="GPTW Image 5" loading="lazy">
+        </div>
+      </div>
+      
+      <div class="gptw-stats">
+        <div class="gptw-stat">
+          <div class="gptw-stat-number">5</div>
+          <div class="gptw-stat-label">年連続受賞</div>
+        </div>
+        <div class="gptw-stat">
+          <div class="gptw-stat-number">100+</div>
+          <div class="gptw-stat-label">展開国数</div>
+        </div>
+        <div class="gptw-stat">
+          <div class="gptw-stat-number">500K+</div>
+          <div class="gptw-stat-label">グローバル従業員</div>
+        </div>
       </div>
     </div>
   </section>
@@ -1219,8 +1657,8 @@ footer::before {
           <div class="award-item">
             <span class="award-icon">🌍</span>
             <div>
-              <h3>業界リーダー</h3>
-              <p>BPO業界で世界最大規模の企業</p>
+              <h3>World's Best Workplaces™</h3>
+              <p>グローバルで5年連続認定</p>
             </div>
           </div>
           <div class="award-item">
@@ -1229,6 +1667,43 @@ footer::before {
               <h3>成長企業</h3>
               <p>日本語スピーカー採用を継続的に拡大中</p>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Company Deck PDF Section - Enhanced for Horizontal View -->
+  <section class="pdf-section" id="company-deck">
+    <div class="container">
+      <h2 class="section-title">会社概要資料</h2>
+      <p class="section-subtitle">TP についてさらに詳しく知る</p>
+      
+      <div class="pdf-viewer-wrapper">
+        <div class="pdf-container">
+          <div class="pdf-header">
+            <div class="pdf-title">
+              <span class="pdf-title-icon">📄</span>
+              <span>Company Deck - TP会社概要</span>
+            </div>
+            <div class="pdf-actions">
+                <!--<a href="https://tpmyandtpth.github.io/JLP/CompanyDeck.pdf" download class="pdf-btn pdf-btn-download">
+                <span>⬇</span> ダウンロード
+              </a>
+              <a href="https://tpmyandtpth.github.io/JLP/CompanyDeck.pdf" target="_blank" rel="noopener noreferrer" class="pdf-btn pdf-btn-fullscreen">
+                <span>⛶</span> 全画面表示
+              </a> -->
+            </div>
+          </div>
+          
+          <div class="pdf-embed-container">
+            <!-- Primary: Google Docs Viewer (works on most browsers including mobile) -->
+            <iframe 
+              src="https://docs.google.com/viewer?url=https://tpmyandtpth.github.io/JLP/CompanyDeck.pdf&embedded=true&rm=minimal"
+              title="Company Deck PDF"
+              loading="lazy"
+              allowfullscreen>
+            </iframe>
           </div>
         </div>
       </div>
@@ -1300,7 +1775,7 @@ footer::before {
             <div>
               <div class="reason-title">5. 就労ビザ＆一時滞在先サポートあり！スムーズに移住可能</div>
               <p class="reason-desc">
-                就労ビザ申請サポート、空港送迎、一時滞在先（マレーシアのみ）の手配まで、入社前後の手続きをフルサポート。初めての海外生活でも安心してスタートできます。
+                就労ビザ申請サポート、空港送迎（マレーシアのみ）、一時滞在先の手配まで、入社前後の手続きをフルサポート。初めての海外生活でも安心してスタートできます。
               </p>
             </div>
           </div>
@@ -1367,10 +1842,9 @@ footer::before {
             キャリアアップの機会も多く、やりがいを感じています。」
           </p>
           <div class="testimonial-author">
-            <img src="photos/Maho.png" alt="Maho" class="author-img">
+            <img src="photos/TPLogo11.png" alt="Maho" class="author-img">
             <div class="author-info">
-              <strong>Maho</strong>
-              <span>採用チーム（クアラルンプール）</span>
+              <strong>M.A</strong>
             </div>
           </div>
         </div>
@@ -1384,7 +1858,6 @@ footer::before {
             <img src="photos/TPLogo11.png" alt="Takeshi" class="author-img">
             <div class="author-info">
               <strong>T.M</strong>
-              <span>カスタマーサポート（ペナン）</span>
             </div>
           </div>
         </div>
@@ -1398,7 +1871,6 @@ footer::before {
             <img src="photos/TPLogo11.png" alt="Yuki" class="author-img">
             <div class="author-info">
               <strong>Y.C</strong>
-              <span>元従業員（バンコク）</span>
             </div>
           </div>
         </div>
@@ -1424,7 +1896,7 @@ footer::before {
           <p>最新募集・イベント情報を配信</p>
           <span class="contact-card-action">友達追加 →</span>
         </a>
-        <a href="https://careerseng-teleperformance.icims.com/jobs/49026/customer-service-representative---japanese-speaking-%28kl%29/job?mode=job&iis=LANDINGPAGE" target="_blank" rel="noopener noreferrer" class="contact-card apply">
+        <a href="https://careerseng-teleperformance.icims.com/jobs/49026/customer-service-representative---japanese-speaking-%28kl%29/job?mode=job&iis=JPLandingPage&iisn=" target="_blank" rel="noopener noreferrer" class="contact-card apply">
           <span class="contact-card-icon">✍️</span>
           <h3>応募ページ</h3>
           <p>履歴書アップロードで簡単エントリー</p>
@@ -1448,10 +1920,11 @@ footer::before {
         日本語スピーカーの皆様の新たなキャリアをサポートします。
       </p>
       <div class="badges">
-        <span class="badge-item">🏆 Great Place to Work® 6年連続</span>
+        <span class="badge-item">🏆 Malaysia Great Place to Work® 6年連続</span>
+        <span class="badge-item">🏆 World's Best Workplaces™ 5年連続受賞</span>
       </div>
       <div class="footer-cta">
-        <a href="https://careerseng-teleperformance.icims.com/jobs/49026/customer-service-representative---japanese-speaking-%28kl%29/job?mode=job&iis=LANDINGPAGE" target="_blank" rel="noopener noreferrer" class="btn btn-accent">ご応募はこちら</a>
+        <a href="https://careerseng-teleperformance.icims.com/jobs/49026/customer-service-representative---japanese-speaking-%28kl%29/job?mode=job&iis=JPLandingPage&iisn=" target="_blank" rel="noopener noreferrer" class="btn btn-accent">ご応募はこちら</a>
       </div>
     </div>
     
@@ -1469,7 +1942,7 @@ footer::before {
       <h3>求人・応募</h3>
       <ul>
         <li><a href="https://tpmyandtpth.github.io/JLP/open-jobs.html">求人一覧</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/interview-process.html">面接プロセス</a></li>
+        <li><a href="https://tpmyandtpth.github.io/JLP/hiring-process.html">選考プロセス</a></li>
         <li><a href="https://tpmyandtpth.github.io/JLP/faq.html">よくある質問</a></li>
         <li><a href="https://tpmyandtpth.github.io/JLP/casual-interview.html">お問い合わせ</a></li>
       </ul>
@@ -1487,6 +1960,7 @@ footer::before {
   </div>
   
   <div class="footer-bottom">
+    <p class="ssm-info">Teleperformance Malaysia Sdn Bhd の SSM（マレーシア会社委員会）登録番号は 201601023769 (1194708-K) です。</p>
     <p>&copy; 2025 TP. All rights reserved. | 
       <a href="#">プライバシーポリシー</a> | 
       <a href="#">利用規約</a>
@@ -1495,7 +1969,7 @@ footer::before {
 </footer>
 
 <!-- FLOATING BUTTONS -->
-<a href="https://careerseng-teleperformance.icims.com/jobs/49026/customer-service-representative---japanese-speaking-%28kl%29/job?mode=job&iis=LANDINGPAGE" target="_blank" rel="noopener noreferrer" class="floating-apply" aria-label="今すぐ応募">応募する</a>
+<a href="https://careerseng-teleperformance.icims.com/jobs/49026/customer-service-representative---japanese-speaking-%28kl%29/job?mode=job&iis=JPLandingPage&iisn=" target="_blank" rel="noopener noreferrer" class="floating-apply" aria-label="今すぐ応募">応募する</a>
 
 <a href="https://forms.office.com/e/2UvpbweQww" target="_blank" rel="noopener noreferrer" class="floating-casual" aria-label="カジュアル面談">カジュアル面談</a>
 
@@ -1608,7 +2082,7 @@ try {
     }, observerOptions);
     
     // Observe elements
-    const elements = document.querySelectorAll('.about-content, .stat-item, .award-item, .testimonial, .contact-card');
+    const elements = document.querySelectorAll('.about-content, .stat-item, .award-item, .testimonial, .contact-card, .pdf-container, .gptw-gallery-item, .gptw-banner, .gptw-announcement');
     elements.forEach(el => {
       el.style.opacity = '0';
       el.style.transform = 'translateY(20px)';
@@ -1618,6 +2092,22 @@ try {
   })();
 } catch(error) {
   console.warn('Animation observer failed:', error);
+}
+
+// PDF Horizontal Viewer Enhancement
+try {
+  (function(){
+    const pdfIframe = document.querySelector('.pdf-embed-container iframe');
+    if(pdfIframe) {
+      // Add horizontal orientation parameter to ensure horizontal viewing
+      const currentSrc = pdfIframe.getAttribute('src');
+      if(currentSrc && !currentSrc.includes('rm=minimal')) {
+        pdfIframe.setAttribute('src', currentSrc + '&rm=minimal');
+      }
+    }
+  })();
+} catch(error) {
+  console.warn('PDF viewer enhancement failed:', error);
 }
 
 // Initialize when DOM is ready
