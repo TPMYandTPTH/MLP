@@ -1,37 +1,16 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>会社紹介｜TP採用 マレーシア・タイ</title>
-<meta name="description" content="TPは世界100カ国以上で展開するグローバルBPO企業。日本語スピーカーの皆様の新たなキャリアをマレーシア・タイでサポートします。">
+<title>关于TP｜TP招聘 马来西亚·泰国</title>
+<meta name="description" content="TP是全球100多个国家运营的BPO企业。支持华语人才在马来西亚和泰国开启新事业。">
 <meta name="theme-color" content="#000000">
-<meta property="og:type" content="website">
-<meta property="og:locale" content="ja_JP">
-<meta property="og:title" content="会社紹介｜TP採用">
-<meta property="og:description" content="TPは世界100カ国以上で展開するグローバルBPO企業。">
-<meta property="og:image" content="https://tpmyandtpth.github.io/JLP/photos/TPLogo11.png">
-<meta property="og:url" content="https://tpmyandtpth.github.io/JLP/about-tp.html">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="会社紹介｜TP採用">
-<meta name="twitter:description" content="TPは世界100カ国以上で展開するグローバルBPO企業。">
-<meta name="twitter:image" content="https://tpmyandtpth.github.io/JLP/photos/TPLogo11.png">
-<meta name="robots" content="index,follow">
-<link rel="canonical" href="https://tpmyandtpth.github.io/JLP/about-tp.html">
 <link rel="icon" href="photos/TPLogo11.png">
-<link rel="apple-touch-icon" href="photos/TPLogo11.png">
-
-<!-- Preconnect for Performance -->
-<link rel="dns-prefetch" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<!-- Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Zen+Maru+Gothic:wght@700&display=swap" rel="stylesheet">
-
-<!-- GLOBAL STYLES - From Template -->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&family=Noto+Serif+SC:wght@700;900&display=swap" rel="stylesheet">
 <style>
-/* CSS Variables */
 :root {
   --tp-black: #000000;
   --tp-dark: #1a1a1a;
@@ -43,2076 +22,298 @@
   --tp-light: #e5e5e5;
   --tp-off: #f5f5f5;
   --tp-white: #ffffff;
-  --accent-purple: #780096;
-  --accent-pink: #ff0082;
+  --gold-primary: #FFD700;
+  --gold-light: #FFAA00;
+  --gold-dark: #E6B800;
+  --gold-pale: #FFFBEB;
   --max: 1050px;
-  --shadow-xs: 0 1px 2px rgba(0,0,0,0.05);
   --shadow-sm: 0 2px 4px rgba(0,0,0,0.08);
   --shadow-md: 0 4px 8px rgba(0,0,0,0.12);
   --shadow-lg: 0 8px 16px rgba(0,0,0,0.16);
-  --shadow-xl: 0 16px 32px rgba(0,0,0,0.20);
 }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Noto Sans SC', sans-serif; color: var(--tp-dark); line-height: 1.75; background: var(--tp-white); }
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; height: auto; }
+.sr-only { position: absolute!important; width: 1px; height: 1px; overflow: hidden; }
+.container { max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+.section-title { text-align: center; font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: 0.625rem; font-weight: 900; color: var(--tp-black); }
+.section-subtitle { text-align: center; color: var(--tp-gray); margin-bottom: 2rem; font-size: 0.9rem; }
 
-/* Base Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+header { position: sticky; top: 0; background: rgba(255,255,255,0.97); border-bottom: 1px solid var(--tp-light); z-index: 1000; backdrop-filter: blur(10px); }
+.header-inner { max-width: var(--max); margin: 0 auto; padding: 0.75rem 20px; display: flex; justify-content: space-between; align-items: center; }
+.brand { display: flex; align-items: center; gap: 0.625rem; }
+.brand img { width: 40px; height: 40px; }
+.brand-text { display: flex; flex-direction: column; }
+.brand-name { font-weight: 700; }
+.brand-tagline { font-size: 0.7rem; color: var(--tp-gray); }
 
-html {
-  scroll-behavior: smooth;
-}
+nav ul { display: flex; gap: 1rem; list-style: none; align-items: center; }
+nav a { font-size: 0.85rem; position: relative; padding: 0.2rem 0; }
+nav a::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: var(--tp-black); transition: width 0.3s; }
+nav a:hover::after { width: 100%; }
 
-body {
-  font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
-  color: var(--tp-dark);
-  line-height: 1.75;
-  background: var(--tp-white);
-  -webkit-font-smoothing: antialiased;
-  font-feature-settings: "palt" 1;
-}
+.apply-btn { background: var(--tp-black); color: var(--tp-white); padding: 0.5rem 1.25rem; border-radius: 4px; font-weight: 600; border: 2px solid var(--tp-black); transition: all 0.3s; }
+.apply-btn:hover { background: var(--gold-primary); color: var(--tp-black); }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Utility Classes */
-.sr-only {
-  position: absolute!important;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0,0,0,0);
-  white-space: nowrap;
-  border: 0;
-}
-
-.container {
-  max-width: var(--max);
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.section-title {
-  text-align: center;
-  font-size: clamp(1.5rem, 3vw, 2rem);
-  margin-bottom: 0.625rem;
-  font-weight: 900;
-  color: var(--tp-black);
-  letter-spacing: -0.02em;
-}
-
-.section-subtitle {
-  text-align: center;
-  color: var(--tp-gray);
-  margin-bottom: 2rem;
-  font-size: 0.9rem;
-}
-
-/* Header Styles */
-header {
-  position: sticky;
-  top: 0;
-  background: rgba(255,255,255,0.97);
-  border-bottom: 1px solid var(--tp-light);
-  z-index: 1000;
-  backdrop-filter: blur(10px);
-  box-shadow: var(--shadow-xs);
-}
-
-.header-inner {
-  max-width: var(--max);
-  margin: 0 auto;
-  padding: 0.75rem 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1.25rem;
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 0.625rem;
-}
-
-.brand img {
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
-}
-
-.brand-text {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.2;
-}
-
-.brand-name {
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--tp-black);
-}
-
-.brand-tagline {
-  font-size: 0.7rem;
-  color: var(--tp-gray);
-}
-
-nav ul {
-  display: flex;
-  gap: 1rem;
-  list-style: none;
-  align-items: center;
-}
-
-nav a {
-  font-size: 0.85rem;
-  position: relative;
-  transition: all 0.3s;
-  padding: 0.2rem 0;
-  white-space: nowrap;
-}
-
-nav a::after {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: var(--tp-black);
-  transition: width 0.3s ease;
-}
-
-nav a:hover::after,
-nav a:focus::after {
-  width: 100%;
-}
-
-nav a[aria-current="page"] {
-  font-weight: 600;
-}
-
-nav a[aria-current="page"]::after {
-  width: 100%;
-}
-
-nav a:focus {
-  outline: 2px solid var(--accent-purple);
-  outline-offset: 4px;
-  border-radius: 2px;
-}
-
-.apply-btn {
-  background: var(--accent-purple);
-  color: var(--tp-white);
-  padding: 0.5rem 1.25rem;
-  border-radius: 4px;
-  font-weight: 600;
-  border: 2px solid var(--accent-purple);
-  transition: all 0.3s;
-}
-
-.apply-btn:hover,
-.apply-btn:focus {
-  background: var(--tp-white);
-  color: var(--accent-purple);
-}
-
-.apply-btn::after {
-  display: none;
-}
-
-/* Mobile Menu */
-.mobile-toggle {
-  display: none;
-  width: 36px;
-  height: 36px;
-  background: transparent;
-  border: 2px solid var(--tp-black);
-  border-radius: 4px;
-  cursor: pointer;
-  position: relative;
-}
-
-.mobile-toggle span {
-  display: block;
-  width: 18px;
-  height: 2px;
-  background: var(--tp-black);
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  transition: all 0.3s;
-}
-
+.mobile-toggle { display: none; width: 36px; height: 36px; background: transparent; border: 2px solid var(--tp-black); cursor: pointer; position: relative; }
+.mobile-toggle span { display: block; width: 18px; height: 2px; background: var(--tp-black); position: absolute; left: 50%; transform: translateX(-50%); transition: all 0.3s; }
 .mobile-toggle span:nth-child(1) { top: 10px; }
 .mobile-toggle span:nth-child(2) { top: 17px; }
 .mobile-toggle span:nth-child(3) { bottom: 10px; }
-
-.mobile-toggle.active span:nth-child(1) {
-  transform: translateX(-50%) rotate(45deg);
-  top: 17px;
-}
-
-.mobile-toggle.active span:nth-child(2) {
-  opacity: 0;
-}
-
-.mobile-toggle.active span:nth-child(3) {
-  transform: translateX(-50%) rotate(-45deg);
-  bottom: 17px;
-}
-
-.mobile-menu {
-  display: none;
-  position: fixed;
-  top: 60px;
-  left: 0;
-  right: 0;
-  background: var(--tp-white);
-  border-top: 1px solid var(--tp-light);
-  box-shadow: var(--shadow-lg);
-  max-height: calc(100vh - 60px);
-  overflow-y: auto;
-  z-index: 999;
-}
-
-.mobile-menu.active {
-  display: block;
-}
-
-.mobile-menu ul {
-  list-style: none;
-  padding: 0.875rem 0;
-}
-
-.mobile-menu a {
-  display: block;
-  padding: 0.625rem 1.25rem;
-  border-bottom: 1px solid var(--tp-light);
-  transition: background 0.3s;
-}
-
-.mobile-menu a:hover,
-.mobile-menu a:focus {
-  background: var(--tp-off);
-}
-
-/* Button Styles */
-.btn {
-  padding: 0.75rem 1.75rem;
-  border-radius: 4px;
-  font-weight: 600;
-  display: inline-block;
-  transition: all 0.3s;
-  text-align: center;
-  border: 2px solid var(--tp-black);
-  cursor: pointer;
-  font-size: 0.9rem;
-}
-
-.btn:focus {
-  outline: 2px solid var(--accent-purple);
-  outline-offset: 4px;
-}
-
-.btn-accent {
-  background: var(--accent-purple);
-  color: var(--tp-white);
-  border-color: var(--accent-purple);
-}
-
-.btn-accent:hover {
-  background: var(--tp-white);
-  color: var(--accent-purple);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(120,0,150,0.15);
-}
-
-/* Footer Styles */
-footer {
-  background: var(--tp-black);
-  color: var(--tp-white);
-  padding: 40px 20px 16px;
-  position: relative;
-  overflow: hidden;
-}
-
-footer::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--accent-purple), transparent);
-}
-
-.footer-content {
-  max-width: var(--max);
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 2fr repeat(3, 1fr);
-  gap: 2rem;
-  margin-bottom: 2rem;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
-}
-
-.footer-brand {
-  display: flex;
-  flex-direction: column;
-  gap: 0.875rem;
-}
-
-.footer-logo {
-  display: flex;
-  align-items: center;
-  gap: 0.625rem;
-}
-
-.footer-logo img {
-  width: 42px;
-  height: 42px;
-  filter: brightness(0) invert(1);
-}
-
-.footer-logo-text {
-  font-size: 1.15rem;
-  font-weight: 700;
-}
-
-.footer-desc {
-  opacity: 0.8;
-  line-height: 1.75;
-  font-size: 0.85rem;
-}
-
-.footer-section h3 {
-  margin-bottom: 0.75rem;
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  opacity: 0.9;
-}
-
-.footer-section ul {
-  list-style: none;
-}
-
-.footer-section li {
-  margin-bottom: 0.3rem;
-}
-
-.footer-section a {
-  opacity: 0.7;
-  transition: opacity 0.3s;
-  font-size: 0.8rem;
-}
-
-.footer-section a:hover,
-.footer-section a:focus {
-  opacity: 1;
-  outline: none;
-}
-
-.badges {
-  display: flex;
-  gap: 0.75rem;
-  align-items: center;
-  margin-top: 0.75rem;
-  flex-wrap: wrap;
-}
-
-.badges .badge-item {
-  display: flex;
-  align-items: center;
-  gap: 0.3rem;
-  font-size: 0.8rem;
-  opacity: 0.8;
-}
-
-.footer-cta {
-  margin-top: 1rem;
-}
-
-.footer-bottom {
-  text-align: center;
-  padding-top: 12px;
-  font-size: 0.75rem;
-  opacity: 0.6;
-}
-
-.footer-bottom a {
-  color: var(--tp-white);
-  text-decoration: underline;
-  margin: 0 0.3rem;
-}
-
-.footer-bottom a:hover,
-.footer-bottom a:focus {
-  opacity: 1;
-  outline: none;
-}
-
-.ssm-info {
-  font-size: 0.75rem;
-  opacity: 0.5;
-  margin-bottom: 0.5rem;
-}
-
-/* Floating Buttons */
-.floating-apply {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: rgba(120, 0, 150, 0.9);
-  color: var(--tp-white);
-  padding: 0.75rem 1.25rem;
-  border-radius: 50px;
-  font-weight: 600;
-  box-shadow: 0 4px 12px rgba(120,0,150,0.3);
-  z-index: 999;
-  transition: all 0.3s;
-  border: 2px solid var(--accent-purple);
-  font-size: 0.85rem;
-  backdrop-filter: blur(10px);
-}
-
-.floating-apply:hover,
-.floating-apply:focus {
-  transform: scale(1.05);
-  box-shadow: 0 6px 20px rgba(120,0,150,0.4);
-  background: var(--accent-purple);
-  outline: none;
-}
-
-.floating-casual {
-  position: fixed;
-  bottom: 20px;
-  right: 140px;
-  background: rgba(255, 255, 255, 0.85);
-  color: var(--tp-black);
-  padding: 0.75rem 1.25rem;
-  border-radius: 50px;
-  font-weight: 600;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  z-index: 998;
-  transition: all 0.3s;
-  border: 2px solid var(--tp-black);
-  font-size: 0.85rem;
-  backdrop-filter: blur(10px);
-}
-
-.floating-casual:hover,
-.floating-casual:focus {
-  transform: scale(1.05);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
-  background: rgba(255, 255, 255, 1);
-  outline: none;
-}
-
-.back-to-top {
-  position: fixed;
-  bottom: 80px;
-  right: 20px;
-  width: 40px;
-  height: 40px;
-  background: rgba(255, 255, 255, 0.8);
-  border: 2px solid var(--tp-black);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s;
-  z-index: 997;
-  backdrop-filter: blur(10px);
-  font-size: 1rem;
-  font-weight: bold;
-}
-
-.back-to-top.show {
-  opacity: 1;
-  visibility: visible;
-}
-
-.back-to-top:hover {
-  background: var(--tp-black);
-  color: var(--tp-white);
-  transform: translateY(-2px);
-}
-
-/* Responsive Design */
-@media (max-width: 900px) {
-  nav {
-    display: none;
-  }
-  
-  .mobile-toggle {
-    display: block;
-  }
-  
-  .floating-casual {
-    bottom: 80px;
-    right: 20px;
-  }
-  
-  .back-to-top {
-    bottom: 140px;
-  }
-}
-
-@media (max-width: 768px) {
-  .section-title {
-    font-size: 1.4rem;
-  }
-  
-  .footer-content {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-  
-  .floating-apply {
-    bottom: 14px;
-    right: 14px;
-    padding: 0.625rem 1rem;
-    font-size: 0.8rem;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation: none !important;
-    transition: none !important;
-  }
-  
-  html {
-    scroll-behavior: auto;
-  }
-}
-
-/* PAGE SPECIFIC STYLES - About Page */
-.about-hero {
-  padding: 120px 20px 56px;
-  background: linear-gradient(135deg, var(--tp-white) 0%, var(--tp-off) 100%);
-  position: relative;
-  overflow: hidden;
-}
-
-.about-hero::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  right: 5%;
-  width: clamp(240px, 35vw, 520px);
-  height: clamp(240px, 35vw, 520px);
-  background-image: url('photos/TPLogo11.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  opacity: 0.035;
-  filter: saturate(0);
-  transform: translateY(-50%);
-  pointer-events: none;
-}
-
-.about-content {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr;
-  gap: 2rem;
-  align-items: center;
-  max-width: var(--max);
-  margin: 3rem auto;
-  padding: 2rem 0;
-}
-
-.about-text {
-  color: var(--tp-gray-dark);
-  line-height: 1.8;
-}
-
-.about-text h2 {
-  font-size: 1.5rem;
-  font-weight: 900;
-  color: var(--tp-black);
-  margin-bottom: 1rem;
-  letter-spacing: -0.02em;
-}
-
-.about-text p {
-  margin-bottom: 1rem;
-  font-size: 0.9rem;
-}
-
-.about-image {
-  position: relative;
-  text-align: center;
-}
-
-.about-image img {
-  width: 100%;
-  max-width: 320px;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: var(--shadow-lg);
-}
-
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  margin: 2rem 0;
-}
-
-.stat-item {
-  text-align: center;
-  padding: 1.5rem;
-  background: var(--tp-white);
-  border: 1px solid var(--tp-light);
-  border-radius: 8px;
-  transition: all 0.3s;
-}
-
-.stat-item:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-md);
-  border-color: var(--tp-black);
-}
-
-.stat-number {
-  font-size: 2.5rem;
-  font-weight: 900;
-  color: var(--accent-purple);
-  display: block;
-  line-height: 1;
-  margin-bottom: 0.5rem;
-}
-
-.stat-label {
-  font-size: 0.9rem;
-  font-weight: 700;
-  color: var(--tp-black);
-  margin-bottom: 0.3rem;
-}
-
-.stat-desc {
-  font-size: 0.8rem;
-  color: var(--tp-gray);
-}
-
-.award-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  margin-top: 1.5rem;
-}
-
-.award-item {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  padding: 1.25rem;
-  background: var(--tp-white);
-  border: 1px solid var(--tp-light);
-  border-radius: 8px;
-  transition: all 0.3s;
-}
-
-.award-item:hover {
-  transform: translateX(8px);
-  box-shadow: var(--shadow-md);
-  border-color: var(--accent-purple);
-}
-
-.award-icon {
-  font-size: 2.5rem;
-  flex-shrink: 0;
-}
-
-.award-item h3 {
-  font-size: 1.1rem;
-  font-weight: 700;
-  margin-bottom: 0.3rem;
-  color: var(--tp-black);
-}
-
-.award-item p {
-  margin: 0;
-  color: var(--tp-gray);
-  font-size: 0.85rem;
-}
-
-/* GPTW World Best Workplaces Section - Enhanced */
-.gptw-section {
-  padding: 56px 20px;
-  background: var(--tp-silver);
-  position: relative;
-  overflow: hidden;
-}
-
-.gptw-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url('photos/2025_World\'sBestWorkplaces.png') no-repeat center center;
-  background-size: 400px;
-  opacity: 0.03;
-  pointer-events: none;
-}
-
-.gptw-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-  margin-bottom: 2.5rem;
-  flex-wrap: wrap;
-}
-
-.gptw-badge {
-  width: 160px;
-  height: auto;
-  filter: drop-shadow(0 4px 20px rgba(255,255,255,0.2));
-  animation: glow 3s ease-in-out infinite;
-}
-
-@keyframes glow {
-  0%, 100% { filter: drop-shadow(0 4px 20px rgba(255,255,255,0.2)); }
-  50% { filter: drop-shadow(0 4px 30px rgba(255,255,255,0.4)); }
-}
-
-.gptw-title-block {
-  text-align: left;
-}
-
-.gptw-section .section-title {
-  color: var(--tp-black);
-  text-align: left;
-  margin-bottom: 0.5rem;
-}
-
-.gptw-section .section-subtitle {
-  color: var(--tp-gray);
-  text-align: left;
-  margin-bottom: 0;
-}
-
-.gptw-highlight {
-  display: inline-block;
-  background: linear-gradient(90deg, #ffd700, #ffaa00);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  font-weight: 900;
-}
-
-.gptw-description {
-  max-width: 800px;
-  margin: 0 auto 2.5rem;
-  text-align: center;
-  color: var(--tp-gray-dark);
-  font-size: 1rem;
-  line-height: 1.8;
-}
-
-.gptw-banner {
-  width: 100%;
-  max-width: 900px;
-  margin: 0 auto 2.5rem;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
-}
-
-.gptw-banner img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.gptw-gallery {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 1rem;
-  max-width: var(--max);
-  margin: 0 auto;
-}
-
-.gptw-gallery-item {
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
-  transition: all 0.3s;
-  cursor: pointer;
-}
-
-.gptw-gallery-item:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
-}
-
-.gptw-gallery-item img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.gptw-stats {
-  display: flex;
-  justify-content: center;
-  gap: 3rem;
-  margin-top: 2.5rem;
-  flex-wrap: wrap;
-}
-
-.gptw-stat {
-  text-align: center;
-}
-
-.gptw-stat-number {
-  font-size: 3rem;
-  font-weight: 900;
-  background: linear-gradient(90deg, #ffd700, #ffaa00);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  line-height: 1;
-  margin-bottom: 0.5rem;
-}
-
-.gptw-stat-label {
-  color: var(--tp-gray-dark);
-  font-size: 0.9rem;
-}
-
-.gptw-announcement {
-  background: rgba(255, 255, 255, 0.6);
-  border-radius: 12px;
-  padding: 1.5rem;
-  margin-bottom: 2rem;
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.gptw-announcement h3 {
-  color: var(--tp-blackv);
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.gptw-announcement p {
-  color: var(--tp-gray-dark);
-  line-height: 1.6;
-}
-
-.gptw-quote {
-  font-style: italic;
-  color: var(--tp-gray);
-  margin: 1rem 0;
-  padding-left: 1rem;
-  border-left: 3px solid rgba(255, 215, 0, 0.5);
-}
-
-@media (max-width: 768px) {
-  .gptw-header {
-    flex-direction: column;
-    text-align: center;
-  }
-  
-  .gptw-title-block {
-    text-align: center;
-  }
-  
-  .gptw-section .section-title,
-  .gptw-section .section-subtitle {
-    text-align: center;
-  }
-  
-  .gptw-gallery {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-  .gptw-gallery-item:nth-child(5) {
-    grid-column: span 2;
-    max-width: 50%;
-    margin: 0 auto;
-  }
-  
-  .gptw-stats {
-    gap: 1.5rem;
-  }
-  
-  .gptw-stat-number {
-    font-size: 2rem;
-  }
-}
-
-/* PDF Viewer Section - Enhanced for Horizontal View */
-.pdf-section {
-  padding: 56px 20px;
-  background: var(--tp-white);
-}
-
-.pdf-viewer-wrapper {
-  max-width: var(--max);
-  margin: 0 auto;
-}
-
-.pdf-container {
-  background: var(--tp-white);
-  border: 1px solid var(--tp-light);
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: var(--shadow-md);
-}
-
-.pdf-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 1.5rem;
-  background: var(--tp-off);
-  border-bottom: 1px solid var(--tp-light);
-}
-
-.pdf-title {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  font-weight: 700;
-  color: var(--tp-black);
-}
-
-.pdf-title-icon {
-  font-size: 1.5rem;
-}
-
-.pdf-actions {
-  display: flex;
-  gap: 0.75rem;
-}
-
-.pdf-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  transition: all 0.3s;
-  cursor: pointer;
-  border: none;
-}
-
-.pdf-btn-download {
-  background: var(--accent-purple);
-  color: var(--tp-white);
-}
-
-.pdf-btn-download:hover {
-  background: #5c0073;
-  transform: translateY(-1px);
-}
-
-.pdf-btn-fullscreen {
-  background: var(--tp-white);
-  color: var(--tp-black);
-  border: 1px solid var(--tp-light);
-}
-
-.pdf-btn-fullscreen:hover {
-  background: var(--tp-black);
-  color: var(--tp-white);
-}
-
-.pdf-embed-container {
-  position: relative;
-  width: 100%;
-  height: 0;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio for horizontal view */
-  background: var(--tp-off);
-}
-
-.pdf-embed-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-
-.pdf-embed-container object {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.pdf-fallback {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1.5rem;
-  background: linear-gradient(135deg, var(--tp-off) 0%, #fff 100%);
-  text-align: center;
-  padding: 2rem;
-}
-
-.pdf-fallback-icon {
-  font-size: 4rem;
-  opacity: 0.5;
-}
-
-.pdf-fallback p {
-  color: var(--tp-gray);
-  font-size: 0.95rem;
-  max-width: 400px;
-}
-
-/* Mobile PDF adjustments */
-@media (max-width: 768px) {
-  .pdf-header {
-    flex-direction: column;
-    gap: 1rem;
-    text-align: center;
-  }
-  
-  .pdf-actions {
-    width: 100%;
-    justify-content: center;
-  }
-  
-  .pdf-embed-container {
-    padding-bottom: 75%; /* Slightly taller on mobile but still horizontal */
-  }
-  
-  .pdf-btn {
-    padding: 0.6rem 0.8rem;
-    font-size: 0.8rem;
-  }
-}
-
-/* Why TP Section */
-.why-tp { 
-  padding: 56px 20px; 
-  background: var(--tp-off); 
-}
-
-.reasons-grid {
-  display: grid; 
-  gap: 14px;
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.reason-card {
-  background: #fff;
-  border: 1px solid var(--tp-light);
-  border-radius: 12px;
-  padding: 16px; 
-  box-shadow: var(--shadow-sm); 
-  transition: .2s;
-}
-
-.reason-card:hover { 
-  box-shadow: var(--shadow-md); 
-  transform: translateY(-2px); 
-}
-
-.reason-head { 
-  display: flex; 
-  gap: .6rem; 
-  align-items: flex-start; 
-}
-
-.reason-emoji { 
-  font-size: 1.4rem; 
-  line-height: 1; 
-}
-
-.reason-title { 
-  font-weight: 900; 
-  color: var(--tp-black); 
-  margin-top: -2px; 
-}
-
-.reason-desc { 
-  color: var(--tp-gray-dark); 
-  font-size: .95rem; 
-  margin-top: .35rem; 
-}
-
-.locations { 
-  margin-top: 16px; 
-  border: 1px solid var(--tp-light); 
-  border-radius: 12px; 
-  padding: 16px; 
-  background: var(--tp-white); 
-}
-
-.locations h3 { 
-  font-size: 1.05rem; 
-  margin-bottom: .4rem; 
-  color: var(--tp-black); 
-}
-
-.loc-tags { 
-  display: flex; 
-  flex-wrap: wrap; 
-  gap: .4rem; 
-}
-
-.loc-tag { 
-  font-size: .84rem; 
-  padding: .2rem .6rem; 
-  border: 1px solid var(--tp-light); 
-  border-radius: 999px; 
-  background: #fff; 
-}
-
-.checklist { 
-  margin-top: 18px; 
-  border: 1px solid var(--tp-light); 
-  border-radius: 12px; 
-  padding: 16px; 
-  background: var(--tp-white);
-}
-
-.checklist h3 { 
-  font-size: 1.05rem; 
-  margin-bottom: .4rem; 
-}
-
-.checklist ul { 
-  list-style: none; 
-  padding-left: 0; 
-  display: grid; 
-  gap: .35rem; 
-}
-
-.checklist li::before { 
-  content: "✅ "; 
-}
-
-.note-muted { 
-  color: var(--tp-gray); 
-  font-size: .9rem; 
-  margin-top: .25rem; 
-}
-
-/* Testimonials Section */
-.testimonials {
-  padding: 56px 20px;
-  background: var(--tp-white);
-}
-
-.testimonial-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
-  margin-top: 1.5rem;
-}
-
-.testimonial {
-  background: var(--tp-off);
-  padding: 1.5rem;
-  border-radius: 8px;
-  position: relative;
-  border: 1px solid var(--tp-light);
-  transition: all 0.3s;
-}
-
-.testimonial:hover {
-  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-  transform: translateY(-2px);
-}
-
-.testimonial::before {
-  content: '"';
-  font-size: 2.5rem;
-  color: var(--tp-light);
-  position: absolute;
-  top: 8px;
-  left: 16px;
-  font-family: Georgia, serif;
-}
-
-.testimonial-content {
-  margin-bottom: 1rem;
-  padding-top: 1rem;
-  font-size: 0.9rem;
-  line-height: 1.75;
-  color: var(--tp-dark);
-}
-
-.testimonial-author {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-
-.author-img {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.author-info strong {
-  display: block;
-  font-size: 0.85rem;
-  margin-bottom: 0.1rem;
-}
-
-.author-info span {
-  color: var(--tp-gray);
-  font-size: 0.75rem;
-}
-
-/* Contact Cards */
-.contact {
-  padding: 80px 20px;
-  background: linear-gradient(135deg, var(--tp-off) 0%, var(--tp-white) 100%);
-  position: relative;
-  overflow: hidden;
-}
-
-.contact::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  right: -20%;
-  width: 60%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(120,0,150,0.03) 0%, transparent 70%);
-  pointer-events: none;
-}
-
-.contact-cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  max-width: var(--max);
-  margin: 3rem auto 0;
-  position: relative;
-  z-index: 1;
-}
-
-.contact-card {
-  background: var(--tp-white);
-  border-radius: 16px;
-  padding: 2.5rem 2rem;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  border: 2px solid transparent;
-  cursor: pointer;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-}
-
-.contact-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, var(--accent-purple), var(--accent-pink));
-  transform: scaleX(0);
-  transition: transform 0.3s;
-}
-
-.contact-card:hover::before {
-  transform: scaleX(1);
-}
-
-.contact-card.casual {
-  background: linear-gradient(135deg, #fff 0%, #f8f3ff 100%);
-}
-
-.contact-card.line {
-  background: linear-gradient(135deg, #fff 0%, #f0fff4 100%);
-}
-
-.contact-card.apply {
-  background: linear-gradient(135deg, #fff 0%, #fff3f8 100%);
-}
-
-.contact-card:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 12px 40px rgba(0,0,0,0.15);
-}
-
-.contact-card.casual:hover {
-  border-color: var(--accent-purple);
-}
-
-.contact-card.line:hover {
-  border-color: #06c755;
-}
-
-.contact-card.apply:hover {
-  border-color: var(--accent-pink);
-}
-
-.contact-card-icon {
-  font-size: 3rem;
-  margin-bottom: 1.25rem;
-  display: block;
-  animation: float 3s ease-in-out infinite;
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-}
-
-.contact-card:nth-child(2) .contact-card-icon {
-  animation-delay: 0.5s;
-}
-
-.contact-card:nth-child(3) .contact-card-icon {
-  animation-delay: 1s;
-}
-
-.contact-card h3 {
-  font-size: 1.3rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-  color: var(--tp-black);
-}
-
-.contact-card p {
-  font-size: 0.95rem;
-  color: var(--tp-gray);
-  margin-bottom: 1.5rem;
-  line-height: 1.6;
-}
-
-.contact-card-action {
-  display: inline-block;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--tp-black);
-  position: relative;
-  transition: all 0.3s;
-}
-
-.contact-card:hover .contact-card-action {
-  transform: translateX(5px);
-}
-
-/* Responsive for page specific styles */
-@media (max-width: 880px) { 
-  .reasons-grid { 
-    grid-template-columns: 1fr; 
-  } 
-}
-
-@media (max-width: 768px) {
-  .about-content {
-    grid-template-columns: 1fr;
-  }
-  
-  .stats-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .contact-cards {
-    grid-template-columns: 1fr;
-  }
-}
+.mobile-toggle.active span:nth-child(1) { transform: translateX(-50%) rotate(45deg); top: 17px; }
+.mobile-toggle.active span:nth-child(2) { opacity: 0; }
+.mobile-toggle.active span:nth-child(3) { transform: translateX(-50%) rotate(-45deg); bottom: 17px; }
+
+.mobile-menu { display: none; position: fixed; top: 60px; left: 0; right: 0; background: var(--tp-white); z-index: 999; }
+.mobile-menu.active { display: block; }
+.mobile-menu a { display: block; padding: 0.625rem 1.25rem; border-bottom: 1px solid var(--tp-light); }
+
+.btn { padding: 0.75rem 1.75rem; border-radius: 4px; font-weight: 600; display: inline-block; border: 2px solid var(--tp-black); font-size: 0.9rem; }
+.btn-gold { background: var(--gold-primary); color: var(--tp-black); border-color: var(--gold-primary); }
+
+footer { background: var(--tp-black); color: var(--tp-white); padding: 40px 20px 16px; }
+footer::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--gold-primary), transparent); }
+.footer-content { max-width: var(--max); margin: 0 auto; display: grid; grid-template-columns: 2fr repeat(3,1fr); gap: 2rem; }
+.footer-section h3 { color: var(--gold-primary); margin-bottom: 0.75rem; }
+.footer-section ul { list-style: none; }
+.footer-section a { opacity: 0.7; font-size: 0.8rem; }
+
+.about-hero { padding: 120px 20px 56px; background: linear-gradient(135deg, var(--tp-white) 0%, var(--gold-pale) 100%); }
+.about-content { display: grid; grid-template-columns: 1.5fr 1fr; gap: 2rem; align-items: center; max-width: var(--max); margin: 3rem auto; }
+.about-text p { margin-bottom: 1rem; font-size: 0.9rem; }
+.about-image { text-align: center; }
+.about-image img { max-width: 320px; border-radius: 8px; box-shadow: var(--shadow-lg); }
+
+.stats-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; margin: 2rem 0; }
+.stat-item { text-align: center; padding: 1.5rem; background: var(--tp-white); border: 1px solid var(--tp-light); border-radius: 8px; }
+.stat-number { font-size: 2.5rem; font-weight: 900; color: var(--gold-primary); }
+
+.gptw-section { padding: 56px 20px; background: var(--tp-silver); }
+.gptw-announcement { background: linear-gradient(135deg, rgba(255,215,0,.15), rgba(255,170,0,.1)); border-radius: 12px; padding: 1.5rem; border: 3px solid var(--gold-primary); margin-bottom: 2rem; }
+
+.testimonials { padding: 56px 20px; }
+.testimonial-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
+.testimonial { background: var(--tp-off); padding: 1.5rem; border-radius: 8px; border: 1px solid var(--tp-light); }
+
+.contact { padding: 80px 20px; background: linear-gradient(135deg, var(--tp-off) 0%, var(--tp-white) 100%); }
+.contact-cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 2rem; max-width: var(--max); margin: 3rem auto 0; }
+.contact-card { background: var(--tp-white); border-radius: 16px; padding: 2.5rem 2rem; text-align: center; border: 2px solid transparent; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+.contact-card h3 { font-size: 1.3rem; font-weight: 700; }
+
+.floating-apply { position: fixed; bottom: 20px; right: 20px; background: var(--tp-black); color: var(--tp-white); padding: 0.75rem 1.25rem; border-radius: 50px; z-index: 999; border: 2px solid var(--gold-primary); }
+.floating-apply:hover { background: var(--gold-primary); color: var(--tp-black); }
+
+.back-to-top { position: fixed; bottom: 80px; right: 20px; width: 40px; height: 40px; background: rgba(255,255,255,0.8); border: 2px solid var(--tp-black); border-radius: 50%; opacity: 0; visibility: hidden; transition: all 0.3s; }
+.back-to-top.show { opacity: 1; visibility: visible; }
+
+@media(max-width: 900px) { nav { display: none; } .mobile-toggle { display: block; } }
+@media(max-width: 768px) { .about-content { grid-template-columns: 1fr; } .stats-grid { grid-template-columns: 1fr; } .contact-cards { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
-<!-- Skip Navigation -->
-<a href="#main" class="sr-only">メインコンテンツへスキップ</a>
+<a href="#main" class="sr-only">跳转至主要内容</a>
 
-<!-- HEADER -->
 <header role="banner">
   <div class="header-inner">
-    <a class="brand" href="https://tpmyandtpth.github.io/JLP/index.html">
-      <img src="photos/TPLogo11.png" alt="TP Japan" width="40" height="40">
+    <a class="brand" href="https://tpmyandtpth.github.io/MLP/index.html">
+      <img src="photos/TPLogo11.png" alt="TP" width="40" height="40">
       <div class="brand-text">
         <span class="brand-name">TP</span>
-        <span class="brand-tagline">マレーシア・タイ</span>
+        <span class="brand-tagline" data-local="马来西亚·泰国" data-expat="马来西亚·泰国">马来西亚·泰国</span>
       </div>
     </a>
-
-    <nav aria-label="メインナビゲーション">
+    <nav aria-label="主导航">
       <ul>
-        <li><a href="https://tpmyandtpth.github.io/JLP/index.html">ホーム</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/about-tp.html" aria-current="page">TPについて</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/salary-and-benefits.html">給与・福利厚生</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/hiring-process.html">選考プロセス</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/why-malaysia-thailand.html">マレーシアとタイの魅力</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/relocation-visa.html">移住・ビザサポート</a></li>
-        <li><a href="https://careerseng-teleperformance.icims.com/jobs/49026/customer-service-representative---japanese-speaking-%28kl%29/job?mode=job&iis=JPLandingPage&iisn=" target="_blank" rel="noopener noreferrer" class="apply-btn">応募する</a></li>
+        <li><a href="https://tpmyandtpth.github.io/MLP/index.html">首页</a></li>
+        <li><a href="https://tpmyandtpth.github.io/MLP/about-tp.html" aria-current="page" data-local="关于TP" data-expat="关于TP">关于TP</a></li>
+        <li><a href="https://tpmyandtpth.github.io/MLP/salary-and-benefits.html" data-local="薪资·福利" data-expat="薪资福利">薪资·福利</a></li>
+        <li><a href="https://tpmyandtpth.github.io/MLP/hiring-process.html">招聘流程</a></li>
+        <li><a href="https://tpmyandtpth.github.io/MLP/why-malaysia-thailand.html">为什么选择</a></li>
+        <li><a href="https://tpmyandtpth.github.io/MLP/relocation-visa.html" data-local="Visa·搬迁" data-expat="签证·搬迁">Visa·搬迁</a></li>
+        <li><a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=chinese" target="_blank" rel="noopener noreferrer" class="apply-btn" data-local="立即申请" data-expat="立即申请">立即申请</a></li>
       </ul>
     </nav>
-
-    <button class="mobile-toggle" id="mobileToggle" aria-label="メニューを開く" aria-expanded="false">
+    <button class="mobile-toggle" id="mobileToggle" aria-label="打开菜单" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
-
-  <nav class="mobile-menu" id="mobileMenu" aria-label="モバイルナビゲーション">
+  <nav class="mobile-menu" id="mobileMenu" aria-label="移动端导航">
     <ul>
-      <li><a href="https://tpmyandtpth.github.io/JLP/index.html">ホーム</a></li>
-      <li><a href="https://tpmyandtpth.github.io/JLP/about-tp.html">TPについて</a></li>
-      <li><a href="https://tpmyandtpth.github.io/JLP/salary-and-benefits.html">給与・福利厚生 </a></li>
-      <li><a href="https://tpmyandtpth.github.io/JLP/hiring-process.html">選考プロセス</a></li>
-      <li><a href="https://tpmyandtpth.github.io/JLP/why-malaysia-thailand.html">マレーシアとタイの魅力</a></li>
-      <li><a href="https://tpmyandtpth.github.io/JLP/relocation-visa.html">移住・ビザサポート</a></li>
-      <li><a href="https://careerseng-teleperformance.icims.com/jobs/49026/customer-service-representative---japanese-speaking-%28kl%29/job?mode=job&iis=JPLandingPage&iisn=" target="_blank" rel="noopener noreferrer" class="apply-btn">応募する</a></li>
+      <li><a href="https://tpmyandtpth.github.io/MLP/index.html">首页</a></li>
+      <li><a href="https://tpmyandtpth.github.io/MLP/about-tp.html">关于TP</a></li>
+      <li><a href="https://tpmyandtpth.github.io/MLP/salary-and-benefits.html">薪资·福利</a></li>
+      <li><a href="https://tpmyandtpth.github.io/MLP/hiring-process.html">招聘流程</a></li>
+      <li><a href="https://tpmyandtpth.github.io/MLP/why-malaysia-thailand.html">为什么选择</a></li>
+      <li><a href="https://tpmyandtpth.github.io/MLP/relocation-visa.html">Visa·搬迁</a></li>
+      <li><a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=chinese" target="_blank" rel="noopener noreferrer" class="apply-btn">立即申请</a></li>
     </ul>
   </nav>
 </header>
 
 <main id="main">
-  <!-- Hero Section -->
   <section class="about-hero">
     <div class="container">
-      <h1 class="section-title">会社紹介</h1>
-      <p class="section-subtitle">世界をリードするBPO企業で、あなたのキャリアを築きませんか</p>
+      <h1 class="section-title" data-local="关于TP" data-expat="关于TP">关于TP</h1>
+      <p class="section-subtitle" data-local="在领先的BPO企业构建你的Career" data-expat="在领先的业务流程外包企业构建你的事业">在领先的BPO企业构建你的事业</p>
     </div>
   </section>
 
-  <!-- Company Overview & Mission -->
   <section style="padding: 0 20px;">
     <div class="about-content">
       <div class="about-text">
-        <h2>TP について</h2>
-        <p>
-          TPは1978年にフランス・パリで設立されたグローバルBPO企業です。
-          世界100カ国以上、50万人以上の従業員を擁し、カスタマーエクスペリエンスの分野で
-          世界をリードしています。
+        <h2 data-local="关于 TP" data-expat="关于 TP">关于 TP</h2>
+        <p data-local="TP于1978年在法国巴黎成立，是全球领先的BPO企业。业务覆盖全球100多个国家，拥有超过50万名员工，在Customer Experience领域处于世界领先地位。" data-expat="TP于1978年在法国巴黎成立，是全球领先的业务流程外包企业。业务覆盖全球100多个国家，拥有超过50万名员工，在客户体验领域处于世界领先地位。">
+          TP于1978年在法国巴黎成立，是全球领先的BPO企业。业务覆盖全球100多个国家，拥有超过50万名员工。
         </p>
-        <p>
-          最先端のテクノロジーと優れた人材を融合させ、世界中の有名ブランドに
-          最高のカスタマーエクスペリエンスを提供。現在、日本語スピーカーを対象に、
-          マレーシアおよびタイにて積極的な採用活動を行っています。
-        </p>
-        <p>
-          新卒の方から経験豊富なプロフェッショナルまで、皆様の語学力と個性が活かせる、
-          多文化で働きやすい職場環境をご用意しています。
+        <p data-local="我们将尖端技术与优秀人才相结合，为全球知名Brand提供最高质量的Customer Experience服务。现在正在马来西亚和泰国积极招聘华语人才。" data-expat="我们将尖端技术与优秀人才相结合，为全球知名品牌提供最高质量的客户体验服务。现在正在马来西亚和泰国积极招聘华语人才。">
+          我们将尖端技术与优秀人才相结合，为全球知名Brand提供最高质量的Customer Experience服务。
         </p>
       </div>
       <div class="about-image">
-        <img src="photos/G%20TOWER.jpg" alt="TP オフィスビル" loading="lazy" decoding="async">
-      </div>
-    </div>
-    
-    <div class="about-content">
-      <div class="about-image">
-        <img src="photos/great%20place%20to%20work.png" alt="Great Place to Work 認定" loading="lazy" decoding="async">
-      </div>
-      <div class="about-text">
-        <h2>私たちのミッション</h2>
-        <p>
-          「Each interaction matters」- 一つひとつの顧客対応に真摯に向き合い、
-          クライアント企業の成功を支援することが私たちの使命です。
-        </p>
-        <p>
-          多様性を尊重し、従業員一人ひとりの成長を支援する環境づくりに注力。
-          グローバルな視野と、ローカルな細やかさを併せ持つサービスを提供します。
-        </p>
-        <p>
-          日本語スピーカーの皆様にとって、海外でのキャリア構築が
-          より身近で魅力的な選択肢となるよう、充実したサポート体制を整えています。
-        </p>
+        <img src="photos/G%20TOWER.jpg" alt="TP办公楼" loading="lazy">
       </div>
     </div>
   </section>
 
-  <!-- GPTW World Best Workplaces Section - Enhanced -->
-  <section class="gptw-section" id="world-best-workplaces">
+  <section class="gptw-section">
     <div class="container">
       <div class="gptw-announcement">
-        <h3>🎉 重要なお知らせ</h3>
-        <p>
-          公式発表：TPはGreat Place to Work®により「World's Best Workplaces™」として<strong>5年連続</strong>で認定されました！
-        </p>
-        <p class="gptw-quote">
-          "この認定は、私たちの従業員からのフィードバックと信頼に基づいており、私たちの企業文化の強さを示しています。"
+        <h3>🎉 <span data-local="重要公告" data-expat="重要公告">重要公告</span></h3>
+        <p data-local="官方发布：TP荣获Great Place to Work®评选的「World's Best Workplaces™」，连续5年获得该认证！" data-expat="官方发布：TP荣获卓越职场研究机构评选的「全球最佳职场」，连续5年获得该认证！">
+          官方发布：TP荣获Great Place to Work®评选的「World's Best Workplaces™」，连续5年获得该认证！
         </p>
       </div>
-      
-      <div class="gptw-header">
-        <img src="photos/World’sBestWorkplaces.png" alt="World's Best Workplaces 2025" class="gptw-badge">
-        <div class="gptw-title-block">
-          <h2 class="section-title">World's Best Workplaces™ <span class="gptw-highlight">5年連続受賞</span></h2>
-          <p class="section-subtitle">Great Place to Work® 認定</p>
-        </div>
-      </div>
-      
-      <p class="gptw-description">
-        TPは、Great Place to Work®により「World's Best Workplaces™」として<strong>5年連続</strong>で認定されました。<br>
-        この認定は、社員の皆様からのフィードバックと信頼に基づいており、私たちの企業文化の強さを示しています。<br>
-        共に、人々を力づけ、多様性を尊重し、毎日ポジティブな影響を与える職場を築いています。
-      </p>
-      
-      <div class="gptw-banner">
-        <img src="photos/GMT_SoMe_GPTWWorldBestWorkplacesKit_November_2025_Banner.png" alt="GPTW World Best Workplaces Banner" loading="lazy">
-      </div>
-      
-      <div class="gptw-gallery">
-        <div class="gptw-gallery-item">
-          <img src="photos/GMT_SoMe_GPTWWorldBestWorkplacesKit_November_2025_1.png" alt="GPTW Image 1" loading="lazy">
-        </div>
-        <div class="gptw-gallery-item">
-          <img src="photos/GMT_SoMe_GPTWWorldBestWorkplacesKit_November_2025_2.png" alt="GPTW Image 2" loading="lazy">
-        </div>
-        <div class="gptw-gallery-item">
-          <img src="photos/GMT_SoMe_GPTWWorldBestWorkplacesKit_November_2025_3.png" alt="GPTW Image 3" loading="lazy">
-        </div>
-        <div class="gptw-gallery-item">
-          <img src="photos/GMT_SoMe_GPTWWorldBestWorkplacesKit_November_2025_4.png" alt="GPTW Image 4" loading="lazy">
-        </div>
-        <div class="gptw-gallery-item">
-          <img src="photos/GMT_SoMe_GPTWWorldBestWorkplacesKit_November_2025_5.png" alt="GPTW Image 5" loading="lazy">
-        </div>
-      </div>
-      
-      <div class="gptw-stats">
-        <div class="gptw-stat">
-          <div class="gptw-stat-number">5</div>
-          <div class="gptw-stat-label">年連続受賞</div>
-        </div>
-        <div class="gptw-stat">
-          <div class="gptw-stat-number">100+</div>
-          <div class="gptw-stat-label">展開国数</div>
-        </div>
-        <div class="gptw-stat">
-          <div class="gptw-stat-number">500K+</div>
-          <div class="gptw-stat-label">グローバル従業員</div>
-        </div>
-      </div>
+      <h2 class="section-title" data-local="World's Best Workplaces™ 连续5年获奖" data-expat="全球最佳职场 连续5年获奖">World's Best Workplaces™ 连续5年获奖</h2>
+      <p class="section-subtitle">Great Place to Work® 认证</p>
     </div>
   </section>
 
-  <!-- TP Scale Information -->
   <section style="padding: 56px 20px; background: var(--tp-off);">
     <div class="container">
-      <h2 class="section-title">グローバル展開</h2>
-      <p class="section-subtitle">世界中にサービスセンターを展開</p>
-      
+      <h2 class="section-title" data-local="全球Business展开" data-expat="全球业务展开">全球Business展开</h2>
+      <p class="section-subtitle" data-local="在全球范围内提供Service" data-expat="在全球范围内提供服务">在全球范围内提供Service</p>
       <div class="stats-grid">
         <div class="stat-item">
           <div class="stat-number">100+</div>
-          <div class="stat-label">拠点国数</div>
-          <p class="stat-desc">世界中にサービスセンターを展開</p>
+          <div data-local="拠点国家" data-expat="拠点国家">拠点国家</div>
         </div>
         <div class="stat-item">
-          <div class="stat-number">500,000+</div>
-          <div class="stat-label">従業員数</div>
-          <p class="stat-desc">多様な人材が活躍する職場</p>
+          <div class="stat-number">500K+</div>
+          <div data-local="全球Employee" data-expat="全球员工">全球Employee</div>
         </div>
         <div class="stat-item">
           <div class="stat-number">7,000+</div>
-          <div class="stat-label">従業員（マレーシア/タイ）</div>
-          <p class="stat-desc">マレーシア・タイ拠点合計（2025年6月）</p>
-        </div>
-      </div>
-      
-      <div style="margin-top: 3rem;">
-        <h2 class="section-title">認定・受賞歴</h2>
-        <div class="award-list">
-          <div class="award-item">
-            <span class="award-icon">🏆</span>
-            <div>
-              <h3>Great Place to Work®</h3>
-              <p>マレーシア拠点 6年連続受賞</p>
-            </div>
-          </div>
-          <div class="award-item">
-            <span class="award-icon">🌍</span>
-            <div>
-              <h3>World's Best Workplaces™</h3>
-              <p>グローバルで5年連続認定</p>
-            </div>
-          </div>
-          <div class="award-item">
-            <span class="award-icon">📈</span>
-            <div>
-              <h3>成長企業</h3>
-              <p>日本語スピーカー採用を継続的に拡大中</p>
-            </div>
-          </div>
+          <div data-local="MY/TH员工" data-expat="马来西亚/泰国员工">MY/TH员工</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Company Deck PDF Section - Enhanced for Horizontal View -->
-  <section class="pdf-section" id="company-deck">
-    <div class="container">
-      <h2 class="section-title">会社概要資料</h2>
-      <p class="section-subtitle">TP についてさらに詳しく知る</p>
-      
-      <div class="pdf-viewer-wrapper">
-        <div class="pdf-container">
-          <div class="pdf-header">
-            <div class="pdf-title">
-              <span class="pdf-title-icon">📄</span>
-              <span>Company Deck - TP会社概要</span>
-            </div>
-            <div class="pdf-actions">
-                <!--<a href="https://tpmyandtpth.github.io/JLP/CompanyDeck.pdf" download class="pdf-btn pdf-btn-download">
-                <span>⬇</span> ダウンロード
-              </a>
-              <a href="https://tpmyandtpth.github.io/JLP/CompanyDeck.pdf" target="_blank" rel="noopener noreferrer" class="pdf-btn pdf-btn-fullscreen">
-                <span>⛶</span> 全画面表示
-              </a> -->
-            </div>
-          </div>
-          
-          <div class="pdf-embed-container">
-            <!-- Primary: Google Docs Viewer (works on most browsers including mobile) -->
-            <iframe 
-              src="https://docs.google.com/viewer?url=https://tpmyandtpth.github.io/JLP/CompanyDeck.pdf&embedded=true&rm=minimal"
-              title="Company Deck PDF"
-              loading="lazy"
-              allowfullscreen>
-            </iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Why TP Section -->
-  <section class="why-tp" id="why-tp">
-    <div class="container">
-      <h2 class="section-title">TPを選ぶ7つの理由</h2>
-      <p class="section-subtitle">日本語スピーカーの皆さまが海外で安心して活躍できるように設計された環境です</p>
-
-      <div class="reasons-grid">
-        <!-- Reason cards here (same as original) -->
-        <article class="reason-card">
-          <div class="reason-head">
-            <div class="reason-emoji">🌍</div>
-            <div>
-              <div class="reason-title">1. グローバルな環境で、自分をレベルアップ！</div>
-              <p class="reason-desc">
-                TP Malaysia・Thailandは、世界中から集まったスタッフが活躍する国際的なBPO企業。まるで"毎日がプチ留学"のような環境で、自然と英語力や異文化理解力がアップします。<br>
-                「海外で働く」という体験を通じて、あなたの視野とキャリアは確実に広がります！
-              </p>
-            </div>
-          </div>
-        </article>
-
-        <article class="reason-card">
-          <div class="reason-head">
-            <div class="reason-emoji">🗣️</div>
-            <div>
-              <div class="reason-title">2. 日本語スピーカー向けのポジションが豊富！安心してスタート可能</div>
-              <p class="reason-desc">
-                日本語を活かせるカスタマーサポートや営業職などのポジションを多数ご用意。<br>
-                「英語に少し自信がない…」という方も、日本語中心の業務から安心して始められます。段階的に英語に触れながら、無理なくスキルを伸ばせます。<br>
-                また、TPは英語バイリンガルのポジションも豊富。英語力を存分に活かし、国際的なキャリアに挑戦できます。
-              </p>
-            </div>
-          </div>
-        </article>
-
-        <article class="reason-card">
-          <div class="reason-head">
-            <div class="reason-emoji">👥</div>
-            <div>
-              <div class="reason-title">3. 日本人サポートも充実！初めての海外でも安心</div>
-              <p class="reason-desc">
-                多数の日本人スタッフが在籍しているため、「困ったときにすぐ相談できる環境」が整っています。生活・お仕事の両面で、安心のサポート体制があります。
-              </p>
-            </div>
-          </div>
-        </article>
-
-        <article class="reason-card">
-          <div class="reason-head">
-            <div class="reason-emoji">💼</div>
-            <div>
-              <div class="reason-title">4. 実力次第でキャリアアップのチャンスも！</div>
-              <p class="reason-desc">
-                年齢や経歴に関係なく「頑張り」を評価する社風。トレーナー、QA、チームリーダー、マネージャーへの昇進や、別プロジェクトへの異動など、多彩なキャリアパスが描けます。
-              </p>
-            </div>
-          </div>
-        </article>
-
-        <article class="reason-card">
-          <div class="reason-head">
-            <div class="reason-emoji">🏡</div>
-            <div>
-              <div class="reason-title">5. 就労ビザ＆一時滞在先サポートあり！スムーズに移住可能</div>
-              <p class="reason-desc">
-                就労ビザ申請サポート、空港送迎（マレーシアのみ）、一時滞在先の手配まで、入社前後の手続きをフルサポート。初めての海外生活でも安心してスタートできます。
-              </p>
-            </div>
-          </div>
-        </article>
-
-        <article class="reason-card">
-          <div class="reason-head">
-            <div class="reason-emoji">🌈</div>
-            <div>
-              <div class="reason-title">6. 多様性あふれる、自由でフラットな社風</div>
-              <p class="reason-desc">
-                国籍・年齢・性別を問わず、お互いを尊重し合える文化が根付いています。世界中の仲間と協力し合いながら働けるのも、TPならではの魅力です。<br>
-                <span class="note-muted">🌐 世界中の仲間と出会い、協力しながら働ける環境です！</span>
-              </p>
-            </div>
-          </div>
-        </article>
-
-        <article class="reason-card">
-          <div class="reason-head">
-            <div class="reason-emoji">🎉</div>
-            <div>
-              <div class="reason-title">7. 仕事だけじゃない！イベント＆福利厚生も充実</div>
-              <p class="reason-desc">
-                社内イベントや表彰制度、チームビルディング活動など、人とのつながりを大切にするカルチャー。医療保険、有給休暇、各種手当なども完備し、安心して長く働ける環境です。
-              </p>
-            </div>
-          </div>
-        </article>
-      </div>
-
-      <div class="locations" aria-label="勤務地">
-        <h3>🏢 勤務地：マレーシア（ペナン・クアラルンプール）、タイ（バンコク）</h3>
-        <p class="note-muted">アジアの人気エリアから選択可能。住みやすく、観光・グルメも充実しています！</p>
-        <div class="loc-tags" style="margin-top:.5rem;">
-          <span class="loc-tag">🇲🇾 ペナン（Penang）</span>
-          <span class="loc-tag">🇲🇾 クアラルンプール（KL）</span>
-          <span class="loc-tag">🇹🇭 バンコク（Bangkok）</span>
-        </div>
-      </div>
-
-      <div class="checklist">
-        <h3>✅ こんな方におすすめ！</h3>
-        <ul>
-          <li>日本語を活かして海外で働いてみたい</li>
-          <li>英語を使う環境にチャレンジしたい</li>
-          <li>多国籍な職場で価値観を広げたい</li>
-          <li>海外生活を楽しみながらキャリアを築きたい</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonials Section -->
   <section class="testimonials">
     <div class="container">
-      <h2 class="section-title">社員の声</h2>
-      <p class="section-subtitle">実際に働くメンバーのリアルな感想</p>
+      <h2 class="section-title" data-local="员工的声音" data-expat="员工的声音">员工的声音</h2>
       <div class="testimonial-cards">
         <div class="testimonial">
-          <p class="testimonial-content">
-            「違いを尊重し合える環境が心地よいです。日本にいた時より、
-            周りの目を気にしなくなり、自分らしく働けています。
-            キャリアアップの機会も多く、やりがいを感じています。」
+          <p data-local="尊重彼此差异的环境让人舒心。比在中国时更不在意周围眼光，能真实地工作。有很多Career Up的机会。" data-expat="尊重彼此差异的环境让人舒心。比在中国时更不在意周围眼光，能真实地工作。有很多事业发展的机会。">
+            尊重彼此差异的环境让人舒心。有很多Career Up的机会。
           </p>
-          <div class="testimonial-author">
-            <img src="photos/TPLogo11.png" alt="Maho" class="author-img">
-            <div class="author-info">
-              <strong>M.A</strong>
-            </div>
-          </div>
         </div>
         <div class="testimonial">
-          <p class="testimonial-content">
-            「英語が苦手でも、日本語メインの仕事からスタートできたので
-            安心でした。徐々に英語を使う機会も増え、自然とスキルアップ
-            できました。サポート体制が充実しているのが心強いです。」
+          <p data-local="英语虽然苦手，但从以华语为主的工作安心开始。逐步增加英语使用机会，自然而然地提高了技能。" data-expat="英语虽然不太擅长，但从以华语为主的工作安心开始。逐步增加英语使用机会，自然而然地提高了技能。">
+            英语虽然苦手，但从以华语为主的工作安心开始。
           </p>
-          <div class="testimonial-author">
-            <img src="photos/TPLogo11.png" alt="Takeshi" class="author-img">
-            <div class="author-info">
-              <strong>T.M</strong>
-            </div>
-          </div>
         </div>
         <div class="testimonial">
-          <p class="testimonial-content">
-            「物価が安く、生活の質が格段に上がりました。
-            プール付きコンドミニアムに住み、週末は近隣国へ旅行。
-            仕事もプライベートも充実した毎日を送っています。」
+          <p data-local="物价便宜，生活质量大幅提升。住在有游泳池的公寓，周末去邻近国家旅行。工作和私人生活都充实。" data-expat="物价便宜，生活质量大幅提升。住在有游泳池的公寓，周末去邻近国家旅行。工作和私人生活都充实。">
+            物价便宜，生活质量大幅提升。周末去邻近国家旅行。
           </p>
-          <div class="testimonial-author">
-            <img src="photos/TPLogo11.png" alt="Yuki" class="author-img">
-            <div class="author-info">
-              <strong>Y.C</strong>
-            </div>
-          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Contact CTA Section -->
   <section class="contact">
     <div class="container">
-      <h2 class="section-title">お問い合わせ・各種リンク</h2>
-      <p class="section-subtitle">目的にあわせて、すぐアクセス</p>
+      <h2 class="section-title" data-local="联系我们·各种Link" data-expat="联系我们·各种Link">联系我们·各种Link</h2>
       <div class="contact-cards">
-        <a href="https://forms.office.com/e/2UvpbweQww" target="_blank" rel="noopener noreferrer" class="contact-card casual">
-          <span class="contact-card-icon">🗓️</span>
-          <h3>カジュアル面談予約</h3>
-          <p>30分オンラインで気軽に相談</p>
-          <span class="contact-card-action">予約する →</span>
+        <a href="https://forms.office.com/e/2UvpbweQww" target="_blank" rel="noopener noreferrer" class="contact-card">
+          <span style="font-size:3rem">🗓️</span>
+          <h3 data-local="轻松面谈预约" data-expat="轻松面谈预约">轻松面谈预约</h3>
+          <p data-local="30分钟在线轻松咨询" data-expat="30分钟在线轻松咨询">30分钟在线轻松咨询</p>
         </a>
-        <a href="https://line.me/R/ti/p/@286nmdsd" target="_blank" rel="noopener noreferrer" class="contact-card line">
-          <span class="contact-card-icon">💬</span>
-          <h3>LINE公式アカウント</h3>
-          <p>最新募集・イベント情報を配信</p>
-          <span class="contact-card-action">友達追加 →</span>
+        <a href="https://line.me/R/ti/p/@286nmdsd" target="_blank" rel="noopener noreferrer" class="contact-card">
+          <span style="font-size:3rem">💬</span>
+          <h3 data-local="LINE官方账号" data-expat="LINE官方账号">LINE官方账号</h3>
+          <p data-local="最新招聘·Event信息" data-expat="最新招聘·Event信息">最新招聘·Event信息</p>
         </a>
-        <a href="https://careerseng-teleperformance.icims.com/jobs/49026/customer-service-representative---japanese-speaking-%28kl%29/job?mode=job&iis=JPLandingPage&iisn=" target="_blank" rel="noopener noreferrer" class="contact-card apply">
-          <span class="contact-card-icon">✍️</span>
-          <h3>応募ページ</h3>
-          <p>履歴書アップロードで簡単エントリー</p>
-          <span class="contact-card-action">応募する →</span>
+        <a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=chinese" target="_blank" rel="noopener noreferrer" class="contact-card">
+          <span style="font-size:3rem">✍️</span>
+          <h3 data-local="应聘Page" data-expat="应聘Page">应聘Page</h3>
+          <p data-local="上传简历轻松应聘" data-expat="上传简历轻松应聘">上传简历轻松应聘</p>
         </a>
       </div>
     </div>
   </section>
 </main>
 
-<!-- FOOTER -->
 <footer>
   <div class="footer-content">
-    <div class="footer-brand">
-      <div class="footer-logo">
-        <img src="photos/TPLogo11.png" alt="TP">
-        <span class="footer-logo-text">TP</span>
+    <div>
+      <div class="brand">
+        <img src="photos/TPLogo11.png" alt="TP" style="width:42px;height:42px;filter:brightness(0) invert(1);">
+        <span style="font-size:1.15rem;font-weight:700;">TP</span>
       </div>
-      <p class="footer-desc">
-        世界100カ国以上で展開するグローバルBPO企業。<br>
-        日本語スピーカーの皆様の新たなキャリアをサポートします。
+      <p style="opacity:0.8;font-size:0.85rem;margin-top:0.875rem;" data-local="全球100多个国家运营的全球BPO企业。支持华语人才开启新事业。" data-expat="全球100多个国家运营的全球业务流程外包企业。支持华语人才开启新事业。">
+        全球100多个国家运营的全球BPO企业。支持华语人才开启新事业。
       </p>
-      <div class="badges">
-        <span class="badge-item">🏆 Malaysia Great Place to Work® 6年連続</span>
-        <span class="badge-item">🏆 World's Best Workplaces™ 5年連続受賞</span>
-      </div>
-      <div class="footer-cta">
-        <a href="https://careerseng-teleperformance.icims.com/jobs/49026/customer-service-representative---japanese-speaking-%28kl%29/job?mode=job&iis=JPLandingPage&iisn=" target="_blank" rel="noopener noreferrer" class="btn btn-accent">ご応募はこちら</a>
-      </div>
     </div>
-    
     <div class="footer-section">
-      <h3>会社情報</h3>
+      <h3>公司信息</h3>
       <ul>
-        <li><a href="https://tpmyandtpth.github.io/JLP/about-tp.html">会社紹介</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/salary-and-benefits.html#benefits">福利厚生</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/office-environment.html">オフィス環境</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/ta-team.html">採用チーム</a></li>
+        <li><a href="https://tpmyandtpth.github.io/MLP/about-tp.html">公司介绍</a></li>
+        <li><a href="https://tpmyandtpth.github.io/MLP/salary-and-benefits.html">福利待遇</a></li>
       </ul>
     </div>
-
     <div class="footer-section">
-      <h3>求人・応募</h3>
+      <h3>职位·应聘</h3>
       <ul>
-        <li><a href="https://tpmyandtpth.github.io/JLP/open-jobs.html">求人一覧</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/hiring-process.html">選考プロセス</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/faq.html">よくある質問</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/casual-interview.html">お問い合わせ</a></li>
+        <li><a href="https://tpmyandtpth.github.io/MLP/open-jobs.html">职位列表</a></li>
+        <li><a href="https://tpmyandtpth.github.io/MLP/hiring-process.html">招聘流程</a></li>
       </ul>
     </div>
-
     <div class="footer-section">
-      <h3>生活情報</h3>
+      <h3>生活信息</h3>
       <ul>
-        <li><a href="https://tpmyandtpth.github.io/JLP/why-malaysia-thailand.html">勤務先都市</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/relocation-visa.html">移住サポート</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/daily-life-malaysia.html">ライフスタイル</a></li>
-        <li><a href="https://line.me/R/ti/p/@286nmdsd" target="_blank" rel="noopener noreferrer">LINE公式</a></li>
+        <li><a href="https://tpmyandtpth.github.io/MLP/why-malaysia-thailand.html">工作城市</a></li>
+        <li><a href="https://line.me/R/ti/p/@286nmdsd" target="_blank">LINE官方</a></li>
       </ul>
     </div>
   </div>
-  
-  <div class="footer-bottom">
-    <p class="ssm-info">Teleperformance Malaysia Sdn Bhd の SSM（マレーシア会社委員会）登録番号は 201601023769 (1194708-K) です。</p>
-    <p>&copy; 2025 TP. All rights reserved. | 
-      <a href="#">プライバシーポリシー</a> | 
-      <a href="#">利用規約</a>
-    </p>
+  <div style="text-align:center;padding-top:12px;font-size:0.75rem;opacity:0.6;">
+    <p>&copy; 2025 TP. All rights reserved.</p>
   </div>
 </footer>
 
-<!-- FLOATING BUTTONS -->
-<a href="https://careerseng-teleperformance.icims.com/jobs/49026/customer-service-representative---japanese-speaking-%28kl%29/job?mode=job&iis=JPLandingPage&iisn=" target="_blank" rel="noopener noreferrer" class="floating-apply" aria-label="今すぐ応募">応募する</a>
+<a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=chinese" target="_blank" rel="noopener noreferrer" class="floating-apply" data-local="立即申请" data-expat="立即申请">立即申请</a>
+<button class="back-to-top" id="backToTop">↑</button>
 
-<a href="https://forms.office.com/e/2UvpbweQww" target="_blank" rel="noopener noreferrer" class="floating-casual" aria-label="カジュアル面談">カジュアル面談</a>
-
-<button class="back-to-top" id="backToTop" aria-label="ページトップへ">↑</button>
-
-<!-- JAVASCRIPT -->
 <script>
-// Mobile Menu Toggle with Error Handling
-try {
-  (function(){
-    const toggle = document.getElementById('mobileToggle');
-    const menu = document.getElementById('mobileMenu');
-    
-    if(toggle && menu){
-      toggle.addEventListener('click', function(){
-        toggle.classList.toggle('active');
-        menu.classList.toggle('active');
-        toggle.setAttribute('aria-expanded', menu.classList.contains('active'));
-      });
-      
-      // Close menu when clicking links
-      menu.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-          toggle.classList.remove('active');
-          menu.classList.remove('active');
-          toggle.setAttribute('aria-expanded', 'false');
-        });
-      });
-      
-      // Close menu when clicking outside
-      document.addEventListener('click', (e) => {
-        if(!menu.contains(e.target) && !toggle.contains(e.target)) {
-          menu.classList.remove('active');
-          toggle.classList.remove('active');
-          toggle.setAttribute('aria-expanded', 'false');
-        }
-      });
-    }
-  })();
-} catch(error) {
-  console.warn('Mobile menu setup failed:', error);
+const toggle = document.getElementById('mobileToggle');
+const menu = document.getElementById('mobileMenu');
+if(toggle && menu) {
+  toggle.addEventListener('click', () => {
+    toggle.classList.toggle('active');
+    menu.classList.toggle('active');
+  });
 }
-
-// Back to Top Button
-try {
-  (function(){
-    const backToTop = document.getElementById('backToTop');
-    if(!backToTop) return;
-    
-    window.addEventListener('scroll', () => {
-      if(window.pageYOffset > 300){
-        backToTop.classList.add('show');
-      } else {
-        backToTop.classList.remove('show');
-      }
-    });
-    
-    backToTop.addEventListener('click', () => {
-      window.scrollTo({ 
-        top: 0, 
-        behavior: 'smooth' 
-      });
-    });
-  })();
-} catch(error) {
-  console.warn('Back to top button failed:', error);
-}
-
-// Smooth Scroll for Anchor Links
-try {
-  (function(){
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        const href = this.getAttribute('href');
-        if(href === '#') return;
-        
-        e.preventDefault();
-        const target = document.querySelector(href);
-        if(target){
-          const offset = 70;
-          const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
-          
-          window.scrollTo({
-            top: targetPosition,
-            behavior: 'smooth'
-          });
-        }
-      });
-    });
-  })();
-} catch(error) {
-  console.warn('Smooth scroll failed:', error);
-}
-
-// Animation on scroll
-try {
-  (function(){
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    };
-    
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting){
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
-        }
-      });
-    }, observerOptions);
-    
-    // Observe elements
-    const elements = document.querySelectorAll('.about-content, .stat-item, .award-item, .testimonial, .contact-card, .pdf-container, .gptw-gallery-item, .gptw-banner, .gptw-announcement');
-    elements.forEach(el => {
-      el.style.opacity = '0';
-      el.style.transform = 'translateY(20px)';
-      el.style.transition = 'opacity 0.6s, transform 0.6s';
-      observer.observe(el);
-    });
-  })();
-} catch(error) {
-  console.warn('Animation observer failed:', error);
-}
-
-// PDF Horizontal Viewer Enhancement
-try {
-  (function(){
-    const pdfIframe = document.querySelector('.pdf-embed-container iframe');
-    if(pdfIframe) {
-      // Add horizontal orientation parameter to ensure horizontal viewing
-      const currentSrc = pdfIframe.getAttribute('src');
-      if(currentSrc && !currentSrc.includes('rm=minimal')) {
-        pdfIframe.setAttribute('src', currentSrc + '&rm=minimal');
-      }
-    }
-  })();
-} catch(error) {
-  console.warn('PDF viewer enhancement failed:', error);
-}
-
-// Initialize when DOM is ready
-document.addEventListener('DOMContentLoaded', function() {
-  console.log('TP Japan about page initialized');
+const backToTop = document.getElementById('backToTop');
+window.addEventListener('scroll', () => {
+  backToTop.classList.toggle('show', window.pageYOffset > 300);
+});
+backToTop.addEventListener('click', () => {
+  window.scrollTo({top: 0, behavior: 'smooth'});
 });
 </script>
 </body>
