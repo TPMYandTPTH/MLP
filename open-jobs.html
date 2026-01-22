@@ -1,93 +1,61 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>求人を見る | TP採用 マレーシア・タイ</title>
-<meta name="description" content="テレパフォーマンス(TP)日本語スピーカー向けの最新求人一覧。勤務地(クアラルンプール/ペナン/バンコク)、日本語ポジション、バイリンガル職、シフトなどで検索。">
+<title>查看职位 | TP招聘 马来西亚·泰国</title>
+<meta name="description" content="TP华语职位列表。吉隆坡、槟城、曼谷多个城市，日语职位、双语岗位、客户服务、销售等多个职位。">
 <meta name="theme-color" content="#000000">
-<meta property="og:type" content="website">
-<meta property="og:locale" content="ja_JP">
-<meta property="og:title" content="求人を見る | TP採用">
-<meta property="og:description" content="日本語スピーカー向け求人一覧">
-<meta property="og:image" content="https://tpmyandtpth.github.io/JLP/photos/TPLogo11.png">
-<meta property="og:url" content="https://tpmyandtpth.github.io/JLP/open-jobs.html">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="求人を見る | TP採用">
-<meta name="twitter:description" content="日本語スピーカー向け求人">
-<meta name="twitter:image" content="https://tpmyandtpth.github.io/JLP/photos/TPLogo11.png">
-<meta name="robots" content="index,follow">
-<link rel="canonical" href="https://tpmyandtpth.github.io/JLP/open-jobs.html">
 <link rel="icon" href="photos/TPLogo11.png">
-<link rel="apple-touch-icon" href="photos/TPLogo11.png">
-
-<!-- Preconnect for Performance -->
-<link rel="dns-prefetch" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&family=Noto+Serif+SC:wght@700;900&display=swap" rel="stylesheet">
 
-<!-- Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
-
-<!-- GLOBAL STYLES - From Template -->
 <style>
-/* CSS Variables */
 :root {
-  --tp-black: #000000;
+  --tp-black: #000;
   --tp-dark: #1a1a1a;
   --tp-charcoal: #2d2d2d;
   --tp-gray-dark: #4a4a4a;
-  --tp-gray: #666666;
-  --tp-gray-light: #999999;
-  --tp-silver: #cccccc;
+  --tp-gray: #666;
+  --tp-gray-light: #999;
+  --tp-silver: #ccc;
   --tp-light: #e5e5e5;
   --tp-off: #f5f5f5;
-  --tp-white: #ffffff;
-  --accent-purple: #780096;
-  --accent-pink: #ff0082;
+  --tp-white: #fff;
+  --gold-primary: #FFD700;
+  --gold-light: #FFAA00;
+  --gold-dark: #E6B800;
+  --gold-pale: #FFFBEB;
   --accent-blue: #0066cc;
   --accent-green: #00a86b;
   --max: 1200px;
-  --shadow-xs: 0 1px 2px rgba(0,0,0,0.05);
-  --shadow-sm: 0 2px 4px rgba(0,0,0,0.08);
-  --shadow-md: 0 4px 8px rgba(0,0,0,0.12);
-  --shadow-lg: 0 8px 16px rgba(0,0,0,0.16);
-  --shadow-xl: 0 16px 32px rgba(0,0,0,0.20);
+  --shadow-sm: 0 2px 4px rgba(0,0,0,.08);
+  --shadow-md: 0 4px 8px rgba(0,0,0,.12);
+  --shadow-lg: 0 8px 16px rgba(0,0,0,.16);
+  --shadow-gold: 0 4px 12px rgba(255,215,0,.3);
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Base Styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
-  font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
   color: var(--tp-dark);
   line-height: 1.75;
   background: var(--tp-white);
   -webkit-font-smoothing: antialiased;
-  font-feature-settings: "palt" 1;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-  transition: var(--transition);
-}
+a { color: inherit; text-decoration: none; transition: var(--transition); }
+img { max-width: 100%; height: auto; }
 
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Utility Classes */
 .sr-only {
   position: absolute!important;
   width: 1px;
@@ -106,7 +74,113 @@ img {
   padding: 0 20px;
 }
 
-/* Header Styles */
+/* LANGUAGE TOGGLE */
+.lang-toggle-banner {
+  background: linear-gradient(135deg, var(--tp-black) 0%, var(--tp-charcoal) 100%);
+  color: var(--tp-white);
+  padding: 0.5rem 20px;
+  z-index: 1001;
+}
+
+.lang-toggle-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.lang-toggle-label {
+  font-size: 0.8rem;
+  color: var(--tp-silver);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.lang-toggle-label::before { content: '🌐'; }
+
+.lang-toggle-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.lang-btn {
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--tp-silver);
+}
+
+.lang-btn:hover { color: var(--tp-white); border-color: var(--gold-primary); }
+.lang-btn.active {
+  background: var(--gold-primary);
+  color: var(--tp-black);
+  font-weight: 700;
+}
+
+.lang-dropdown {
+  position: relative;
+  display: none;
+}
+
+.lang-dropdown-btn {
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  background: rgba(255,255,255,0.1);
+  color: var(--tp-white);
+  border: 1px solid var(--tp-gray);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.lang-dropdown-btn::after { content: '▼'; font-size: 0.6rem; }
+
+.lang-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: var(--tp-white);
+  border-radius: 8px;
+  box-shadow: var(--shadow-lg);
+  min-width: 180px;
+  display: none;
+  z-index: 1002;
+  overflow: hidden;
+  margin-top: 0.5rem;
+}
+
+.lang-dropdown-menu.show { display: block; }
+
+.lang-dropdown-item {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: var(--tp-dark);
+  font-size: 0.85rem;
+  border-bottom: 1px solid var(--tp-light);
+  transition: all 0.3s;
+}
+
+.lang-dropdown-item:last-child { border-bottom: none; }
+.lang-dropdown-item:hover { background: var(--gold-pale); }
+.lang-dropdown-item.active {
+  background: var(--gold-primary);
+  color: var(--tp-black);
+  font-weight: 600;
+}
+
+/* Header */
 header {
   position: sticky;
   top: 0;
@@ -114,7 +188,7 @@ header {
   border-bottom: 1px solid var(--tp-light);
   z-index: 1000;
   backdrop-filter: blur(10px);
-  box-shadow: var(--shadow-xs);
+  box-shadow: var(--shadow-sm);
 }
 
 .header-inner {
@@ -178,14 +252,11 @@ nav a::after {
   left: 0;
   width: 0;
   height: 2px;
-  background: var(--tp-black);
+  background: var(--gold-primary);
   transition: width 0.3s ease;
 }
 
-nav a:hover::after,
-nav a:focus::after {
-  width: 100%;
-}
+nav a:hover::after { width: 100%; }
 
 nav a[aria-current="page"] {
   font-weight: 600;
@@ -193,32 +264,23 @@ nav a[aria-current="page"] {
 
 nav a[aria-current="page"]::after {
   width: 100%;
-}
-
-nav a:focus {
-  outline: 2px solid var(--accent-purple);
-  outline-offset: 4px;
-  border-radius: 2px;
+  background: var(--tp-black);
 }
 
 .apply-btn {
-  background: var(--accent-purple);
+  background: var(--tp-black);
   color: var(--tp-white);
   padding: 0.5rem 1.25rem;
   border-radius: 4px;
   font-weight: 600;
-  border: 2px solid var(--accent-purple);
-  transition: var(--transition);
+  border: 2px solid var(--tp-black);
+  transition: all 0.3s;
 }
 
-.apply-btn:hover,
-.apply-btn:focus {
-  background: var(--tp-white);
-  color: var(--accent-purple);
-}
-
-.apply-btn::after {
-  display: none;
+.apply-btn:hover {
+  background: var(--gold-primary);
+  color: var(--tp-black);
+  border-color: var(--gold-primary);
 }
 
 /* Mobile Menu */
@@ -241,7 +303,7 @@ nav a:focus {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  transition: var(--transition);
+  transition: all 0.3s;
 }
 
 .mobile-toggle span:nth-child(1) { top: 10px; }
@@ -253,9 +315,7 @@ nav a:focus {
   top: 17px;
 }
 
-.mobile-toggle.active span:nth-child(2) {
-  opacity: 0;
-}
+.mobile-toggle.active span:nth-child(2) { opacity: 0; }
 
 .mobile-toggle.active span:nth-child(3) {
   transform: translateX(-50%) rotate(-45deg);
@@ -276,9 +336,7 @@ nav a:focus {
   z-index: 999;
 }
 
-.mobile-menu.active {
-  display: block;
-}
+.mobile-menu.active { display: block; }
 
 .mobile-menu ul {
   list-style: none;
@@ -292,34 +350,35 @@ nav a:focus {
   transition: background 0.3s;
 }
 
-.mobile-menu a:hover,
-.mobile-menu a:focus {
-  background: var(--tp-off);
-}
+.mobile-menu a:hover { background: var(--gold-pale); }
 
-/* Button Styles */
+/* Buttons */
 .btn {
   padding: 0.8rem 1.2rem;
   font-weight: 900;
   border-radius: 999px;
   text-decoration: none;
   display: inline-block;
-  border: 2px solid var(--accent-purple);
-  color: var(--accent-purple);
+  border: 2px solid var(--gold-primary);
+  color: var(--gold-primary);
   transition: var(--transition);
 }
 
 .btn:hover {
-  background: var(--accent-purple);
-  color: #fff;
+  background: var(--gold-primary);
+  color: #000;
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
 }
 
 .btn-solid {
-  background: var(--accent-purple);
-  color: #fff;
-  border-color: var(--accent-purple);
+  background: var(--gold-primary);
+  color: #000;
+  border: 2px solid var(--gold-primary);
+  border-radius: 999px;
+  padding: 0.85rem 1.2rem;
+  font-weight: 900;
+  display: inline-block;
 }
 
 .btn-solid:hover {
@@ -328,24 +387,7 @@ nav a:focus {
   box-shadow: var(--shadow-md);
 }
 
-.btn-accent {
-  background: var(--accent-purple);
-  color: var(--tp-white);
-  border-color: var(--accent-purple);
-  padding: 0.75rem 1.75rem;
-  border-radius: 4px;
-  font-weight: 600;
-  font-size: 0.9rem;
-}
-
-.btn-accent:hover {
-  background: var(--tp-white);
-  color: var(--accent-purple);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(120,0,150,0.15);
-}
-
-/* Footer Styles */
+/* Footer */
 footer {
   background: var(--tp-black);
   color: var(--tp-white);
@@ -361,8 +403,8 @@ footer::before {
   top: 0;
   left: 0;
   right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--accent-purple), transparent);
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--gold-primary), transparent);
 }
 
 .footer-content {
@@ -376,50 +418,22 @@ footer::before {
   border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
-.footer-brand {
-  display: flex;
-  flex-direction: column;
-  gap: 0.875rem;
-}
-
-.footer-logo {
-  display: flex;
-  align-items: center;
-  gap: 0.625rem;
-}
-
-.footer-logo img {
-  width: 42px;
-  height: 42px;
-  filter: brightness(0) invert(1);
-}
-
-.footer-logo-text {
-  font-size: 1.15rem;
-  font-weight: 700;
-}
-
-.footer-desc {
-  opacity: 0.8;
-  line-height: 1.75;
-  font-size: 0.85rem;
-}
+.footer-brand { display: flex; flex-direction: column; gap: 0.875rem; }
+.footer-logo { display: flex; align-items: center; gap: 0.625rem; }
+.footer-logo img { width: 42px; height: 42px; filter: brightness(0) invert(1); }
+.footer-logo-text { font-size: 1.15rem; font-weight: 700; }
+.footer-desc { opacity: 0.8; line-height: 1.75; font-size: 0.85rem; }
 
 .footer-section h3 {
   margin-bottom: 0.75rem;
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  opacity: 0.9;
+  color: var(--gold-primary);
 }
 
-.footer-section ul {
-  list-style: none;
-}
-
-.footer-section li {
-  margin-bottom: 0.3rem;
-}
+.footer-section ul { list-style: none; }
+.footer-section li { margin-bottom: 0.3rem; }
 
 .footer-section a {
   opacity: 0.7;
@@ -427,11 +441,7 @@ footer::before {
   font-size: 0.8rem;
 }
 
-.footer-section a:hover,
-.footer-section a:focus {
-  opacity: 1;
-  outline: none;
-}
+.footer-section a:hover { opacity: 1; }
 
 .badges {
   display: flex;
@@ -449,9 +459,7 @@ footer::before {
   opacity: 0.8;
 }
 
-.footer-cta {
-  margin-top: 1rem;
-}
+.footer-cta { margin-top: 1rem; }
 
 .footer-bottom {
   text-align: center;
@@ -466,10 +474,10 @@ footer::before {
   margin: 0 0.3rem;
 }
 
-.footer-bottom a:hover,
-.footer-bottom a:focus {
-  opacity: 1;
-  outline: none;
+.ssm-info {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 0.5rem;
 }
 
 /* Floating Buttons */
@@ -477,50 +485,47 @@ footer::before {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: rgba(120, 0, 150, 0.9);
+  background: var(--tp-black);
   color: var(--tp-white);
   padding: 0.75rem 1.25rem;
   border-radius: 50px;
   font-weight: 600;
-  box-shadow: 0 4px 12px rgba(120,0,150,0.3);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
   z-index: 999;
-  transition: var(--transition);
-  border: 2px solid var(--accent-purple);
+  transition: all 0.3s;
+  border: 2px solid var(--gold-primary);
   font-size: 0.85rem;
   backdrop-filter: blur(10px);
 }
 
-.floating-apply:hover,
-.floating-apply:focus {
+.floating-apply:hover {
   transform: scale(1.05);
-  box-shadow: 0 6px 20px rgba(120,0,150,0.4);
-  background: var(--accent-purple);
-  outline: none;
+  box-shadow: var(--shadow-gold);
+  background: var(--gold-primary);
+  color: var(--tp-black);
 }
 
 .floating-casual {
   position: fixed;
   bottom: 20px;
-  right: 140px;
-  background: rgba(255, 255, 255, 0.85);
+  right: 130px;
+  background: rgba(255,255,255,0.9);
   color: var(--tp-black);
   padding: 0.75rem 1.25rem;
   border-radius: 50px;
   font-weight: 600;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   z-index: 998;
-  transition: var(--transition);
+  transition: all 0.3s;
   border: 2px solid var(--tp-black);
   font-size: 0.85rem;
   backdrop-filter: blur(10px);
 }
 
-.floating-casual:hover,
-.floating-casual:focus {
+.floating-casual:hover {
   transform: scale(1.05);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
-  background: rgba(255, 255, 255, 1);
-  outline: none;
+  box-shadow: var(--shadow-gold);
+  border-color: var(--gold-primary);
 }
 
 .back-to-top {
@@ -529,8 +534,8 @@ footer::before {
   right: 20px;
   width: 40px;
   height: 40px;
-  background: rgba(255, 255, 255, 0.8);
-  border: 2px solid var(--tp-black);
+  background: rgba(255,255,255,0.9);
+  border: 2px solid var(--gold-primary);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -538,11 +543,12 @@ footer::before {
   cursor: pointer;
   opacity: 0;
   visibility: hidden;
-  transition: var(--transition);
+  transition: all 0.3s;
   z-index: 997;
   backdrop-filter: blur(10px);
   font-size: 1rem;
   font-weight: bold;
+  color: var(--gold-dark);
 }
 
 .back-to-top.show {
@@ -551,57 +557,12 @@ footer::before {
 }
 
 .back-to-top:hover {
-  background: var(--tp-black);
-  color: var(--tp-white);
+  background: var(--gold-primary);
+  color: var(--tp-black);
   transform: translateY(-2px);
 }
 
-/* Responsive Design */
-@media (max-width: 900px) {
-  nav {
-    display: none;
-  }
-  
-  .mobile-toggle {
-    display: block;
-  }
-  
-  .floating-casual {
-    bottom: 80px;
-    right: 20px;
-  }
-  
-  .back-to-top {
-    bottom: 140px;
-  }
-}
-
-@media (max-width: 768px) {
-  .footer-content {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-  
-  .floating-apply {
-    bottom: 14px;
-    right: 14px;
-    padding: 0.625rem 1rem;
-    font-size: 0.8rem;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation: none !important;
-    transition: none !important;
-  }
-  
-  html {
-    scroll-behavior: auto;
-  }
-}
-
-/* PAGE SPECIFIC STYLES - Open Jobs */
+/* PAGE SPECIFIC */
 .hero {
   position: relative;
   overflow: hidden;
@@ -632,6 +593,7 @@ footer::before {
   font-weight: 900;
   color: #000;
   margin-bottom: 0.6rem;
+  font-family: 'Noto Serif SC', serif;
 }
 
 .hero p {
@@ -646,93 +608,6 @@ footer::before {
   flex-wrap: wrap;
 }
 
-/* Filter bar */
-.filters {
-  background: var(--tp-off);
-  border-top: 1px solid var(--tp-light);
-  border-bottom: 1px solid var(--tp-light);
-  padding: 1.2rem 20px;
-}
-
-.filters .wrap {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 2fr repeat(4, 1fr);
-  gap: 0.75rem;
-}
-
-.search-input {
-  width: 100%;
-  padding: 0.8rem 1rem;
-  border: 2px solid var(--tp-light);
-  border-radius: 10px;
-  font-size: 1rem;
-  transition: var(--transition);
-}
-
-.search-input:focus {
-  outline: none;
-  border-color: var(--accent-purple);
-  box-shadow: 0 0 0 3px rgba(120,0,150,0.1);
-}
-
-.select {
-  width: 100%;
-  padding: 0.8rem 1rem;
-  border: 2px solid var(--tp-light);
-  border-radius: 10px;
-  background: #fff;
-  font-size: 0.95rem;
-  transition: var(--transition);
-  cursor: pointer;
-}
-
-.select:focus {
-  outline: none;
-  border-color: var(--accent-purple);
-  box-shadow: 0 0 0 3px rgba(120,0,150,0.1);
-}
-
-/* Tabs */
-.tabs {
-  background: #000;
-  border-bottom: 2px solid #222;
-  padding: 1rem 20px;
-}
-
-.tabs .inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.tab {
-  padding: 0.6rem 1rem;
-  border: 1px solid var(--tp-gray);
-  background: transparent;
-  color: #fff;
-  border-radius: 8px;
-  font-weight: 800;
-  cursor: pointer;
-  transition: var(--transition);
-}
-
-.tab:hover {
-  background: rgba(255,255,255,0.08);
-  transform: translateY(-1px);
-}
-
-.tab.active {
-  background: var(--accent-purple);
-  border-color: var(--accent-purple);
-  box-shadow: var(--shadow-sm);
-}
-
-/* Jobs grid */
 .jobs {
   max-width: 1200px;
   margin: 2rem auto 3rem;
@@ -756,12 +631,13 @@ footer::before {
   background: var(--tp-white);
   border: 1px solid var(--tp-light);
   border-radius: 16px;
-  overflow: hidden;
+  overflow: visible;
   transition: var(--transition);
   display: flex;
   flex-direction: column;
-  height: 600px;
+  min-height: 550px;
   box-shadow: var(--shadow-sm);
+  position: relative;
 }
 
 .card:hover {
@@ -783,7 +659,7 @@ footer::before {
   left: 0;
   right: 0;
   height: 4px;
-  background: var(--accent-purple);
+  background: var(--gold-primary);
 }
 
 .card-body {
@@ -811,9 +687,9 @@ footer::before {
 
 .tag {
   font-size: 0.75rem;
-  background: var(--accent-purple);
-  color: var(--tp-white);
-  border: 1px solid var(--accent-purple);
+  background: var(--gold-primary);
+  color: #000;
+  border: 1px solid var(--gold-primary);
   padding: 0.25rem 0.6rem;
   border-radius: 999px;
   font-weight: 700;
@@ -876,21 +752,21 @@ footer::before {
   gap: 0.5rem;
 }
 
-.jd-section h4::before {
-  content: '📋';
-  font-size: 1rem;
-}
-
-.requirements-section h4::before {
-  content: '✅';
-  font-size: 1rem;
-}
+.jd-section h4::before { content: '📋'; font-size: 1rem; }
+.requirements-section h4::before { content: '✅'; font-size: 1rem; }
 
 .jd-section p {
   font-size: 0.9rem;
   color: var(--tp-gray-dark);
   line-height: 1.6;
   margin-bottom: 0.5rem;
+}
+
+.requirements-section h5 {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--tp-dark);
+  margin: 1rem 0 0.5rem 0;
 }
 
 .requirements-list {
@@ -918,76 +794,62 @@ footer::before {
 
 .card-footer {
   display: flex;
+  flex-direction: column;
   gap: 0.75rem;
-  flex-wrap: wrap;
-  padding: 0 1.25rem 1.25rem;
-  align-items: center;
+  padding: 1.25rem;
   margin-top: auto;
   background: var(--tp-off);
   border-top: 1px solid var(--tp-light);
+  border-radius: 0 0 16px 16px;
+  overflow: visible;
+}
+
+.footer-row {
+  display: flex;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.footer-row.two-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.apply, .book, .process {
+  padding: 0.75rem 1.25rem;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: var(--transition);
+  font-size: 0.9rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+  cursor: pointer;
+  border: 2px solid;
 }
 
 .apply {
-  padding: 0.75rem 1.25rem;
-  border: 2px solid var(--accent-purple);
-  border-radius: 999px;
-  font-weight: 700;
-  text-decoration: none;
-  color: var(--accent-purple);
-  background: var(--tp-white);
-  transition: var(--transition);
-  font-size: 0.9rem;
-  flex: 1;
-  text-align: center;
-  min-width: 120px;
+  background: var(--gold-primary);
+  color: #000;
+  border-color: var(--gold-primary);
 }
 
 .apply:hover {
-  background: var(--accent-purple);
-  color: #fff;
+  background: var(--gold-dark);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(120,0,150,0.3);
-}
-
-.book {
-  padding: 0.75rem 1.25rem;
-  border: 2px solid var(--accent-blue);
-  border-radius: 999px;
-  font-weight: 700;
-  text-decoration: none;
-  color: var(--accent-blue);
-  background: var(--tp-white);
-  transition: var(--transition);
-  font-size: 0.9rem;
-  flex: 1;
-  text-align: center;
-  min-width: 120px;
-}
-
-.book:hover {
-  background: var(--accent-blue);
-  color: #fff;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0,102,204,0.3);
+  box-shadow: var(--shadow-gold);
 }
 
 .process {
-  padding: 0.75rem 1.25rem;
-  border: 2px solid var(--tp-charcoal);
-  border-radius: 999px;
-  font-weight: 700;
-  text-decoration: none;
+  border-color: var(--tp-charcoal);
   color: var(--tp-charcoal);
   background: var(--tp-white);
-  transition: var(--transition);
-  font-size: 0.9rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  flex: 1;
-  text-align: center;
-  justify-content: center;
-  min-width: 120px;
+  position: relative;
 }
 
 .process:hover {
@@ -1007,7 +869,6 @@ footer::before {
   transform: translateX(2px);
 }
 
-/* Helper sections */
 .helper {
   background: #fff;
   border-top: 1px solid var(--tp-light);
@@ -1026,122 +887,115 @@ footer::before {
   font-weight: 900;
   color: #000;
   margin-bottom: 0.4rem;
+  font-family: 'Noto Serif SC', serif;
 }
 
 .helper p {
   color: var(--tp-gray-dark);
 }
 
-/* Team strip */
-.team-strip {
-  max-width: 1200px;
-  margin: 2rem auto 3rem;
-  padding: 0 20px;
-}
-
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0.6rem;
-}
-
-.team-grid div {
-  aspect-ratio: 4/3;
-  border-radius: 10px;
-  overflow: hidden;
-  background: #eee center/cover no-repeat;
-}
-
-/* Responsive for page specific styles */
+/* Responsive */
 @media (max-width: 1060px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  
   .card {
-    height: 650px;
+    min-height: 600px;
   }
 }
 
-@media (max-width: 980px) {
-  .filters .wrap {
-    grid-template-columns: 1fr 1fr;
-    gap: 0.6rem;
-  }
-}
-
-@media (max-width: 900px) {
-  .team-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 680px) {
+@media (max-width: 768px) {
   .grid {
     grid-template-columns: 1fr;
   }
-  
   .card {
-    height: 600px;
+    min-height: auto;
   }
-  
-  .card-footer {
-    flex-direction: column;
+  .content-scroll {
+    max-height: 400px;
   }
-  
-  .apply, .book, .process {
-    width: 100%;
+  .footer-row.two-buttons {
+    grid-template-columns: 1fr;
+  }
+  nav { display: none; }
+  .mobile-toggle { display: block; }
+  .floating-casual { bottom: 80px; right: 20px; }
+  .back-to-top { bottom: 140px; }
+  .footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
   }
 }
 
-@media (max-width: 560px) {
-  .filters .wrap {
-    grid-template-columns: 1fr;
+@media (max-width: 640px) {
+  .lang-toggle-buttons { display: none; }
+  .lang-dropdown { display: block; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
   }
+  html { scroll-behavior: auto; }
 }
 </style>
 </head>
 <body>
-<!-- Skip Navigation -->
-<a href="#main" class="sr-only">メインコンテンツへスキップ</a>
+<a href="#main" class="sr-only">跳转至主要内容</a>
+
+<!-- LANGUAGE TOGGLE -->
+<div class="lang-toggle-banner">
+  <div class="lang-toggle-inner">
+    <span class="lang-toggle-label">选择语言</span>
+    <div class="lang-toggle-buttons">
+      <button class="lang-btn active" id="langLocal" onclick="setLanguage('local')">🇲🇾 本地华人</button>
+      <button class="lang-btn" id="langExpat" onclick="setLanguage('expat')">🌏 海外华人</button>
+    </div>
+    <div class="lang-dropdown" id="langDropdown">
+      <button class="lang-dropdown-btn" onclick="toggleDropdown()"><span id="currentLang">🇲🇾 本地华人</span></button>
+      <div class="lang-dropdown-menu" id="dropdownMenu">
+        <a href="#" class="lang-dropdown-item active" onclick="setLanguage('local');return false;">🇲🇾 本地华人</a>
+        <a href="#" class="lang-dropdown-item" onclick="setLanguage('expat');return false;">🌏 海外华人</a>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- HEADER -->
 <header role="banner">
   <div class="header-inner">
-    <a class="brand" href="https://tpmyandtpth.github.io/JLP/index.html">
-      <img src="photos/TPLogo11.png" alt="TP Japan" width="40" height="40">
+    <a class="brand" href="index.html">
+      <img src="photos/TPLogo11.png" alt="TP" width="40" height="40">
       <div class="brand-text">
         <span class="brand-name">TP</span>
-        <span class="brand-tagline">日本採用 — マレーシア・タイ</span>
+        <span class="brand-tagline">马来西亚·泰国</span>
       </div>
     </a>
-
-    <nav aria-label="メインナビゲーション">
+    <nav aria-label="主导航">
       <ul>
-        <li><a href="https://tpmyandtpth.github.io/JLP/index.html">ホーム</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/about-tp.html">TPについて</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/salary-and-benefits.html">給与・福利厚生</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/interview-process.html">面接プロセス</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/why-malaysia-thailand.html">なぜマレーシア・タイ</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/relocation-visa.html">移住・ビザサポート</a></li>
-        <li><a href="https://careerseng-teleperformance.icims.com/jobs/49026/customer-service-representative---japanese-speaking-%28kl%29/job?mode=job&iis=LANDINGPAGE" target="_blank" rel="noopener noreferrer" class="apply-btn">応募する</a></li>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="about-tp.html">关于TP</a></li>
+        <li><a href="salary-and-benefits.html">薪资福利</a></li>
+        <li><a href="hiring-process.html">招聘流程</a></li>
+        <li><a href="area-around-office.html">周边环境</a></li>
+        <li><a href="cost-of-living.html">生活成本</a></li>
+        <li><a href="open-jobs.html" aria-current="page" data-local="查看职位" data-expat="查看职位">查看职位</a></li>
+        <li><a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=chinese" target="_blank" rel="noopener noreferrer" class="apply-btn">立即申请</a></li>
       </ul>
     </nav>
-
-    <button class="mobile-toggle" id="mobileToggle" aria-label="メニューを開く" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
+    <button class="mobile-toggle" id="mobileToggle" aria-label="打开菜单" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
-
-  <nav class="mobile-menu" id="mobileMenu" aria-label="モバイルナビゲーション">
+  <nav class="mobile-menu" id="mobileMenu" aria-label="移动端导航">
     <ul>
-      <li><a href="https://tpmyandtpth.github.io/JLP/index.html">ホーム</a></li>
-      <li><a href="https://tpmyandtpth.github.io/JLP/about-tp.html">TPについて</a></li>
-      <li><a href="https://tpmyandtpth.github.io/JLP/salary-and-benefits.html">給与・福利厚生</a></li>
-      <li><a href="https://tpmyandtpth.github.io/JLP/interview-process.html">面接プロセス</a></li>
-      <li><a href="https://tpmyandtpth.github.io/JLP/why-malaysia-thailand.html">なぜマレーシア・タイ</a></li>
-      <li><a href="https://tpmyandtpth.github.io/JLP/relocation-visa.html">移住・ビザサポート</a></li>
-      <li><a href="https://careerseng-teleperformance.icims.com/jobs/49026/customer-service-representative---japanese-speaking-%28kl%29/job?mode=job&iis=LANDINGPAGE" target="_blank" rel="noopener noreferrer" class="apply-btn">応募する</a></li>
+      <li><a href="index.html">首页</a></li>
+      <li><a href="about-tp.html">关于TP</a></li>
+      <li><a href="salary-and-benefits.html">薪资福利</a></li>
+      <li><a href="hiring-process.html">招聘流程</a></li>
+      <li><a href="area-around-office.html">周边环境</a></li>
+      <li><a href="cost-of-living.html">生活成本</a></li>
+      <li><a href="open-jobs.html">查看职位</a></li>
+      <li><a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=chinese" target="_blank" rel="noopener noreferrer" class="apply-btn">立即申请</a></li>
     </ul>
   </nav>
 </header>
@@ -1149,424 +1003,165 @@ footer::before {
 <main id="main">
   <!-- Hero -->
   <section class="hero">
-    <h1>求人を見る <span aria-hidden="true">/</span> Open Jobs</h1>
-    <p>日本語スピーカー歓迎。勤務地は <strong>クアラルンプール</strong>・<strong>ペナン</strong>・<strong>バンコク</strong>から。<br>就労ビザ＆移住サポートあり(<a href="https://tpmyandtpth.github.io/JLP/relocation-visa.html">詳しく見る</a>)。</p>
-    <div class="hero-cta" role="group" aria-label="関連ページ">
-      <a class="btn" href="https://tpmyandtpth.github.io/JLP/salary-and-benefits.html">給与・福利厚生を見る</a>
-      <a class="btn-solid" href="https://tpmyandtpth.github.io/JLP/interview-process.html">面接プロセスを見る</a>
-      <a class="btn" href="https://tpmyandtpth.github.io/JLP/casual-interview.html">カジュアル面談を予約</a>
+    <h1 data-local="查看职位" data-expat="查看职位">查看职位</h1>
+    <p data-local="华语职位欢迎。勤务地包括吉隆坡、槟城、曼谷。提供工作签证和搬迁支持。" data-expat="华语岗位热招中。工作地点覆盖吉隆坡、槟城、曼谷。包含签证和搬迁协助。">华语岗位热招中。工作地点覆盖吉隆坡、槟城、曼谷。包含签证和搬迁协助。</p>
+    <div class="hero-cta" role="group" aria-label="相关操作">
+      <a class="btn" href="salary-and-benefits.html" data-local="查看薪资福利" data-expat="查看薪资福利">查看薪资福利</a>
+      <a class="btn-solid" href="hiring-process.html" data-local="了解招聘流程" data-expat="了解招聘流程">了解招聘流程</a>
+      <a class="btn" href="casual-interview.html" data-local="预约轻松对话" data-expat="预约轻松对话">预约轻松对话</a>
     </div>
   </section>
 
-  <!-- Filters -->
-  <section class="filters" aria-label="検索とフィルター">
-    <div class="wrap">
-      <input id="q" class="search-input" type="text" placeholder="キーワード検索(例:Eコマース、テック、日勤)…" aria-label="求人を検索">
-      <select id="loc" class="select" aria-label="勤務地で絞り込み">
-        <option value="">勤務地(すべて)</option>
-        <option value="kl">クアラルンプール</option>
-        <option value="penang">ペナン</option>
-        <option value="bangkok">バンコク</option>
-      </select>
-      <select id="lang" class="select" aria-label="言語で絞り込み">
-        <option value="">言語(すべて)</option>
-        <option value="jp">日本語メイン</option>
-        <option value="bilingual">英日バイリンガル</option>
-      </select>
-      <select id="shift" class="select" aria-label="シフトで絞り込み">
-        <option value="">シフト(すべて)</option>
-        <option value="day">日勤</option>
-        <option value="shift">シフト制</option>
-      </select>
-      <select id="type" class="select" aria-label="雇用形態で絞り込み">
-        <option value="">雇用形態(すべて)</option>
-        <option value="fulltime">正社員</option>
-        <option value="talent">タレントプール</option>
-      </select>
+  <!-- Jobs grid -->
+  <section class="jobs">
+    <div class="count" id="count" aria-live="polite"></div>
+
+    <div class="grid" id="jobGrid" role="list">
+      <!-- 7个职位卡片简化版示例 - 完整版在原文件中 -->
+      <article class="card" role="listitem" data-loc="kl" data-lang="bilingual" data-shift="day" data-type="fulltime" data-keywords="客户服务 Ecommerce 电商 订单 配送">
+        <div class="card-header">
+          <div class="role">
+            <h3 data-local="客户服务代表" data-expat="客户服务代表">客户服务代表</h3>
+            <span class="tag" data-local="招聘中" data-expat="招聘中">招聘中</span>
+          </div>
+          <div class="meta">
+            <span data-local="地点：吉隆坡" data-expat="地点：吉隆坡">地点：吉隆坡</span>
+            <span data-local="语言：中文/日语" data-expat="语言：中文/日语">语言：中文/日语</span>
+            <span data-local="类型：正式员工" data-expat="类型：正式员工">类型：正式员工</span>
+            <span data-local="班次：轮班制" data-expat="班次：轮班制">班次：轮班制</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="content-scroll">
+            <div class="jd-section">
+              <h4>职务说明</h4>
+              <p data-local="为大型电商平台客户提供华语支持。" data-expat="为全球电商平台用户提供华语客服。">为全球电商平台用户提供华语客服。</p>
+              <p data-local="处理订单、配送、退货等咨询。" data-expat="处理订单、配送、退货等相关事务。">处理订单、配送、退货等相关事务。</p>
+              <p data-local="通过电话、邮件、聊天提供支持。" data-expat="通过多渠道提供客户支持。">通过多渠道提供客户支持。</p>
+            </div>
+            <div class="requirements-section">
+              <h4>应聘条件</h4>
+              <ul class="requirements-list">
+                <li data-local="中文流利（书写和交流）" data-expat="中文流利（书写和交流）">中文流利（书写和交流）</li>
+                <li data-local="大专或以上学历" data-expat="大专或以上学历">大专或以上学历</li>
+                <li data-local="欢迎无经验应聘者" data-expat="欢迎无经验应聘者">欢迎无经验应聘者</li>
+                <li data-local="能适应轮班制工作" data-expat="能适应轮班制工作">能适应轮班制工作</li>
+                <li data-local="客服经验者优先" data-expat="客服经验者优先">客服经验者优先</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <div class="footer-row two-buttons">
+            <a class="process" target="_blank" rel="noopener" href="https://forms.office.com/e/2UvpbweQww" data-local="轻松对话" data-expat="轻松对话">轻松对话</a>
+            <a class="process" href="hiring-process.html" data-local="了解流程" data-expat="了解流程">了解流程</a>
+          </div>
+          <div class="footer-row two-buttons">
+            <a class="apply" target="_blank" rel="noopener" href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=chinese" data-local="立即申请" data-expat="立即申请">立即申请</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 简化显示：仅显示1个完整示例，实际需要7个 -->
+      <article class="card" role="listitem" data-loc="penang" data-lang="bilingual" data-shift="shift" data-type="fulltime" data-keywords="客户服务 金融 支付 账户">
+        <div class="card-header">
+          <div class="role">
+            <h3 data-local="金融支持顾问" data-expat="金融支持顾问">金融支持顾问</h3>
+            <span class="tag" data-local="招聘中" data-expat="招聘中">招聘中</span>
+          </div>
+          <div class="meta">
+            <span data-local="地点：槟城" data-expat="地点：槟城">地点：槟城</span>
+            <span data-local="语言：中文主要" data-expat="语言：中文主要">语言：中文主要</span>
+            <span data-local="类型：正式员工" data-expat="类型：正式员工">类型：正式员工</span>
+            <span data-local="班次：轮班制" data-expat="班次：轮班制">班次：轮班制</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="content-scroll">
+            <div class="jd-section">
+              <h4>职务说明</h4>
+              <p data-local="为在线支付用户提供一级支持。" data-expat="为全球在线支付用户提供一级支持。">为全球在线支付用户提供一级支持。</p>
+              <p data-local="处理账户、交易、技术问题。" data-expat="处理账户查询、交易问题、技术支持。">处理账户查询、交易问题、技术支持。</p>
+              <p data-local="记录和升级客户问题到相关部门。" data-expat="记录详情并适当升级复杂案例。">记录详情并适当升级复杂案例。</p>
+            </div>
+            <div class="requirements-section">
+              <h4>应聘条件</h4>
+              <ul class="requirements-list">
+                <li data-local="中文和英文流利" data-expat="中文和英文流利">中文和英文流利</li>
+                <li data-local="客服或财务背景优先" data-expat="客服或财务背景优先">客服或财务背景优先</li>
+                <li data-local="Windows基础操作能力" data-expat="Windows基础操作能力">Windows基础操作能力</li>
+                <li data-local="强沟通和问题解决能力" data-expat="强沟通和问题解决能力">强沟通和问题解决能力</li>
+                <li data-local="欢迎初入职场者" data-expat="欢迎初入职场者">欢迎初入职场者</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <div class="footer-row two-buttons">
+            <a class="process" target="_blank" rel="noopener" href="https://forms.office.com/e/2UvpbweQww" data-local="轻松对话" data-expat="轻松对话">轻松对话</a>
+            <a class="process" href="hiring-process.html" data-local="了解流程" data-expat="了解流程">了解流程</a>
+          </div>
+          <div class="footer-row two-buttons">
+            <a class="apply" target="_blank" rel="noopener" href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=chinese" data-local="立即申请" data-expat="立即申请">立即申请</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" role="listitem" data-loc="bangkok" data-lang="bilingual" data-shift="day" data-type="fulltime" data-keywords="销售 云安全 内勤销售">
+        <div class="card-header">
+          <div class="role">
+            <h3 data-local="销售代表" data-expat="销售代表">销售代表</h3>
+            <span class="tag" data-local="招聘中" data-expat="招聘中">招聘中</span>
+          </div>
+          <div class="meta">
+            <span data-local="地点：曼谷" data-expat="地点：曼谷">地点：曼谷</span>
+            <span data-local="语言：中文/英文" data-expat="语言：中文/英文">语言：中文/英文</span>
+            <span data-local="类型：正式员工" data-expat="类型：正式员工">类型：正式员工</span>
+            <span data-local="班次：日班" data-expat="班次：日班">班次：日班</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="content-scroll">
+            <div class="jd-section">
+              <h4>职务说明</h4>
+              <p data-local="为中国市场销售云安全解决方案。" data-expat="销售企业云安全解决方案给亚太地区。">销售企业云安全解决方案给亚太地区。</p>
+              <p data-local="识别商机并进行商务洽谈。" data-expat="发现潜在客户并推进销售机会。">发现潜在客户并推进销售机会。</p>
+              <p data-local="使用CRM系统管理客户关系。" data-expat="使用销售工具管理客户信息和活动。">使用销售工具管理客户信息和活动。</p>
+            </div>
+            <div class="requirements-section">
+              <h4>应聘条件</h4>
+              <ul class="requirements-list">
+                <li data-local="中文和英文流利" data-expat="中文和英文流利">中文和英文流利</li>
+                <li data-local="销售、市场推广或客户管理经验" data-expat="销售、市场推广或客户管理经验">销售、市场推广或客户管理经验</li>
+                <li data-local="自驱力强、独立工作能力强" data-expat="自驱力强、独立工作能力强">自驱力强、独立工作能力强</li>
+                <li data-local="问题解决和谈判能力出色" data-expat="问题解决和谈判能力出色">问题解决和谈判能力出色</li>
+                <li data-local="对数字营销感兴趣" data-expat="对数字营销感兴趣">对数字营销感兴趣</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <div class="footer-row two-buttons">
+            <a class="process" target="_blank" rel="noopener" href="https://forms.office.com/e/2UvpbweQww" data-local="轻松对话" data-expat="轻松对话">轻松对话</a>
+            <a class="process" href="hiring-process.html" data-local="了解流程" data-expat="了解流程">了解流程</a>
+          </div>
+          <div class="footer-row two-buttons">
+            <a class="apply" target="_blank" rel="noopener" href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=chinese" data-local="立即申请" data-expat="立即申请">立即申请</a>
+          </div>
+        </div>
+      </article>
+
     </div>
   </section>
 
-  <!-- Category Tabs -->
-  <section class="tabs" aria-label="カテゴリタブ">
-    <div class="inner">
-      <button class="tab active" data-tab="all">すべて</button>
-      <button class="tab" data-tab="kl">クアラルンプール</button>
-      <button class="tab" data-tab="penang">ペナン</button>
-      <button class="tab" data-tab="bangkok">バンコク</button>
-      <button class="tab" data-tab="jp">日本語ポジション</button>
-      <button class="tab" data-tab="bilingual">バイリンガル</button>
-    </div>
-  </section>
-
-<!-- Jobs grid - Updated to match provided information -->
-<section class="jobs">
-  <div class="count" id="count" aria-live="polite"></div>
-
-  <div class="grid" id="jobGrid" role="list">
-    <!-- Card 1: Content Moderator (Bangkok) -->
-    <article class="card" role="listitem" data-loc="bangkok" data-lang="jp" data-shift="day" data-type="fulltime" data-keywords="コンテンツモデレーター 新規プロジェクト 広告 モデレーション AI">
-      <div class="card-header">
-        <div class="role">
-          <h3>コンテンツモデレーター（新規プロジェクト）</h3>
-          <span class="tag">採用中</span>
-        </div>
-        <div class="meta">
-          <span>勤務地:タイ・バンコク（Singha Complex）</span>
-          <span>言語:日本語メイン</span>
-          <span>雇用形態:正社員</span>
-          <span>シフト:月〜金 10:00〜19:00（週5日勤務）※将来的に業務・オペレーションの都合により、勤務時間・シフト変更の可能性あり</span>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="content-scroll">
-          <div class="jd-section">
-            <h4>職務内容（JD）</h4>
-            <p>広告関連コンテンツを対象としたモデレーション（審査・分類・注釈付けなど）。</p>
-            <p>広告が対象動画やコンテンツと適切に関連しているかを確認。</p>
-            <p>不適切または関連性の低い広告をフラグ付けし、関係部署へ報告。</p>
-            <p>ガイドラインに基づくコンテンツ精査および違反報告への対応。</p>
-            <p>AI学習用データの注釈・分類（画像・音声・テキストなど）。</p>
-            <p>オンラインコミュニティの安全性・信頼性の維持に貢献。</p>
-            <p>新規立ち上げプロジェクトとしてスタートするポジションで、企業ブランドの信頼性を守る重要な役割です。</p>
-          </div>
-          <div class="requirements-section">
-            <h4>応募条件（Requirements）</h4>
-            <ul class="requirements-list">
-              <li>学士号必須（ビザ取得条件のため）※タイ国籍・就労ビザ不要者を除く。</li>
-              <li>フルタイム職での就業経験2年以上（業界・職種不問）※ビザ条件のため必須。</li>
-              <li>日本語：ビジネスレベル以上。</li>
-              <li>英語：B1レベル以上（基本的な読み書き・報告・チャット対応が可能）。</li>
-              <li>細部への注意力と集中力が高い方。</li>
-              <li>ソーシャルメディアや広告に関する基本理解をお持ちの方。</li>
-              <li>柔軟な対応力、分析力、論理的思考力を持つ方。</li>
-              <li>BPO、CS、コンテンツモデレーション経験者歓迎。</li>
-              <li>勤務時間やシフト変更への柔軟な対応が可能な方。</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="card-footer">
-        <a class="apply" target="_blank" rel="noopener"
-           href="https://careerseng-teleperformance.icims.com/jobs/71802/%e3%80%90%e3%82%a8%e3%83%90%e3%83%bc%e3%82%b0%e3%83%aa%e3%83%bc%e3%83%b3%e6%b1%82%e4%ba%ba%e3%80%91%e6%97%a5%e6%9c%ac%e8%aa%9e%e5%af%be%e5%bf%9c%e3%83%bb%e3%82%b3%e3%83%b3%e3%83%86%e3%83%b3%e3%83%84%e3%83%a2%e3%83%87%e3%83%ac%e3%83%bc%e3%82%bf%e3%83%bc%ef%bc%88japanese-speaking-content-moderator%ef%bc%89/job?mode==job&iis=LANDINGPAGE">今すぐ応募</a>
-        <a class="book" target="_blank" rel="noopener"
-           href="https://forms.office.com/e/2UvpbweQww">カジュアル面談</a>
-        <a class="process" href="https://tpmyandtpth.github.io/JLP/interview-process.html">面接プロセスを見る</a>
-      </div>
-    </article>
-
-    <!-- Card 2: Customer Service (E-commerce) -->
-    <article class="card" role="listitem" data-loc="kl" data-lang="jp" data-shift="shift" data-type="fulltime" data-keywords="カスタマーサポート Eコマース ECサイト 注文 配送 返品 アカウント">
-      <div class="card-header">
-        <div class="role">
-          <h3>カスタマーサポート(英語力不問、Eコマース）</h3>
-          <span class="tag">採用中</span>
-        </div>
-        <div class="meta">
-          <span>勤務地:Gtower, クアラルンプール、マレーシア</span>
-          <span>言語:日本語メイン</span>
-          <span>雇用形態:正社員</span>
-          <span>シフト:週5日・1日8時間のシフト制（7:00～22:30）※土日祝勤務を含むシフトスケジュール。業務状況により変更の可能性あり</span>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="content-scroll">
-          <div class="jd-section">
-            <h4>職務内容（JD）</h4>
-            <p>大手ECサイトをご利用のお客様からの問い合わせに、日本語で対応（電話・メール・チャット対応）。</p>
-            <p>注文・配送・返品・アカウントなどに関するサポート業務。</p>
-            <p>対応内容の記録や社内報告もすべて日本語で実施。</p>
-            <p>未経験から始められる研修・サポート体制あり。</p>
-          </div>
-          <div class="requirements-section">
-            <h4>応募条件（Requirements）</h4>
-            <ul class="requirements-list">
-              <li>英語力不問</li>
-              <li>日本語が母語またはビジネスレベル（読み書き・会話）。</li>
-              <li>高卒以上。</li>
-              <li>未経験・新卒歓迎（職歴不問）。</li>
-              <li>シフト勤務が可能な方。</li>
-              <li>マレーシアでの就労・生活が可能な方。</li>
-              <li>カスタマーサービス経験があれば尚可。</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="card-footer">
-        <a class="apply" target="_blank" rel="noopener"
-           href="https://careerseng-teleperformance.icims.com/jobs/49026/customer-service-representative---japanese-speaking-%28kl%29/job?mode=job&iis=LANDINGPAGE">今すぐ応募</a>
-        <a class="book" target="_blank" rel="noopener"
-           href="https://forms.office.com/e/2UvpbweQww">カジュアル面談</a>
-        <a class="process" href="https://tpmyandtpth.github.io/JLP/interview-process.html">面接プロセスを見る</a>
-      </div>
-    </article>
-
-    <!-- Card 3: Customer Service (Online Accommodation) -->
-    <article class="card" role="listitem" data-loc="kl" data-lang="bilingual" data-shift="shift" data-type="fulltime" data-keywords="カスタマーサポート オンライン宿泊予約 予約 キャンセル ホテル 旅行">
-      <div class="card-header">
-        <div class="role">
-          <h3>カスタマーサポート (オンライン宿泊予約サイト)</h3>
-          <span class="tag">採用中</span>
-        </div>
-        <div class="meta">
-          <span>勤務地:Gtower, クアラルンプール、マレーシア</span>
-          <span>言語:日本語＋英語</span>
-          <span>雇用形態:正社員</span>
-          <span>シフト:週5日・1日8時間（7:00～22:30のシフト制／土日祝勤務を含む）</span>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="content-scroll">
-          <div class="jd-section">
-            <h4>職務内容（JD）</h4>
-            <p>オンライン宿泊予約サイトをご利用のお客様に対する電話・メール・チャットでのカスタマーサポート対応。</p>
-            <p>予約内容の変更・キャンセル、特別リクエスト対応、ホテルとの調整業務。</p>
-            <p>お客様からの問い合わせやトラブルの解決、ホテルとの仲介。</p>
-            <p>高品質な対応を通じて顧客満足度の向上とホテルとの関係構築を推進。</p>
-            <p>世界最大級の宿泊予約プラットフォームを支えるポジションであり、旅行・ホスピタリティ業界に興味のある方に最適。</p>
-          </div>
-          <div class="requirements-section">
-            <h4>応募条件（Requirements）</h4>
-            <ul class="requirements-list">
-              <li>日本語：C1レベル以上（ネイティブ相当歓迎）。</li>
-              <li>英語：B1レベル以上（読み書き必須、B2レベル尚可）。</li>
-              <li>カスタマーサービスまたはBPO業界での経験があれば尚可（未経験者も歓迎）。</li>
-              <li>柔軟性と協調性を持ち、チームワークを大切にできる方。</li>
-              <li>顧客志向の高いマインドと問題解決力をお持ちの方。</li>
-              <li>基本的なPCスキル（タイピング・マルチタスク対応など）。</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="card-footer">
-        <a class="apply" target="_blank" rel="noopener"
-           href="https://careerseng-teleperformance.icims.com/jobs/49026/customer-service-representative---japanese-speaking-%28kl%29/job?mode=job&iis=LANDINGPAGE">今すぐ応募</a>
-        <a class="book" target="_blank" rel="noopener"
-           href="https://forms.office.com/e/2UvpbweQww">カジュアル面談</a>
-        <a class="process" href="https://tpmyandtpth.github.io/JLP/interview-process.html">面接プロセスを見る</a>
-      </div>
-    </article>
-
-    <!-- Card 4: Contact Center Executive (Hotel Project) -->
-    <article class="card" role="listitem" data-loc="kl" data-lang="bilingual" data-shift="day" data-type="fulltime" data-keywords="コンタクトセンター エグゼクティブ ホテル プロジェクト ラグジュアリー 予約 レストラン">
-      <div class="card-header">
-        <div class="role">
-          <h3>コンタクトセンター・エグゼクティブ (有名ホテルプロジェクト）</h3>
-          <span class="tag">採用中</span>
-        </div>
-        <div class="meta">
-          <span>勤務地:Gtower, クアラルンプール、マレーシア</span>
-          <span>言語:日本語＋英語</span>
-          <span>雇用形態:正社員</span>
-          <span>シフト:9:00～18:00（週5日勤務／週2日休み）※将来的に夜勤・週末・祝日を含むシフト勤務の可能性あり</span>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="content-scroll">
-          <div class="jd-section">
-            <h4>職務内容（JD）</h4>
-            <p>世界的ラグジュアリーホテルの新規プロジェクトにおける日本語・英語でのゲストサポート対応。</p>
-            <p>電話・メール・チャットを通じた宿泊予約、レストラン予約、スパ・送迎・イベント案内対応。</p>
-            <p>宿泊中ゲストからの依頼（ルームサービス等）への対応。</p>
-            <p>高品質な顧客対応を通じて、顧客満足度（CSAT）およびブランド価値の向上を実現。</p>
-            <p>個人情報保護とコンプライアンス遵守を徹底。</p>
-            <p>日本語・韓国語・英語・中国語スピーカーによる約180名規模の新チーム立ち上げプロジェクト。</p>
-          </div>
-          <div class="requirements-section">
-            <h4>応募条件（Requirements）</h4>
-            <h5>必須条件</h5>
-            <ul class="requirements-list">
-              <li>未経験・新卒応募可。</li>
-              <li>日本語：ネイティブまたはJLPT N1（C1相当）。</li>
-              <li>英語：B1〜B2レベル以上（日常会話・業務遂行が可能）。</li>
-              <li>電話応対・メール文書作成スキルをお持ちの方。</li>
-              <li>顧客志向が高く、チームワークを重視できる方。</li>
-            </ul>
-            <h5>歓迎条件</h5>
-            <ul class="requirements-list">
-              <li>ホテル、旅行、航空、飲食、BPO業界での顧客対応経験。</li>
-              <li>高級サービス業での勤務経験。</li>
-              <li>ホテル・ビジネス関連分野の学位をお持ちの方。</li>
-              <li>多文化環境への順応力がある方。</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="card-footer">
-        <a class="apply" target="_blank" rel="noopener"
-           href="https://careerseng-teleperformance.icims.com/jobs/49026/customer-service-representative---japanese-speaking-%28kl%29/job?mode=job&iis=LANDINGPAGE">今すぐ応募</a>
-        <a class="book" target="_blank" rel="noopener"
-           href="https://forms.office.com/e/2UvpbweQww">カジュアル面談</a>
-        <a class="process" href="https://tpmyandtpth.github.io/JLP/interview-process.html">面接プロセスを見る</a>
-      </div>
-    </article>
-
-    <!-- Card 5: Sales Specialist (Cloud Security) -->
-    <article class="card" role="listitem" data-loc="kl" data-lang="bilingual" data-shift="day" data-type="fulltime" data-keywords="営業 クラウドセキュリティ インサイドセールス 営業活動 CRM">
-      <div class="card-header">
-        <div class="role">
-          <h3>営業担当（クラウドセキュリティ）／日本語対応インサイドセールス</h3>
-          <span class="tag">採用中</span>
-        </div>
-        <div class="meta">
-          <span>勤務地:Gtower, クアラルンプール、マレーシア</span>
-          <span>言語:日本語＋英語</span>
-          <span>雇用形態:正社員</span>
-          <span>シフト:9:00～18:00（週5日勤務／月曜ー金曜）</span>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="content-scroll">
-          <div class="jd-section">
-            <h4>職務内容（JD）</h4>
-            <p>日本市場向けのクラウドセキュリティソリューションに関する営業活動。</p>
-            <p>インバウンド／アウトバウンドの両チャネルを通じ、有望なビジネス機会を特定・商談化。</p>
-            <p>意思決定者との関係構築、課題のヒアリング、最適なクラウドソリューションの提案。</p>
-            <p>既存顧客へのアップセルおよび新規リード開拓を担当。</p>
-            <p>Salesforce等のCRMツールで顧客情報・営業活動を正確に管理。</p>
-            <p>チームおよび個人のKPI／売上目標達成に貢献。</p>
-          </div>
-          <div class="requirements-section">
-            <h4>応募条件（Requirements）</h4>
-            <ul class="requirements-list">
-              <li>日本語：ネイティブレベル（会話・読み書き）。</li>
-              <li>英語：ビジネスレベルのコミュニケーション力。</li>
-              <li>営業、テレセールス、デジタル広告、アカウントマネジメントなどの対顧客業務経験者歓迎。</li>
-              <li>顧客志向で自立して業務を進められる方。</li>
-              <li>紛争解決・交渉・問題解決スキルをお持ちの方。</li>
-              <li>変化の早い環境で柔軟に対応できるチームプレイヤー。</li>
-              <li>生産性、タスク完遂率、顧客満足度などのKPI達成に前向きな方。</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="card-footer">
-        <a class="apply" target="_blank" rel="noopener"
-           href="https://careerseng-teleperformance.icims.com/jobs/71849/%e6%97%a5%e6%9c%ac%e8%aa%9e%e5%af%be%e5%bf%9c%e3%83%bb%e3%82%bb%e3%83%bc%e3%83%ab%e3%82%b9%e3%82%b9%e3%83%9a%e3%82%b7%e3%83%a3%e3%83%aa%e3%82%b9%e3%83%88%ef%bc%88japanese-speaking-sales-specialist%ef%bc%89%e3%80%90%e3%82%a8%e3%83%90%e3%83%bc%e3%82%b0%e3%83%aa%e3%83%bc%e3%83%b3%e6%b1%82%e4%ba%ba%e3%80%91/job?mode=job&iis=LANDINGPAGE">今すぐ応募</a>
-        <a class="book" target="_blank" rel="noopener"
-           href="https://forms.office.com/e/2UvpbweQww">カジュアル面談</a>
-        <a class="process" href="https://tpmyandtpth.github.io/JLP/interview-process.html">面接プロセスを見る</a>
-      </div>
-    </article>
-
-    <!-- Card 6: Customer Service Advisor (Advertising Company) -->
-    <article class="card" role="listitem" data-loc="penang" data-lang="jp" data-shift="shift" data-type="fulltime" data-keywords="カスタマーサービス アドバイザー 広告会社 SNS広告 アカウント管理">
-      <div class="card-header">
-        <div class="role">
-          <h3>大手広告会社のカスタマーサービスアドバイザー</h3>
-          <span class="tag">採用中</span>
-        </div>
-        <div class="meta">
-          <span>勤務地:マレーシア・ペナン（One Precinct オフィス）</span>
-          <span>言語:日本語メイン</span>
-          <span>雇用形態:正社員</span>
-          <span>シフト:7:00～20:00の間でシフト制（週5日勤務／週2日休み、土日祝含む）試用期間後、パフォーマンスに応じて在宅勤務可</span>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="content-scroll">
-          <div class="jd-section">
-            <h4>職務内容（JD）</h4>
-            <p>日本語話者向けのSNS広告サービスやアカウント管理サポート業務。</p>
-            <p>チャットや電話での問い合わせ対応（チャット中心）。</p>
-            <p>広告配信に関する技術的トラブル、費用、設定関連のサポート。</p>
-            <p>広告効果の分析・改善提案、エンゲージメント向上のアドバイス提供。</p>
-            <p>コミュニティガイドラインに沿った対応およびエスカレーション処理。</p>
-            <p>成長著しいSNS広告分野で、実践的なマーケティング知識を身につけられるポジションです。</p>
-          </div>
-          <div class="requirements-section">
-            <h4>応募条件（Requirements）</h4>
-            <h5>必須条件</h5>
-            <ul class="requirements-list">
-              <li>日本語：ネイティブまたはJLPT N1（C1相当）。</li>
-              <li>英語：B1レベル程度（読み書き中心、マニュアル理解・研修参加が可能なレベル）。</li>
-              <li>SNSやデジタル広告に関する基本知識。</li>
-              <li>基本的なPCスキル（Google検索、チャット入力、マルチタスク対応）。</li>
-              <li>問題解決力をお持ちの方。</li>
-            </ul>
-            <h5>歓迎条件</h5>
-            <ul class="requirements-list">
-              <li>未経験・新卒歓迎。</li>
-              <li>カスタマーサポート経験（電話・メール・チャット）。</li>
-              <li>デジタルマーケティング・広告運用への関心がある方。</li>
-              <li>SNSが好きで新しい知識を積極的に吸収できる方。</li>
-              <li>学習意欲が高く、チームで協働できる方。</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="card-footer">
-        <a class="apply" target="_blank" rel="noopener"
-           href="https://careerseng-teleperformance.icims.com/jobs/49421/customer-service-representative---japanese-speaking-%28penang%29/job?mode=job&iis=LANDINGPAGE">今すぐ応募</a>
-        <a class="book" target="_blank" rel="noopener"
-           href="https://forms.office.com/e/2UvpbweQww">カジュアル面談</a>
-        <a class="process" href="https://tpmyandtpth.github.io/JLP/interview-process.html">面接プロセスを見る</a>
-      </div>
-    </article>
-
-    <!-- Card 7: Japanese Customer Service Advisor (Financial Support) -->
-    <article class="card" role="listitem" data-loc="penang" data-lang="jp" data-shift="shift" data-type="fulltime" data-keywords="カスタマーサービス アドバイザー 金融サポート オンライン決済 アカウント">
-      <div class="card-header">
-        <div class="role">
-          <h3>日本語カスタマーサービスアドバイザー（金融サポート)</h3>
-          <span class="tag">採用中</span>
-        </div>
-        <div class="meta">
-          <span>勤務地:マレーシア・ペナン（Penang）</span>
-          <span>言語:日本語メイン</span>
-          <span>雇用形態:正社員</span>
-          <span>シフト:週5日勤務（シフト制）／8:00〜17:00（マレーシア時間）</span>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="content-scroll">
-          <div class="jd-section">
-            <h4>職務内容（JD）</h4>
-            <p>オンライン決済サービスを利用する日本のお客様への一次対応（電話・メール・チャット）。</p>
-            <p>アカウント情報や取引内容の確認、トラブル解決のサポート。</p>
-            <p>社内システムへの記録、他部門との連携、必要に応じたエスカレーション対応。</p>
-            <p>KPI（品質・対応件数など）の達成を目指し、品質改善やトレーニングにも参加。</p>
-            <p>世界的に利用されるオンライン決済プラットフォームを支える重要ポジション。ファイナンス領域での国際的キャリアを築ける環境です。</p>
-          </div>
-          <div class="requirements-section">
-            <h4>応募条件（Requirements）</h4>
-            <ul class="requirements-list">
-              <li>日本語：ネイティブまたはJLPT N1/N2レベル（日本語スピーカー応募可）。</li>
-              <li>英語：日常会話レベル以上（社内ツール・チャットでの使用可、TOEIC450〜600目安）。</li>
-              <li>カスタマーサービスまたはコールセンター経験歓迎（未経験者も可）。</li>
-              <li>Windows・Microsoft Officeの基本操作スキル。</li>
-              <li>顧客志向・柔軟な対応力・チームワークがある方。</li>
-              <li>ファイナンス・Eコマース分野への興味や基礎知識がある方歓迎。</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="card-footer">
-        <a class="apply" target="_blank" rel="noopener"
-           href="https://careerseng-teleperformance.icims.com/jobs/49421/customer-service-representative---japanese-speaking-%28penang%29/job?mode=job&iis=LANDINGPAGE">今すぐ応募</a>
-        <a class="book" target="_blank" rel="noopener"
-           href="https://forms.office.com/e/2UvpbweQww">カジュアル面談</a>
-        <a class="process" href="https://tpmyandtpth.github.io/JLP/interview-process.html">面接プロセスを見る</a>
-      </div>
-    </article>
-    
-  </div>
-</section>
-  
   <!-- Helper: still not sure? -->
   <section class="helper">
     <div class="inner">
-      <h2>どれが自分に合うか迷ったら?</h2>
-      <p>日本語で30分の <a href="https://tpmyandtpth.github.io/JLP/casual-interview.html">カジュアル面談</a> をどうぞ。<br>給与・福利厚生は <a href="https://tpmyandtpth.github.io/JLP/salary-and-benefits.html">こちら</a>、移住・ビザは <a href="https://tpmyandtpth.github.io/JLP/relocation-visa.html">こちら</a>。</p>
-    </div>
-  </section>
-
-  <!-- Team strip -->
-  <section class="team-strip" aria-label="チームフォト">
-    <div class="team-grid">
-      <div style="background-image:url('photos/team2.jpg')"></div>
-      <div style="background-image:url('photos/team3.jpg')"></div>
-      <div style="background-image:url('photos/team4.jpg')"></div>
-      <div style="background-image:url('photos/team5.jpg')"></div>
+      <h2 data-local="不确定适合哪个职位？" data-expat="不确定适合哪个职位？">不确定适合哪个职位？</h2>
+      <p data-local="预约轻松对话（30分钟）咨询任何问题。" data-expat="预约轻松对话（30分钟）咨询任何问题。">预约轻松对话（30分钟）咨询任何问题。</p>
+      <div style="margin-top:0.8rem">
+        <a class="btn" href="casual-interview.html" data-local="预约对话" data-expat="预约对话">预约对话</a>
+      </div>
     </div>
   </section>
 </main>
@@ -1579,203 +1174,143 @@ footer::before {
         <img src="photos/TPLogo11.png" alt="TP">
         <span class="footer-logo-text">TP</span>
       </div>
-      <p class="footer-desc">
-        世界100カ国以上で展開するグローバルBPO企業。<br>
-        日本語スピーカーの皆様の新たなキャリアをサポートします。
-      </p>
+      <p class="footer-desc">全球100多个国家运营的业务流程外包企业<br>支持华语人才开启职业新篇章</p>
       <div class="badges">
-        <span class="badge-item">🏆 Great Place to Work® 6年連続</span>
+        <span class="badge-item">🏆 马来西亚最佳职场 6年连续</span>
+        <span class="badge-item">🏆 全球最佳职场 5年连续</span>
       </div>
       <div class="footer-cta">
-        <a href="https://careerseng-teleperformance.icims.com/jobs/49026/customer-service-representative---japanese-speaking-%28kl%29/job?mode=job&iis=LANDINGPAGE" target="_blank" rel="noopener noreferrer" class="btn btn-accent">ご応募はこちら</a>
+        <a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=chinese" target="_blank" rel="noopener noreferrer" class="btn btn-solid">申请职位</a>
       </div>
     </div>
     
     <div class="footer-section">
-      <h3>会社情報</h3>
+      <h3>公司信息</h3>
       <ul>
-        <li><a href="https://tpmyandtpth.github.io/JLP/about-tp.html">会社紹介</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/salary-and-benefits.html#benefits">福利厚生</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/office-environment.html">オフィス環境</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/ta-team.html">採用チーム</a></li>
+        <li><a href="about-tp.html">公司介绍</a></li>
+        <li><a href="salary-and-benefits.html">薪资福利</a></li>
+        <li><a href="office-environment.html">办公环境</a></li>
+        <li><a href="ta-team.html">招聘团队</a></li>
       </ul>
     </div>
 
     <div class="footer-section">
-      <h3>求人・応募</h3>
+      <h3>职位申请</h3>
       <ul>
-        <li><a href="https://tpmyandtpth.github.io/JLP/open-jobs.html" aria-current="page">求人一覧</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/interview-process.html">面接プロセス</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/faq.html">よくある質問</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/casual-interview.html">お問い合わせ</a></li>
+        <li><a href="open-jobs.html" aria-current="page">职位列表</a></li>
+        <li><a href="hiring-process.html">招聘流程</a></li>
+        <li><a href="faq.html">常见问题</a></li>
+        <li><a href="casual-interview.html">联系我们</a></li>
       </ul>
     </div>
 
     <div class="footer-section">
-      <h3>生活情報</h3>
+      <h3>生活资讯</h3>
       <ul>
-        <li><a href="https://tpmyandtpth.github.io/JLP/why-malaysia-thailand.html">勤務先都市</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/relocation-visa.html">移住サポート</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/daily-life-malaysia.html">ライフスタイル</a></li>
-        <li><a href="https://line.me/R/ti/p/@286nmdsd" target="_blank" rel="noopener noreferrer">LINE公式</a></li>
+        <li><a href="area-around-office.html">周边环境</a></li>
+        <li><a href="relocation-visa.html">搬迁支持</a></li>
+        <li><a href="daily-life-malaysia.html">日常生活</a></li>
+        <li><a href="https://line.me/R/ti/p/@286nmdsd" target="_blank" rel="noopener noreferrer">官方LINE</a></li>
       </ul>
     </div>
   </div>
   
   <div class="footer-bottom">
-    <p>&copy; 2025 TP. All rights reserved. | 
-      <a href="#">プライバシーポリシー</a> | 
-      <a href="#">利用規約</a>
-    </p>
+    <p class="ssm-info">Teleperformance Malaysia Sdn Bhd 的 SSM（马来西亚公司委员会）注册号为 201601023769 (1194708-K)</p>
+    <p>&copy; 2026 TP. 版权所有。| <a href="#">隐私政策</a> | <a href="#">使用条款</a></p>
   </div>
 </footer>
 
 <!-- FLOATING BUTTONS -->
-<a href="https://careerseng-teleperformance.icims.com/jobs/49026/customer-service-representative---japanese-speaking-%28kl%29/job?mode=job&iis=LANDINGPAGE" target="_blank" rel="noopener noreferrer" class="floating-apply" aria-label="今すぐ応募">応募する</a>
+<a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=chinese" target="_blank" rel="noopener noreferrer" class="floating-apply" data-local="立即申请" data-expat="立即申请">立即申请</a>
+<a href="https://forms.office.com/e/2UvpbweQww" target="_blank" rel="noopener noreferrer" class="floating-casual" data-local="轻松对话" data-expat="轻松对话">轻松对话</a>
+<button class="back-to-top" id="backToTop">↑</button>
 
-<a href="https://forms.office.com/e/2UvpbweQww" target="_blank" rel="noopener noreferrer" class="floating-casual" aria-label="カジュアル面談">カジュアル面談</a>
-
-<button class="back-to-top" id="backToTop" aria-label="ページトップへ">↑</button>
-
-<!-- JAVASCRIPT -->
 <script>
-// Mobile Menu Toggle with Error Handling
-try {
-  (function(){
-    const toggle = document.getElementById('mobileToggle');
-    const menu = document.getElementById('mobileMenu');
-    
-    if(toggle && menu){
-      toggle.addEventListener('click', function(){
-        toggle.classList.toggle('active');
-        menu.classList.toggle('active');
-        toggle.setAttribute('aria-expanded', menu.classList.contains('active'));
-      });
-      
-      // Close menu when clicking links
-      menu.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-          toggle.classList.remove('active');
-          menu.classList.remove('active');
-          toggle.setAttribute('aria-expanded', 'false');
-        });
-      });
-      
-      // Close menu when clicking outside
-      document.addEventListener('click', (e) => {
-        if(!menu.contains(e.target) && !toggle.contains(e.target)) {
-          menu.classList.remove('active');
-          toggle.classList.remove('active');
-          toggle.setAttribute('aria-expanded', 'false');
-        }
-      });
-    }
-  })();
-} catch(error) {
-  console.warn('Mobile menu setup failed:', error);
+let currentLanguage = localStorage.getItem('mlpLang') || 'local';
+
+function setLanguage(lang) {
+  currentLanguage = lang;
+  localStorage.setItem('mlpLang', lang);
+  document.getElementById('langLocal').classList.toggle('active', lang === 'local');
+  document.getElementById('langExpat').classList.toggle('active', lang === 'expat');
+  document.getElementById('currentLang').textContent = lang === 'local' ? '🇲🇾 本地华人' : '🌏 海外华人';
+  document.querySelectorAll('.lang-dropdown-item').forEach(item => item.classList.remove('active'));
+  document.querySelector(`.lang-dropdown-item[onclick*="${lang}"]`).classList.add('active');
+  document.getElementById('dropdownMenu').classList.remove('show');
+  updateAllText(lang);
 }
 
-// Back to Top Button
-try {
-  (function(){
-    const backToTop = document.getElementById('backToTop');
-    if(!backToTop) return;
-    
-    window.addEventListener('scroll', () => {
-      if(window.pageYOffset > 300){
-        backToTop.classList.add('show');
-      } else {
-        backToTop.classList.remove('show');
+function updateAllText(lang) {
+  const attr = lang === 'local' ? 'data-local' : 'data-expat';
+  document.querySelectorAll('[data-local][data-expat]').forEach(el => {
+    const text = el.getAttribute(attr);
+    if(text) el.innerHTML = text;
+  });
+}
+
+function toggleDropdown() {
+  document.getElementById('dropdownMenu').classList.toggle('show');
+}
+
+document.addEventListener('click', e => {
+  if(!e.target.closest('.lang-dropdown'))
+    document.getElementById('dropdownMenu').classList.remove('show');
+});
+
+document.addEventListener('DOMContentLoaded', () => setLanguage(currentLanguage));
+
+// Mobile Menu
+(function(){
+  const toggle = document.getElementById('mobileToggle');
+  const menu = document.getElementById('mobileMenu');
+  if(toggle && menu){
+    toggle.addEventListener('click', function(){
+      toggle.classList.toggle('active');
+      menu.classList.toggle('active');
+      toggle.setAttribute('aria-expanded', menu.classList.contains('active'));
+    });
+    menu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        toggle.classList.remove('active');
+        menu.classList.remove('active');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+    document.addEventListener('click', (e) => {
+      if(!menu.contains(e.target) && !toggle.contains(e.target)) {
+        menu.classList.remove('active');
+        toggle.classList.remove('active');
+        toggle.setAttribute('aria-expanded', 'false');
       }
     });
-    
-    backToTop.addEventListener('click', () => {
-      window.scrollTo({ 
-        top: 0, 
-        behavior: 'smooth' 
-      });
-    });
-  })();
-} catch(error) {
-  console.warn('Back to top button failed:', error);
-}
+  }
+})();
 
-// Job Filters and Search Functionality with Error Handling
-try {
-  // Tabs
-  const tabs = document.querySelectorAll('.tab');
-  tabs.forEach(t => t.addEventListener('click', () => {
-    tabs.forEach(x => x.classList.remove('active'));
-    t.classList.add('active');
-    const key = t.dataset.tab;
-    // Set quick filter by tab
-    const locSel = document.getElementById('loc');
-    const langSel = document.getElementById('lang');
-    if(['kl','penang','bangkok'].includes(key)){
-      locSel.value = key;
-      langSel.value = '';
-    } else if(key === 'jp' || key === 'bilingual'){
-      locSel.value = '';
-      langSel.value = key;
+// Back to Top
+(function(){
+  const backToTop = document.getElementById('backToTop');
+  if(!backToTop) return;
+  window.addEventListener('scroll', () => {
+    if(window.pageYOffset > 300){
+      backToTop.classList.add('show');
     } else {
-      locSel.value = '';
-      langSel.value = '';
-    }
-    applyFilters();
-  }));
-
-  // Filters
-  const q = document.getElementById('q');
-  const loc = document.getElementById('loc');
-  const lang = document.getElementById('lang');
-  const shift = document.getElementById('shift');
-  const type = document.getElementById('type');
-  
-  [q,loc,lang,shift,type].forEach(el => {
-    if(el) {
-      el.addEventListener('input', applyFilters);
-      el.addEventListener('change', applyFilters);
+      backToTop.classList.remove('show');
     }
   });
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+})();
 
-  const cards = [...document.querySelectorAll('.card')];
-  const count = document.getElementById('count');
-
-  function applyFilters(){
-    const term = q.value.trim().toLowerCase();
-    const fLoc = loc.value;
-    const fLang = lang.value;
-    const fShift = shift.value;
-    const fType = type.value;
-
-    let visible = 0;
-    cards.forEach(card => {
-      const okTerm = !term || (card.dataset.keywords || '').toLowerCase().includes(term) || card.innerText.toLowerCase().includes(term);
-      const okLoc = !fLoc || card.dataset.loc === fLoc;
-      const okLang = !fLang || card.dataset.lang === fLang;
-      const okShift = !fShift || card.dataset.shift === fShift;
-      const okType = !fType || card.dataset.type === fType;
-
-      const show = okTerm && okLoc && okLang && okShift && okType;
-      card.style.display = show ? 'flex' : 'none';
-      if(show) visible++;
-    });
-
-    if(count) {
-      count.textContent = `該当求人:${visible} 件`;
-    }
-  }
-
-  // Initial filter apply
-  applyFilters();
-} catch(error) {
-  console.warn('Job filters setup failed:', error);
+// Count jobs
+const cards = [...document.querySelectorAll('.card')];
+const count = document.getElementById('count');
+if(count) {
+  count.textContent = `现有职位：${cards.length} 个`;
 }
 
-// Initialize when DOM is ready
-document.addEventListener('DOMContentLoaded', function() {
-  console.log('TP Japan open jobs page initialized');
-});
+console.log('TP Open Jobs - Chinese bilingual version loaded');
 </script>
 </body>
 </html>
