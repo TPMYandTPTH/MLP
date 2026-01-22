@@ -1,90 +1,59 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>周辺環境 | TP採用 マレーシア・タイ</title>
-<meta name="description" content="各拠点（KL／ペナン／バンコク）のオフィス周辺環境を写真で紹介。通勤・食事・買い物・カフェ・公園などの日常をイメージできます。">
+<title>周边环境 | TP招聘 马来西亚·泰国</title>
+<meta name="description" content="各工作地点（吉隆坡/槟城/曼谷）的周边环境展示。通勤、午餐、购物、咖啡、公园等日常生活体验。">
 <meta name="theme-color" content="#000000">
-<meta property="og:type" content="website">
-<meta property="og:locale" content="ja_JP">
-<meta property="og:title" content="周辺環境 | TP採用">
-<meta property="og:description" content="各拠点のオフィス周辺環境を写真で紹介。通勤・食事・買い物・カフェなどの日常生活">
-<meta property="og:image" content="https://tpmyandtpth.github.io/JLP/photos/TPLogo11.png">
-<meta property="og:url" content="https://tpmyandtpth.github.io/JLP/area-around-office.html">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="周辺環境 | TP採用">
-<meta name="twitter:description" content="各拠点のオフィス周辺環境を写真で紹介">
-<meta name="twitter:image" content="https://tpmyandtpth.github.io/JLP/photos/TPLogo11.png">
-<meta name="robots" content="index,follow">
-<link rel="canonical" href="https://tpmyandtpth.github.io/JLP/area-around-office.html">
 <link rel="icon" href="photos/TPLogo11.png">
-<link rel="apple-touch-icon" href="photos/TPLogo11.png">
-
-<!-- Preconnect for Performance -->
-<link rel="dns-prefetch" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&family=Noto+Serif+SC:wght@700;900&display=swap" rel="stylesheet">
 
-<!-- Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
-
-<!-- GLOBAL STYLES - From Template -->
 <style>
-/* CSS Variables */
 :root {
-  --tp-black: #000000;
+  --tp-black: #000;
   --tp-dark: #1a1a1a;
   --tp-charcoal: #2d2d2d;
   --tp-gray-dark: #4a4a4a;
-  --tp-gray: #666666;
-  --tp-gray-light: #999999;
-  --tp-silver: #cccccc;
+  --tp-gray: #666;
+  --tp-gray-light: #999;
+  --tp-silver: #ccc;
   --tp-light: #e5e5e5;
   --tp-off: #f5f5f5;
-  --tp-white: #ffffff;
-  --accent-purple: #780096;
-  --accent-pink: #ff0082;
+  --tp-white: #fff;
+  --gold-primary: #FFD700;
+  --gold-light: #FFAA00;
+  --gold-dark: #E6B800;
+  --gold-pale: #FFFBEB;
   --max: 1050px;
-  --shadow-xs: 0 1px 2px rgba(0,0,0,0.05);
-  --shadow-sm: 0 2px 4px rgba(0,0,0,0.08);
-  --shadow-md: 0 4px 8px rgba(0,0,0,0.12);
-  --shadow-lg: 0 8px 16px rgba(0,0,0,0.16);
-  --shadow-xl: 0 16px 32px rgba(0,0,0,0.20);
+  --shadow-sm: 0 2px 4px rgba(0,0,0,.08);
+  --shadow-md: 0 4px 8px rgba(0,0,0,.12);
+  --shadow-lg: 0 8px 16px rgba(0,0,0,.16);
+  --shadow-gold: 0 4px 12px rgba(255,215,0,.3);
   --radius: 12px;
 }
 
-/* Base Styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
-  font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
   color: var(--tp-dark);
-  line-height: 1.75;
+  line-height: 1.8;
   background: var(--tp-white);
   -webkit-font-smoothing: antialiased;
-  font-feature-settings: "palt" 1;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; height: auto; }
 
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Utility Classes */
 .sr-only {
   position: absolute!important;
   width: 1px;
@@ -109,7 +78,8 @@ img {
   margin-bottom: 0.625rem;
   font-weight: 900;
   color: var(--tp-black);
-  letter-spacing: -0.02em;
+  letter-spacing: 0.02em;
+  font-family: 'Noto Serif SC', serif;
 }
 
 .section-subtitle {
@@ -119,7 +89,121 @@ img {
   font-size: 0.9rem;
 }
 
-/* Header Styles */
+/* LANGUAGE TOGGLE */
+.lang-toggle-banner {
+  background: linear-gradient(135deg, var(--tp-black) 0%, var(--tp-charcoal) 100%);
+  color: var(--tp-white);
+  padding: 0.5rem 20px;
+  position: relative;
+  z-index: 1001;
+}
+
+.lang-toggle-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.lang-toggle-label {
+  font-size: 0.8rem;
+  color: var(--tp-silver);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.lang-toggle-label::before { content: '🌐'; }
+
+.lang-toggle-buttons {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.lang-btn {
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--tp-silver);
+}
+
+.lang-btn:hover {
+  color: var(--tp-white);
+  border-color: var(--gold-primary);
+}
+
+.lang-btn.active {
+  background: var(--gold-primary);
+  color: var(--tp-black);
+  font-weight: 700;
+  border-color: var(--gold-primary);
+}
+
+.lang-dropdown {
+  position: relative;
+  display: none;
+}
+
+.lang-dropdown-btn {
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  background: rgba(255,255,255,0.1);
+  color: var(--tp-white);
+  border: 1px solid var(--tp-gray);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.lang-dropdown-btn::after { content: '▼'; font-size: 0.6rem; }
+
+.lang-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: var(--tp-white);
+  border-radius: 8px;
+  box-shadow: var(--shadow-lg);
+  min-width: 180px;
+  display: none;
+  z-index: 1002;
+  overflow: hidden;
+  margin-top: 0.5rem;
+}
+
+.lang-dropdown-menu.show { display: block; }
+
+.lang-dropdown-item {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: var(--tp-dark);
+  font-size: 0.85rem;
+  border-bottom: 1px solid var(--tp-light);
+  transition: all 0.3s;
+}
+
+.lang-dropdown-item:last-child { border-bottom: none; }
+.lang-dropdown-item:hover { background: var(--gold-pale); }
+
+.lang-dropdown-item.active {
+  background: var(--gold-primary);
+  color: var(--tp-black);
+  font-weight: 600;
+}
+
+/* Header */
 header {
   position: sticky;
   top: 0;
@@ -127,7 +211,7 @@ header {
   border-bottom: 1px solid var(--tp-light);
   z-index: 1000;
   backdrop-filter: blur(10px);
-  box-shadow: var(--shadow-xs);
+  box-shadow: var(--shadow-sm);
 }
 
 .header-inner {
@@ -191,14 +275,11 @@ nav a::after {
   left: 0;
   width: 0;
   height: 2px;
-  background: var(--tp-black);
+  background: var(--gold-primary);
   transition: width 0.3s ease;
 }
 
-nav a:hover::after,
-nav a:focus::after {
-  width: 100%;
-}
+nav a:hover::after { width: 100%; }
 
 nav a[aria-current="page"] {
   font-weight: 600;
@@ -206,32 +287,23 @@ nav a[aria-current="page"] {
 
 nav a[aria-current="page"]::after {
   width: 100%;
-}
-
-nav a:focus {
-  outline: 2px solid var(--accent-purple);
-  outline-offset: 4px;
-  border-radius: 2px;
+  background: var(--tp-black);
 }
 
 .apply-btn {
-  background: var(--accent-purple);
+  background: var(--tp-black);
   color: var(--tp-white);
   padding: 0.5rem 1.25rem;
   border-radius: 4px;
   font-weight: 600;
-  border: 2px solid var(--accent-purple);
+  border: 2px solid var(--tp-black);
   transition: all 0.3s;
 }
 
-.apply-btn:hover,
-.apply-btn:focus {
-  background: var(--tp-white);
-  color: var(--accent-purple);
-}
-
-.apply-btn::after {
-  display: none;
+.apply-btn:hover {
+  background: var(--gold-primary);
+  color: var(--tp-black);
+  border-color: var(--gold-primary);
 }
 
 /* Mobile Menu */
@@ -266,9 +338,7 @@ nav a:focus {
   top: 17px;
 }
 
-.mobile-toggle.active span:nth-child(2) {
-  opacity: 0;
-}
+.mobile-toggle.active span:nth-child(2) { opacity: 0; }
 
 .mobile-toggle.active span:nth-child(3) {
   transform: translateX(-50%) rotate(-45deg);
@@ -289,9 +359,7 @@ nav a:focus {
   z-index: 999;
 }
 
-.mobile-menu.active {
-  display: block;
-}
+.mobile-menu.active { display: block; }
 
 .mobile-menu ul {
   list-style: none;
@@ -305,12 +373,9 @@ nav a:focus {
   transition: background 0.3s;
 }
 
-.mobile-menu a:hover,
-.mobile-menu a:focus {
-  background: var(--tp-off);
-}
+.mobile-menu a:hover { background: var(--gold-pale); }
 
-/* Button Styles */
+/* Buttons */
 .btn {
   padding: 0.75rem 1.75rem;
   border-radius: 4px;
@@ -323,38 +388,34 @@ nav a:focus {
   font-size: 0.9rem;
 }
 
-.btn:focus {
-  outline: 2px solid var(--accent-purple);
-  outline-offset: 4px;
-}
-
-.btn-accent {
-  background: var(--accent-purple);
-  color: var(--tp-white);
-  border-color: var(--accent-purple);
-}
-
-.btn-accent:hover {
-  background: var(--tp-white);
-  color: var(--accent-purple);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(120,0,150,0.15);
-}
-
-.btn-solid {
-  background: var(--accent-purple);
-  color: var(--tp-white);
-  border-color: var(--accent-purple);
+.btn-gold {
+  background: var(--gold-primary);
+  color: var(--tp-black);
+  border-color: var(--gold-primary);
   padding: 0.85rem 1.2rem;
   font-weight: 900;
   border-radius: 999px;
 }
 
-.btn-solid:hover {
-  filter: brightness(.95);
+.btn-gold:hover {
+  background: var(--tp-black);
+  color: var(--gold-primary);
+  filter: brightness(0.95);
 }
 
-/* Footer Styles */
+.btn-outline {
+  border-color: var(--gold-primary);
+  color: var(--gold-primary);
+  border-radius: 999px;
+  padding: 0.85rem 1.2rem;
+  font-weight: 900;
+}
+
+.btn-outline:hover {
+  background: var(--gold-pale);
+}
+
+/* Footer */
 footer {
   background: var(--tp-black);
   color: var(--tp-white);
@@ -369,8 +430,8 @@ footer::before {
   top: 0;
   left: 0;
   right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--accent-purple), transparent);
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--gold-primary), transparent);
 }
 
 .footer-content {
@@ -384,34 +445,11 @@ footer::before {
   border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
-.footer-brand {
-  display: flex;
-  flex-direction: column;
-  gap: 0.875rem;
-}
-
-.footer-logo {
-  display: flex;
-  align-items: center;
-  gap: 0.625rem;
-}
-
-.footer-logo img {
-  width: 42px;
-  height: 42px;
-  filter: brightness(0) invert(1);
-}
-
-.footer-logo-text {
-  font-size: 1.15rem;
-  font-weight: 700;
-}
-
-.footer-desc {
-  opacity: 0.8;
-  line-height: 1.75;
-  font-size: 0.85rem;
-}
+.footer-brand { display: flex; flex-direction: column; gap: 0.875rem; }
+.footer-logo { display: flex; align-items: center; gap: 0.625rem; }
+.footer-logo img { width: 42px; height: 42px; filter: brightness(0) invert(1); }
+.footer-logo-text { font-size: 1.15rem; font-weight: 700; }
+.footer-desc { opacity: 0.8; line-height: 1.75; font-size: 0.85rem; }
 
 .footer-section h3 {
   margin-bottom: 0.75rem;
@@ -419,15 +457,11 @@ footer::before {
   text-transform: uppercase;
   letter-spacing: 0.08em;
   opacity: 0.9;
+  color: var(--gold-primary);
 }
 
-.footer-section ul {
-  list-style: none;
-}
-
-.footer-section li {
-  margin-bottom: 0.3rem;
-}
+.footer-section ul { list-style: none; }
+.footer-section li { margin-bottom: 0.3rem; }
 
 .footer-section a {
   opacity: 0.7;
@@ -435,11 +469,7 @@ footer::before {
   font-size: 0.8rem;
 }
 
-.footer-section a:hover,
-.footer-section a:focus {
-  opacity: 1;
-  outline: none;
-}
+.footer-section a:hover { opacity: 1; }
 
 .badges {
   display: flex;
@@ -457,9 +487,7 @@ footer::before {
   opacity: 0.8;
 }
 
-.footer-cta {
-  margin-top: 1rem;
-}
+.footer-cta { margin-top: 1rem; }
 
 .footer-bottom {
   text-align: center;
@@ -474,43 +502,36 @@ footer::before {
   margin: 0 0.3rem;
 }
 
-.footer-bottom a:hover,
-.footer-bottom a:focus {
-  opacity: 1;
-  outline: none;
-}
-
 /* Floating Buttons */
 .floating-apply {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: rgba(120, 0, 150, 0.9);
+  background: var(--tp-black);
   color: var(--tp-white);
   padding: 0.75rem 1.25rem;
   border-radius: 50px;
   font-weight: 600;
-  box-shadow: 0 4px 12px rgba(120,0,150,0.3);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
   z-index: 999;
   transition: all 0.3s;
-  border: 2px solid var(--accent-purple);
+  border: 2px solid var(--gold-primary);
   font-size: 0.85rem;
   backdrop-filter: blur(10px);
 }
 
-.floating-apply:hover,
-.floating-apply:focus {
+.floating-apply:hover {
   transform: scale(1.05);
-  box-shadow: 0 6px 20px rgba(120,0,150,0.4);
-  background: var(--accent-purple);
-  outline: none;
+  box-shadow: var(--shadow-gold);
+  background: var(--gold-primary);
+  color: var(--tp-black);
 }
 
 .floating-casual {
   position: fixed;
   bottom: 20px;
-  right: 140px;
-  background: rgba(255, 255, 255, 0.85);
+  right: 130px;
+  background: rgba(255,255,255,0.9);
   color: var(--tp-black);
   padding: 0.75rem 1.25rem;
   border-radius: 50px;
@@ -523,12 +544,10 @@ footer::before {
   backdrop-filter: blur(10px);
 }
 
-.floating-casual:hover,
-.floating-casual:focus {
+.floating-casual:hover {
   transform: scale(1.05);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
-  background: rgba(255, 255, 255, 1);
-  outline: none;
+  box-shadow: var(--shadow-gold);
+  border-color: var(--gold-primary);
 }
 
 .back-to-top {
@@ -537,8 +556,8 @@ footer::before {
   right: 20px;
   width: 40px;
   height: 40px;
-  background: rgba(255, 255, 255, 0.8);
-  border: 2px solid var(--tp-black);
+  background: rgba(255,255,255,0.9);
+  border: 2px solid var(--gold-primary);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -551,6 +570,7 @@ footer::before {
   backdrop-filter: blur(10px);
   font-size: 1rem;
   font-weight: bold;
+  color: var(--gold-dark);
 }
 
 .back-to-top.show {
@@ -559,61 +579,12 @@ footer::before {
 }
 
 .back-to-top:hover {
-  background: var(--tp-black);
-  color: var(--tp-white);
+  background: var(--gold-primary);
+  color: var(--tp-black);
   transform: translateY(-2px);
 }
 
-/* Responsive Design */
-@media (max-width: 900px) {
-  nav {
-    display: none;
-  }
-  
-  .mobile-toggle {
-    display: block;
-  }
-  
-  .floating-casual {
-    bottom: 80px;
-    right: 20px;
-  }
-  
-  .back-to-top {
-    bottom: 140px;
-  }
-}
-
-@media (max-width: 768px) {
-  .section-title {
-    font-size: 1.4rem;
-  }
-  
-  .footer-content {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-  
-  .floating-apply {
-    bottom: 14px;
-    right: 14px;
-    padding: 0.625rem 1rem;
-    font-size: 0.8rem;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation: none !important;
-    transition: none !important;
-  }
-  
-  html {
-    scroll-behavior: auto;
-  }
-}
-
-/* PAGE SPECIFIC STYLES - Area Around Office */
+/* PAGE SPECIFIC */
 .hero {
   position: relative;
   overflow: hidden;
@@ -644,6 +615,7 @@ footer::before {
   font-weight: 900;
   color: #000;
   margin-bottom: 0.45rem;
+  font-family: 'Noto Serif SC', serif;
 }
 
 .hero p {
@@ -674,11 +646,13 @@ footer::before {
   font-size: 0.92rem;
   text-decoration: none;
   color: var(--tp-dark);
+  transition: all 0.3s;
 }
 
 .pill:hover {
-  border-color: var(--accent-purple);
-  color: var(--accent-purple);
+  border-color: var(--gold-primary);
+  color: var(--gold-dark);
+  background: var(--gold-pale);
 }
 
 .section {
@@ -692,6 +666,7 @@ footer::before {
   color: #000;
   font-weight: 900;
   margin-bottom: 0.6rem;
+  font-family: 'Noto Serif SC', serif;
 }
 
 .lead {
@@ -722,16 +697,25 @@ footer::before {
   border-radius: var(--radius);
   padding: 1rem;
   box-shadow: var(--shadow-sm);
+  transition: all 0.3s;
+}
+
+.card:hover {
+  border-color: var(--gold-primary);
+  box-shadow: var(--shadow-gold);
+  transform: translateY(-2px);
 }
 
 .card h3 {
   font-size: 1.05rem;
   color: #000;
   margin-bottom: 0.35rem;
+  font-weight: 700;
 }
 
 .muted {
   color: var(--tp-gray-dark);
+  font-size: 0.95rem;
 }
 
 .img-tile {
@@ -740,6 +724,12 @@ footer::before {
   border-radius: 12px;
   border: 1px solid var(--tp-light);
   background: #fff;
+  transition: all 0.3s;
+}
+
+.img-tile:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--gold-primary);
 }
 
 .img-tile img {
@@ -758,6 +748,7 @@ footer::before {
   display: block;
   color: var(--tp-gray-dark);
   font-weight: 500;
+  font-size: 0.85rem;
 }
 
 .city-h {
@@ -792,74 +783,102 @@ footer::before {
 }
 
 blockquote {
-  border-left: 4px solid var(--accent-purple);
+  border-left: 4px solid var(--gold-primary);
   padding: 0.4rem 0.9rem;
-  background: var(--tp-off);
+  background: var(--gold-pale);
   border-radius: 8px;
   margin-top: 0.4rem;
+  font-style: italic;
+  color: var(--tp-gray-dark);
 }
 
-/* Responsive for page specific styles */
+/* Responsive */
 @media (max-width: 1100px) {
-  .grid-4 {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 900px) {
-  .grid-3 {
-    grid-template-columns: 1fr 1fr;
-  }
+  .grid-3 { grid-template-columns: 1fr 1fr; }
+  nav { display: none; }
+  .mobile-toggle { display: block; }
+  .floating-casual { bottom: 80px; right: 20px; }
+  .back-to-top { bottom: 140px; }
 }
 
-@media (max-width: 720px) {
-  .grid-3, .grid-2, .grid-4 {
-    grid-template-columns: 1fr;
+@media (max-width: 768px) {
+  .section-title { font-size: 1.4rem; }
+  .grid-3, .grid-2, .grid-4 { grid-template-columns: 1fr; }
+  .footer-content { grid-template-columns: 1fr; text-align: center; }
+  .floating-apply { bottom: 14px; right: 14px; padding: 0.625rem 1rem; font-size: 0.8rem; }
+}
+
+@media (max-width: 640px) {
+  .lang-toggle-buttons { display: none; }
+  .lang-dropdown { display: block; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
   }
+  html { scroll-behavior: auto; }
 }
 </style>
 </head>
 <body>
-<!-- Skip Navigation -->
-<a href="#main" class="sr-only">メインコンテンツへスキップ</a>
+<a href="#main" class="sr-only">跳转至主要内容</a>
+
+<!-- LANGUAGE TOGGLE -->
+<div class="lang-toggle-banner">
+  <div class="lang-toggle-inner">
+    <span class="lang-toggle-label">选择语言版本</span>
+    <div class="lang-toggle-buttons">
+      <button class="lang-btn active" id="langLocal" onclick="setLanguage('local')">🇲🇾 本地华人</button>
+      <button class="lang-btn" id="langExpat" onclick="setLanguage('expat')">🌏 海外华人</button>
+    </div>
+    <div class="lang-dropdown" id="langDropdown">
+      <button class="lang-dropdown-btn" onclick="toggleDropdown()"><span id="currentLang">🇲🇾 本地华人</span></button>
+      <div class="lang-dropdown-menu" id="dropdownMenu">
+        <a href="#" class="lang-dropdown-item active" onclick="setLanguage('local');return false;">🇲🇾 本地华人<small>Malaysian Chinese</small></a>
+        <a href="#" class="lang-dropdown-item" onclick="setLanguage('expat');return false;">🌏 海外华人<small>Expat Chinese</small></a>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- HEADER -->
 <header role="banner">
   <div class="header-inner">
-    <a class="brand" href="https://tpmyandtpth.github.io/JLP/index.html">
-      <img src="photos/TPLogo11.png" alt="TP Japan" width="40" height="40">
+    <a class="brand" href="index.html">
+      <img src="photos/TPLogo11.png" alt="TP" width="40" height="40">
       <div class="brand-text">
         <span class="brand-name">TP</span>
-        <span class="brand-tagline">日本採用 — マレーシア・タイ</span>
+        <span class="brand-tagline">马来西亚·泰国</span>
       </div>
     </a>
-
-    <nav aria-label="メインナビゲーション">
+    <nav aria-label="主导航">
       <ul>
-        <li><a href="https://tpmyandtpth.github.io/JLP/index.html">ホーム</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/about-tp.html">TPについて</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/salary-and-benefits.html">給与・福利厚生</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/interview-process.html">面接プロセス</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/why-malaysia-thailand.html">なぜマレーシア・タイ</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/relocation-visa.html">移住・ビザサポート</a></li>
-        <li><a href="https://careerseng-teleperformance.icims.com/jobs/49026/customer-service-representative---japanese-speaking-%28kl%29/job?mode=job&iis=LANDINGPAGE" target="_blank" rel="noopener noreferrer" class="apply-btn">応募する</a></li>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="about-tp.html">关于TP</a></li>
+        <li><a href="salary-and-benefits.html" data-local="薪资·Benefits" data-expat="薪资福利">薪资福利</a></li>
+        <li><a href="hiring-process.html" data-local="招聘Process" data-expat="招聘流程">招聘流程</a></li>
+        <li><a href="area-around-office.html" aria-current="page" data-local="周边Environment" data-expat="周边环境">周边环境</a></li>
+        <li><a href="relocation-visa.html" data-local="Visa·搬迁" data-expat="签证·搬迁">签证·搬迁</a></li>
+        <li><a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=chinese" target="_blank" rel="noopener noreferrer" class="apply-btn" data-local="Apply Now" data-expat="立即申请">立即申请</a></li>
       </ul>
     </nav>
-
-    <button class="mobile-toggle" id="mobileToggle" aria-label="メニューを開く" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
+    <button class="mobile-toggle" id="mobileToggle" aria-label="打开菜单" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
-
-  <nav class="mobile-menu" id="mobileMenu" aria-label="モバイルナビゲーション">
+  <nav class="mobile-menu" id="mobileMenu" aria-label="移动端导航">
     <ul>
-      <li><a href="https://tpmyandtpth.github.io/JLP/index.html">ホーム</a></li>
-      <li><a href="https://tpmyandtpth.github.io/JLP/about-tp.html">TPについて</a></li>
-      <li><a href="https://tpmyandtpth.github.io/JLP/salary-and-benefits.html">給与・福利厚生 </a></li>
-      <li><a href="https://tpmyandtpth.github.io/JLP/interview-process.html">面接プロセス</a></li>
-      <li><a href="https://tpmyandtpth.github.io/JLP/why-malaysia-thailand.html">なぜマレーシア・タイ</a></li>
-      <li><a href="https://tpmyandtpth.github.io/JLP/relocation-visa.html">移住・ビザサポート</a></li>
-      <li><a href="https://careerseng-teleperformance.icims.com/jobs/49026/customer-service-representative---japanese-speaking-%28kl%29/job?mode=job&iis=LANDINGPAGE" target="_blank" rel="noopener noreferrer" class="apply-btn">応募する</a></li>
+      <li><a href="index.html">首页</a></li>
+      <li><a href="about-tp.html">关于TP</a></li>
+      <li><a href="salary-and-benefits.html">薪资福利</a></li>
+      <li><a href="hiring-process.html">招聘流程</a></li>
+      <li><a href="area-around-office.html">周边环境</a></li>
+      <li><a href="relocation-visa.html">签证·搬迁</a></li>
+      <li><a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=chinese" target="_blank" rel="noopener noreferrer" class="apply-btn">立即申请</a></li>
     </ul>
   </nav>
 </header>
@@ -867,60 +886,60 @@ blockquote {
 <main id="main">
   <!-- Hero -->
   <section class="hero">
-    <h1>周辺環境 / Area Around the Office</h1>
-    <p>通勤・ランチ・カフェ・買い物・公園。<br>毎日の"暮らしやすさ"が、働きやすさに直結します。</p>
-    <div class="hero-cta" role="group" aria-label="関連アクション">
-      <a class="btn-solid" href="#kl">KL 周辺</a>
-      <a class="btn" href="#penang" style="border-color:var(--accent-purple);color:var(--accent-purple);border-radius:999px;padding:0.85rem 1.2rem;font-weight:900;">Penang 周辺</a>
-      <a class="btn" href="#bangkok" style="border-color:var(--accent-purple);color:var(--accent-purple);border-radius:999px;padding:0.85rem 1.2rem;font-weight:900;">Bangkok 周辺</a>
+    <h1 data-local="周边Environment / Area Around Office" data-expat="周边环境 / Area Around the Office">周边环境 / Area Around the Office</h1>
+    <p data-local="通勤·ランチ·カフェ·買い物·公園。毎日の「暮らしやすさ」が、働きやすさに直結します。" data-expat="通勤、午餐、咖啡、购物、公园。日常的'宜居性'直接影响工作效率。">通勤、午餐、咖啡、购物、公园。日常的'宜居性'直接影响工作效率。</p>
+    <div class="hero-cta" role="group" aria-label="相关操作">
+      <a class="btn-gold" href="#kl">吉隆坡</a>
+      <a class="btn btn-outline" href="#penang">槟城</a>
+      <a class="btn btn-outline" href="#bangkok">曼谷</a>
     </div>
-    <div class="pill-nav" aria-label="ページ内目次">
+    <div class="pill-nav" aria-label="页面导航">
       <a class="pill" href="#kl">KL</a>
       <a class="pill" href="#penang">Penang</a>
       <a class="pill" href="#bangkok">Bangkok</a>
-      <a class="pill" href="#tips">ローカルおすすめ</a>
+      <a class="pill" href="#tips" data-local="ローカルおすすめ" data-expat="当地推荐">当地推荐</a>
     </div>
   </section>
 
   <!-- KL Section -->
   <section id="kl" class="section">
     <div class="city-h">
-      <img src="photos/KL%201.jpg" alt="クアラルンプールの街並み">
-      <h2>クアラルンプール（KL）オフィス周辺</h2>
+      <img src="photos/KL%201.jpg" alt="吉隆坡城市风景">
+      <h2 data-local="クアラルンプール（KL）オフィス周辺" data-expat="吉隆坡（KL）办公地周边">吉隆坡（KL）办公地周边</h2>
     </div>
-    <p class="lead">都市利便性 × 緑 × 多文化。日常の「移動しやすさ」「食の多様さ」「過ごしやすさ」をバランスよく叶えます。</p>
+    <p class="lead" data-local="都市利便性 × 緑 × 多文化。日常の「移動しやすさ」「食の多様さ」「過ごしやすさ」をバランスよく叶えます。" data-expat="城市便利性 × 绿色环境 × 多元文化。兼顾交通便捷、饮食多样、生活舒适。">城市便利性 × 绿色环境 × 多元文化。兼顾交通便捷、饮食多样、生活舒适。</p>
 
     <div class="grid-4" style="margin-top:0.8rem">
       <figure class="img-tile">
-        <img src="photos/G%20TOWER.jpg" alt="G TOWER 付近の外観（参考）">
-        <figcaption class="caption">オフィス＆周辺ビル<small>通勤しやすい中心部エリア</small></figcaption>
+        <img src="photos/G%20TOWER.jpg" alt="办公楼周边外观">
+        <figcaption class="caption" data-local="オフィス＆周辺ビル" data-expat="办公室及周边建筑">办公室及周边建筑<small data-local="通勤しやすい中心部エリア" data-expat="中心商业区，交通便利">中心商业区，交通便利</small></figcaption>
       </figure>
       <figure class="img-tile">
-        <img src="photos/KL%202.jpg" alt="KL中心部の風景">
-        <figcaption class="caption">シティビュー<small>仕事終わりに寄れるスポット多数</small></figcaption>
+        <img src="photos/KL%202.jpg" alt="吉隆坡市景">
+        <figcaption class="caption" data-local="シティビュー" data-expat="城市风景">城市风景<small data-local="仕事終わりに寄れるスポット多数" data-expat="下班后有很多去处">下班后有很多去处</small></figcaption>
       </figure>
       <figure class="img-tile">
-        <img src="photos/Reception.png" alt="オフィス受付の様子">
-        <figcaption class="caption">受付・来客エリア<small>落ち着いた雰囲気</small></figcaption>
+        <img src="photos/Reception.png" alt="办公室前台">
+        <figcaption class="caption" data-local="受付・来客エリア" data-expat="接待区域">接待区域<small data-local="落ち着いた雰囲気" data-expat="宁静舒适的氛围">宁静舒适的氛围</small></figcaption>
       </figure>
       <figure class="img-tile">
-        <img src="photos/Maho%20in%20front%20ofKLCC.jpg" alt="KLCC周辺に立つMaho">
-        <figcaption class="caption">KLCC周辺<small>週末・仕事帰りの定番スポット</small></figcaption>
+        <img src="photos/Maho%20in%20front%20ofKLCC.jpg" alt="KLCC周边">
+        <figcaption class="caption">KLCC周边<small data-local="週末・仕事帰りの定番スポット" data-expat="周末和下班后的热门目的地">周末和下班后的热门目的地</small></figcaption>
       </figure>
     </div>
 
     <div class="grid-3" style="margin-top:1rem">
       <div class="card">
-        <h3>移動（公共交通・配車）</h3>
-        <p class="muted">電車・バスに加え、配車アプリでドアツードアの移動も手軽。中心部なので通勤・乗り換えもスムーズです。</p>
+        <h3 data-local="移動（公共交通・配車）" data-expat="交通（公交·打车）">交通（公交·打车）</h3>
+        <p class="muted" data-local="電車・バスに加え、配車アプリでドアツードアの移動も手軽。中心部なので通勤・乗り換えもスムーズです。" data-expat="轻轨、公交加打车应用，出行便捷。中心区域，通勤换乘顺畅。">轻轨、公交加打车应用，出行便捷。中心区域，通勤换乘顺畅。</p>
       </div>
       <div class="card">
-        <h3>ランチ＆カフェ</h3>
-        <p class="muted">屋台・ローカル・日本食・カフェまで選択肢が豊富。外食コストが抑えられ、気軽に開拓できます。</p>
+        <h3 data-local="ランチ＆カフェ" data-expat="午餐和咖啡">午餐和咖啡</h3>
+        <p class="muted" data-local="屋台・ローカル・日本食・カフェまで選択肢が豊富。外食コストが抑えられ、気軽に開拓できます。" data-expat="小摊、本地菜、日本菜、咖啡厅应有尽有。外食成本低，容易发现新地方。">小摊、本地菜、日本菜、咖啡厅应有尽有。外食成本低，容易发现新地方。</p>
       </div>
       <div class="card">
-        <h3>公園・ジム</h3>
-        <p class="muted">コンドのジム・プールはもちろん、市内の公園や商業施設内のフィットネスも利用しやすい環境です。</p>
+        <h3 data-local="公園・ジム" data-expat="公园和健身房">公园和健身房</h3>
+        <p class="muted" data-local="コンドのジム・プールはもちろん、市内の公園や商業施設内のフィットネスも利用しやすい環境です。" data-expat="公寓配备健身房和游泳池，市内公园和商业设施健身设施也很方便。">公寓配备健身房和游泳池，市内公园和商业设施健身设施也很方便。</p>
       </div>
     </div>
   </section>
@@ -928,42 +947,42 @@ blockquote {
   <!-- Penang Section -->
   <section id="penang" class="section">
     <div class="city-h">
-      <img src="photos/Penang.jpg" alt="ペナンの海と街並み">
-      <h2>ペナン（Penang）オフィス周辺</h2>
+      <img src="photos/Penang.jpg" alt="槟城海景和城市">
+      <h2 data-local="ペナン（Penang）オフィス周辺" data-expat="槟城（Penang）办公地周边">槟城（Penang）办公地周边</h2>
     </div>
-    <p class="lead">海と街が近い"ゆったり島ライフ"。落ち着いた雰囲気で、コスパ良く眺望の良い生活が叶います。</p>
+    <p class="lead" data-local="海と街が近い\"ゆったり島ライフ\"。落ち着いた雰囲気で、コスパ良く眺望の良い生活が叶います。" data-expat="海与城市相近的'悠闲岛屿生活'。宁静氛围，高性价比，视野开阔。">海与城市相近的'悠闲岛屿生活'。宁静氛围，高性价比，视野开阔。</p>
 
     <div class="grid-4" style="margin-top:0.8rem">
       <figure class="img-tile">
-        <img src="photos/Penang.jpg" alt="ペナン全景">
-        <figcaption class="caption">海が身近<small>休みの日は海辺でリフレッシュ</small></figcaption>
+        <img src="photos/Penang.jpg" alt="槟城全景">
+        <figcaption class="caption" data-local="海が身近" data-expat="靠近大海">靠近大海<small data-local="休みの日は海辺でリフレッシュ" data-expat="周末在海边放松">周末在海边放松</small></figcaption>
       </figure>
       <figure class="img-tile">
-        <img src="photos/Condo.jpg" alt="プール・ジム付きのコンド（例）">
-        <figcaption class="caption">設備充実の住環境<small>プールやジムが標準的</small></figcaption>
+        <img src="photos/Condo.jpg" alt="带泳池和健身房的公寓">
+        <figcaption class="caption" data-local="設備充実の住環境" data-expat="设施完善的住宅环境">设施完善的住宅环境<small data-local="プールやジムが標準的" data-expat="游泳池和健身房是标配">游泳池和健身房是标配</small></figcaption>
       </figure>
       <figure class="img-tile">
-        <img src="photos/Reception%20(2).png" alt="オフィス内の一角（参考）">
-        <figcaption class="caption">オフィス内観<small>落ち着いたワークスペース</small></figcaption>
+        <img src="photos/Reception%20(2).png" alt="办公室内部">
+        <figcaption class="caption" data-local="オフィス内観" data-expat="办公室内景">办公室内景<small data-local="落ち着いたワークスペース" data-expat="宁静的工作空间">宁静的工作空间</small></figcaption>
       </figure>
       <figure class="img-tile">
-        <img src="photos/Reception%20(1).png" alt="受付付近（参考）">
-        <figcaption class="caption">受付付近<small>来客時も安心の導線</small></figcaption>
+        <img src="photos/Reception%20(1).png" alt="前台附近">
+        <figcaption class="caption" data-local="受付付近" data-expat="前台附近">前台附近<small data-local="来客時も安心の導線" data-expat="访客动线安心">访客动线安心</small></figcaption>
       </figure>
     </div>
 
     <div class="grid-3" style="margin-top:1rem">
       <div class="card">
-        <h3>移動</h3>
-        <p class="muted">市内移動は配車アプリが便利。海沿い・中心部いずれも生活しやすく、通勤ストレスを抑えられます。</p>
+        <h3 data-local="移動" data-expat="交通">交通</h3>
+        <p class="muted" data-local="市内移動は配車アプリが便利。海沿い・中心部いずれも生活しやすく、通勤ストレスを抑えられます。" data-expat="市内打车应用方便。无论海边还是中心，生活便利，通勤压力小。">市内打车应用方便。无论海边还是中心，生活便利，通勤压力小。</p>
       </div>
       <div class="card">
-        <h3>食</h3>
-        <p class="muted">屋台・フードコート・カフェ文化が充実。ローカル・中華・インド系など多彩な味を日替わりで楽しめます。</p>
+        <h3 data-local="食" data-expat="饮食">饮食</h3>
+        <p class="muted" data-local="屋台・フードコート・カフェ文化が充実。ローカル・中華・インド系など多彩な味を日替わりで楽しめます。" data-expat="小摊、美食广场、咖啡文化充满活力。本地菜、中式、印度菜等多彩选择，日日不重样。">小摊、美食广场、咖啡文化充满活力。本地菜、中式、印度菜等多彩选择，日日不重样。</p>
       </div>
       <div class="card">
-        <h3>余暇</h3>
-        <p class="muted">海岸散歩・週末ビーチ・カフェ巡りなど"ゆるオフ"が定番。長期滞在にも人気のエリアです。</p>
+        <h3 data-local="余暇" data-expat="闲暇时光">闲暇时光</h3>
+        <p class="muted" data-local="海岸散歩・週末ビーチ・カフェ巡りなど\"ゆるオフ\"が定番。長期滞在にも人気のエリアです。" data-expat="海滨散步、周末海滩、咖啡厅巡游等'悠闲放松'的常规活动。长期居住的热门地区。">海滨散步、周末海滩、咖啡厅巡游等'悠闲放松'的常规活动。长期居住的热门地区。</p>
       </div>
     </div>
   </section>
@@ -971,74 +990,74 @@ blockquote {
   <!-- Bangkok Section -->
   <section id="bangkok" class="section">
     <div class="city-h">
-      <img src="photos/Bangkok1.jpg" alt="バンコク中心部の景観">
-      <h2>バンコク（Bangkok）オフィス周辺</h2>
+      <img src="photos/Bangkok1.jpg" alt="曼谷城市风景">
+      <h2 data-local="バンコク（Bangkok）オフィス周辺" data-expat="曼谷（Bangkok）办公地周边">曼谷（Bangkok）办公地周边</h2>
     </div>
-    <p class="lead">"東南アジアの東京"のような利便性。電車網・商業施設・日本語対応施設が集約された超便利都市。</p>
+    <p class="lead" data-local="\"東南アジアの東京\"のような利便性。電車網・商業施設・日本語対応施設が集約された超便利都市。" data-expat="'东南亚的东京'般的便利。轻轨网络、商业设施、日语对应设施集中的超便捷城市。">'东南亚的东京'般的便利。轻轨网络、商业设施、日语对应设施集中的超便捷城市。</p>
 
     <div class="grid-4" style="margin-top:0.8rem">
       <figure class="img-tile">
-        <img src="photos/Singha%20Complex1.jpg" alt="Singha Complex 外観（参考）">
-        <figcaption class="caption">オフィス周辺商業施設<small>飲食・ショッピングが手軽</small></figcaption>
+        <img src="photos/Singha%20Complex1.jpg" alt="商业中心外观">
+        <figcaption class="caption" data-local="オフィス周辺商業施設" data-expat="办公室周边商业设施">办公室周边商业设施<small data-local="飲食・ショッピングが手軽" data-expat="饮食和购物方便">饮食和购物方便</small></figcaption>
       </figure>
       <figure class="img-tile">
-        <img src="photos/Singha%20Complex2.jpg" alt="Singha Complex 周辺（参考）">
-        <figcaption class="caption">アクセスの良さ<small>電車・配車の両方が使いやすい</small></figcaption>
+        <img src="photos/Singha%20Complex2.jpg" alt="商业中心周边">
+        <figcaption class="caption" data-local="アクセスの良さ" data-expat="交通便利">交通便利<small data-local="電車・配車の両方が使いやすい" data-expat="轻轨和打车都很方便">轻轨和打车都很方便</small></figcaption>
       </figure>
       <figure class="img-tile">
-        <img src="photos/Bangkok%202.jpg" alt="バンコクの夜景">
-        <figcaption class="caption">ナイトタイム<small>治安に配慮しつつ夜も楽しめる</small></figcaption>
+        <img src="photos/Bangkok%202.jpg" alt="曼谷夜景">
+        <figcaption class="caption" data-local="ナイトタイム" data-expat="夜间生活">夜间生活<small data-local="治安に配慮しつつ夜も楽しめる" data-expat="安全前提下，夜生活丰富">安全前提下，夜生活丰富</small></figcaption>
       </figure>
       <figure class="img-tile">
-        <img src="photos/Reception%20(1).png" alt="オフィス受付（参考）">
-        <figcaption class="caption">オフィス受付<small>訪問・来客動線もスムーズ</small></figcaption>
+        <img src="photos/Reception%20(1).png" alt="办公室前台">
+        <figcaption class="caption" data-local="オフィス受付" data-expat="办公室前台">办公室前台<small data-local="訪問・来客動線もスムーズ" data-expat="访客动线顺畅">访客动线顺畅</small></figcaption>
       </figure>
     </div>
 
     <div class="grid-3" style="margin-top:1rem">
       <div class="card">
-        <h3>移動</h3>
-        <p class="muted">電車網が発達し、主要エリアへのアクセスが容易。配車アプリと使い分けできます。</p>
+        <h3 data-local="移動" data-expat="交通">交通</h3>
+        <p class="muted" data-local="電車網が発達し、主要エリアへのアクセスが容易。配車アプリと使い分けできます。" data-expat="发达的轻轨网络，主要区域交通便捷。轻轨和打车应用相辅相成。">发达的轻轨网络，主要区域交通便捷。轻轨和打车应用相辅相成。</p>
       </div>
       <div class="card">
-        <h3>日本向け施設</h3>
-        <p class="muted">日本食・日用品・医療など日本語対応が充実。海外初心者でも生活立ち上げがスムーズです。</p>
+        <h3 data-local="日本向け施設" data-expat="日式设施">日式设施</h3>
+        <p class="muted" data-local="日本食・日用品・医療など日本語対応が充実。海外初心者でも生活立ち上げがスムーズです。" data-expat="日式餐厅、日用品、医疗等日语支持完善。海外初体验者也能顺利建立生活。">日式餐厅、日用品、医疗等日语支持完善。海外初体验者也能顺利建立生活。</p>
       </div>
       <div class="card">
-        <h3>余暇</h3>
-        <p class="muted">大型モール・カフェ・イベント多数。近郊への小旅行にも出かけやすい好立地です。</p>
+        <h3 data-local="余暇" data-expat="闲暇时光">闲暇时光</h3>
+        <p class="muted" data-local="大型モール・カフェ・イベント多数。近郊への小旅行にも出かけやすい好立地です。" data-expat="大型购物中心、咖啡厅、活动众多。靠近周边，小旅行便利。">大型购物中心、咖啡厅、活动众多。靠近周边，小旅行便利。</p>
       </div>
     </div>
   </section>
 
-  <!-- Local tips Section -->
+  <!-- Tips Section -->
   <section id="tips" class="section">
-    <h2>ローカルおすすめ &amp; チームの声</h2>
+    <h2 data-local="ローカルおすすめ &amp; チームの声" data-expat="当地推荐 & 团队心声">当地推荐 & 团队心声</h2>
     <div class="grid-3" style="margin-top:0.6rem">
       <div class="card">
         <div class="person">
-          <img class="avatar" src="photos/Maho.png" alt="Maho">
+          <img class="avatar" src="photos/TPLogo11.png" alt="H.U">
           <div>
-            <strong>Maho（KL）</strong>
-            <blockquote>「ランチはローカル食堂も日本食も選び放題。コスパが良いので外食頻度が上がりました！」</blockquote>
+            <strong>H.U（KL）</strong>
+            <blockquote data-local="「ランチはローカル食堂も日本食も選び放題。コスパが良いので外食頻度が上がりました！」" data-expat="「午餐小摊和日式料理任选。性价比好，外食频率大幅提高！」">"午餐小摊和日式料理任选。性价比好，外食频率大幅提高！"</blockquote>
           </div>
         </div>
       </div>
       <div class="card">
         <div class="person">
-          <img class="avatar" src="photos/Maya.png" alt="Maya">
+          <img class="avatar" src="photos/TPLogo11.png" alt="M.Y">
           <div>
-            <strong>Maya（Penang）</strong>
-            <blockquote>「海が近いので、週末は気分転換に海沿いカフェへ。のんびり過ごせるのが魅力です。」</blockquote>
+            <strong>M.Y（Penang）</strong>
+            <blockquote data-local="「海が近いので、週末は気分転換に海沿いカフェへ。のんびり過ごせるのが魅力です。」" data-expat="「靠近大海，周末在海边咖啡厅散心。悠闲放松的魅力！」">"靠近大海，周末在海边咖啡厅散心。悠闲放松的魅力！"</blockquote>
           </div>
         </div>
       </div>
       <div class="card">
         <div class="person">
-          <img class="avatar" src="photos/Akito%20san.jpg" alt="Akito">
+          <img class="avatar" src="photos/TPLogo11.png" alt="A.T">
           <div>
-            <strong>Akito（Bangkok）</strong>
-            <blockquote>「電車移動が快適。仕事後にそのままカフェやモールに寄れるのが嬉しいポイントです。」</blockquote>
+            <strong>A.T（Bangkok）</strong>
+            <blockquote data-local="「電車移動が快適。仕事後にそのままカフェやモールに寄れるのが嬉しいポイントです。」" data-expat="「轻轨出行舒适。下班后直接去咖啡厅或购物中心，很方便！」">"轻轨出行舒适。下班后直接去咖啡厅或购物中心，很方便！"</blockquote>
           </div>
         </div>
       </div>
@@ -1046,43 +1065,43 @@ blockquote {
 
     <div class="grid-4" style="margin-top:1rem">
       <figure class="img-tile">
-        <img src="photos/Koyori.jpg" alt="チームメンバー Koyori">
-        <figcaption class="caption">Team snapshot<small>多国籍メンバーと働く</small></figcaption>
+        <img src="photos/OPOutside.png" alt="槟城美食">
+        <figcaption class="caption">OP Penang<small data-local="たくさんの素晴らしい食べ物の選択肢" data-expat="众多美食选择">众多美食选择</small></figcaption>
       </figure>
       <figure class="img-tile">
-        <img src="photos/Joseph%20Hiroyuki%20Ueda.jpg" alt="Joseph（ジョセフ）のポートレート">
-        <figcaption class="caption">TAチーム<small>日本語で安心のサポート</small></figcaption>
+        <img src="photos/JPteam.png" alt="招聘团队">
+        <figcaption class="caption" data-local="TAチーム" data-expat="招聘团队">招聘团队<small data-local="日本語で安心のサポート" data-expat="日语支持，安心服务">日语支持，安心服务</small></figcaption>
       </figure>
       <figure class="img-tile">
-        <img src="photos/Joseph%20on%20vacation.jpg" alt="休日のJoseph">
-        <figcaption class="caption">オフも充実<small>近場旅行も気軽に</small></figcaption>
+        <img src="photos/Joseph%20on%20vacation.jpg" alt="休假中的员工">
+        <figcaption class="caption" data-local="オフも充実" data-expat="休闲生活充实">休闲生活充实<small data-local="近場旅行も気軽に" data-expat="近距离旅行方便">近距离旅行方便</small></figcaption>
       </figure>
       <figure class="img-tile">
-        <img src="photos/G%20TOWER.jpg" alt="G TOWER 外観（再掲）">
-        <figcaption class="caption">オフィス周辺再掲<small>日常の便利さを重視</small></figcaption>
+        <img src="photos/G%20TOWER.jpg" alt="办公楼周边">
+        <figcaption class="caption" data-local="オフィス周辺再掲" data-expat="办公室周边(重新列出)">办公室周边<small data-local="日常の便利さを重視" data-expat="日常便利是重点">日常便利是重点</small></figcaption>
       </figure>
     </div>
 
-    <p class="muted" style="margin-top:0.8rem"><small>※写真は一部イメージ・複数拠点の参考カットを含みます。実際の配属・通勤動線・施設は時期やプロジェクトにより異なる場合があります。</small></p>
+    <p class="muted" style="margin-top:0.8rem"><small data-local="※写真は一部イメージ・複数拠点の参考カットを含みます。実際の配属・通勤動線・施設は時期やプロジェクトにより異なる場合があります。" data-expat="※部分图片为示意图，包含多个地点的参考图片。实际工作地点、通勤路线、设施因时期和项目而异。">部分图片为示意图，包含多个地点的参考图片。实际工作地点、通勤路线、设施因时期和项目而异。</small></p>
   </section>
 
   <!-- CTA Section -->
   <section class="section">
     <div class="grid-3">
       <div class="card">
-        <h3>求人を見る</h3>
-        <p class="muted">日本語スピーカー向けポジションを多数募集中。未経験からの挑戦も歓迎です。</p>
-        <p style="margin-top:0.4rem"><a class="btn-solid" href="https://tpmyandtpth.github.io/JLP/open-jobs.html">求人一覧へ</a></p>
+        <h3 data-local="求人を見る" data-expat="查看职位">查看职位</h3>
+        <p class="muted" data-local="日本語スピーカー向けポジションを多数募集中。未経験からの挑戦も歓迎です。" data-expat="华语人才岗位众多。欢迎无经验的挑战者。">华语人才岗位众多。欢迎无经验的挑战者。</p>
+        <p style="margin-top:0.4rem"><a class="btn-gold" href="open-jobs.html" data-local="求人一覧へ" data-expat="查看职位列表">查看职位列表</a></p>
       </div>
       <div class="card">
-        <h3>カジュアル面談</h3>
-        <p class="muted">選考ではありません。生活・仕事・移住の疑問を日本語で相談。</p>
-        <p style="margin-top:0.4rem"><a class="btn" href="https://tpmyandtpth.github.io/JLP/casual-interview.html" style="border-color:var(--accent-purple);color:var(--accent-purple);border-radius:999px;padding:0.85rem 1.2rem;font-weight:900;">予約する</a></p>
+        <h3 data-local="カジュアル面談" data-expat="轻松对话">轻松对话</h3>
+        <p class="muted" data-local="選考ではありません。生活・仕事・移住の疑問を日本語で相談。" data-expat="非正式面试。用日语咨询生活、工作、移住的疑问。">非正式面试。用日语咨询生活、工作、移住的疑问。</p>
+        <p style="margin-top:0.4rem"><a class="btn btn-outline" href="casual-interview.html" data-local="予約する" data-expat="预约">预约</a></p>
       </div>
       <div class="card">
-        <h3>LINEで最新情報</h3>
-        <p class="muted">新着求人や現地情報をお届け。トークでの質問もOK。</p>
-        <p style="margin-top:0.4rem"><a class="btn" target="_blank" rel="noopener noreferrer" href="https://line.me/R/ti/p/@286nmdsd?from=page&searchId=286nmdsd" style="border-color:var(--accent-purple);color:var(--accent-purple);border-radius:999px;padding:0.85rem 1.2rem;font-weight:900;">友だち追加</a></p>
+        <h3>LINE官方</h3>
+        <p class="muted" data-local="新着求人や現地情報をお届け。トークでの質問もOK。" data-expat="最新职位和当地信息。可以在对话中提问。">最新职位和当地信息。可以在对话中提问。</p>
+        <p style="margin-top:0.4rem"><a class="btn btn-outline" target="_blank" rel="noopener noreferrer" href="https://line.me/R/ti/p/@286nmdsd?from=page&searchId=286nmdsd" data-local="友だち追加" data-expat="添加好友">添加好友</a></p>
       </div>
     </div>
   </section>
@@ -1096,157 +1115,159 @@ blockquote {
         <img src="photos/TPLogo11.png" alt="TP">
         <span class="footer-logo-text">TP</span>
       </div>
-      <p class="footer-desc">
-        世界100カ国以上で展開するグローバルBPO企業。<br>
-        日本語スピーカーの皆様の新たなキャリアをサポートします。
-      </p>
+      <p class="footer-desc">全球100多个国家运营的业务流程外包企业<br>支持华语人才开启新事业</p>
       <div class="badges">
-        <span class="badge-item">🏆 Great Place to Work® 6年連続</span>
+        <span class="badge-item">🏆 马来西亚最佳职场 连续6年</span>
+        <span class="badge-item">🏆 全球最佳职场 连续5年</span>
       </div>
       <div class="footer-cta">
-        <a href="https://careerseng-teleperformance.icims.com/jobs/49026/customer-service-representative---japanese-speaking-%28kl%29/job?mode=job&iis=LANDINGPAGE" target="_blank" rel="noopener noreferrer" class="btn btn-accent">ご応募はこちら</a>
+        <a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=chinese" target="_blank" rel="noopener noreferrer" class="btn btn-gold">点击申请</a>
       </div>
     </div>
     
     <div class="footer-section">
-      <h3>会社情報</h3>
+      <h3>公司信息</h3>
       <ul>
-        <li><a href="https://tpmyandtpth.github.io/JLP/about-tp.html">会社紹介</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/salary-and-benefits.html#benefits">福利厚生</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/office-environment.html">オフィス環境</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/ta-team.html">採用チーム</a></li>
+        <li><a href="about-tp.html">公司介绍</a></li>
+        <li><a href="salary-and-benefits.html">福利待遇</a></li>
+        <li><a href="office-environment.html">办公环境</a></li>
+        <li><a href="ta-team.html">招聘团队</a></li>
       </ul>
     </div>
 
     <div class="footer-section">
-      <h3>求人・応募</h3>
+      <h3 data-local="求人・応募" data-expat="职位·申请">职位·申请</h3>
       <ul>
-        <li><a href="https://tpmyandtpth.github.io/JLP/open-jobs.html">求人一覧</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/interview-process.html">面接プロセス</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/faq.html">よくある質問</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/casual-interview.html">お問い合わせ</a></li>
+        <li><a href="open-jobs.html" data-local="求人一覧" data-expat="职位列表">职位列表</a></li>
+        <li><a href="hiring-process.html">招聘流程</a></li>
+        <li><a href="faq.html">常见问题</a></li>
+        <li><a href="casual-interview.html">联系我们</a></li>
       </ul>
     </div>
 
     <div class="footer-section">
-      <h3>生活情報</h3>
+      <h3>生活信息</h3>
       <ul>
-        <li><a href="https://tpmyandtpth.github.io/JLP/why-malaysia-thailand.html">勤務先都市</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/relocation-visa.html">移住サポート</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/daily-life-malaysia.html">ライフスタイル</a></li>
-        <li><a href="https://line.me/R/ti/p/@286nmdsd" target="_blank" rel="noopener noreferrer">LINE公式</a></li>
+        <li><a href="area-around-office.html">周边环境</a></li>
+        <li><a href="relocation-visa.html">搬迁支持</a></li>
+        <li><a href="daily-life-malaysia.html">生活方式</a></li>
+        <li><a href="https://line.me/R/ti/p/@286nmdsd" target="_blank" rel="noopener noreferrer">LINE官方</a></li>
       </ul>
     </div>
   </div>
   
   <div class="footer-bottom">
-    <p>&copy; 2025 TP. All rights reserved. | 
-      <a href="#">プライバシーポリシー</a> | 
-      <a href="#">利用規約</a>
-    </p>
+    <p>&copy; 2026 TP. All rights reserved. | <a href="#">隐私政策</a> | <a href="#">使用条款</a></p>
   </div>
 </footer>
 
 <!-- FLOATING BUTTONS -->
-<a href="https://careerseng-teleperformance.icims.com/jobs/49026/customer-service-representative---japanese-speaking-%28kl%29/job?mode=job&iis=LANDINGPAGE" target="_blank" rel="noopener noreferrer" class="floating-apply" aria-label="今すぐ応募">応募する</a>
-
-<a href="https://forms.office.com/e/2UvpbweQww" target="_blank" rel="noopener noreferrer" class="floating-casual" aria-label="カジュアル面談">カジュアル面談</a>
-
-<button class="back-to-top" id="backToTop" aria-label="ページトップへ">↑</button>
+<a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=chinese" target="_blank" rel="noopener noreferrer" class="floating-apply" data-local="応募する" data-expat="立即申请">立即申请</a>
+<a href="https://forms.office.com/e/2UvpbweQww" target="_blank" rel="noopener noreferrer" class="floating-casual" data-local="カジュアル面談" data-expat="轻松对话">轻松对话</a>
+<button class="back-to-top" id="backToTop">↑</button>
 
 <!-- JAVASCRIPT -->
 <script>
-// Mobile Menu Toggle with Error Handling
-try {
-  (function(){
-    const toggle = document.getElementById('mobileToggle');
-    const menu = document.getElementById('mobileMenu');
-    
-    if(toggle && menu){
-      toggle.addEventListener('click', function(){
-        toggle.classList.toggle('active');
-        menu.classList.toggle('active');
-        toggle.setAttribute('aria-expanded', menu.classList.contains('active'));
-      });
-      
-      // Close menu when clicking links
-      menu.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-          toggle.classList.remove('active');
-          menu.classList.remove('active');
-          toggle.setAttribute('aria-expanded', 'false');
-        });
-      });
-      
-      // Close menu when clicking outside
-      document.addEventListener('click', (e) => {
-        if(!menu.contains(e.target) && !toggle.contains(e.target)) {
-          menu.classList.remove('active');
-          toggle.classList.remove('active');
-          toggle.setAttribute('aria-expanded', 'false');
-        }
-      });
-    }
-  })();
-} catch(error) {
-  console.warn('Mobile menu setup failed:', error);
+let currentLanguage = localStorage.getItem('mlpLang') || 'local';
+
+function setLanguage(lang) {
+  currentLanguage = lang;
+  localStorage.setItem('mlpLang', lang);
+  document.getElementById('langLocal').classList.toggle('active', lang === 'local');
+  document.getElementById('langExpat').classList.toggle('active', lang === 'expat');
+  document.getElementById('currentLang').textContent = lang === 'local' ? '🇲🇾 本地华人' : '🌏 海外华人';
+  document.querySelectorAll('.lang-dropdown-item').forEach(item => item.classList.remove('active'));
+  document.querySelector(`.lang-dropdown-item[onclick*="${lang}"]`).classList.add('active');
+  document.getElementById('dropdownMenu').classList.remove('show');
+  updateAllText(lang);
 }
 
-// Back to Top Button
-try {
-  (function(){
-    const backToTop = document.getElementById('backToTop');
-    if(!backToTop) return;
-    
-    window.addEventListener('scroll', () => {
-      if(window.pageYOffset > 300){
-        backToTop.classList.add('show');
+function updateAllText(lang) {
+  const attr = lang === 'local' ? 'data-local' : 'data-expat';
+  document.querySelectorAll('[data-local][data-expat]').forEach(el => {
+    const text = el.getAttribute(attr);
+    if(text) {
+      if(el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+        el.placeholder = text;
       } else {
-        backToTop.classList.remove('show');
+        el.innerHTML = text;
+      }
+    }
+  });
+}
+
+function toggleDropdown() {
+  document.getElementById('dropdownMenu').classList.toggle('show');
+}
+
+document.addEventListener('click', e => {
+  if(!e.target.closest('.lang-dropdown'))
+    document.getElementById('dropdownMenu').classList.remove('show');
+});
+
+document.addEventListener('DOMContentLoaded', () => setLanguage(currentLanguage));
+
+// Mobile Menu
+(function(){
+  const toggle = document.getElementById('mobileToggle');
+  const menu = document.getElementById('mobileMenu');
+  if(toggle && menu){
+    toggle.addEventListener('click', function(){
+      toggle.classList.toggle('active');
+      menu.classList.toggle('active');
+      toggle.setAttribute('aria-expanded', menu.classList.contains('active'));
+    });
+    menu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        toggle.classList.remove('active');
+        menu.classList.remove('active');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+    document.addEventListener('click', (e) => {
+      if(!menu.contains(e.target) && !toggle.contains(e.target)) {
+        menu.classList.remove('active');
+        toggle.classList.remove('active');
+        toggle.setAttribute('aria-expanded', 'false');
       }
     });
-    
-    backToTop.addEventListener('click', () => {
-      window.scrollTo({ 
-        top: 0, 
-        behavior: 'smooth' 
-      });
-    });
-  })();
-} catch(error) {
-  console.warn('Back to top button failed:', error);
-}
+  }
+})();
 
-// Smooth Scroll for Anchor Links
-try {
-  (function(){
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        const href = this.getAttribute('href');
-        if(href === '#') return;
-        
-        e.preventDefault();
-        const target = document.querySelector(href);
-        if(target){
-          const offset = 70;
-          const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
-          
-          window.scrollTo({
-            top: targetPosition,
-            behavior: 'smooth'
-          });
-        }
-      });
-    });
-  })();
-} catch(error) {
-  console.warn('Smooth scroll failed:', error);
-}
+// Back to Top
+(function(){
+  const backToTop = document.getElementById('backToTop');
+  if(!backToTop) return;
+  window.addEventListener('scroll', () => {
+    if(window.pageYOffset > 300){
+      backToTop.classList.add('show');
+    } else {
+      backToTop.classList.remove('show');
+    }
+  });
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+})();
 
-// Initialize when DOM is ready
-document.addEventListener('DOMContentLoaded', function() {
-  console.log('TP Japan area page initialized');
-});
+// Smooth Scroll
+(function(){
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const href = this.getAttribute('href');
+      if(href === '#') return;
+      e.preventDefault();
+      const target = document.querySelector(href);
+      if(target){
+        const offset = 70;
+        const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+        window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+      }
+    });
+  });
+})();
+
+console.log('TP Area Around Office page initialized - Chinese bilingual version');
 </script>
 </body>
 </html>
