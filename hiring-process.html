@@ -369,7 +369,10 @@ nav a[aria-current="page"]::after {
 .btn-solid {
   background: var(--gold-primary);
   color: #000;
-  border-color: var(--gold-primary);
+  border: 2px solid var(--gold-primary);  /* ADD THIS LINE */
+  border-radius: 999px;  /* ADD THIS LINE */
+  padding: 0.85rem 1.2rem;  /* ADD THIS LINE */
+  font-weight: 900;  /* ADD THIS LINE */
 }
 
 .btn-solid:hover {
