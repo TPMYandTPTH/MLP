@@ -1,23 +1,23 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>なぜマレーシア・タイ | TP採用</title>
-<meta name="description" content="なぜ今、マレーシアやタイで働く人が増えているのか。英語環境、治安、生活コスト、住宅設備、アクセスの良さ、各都市（KL/ペナン/バンコク）の特色をまとめて紹介。">
+<title>马来西亚与泰国的魅力 | TP招聘</title>
+<meta name="description" content="为什么越来越多人选择在马来西亚和泰国工作？英语环境、治安、生活成本、住宅设施、交通便利、各城市（KL/槟城/曼谷）特色介绍。">
 <meta name="theme-color" content="#000000">
 <meta property="og:type" content="website">
-<meta property="og:locale" content="ja_JP">
-<meta property="og:title" content="なぜマレーシア・タイ | TP採用">
-<meta property="og:description" content="マレーシア・タイで働く魅力">
-<meta property="og:image" content="https://tpmyandtpth.github.io/JLP/photos/TPLogo11.png">
-<meta property="og:url" content="https://tpmyandtpth.github.io/JLP/why-malaysia-thailand.html">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:title" content="马来西亚与泰国的魅力 | TP招聘">
+<meta property="og:description" content="马来西亚·泰国工作的魅力">
+<meta property="og:image" content="https://tpmyandtpth.github.io/CLP/photos/TPLogo11.png">
+<meta property="og:url" content="https://tpmyandtpth.github.io/CLP/why-malaysia-thailand.html">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="なぜマレーシア・タイ | TP採用">
-<meta name="twitter:description" content="マレーシア・タイで働く魅力">
-<meta name="twitter:image" content="https://tpmyandtpth.github.io/JLP/photos/TPLogo11.png">
+<meta name="twitter:title" content="马来西亚与泰国的魅力 | TP招聘">
+<meta name="twitter:description" content="马来西亚·泰国工作的魅力">
+<meta name="twitter:image" content="https://tpmyandtpth.github.io/CLP/photos/TPLogo11.png">
 <meta name="robots" content="index,follow">
-<link rel="canonical" href="https://tpmyandtpth.github.io/JLP/why-malaysia-thailand.html">
+<link rel="canonical" href="https://tpmyandtpth.github.io/CLP/why-malaysia-thailand.html">
 <link rel="icon" href="photos/TPLogo11.png">
 <link rel="apple-touch-icon" href="photos/TPLogo11.png">
 
@@ -26,12 +26,11 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<!-- Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+<!-- Fonts - Chinese -->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&family=Noto+Serif+SC:wght@700;900&display=swap" rel="stylesheet">
 
-<!-- GLOBAL STYLES - From Template -->
 <style>
-/* CSS Variables */
+/* CSS Variables - GOLD THEME */
 :root {
   --tp-black: #000000;
   --tp-dark: #1a1a1a;
@@ -43,14 +42,17 @@
   --tp-light: #e5e5e5;
   --tp-off: #f5f5f5;
   --tp-white: #ffffff;
-  --accent-purple: #780096;
-  --accent-pink: #ff0082;
+  --gold-primary: #FFD700;
+  --gold-light: #FFAA00;
+  --gold-dark: #E6B800;
+  --gold-pale: #FFFBEB;
   --max: 1050px;
   --shadow-xs: 0 1px 2px rgba(0,0,0,0.05);
   --shadow-sm: 0 2px 4px rgba(0,0,0,0.08);
   --shadow-md: 0 4px 8px rgba(0,0,0,0.12);
   --shadow-lg: 0 8px 16px rgba(0,0,0,0.16);
   --shadow-xl: 0 16px 32px rgba(0,0,0,0.20);
+  --shadow-gold: 0 4px 12px rgba(255,215,0,0.3);
   --radius: 12px;
 }
 
@@ -66,12 +68,11 @@ html {
 }
 
 body {
-  font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
   color: var(--tp-dark);
   line-height: 1.75;
   background: var(--tp-white);
   -webkit-font-smoothing: antialiased;
-  font-feature-settings: "palt" 1;
 }
 
 a {
@@ -103,7 +104,75 @@ img {
   padding: 0 20px;
 }
 
-/* Header Styles */
+/* ===== BILINGUAL SYSTEM ===== */
+.local-only { display: block; }
+.expat-only { display: none; }
+span.local-only { display: inline; }
+span.expat-only { display: none; }
+
+body.expat-mode .local-only { display: none !important; }
+body.expat-mode .expat-only { display: block; }
+body.expat-mode span.expat-only { display: inline; }
+
+/* ===== LANGUAGE TOGGLE BANNER ===== */
+.lang-toggle-banner {
+  background: linear-gradient(135deg, var(--tp-black) 0%, var(--tp-charcoal) 100%);
+  color: var(--tp-white);
+  padding: 0.5rem 20px;
+  position: relative;
+  z-index: 1001;
+}
+
+.lang-toggle-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.lang-toggle-label {
+  font-size: 0.8rem;
+  color: var(--tp-silver);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.lang-toggle-buttons {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.lang-btn {
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--tp-silver);
+  font-family: inherit;
+}
+
+.lang-btn:hover {
+  color: var(--tp-white);
+  border-color: var(--tp-gray);
+}
+
+.lang-btn.active {
+  background: var(--gold-primary);
+  color: var(--tp-black);
+  border-color: var(--gold-primary);
+  font-weight: 700;
+}
+
+/* ===== HEADER ===== */
 header {
   position: sticky;
   top: 0;
@@ -175,7 +244,7 @@ nav a::after {
   left: 0;
   width: 0;
   height: 2px;
-  background: var(--tp-black);
+  background: var(--gold-primary);
   transition: width 0.3s ease;
 }
 
@@ -193,25 +262,25 @@ nav a[aria-current="page"]::after {
 }
 
 nav a:focus {
-  outline: 2px solid var(--accent-purple);
+  outline: 2px solid var(--gold-primary);
   outline-offset: 4px;
   border-radius: 2px;
 }
 
 .apply-btn {
-  background: var(--accent-purple);
-  color: var(--tp-white);
+  background: var(--gold-primary);
+  color: var(--tp-black);
   padding: 0.5rem 1.25rem;
   border-radius: 4px;
   font-weight: 600;
-  border: 2px solid var(--accent-purple);
+  border: 2px solid var(--gold-primary);
   transition: all 0.3s;
 }
 
 .apply-btn:hover,
 .apply-btn:focus {
-  background: var(--tp-white);
-  color: var(--accent-purple);
+  background: var(--tp-black);
+  color: var(--gold-primary);
 }
 
 .apply-btn::after {
@@ -294,51 +363,58 @@ nav a:focus {
   background: var(--tp-off);
 }
 
-/* Button Styles */
+/* ===== BUTTON STYLES ===== */
 .btn {
   padding: 0.85rem 1.2rem;
-  font-weight: 900;
+  font-weight: 700;
   border-radius: 999px;
   text-decoration: none;
   display: inline-block;
-  border: 2px solid var(--accent-purple);
-  color: var(--accent-purple);
+  border: 2px solid var(--gold-primary);
+  color: var(--gold-primary);
   transition: 0.2s;
+  background: transparent;
 }
 
 .btn:hover {
-  background: var(--accent-purple);
-  color: #fff;
+  background: var(--gold-primary);
+  color: var(--tp-black);
 }
 
 .btn-solid {
-  background: var(--accent-purple);
-  color: #fff;
-  border-color: var(--accent-purple);
+  background: var(--gold-primary);
+  color: var(--tp-black);
+  border-color: var(--gold-primary);
+  border-radius: 999px;
+  padding: 0.85rem 1.2rem;
+  font-weight: 700;
+  display: inline-block;
+  border: 2px solid var(--gold-primary);
 }
 
 .btn-solid:hover {
-  filter: brightness(.95);
+  background: var(--tp-black);
+  color: var(--gold-primary);
 }
 
-.btn-accent {
-  background: var(--accent-purple);
-  color: var(--tp-white);
-  border-color: var(--accent-purple);
+.btn-gold {
+  background: var(--gold-primary);
+  color: var(--tp-black);
+  border-color: var(--gold-primary);
   padding: 0.75rem 1.75rem;
   border-radius: 4px;
   font-weight: 600;
   font-size: 0.9rem;
 }
 
-.btn-accent:hover {
-  background: var(--tp-white);
-  color: var(--accent-purple);
+.btn-gold:hover {
+  background: var(--tp-black);
+  color: var(--gold-primary);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(120,0,150,0.15);
+  box-shadow: var(--shadow-gold);
 }
 
-/* Footer Styles */
+/* ===== FOOTER ===== */
 footer {
   background: var(--tp-black);
   color: var(--tp-white);
@@ -354,8 +430,8 @@ footer::before {
   top: 0;
   left: 0;
   right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--accent-purple), transparent);
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--gold-primary), transparent);
 }
 
 .footer-content {
@@ -404,6 +480,7 @@ footer::before {
   text-transform: uppercase;
   letter-spacing: 0.08em;
   opacity: 0.9;
+  color: var(--gold-primary);
 }
 
 .footer-section ul {
@@ -423,6 +500,7 @@ footer::before {
 .footer-section a:hover,
 .footer-section a:focus {
   opacity: 1;
+  color: var(--gold-primary);
   outline: none;
 }
 
@@ -440,6 +518,7 @@ footer::before {
   gap: 0.3rem;
   font-size: 0.8rem;
   opacity: 0.8;
+  color: var(--gold-primary);
 }
 
 .footer-cta {
@@ -451,6 +530,11 @@ footer::before {
   padding-top: 12px;
   font-size: 0.75rem;
   opacity: 0.6;
+}
+
+.footer-bottom .ssm-info {
+  margin-bottom: 0.5rem;
+  font-size: 0.7rem;
 }
 
 .footer-bottom a {
@@ -465,20 +549,20 @@ footer::before {
   outline: none;
 }
 
-/* Floating Buttons */
+/* ===== FLOATING BUTTONS ===== */
 .floating-apply {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: rgba(120, 0, 150, 0.9);
-  color: var(--tp-white);
+  background: rgba(255, 215, 0, 0.95);
+  color: var(--tp-black);
   padding: 0.75rem 1.25rem;
   border-radius: 50px;
   font-weight: 600;
-  box-shadow: 0 4px 12px rgba(120,0,150,0.3);
+  box-shadow: var(--shadow-gold);
   z-index: 999;
   transition: all 0.3s;
-  border: 2px solid var(--accent-purple);
+  border: 2px solid var(--gold-primary);
   font-size: 0.85rem;
   backdrop-filter: blur(10px);
 }
@@ -486,8 +570,8 @@ footer::before {
 .floating-apply:hover,
 .floating-apply:focus {
   transform: scale(1.05);
-  box-shadow: 0 6px 20px rgba(120,0,150,0.4);
-  background: var(--accent-purple);
+  box-shadow: 0 6px 20px rgba(255,215,0,0.4);
+  background: var(--gold-primary);
   outline: none;
 }
 
@@ -549,139 +633,54 @@ footer::before {
   transform: translateY(-2px);
 }
 
-/* Responsive Design */
-@media (max-width: 900px) {
-  nav {
-    display: none;
-  }
-  
-  .mobile-toggle {
-    display: block;
-  }
-  
-  .floating-casual {
-    bottom: 80px;
-    right: 20px;
-  }
-  
-  .back-to-top {
-    bottom: 140px;
-  }
-}
-
-@media (max-width: 768px) {
-  .footer-content {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-  
-  .floating-apply {
-    bottom: 14px;
-    right: 14px;
-    padding: 0.625rem 1rem;
-    font-size: 0.8rem;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation: none !important;
-    transition: none !important;
-  }
-  
-  html {
-    scroll-behavior: auto;
-  }
-}
-
-/* PAGE SPECIFIC STYLES - Why Malaysia & Thailand */
+/* ===== HERO SECTION ===== */
 .hero {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(135deg, var(--tp-white) 0%, var(--tp-off) 100%);
+  background: linear-gradient(135deg, var(--tp-black) 0%, var(--tp-charcoal) 100%);
   padding: 3.6rem 20px;
   text-align: center;
+  color: var(--tp-white);
 }
 
 .hero::before {
-  content: '';
+  content: '华';
   position: absolute;
   top: 50%;
-  right: 6%;
-  width: clamp(220px, 32vw, 480px);
-  height: clamp(220px, 32vw, 480px);
-  background-image: url('photos/TPLogo11.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  opacity: 0.04;
-  filter: saturate(0);
+  right: 5%;
+  font-size: clamp(150px, 25vw, 350px);
+  font-weight: 900;
+  font-family: 'Noto Serif SC', serif;
+  opacity: 0.03;
   transform: translateY(-50%);
   pointer-events: none;
+  color: var(--gold-primary);
 }
 
 .hero h1 {
-  font-size: 2.4rem;
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
   font-weight: 900;
-  color: #000;
-  margin-bottom: 0.45rem;
+  color: var(--gold-primary);
+  margin-bottom: 0.5rem;
+  font-family: 'Noto Serif SC', serif;
 }
 
 .hero p {
-  color: var(--tp-gray-dark);
+  color: var(--tp-silver);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.8;
 }
 
 .hero-cta {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   display: flex;
-  gap: 0.6rem;
+  gap: 0.75rem;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-/* In-page navigation */
-.subnav {
-  position: sticky;
-  top: 60px;
-  z-index: 900;
-  background: #000;
-  color: #fff;
-  border-bottom: 1px solid #222;
-}
-
-.subnav .inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0.65rem 20px;
-  display: flex;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.chip {
-  padding: 0.45rem 0.8rem;
-  border: 1px solid #555;
-  border-radius: 999px;
-  background: transparent;
-  color: #fff;
-  font-weight: 800;
-  font-size: 0.9rem;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.chip:hover {
-  background: rgba(255,255,255,0.08);
-}
-
-.chip.active {
-  background: #fff;
-  color: #000;
-  border-color: #fff;
-}
-
-/* Sections */
+/* ===== SECTION STYLES ===== */
 .section {
   max-width: 1200px;
   margin: 2rem auto;
@@ -690,9 +689,10 @@ footer::before {
 
 .section h2 {
   font-size: 1.6rem;
-  color: #000;
+  color: var(--tp-black);
   font-weight: 900;
   margin-bottom: 0.6rem;
+  font-family: 'Noto Serif SC', serif;
 }
 
 .lead {
@@ -708,17 +708,23 @@ footer::before {
 }
 
 .card {
-  background: #fff;
+  background: var(--tp-white);
   border: 1px solid var(--tp-light);
   border-radius: var(--radius);
-  padding: 1.1rem;
+  padding: 1.25rem;
   box-shadow: var(--shadow-sm);
+  transition: all 0.3s;
+}
+
+.card:hover {
+  border-color: var(--gold-primary);
+  box-shadow: var(--shadow-md);
 }
 
 .card h3 {
   font-size: 1.05rem;
   margin-bottom: 0.35rem;
-  color: #000;
+  color: var(--tp-black);
 }
 
 .card p {
@@ -737,19 +743,28 @@ footer::before {
   grid-template-columns: 1.2fr 0.8fr;
   gap: 1rem;
   align-items: start;
-  background: #fff;
+  background: var(--tp-white);
   border: 1px solid var(--tp-light);
   border-radius: var(--radius);
-  padding: 1.1rem;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+  transition: all 0.3s;
+}
+
+.city:hover {
+  border-color: var(--gold-primary);
+  box-shadow: var(--shadow-md);
 }
 
 .city h3 {
   font-size: 1.2rem;
   margin-bottom: 0.35rem;
+  color: var(--tp-black);
 }
 
 .city ul {
   margin-left: 1rem;
+  color: var(--tp-gray-dark);
 }
 
 .gallery {
@@ -762,7 +777,7 @@ footer::before {
   aspect-ratio: 4/3;
   border-radius: 10px;
   overflow: hidden;
-  background: #eee center/cover no-repeat;
+  background: var(--tp-light) center/cover no-repeat;
 }
 
 /* List columns */
@@ -784,60 +799,67 @@ footer::before {
 .mini-table td {
   border: 1px solid var(--tp-light);
   padding: 0.6rem 0.7rem;
-}
-
-.mini-table th {
-  background: var(--tp-off);
   text-align: left;
 }
 
-/* Helper */
+.mini-table th {
+  background: var(--gold-pale);
+  color: var(--tp-black);
+  font-weight: 700;
+}
+
+/* Helper section */
 .helper {
-  background: #fff;
-  border-top: 1px solid var(--tp-light);
-  border-bottom: 1px solid var(--tp-light);
-  padding: 2rem 20px;
+  background: linear-gradient(135deg, var(--tp-black) 0%, var(--tp-charcoal) 100%);
+  color: var(--tp-white);
+  padding: 2.5rem 20px;
   margin: 2rem 0;
+  text-align: center;
 }
 
 .helper .inner {
   max-width: 1000px;
   margin: 0 auto;
-  text-align: center;
 }
 
 .helper h2 {
   font-size: 1.6rem;
   font-weight: 900;
-  color: #000;
-  margin-bottom: 0.4rem;
+  color: var(--gold-primary);
+  margin-bottom: 0.5rem;
+  font-family: 'Noto Serif SC', serif;
 }
 
 .helper p {
+  color: var(--tp-silver);
+}
+
+.helper a {
+  color: var(--gold-primary);
+}
+
+/* Employee quote */
+.quote-block {
+  margin-top: 1rem;
+  background: var(--gold-pale);
+  border-left: 4px solid var(--gold-primary);
+  padding: 1rem 1.25rem;
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+.quote-block blockquote {
+  margin: 0;
+  font-style: italic;
   color: var(--tp-gray-dark);
 }
 
-/* Team photos strip */
-.team-strip {
-  max-width: 1200px;
-  margin: 2rem auto 3rem;
-  padding: 0 20px;
+.quote-block figcaption {
+  color: var(--tp-gray);
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
 }
 
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0.6rem;
-}
-
-.team-grid div {
-  aspect-ratio: 4/3;
-  border-radius: 10px;
-  overflow: hidden;
-  background: #eee center/cover no-repeat;
-}
-
-/* Responsive for page specific styles */
+/* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 980px) {
   .cards {
     grid-template-columns: repeat(2, 1fr);
@@ -845,12 +867,25 @@ footer::before {
 }
 
 @media (max-width: 900px) {
+  nav {
+    display: none;
+  }
+  
+  .mobile-toggle {
+    display: block;
+  }
+  
   .city {
     grid-template-columns: 1fr;
   }
   
-  .team-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .floating-casual {
+    bottom: 80px;
+    right: 20px;
+  }
+  
+  .back-to-top {
+    bottom: 140px;
   }
 }
 
@@ -860,54 +895,98 @@ footer::before {
   }
 }
 
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .floating-apply {
+    bottom: 14px;
+    right: 14px;
+    padding: 0.625rem 1rem;
+    font-size: 0.8rem;
+  }
+  
+  .lang-toggle-inner {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
 @media (max-width: 640px) {
   .cards {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+  
+  html {
+    scroll-behavior: auto;
   }
 }
 </style>
 </head>
 <body>
 <!-- Skip Navigation -->
-<a href="#main" class="sr-only">メインコンテンツへスキップ</a>
+<a href="#main" class="sr-only">跳转到主要内容</a>
+
+<!-- LANGUAGE TOGGLE BANNER -->
+<div class="lang-toggle-banner">
+  <div class="lang-toggle-inner">
+    <span class="lang-toggle-label">🌐 选择语言版本</span>
+    <div class="lang-toggle-buttons">
+      <button class="lang-btn active" id="langLocal" onclick="setLanguage('local')">🇲🇾 本地华人</button>
+      <button class="lang-btn" id="langExpat" onclick="setLanguage('expat')">🌏 海外华人</button>
+    </div>
+  </div>
+</div>
 
 <!-- HEADER -->
 <header role="banner">
   <div class="header-inner">
-    <a class="brand" href="https://tpmyandtpth.github.io/JLP/index.html">
-      <img src="photos/TPLogo11.png" alt="TP Japan" width="40" height="40">
+    <a class="brand" href="index.html">
+      <img src="photos/TPLogo11.png" alt="TP Logo" width="40" height="40">
       <div class="brand-text">
         <span class="brand-name">TP</span>
-        <span class="brand-tagline">日本採用 — マレーシア・タイ</span>
+        <span class="brand-tagline">
+          <span class="local-only">Malaysia·Thailand</span>
+          <span class="expat-only">马来西亚·泰国</span>
+        </span>
       </div>
     </a>
 
-    <nav aria-label="メインナビゲーション">
+    <nav aria-label="主导航">
       <ul>
-        <li><a href="https://tpmyandtpth.github.io/JLP/index.html">ホーム</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/about-tp.html">TPについて</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/salary-and-benefits.html">給与・福利厚生</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/interview-process.html">面接プロセス</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/why-malaysia-thailand.html" aria-current="page">なぜマレーシア・タイ</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/relocation-visa.html">移住・ビザサポート</a></li>
-        <li><a href="https://careerseng-teleperformance.icims.com/jobs/49026/customer-service-representative---japanese-speaking-%28kl%29/job?mode=job&iis=LANDINGPAGE" target="_blank" rel="noopener noreferrer" class="apply-btn">応募する</a></li>
+        <li><a href="index.html"><span class="local-only">Home</span><span class="expat-only">首页</span></a></li>
+        <li><a href="about-tp.html"><span class="local-only">About TP</span><span class="expat-only">关于TP</span></a></li>
+        <li><a href="salary-and-benefits.html"><span class="local-only">Benefits</span><span class="expat-only">薪资福利</span></a></li>
+        <li><a href="hiring-process.html"><span class="local-only">Hiring Process</span><span class="expat-only">招聘流程</span></a></li>
+        <li><a href="why-malaysia-thailand.html" aria-current="page">城市介绍</a></li>
+        <li><a href="relocation-visa.html"><span class="local-only">Visa Support</span><span class="expat-only">签证支持</span></a></li>
+        <li><a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=chinese" target="_blank" rel="noopener noreferrer" class="apply-btn"><span class="local-only">Apply Now</span><span class="expat-only">立即申请</span></a></li>
       </ul>
     </nav>
 
-    <button class="mobile-toggle" id="mobileToggle" aria-label="メニューを開く" aria-expanded="false">
+    <button class="mobile-toggle" id="mobileToggle" aria-label="打开菜单" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
 
-  <nav class="mobile-menu" id="mobileMenu" aria-label="モバイルナビゲーション">
+  <nav class="mobile-menu" id="mobileMenu" aria-label="移动导航">
     <ul>
-      <li><a href="https://tpmyandtpth.github.io/JLP/index.html">ホーム</a></li>
-      <li><a href="https://tpmyandtpth.github.io/JLP/about-tp.html">TPについて</a></li>
-      <li><a href="https://tpmyandtpth.github.io/JLP/salary-and-benefits.html">給与・福利厚生</a></li>
-      <li><a href="https://tpmyandtpth.github.io/JLP/interview-process.html">面接プロセス</a></li>
-      <li><a href="https://tpmyandtpth.github.io/JLP/why-malaysia-thailand.html" aria-current="page">なぜマレーシア・タイ</a></li>
-      <li><a href="https://tpmyandtpth.github.io/JLP/relocation-visa.html">移住・ビザサポート</a></li>
-      <li><a href="https://careerseng-teleperformance.icims.com/jobs/49026/customer-service-representative---japanese-speaking-%28kl%29/job?mode=job&iis=LANDINGPAGE" target="_blank" rel="noopener noreferrer" class="apply-btn">応募する</a></li>
+      <li><a href="index.html"><span class="local-only">Home</span><span class="expat-only">首页</span></a></li>
+      <li><a href="about-tp.html"><span class="local-only">About TP</span><span class="expat-only">关于TP</span></a></li>
+      <li><a href="salary-and-benefits.html"><span class="local-only">Benefits</span><span class="expat-only">薪资福利</span></a></li>
+      <li><a href="hiring-process.html"><span class="local-only">Hiring Process</span><span class="expat-only">招聘流程</span></a></li>
+      <li><a href="why-malaysia-thailand.html" aria-current="page">城市介绍</a></li>
+      <li><a href="relocation-visa.html"><span class="local-only">Visa Support</span><span class="expat-only">签证支持</span></a></li>
+      <li><a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=chinese" target="_blank" rel="noopener noreferrer" class="apply-btn"><span class="local-only">Apply Now</span><span class="expat-only">立即申请</span></a></li>
     </ul>
   </nav>
 </header>
@@ -915,247 +994,292 @@ footer::before {
 <main id="main">
   <!-- Hero -->
   <section class="hero">
-    <h1>"暮らすように、海外で働く。"</h1>
-    <p>あなたの新しいキャリアの舞台に、<strong>マレーシア / タイ</strong>という選択を。<br>
-      多国籍な環境、日本語を活かせる仕事、抑えられる生活コスト、設備充実の住まい。<br>
-      そんな "ちょうどいい" 海外生活、ここから始めませんか？</p>
-    <div class="hero-cta" role="group" aria-label="関連ページ">
-      <a class="btn-solid" href="https://tpmyandtpth.github.io/JLP/open-jobs.html">求人を見る</a>
-      <a class="btn" href="https://tpmyandtpth.github.io/JLP/relocation-visa.html">移住サポートを見る</a>
+    <h1>
+      <span class="local-only">"像local一样，overseas工作。"</span>
+      <span class="expat-only">"像本地人一样，在海外工作。"</span>
+    </h1>
+    <p>
+      <span class="local-only">你的new career舞台，<strong>Malaysia / Thailand</strong>是个好choice。<br>
+      Multinational的environment、华语可以用的job、affordable的生活cost、设备齐全的住所。<br>
+      这种"刚刚好"的overseas life，要不要从这里start？</span>
+      <span class="expat-only">你的新职业舞台，<strong>马来西亚 / 泰国</strong>是个好选择。<br>
+      多国籍的环境、华语可以用的工作、实惠的生活成本、设备齐全的住所。<br>
+      这种"刚刚好"的海外生活，要不要从这里开始？</span>
+    </p>
+    <div class="hero-cta" role="group" aria-label="相关操作">
+      <a class="btn-solid" href="open-jobs.html"><span class="local-only">View Jobs</span><span class="expat-only">查看职位</span></a>
+      <a class="btn" href="relocation-visa.html"><span class="local-only">Relocation Support</span><span class="expat-only">搬迁支持</span></a>
     </div>
   </section>
 
-  <!-- In-page nav -->
-  <div class="subnav" role="navigation" aria-label="ページ内ナビ">
-    <div class="inner">
-      <a class="chip active" href="#why">概要</a>
-      <a class="chip" href="#why-malaysia">Why Malaysia?</a>
-      <a class="chip" href="#kl">クアラルンプール</a>
-      <a class="chip" href="#penang">ペナン</a>
-      <a class="chip" href="#bangkok">バンコク</a>
-      <a class="chip" href="#culture">多国籍文化</a>
-      <a class="chip" href="#lifestyle">週末・アクティビティ</a>
-      <a class="chip" href="#travel">アクセスの良さ</a>
-      <a class="chip" href="#cost">生活コスト</a>
-      <a class="chip" href="#tour">バーチャルオフィスツアー</a>
-    </div>
-  </div>
-
-  <!-- All original sections preserved exactly as in the original file -->
   <!-- Why summary -->
   <section class="section" id="why" aria-labelledby="why-title">
-    <h2 id="why-title">なぜ、マレーシア/タイ？</h2>
-    <p class="lead">"観光地"ではなく"暮らす場所"として選ばれている理由。</p>
+    <h2 id="why-title">
+      <span class="local-only">Malaysia和Thailand被选择的Reason</span>
+      <span class="expat-only">马来西亚和泰国被选择的理由</span>
+    </h2>
+    <p class="lead">
+      <span class="local-only">不是"tourist destination"而是"living place"被选择的reason。</span>
+      <span class="expat-only">不是"旅游目的地"而是"生活的地方"被选择的理由。</span>
+    </p>
     <div class="cards">
       <div class="card">
-        <h3>英語が広く通じる</h3>
-        <p>日常生活から官公庁、オフィスまで英語がベース。日本語ポジションからスタートして、自然に英語に触れられます。</p>
+        <h3><span class="local-only">English广泛通用</span><span class="expat-only">英语广泛通用</span></h3>
+        <p>
+          <span class="local-only">从daily life到office，English是base。从华语position开始，naturally接触English。</span>
+          <span class="expat-only">从日常生活到办公室，英语是基础。从华语职位开始，自然接触英语。</span>
+        </p>
       </div>
       <div class="card">
-        <h3>安定した治安と親日</h3>
-        <p>大都市はインフラや医療が充実。日本語対応の病院・クリニックも多数で安心。</p>
+        <h3><span class="local-only">Stable的治安和亲华</span><span class="expat-only">稳定的治安和亲华</span></h3>
+        <p>
+          <span class="local-only">Big city的infrastructure和medical都很complete。华语service的hospital、clinic也很多，很安心。</span>
+          <span class="expat-only">大城市的基础设施和医疗都很完善。华语服务的医院、诊所也很多，很安心。</span>
+        </p>
       </div>
       <div class="card">
-        <h3>日本より抑えられる生活コスト</h3>
-        <p>外食・交通・住居費がリーズナブル。時間にもお金にも"ゆとり"が生まれます。</p>
+        <h3><span class="local-only">比China更Affordable的生活Cost</span><span class="expat-only">比中国更实惠的生活成本</span></h3>
+        <p>
+          <span class="local-only">外食、交通、住房费用都很reasonable。Time和money都有"余裕"。</span>
+          <span class="expat-only">外食、交通、住房费用都很合理。时间和金钱都有"余裕"。</span>
+        </p>
       </div>
       <div class="card">
-        <h3>設備充実のコンドミニアム</h3>
-        <p>24hセキュリティ、<strong>プール/ジム/サウナ</strong>が標準的。家具家電付きで到着すぐ生活開始。</p>
+        <h3><span class="local-only">设备齐全的Condominium</span><span class="expat-only">设备齐全的公寓</span></h3>
+        <p>
+          <span class="local-only">24h Security、Pool/Gym/Sauna，房间一般都有家具家电，arrive后马上可以开始生活。※depends on condo</span>
+          <span class="expat-only">24小时保安、泳池/健身房/桑拿，房间一般都有家具家电，到达后马上可以开始生活。※视公寓而定</span>
+        </p>
       </div>
       <div class="card">
-        <h3>移住初心者にやさしい</h3>
-        <p>就労ビザ申請サポート、空港送迎、到着後の一時滞在先（MY）など、初めてでも安心の体制。</p>
+        <h3><span class="local-only">对Relocation新手很Friendly</span><span class="expat-only">对搬迁新手很友好</span></h3>
+        <p>
+          <span class="local-only">Work visa申请support、airport pickup、arrival后的temporary stay（MY）等，first time也很安心的system。</span>
+          <span class="expat-only">工作签证申请支持、机场接机、到达后的临时住宿（马来西亚）等，第一次也很安心的体制。</span>
+        </p>
       </div>
       <div class="card">
-        <h3>日本語サポートの安心感</h3>
-        <p>チーム内に日本人スタッフが在籍。初めての海外でも相談しやすい環境。</p>
+        <h3><span class="local-only">华语Support的安心感</span><span class="expat-only">华语支持的安心感</span></h3>
+        <p>
+          <span class="local-only">Team里有华语staff。First time overseas也容易consult的environment。</span>
+          <span class="expat-only">团队里有华语员工。第一次海外也容易咨询的环境。</span>
+        </p>
       </div>
       <div class="card">
-        <h3>アジアのハブ</h3>
-        <p>KL・BKKから日本/アジア/欧州などへ直行便多数。LCCで週末海外旅行も身近。</p>
+        <h3><span class="local-only">Asia的Hub</span><span class="expat-only">亚洲的枢纽</span></h3>
+        <p>
+          <span class="local-only">从KL·BKK到China/Asia/Europe等direct flight很多。LCC的weekend海外trip也很easy。</span>
+          <span class="expat-only">从吉隆坡·曼谷到中国/亚洲/欧洲等直飞航班很多。廉航的周末海外旅行也很容易。</span>
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- Why Malaysia? mini-section -->
+  <!-- Why Malaysia? -->
   <section class="section" id="why-malaysia">
-    <h2>🌏 Why Malaysia? ― なぜ今マレーシアで働く人が増えているのか</h2>
-    <p class="lead">"観光地"ではなく、"暮らす場所"として選ばれる国。</p>
+    <h2>
+      <span class="local-only">🌏 Why Malaysia? — 为什么现在越来越多人在Malaysia工作</span>
+      <span class="expat-only">🌏 Why Malaysia? — 为什么现在越来越多人在马来西亚工作</span>
+    </h2>
+    <p class="lead">
+      <span class="local-only">不是"tourist destination"而是"living place"被选择的country。</span>
+      <span class="expat-only">不是"旅游目的地"而是"生活的地方"被选择的国家。</span>
+    </p>
 
     <div class="cards">
       <div class="card">
-        <h3>英語が通じる安心感</h3>
-        <p>日常〜職場まで英語ベース。日本語ポジションから始めて、段階的に英語へ。</p>
+        <h3><span class="local-only">English通用的安心感</span><span class="expat-only">英语通用的安心感</span></h3>
+        <p>
+          <span class="local-only">从daily到workplace都是English base。从华语position开始，step by step接触English。</span>
+          <span class="expat-only">从日常到职场都是英语基础。从华语职位开始，循序渐进接触英语。</span>
+        </p>
       </div>
       <div class="card">
-        <h3>治安が安定・親日的</h3>
-        <p>医療・インフラが整い、日本語対応の病院・クリニックも多数。</p>
+        <h3><span class="local-only">治安Stable·亲华</span><span class="expat-only">治安稳定·亲华</span></h3>
+        <p>
+          <span class="local-only">Medical、infrastructure都很complete，华语service的hospital、clinic也很多。</span>
+          <span class="expat-only">医疗、基础设施都很完善，华语服务的医院、诊所也很多。</span>
+        </p>
       </div>
       <div class="card">
-        <h3>日本より"ゆとり"のある生活</h3>
-        <p>住居/外食/交通がリーズナブル。時間にも心にも余裕が生まれます。</p>
+        <h3><span class="local-only">比China更有"余裕"的生活</span><span class="expat-only">比中国更有"余裕"的生活</span></h3>
+        <p>
+          <span class="local-only">住房/外食/交通都很reasonable。Time和心都有余裕。</span>
+          <span class="expat-only">住房/外食/交通都很合理。时间和心都有余裕。</span>
+        </p>
       </div>
       <div class="card">
-        <h3>仕事も暮らしも、無理なく</h3>
+        <h3><span class="local-only">Work也Life也，无压力</span><span class="expat-only">工作也生活也，无压力</span></h3>
         <ul>
-          <li>日本語中心のお仕事が多数</li>
-          <li><strong>チームに日本人スタッフも在籍</strong></li>
-          <li>ビザ・住居サポートあり</li>
-          <li><strong>現地採用でも正社員・昇進あり</strong></li>
+          <li><span class="local-only">华语为main的job很多</span><span class="expat-only">华语为主的工作很多</span></li>
+          <li><strong><span class="local-only">Team里有华语staff</span><span class="expat-only">团队里有华语员工</span></strong></li>
+          <li><span class="local-only">Visa、住房support有</span><span class="expat-only">签证、住房支持有</span></li>
+          <li><strong><span class="local-only">Local hire也是正式员工、有promotion</span><span class="expat-only">本地聘用也是正式员工、有晋升</span></strong></li>
         </ul>
       </div>
     </div>
 
-    <!-- Employee voice -->
-    <figure style="margin-top:1rem;">
-      <blockquote style="border-left:4px solid #eee;padding:0.6rem 1rem;margin:0;">
-        「英語が苦手でも、日本語メインの仕事からスタートできたので安心でした。」
+    <!-- Employee quote -->
+    <figure class="quote-block">
+      <blockquote>
+        <span class="local-only">"虽然English不是很confident，但是可以从华语main的job开始，所以很安心。"</span>
+        <span class="expat-only">"虽然英语不是很自信，但是可以从华语为主的工作开始，所以很安心。"</span>
       </blockquote>
-      <figcaption style="color:#666;margin-top:0.3rem;">— 元営業職・30代スタッフ</figcaption>
+      <figcaption>
+        <span class="local-only">— 前销售、30代Staff</span>
+        <span class="expat-only">— 前销售、30多岁员工</span>
+      </figcaption>
     </figure>
-
-    <!-- Media placeholders -->
-    <div class="gallery" style="margin-top:1rem;">
-      <div class="photo" style="background-image:url('photos/office_lunch.jpg')" aria-label="オフィスのランチ風景の写真"></div>
-      <div class="photo" style="background-image:url('photos/office_floor.jpg')" aria-label="オフィスフロアの写真"></div>
-    </div>
-
-    <div style="margin-top:1rem;">
-      <video src="videos/workplace_tour.mp4" controls style="width:100%;max-width:720px;border-radius:12px;"></video>
-      <p class="lead" style="margin-top:0.4rem;">🎥 職場ツアー・社員インタビュー（ダイジェスト）</p>
-    </div>
   </section>
 
   <!-- KL -->
   <section class="section" id="kl" aria-labelledby="kl-title">
-    <h2 id="kl-title">マレーシア・クアラルンプール（KL）</h2>
+    <h2 id="kl-title">
+      <span class="local-only">Malaysia·Kuala Lumpur（KL）</span>
+      <span class="expat-only">马来西亚·吉隆坡（KL）</span>
+    </h2>
     <div class="city">
       <div>
-        <h3>都市の利便性 × 多文化 × 日本語サポート</h3>
+        <h3>
+          <span class="local-only">City的便利 × 多文化 × 华语Support</span>
+          <span class="expat-only">城市的便利 × 多文化 × 华语支持</span>
+        </h3>
         <ul>
-          <li><strong>MRT/モノレール/Grab</strong>で移動が快適。通勤ストレスが少ない。</li>
-          <li><strong>ドン・キホーテ / AEON / 伊勢丹 / 日本食レストラン</strong>が多数。</li>
-          <li>日本語対応の病院、日本人学校、日本人会も充実。</li>
-          <li>人気エリア（<strong>Mont Kiara / KLCC</strong>）はコンドミニアム設備が豪華、家賃は日本より安価。</li>
-          <li>KLIAから<strong>日本（東京・大阪・福岡・北海道）</strong>やアジア各都市へ直行便多数。</li>
+          <li><span class="local-only"><strong>MRT/Monorail/Grab</strong>移动很comfortable。通勤stress很少。</span><span class="expat-only"><strong>MRT/单轨/Grab</strong>移动很舒适。通勤压力很少。</span></li>
+          <li><span class="local-only"><strong>Don Quijote / AEON / ISETAN / 中餐厅</strong>很多。</span><span class="expat-only"><strong>唐吉诃德 / 永旺 / 伊势丹 / 中餐厅</strong>很多。</span></li>
+          <li><span class="local-only">华语service的hospital、华人学校、华人会都很complete。</span><span class="expat-only">华语服务的医院、华人学校、华人会都很完善。</span></li>
+          <li><span class="local-only">Popular area（<strong>Mont Kiara / KLCC</strong>）的condominium设备豪华，rent比China便宜。</span><span class="expat-only">热门区域（<strong>满家乐 / 双子塔</strong>）的公寓设备豪华，租金比中国便宜。</span></li>
+          <li><span class="local-only">从KLIA到<strong>China（北京·上海·广州·深圳）</strong>和Asia各city有很多direct flight。</span><span class="expat-only">从吉隆坡国际机场到<strong>中国（北京·上海·广州·深圳）</strong>和亚洲各城市有很多直飞航班。</span></li>
         </ul>
-        <p class="lead"><strong>おすすめ：</strong>都市の便利さも妥協したくない/海外生活に不安があり日本に近い暮らしが良い方。</p>
-      </div>
-      <div class="gallery" aria-label="KLフォト">
-        <div class="photo" style="background-image:url('photos/kl_city_1.jpg')" aria-label="KLの街並みの写真"></div>
-        <div class="photo" style="background-image:url('photos/kl_city_2.jpg')" aria-label="KLのショッピングモールの写真"></div>
+        <p class="lead">
+          <strong><span class="local-only">推荐给：</span><span class="expat-only">推荐给：</span></strong>
+          <span class="local-only">不想compromise city的便利/overseas life有不安、想要接近China的生活的人。</span>
+          <span class="expat-only">不想妥协城市的便利/海外生活有不安、想要接近中国的生活的人。</span>
+        </p>
       </div>
     </div>
   </section>
 
   <!-- Penang -->
   <section class="section" id="penang" aria-labelledby="penang-title">
-    <h2 id="penang-title">マレーシア・ペナン（Penang）</h2>
+    <h2 id="penang-title">
+      <span class="local-only">Malaysia·Penang（槟城）</span>
+      <span class="expat-only">马来西亚·槟城（Penang）</span>
+    </h2>
     <div class="city">
       <div>
-        <h3>自然 × 歴史 × 落ち着きのある島ライフ</h3>
+        <h3>
+          <span class="local-only">Nature × History × 安静的Island Life</span>
+          <span class="expat-only">自然 × 历史 × 安静的岛屿生活</span>
+        </h3>
         <ul>
-          <li>世界遺産のジョージタウン。カフェや街歩きが楽しい。</li>
-          <li>海に近く眺望の良い物件が多く、KLよりやや生活費が安い傾向。</li>
-          <li>日本語医療や通訳サービスもあり、長期滞在に人気。</li>
-          <li>家族帯同にも向き、治安は比較的安定。</li>
-          <li><strong>海の見える高層コンド</strong>が月<span style="white-space:nowrap;">5万円前後〜</span>の目安（設備：プール/ジム/セキュリティ）。※相場は時期や立地で変動</li>
+          <li><span class="local-only">World Heritage的George Town。Cafe和街walk很enjoyable。</span><span class="expat-only">世界遗产的乔治城。咖啡馆和街头漫步很愉快。</span></li>
+          <li><span class="local-only">靠近海，view好的property很多，生活费比KL稍微cheap一点。</span><span class="expat-only">靠近海，景观好的房产很多，生活费比吉隆坡稍微便宜一点。</span></li>
+          <li><span class="local-only">华语medical和翻译service也有，long stay很popular。</span><span class="expat-only">华语医疗和翻译服务也有，长期居住很受欢迎。</span></li>
+          <li><span class="local-only">Family一起也适合，治安比较stable。</span><span class="expat-only">带家人一起也适合，治安比较稳定。</span></li>
+          <li><span class="local-only"><strong>海景高层condo</strong>大概月<span style="white-space:nowrap;">￥2500左右起</span>（设备：Pool/Gym/Security）。※market price随时期和location变动</span><span class="expat-only"><strong>海景高层公寓</strong>大概月<span style="white-space:nowrap;">2500元左右起</span>（设备：泳池/健身房/保安）。※市场价格随时期和位置变动</span></li>
         </ul>
-        <p class="lead"><strong>おすすめ：</strong>静かで落ち着いた環境で働きたい/自然と都会のバランスを大切にしたい方。</p>
-      </div>
-      <div class="gallery" aria-label="ペナンフォト">
-        <div class="photo" style="background-image:url('photos/penang_1.jpg')" aria-label="ペナンの海の写真"></div>
-        <div class="photo" style="background-image:url('photos/penang_2.jpg')" aria-label="ジョージタウンの街並みの写真"></div>
+        <p class="lead">
+          <strong><span class="local-only">推荐给：</span><span class="expat-only">推荐给：</span></strong>
+          <span class="local-only">想在quiet、relax的environment工作/重视nature和city的balance的人。</span>
+          <span class="expat-only">想在安静、放松的环境工作/重视自然和城市的平衡的人。</span>
+        </p>
       </div>
     </div>
   </section>
 
   <!-- Bangkok -->
   <section class="section" id="bangkok" aria-labelledby="bkk-title">
-    <h2 id="bkk-title">タイ・バンコク（Bangkok）</h2>
+    <h2 id="bkk-title">
+      <span class="local-only">Thailand·Bangkok（曼谷）</span>
+      <span class="expat-only">泰国·曼谷（Bangkok）</span>
+    </h2>
     <div class="city">
       <div>
-        <h3>"東南アジアの東京"と言われる超便利都市</h3>
+        <h3>
+          <span class="local-only">被称为"Southeast Asia的Tokyo"的超便利City</span>
+          <span class="expat-only">被称为"东南亚的东京"的超便利城市</span>
+        </h3>
         <ul>
-          <li>日本人が多数居住（<strong>約8万人以上</strong>）。<strong>フジスーパー / 日本食 / 日本語対応病院</strong>など施設が超充実。</li>
-          <li><strong>BTS/MRT</strong>が発達。家具付きコンド（プール/ジム）で家賃は東京の約半額感。</li>
-          <li>人々は親日的で温かい雰囲気。働きやすい環境。</li>
-          <li>2空港（BKK/DMK）から国内外へ直行便が豊富。</li>
+          <li><span class="local-only">很多华人居住（<strong>约5万人以上</strong>）。<strong>中国超市 / 中餐 / 华语hospital</strong>等facility超complete。</span><span class="expat-only">很多华人居住（<strong>约5万人以上</strong>）。<strong>中国超市 / 中餐 / 华语医院</strong>等设施超完善。</span></li>
+          <li><span class="local-only"><strong>BTS/MRT</strong>发达。家具付condo（Pool/Gym）rent大概是北京的一半感觉。</span><span class="expat-only"><strong>轻轨/地铁</strong>发达。带家具公寓（泳池/健身房）租金大概是北京的一半感觉。</span></li>
+          <li><span class="local-only">People亲华、atmosphere很warm。很容易work的environment。</span><span class="expat-only">人们亲华、氛围很温暖。很容易工作的环境。</span></li>
+          <li><span class="local-only">2个airport（BKK/DMK）到国内外的direct flight很rich。</span><span class="expat-only">2个机场（素万那普/廊曼）到国内外的直飞航班很丰富。</span></li>
         </ul>
-        <p class="lead"><strong>おすすめ：</strong>とにかく便利な場所で海外経験を積みたい/日本に近い生活感を保ちたい方。</p>
-      </div>
-      <div class="gallery" aria-label="バンコクフォト">
-        <div class="photo" style="background-image:url('photos/bangkok_1.jpg')" aria-label="バンコクの夜景の写真"></div>
-        <div class="photo" style="background-image:url('photos/bangkok_2.jpg')" aria-label="BTS駅周辺の写真"></div>
+        <p class="lead">
+          <strong><span class="local-only">推荐给：</span><span class="expat-only">推荐给：</span></strong>
+          <span class="local-only">想在super convenient的place积累overseas experience/想keep接近China的生活feel的人。</span>
+          <span class="expat-only">想在超便利的地方积累海外经验/想保持接近中国的生活感觉的人。</span>
+        </p>
       </div>
     </div>
   </section>
 
   <!-- Culture & festivals -->
   <section class="section" id="culture">
-    <h2>🌈 多国籍文化と"ちょうどいい距離感"</h2>
-    <p class="lead">マレー系・中華系・インド系が共存する社会。外国人でも"違って当たり前"。</p>
+    <h2>
+      <span class="local-only">Multinational文化和"刚刚好的距离感"</span>
+      <span class="expat-only">多国籍文化和"刚刚好的距离感"</span>
+    </h2>
+    <p class="lead">
+      <span class="local-only">Malay系、Chinese系、Indian系共存的society。Foreigner也是"different is normal"。</span>
+      <span class="expat-only">马来系、华人系、印度系共存的社会。外国人也是"不同是正常"。</span>
+    </p>
 
     <div class="cards">
       <div class="card">
-        <h3>多彩な食文化</h3>
-        <p>ハラル/ヴィーガン/日本食/屋台/韓国/インド…毎日がグルメ旅。</p>
+        <h3><span class="local-only">多彩的Food文化</span><span class="expat-only">多彩的美食文化</span></h3>
+        <p>
+          <span class="local-only">Halal/Vegan/中餐/Street food/韩餐/印度餐…每天都是gourmet trip。</span>
+          <span class="expat-only">清真/素食/中餐/街头美食/韩餐/印度餐…每天都是美食之旅。</span>
+        </p>
       </div>
       <div class="card">
-        <h3>祝祭が共存</h3>
-        <p>イスラムの祝日も中華の旧正月も街全体でお祝い。季節イベントが豊富。</p>
+        <h3><span class="local-only">Festival共存</span><span class="expat-only">节日共存</span></h3>
+        <p>
+          <span class="local-only">Islam的holiday也Chinese New Year也whole city一起celebrate。Seasonal event很rich。</span>
+          <span class="expat-only">伊斯兰的节日也农历新年也全城一起庆祝。季节性活动很丰富。</span>
+        </p>
       </div>
       <div class="card">
-        <h3>"違い"が尊重される</h3>
-        <p>同調圧力が少なく、自分らしく働ける風土。</p>
+        <h3><span class="local-only">"Difference"被respect</span><span class="expat-only">"差异"被尊重</span></h3>
+        <p>
+          <span class="local-only">同调pressure很少，可以做自己style工作的culture。</span>
+          <span class="expat-only">同调压力很少，可以做自己风格工作的文化。</span>
+        </p>
       </div>
-    </div>
-
-    <figure style="margin-top:1rem;">
-      <blockquote style="border-left:4px solid #eee;padding:0.6rem 1rem;margin:0;">
-        「"違っていい"という価値観が、心を自由にしてくれました。日本にいるときより周りの目を気にしなくなりました。」
-      </blockquote>
-      <figcaption style="color:#666;margin-top:0.3rem;">— 採用チーム Maho</figcaption>
-    </figure>
-
-    <div class="gallery" style="margin-top:1rem;">
-      <div class="photo" style="background-image:url('photos/market_street.jpg')" aria-label="マーケットの様子の写真"></div>
-      <div class="photo" style="background-image:url('photos/festival_cny.jpg')" aria-label="春節イベントの写真"></div>
-    </div>
-
-    <div style="margin-top:0.6rem;">
-      <video src="videos/market_and_food.mp4" controls style="width:100%;max-width:720px;border-radius:12px;"></video>
-      <p class="lead" style="margin-top:0.4rem;">🎥 マーケットの様子や多国籍料理のランチ風景</p>
     </div>
   </section>
 
   <!-- Lifestyle / Weekends -->
   <section class="section" id="lifestyle" aria-labelledby="life-title">
-    <h2 id="life-title">仕事だけじゃない。週末は"アクティブ"に</h2>
+    <h2 id="life-title">
+      <span class="local-only">不只是Work。Weekend是"Active"的</span>
+      <span class="expat-only">不只是工作。周末是"活跃"的</span>
+    </h2>
     <div class="cols">
       <div>
-        <p class="lead"><strong>アクティブな毎日</strong></p>
+        <p class="lead"><strong><span class="local-only">Active的每天</span><span class="expat-only">活跃的每天</span></strong></p>
         <ul>
-          <li>公園や湖沿いでの朝ラン/散歩、ジム、ヨガ、サイクリング。</li>
-          <li>オフィス周辺にも緑のリフレッシュ空間が多数。</li>
+          <li><span class="local-only">Park或lake边的morning run/walk、gym、yoga、cycling。</span><span class="expat-only">公园或湖边的晨跑/散步、健身房、瑜伽、骑行。</span></li>
+          <li><span class="local-only">Office周边也有很多green的refresh space。</span><span class="expat-only">办公室周边也有很多绿色的休息空间。</span></li>
         </ul>
-        <p class="lead"><strong>自然とふれあう週末</strong></p>
+        <p class="lead"><strong><span class="local-only">接触Nature的Weekend</span><span class="expat-only">接触自然的周末</span></strong></p>
         <ul>
-          <li>青い海がすぐそば。ビーチでのんびり/スノーケリング/ダイビング。</li>
-          <li>ランカウイ/レダン/ペナン、プーケット/クラビ/タオ島などアイランドリゾートへ気軽に。</li>
+          <li><span class="local-only">Blue sea就在nearby。Beach relax/snorkeling/diving。</span><span class="expat-only">蓝色大海就在附近。海滩放松/浮潜/潜水。</span></li>
+          <li><span class="local-only">Langkawi/Redang/Penang、Phuket/Krabi/Koh Tao等island resort很easy去。</span><span class="expat-only">兰卡威/热浪岛/槟城、普吉岛/甲米/涛岛等岛屿度假村很容易去。</span></li>
         </ul>
       </div>
       <div>
-        <p class="lead"><strong>食の楽しみ</strong></p>
+        <p class="lead"><strong><span class="local-only">Food的Enjoyment</span><span class="expat-only">美食的享受</span></strong></p>
         <ul>
-          <li>屋台からレストランまで毎日の外食が気軽。</li>
-          <li>日本食をはじめ各国料理が充実。カフェ巡りも人気。</li>
+          <li><span class="local-only">从street food到restaurant，每天外食很casual。</span><span class="expat-only">从街头美食到餐厅，每天外食很随意。</span></li>
+          <li><span class="local-only">从中餐开始各国料理都很complete。Cafe巡游也很popular。</span><span class="expat-only">从中餐开始各国料理都很完善。咖啡馆巡游也很受欢迎。</span></li>
         </ul>
-        <p class="lead"><strong>移動もスムーズ</strong></p>
+        <p class="lead"><strong><span class="local-only">移动也Smooth</span><span class="expat-only">移动也顺畅</span></strong></p>
         <ul>
-          <li>大型モール/スーパー/映画館など都市機能が集約。</li>
-          <li>Grabや電車での移動が簡単・低コスト。車なしでも快適。</li>
+          <li><span class="local-only">Big mall/supermarket/cinema等city function集中。</span><span class="expat-only">大型商场/超市/电影院等城市功能集中。</span></li>
+          <li><span class="local-only">Grab和train移动simple·low cost。没有car也comfortable。</span><span class="expat-only">Grab和火车移动简单·低成本。没有车也舒适。</span></li>
         </ul>
       </div>
     </div>
@@ -1163,84 +1287,133 @@ footer::before {
 
   <!-- Travel hub -->
   <section class="section" id="travel" aria-labelledby="travel-title">
-    <h2 id="travel-title">"気軽に世界へ" — アジアのハブから広がる旅</h2>
-    <p class="lead">LCCや短距離フライトで、週末海外旅行も日常に。</p>
+    <h2 id="travel-title">
+      <span class="local-only">"Easy去World" — 从Asia Hub扩展的Trip</span>
+      <span class="expat-only">"轻松去世界" — 从亚洲枢纽扩展的旅行</span>
+    </h2>
+    <p class="lead">
+      <span class="local-only">LCC和short distance flight，weekend海外trip也是日常。</span>
+      <span class="expat-only">廉航和短途航班，周末海外旅行也是日常。</span>
+    </p>
     <div class="cards">
       <div class="card">
-        <h3>日本方面</h3>
-        <p>KL/BKK → <strong>東京・大阪・福岡</strong>など直行便が豊富。</p>
+        <h3><span class="local-only">China方向</span><span class="expat-only">中国方向</span></h3>
+        <p>
+          <span class="local-only">KL/BKK → <strong>北京·上海·广州·深圳</strong>等direct flight很rich。</span>
+          <span class="expat-only">吉隆坡/曼谷 → <strong>北京·上海·广州·深圳</strong>等直飞航班很丰富。</span>
+        </p>
       </div>
       <div class="card">
-        <h3>アジア近距離</h3>
-        <p><strong>シンガポール・韓国・台湾・ベトナム・インドネシア</strong>など2〜4時間で到着。</p>
+        <h3><span class="local-only">Asia近距离</span><span class="expat-only">亚洲近距离</span></h3>
+        <p>
+          <span class="local-only"><strong>Singapore·Korea·Taiwan·Vietnam·Indonesia</strong>等2〜4小时arrive。</span>
+          <span class="expat-only"><strong>新加坡·韩国·台湾·越南·印尼</strong>等2〜4小时到达。</span>
+        </p>
       </div>
       <div class="card">
-        <h3>さらに遠くへ</h3>
-        <p>ヨーロッパ・中東・オーストラリアへも1本の便でアクセス可能。</p>
+        <h3><span class="local-only">更远的地方</span><span class="expat-only">更远的地方</span></h3>
+        <p>
+          <span class="local-only">Europe·Middle East·Australia也可以1个flight access。</span>
+          <span class="expat-only">欧洲·中东·澳大利亚也可以一个航班到达。</span>
+        </p>
       </div>
     </div>
   </section>
 
   <!-- Cost of living -->
   <section class="section" id="cost" aria-labelledby="cost-title">
-    <h2 id="cost-title">生活コスト例（東京 vs KL）</h2>
-    <p class="lead">同じ収入でも、時間・お金・心に"ゆとり"が生まれる国。</p>
-    <table class="mini-table" aria-label="生活コスト比較">
-      <tr><th>項目</th><th>日本（東京）</th><th>マレーシア（KL）</th></tr>
-      <tr><td>家賃（1LDK）</td><td>約12万円〜</td><td>約5〜6万円（24hセキュリティ・プール・ジム付）</td></tr>
-      <tr><td>外食</td><td>1,000円〜</td><td>約300円〜</td></tr>
-      <tr><td>交通費</td><td>月1万円以上</td><td>数千円以内（Grab移動）</td></tr>
+    <h2 id="cost-title">
+      <span class="local-only">生活Cost例（北京 vs KL）</span>
+      <span class="expat-only">生活成本例（北京 vs 吉隆坡）</span>
+    </h2>
+    <p class="lead">
+      <span class="local-only">Same income，time、money、心都有"余裕"的country。</span>
+      <span class="expat-only">同样的收入，时间、金钱、心都有"余裕"的国家。</span>
+    </p>
+    <table class="mini-table" aria-label="生活成本比较">
+      <tr>
+        <th><span class="local-only">项目</span><span class="expat-only">项目</span></th>
+        <th><span class="local-only">China（北京）</span><span class="expat-only">中国（北京）</span></th>
+        <th><span class="local-only">Malaysia（KL）</span><span class="expat-only">马来西亚（吉隆坡）</span></th>
+      </tr>
+      <tr>
+        <td><span class="local-only">Rent（1房）</span><span class="expat-only">租金（1房）</span></td>
+        <td><span class="local-only">约￥5000〜</span><span class="expat-only">约5000元〜</span></td>
+        <td><span class="local-only">约￥2500〜3000（24h Security·Pool·Gym付）</span><span class="expat-only">约2500〜3000元（24小时保安·泳池·健身房）</span></td>
+      </tr>
+      <tr>
+        <td><span class="local-only">外食</span><span class="expat-only">外食</span></td>
+        <td><span class="local-only">￥30〜</span><span class="expat-only">30元〜</span></td>
+        <td><span class="local-only">约￥10〜</span><span class="expat-only">约10元〜</span></td>
+      </tr>
+      <tr>
+        <td><span class="local-only">交通费</span><span class="expat-only">交通费</span></td>
+        <td><span class="local-only">月￥500以上</span><span class="expat-only">月500元以上</span></td>
+        <td><span class="local-only">月￥200以内（Grab移动）</span><span class="expat-only">月200元以内（Grab移动）</span></td>
+      </tr>
     </table>
-    <p class="lead">社員の声：「通勤ストレスがなくなり、平日の夜もヨガや友達との時間をゆったり過ごせます。」</p>
-    <div style="margin-top:0.6rem">
-      <a class="btn" href="https://tpmyandtpth.github.io/JLP/cost-of-living.html">生活コストを詳しく見る</a>
-      <a class="btn" href="https://tpmyandtpth.github.io/JLP/daily-life-malaysia.html">現地生活ガイド</a>
+    
+    <figure class="quote-block">
+      <blockquote>
+        <span class="local-only">"通勤stress没有了，weekday晚上也可以relax做yoga或者和friend hang out。"</span>
+        <span class="expat-only">"通勤压力没有了，工作日晚上也可以放松做瑜伽或者和朋友聚会。"</span>
+      </blockquote>
+      <figcaption>— TP Staff</figcaption>
+    </figure>
+    
+    <div style="margin-top:1rem">
+      <a class="btn" href="cost-of-living.html"><span class="local-only">生活Cost详细</span><span class="expat-only">生活成本详细</span></a>
+      <a class="btn" href="daily-life-malaysia.html"><span class="local-only">现地生活Guide</span><span class="expat-only">当地生活指南</span></a>
     </div>
   </section>
 
   <!-- Virtual Office Tour -->
   <section class="helper" id="tour">
     <div class="inner">
-      <h2>バーチャルオフィスツアー</h2>
-      <p>現地の職場環境をオンラインで体感：<br>
+      <h2>
+        <span class="local-only">Virtual Office Tour</span>
+        <span class="expat-only">虚拟办公室参观</span>
+      </h2>
+      <p>
+        <span class="local-only">Online体验现地的workplace environment：<br></span>
+        <span class="expat-only">在线体验当地的工作环境：<br></span>
         <a href="https://vtour.cloud/mh2n0j/ae5772z1/Bella's" target="_blank" rel="noopener">Bella's Malaysian Adventure: Exploring the Beauty of Malaysia</a>
       </p>
       <div style="margin-top:0.8rem">
-        <a class="btn" href="https://tpmyandtpth.github.io/JLP/virtual-office-tour.html">ツアー紹介ページへ</a>
-        <a class="btn-solid" href="https://tpmyandtpth.github.io/JLP/open-jobs.html">求人を見る</a>
+        <a class="btn" href="virtual-office-tour.html"><span class="local-only">Tour介绍Page</span><span class="expat-only">参观介绍页面</span></a>
+        <a class="btn-solid" href="open-jobs.html"><span class="local-only">View Jobs</span><span class="expat-only">查看职位</span></a>
       </div>
     </div>
   </section>
 
   <!-- CTA -->
   <section class="section" aria-labelledby="cta-title">
-    <h2 id="cta-title">次は何をしますか？</h2>
+    <h2 id="cta-title">What's Next?</h2>
     <div class="cards">
       <div class="card">
-        <h3>求人を見る</h3>
-        <p>日本語スピーカー向けポジションが多数。未経験OKの案件も。</p>
-        <p><a class="btn" href="https://tpmyandtpth.github.io/JLP/open-jobs.html">求人一覧へ</a></p>
+        <h3><span class="local-only">View Jobs</span><span class="expat-only">查看职位</span></h3>
+        <p>
+          <span class="local-only">华语speaker向的position很多。No experience OK的job也有。</span>
+          <span class="expat-only">华语使用者向的职位很多。无经验OK的工作也有。</span>
+        </p>
+        <p><a class="btn" href="open-jobs.html"><span class="local-only">Job List</span><span class="expat-only">职位列表</span></a></p>
       </div>
       <div class="card">
-        <h3>移住・ビザサポート</h3>
-        <p>就労ビザ申請、航空券、到着後ホテル（MY）など専門チームが伴走。</p>
-        <p><a class="btn" href="https://tpmyandtpth.github.io/JLP/relocation-visa.html">サポートを見る</a></p>
+        <h3><span class="local-only">Relocation·Visa Support</span><span class="expat-only">搬迁·签证支持</span></h3>
+        <p>
+          <span class="local-only">Work visa申请、flight、arrival后hotel（MY）等specialist team陪伴。</span>
+          <span class="expat-only">工作签证申请、机票、到达后酒店（马来西亚）等专业团队陪伴。</span>
+        </p>
+        <p><a class="btn" href="relocation-visa.html"><span class="local-only">View Support</span><span class="expat-only">查看支持</span></a></p>
       </div>
       <div class="card">
-        <h3>カジュアル面談</h3>
-        <p>選考ではありません。日本語で30分、仕事/生活/移住の疑問を相談。</p>
-        <p><a class="btn" href="https://tpmyandtpth.github.io/JLP/casual-interview.html">予約する</a></p>
+        <h3><span class="local-only">Casual Chat</span><span class="expat-only">休闲面谈</span></h3>
+        <p>
+          <span class="local-only">不是selection。华语30分钟，work/life/relocation的疑问都可以consult。</span>
+          <span class="expat-only">不是选拔。华语30分钟，工作/生活/搬迁的疑问都可以咨询。</span>
+        </p>
+        <p><a class="btn" href="casual-interview.html"><span class="local-only">Book Now</span><span class="expat-only">立即预约</span></a></p>
       </div>
-    </div>
-  </section>
-
-  <!-- Team images -->
-  <section class="team-strip" aria-label="チームフォト">
-    <div class="team-grid">
-      <div style="background-image:url('photos/team_city_1.jpg')" aria-label="チーム写真1"></div>
-      <div style="background-image:url('photos/team_city_2.jpg')" aria-label="チーム写真2"></div>
-      <div style="background-image:url('photos/team_city_3.jpg')" aria-label="チーム写真3"></div>
-      <div style="background-image:url('photos/team_city_4.jpg')" aria-label="チーム写真4"></div>
     </div>
   </section>
 </main>
@@ -1253,67 +1426,87 @@ footer::before {
         <img src="photos/TPLogo11.png" alt="TP">
         <span class="footer-logo-text">TP</span>
       </div>
-      <p class="footer-desc">
-        世界100カ国以上で展開するグローバルBPO企業。<br>
-        日本語スピーカーの皆様の新たなキャリアをサポートします。
-      </p>
+      <p class="footer-desc">全球100多个国家运营的业务流程外包企业<br>支持华语人才开启职业新篇章</p>
       <div class="badges">
-        <span class="badge-item">🏆 Great Place to Work® 6年連続</span>
+        <span class="badge-item">🏆 马来西亚最佳职场 6年连续</span>
+        <span class="badge-item">🏆 全球最佳职场 5年连续</span>
       </div>
       <div class="footer-cta">
-        <a href="https://careerseng-teleperformance.icims.com/jobs/49026/customer-service-representative---japanese-speaking-%28kl%29/job?mode=job&iis=LANDINGPAGE" target="_blank" rel="noopener noreferrer" class="btn btn-accent">ご応募はこちら</a>
+        <a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=chinese" target="_blank" rel="noopener noreferrer" class="btn btn-solid">申请职位</a>
       </div>
     </div>
     
     <div class="footer-section">
-      <h3>会社情報</h3>
+      <h3>公司信息</h3>
       <ul>
-        <li><a href="https://tpmyandtpth.github.io/JLP/about-tp.html">会社紹介</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/salary-and-benefits.html#benefits">福利厚生</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/office-environment.html">オフィス環境</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/ta-team.html">採用チーム</a></li>
+        <li><a href="about-tp.html">公司介绍</a></li>
+        <li><a href="salary-and-benefits.html">薪资福利</a></li>
+        <li><a href="office-environment.html">办公环境</a></li>
+        <li><a href="ta-team.html">招聘团队</a></li>
       </ul>
     </div>
-
     <div class="footer-section">
-      <h3>求人・応募</h3>
+      <h3>职位申请</h3>
       <ul>
-        <li><a href="https://tpmyandtpth.github.io/JLP/open-jobs.html">求人一覧</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/interview-process.html">面接プロセス</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/faq.html">よくある質問</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/casual-interview.html">お問い合わせ</a></li>
+        <li><a href="open-jobs.html">职位列表</a></li>
+        <li><a href="hiring-process.html">招聘流程</a></li>
+        <li><a href="faq.html">常见问题</a></li>
+        <li><a href="casual-interview.html">联系我们</a></li>
       </ul>
     </div>
-
     <div class="footer-section">
-      <h3>生活情報</h3>
+      <h3>生活资讯</h3>
       <ul>
-        <li><a href="https://tpmyandtpth.github.io/JLP/why-malaysia-thailand.html" aria-current="page">勤務先都市</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/relocation-visa.html">移住サポート</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/daily-life-malaysia.html">ライフスタイル</a></li>
-        <li><a href="https://line.me/R/ti/p/@286nmdsd" target="_blank" rel="noopener noreferrer">LINE公式</a></li>
+        <li><a href="why-malaysia-thailand.html" aria-current="page">城市介绍</a></li>
+        <li><a href="relocation-visa.html">搬迁支持</a></li>
+        <li><a href="daily-life-malaysia.html">日常生活</a></li>
+        <li><a href="https://line.me/R/ti/p/@286nmdsd" target="_blank" rel="noopener noreferrer">官方LINE</a></li>
       </ul>
     </div>
   </div>
   
   <div class="footer-bottom">
-    <p>&copy; 2025 TP. All rights reserved. | 
-      <a href="#">プライバシーポリシー</a> | 
-      <a href="#">利用規約</a>
-    </p>
+    <p class="ssm-info">Teleperformance Malaysia Sdn Bhd 的 SSM（马来西亚公司委员会）注册号为 201601023769 (1194708-K)</p>
+    <p>&copy; 2026 TP. 版权所有。| <a href="#">隐私政策</a> | <a href="#">使用条款</a></p>
   </div>
 </footer>
 
 <!-- FLOATING BUTTONS -->
-<a href="https://careerseng-teleperformance.icims.com/jobs/49026/customer-service-representative---japanese-speaking-%28kl%29/job?mode=job&iis=LANDINGPAGE" target="_blank" rel="noopener noreferrer" class="floating-apply" aria-label="今すぐ応募">応募する</a>
+<a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=chinese" target="_blank" rel="noopener noreferrer" class="floating-apply" aria-label="立即申请"><span class="local-only">Apply Now</span><span class="expat-only">立即申请</span></a>
 
-<a href="https://forms.office.com/e/2UvpbweQww" target="_blank" rel="noopener noreferrer" class="floating-casual" aria-label="カジュアル面談">カジュアル面談</a>
+<a href="casual-interview.html" class="floating-casual" aria-label="预约面谈"><span class="local-only">Casual Chat</span><span class="expat-only">休闲面谈</span></a>
 
-<button class="back-to-top" id="backToTop" aria-label="ページトップへ">↑</button>
+<button class="back-to-top" id="backToTop" aria-label="回到顶部">↑</button>
 
 <!-- JAVASCRIPT -->
 <script>
-// Mobile Menu Toggle with Error Handling
+// ===== LANGUAGE TOGGLE SYSTEM =====
+function setLanguage(lang) {
+  const body = document.body;
+  const localBtn = document.getElementById('langLocal');
+  const expatBtn = document.getElementById('langExpat');
+  
+  if(lang === 'expat') {
+    body.classList.add('expat-mode');
+    localBtn.classList.remove('active');
+    expatBtn.classList.add('active');
+  } else {
+    body.classList.remove('expat-mode');
+    localBtn.classList.add('active');
+    expatBtn.classList.remove('active');
+  }
+  
+  // Save preference
+  localStorage.setItem('clpLang', lang);
+}
+
+// Initialize language on page load
+document.addEventListener('DOMContentLoaded', function() {
+  const savedLang = localStorage.getItem('clpLang') || 'local';
+  setLanguage(savedLang);
+});
+
+// ===== MOBILE MENU =====
 try {
   (function(){
     const toggle = document.getElementById('mobileToggle');
@@ -1326,7 +1519,6 @@ try {
         toggle.setAttribute('aria-expanded', menu.classList.contains('active'));
       });
       
-      // Close menu when clicking links
       menu.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
           toggle.classList.remove('active');
@@ -1335,7 +1527,6 @@ try {
         });
       });
       
-      // Close menu when clicking outside
       document.addEventListener('click', (e) => {
         if(!menu.contains(e.target) && !toggle.contains(e.target)) {
           menu.classList.remove('active');
@@ -1349,7 +1540,7 @@ try {
   console.warn('Mobile menu setup failed:', error);
 }
 
-// Back to Top Button
+// ===== BACK TO TOP =====
 try {
   (function(){
     const backToTop = document.getElementById('backToTop');
@@ -1374,36 +1565,25 @@ try {
   console.warn('Back to top button failed:', error);
 }
 
-// Subnav active state on click (visual feedback only)
+// ===== SMOOTH SCROLL =====
 try {
   (function(){
-    const chips = document.querySelectorAll('.chip');
-    chips.forEach(chip => {
-      chip.addEventListener('click', () => {
-        chips.forEach(c => c.classList.remove('active'));
-        chip.classList.add('active');
-      });
-    });
-  })();
-} catch(error) {
-  console.warn('Subnav setup failed:', error);
-}
-
-// Smooth scroll for in-page anchors (offset for sticky nav)
-try {
-  (function(){
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
-      a.addEventListener('click', e => {
-        const href = a.getAttribute('href');
-        if(!href || href === '#') return;
-        
-        const el = document.querySelector(href);
-        if(!el) return;
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if(href === '#') return;
         
         e.preventDefault();
-        const offset = 110; // header + subnav height
-        const top = el.getBoundingClientRect().top + window.pageYOffset - offset;
-        window.scrollTo({ top, behavior: 'smooth' });
+        const target = document.querySelector(href);
+        if(target){
+          const offset = 80;
+          const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+          
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+        }
       });
     });
   })();
@@ -1411,10 +1591,7 @@ try {
   console.warn('Smooth scroll failed:', error);
 }
 
-// Initialize when DOM is ready
-document.addEventListener('DOMContentLoaded', function() {
-  console.log('TP Japan why-malaysia-thailand page initialized');
-});
+console.log('TP Chinese why-malaysia-thailand page initialized');
 </script>
 </body>
 </html>
