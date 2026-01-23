@@ -104,18 +104,15 @@ img {
   padding: 0 20px;
 }
 
-/* Bilingual System */
-[data-local] { display: inline; }
-[data-expat] { display: none; }
-
-body.expat-mode [data-local] { display: none; }
-body.expat-mode [data-expat] { display: inline; }
-
+/* ===== BILINGUAL SYSTEM ===== */
 .local-only { display: block; }
 .expat-only { display: none; }
+span.local-only { display: inline; }
+span.expat-only { display: none; }
 
-body.expat-mode .local-only { display: none; }
+body.expat-mode .local-only { display: none !important; }
 body.expat-mode .expat-only { display: block; }
+body.expat-mode span.expat-only { display: inline; }
 
 /* ===== LANGUAGE TOGGLE BANNER ===== */
 .lang-toggle-banner {
@@ -1347,19 +1344,22 @@ footer::before {
       <img src="photos/TPLogo11.png" alt="TP Logo" width="40" height="40">
       <div class="brand-text">
         <span class="brand-name">TP</span>
-        <span class="brand-tagline"><span data-local="Malaysia·Thailand" data-expat="马来西亚·泰国">Malaysia·Thailand</span></span>
+        <span class="brand-tagline">
+          <span class="local-only">Malaysia·Thailand</span>
+          <span class="expat-only">马来西亚·泰国</span>
+        </span>
       </div>
     </a>
 
     <nav aria-label="主导航">
       <ul>
-        <li><a href="index.html"><span data-local="Home" data-expat="首页">Home</span></a></li>
-        <li><a href="about-tp.html"><span data-local="About TP" data-expat="关于TP">About TP</span></a></li>
-        <li><a href="salary-and-benefits.html"><span data-local="Benefits" data-expat="薪资福利">Benefits</span></a></li>
-        <li><a href="hiring-process.html"><span data-local="Hiring Process" data-expat="招聘流程">Hiring Process</span></a></li>
-        <li><a href="why-malaysia-thailand.html"><span data-local="城市介绍" data-expat="城市介绍">城市介绍</span></a></li>
-        <li><a href="relocation-visa.html"><span data-local="Visa Support" data-expat="签证支持">Visa Support</span></a></li>
-        <li><a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=chinese" target="_blank" rel="noopener noreferrer" class="apply-btn"><span data-local="Apply Now" data-expat="立即申请">Apply Now</span></a></li>
+        <li><a href="index.html"><span class="local-only">Home</span><span class="expat-only">首页</span></a></li>
+        <li><a href="about-tp.html"><span class="local-only">About TP</span><span class="expat-only">关于TP</span></a></li>
+        <li><a href="salary-and-benefits.html"><span class="local-only">Benefits</span><span class="expat-only">薪资福利</span></a></li>
+        <li><a href="hiring-process.html"><span class="local-only">Hiring Process</span><span class="expat-only">招聘流程</span></a></li>
+        <li><a href="why-malaysia-thailand.html">城市介绍</a></li>
+        <li><a href="relocation-visa.html"><span class="local-only">Visa Support</span><span class="expat-only">签证支持</span></a></li>
+        <li><a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=chinese" target="_blank" rel="noopener noreferrer" class="apply-btn"><span class="local-only">Apply Now</span><span class="expat-only">立即申请</span></a></li>
       </ul>
     </nav>
 
@@ -1370,14 +1370,14 @@ footer::before {
 
   <nav class="mobile-menu" id="mobileMenu" aria-label="移动导航">
     <ul>
-      <li><a href="index.html"><span data-local="Home" data-expat="首页">Home</span></a></li>
-      <li><a href="about-tp.html"><span data-local="About TP" data-expat="关于TP">About TP</span></a></li>
-      <li><a href="salary-and-benefits.html"><span data-local="Benefits" data-expat="薪资福利">Benefits</span></a></li>
-      <li><a href="hiring-process.html"><span data-local="Hiring Process" data-expat="招聘流程">Hiring Process</span></a></li>
-      <li><a href="why-malaysia-thailand.html"><span data-local="城市介绍" data-expat="城市介绍">城市介绍</span></a></li>
-      <li><a href="relocation-visa.html"><span data-local="Visa Support" data-expat="签证支持">Visa Support</span></a></li>
-      <li><a href="ta-team.html" aria-current="page"><span data-local="TA Team" data-expat="招聘团队">TA Team</span></a></li>
-      <li><a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=chinese" target="_blank" rel="noopener noreferrer" class="apply-btn"><span data-local="Apply Now" data-expat="立即申请">Apply Now</span></a></li>
+      <li><a href="index.html"><span class="local-only">Home</span><span class="expat-only">首页</span></a></li>
+      <li><a href="about-tp.html"><span class="local-only">About TP</span><span class="expat-only">关于TP</span></a></li>
+      <li><a href="salary-and-benefits.html"><span class="local-only">Benefits</span><span class="expat-only">薪资福利</span></a></li>
+      <li><a href="hiring-process.html"><span class="local-only">Hiring Process</span><span class="expat-only">招聘流程</span></a></li>
+      <li><a href="why-malaysia-thailand.html">城市介绍</a></li>
+      <li><a href="relocation-visa.html"><span class="local-only">Visa Support</span><span class="expat-only">签证支持</span></a></li>
+      <li><a href="ta-team.html" aria-current="page"><span class="local-only">TA Team</span><span class="expat-only">招聘团队</span></a></li>
+      <li><a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=chinese" target="_blank" rel="noopener noreferrer" class="apply-btn"><span class="local-only">Apply Now</span><span class="expat-only">立即申请</span></a></li>
     </ul>
   </nav>
 </header>
@@ -1385,39 +1385,55 @@ footer::before {
 <main id="main">
   <!-- Hero Section -->
   <section class="hero">
-    <h1><span data-local="认识我们的TA Team" data-expat="认识招聘团队">认识我们的TA Team</span></h1>
+    <h1>
+      <span class="local-only">认识我们的TA Team</span>
+      <span class="expat-only">认识招聘团队</span>
+    </h1>
     <p>
-      <span data-local="从apply到入职，华语全程support。<br>第一次overseas job也没问题，我们会一步一步帮你settle down。" data-expat="从申请到入职，华语全程支持。<br>第一次海外工作也没问题，我们会一步一步帮你安顿下来。">从apply到入职，华语全程support。<br>第一次overseas job也没问题，我们会一步一步帮你settle down。</span>
+      <span class="local-only">从apply到入职，华语全程support。<br>第一次overseas job也没问题，我们会一步一步帮你settle down。</span>
+      <span class="expat-only">从申请到入职，华语全程支持。<br>第一次海外工作也没问题，我们会一步一步帮你安顿下来。</span>
     </p>
     <div class="hero-cta" role="group" aria-label="相关操作">
-      <a class="btn-solid" href="open-jobs.html"><span data-local="View Open Jobs" data-expat="查看职位">View Open Jobs</span></a>
-      <a class="btn" href="casual-interview.html"><span data-local="Book Casual Chat" data-expat="预约休闲面谈">Book Casual Chat</span></a>
-      <a class="btn" target="_blank" rel="noopener" href="https://line.me/R/ti/p/@286nmdsd?from=page&searchId=286nmdsd"><span data-local="LINE最新Info" data-expat="LINE最新信息">LINE最新Info</span></a>
+      <a class="btn-solid" href="open-jobs.html"><span class="local-only">View Open Jobs</span><span class="expat-only">查看职位</span></a>
+      <a class="btn" href="casual-interview.html"><span class="local-only">Book Casual Chat</span><span class="expat-only">预约休闲面谈</span></a>
+      <a class="btn" target="_blank" rel="noopener" href="https://line.me/R/ti/p/@286nmdsd?from=page&searchId=286nmdsd"><span class="local-only">LINE最新Info</span><span class="expat-only">LINE最新信息</span></a>
     </div>
     <div class="pill-nav" aria-label="页面目录">
-      <a class="pill" href="#mission"><span data-local="Our Mission" data-expat="我们的使命">Our Mission</span></a>
-      <a class="pill" href="#ta-team"><span data-local="Team Members" data-expat="团队成员">Team Members</span></a>
-      <a class="pill" href="#support"><span data-local="Support Flow" data-expat="支持流程">Support Flow</span></a>
-      <a class="pill" href="#faq"><span data-local="FAQ" data-expat="常见问题">FAQ</span></a>
-      <a class="pill" href="#contact"><span data-local="Contact Us" data-expat="联系我们">Contact Us</span></a>
+      <a class="pill" href="#mission"><span class="local-only">Our Mission</span><span class="expat-only">我们的使命</span></a>
+      <a class="pill" href="#ta-team"><span class="local-only">Team Members</span><span class="expat-only">团队成员</span></a>
+      <a class="pill" href="#support"><span class="local-only">Support Flow</span><span class="expat-only">支持流程</span></a>
+      <a class="pill" href="#faq">FAQ</a>
+      <a class="pill" href="#contact"><span class="local-only">Contact Us</span><span class="expat-only">联系我们</span></a>
     </div>
   </section>
 
   <!-- Mission Section -->
   <section id="mission" class="section">
-    <h2 class="section-title section-title-decorated"><span data-local="Our Mission" data-expat="我们的使命">Our Mission</span></h2>
+    <h2 class="section-title section-title-decorated">
+      <span class="local-only">Our Mission</span>
+      <span class="expat-only">我们的使命</span>
+    </h2>
     <div class="mission-grid">
       <div class="mission-card">
-        <h3><span data-local="华语全程Support" data-expat="华语全程支持">华语全程Support</span></h3>
-        <p class="muted"><span data-local="从apply到interview到visa到入职，每一个step都用华语guide你。First time overseas experience的人也完全okay！" data-expat="从申请到面试到签证到入职，每一个步骤都用华语指导你。第一次海外经历的人也完全没问题！">从apply到interview到visa到入职，每一个step都用华语guide你。First time overseas experience的人也完全okay！</span></p>
+        <h3><span class="local-only">华语全程Support</span><span class="expat-only">华语全程支持</span></h3>
+        <p class="muted">
+          <span class="local-only">从apply到interview到visa到入职，每一个step都用华语guide你。First time overseas experience的人也完全okay！</span>
+          <span class="expat-only">从申请到面试到签证到入职，每一个步骤都用华语指导你。第一次海外经历的人也完全没问题！</span>
+        </p>
       </div>
       <div class="mission-card">
-        <h3><span data-local="Real Information" data-expat="真实信息">Real Information</span></h3>
-        <p class="muted"><span data-local="不只是job的好处，生活和工作的'real talk'我们也会share。Goal是no mismatch的入职experience。" data-expat="不只是工作的好处，生活和工作的'真实情况'我们也会分享。目标是没有错配的入职体验。">不只是job的好处，生活和工作的'real talk'我们也会share。Goal是no mismatch的入职experience。</span></p>
+        <h3><span class="local-only">Real Information</span><span class="expat-only">真实信息</span></h3>
+        <p class="muted">
+          <span class="local-only">不只是job的好处，生活和工作的'real talk'我们也会share。Goal是no mismatch的入职experience。</span>
+          <span class="expat-only">不只是工作的好处，生活和工作的'真实情况'我们也会分享。目标是没有错配的入职体验。</span>
+        </p>
       </div>
       <div class="mission-card">
-        <h3><span data-local="Career第一步Support" data-expat="职业第一步支持">Career第一步Support</span></h3>
-        <p class="muted"><span data-local="入职不是end point而是starting point。Training、language support、career path的info我们都会connect，support你long term growth。" data-expat="入职不是终点而是起点。培训、语言支持、职业路径的信息我们都会连接，支持你长期成长。">入职不是end point而是starting point。Training、language support、career path的info我们都会connect，support你long term growth。</span></p>
+        <h3><span class="local-only">Career第一步Support</span><span class="expat-only">职业第一步支持</span></h3>
+        <p class="muted">
+          <span class="local-only">入职不是end point而是starting point。Training、language support、career path的info我们都会connect，support你long term growth。</span>
+          <span class="expat-only">入职不是终点而是起点。培训、语言支持、职业路径的信息我们都会连接，支持你长期成长。</span>
+        </p>
       </div>
     </div>
   </section>
@@ -1425,12 +1441,20 @@ footer::before {
   <!-- TA TEAM Section -->
   <section class="ta-team" id="ta-team">
     <div class="container">
-      <h2 class="section-title section-title-decorated"><span data-local="Meet the TA Team" data-expat="招聘团队介绍">Meet the TA Team</span></h2>
-      <p class="section-subtitle"><span data-local="从apply到入职，华语全程support你" data-expat="从申请到入职，华语全程支持你">从apply到入职，华语全程support你</span></p>
+      <h2 class="section-title section-title-decorated">
+        <span class="local-only">Meet the TA Team</span>
+        <span class="expat-only">招聘团队介绍</span>
+      </h2>
+      <p class="section-subtitle">
+        <span class="local-only">从apply到入职，华语全程support你</span>
+        <span class="expat-only">从申请到入职，华语全程支持你</span>
+      </p>
       
       <div class="ta-intro">
-        <p><strong>📣 <span data-local="TA Team介绍" data-expat="招聘团队介绍">TA Team介绍</span></strong><br>
-        <span data-local="想overseas工作但是有点担心？语言barrier、culture difference都不用怕！TP有讲华语的Talent Acquisition team，从apply到入职全程support你。" data-expat="想海外工作但是有点担心？语言障碍、文化差异都不用怕！TP有讲华语的人才招聘团队，从申请到入职全程支持你。">想overseas工作但是有点担心？语言barrier、culture difference都不用怕！TP有讲华语的Talent Acquisition team，从apply到入职全程support你。</span></p>
+        <p><strong>📣 <span class="local-only">TA Team介绍</span><span class="expat-only">招聘团队介绍</span></strong><br>
+        <span class="local-only">想overseas工作但是有点担心？语言barrier、culture difference都不用怕！TP有讲华语的Talent Acquisition team，从apply到入职全程support你。</span>
+        <span class="expat-only">想海外工作但是有点担心？语言障碍、文化差异都不用怕！TP有讲华语的人才招聘团队，从申请到入职全程支持你。</span>
+        </p>
       </div>
 
       <!-- Group Photo Collage -->
@@ -1451,36 +1475,41 @@ footer::before {
         <img class="avatar-lg" src="photos/TPLogo11.png" alt="Kent Teng" loading="lazy">
         <div>
           <h3 class="ta-leader-name">Kent Teng</h3>
-          <p class="ta-leader-meta"><span data-local="Manager｜Talent Acquisition" data-expat="经理｜人才招聘">Manager｜Talent Acquisition</span></p>
-          <div class="ta-leader-bio">
-            <span data-local="Hello！我是TP Malaysia华语recruitment team的Kent，负责manage华语speaker和multilingual talent的hiring 🌏<br><br>
+          <p class="ta-leader-meta">
+            <span class="local-only">Manager｜Talent Acquisition</span>
+            <span class="expat-only">经理｜人才招聘</span>
+          </p>
+          
+          <!-- LOCAL VERSION BIO -->
+          <div class="ta-leader-bio local-only">
+            Hello！我是TP Malaysia华语recruitment team的Kent，负责manage华语speaker和multilingual talent的hiring 🌏<br><br>
             之前在recruitment line做了大概10年++，handle过很多different industry的position——IT、logistics、semiconductor、infrastructure等等，从engineer、support role到management level、C-level position都有touch过。<br><br>
             因为之前有involve Malaysia、Singapore、Thailand、Japan、Korea、Australia、New Zealand等等country的recruitment project，所以对各国的culture和candidate background都比较familiar。我一直believe 'one size doesn't fit all'，每个candidate都deserve personalized的approach。<br><br>
             🌴 <strong>Private life方面</strong>，我超爱scuba diving和golf！Malaysia这边这些activity都超affordable，生活quality真的很chill！Weekend去diving spot或者golf course relax一下，简直太perfect了。<br><br>
             <strong>✉️ 给candidates的话：</strong><br>
             Overseas转职是big challenge，但也是expand你possibilities的amazing opportunity。我understand first time去new environment会有很多worries，但是我们会try our best来guide你整个selection process和local生活的info，让你可以放心apply。<br><br>
-            很多华语speaker已经在Malaysia和Thailand start了他们的new career journey。希望我们可以sincerely support你的challenge，让它become你better future的first step。期待你的apply和enquiry！" 
-            data-expat="你好！我是TP马来西亚华语招聘团队的Kent，负责管理华语使用者和多语言人才的招聘 🌏<br><br>
+            很多华语speaker已经在Malaysia和Thailand start了他们的new career journey。希望我们可以sincerely support你的challenge，让它become你better future的first step。期待你的apply和enquiry！
+          </div>
+          
+          <!-- EXPAT VERSION BIO -->
+          <div class="ta-leader-bio expat-only">
+            你好！我是TP马来西亚华语招聘团队的Kent，负责管理华语使用者和多语言人才的招聘 🌏<br><br>
             之前在招聘领域做了大概10年以上，处理过很多不同行业的职位——IT、物流、半导体、基础设施等等，从工程师、支持岗位到管理层、C级职位都有接触过。<br><br>
             因为之前有参与马来西亚、新加坡、泰国、日本、韩国、澳大利亚、新西兰等国家的招聘项目，所以对各国的文化和候选人背景都比较熟悉。我一直相信'一刀切不适合所有人'，每个候选人都值得个性化的方法。<br><br>
             🌴 <strong>私人生活方面</strong>，我超爱潜水和高尔夫！马来西亚这边这些活动都超实惠，生活质量真的很好！周末去潜水点或者高尔夫球场放松一下，简直太完美了。<br><br>
             <strong>✉️ 给候选人的话：</strong><br>
             海外转职是大挑战，但也是扩展你可能性的绝佳机会。我理解第一次去新环境会有很多担忧，但是我们会尽最大努力来指导你整个选拔流程和当地生活的信息，让你可以放心申请。<br><br>
-            很多华语使用者已经在马来西亚和泰国开始了他们的新职业旅程。希望我们可以真诚支持你的挑战，让它成为你更好未来的第一步。期待你的申请和咨询！">Hello！我是TP Malaysia华语recruitment team的Kent，负责manage华语speaker和multilingual talent的hiring 🌏<br><br>
-            之前在recruitment line做了大概10年++，handle过很多different industry的position——IT、logistics、semiconductor、infrastructure等等，从engineer、support role到management level、C-level position都有touch过。<br><br>
-            因为之前有involve Malaysia、Singapore、Thailand、Japan、Korea、Australia、New Zealand等等country的recruitment project，所以对各国的culture和candidate background都比较familiar。我一直believe 'one size doesn't fit all'，每个candidate都deserve personalized的approach。<br><br>
-            🌴 <strong>Private life方面</strong>，我超爱scuba diving和golf！Malaysia这边这些activity都超affordable，生活quality真的很chill！Weekend去diving spot或者golf course relax一下，简直太perfect了。<br><br>
-            <strong>✉️ 给candidates的话：</strong><br>
-            Overseas转职是big challenge，但也是expand你possibilities的amazing opportunity。我understand first time去new environment会有很多worries，但是我们会try our best来guide你整个selection process和local生活的info，让你可以放心apply。<br><br>
-            很多华语speaker已经在Malaysia和Thailand start了他们的new career journey。希望我们可以sincerely support你的challenge，让它become你better future的first step。期待你的apply和enquiry！</span>
+            很多华语使用者已经在马来西亚和泰国开始了他们的新职业旅程。希望我们可以真诚支持你的挑战，让它成为你更好未来的第一步。期待你的申请和咨询！
           </div>
+          
           <div class="ta-leader-highlight">
-            <span data-local="💼 已经interview和help过thousands of华语candidates开启他们的BPO career！Next就轮到你了，let's design你的career path together！" data-expat="💼 已经面试和帮助过数千名华语候选人开启他们的BPO职业！下一个就轮到你了，让我们一起设计你的职业道路！">💼 已经interview和help过thousands of华语candidates开启他们的BPO career！Next就轮到你了，let's design你的career path together！</span>
+            <span class="local-only">💼 已经interview和help过thousands of华语candidates开启他们的BPO career！Next就轮到你了，let's design你的career path together！</span>
+            <span class="expat-only">💼 已经面试和帮助过数千名华语候选人开启他们的BPO职业！下一个就轮到你了，让我们一起设计你的职业道路！</span>
           </div>
           <div class="ta-leader-cta">
-            <a class="btn-sm btn-gold" href="casual-interview.html#book"><span data-local="Book面谈" data-expat="预约面谈">Book面谈</span></a>
-            <a class="btn-sm btn-ghost" href="https://line.me/R/ti/p/@286nmdsd" target="_blank" rel="noopener">LINE<span data-local="问问题" data-expat="咨询">问问题</span></a>
-            <a class="btn-sm btn-ghost" href="open-jobs.html"><span data-local="View Jobs" data-expat="查看职位">View Jobs</span></a>
+            <a class="btn-sm btn-gold" href="casual-interview.html#book"><span class="local-only">Book面谈</span><span class="expat-only">预约面谈</span></a>
+            <a class="btn-sm btn-ghost" href="https://line.me/R/ti/p/@286nmdsd" target="_blank" rel="noopener">LINE<span class="local-only">问问题</span><span class="expat-only">咨询</span></a>
+            <a class="btn-sm btn-ghost" href="open-jobs.html"><span class="local-only">View Jobs</span><span class="expat-only">查看职位</span></a>
           </div>
         </div>
       </article>
@@ -1493,33 +1522,39 @@ footer::before {
             <img class="ta-member-img" src="photos/TPLogo11.png" alt="Anna Saw" loading="lazy">
             <div>
               <h3 class="ta-member-name">Anna Saw</h3>
-              <p class="ta-member-role"><span data-local="Talent Acquisition｜Recruiter" data-expat="人才招聘｜招聘专员">Talent Acquisition｜Recruiter</span></p>
+              <p class="ta-member-role">
+                <span class="local-only">Talent Acquisition｜Recruiter</span>
+                <span class="expat-only">人才招聘｜招聘专员</span>
+              </p>
               <div class="ta-tags">
-                <span class="ta-tag"><span data-local="Fresh Grad Support" data-expat="应届生支持">Fresh Grad Support</span></span>
-                <span class="ta-tag"><span data-local="Resume Tips" data-expat="简历技巧">Resume Tips</span></span>
-                <span class="ta-tag"><span data-local="KL Based" data-expat="吉隆坡">KL Based</span></span>
+                <span class="ta-tag"><span class="local-only">Fresh Grad Support</span><span class="expat-only">应届生支持</span></span>
+                <span class="ta-tag"><span class="local-only">Resume Tips</span><span class="expat-only">简历技巧</span></span>
+                <span class="ta-tag"><span class="local-only">KL Based</span><span class="expat-only">吉隆坡</span></span>
               </div>
             </div>
           </div>
-          <p class="ta-member-bio">
-            <span data-local="Hi大家好！我是Anna，TP Malaysia的recruiter 🌸<br><br>
+          
+          <!-- LOCAL BIO -->
+          <p class="ta-member-bio local-only">
+            Hi大家好！我是Anna，TP Malaysia的recruiter 🌸<br><br>
             我special focus在帮first time overseas job的candidate，因为我自己也是从fresh grad开始在这个industry，很understand那种excitement mix with nervous的feeling。<br><br>
             我会help你prepare resume、coach你interview skills、share tips on how to present yourself best。不管你是刚graduate还是想career switch，我都会patient guide你through每一个step。<br><br>
             🍜 Hobby wise，我是个foodie！KL的hidden gems我可以share很多，从Bangsar的cafe到Cheras的hawker，问我就对了！<br><br>
-            有任何question都可以reach out，我们casual chat一下吧！" 
-            data-expat="大家好！我是Anna，TP马来西亚的招聘专员 🌸<br><br>
+            有任何question都可以reach out，我们casual chat一下吧！
+          </p>
+          
+          <!-- EXPAT BIO -->
+          <p class="ta-member-bio expat-only">
+            大家好！我是Anna，TP马来西亚的招聘专员 🌸<br><br>
             我特别专注于帮助第一次海外工作的候选人，因为我自己也是从应届毕业生开始在这个行业，很理解那种兴奋夹杂着紧张的感觉。<br><br>
             我会帮你准备简历、指导你面试技巧、分享如何最好地展示自己的技巧。不管你是刚毕业还是想转行，我都会耐心指导你每一个步骤。<br><br>
             🍜 爱好方面，我是个美食家！吉隆坡的隐藏美食我可以分享很多，从Bangsar的咖啡馆到Cheras的小贩中心，问我就对了！<br><br>
-            有任何问题都可以联系我，我们轻松聊一下吧！">Hi大家好！我是Anna，TP Malaysia的recruiter 🌸<br><br>
-            我special focus在帮first time overseas job的candidate，因为我自己也是从fresh grad开始在这个industry，很understand那种excitement mix with nervous的feeling。<br><br>
-            我会help你prepare resume、coach你interview skills、share tips on how to present yourself best。不管你是刚graduate还是想career switch，我都会patient guide你through每一个step。<br><br>
-            🍜 Hobby wise，我是个foodie！KL的hidden gems我可以share很多，从Bangsar的cafe到Cheras的hawker，问我就对了！<br><br>
-            有任何question都可以reach out，我们casual chat一下吧！</span>
+            有任何问题都可以联系我，我们轻松聊一下吧！
           </p>
+          
           <div class="ta-member-links">
-            <a class="btn-sm" href="casual-interview.html#book"><span data-local="Book Chat" data-expat="预约面谈">Book Chat</span></a>
-            <a class="btn-sm btn-ghost" href="open-jobs.html"><span data-local="View Jobs" data-expat="查看职位">View Jobs</span></a>
+            <a class="btn-sm" href="casual-interview.html#book"><span class="local-only">Book Chat</span><span class="expat-only">预约面谈</span></a>
+            <a class="btn-sm btn-ghost" href="open-jobs.html"><span class="local-only">View Jobs</span><span class="expat-only">查看职位</span></a>
           </div>
         </article>
 
@@ -1529,33 +1564,39 @@ footer::before {
             <img class="ta-member-img" src="photos/TPLogo11.png" alt="Melaine Sua" loading="lazy">
             <div>
               <h3 class="ta-member-name">Melaine Sua</h3>
-              <p class="ta-member-role"><span data-local="Talent Acquisition｜Recruiter" data-expat="人才招聘｜招聘专员">Talent Acquisition｜Recruiter</span></p>
+              <p class="ta-member-role">
+                <span class="local-only">Talent Acquisition｜Recruiter</span>
+                <span class="expat-only">人才招聘｜招聘专员</span>
+              </p>
               <div class="ta-tags">
-                <span class="ta-tag"><span data-local="Career Consultation" data-expat="职业咨询">Career Consultation</span></span>
-                <span class="ta-tag"><span data-local="Salary Negotiation" data-expat="薪资谈判">Salary Negotiation</span></span>
-                <span class="ta-tag"><span data-local="5年++ Experience" data-expat="5年以上经验">5年++ Experience</span></span>
+                <span class="ta-tag"><span class="local-only">Career Consultation</span><span class="expat-only">职业咨询</span></span>
+                <span class="ta-tag"><span class="local-only">Salary Negotiation</span><span class="expat-only">薪资谈判</span></span>
+                <span class="ta-tag"><span class="local-only">5年++ Experience</span><span class="expat-only">5年以上经验</span></span>
               </div>
             </div>
           </div>
-          <p class="ta-member-bio">
-            <span data-local="Hello！我是Melaine，career consultation是我的strong suit 💪<br><br>
+          
+          <!-- LOCAL BIO -->
+          <p class="ta-member-bio local-only">
+            Hello！我是Melaine，career consultation是我的strong suit 💪<br><br>
             在recruitment做了5年++，我见过太多candidate因为不懂market rate或者不会negotiate而miss掉好opportunity。所以我特别enjoy帮candidate understand他们的worth，然后guide他们how to negotiate properly。<br><br>
             不管你是想know你的expected salary合不合理，还是confused about哪个role更suit你的career goal，我都可以give你honest feedback和practical advice。<br><br>
             🎮 Off work，我是个gamer！Mobile game、PC game都play。如果你也是gamer，我们definitely有话题聊 haha！<br><br>
-            Career question随时welcome，let's find the best path for you！" 
-            data-expat="你好！我是Melaine，职业咨询是我的强项 💪<br><br>
+            Career question随时welcome，let's find the best path for you！
+          </p>
+          
+          <!-- EXPAT BIO -->
+          <p class="ta-member-bio expat-only">
+            你好！我是Melaine，职业咨询是我的强项 💪<br><br>
             在招聘做了5年以上，我见过太多候选人因为不懂市场价格或者不会谈判而错过好机会。所以我特别喜欢帮候选人理解他们的价值，然后指导他们如何正确谈判。<br><br>
             不管你是想知道你的期望薪资合不合理，还是困惑哪个岗位更适合你的职业目标，我都可以给你诚实的反馈和实用的建议。<br><br>
             🎮 下班后，我是个游戏玩家！手机游戏、电脑游戏都玩。如果你也是玩家，我们肯定有话题聊哈哈！<br><br>
-            职业问题随时欢迎，让我们一起找到最适合你的道路！">Hello！我是Melaine，career consultation是我的strong suit 💪<br><br>
-            在recruitment做了5年++，我见过太多candidate因为不懂market rate或者不会negotiate而miss掉好opportunity。所以我特别enjoy帮candidate understand他们的worth，然后guide他们how to negotiate properly。<br><br>
-            不管你是想know你的expected salary合不合理，还是confused about哪个role更suit你的career goal，我都可以give你honest feedback和practical advice。<br><br>
-            🎮 Off work，我是个gamer！Mobile game、PC game都play。如果你也是gamer，我们definitely有话题聊 haha！<br><br>
-            Career question随时welcome，let's find the best path for you！</span>
+            职业问题随时欢迎，让我们一起找到最适合你的道路！
           </p>
+          
           <div class="ta-member-links">
-            <a class="btn-sm" href="casual-interview.html#book"><span data-local="Book Chat" data-expat="预约面谈">Book Chat</span></a>
-            <a class="btn-sm btn-ghost" href="open-jobs.html"><span data-local="View Jobs" data-expat="查看职位">View Jobs</span></a>
+            <a class="btn-sm" href="casual-interview.html#book"><span class="local-only">Book Chat</span><span class="expat-only">预约面谈</span></a>
+            <a class="btn-sm btn-ghost" href="open-jobs.html"><span class="local-only">View Jobs</span><span class="expat-only">查看职位</span></a>
           </div>
         </article>
 
@@ -1565,33 +1606,39 @@ footer::before {
             <img class="ta-member-img" src="photos/TPLogo11.png" alt="Nuttaporn Buapradith" loading="lazy">
             <div>
               <h3 class="ta-member-name">Nuttaporn Buapradith</h3>
-              <p class="ta-member-role"><span data-local="Talent Acquisition｜Recruiter" data-expat="人才招聘｜招聘专员">Talent Acquisition｜Recruiter</span></p>
+              <p class="ta-member-role">
+                <span class="local-only">Talent Acquisition｜Recruiter</span>
+                <span class="expat-only">人才招聘｜招聘专员</span>
+              </p>
               <div class="ta-tags">
-                <span class="ta-tag"><span data-local="Thailand Based" data-expat="泰国">Thailand Based</span></span>
-                <span class="ta-tag"><span data-local="Visa Expert" data-expat="签证专家">Visa Expert</span></span>
-                <span class="ta-tag"><span data-local="Relocation Support" data-expat="搬迁支持">Relocation Support</span></span>
+                <span class="ta-tag"><span class="local-only">Thailand Based</span><span class="expat-only">泰国</span></span>
+                <span class="ta-tag"><span class="local-only">Visa Expert</span><span class="expat-only">签证专家</span></span>
+                <span class="ta-tag"><span class="local-only">Relocation Support</span><span class="expat-only">搬迁支持</span></span>
               </div>
             </div>
           </div>
-          <p class="ta-member-bio">
-            <span data-local="Sawadee ka！我是Nuttaporn，大家可以叫我Nut，base在Bangkok 🇹🇭<br><br>
+          
+          <!-- LOCAL BIO -->
+          <p class="ta-member-bio local-only">
+            Sawadee ka！我是Nuttaporn，大家可以叫我Nut，base在Bangkok 🇹🇭<br><br>
             我main focus是handle Thailand side的recruitment，special擅长visa application和relocation support。从work permit申请到找condo、开bank account，这些practical的stuff我都可以guide你。<br><br>
             很多candidate来Thailand之前都很担心语言problem，但其实Bangkok很international，而且有我们support你settle down完全no problem！<br><br>
             🍜 如果你来Bangkok，一定要try street food！从Pad Thai到Mango Sticky Rice，我可以recommend很多local favorite。Office附近的Silom area美食超多的！<br><br>
-            Thailand job有兴趣的话，随时contact我，我会detailed explain所有process！" 
-            data-expat="你好！我是Nuttaporn，大家可以叫我Nut，常驻曼谷 🇹🇭<br><br>
+            Thailand job有兴趣的话，随时contact我，我会detailed explain所有process！
+          </p>
+          
+          <!-- EXPAT BIO -->
+          <p class="ta-member-bio expat-only">
+            你好！我是Nuttaporn，大家可以叫我Nut，常驻曼谷 🇹🇭<br><br>
             我主要专注于处理泰国方面的招聘，特别擅长签证申请和搬迁支持。从工作许可申请到找公寓、开银行账户，这些实际的事情我都可以指导你。<br><br>
             很多候选人来泰国之前都很担心语言问题，但其实曼谷很国际化，而且有我们支持你安顿下来完全没问题！<br><br>
             🍜 如果你来曼谷，一定要试试街头美食！从泰式炒河粉到芒果糯米饭，我可以推荐很多当地人最爱。办公室附近的是隆区美食超多的！<br><br>
-            对泰国工作有兴趣的话，随时联系我，我会详细解释所有流程！">Sawadee ka！我是Nuttaporn，大家可以叫我Nut，base在Bangkok 🇹🇭<br><br>
-            我main focus是handle Thailand side的recruitment，special擅长visa application和relocation support。从work permit申请到找condo、开bank account，这些practical的stuff我都可以guide你。<br><br>
-            很多candidate来Thailand之前都很担心语言problem，但其实Bangkok很international，而且有我们support你settle down完全no problem！<br><br>
-            🍜 如果你来Bangkok，一定要try street food！从Pad Thai到Mango Sticky Rice，我可以recommend很多local favorite。Office附近的Silom area美食超多的！<br><br>
-            Thailand job有兴趣的话，随时contact我，我会detailed explain所有process！</span>
+            对泰国工作有兴趣的话，随时联系我，我会详细解释所有流程！
           </p>
+          
           <div class="ta-member-links">
-            <a class="btn-sm" href="casual-interview.html#book"><span data-local="Book Chat" data-expat="预约面谈">Book Chat</span></a>
-            <a class="btn-sm btn-ghost" href="open-jobs.html"><span data-local="View Jobs" data-expat="查看职位">View Jobs</span></a>
+            <a class="btn-sm" href="casual-interview.html#book"><span class="local-only">Book Chat</span><span class="expat-only">预约面谈</span></a>
+            <a class="btn-sm btn-ghost" href="open-jobs.html"><span class="local-only">View Jobs</span><span class="expat-only">查看职位</span></a>
           </div>
         </article>
 
@@ -1601,33 +1648,39 @@ footer::before {
             <img class="ta-member-img" src="photos/TPLogo11.png" alt="Chloe Heo" loading="lazy">
             <div>
               <h3 class="ta-member-name">Chloe Heo</h3>
-              <p class="ta-member-role"><span data-local="Talent Acquisition｜Recruiter" data-expat="人才招聘｜招聘专员">Talent Acquisition｜Recruiter</span></p>
+              <p class="ta-member-role">
+                <span class="local-only">Talent Acquisition｜Recruiter</span>
+                <span class="expat-only">人才招聘｜招聘专员</span>
+              </p>
               <div class="ta-tags">
-                <span class="ta-tag"><span data-local="Project Matching" data-expat="项目匹配">Project Matching</span></span>
-                <span class="ta-tag"><span data-local="Tech Projects" data-expat="科技项目">Tech Projects</span></span>
-                <span class="ta-tag"><span data-local="Korean/Chinese Speaker" data-expat="韩语/华语">Korean/Chinese Speaker</span></span>
+                <span class="ta-tag"><span class="local-only">Project Matching</span><span class="expat-only">项目匹配</span></span>
+                <span class="ta-tag"><span class="local-only">Tech Projects</span><span class="expat-only">科技项目</span></span>
+                <span class="ta-tag"><span class="local-only">Korean/Chinese Speaker</span><span class="expat-only">韩语/华语</span></span>
               </div>
             </div>
           </div>
-          <p class="ta-member-bio">
-            <span data-local="Annyeong！我是Chloe，Korean和Chinese都会讲 🇰🇷🇨🇳<br><br>
+          
+          <!-- LOCAL BIO -->
+          <p class="ta-member-bio local-only">
+            Annyeong！我是Chloe，Korean和Chinese都会讲 🇰🇷🇨🇳<br><br>
             我的specialty是帮candidate match到最suitable的project。TP有很多different client和project，从tech giant到e-commerce到gaming，每个project的culture和requirement都不一样。<br><br>
             我会花时间understand你的background、interest和career goal，然后recommend最fit你的opportunity。不是randomly assign，而是真正consider你的preference和growth potential。<br><br>
             ✈️ 我超爱travel！之前去过Japan、Taiwan、Vietnam很多次。如果你也是travel lover，我们可以exchange travel tips haha！<br><br>
-            想know哪个project最suit你？Let's chat！" 
-            data-expat="你好！我是Chloe，韩语和华语都会讲 🇰🇷🇨🇳<br><br>
+            想know哪个project最suit你？Let's chat！
+          </p>
+          
+          <!-- EXPAT BIO -->
+          <p class="ta-member-bio expat-only">
+            你好！我是Chloe，韩语和华语都会讲 🇰🇷🇨🇳<br><br>
             我的专长是帮候选人匹配到最适合的项目。TP有很多不同的客户和项目，从科技巨头到电商到游戏，每个项目的文化和要求都不一样。<br><br>
             我会花时间了解你的背景、兴趣和职业目标，然后推荐最适合你的机会。不是随机分配，而是真正考虑你的偏好和成长潜力。<br><br>
             ✈️ 我超爱旅行！之前去过日本、台湾、越南很多次。如果你也是旅行爱好者，我们可以交换旅行心得哈哈！<br><br>
-            想知道哪个项目最适合你？让我们聊聊！">Annyeong！我是Chloe，Korean和Chinese都会讲 🇰🇷🇨🇳<br><br>
-            我的specialty是帮candidate match到最suitable的project。TP有很多different client和project，从tech giant到e-commerce到gaming，每个project的culture和requirement都不一样。<br><br>
-            我会花时间understand你的background、interest和career goal，然后recommend最fit你的opportunity。不是randomly assign，而是真正consider你的preference和growth potential。<br><br>
-            ✈️ 我超爱travel！之前去过Japan、Taiwan、Vietnam很多次。如果你也是travel lover，我们可以exchange travel tips haha！<br><br>
-            想know哪个project最suit你？Let's chat！</span>
+            想知道哪个项目最适合你？让我们聊聊！
           </p>
+          
           <div class="ta-member-links">
-            <a class="btn-sm" href="casual-interview.html#book"><span data-local="Book Chat" data-expat="预约面谈">Book Chat</span></a>
-            <a class="btn-sm btn-ghost" href="open-jobs.html"><span data-local="View Jobs" data-expat="查看职位">View Jobs</span></a>
+            <a class="btn-sm" href="casual-interview.html#book"><span class="local-only">Book Chat</span><span class="expat-only">预约面谈</span></a>
+            <a class="btn-sm btn-ghost" href="open-jobs.html"><span class="local-only">View Jobs</span><span class="expat-only">查看职位</span></a>
           </div>
         </article>
 
@@ -1637,33 +1690,39 @@ footer::before {
             <img class="ta-member-img" src="photos/TPLogo11.png" alt="Rasikarn" loading="lazy">
             <div>
               <h3 class="ta-member-name">Rasikarn</h3>
-              <p class="ta-member-role"><span data-local="Talent Acquisition｜Recruiter" data-expat="人才招聘｜招聘专员">Talent Acquisition｜Recruiter</span></p>
+              <p class="ta-member-role">
+                <span class="local-only">Talent Acquisition｜Recruiter</span>
+                <span class="expat-only">人才招聘｜招聘专员</span>
+              </p>
               <div class="ta-tags">
-                <span class="ta-tag"><span data-local="Bangkok Expert" data-expat="曼谷专家">Bangkok Expert</span></span>
-                <span class="ta-tag"><span data-local="Local Life Guide" data-expat="当地生活指南">Local Life Guide</span></span>
-                <span class="ta-tag"><span data-local="Thai/Chinese/English" data-expat="泰语/华语/英语">Thai/Chinese/English</span></span>
+                <span class="ta-tag"><span class="local-only">Bangkok Expert</span><span class="expat-only">曼谷专家</span></span>
+                <span class="ta-tag"><span class="local-only">Local Life Guide</span><span class="expat-only">当地生活指南</span></span>
+                <span class="ta-tag"><span class="local-only">Thai/Chinese/English</span><span class="expat-only">泰语/华语/英语</span></span>
               </div>
             </div>
           </div>
-          <p class="ta-member-bio">
-            <span data-local="Sawadee ka！我是Rasikarn，土生土长Bangkok人 🏙️<br><br>
+          
+          <!-- LOCAL BIO -->
+          <p class="ta-member-bio local-only">
+            Sawadee ka！我是Rasikarn，土生土长Bangkok人 🏙️<br><br>
             作为local，我对Bangkok really了解——从哪里住比较convenient、哪里的food比较authentic、到怎样navigate BTS和MRT，这些日常life的question我都可以answer。<br><br>
             很多expat刚来Bangkok都会有culture shock，但其实Thai people都很friendly，而且Bangkok的nightlife和food scene真的amazing！我会help你快速adapt和enjoy这边的lifestyle。<br><br>
             🛍️ Shopping lover？Bangkok的mall和market我超熟！Chatuchak Weekend Market、Terminal 21、Siam Paragon... 想know insider tips就问我！<br><br>
-            Thailand相关的question，不管是work还是life，都欢迎contact我！" 
-            data-expat="你好！我是Rasikarn，土生土长曼谷人 🏙️<br><br>
+            Thailand相关的question，不管是work还是life，都欢迎contact我！
+          </p>
+          
+          <!-- EXPAT BIO -->
+          <p class="ta-member-bio expat-only">
+            你好！我是Rasikarn，土生土长曼谷人 🏙️<br><br>
             作为本地人，我对曼谷非常了解——从哪里住比较方便、哪里的食物比较正宗、到怎样乘坐轻轨和地铁，这些日常生活的问题我都可以回答。<br><br>
             很多外籍人士刚来曼谷都会有文化冲击，但其实泰国人都很友好，而且曼谷的夜生活和美食场景真的很棒！我会帮你快速适应和享受这边的生活方式。<br><br>
             🛍️ 购物爱好者？曼谷的商场和市场我超熟！乍都乍周末市场、Terminal 21、暹罗百丽宫... 想知道内部消息就问我！<br><br>
-            泰国相关的问题，不管是工作还是生活，都欢迎联系我！">Sawadee ka！我是Rasikarn，土生土长Bangkok人 🏙️<br><br>
-            作为local，我对Bangkok really了解——从哪里住比较convenient、哪里的food比较authentic、到怎样navigate BTS和MRT，这些日常life的question我都可以answer。<br><br>
-            很多expat刚来Bangkok都会有culture shock，但其实Thai people都很friendly，而且Bangkok的nightlife和food scene真的amazing！我会help你快速adapt和enjoy这边的lifestyle。<br><br>
-            🛍️ Shopping lover？Bangkok的mall和market我超熟！Chatuchak Weekend Market、Terminal 21、Siam Paragon... 想know insider tips就问我！<br><br>
-            Thailand相关的question，不管是work还是life，都欢迎contact我！</span>
+            泰国相关的问题，不管是工作还是生活，都欢迎联系我！
           </p>
+          
           <div class="ta-member-links">
-            <a class="btn-sm" href="casual-interview.html#book"><span data-local="Book Chat" data-expat="预约面谈">Book Chat</span></a>
-            <a class="btn-sm btn-ghost" href="open-jobs.html"><span data-local="View Jobs" data-expat="查看职位">View Jobs</span></a>
+            <a class="btn-sm" href="casual-interview.html#book"><span class="local-only">Book Chat</span><span class="expat-only">预约面谈</span></a>
+            <a class="btn-sm btn-ghost" href="open-jobs.html"><span class="local-only">View Jobs</span><span class="expat-only">查看职位</span></a>
           </div>
         </article>
       </div>
@@ -1682,99 +1741,147 @@ footer::before {
 
   <!-- Support Flow Section -->
   <section id="support" class="section">
-    <h2 class="section-title section-title-decorated"><span data-local="Support Flow" data-expat="支持流程">Support Flow</span></h2>
-    <p class="section-subtitle"><span data-local="我们怎样support你" data-expat="我们怎样支持你">我们怎样support你</span></p>
+    <h2 class="section-title section-title-decorated">
+      <span class="local-only">Support Flow</span>
+      <span class="expat-only">支持流程</span>
+    </h2>
+    <p class="section-subtitle">
+      <span class="local-only">我们怎样support你</span>
+      <span class="expat-only">我们怎样支持你</span>
+    </p>
     <div class="timeline">
       <div class="tile">
         <div class="num">01</div>
-        <h4><span data-local="Casual Chat" data-expat="休闲面谈">Casual Chat</span></h4>
-        <p class="muted"><span data-local="Apply之前想casual chat 30分钟也welcome。问问Malaysia/Thailand的work和life，了解job info（不是selection哦）。" data-expat="申请之前想轻松聊30分钟也欢迎。问问马来西亚/泰国的工作和生活，了解职位信息（不是选拔哦）。">Apply之前想casual chat 30分钟也welcome。问问Malaysia/Thailand的work和life，了解job info（不是selection哦）。</span></p>
+        <h4><span class="local-only">Casual Chat</span><span class="expat-only">休闲面谈</span></h4>
+        <p class="muted">
+          <span class="local-only">Apply之前想casual chat 30分钟也welcome。问问Malaysia/Thailand的work和life，了解job info（不是selection哦）。</span>
+          <span class="expat-only">申请之前想轻松聊30分钟也欢迎。问问马来西亚/泰国的工作和生活，了解职位信息（不是选拔哦）。</span>
+        </p>
       </div>
       <div class="tile">
         <div class="num">02</div>
-        <h4><span data-local="Apply" data-expat="申请">Apply</span></h4>
-        <p class="muted"><span data-local="Apply之后，我们会从你register的email contact你。Submit resume后，arrange HR interview的schedule。" data-expat="申请之后，我们会从你注册的邮箱联系你。提交简历后，安排人事面试的日程。">Apply之后，我们会从你register的email contact你。Submit resume后，arrange HR interview的schedule。</span></p>
+        <h4>Apply</h4>
+        <p class="muted">
+          <span class="local-only">Apply之后，我们会从你register的email contact你。Submit resume后，arrange HR interview的schedule。</span>
+          <span class="expat-only">申请之后，我们会从你注册的邮箱联系你。提交简历后，安排人事面试的日程。</span>
+        </p>
       </div>
       <div class="tile">
         <div class="num">03</div>
-        <h4><span data-local="Interview" data-expat="面试">Interview</span></h4>
-        <p class="muted"><span data-local="Online interview两round（HR→Operation Team）。关于actual工作的detail question也welcome问！" data-expat="在线面试两轮（人事→运营团队）。关于实际工作的详细问题也欢迎问！">Online interview两round（HR→Operation Team）。关于actual工作的detail question也welcome问！</span></p>
+        <h4>Interview</h4>
+        <p class="muted">
+          <span class="local-only">Online interview两round（HR→Operation Team）。关于actual工作的detail question也welcome问！</span>
+          <span class="expat-only">在线面试两轮（人事→运营团队）。关于实际工作的详细问题也欢迎问！</span>
+        </p>
       </div>
       <div class="tile">
         <div class="num">04</div>
-        <h4><span data-local="Offer" data-expat="录用">Offer</span></h4>
-        <p class="muted"><span data-local="关于work arrangement和start date等会detail explain。Any疑问我们一起clarify。" data-expat="关于工作安排和开始日期等会详细说明。任何疑问我们一起澄清。">关于work arrangement和start date等会detail explain。Any疑问我们一起clarify。</span></p>
+        <h4>Offer</h4>
+        <p class="muted">
+          <span class="local-only">关于work arrangement和start date等会detail explain。Any疑问我们一起clarify。</span>
+          <span class="expat-only">关于工作安排和开始日期等会详细说明。任何疑问我们一起澄清。</span>
+        </p>
       </div>
       <div class="tile">
         <div class="num">05</div>
-        <h4><span data-local="Visa·Travel" data-expat="签证·出行">Visa·Travel</span></h4>
-        <p class="muted"><span data-local="Submit required document后，我们help apply VISA，arrange airport pickup（MY only）和arrival hotel。" data-expat="提交所需文件后，我们帮忙申请签证，安排机场接机（仅马来西亚）和到达酒店。">Submit required document后，我们help apply VISA，arrange airport pickup（MY only）和arrival hotel。</span></p>
+        <h4><span class="local-only">Visa·Travel</span><span class="expat-only">签证·出行</span></h4>
+        <p class="muted">
+          <span class="local-only">Submit required document后，我们help apply VISA，arrange airport pickup（MY only）和arrival hotel。</span>
+          <span class="expat-only">提交所需文件后，我们帮忙申请签证，安排机场接机（仅马来西亚）和到达酒店。</span>
+        </p>
       </div>      
       <div class="tile">
         <div class="num">06</div>
-        <h4><span data-local="入职后" data-expat="入职后">入职后</span></h4>
-        <p class="muted"><span data-local="Training、language support（GoFluent等）、career advancement的path都有。Growth opportunity满满！" data-expat="培训、语言支持（GoFluent等）、职业晋升的路径都有。成长机会满满！">Training、language support（GoFluent等）、career advancement的path都有。Growth opportunity满满！</span></p>
+        <h4><span class="local-only">入职后</span><span class="expat-only">入职后</span></h4>
+        <p class="muted">
+          <span class="local-only">Training、language support（GoFluent等）、career advancement的path都有。Growth opportunity满满！</span>
+          <span class="expat-only">培训、语言支持（GoFluent等）、职业晋升的路径都有。成长机会满满！</span>
+        </p>
       </div>
     </div>
 
     <div class="card" style="margin-top:1.5rem;text-align:center;">
-      <strong><span data-local="Related Links：" data-expat="相关链接：">Related Links：</span></strong>
+      <strong><span class="local-only">Related Links：</span><span class="expat-only">相关链接：</span></strong>
       <div style="margin-top:0.75rem;display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap;">
-        <a class="btn" href="hiring-process.html"><span data-local="Hiring Process" data-expat="招聘流程">Hiring Process</span></a>
-        <a class="btn" href="relocation-visa.html"><span data-local="Visa Support" data-expat="签证支持">Visa Support</span></a>
-        <a class="btn" href="career-growth.html"><span data-local="Career Path" data-expat="职业路径">Career Path</span></a>
+        <a class="btn" href="hiring-process.html"><span class="local-only">Hiring Process</span><span class="expat-only">招聘流程</span></a>
+        <a class="btn" href="relocation-visa.html"><span class="local-only">Visa Support</span><span class="expat-only">签证支持</span></a>
+        <a class="btn" href="career-growth.html"><span class="local-only">Career Path</span><span class="expat-only">职业路径</span></a>
       </div>
     </div>
   </section>
 
   <!-- FAQ Section -->
   <section id="faq" class="section">
-    <h2 class="section-title section-title-decorated"><span data-local="FAQ" data-expat="常见问题">FAQ</span></h2>
+    <h2 class="section-title section-title-decorated">FAQ</h2>
     <div class="faq">
       <details class="q">
-        <summary><span data-local="English不太confident，okay吗？" data-expat="英语不太自信，可以吗？">English不太confident，okay吗？</span></summary>
-        <p><span data-local="完全okay！华语为main的position很多。入职后有Language Bootcamp和GoFluent可以step by step improve。Interview也mainly用华语conduct。" data-expat="完全可以！华语为主的职位很多。入职后有语言训练营和GoFluent可以循序渐进提升。面试也主要用华语进行。">完全okay！华语为main的position很多。入职后有Language Bootcamp和GoFluent可以step by step improve。Interview也mainly用华语conduct。</span></p>
+        <summary><span class="local-only">English不太confident，okay吗？</span><span class="expat-only">英语不太自信，可以吗？</span></summary>
+        <p>
+          <span class="local-only">完全okay！华语为main的position很多。入职后有Language Bootcamp和GoFluent可以step by step improve。Interview也mainly用华语conduct。</span>
+          <span class="expat-only">完全可以！华语为主的职位很多。入职后有语言训练营和GoFluent可以循序渐进提升。面试也主要用华语进行。</span>
+        </p>
       </details>
       <details class="q">
-        <summary><span data-local="First time出国，很worried。" data-expat="第一次出国，很担心。">First time出国，很worried。</span></summary>
-        <p><span data-local="Don't worry！Work visa support、airport pickup、arrival hotel（Malaysia）等，initial support都很complete。找房子也会用华语advice你。" data-expat="别担心！工作签证支持、机场接机、到达酒店（马来西亚）等，初期支持都很完善。找房子也会用华语建议你。">Don't worry！Work visa support、airport pickup、arrival hotel（Malaysia）等，initial support都很complete。找房子也会用华语advice你。</span></p>
+        <summary><span class="local-only">First time出国，很worried。</span><span class="expat-only">第一次出国，很担心。</span></summary>
+        <p>
+          <span class="local-only">Don't worry！Work visa support、airport pickup、arrival hotel（Malaysia）等，initial support都很complete。找房子也会用华语advice你。</span>
+          <span class="expat-only">别担心！工作签证支持、机场接机、到达酒店（马来西亚）等，初期支持都很完善。找房子也会用华语建议你。</span>
+        </p>
       </details>
       <details class="q">
-        <summary><span data-local="可以带family一起吗？" data-expat="可以带家人一起吗？">可以带family一起吗？</span></summary>
-        <p><span data-local="拿到work visa之后，spouse和kids的dependent pass可以apply（根据country和employment条件不同，会individual guide你）。" data-expat="拿到工作签证之后，配偶和孩子的家属签证可以申请（根据国家和雇用条件不同，会个别指导你）。">拿到work visa之后，spouse和kids的dependent pass可以apply（根据country和employment条件不同，会individual guide你）。</span></p>
+        <summary><span class="local-only">可以带family一起吗？</span><span class="expat-only">可以带家人一起吗？</span></summary>
+        <p>
+          <span class="local-only">拿到work visa之后，spouse和kids的dependent pass可以apply（根据country和employment条件不同，会individual guide你）。</span>
+          <span class="expat-only">拿到工作签证之后，配偶和孩子的家属签证可以申请（根据国家和雇用条件不同，会个别指导你）。</span>
+        </p>
       </details>
       <details class="q">
-        <summary><span data-local="从apply到入职大概要多久？" data-expat="从申请到入职大概要多久？">从apply到入职大概要多久？</span></summary>
-        <p><span data-local="整个process大概2〜3 weeks（document→interview 2 rounds→final result）。Work visa在offer之后大概1〜2 months左右。" data-expat="整个流程大概2〜3周（文件→面试2轮→最终结果）。工作签证在录用之后大概1〜2个月左右。">整个process大概2〜3 weeks（document→interview 2 rounds→final result）。Work visa在offer之后大概1〜2 months左右。</span></p>
+        <summary><span class="local-only">从apply到入职大概要多久？</span><span class="expat-only">从申请到入职大概要多久？</span></summary>
+        <p>
+          <span class="local-only">整个process大概2〜3 weeks（document→interview 2 rounds→final result）。Work visa在offer之后大概1〜2 months左右。</span>
+          <span class="expat-only">整个流程大概2〜3周（文件→面试2轮→最终结果）。工作签证在录用之后大概1〜2个月左右。</span>
+        </p>
       </details>
     </div>
     <div class="card" style="margin-top:1.5rem;text-align:center;">
-      <strong><span data-local="Question还没solve？" data-expat="问题还没解决？">Question还没solve？</span></strong>
+      <strong><span class="local-only">Question还没solve？</span><span class="expat-only">问题还没解决？</span></strong>
       <div style="margin-top:0.75rem;display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap;">
-        <a class="btn" href="casual-interview.html"><span data-local="Book Casual Chat" data-expat="预约休闲面谈">Book Casual Chat</span></a>
-        <a class="btn" target="_blank" rel="noopener" href="https://line.me/R/ti/p/@286nmdsd?from=page&searchId=286nmdsd">LINE<span data-local="问问题" data-expat="咨询">问问题</span></a>
+        <a class="btn" href="casual-interview.html"><span class="local-only">Book Casual Chat</span><span class="expat-only">预约休闲面谈</span></a>
+        <a class="btn" target="_blank" rel="noopener" href="https://line.me/R/ti/p/@286nmdsd?from=page&searchId=286nmdsd">LINE<span class="local-only">问问题</span><span class="expat-only">咨询</span></a>
       </div>
     </div>
   </section>
 
   <!-- Contact Section -->
   <section id="contact" class="section">
-    <h2 class="section-title section-title-decorated"><span data-local="Contact Us" data-expat="联系我们">Contact Us</span></h2>
+    <h2 class="section-title section-title-decorated">
+      <span class="local-only">Contact Us</span>
+      <span class="expat-only">联系我们</span>
+    </h2>
     <div class="grid-3">
       <div class="card">
-        <h3><span data-local="Casual Chat（华语）" data-expat="休闲面谈（华语）">Casual Chat（华语）</span></h3>
-        <p class="muted"><span data-local="不是selection。Life和work的question，30分钟casual聊一下。" data-expat="不是选拔。生活和工作的问题，30分钟轻松聊一下。">不是selection。Life和work的question，30分钟casual聊一下。</span></p>
-        <p style="margin-top:0.75rem"><a class="btn" href="casual-interview.html"><span data-local="Book Now" data-expat="立即预约">Book Now</span></a></p>
+        <h3><span class="local-only">Casual Chat（华语）</span><span class="expat-only">休闲面谈（华语）</span></h3>
+        <p class="muted">
+          <span class="local-only">不是selection。Life和work的question，30分钟casual聊一下。</span>
+          <span class="expat-only">不是选拔。生活和工作的问题，30分钟轻松聊一下。</span>
+        </p>
+        <p style="margin-top:0.75rem"><a class="btn" href="casual-interview.html"><span class="local-only">Book Now</span><span class="expat-only">立即预约</span></a></p>
       </div>
       <div class="card">
-        <h3><span data-local="LINE Official" data-expat="LINE官方">LINE Official</span></h3>
-        <p class="muted"><span data-local="Latest job和local info update。Chat问问题也okay。" data-expat="最新职位和当地信息更新。聊天问问题也可以。">Latest job和local info update。Chat问问题也okay。</span></p>
-        <p style="margin-top:0.75rem"><a class="btn" target="_blank" rel="noopener" href="https://line.me/R/ti/p/@286nmdsd?from=page&searchId=286nmdsd"><span data-local="Add Friend" data-expat="添加好友">Add Friend</span></a></p>
+        <h3><span class="local-only">LINE Official</span><span class="expat-only">LINE官方</span></h3>
+        <p class="muted">
+          <span class="local-only">Latest job和local info update。Chat问问题也okay。</span>
+          <span class="expat-only">最新职位和当地信息更新。聊天问问题也可以。</span>
+        </p>
+        <p style="margin-top:0.75rem"><a class="btn" target="_blank" rel="noopener" href="https://line.me/R/ti/p/@286nmdsd?from=page&searchId=286nmdsd"><span class="local-only">Add Friend</span><span class="expat-only">添加好友</span></a></p>
       </div>
       <div class="card">
-        <h3><span data-local="Apply Now" data-expat="立即申请">Apply Now</span></h3>
-        <p class="muted"><span data-local="华语speaker position积极hiring中。No experience required的job也有！" data-expat="华语使用者职位积极招聘中。不需要经验的工作也有！">华语speaker position积极hiring中。No experience required的job也有！</span></p>
-        <p style="margin-top:0.75rem"><a class="btn-solid" target="_blank" rel="noopener" href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=chinese"><span data-local="Apply Here" data-expat="在此申请">Apply Here</span></a></p>
+        <h3><span class="local-only">Apply Now</span><span class="expat-only">立即申请</span></h3>
+        <p class="muted">
+          <span class="local-only">华语speaker position积极hiring中。No experience required的job也有！</span>
+          <span class="expat-only">华语使用者职位积极招聘中。不需要经验的工作也有！</span>
+        </p>
+        <p style="margin-top:0.75rem"><a class="btn-solid" target="_blank" rel="noopener" href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=chinese"><span class="local-only">Apply Here</span><span class="expat-only">在此申请</span></a></p>
       </div>
     </div>
   </section>
@@ -1789,58 +1896,59 @@ footer::before {
         <span class="footer-logo-text">TP</span>
       </div>
       <p class="footer-desc">
-        <span data-local="Global BPO company，operate在100+ countries。<br>Support华语speaker开启new career。" data-expat="全球BPO企业，运营在100+国家。<br>支持华语使用者开启新职业。">Global BPO company，operate在100+ countries。<br>Support华语speaker开启new career。</span>
+        <span class="local-only">Global BPO company，operate在100+ countries。<br>Support华语speaker开启new career。</span>
+        <span class="expat-only">全球BPO企业，运营在100+国家。<br>支持华语使用者开启新职业。</span>
       </p>
       <div class="badges">
-        <span class="badge-item">🏆 Great Place to Work® <span data-local="连续6年" data-expat="连续6年">连续6年</span></span>
+        <span class="badge-item">🏆 Great Place to Work® 连续6年</span>
       </div>
       <div class="footer-cta">
-        <a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=chinese" target="_blank" rel="noopener noreferrer" class="btn btn-gold"><span data-local="Apply Here" data-expat="在此申请">Apply Here</span></a>
+        <a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=chinese" target="_blank" rel="noopener noreferrer" class="btn btn-gold"><span class="local-only">Apply Here</span><span class="expat-only">在此申请</span></a>
       </div>
     </div>
     
     <div class="footer-section">
-      <h3><span data-local="Company Info" data-expat="公司信息">Company Info</span></h3>
+      <h3><span class="local-only">Company Info</span><span class="expat-only">公司信息</span></h3>
       <ul>
-        <li><a href="about-tp.html"><span data-local="About Company" data-expat="公司介绍">About Company</span></a></li>
-        <li><a href="salary-and-benefits.html#benefits"><span data-local="Benefits" data-expat="福利待遇">Benefits</span></a></li>
-        <li><a href="office-environment.html"><span data-local="Office Environment" data-expat="办公环境">Office Environment</span></a></li>
-        <li><a href="ta-team.html" aria-current="page"><span data-local="TA Team" data-expat="招聘团队">TA Team</span></a></li>
+        <li><a href="about-tp.html"><span class="local-only">About Company</span><span class="expat-only">公司介绍</span></a></li>
+        <li><a href="salary-and-benefits.html#benefits">Benefits</a></li>
+        <li><a href="office-environment.html"><span class="local-only">Office Environment</span><span class="expat-only">办公环境</span></a></li>
+        <li><a href="ta-team.html" aria-current="page"><span class="local-only">TA Team</span><span class="expat-only">招聘团队</span></a></li>
       </ul>
     </div>
 
     <div class="footer-section">
-      <h3><span data-local="Jobs·Apply" data-expat="职位·申请">Jobs·Apply</span></h3>
+      <h3><span class="local-only">Jobs·Apply</span><span class="expat-only">职位·申请</span></h3>
       <ul>
-        <li><a href="open-jobs.html"><span data-local="Job List" data-expat="职位列表">Job List</span></a></li>
-        <li><a href="hiring-process.html"><span data-local="Hiring Process" data-expat="招聘流程">Hiring Process</span></a></li>
-        <li><a href="casual-interview.html"><span data-local="Contact" data-expat="联系">Contact</span></a></li>
+        <li><a href="open-jobs.html"><span class="local-only">Job List</span><span class="expat-only">职位列表</span></a></li>
+        <li><a href="hiring-process.html"><span class="local-only">Hiring Process</span><span class="expat-only">招聘流程</span></a></li>
+        <li><a href="casual-interview.html">Contact</a></li>
       </ul>
     </div>
 
     <div class="footer-section">
-      <h3><span data-local="Life Info" data-expat="生活信息">Life Info</span></h3>
+      <h3><span class="local-only">Life Info</span><span class="expat-only">生活信息</span></h3>
       <ul>
-        <li><a href="why-malaysia-thailand.html"><span data-local="Work Cities" data-expat="工作城市">Work Cities</span></a></li>
-        <li><a href="relocation-visa.html"><span data-local="Relocation Support" data-expat="搬迁支持">Relocation Support</span></a></li>
-        <li><a href="daily-life-malaysia.html"><span data-local="Lifestyle" data-expat="生活方式">Lifestyle</span></a></li>
-        <li><a href="https://line.me/R/ti/p/@286nmdsd" target="_blank" rel="noopener noreferrer"><span data-local="LINE Official" data-expat="LINE官方">LINE Official</span></a></li>
+        <li><a href="why-malaysia-thailand.html"><span class="local-only">Work Cities</span><span class="expat-only">工作城市</span></a></li>
+        <li><a href="relocation-visa.html"><span class="local-only">Relocation Support</span><span class="expat-only">搬迁支持</span></a></li>
+        <li><a href="daily-life-malaysia.html">Lifestyle</a></li>
+        <li><a href="https://line.me/R/ti/p/@286nmdsd" target="_blank" rel="noopener noreferrer"><span class="local-only">LINE Official</span><span class="expat-only">LINE官方</span></a></li>
       </ul>
     </div>
   </div>
   
   <div class="footer-bottom">
     <p>&copy; 2025 TP. All rights reserved. | 
-      <a href="#"><span data-local="Privacy Policy" data-expat="隐私政策">Privacy Policy</span></a> | 
-      <a href="#"><span data-local="Terms" data-expat="使用条款">Terms</span></a>
+      <a href="#"><span class="local-only">Privacy Policy</span><span class="expat-only">隐私政策</span></a> | 
+      <a href="#"><span class="local-only">Terms</span><span class="expat-only">使用条款</span></a>
     </p>
   </div>
 </footer>
 
 <!-- FLOATING BUTTONS -->
-<a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=chinese" target="_blank" rel="noopener noreferrer" class="floating-apply" aria-label="立即申请"><span data-local="Apply Now" data-expat="立即申请">Apply Now</span></a>
+<a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=chinese" target="_blank" rel="noopener noreferrer" class="floating-apply" aria-label="立即申请"><span class="local-only">Apply Now</span><span class="expat-only">立即申请</span></a>
 
-<a href="casual-interview.html" class="floating-casual" aria-label="预约面谈"><span data-local="Casual Chat" data-expat="休闲面谈">Casual Chat</span></a>
+<a href="casual-interview.html" class="floating-casual" aria-label="预约面谈"><span class="local-only">Casual Chat</span><span class="expat-only">休闲面谈</span></a>
 
 <button class="back-to-top" id="backToTop" aria-label="回到顶部">↑</button>
 
@@ -1861,15 +1969,6 @@ function setLanguage(lang) {
     localBtn.classList.add('active');
     expatBtn.classList.remove('active');
   }
-  
-  // Update all bilingual elements
-  document.querySelectorAll('[data-local][data-expat]').forEach(el => {
-    if(lang === 'expat') {
-      el.innerHTML = el.getAttribute('data-expat');
-    } else {
-      el.innerHTML = el.getAttribute('data-local');
-    }
-  });
   
   // Save preference
   localStorage.setItem('clpLang', lang);
