@@ -1,23 +1,23 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>移住・ビザサポート | TP採用 マレーシア・タイ</title>
-<meta name="description" content="就労ビザ（EP）申請は会社負担。日本語サポート、片道航空券・空港送迎・到着後6泊7日ホテル（マレーシア）など、移住支援の流れと内容をご案内。">
+<title>搬迁·签证支持 | TP招聘 马来西亚·泰国</title>
+<meta name="description" content="工作签证（EP）申请公司负担。华语支持、单程机票·机场接送·到达后酒店（马来西亚）等，搬迁支持的流程和内容介绍。">
 <meta name="theme-color" content="#000000">
 <meta property="og:type" content="website">
-<meta property="og:locale" content="ja_JP">
-<meta property="og:title" content="移住・ビザサポート | TP採用">
-<meta property="og:description" content="就労ビザ申請、移住支援の流れと内容">
-<meta property="og:image" content="https://tpmyandtpth.github.io/JLP/photos/TPLogo11.png">
-<meta property="og:url" content="https://tpmyandtpth.github.io/JLP/relocation-visa.html">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:title" content="搬迁·签证支持 | TP招聘">
+<meta property="og:description" content="工作签证申请、搬迁支持的流程和内容">
+<meta property="og:image" content="https://tpmyandtpth.github.io/CLP/photos/TPLogo11.png">
+<meta property="og:url" content="https://tpmyandtpth.github.io/CLP/relocation-visa.html">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="移住・ビザサポート | TP採用">
-<meta name="twitter:description" content="就労ビザ申請、移住支援">
-<meta name="twitter:image" content="https://tpmyandtpth.github.io/JLP/photos/TPLogo11.png">
+<meta name="twitter:title" content="搬迁·签证支持 | TP招聘">
+<meta name="twitter:description" content="工作签证申请、搬迁支持">
+<meta name="twitter:image" content="https://tpmyandtpth.github.io/CLP/photos/TPLogo11.png">
 <meta name="robots" content="index,follow">
-<link rel="canonical" href="https://tpmyandtpth.github.io/JLP/relocation-visa.html">
+<link rel="canonical" href="https://tpmyandtpth.github.io/CLP/relocation-visa.html">
 <link rel="icon" href="photos/TPLogo11.png">
 <link rel="apple-touch-icon" href="photos/TPLogo11.png">
 
@@ -26,12 +26,11 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<!-- Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+<!-- Fonts - Chinese -->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&family=Noto+Serif+SC:wght@700;900&display=swap" rel="stylesheet">
 
-<!-- GLOBAL STYLES - From Template -->
 <style>
-/* CSS Variables */
+/* CSS Variables - GOLD THEME */
 :root {
   --tp-black: #000000;
   --tp-dark: #1a1a1a;
@@ -43,14 +42,18 @@
   --tp-light: #e5e5e5;
   --tp-off: #f5f5f5;
   --tp-white: #ffffff;
-  --accent-purple: #780096;
-  --accent-pink: #ff0082;
+  --gold-primary: #FFD700;
+  --gold-light: #FFAA00;
+  --gold-dark: #E6B800;
+  --gold-pale: #FFFBEB;
   --max: 1050px;
   --shadow-xs: 0 1px 2px rgba(0,0,0,0.05);
   --shadow-sm: 0 2px 4px rgba(0,0,0,0.08);
   --shadow-md: 0 4px 8px rgba(0,0,0,0.12);
   --shadow-lg: 0 8px 16px rgba(0,0,0,0.16);
   --shadow-xl: 0 16px 32px rgba(0,0,0,0.20);
+  --shadow-gold: 0 4px 12px rgba(255,215,0,0.3);
+  --radius: 12px;
 }
 
 /* Base Styles */
@@ -65,12 +68,11 @@ html {
 }
 
 body {
-  font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
   color: var(--tp-dark);
   line-height: 1.75;
   background: var(--tp-white);
   -webkit-font-smoothing: antialiased;
-  font-feature-settings: "palt" 1;
 }
 
 a {
@@ -102,7 +104,75 @@ img {
   padding: 0 20px;
 }
 
-/* Header Styles */
+/* ===== BILINGUAL SYSTEM ===== */
+.local-only { display: block; }
+.expat-only { display: none; }
+span.local-only { display: inline; }
+span.expat-only { display: none; }
+
+body.expat-mode .local-only { display: none !important; }
+body.expat-mode .expat-only { display: block; }
+body.expat-mode span.expat-only { display: inline; }
+
+/* ===== LANGUAGE TOGGLE BANNER ===== */
+.lang-toggle-banner {
+  background: linear-gradient(135deg, var(--tp-black) 0%, var(--tp-charcoal) 100%);
+  color: var(--tp-white);
+  padding: 0.5rem 20px;
+  position: relative;
+  z-index: 1001;
+}
+
+.lang-toggle-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.lang-toggle-label {
+  font-size: 0.8rem;
+  color: var(--tp-silver);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.lang-toggle-buttons {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.lang-btn {
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--tp-silver);
+  font-family: inherit;
+}
+
+.lang-btn:hover {
+  color: var(--tp-white);
+  border-color: var(--tp-gray);
+}
+
+.lang-btn.active {
+  background: var(--gold-primary);
+  color: var(--tp-black);
+  border-color: var(--gold-primary);
+  font-weight: 700;
+}
+
+/* ===== HEADER ===== */
 header {
   position: sticky;
   top: 0;
@@ -174,7 +244,7 @@ nav a::after {
   left: 0;
   width: 0;
   height: 2px;
-  background: var(--tp-black);
+  background: var(--gold-primary);
   transition: width 0.3s ease;
 }
 
@@ -192,25 +262,25 @@ nav a[aria-current="page"]::after {
 }
 
 nav a:focus {
-  outline: 2px solid var(--accent-purple);
+  outline: 2px solid var(--gold-primary);
   outline-offset: 4px;
   border-radius: 2px;
 }
 
 .apply-btn {
-  background: var(--accent-purple);
-  color: var(--tp-white);
+  background: var(--gold-primary);
+  color: var(--tp-black);
   padding: 0.5rem 1.25rem;
   border-radius: 4px;
   font-weight: 600;
-  border: 2px solid var(--accent-purple);
+  border: 2px solid var(--gold-primary);
   transition: all 0.3s;
 }
 
 .apply-btn:hover,
 .apply-btn:focus {
-  background: var(--tp-white);
-  color: var(--accent-purple);
+  background: var(--tp-black);
+  color: var(--gold-primary);
 }
 
 .apply-btn::after {
@@ -293,51 +363,41 @@ nav a:focus {
   background: var(--tp-off);
 }
 
-/* Button Styles */
+/* ===== BUTTON STYLES ===== */
 .btn {
   padding: 0.85rem 1.2rem;
-  font-weight: 900;
+  font-weight: 700;
   border-radius: 999px;
   text-decoration: none;
   display: inline-block;
-  border: 2px solid var(--accent-purple);
-  color: var(--accent-purple);
+  border: 2px solid var(--gold-primary);
+  color: var(--gold-primary);
   transition: 0.2s;
+  background: transparent;
 }
 
 .btn:hover {
-  background: var(--accent-purple);
-  color: #fff;
+  background: var(--gold-primary);
+  color: var(--tp-black);
 }
 
 .btn-solid {
-  background: var(--accent-purple);
-  color: #fff;
-  border-color: var(--accent-purple);
+  background: var(--gold-primary);
+  color: var(--tp-black);
+  border-color: var(--gold-primary);
+  border-radius: 999px;
+  padding: 0.85rem 1.2rem;
+  font-weight: 700;
+  display: inline-block;
+  border: 2px solid var(--gold-primary);
 }
 
 .btn-solid:hover {
-  filter: brightness(.95);
+  background: var(--tp-black);
+  color: var(--gold-primary);
 }
 
-.btn-accent {
-  background: var(--accent-purple);
-  color: var(--tp-white);
-  border-color: var(--accent-purple);
-  padding: 0.75rem 1.75rem;
-  border-radius: 4px;
-  font-weight: 600;
-  font-size: 0.9rem;
-}
-
-.btn-accent:hover {
-  background: var(--tp-white);
-  color: var(--accent-purple);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(120,0,150,0.15);
-}
-
-/* Footer Styles */
+/* ===== FOOTER ===== */
 footer {
   background: var(--tp-black);
   color: var(--tp-white);
@@ -353,8 +413,8 @@ footer::before {
   top: 0;
   left: 0;
   right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--accent-purple), transparent);
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--gold-primary), transparent);
 }
 
 .footer-content {
@@ -403,6 +463,7 @@ footer::before {
   text-transform: uppercase;
   letter-spacing: 0.08em;
   opacity: 0.9;
+  color: var(--gold-primary);
 }
 
 .footer-section ul {
@@ -422,6 +483,7 @@ footer::before {
 .footer-section a:hover,
 .footer-section a:focus {
   opacity: 1;
+  color: var(--gold-primary);
   outline: none;
 }
 
@@ -439,6 +501,7 @@ footer::before {
   gap: 0.3rem;
   font-size: 0.8rem;
   opacity: 0.8;
+  color: var(--gold-primary);
 }
 
 .footer-cta {
@@ -450,6 +513,11 @@ footer::before {
   padding-top: 12px;
   font-size: 0.75rem;
   opacity: 0.6;
+}
+
+.footer-bottom .ssm-info {
+  margin-bottom: 0.5rem;
+  font-size: 0.7rem;
 }
 
 .footer-bottom a {
@@ -464,20 +532,20 @@ footer::before {
   outline: none;
 }
 
-/* Floating Buttons */
+/* ===== FLOATING BUTTONS ===== */
 .floating-apply {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: rgba(120, 0, 150, 0.9);
-  color: var(--tp-white);
+  background: rgba(255, 215, 0, 0.95);
+  color: var(--tp-black);
   padding: 0.75rem 1.25rem;
   border-radius: 50px;
   font-weight: 600;
-  box-shadow: 0 4px 12px rgba(120,0,150,0.3);
+  box-shadow: var(--shadow-gold);
   z-index: 999;
   transition: all 0.3s;
-  border: 2px solid var(--accent-purple);
+  border: 2px solid var(--gold-primary);
   font-size: 0.85rem;
   backdrop-filter: blur(10px);
 }
@@ -485,8 +553,8 @@ footer::before {
 .floating-apply:hover,
 .floating-apply:focus {
   transform: scale(1.05);
-  box-shadow: 0 6px 20px rgba(120,0,150,0.4);
-  background: var(--accent-purple);
+  box-shadow: 0 6px 20px rgba(255,215,0,0.4);
+  background: var(--gold-primary);
   outline: none;
 }
 
@@ -548,7 +616,265 @@ footer::before {
   transform: translateY(-2px);
 }
 
-/* Responsive Design */
+/* ===== HERO SECTION ===== */
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--tp-black) 0%, var(--tp-charcoal) 100%);
+  padding: 3.75rem 20px;
+  text-align: center;
+  color: var(--tp-white);
+}
+
+.hero::before {
+  content: '华';
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  font-size: clamp(150px, 25vw, 350px);
+  font-weight: 900;
+  font-family: 'Noto Serif SC', serif;
+  opacity: 0.03;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: var(--gold-primary);
+}
+
+.hero h1 {
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  font-weight: 900;
+  color: var(--gold-primary);
+  margin-bottom: 0.6rem;
+  font-family: 'Noto Serif SC', serif;
+}
+
+.hero p {
+  color: var(--tp-silver);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.hero-cta {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 0.6rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ===== SECTION STYLES ===== */
+.section {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 20px;
+}
+
+.section h2 {
+  font-size: 1.6rem;
+  color: var(--tp-black);
+  font-weight: 900;
+  margin-bottom: 0.6rem;
+  font-family: 'Noto Serif SC', serif;
+}
+
+.lead {
+  color: var(--tp-gray-dark);
+  margin-bottom: 1rem;
+}
+
+/* Cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.card {
+  background: var(--tp-white);
+  border: 1px solid var(--tp-light);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s;
+}
+
+.card:hover {
+  border-color: var(--gold-primary);
+  box-shadow: var(--shadow-md);
+}
+
+.card h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.35rem;
+  color: var(--tp-black);
+}
+
+.card p {
+  color: var(--tp-gray-dark);
+  font-size: 0.95rem;
+}
+
+/* Stepper */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0.6rem;
+}
+
+.step {
+  background: var(--tp-white);
+  border: 1px solid var(--tp-light);
+  border-radius: var(--radius);
+  padding: 0.9rem 0.8rem;
+  text-align: left;
+  transition: all 0.3s;
+}
+
+.step:hover {
+  border-color: var(--gold-primary);
+  box-shadow: var(--shadow-md);
+}
+
+.step strong {
+  display: block;
+  color: var(--gold-primary);
+  font-size: 1.1rem;
+}
+
+.step small {
+  display: block;
+  color: var(--tp-gray-dark);
+  margin-top: 0.25rem;
+}
+
+/* Accordion */
+.acc {
+  border: 1px solid var(--tp-light);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.acc-item + .acc-item {
+  border-top: 1px solid var(--tp-light);
+}
+
+.acc-q {
+  padding: 1rem 1.1rem;
+  background: var(--tp-white);
+  font-weight: 700;
+  color: var(--tp-black);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+.acc-q:hover {
+  background: var(--gold-pale);
+}
+
+.acc-q:focus {
+  outline: 2px dashed var(--gold-primary);
+  outline-offset: 3px;
+}
+
+.acc-a {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  padding: 0 1.1rem;
+  color: var(--tp-gray-dark);
+  background: var(--tp-white);
+}
+
+.acc-item.open .acc-a {
+  max-height: 900px;
+  padding: 0 1.1rem 1rem;
+}
+
+.plus {
+  font-size: 1.4rem;
+  font-weight: 300;
+  transition: transform 0.2s;
+  color: var(--gold-primary);
+}
+
+.acc-item.open .plus {
+  transform: rotate(45deg);
+}
+
+/* Pills */
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.pill {
+  font-size: 0.85rem;
+  background: var(--gold-pale);
+  border: 1px solid var(--gold-primary);
+  padding: 0.3rem 0.6rem;
+  border-radius: 999px;
+  color: var(--tp-black);
+}
+
+/* Helper section */
+.helper {
+  background: linear-gradient(135deg, var(--tp-black) 0%, var(--tp-charcoal) 100%);
+  color: var(--tp-white);
+  padding: 2.5rem 20px;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.helper .inner {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.helper h2 {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: var(--gold-primary);
+  margin-bottom: 0.5rem;
+  font-family: 'Noto Serif SC', serif;
+}
+
+.helper p {
+  color: var(--tp-silver);
+}
+
+.helper a {
+  color: var(--gold-primary);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.helper a:hover {
+  color: var(--gold-light);
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 1100px) {
+  .steps {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 980px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 900px) {
   nav {
     display: none;
@@ -580,265 +906,10 @@ footer::before {
     padding: 0.625rem 1rem;
     font-size: 0.8rem;
   }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation: none !important;
-    transition: none !important;
-  }
   
-  html {
-    scroll-behavior: auto;
-  }
-}
-
-/* PAGE SPECIFIC STYLES - Relocation & Visa */
-.hero {
-  position: relative;
-  overflow: hidden;
-  background: linear-gradient(135deg, var(--tp-white) 0%, var(--tp-off) 100%);
-  padding: 3.75rem 20px;
-  text-align: center;
-}
-
-.hero::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  right: 6%;
-  width: clamp(220px, 32vw, 480px);
-  height: clamp(220px, 32vw, 480px);
-  background-image: url('photos/TPLogo11.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  opacity: 0.04;
-  filter: saturate(0);
-  transform: translateY(-50%);
-  pointer-events: none;
-}
-
-.hero h1 {
-  font-size: 2.4rem;
-  font-weight: 900;
-  color: #000;
-  margin-bottom: 0.6rem;
-}
-
-.hero p {
-  color: var(--tp-gray-dark);
-}
-
-.hero-cta {
-  margin-top: 1rem;
-  display: flex;
-  gap: 0.6rem;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.section {
-  max-width: 1200px;
-  margin: 2rem auto;
-  padding: 0 20px;
-}
-
-.section h2 {
-  font-size: 1.6rem;
-  color: #000;
-  font-weight: 900;
-  margin-bottom: 0.6rem;
-}
-
-.lead {
-  color: var(--tp-gray-dark);
-  margin-bottom: 1rem;
-}
-
-/* Cards */
-.cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-}
-
-.card {
-  background: #fff;
-  border: 1px solid var(--tp-light);
-  border-radius: 12px;
-  padding: 1.1rem;
-  box-shadow: var(--shadow-sm);
-}
-
-.card h3 {
-  font-size: 1.05rem;
-  margin-bottom: 0.35rem;
-  color: #000;
-}
-
-.card p {
-  color: var(--tp-gray-dark);
-  font-size: 0.95rem;
-}
-
-/* Stepper */
-.steps {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 0.6rem;
-}
-
-.step {
-  background: #fff;
-  border: 1px solid var(--tp-light);
-  border-radius: 12px;
-  padding: 0.9rem 0.8rem;
-  text-align: left;
-}
-
-.step strong {
-  display: block;
-  color: #000;
-}
-
-.step small {
-  display: block;
-  color: var(--tp-gray-dark);
-}
-
-/* Accordion */
-.acc {
-  border: 1px solid var(--tp-light);
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-.acc-item + .acc-item {
-  border-top: 1px solid var(--tp-light);
-}
-
-.acc-q {
-  padding: 1rem 1.1rem;
-  background: #fff;
-  font-weight: 900;
-  color: #000;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  user-select: none;
-  border: none;
-  width: 100%;
-  text-align: left;
-}
-
-.acc-q:focus {
-  outline: 2px dashed var(--accent-purple);
-  outline-offset: 3px;
-}
-
-.acc-a {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease, padding 0.3s ease;
-  padding: 0 1.1rem;
-  color: var(--tp-gray-dark);
-  background: #fff;
-}
-
-.acc-item.open .acc-a {
-  max-height: 900px;
-  padding: 0 1.1rem 1rem;
-}
-
-.plus {
-  font-size: 1.4rem;
-  font-weight: 300;
-  transition: transform 0.2s;
-}
-
-.acc-item.open .plus {
-  transform: rotate(45deg);
-}
-
-/* Pills */
-.pills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.pill {
-  font-size: 0.85rem;
-  background: var(--tp-off);
-  border: 1px solid var(--tp-light);
-  padding: 0.3rem 0.6rem;
-  border-radius: 999px;
-}
-
-/* Team photos */
-.team-strip {
-  max-width: 1200px;
-  margin: 2rem auto 3rem;
-  padding: 0 20px;
-}
-
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0.6rem;
-}
-
-.team-grid div {
-  aspect-ratio: 4/3;
-  border-radius: 10px;
-  overflow: hidden;
-  background: #eee center/cover no-repeat;
-}
-
-/* Helper */
-.helper {
-  background: #fff;
-  border-top: 1px solid var(--tp-light);
-  border-bottom: 1px solid var(--tp-light);
-  padding: 2rem 20px;
-  margin: 2rem 0;
-}
-
-.helper .inner {
-  max-width: 1000px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.helper h2 {
-  font-size: 1.6rem;
-  font-weight: 900;
-  color: #000;
-  margin-bottom: 0.4rem;
-}
-
-.helper p {
-  color: var(--tp-gray-dark);
-}
-
-/* Responsive for page specific styles */
-@media (max-width: 1100px) {
-  .steps {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 980px) {
-  .cards {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 900px) {
-  .team-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .lang-toggle-inner {
+    flex-direction: column;
+    gap: 0.5rem;
   }
 }
 
@@ -859,49 +930,74 @@ footer::before {
     grid-template-columns: 1fr;
   }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+  
+  html {
+    scroll-behavior: auto;
+  }
+}
 </style>
 </head>
 <body>
 <!-- Skip Navigation -->
-<a href="#main" class="sr-only">メインコンテンツへスキップ</a>
+<a href="#main" class="sr-only">跳转到主要内容</a>
+
+<!-- LANGUAGE TOGGLE BANNER -->
+<div class="lang-toggle-banner">
+  <div class="lang-toggle-inner">
+    <span class="lang-toggle-label">🌐 选择语言版本</span>
+    <div class="lang-toggle-buttons">
+      <button class="lang-btn active" id="langLocal" onclick="setLanguage('local')">🇲🇾 本地华人</button>
+      <button class="lang-btn" id="langExpat" onclick="setLanguage('expat')">🌏 海外华人</button>
+    </div>
+  </div>
+</div>
 
 <!-- HEADER -->
 <header role="banner">
   <div class="header-inner">
-    <a class="brand" href="https://tpmyandtpth.github.io/JLP/index.html">
-      <img src="photos/TPLogo11.png" alt="TP Japan" width="40" height="40">
+    <a class="brand" href="index.html">
+      <img src="photos/TPLogo11.png" alt="TP Logo" width="40" height="40">
       <div class="brand-text">
         <span class="brand-name">TP</span>
-        <span class="brand-tagline">日本採用 — マレーシア・タイ</span>
+        <span class="brand-tagline">
+          <span class="local-only">Malaysia·Thailand</span>
+          <span class="expat-only">马来西亚·泰国</span>
+        </span>
       </div>
     </a>
 
-    <nav aria-label="メインナビゲーション">
+    <nav aria-label="主导航">
       <ul>
-        <li><a href="https://tpmyandtpth.github.io/JLP/index.html">ホーム</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/about-tp.html">TPについて</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/salary-and-benefits.html">給与・福利厚生</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/interview-process.html">面接プロセス</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/why-malaysia-thailand.html">なぜマレーシア・タイ</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/relocation-visa.html" aria-current="page">移住・ビザサポート</a></li>
-        <li><a href="https://careerseng-teleperformance.icims.com/jobs/49026/customer-service-representative---japanese-speaking-%28kl%29/job?mode=job&iis=LANDINGPAGE" target="_blank" rel="noopener noreferrer" class="apply-btn">応募する</a></li>
+        <li><a href="index.html"><span class="local-only">Home</span><span class="expat-only">首页</span></a></li>
+        <li><a href="about-tp.html"><span class="local-only">About TP</span><span class="expat-only">关于TP</span></a></li>
+        <li><a href="salary-and-benefits.html"><span class="local-only">Benefits</span><span class="expat-only">薪资福利</span></a></li>
+        <li><a href="hiring-process.html"><span class="local-only">Hiring Process</span><span class="expat-only">招聘流程</span></a></li>
+        <li><a href="why-malaysia-thailand.html">城市介绍</a></li>
+        <li><a href="relocation-visa.html" aria-current="page"><span class="local-only">Visa Support</span><span class="expat-only">签证支持</span></a></li>
+        <li><a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=chinese" target="_blank" rel="noopener noreferrer" class="apply-btn"><span class="local-only">Apply Now</span><span class="expat-only">立即申请</span></a></li>
       </ul>
     </nav>
 
-    <button class="mobile-toggle" id="mobileToggle" aria-label="メニューを開く" aria-expanded="false">
+    <button class="mobile-toggle" id="mobileToggle" aria-label="打开菜单" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
 
-  <nav class="mobile-menu" id="mobileMenu" aria-label="モバイルナビゲーション">
+  <nav class="mobile-menu" id="mobileMenu" aria-label="移动导航">
     <ul>
-      <li><a href="https://tpmyandtpth.github.io/JLP/index.html">ホーム</a></li>
-      <li><a href="https://tpmyandtpth.github.io/JLP/about-tp.html">TPについて</a></li>
-      <li><a href="https://tpmyandtpth.github.io/JLP/salary-and-benefits.html">給与・福利厚生</a></li>
-      <li><a href="https://tpmyandtpth.github.io/JLP/interview-process.html">面接プロセス</a></li>
-      <li><a href="https://tpmyandtpth.github.io/JLP/why-malaysia-thailand.html">なぜマレーシア・タイ</a></li>
-      <li><a href="https://tpmyandtpth.github.io/JLP/relocation-visa.html" aria-current="page">移住・ビザサポート</a></li>
-      <li><a href="https://careerseng-teleperformance.icims.com/jobs/49026/customer-service-representative---japanese-speaking-%28kl%29/job?mode=job&iis=LANDINGPAGE" target="_blank" rel="noopener noreferrer" class="apply-btn">応募する</a></li>
+      <li><a href="index.html"><span class="local-only">Home</span><span class="expat-only">首页</span></a></li>
+      <li><a href="about-tp.html"><span class="local-only">About TP</span><span class="expat-only">关于TP</span></a></li>
+      <li><a href="salary-and-benefits.html"><span class="local-only">Benefits</span><span class="expat-only">薪资福利</span></a></li>
+      <li><a href="hiring-process.html"><span class="local-only">Hiring Process</span><span class="expat-only">招聘流程</span></a></li>
+      <li><a href="why-malaysia-thailand.html">城市介绍</a></li>
+      <li><a href="relocation-visa.html" aria-current="page"><span class="local-only">Visa Support</span><span class="expat-only">签证支持</span></a></li>
+      <li><a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=chinese" target="_blank" rel="noopener noreferrer" class="apply-btn"><span class="local-only">Apply Now</span><span class="expat-only">立即申请</span></a></li>
     </ul>
   </nav>
 </header>
@@ -909,89 +1005,151 @@ footer::before {
 <main id="main">
   <!-- Hero -->
   <section class="hero">
-    <h1>移住・ビザサポート <span aria-hidden="true">/</span> Relocation &amp; Visa Support</h1>
-    <p>就労ビザは<strong>会社負担</strong>で申請。専門チームが<strong>日本語</strong>で伴走し、<strong>片道航空券・空港送迎</strong>、<strong>到着後6泊7日のホテル（マレーシア）</strong>までサポートします。<br>
-       ※条件はポジション・勤務地により異なり、オファーで確定します。</p>
-    <div class="hero-cta" role="group" aria-label="関連ページ">
-      <a class="btn" href="https://tpmyandtpth.github.io/JLP/open-jobs.html">求人を見る</a>
-      <a class="btn-solid" href="https://tpmyandtpth.github.io/JLP/casual-interview.html">カジュアル面談</a>
-      <a class="btn" href="https://tpmyandtpth.github.io/JLP/salary-and-benefits.html">給与・福利厚生</a>
+    <h1>
+      <span class="local-only">搬迁·签证Support / Relocation & Visa Support</span>
+      <span class="expat-only">搬迁·签证支持 / Relocation & Visa Support</span>
+    </h1>
+    <p>
+      <span class="local-only">第一次overseas搬迁，我们也会support你。<br>
+Work visa是company负担apply，华语staff会carefully support。Flight ticket·airport transfer·hotel的arrangement全部company来做。<br>
+※Support内容和condition根据location不同。</span>
+      <span class="expat-only">第一次海外搬迁，我们也会支持你。<br>
+工作签证是公司负担申请，华语员工会细心支持。机票·机场接送·酒店的安排全部公司来做。<br>
+※支持内容和条件根据地点不同。</span>
+    </p>
+    <div class="hero-cta" role="group" aria-label="相关操作">
+      <a class="btn" href="open-jobs.html"><span class="local-only">View Jobs</span><span class="expat-only">查看职位</span></a>
+      <a class="btn-solid" href="casual-interview.html"><span class="local-only">Casual Chat</span><span class="expat-only">休闲面谈</span></a>
+      <a class="btn" href="salary-and-benefits.html"><span class="local-only">Benefits</span><span class="expat-only">薪资福利</span></a>
     </div>
   </section>
 
-  <!-- All original sections from the file -->
   <!-- Highlights -->
   <section class="section" aria-labelledby="high">
-    <h2 id="high">サポートのハイライト</h2>
+    <h2 id="high">
+      <span class="local-only">Support的Highlight</span>
+      <span class="expat-only">支持的亮点</span>
+    </h2>
     <div class="cards">
       <div class="card">
-        <h3>ビザ費用は会社負担</h3>
-        <p>就労ビザ（EP）申請費用は<strong>会社負担</strong>。必要書類のご案内から申請まで一貫してサポートします。</p>
+        <h3><span class="local-only">Visa费用Company负担</span><span class="expat-only">签证费用公司负担</span></h3>
+        <p>
+          <span class="local-only">Work visa（EP）application费用<strong>company负担</strong>。从requirement document的guide到apply一贯support。</span>
+          <span class="expat-only">工作签证（EP）申请费用<strong>公司负担</strong>。从所需文件的指南到申请一贯支持。</span>
+        </p>
       </div>
       <div class="card">
-        <h3>目安スケジュール</h3>
-        <p>内定から<strong>1〜2ヶ月</strong>で発行が目安。進捗は日本語で都度ご案内します。</p>
+        <h3><span class="local-only">目安Schedule</span><span class="expat-only">大概日程</span></h3>
+        <p>
+          <span class="local-only">从offer到approximately 2个月issue是目安。Progress用华语随时update。</span>
+          <span class="expat-only">从录用到大约2个月发放是大概。进度用华语随时更新。</span>
+        </p>
       </div>
       <div class="card">
-        <h3>渡航・到着支援</h3>
-        <p><strong>片道航空券支給・空港送迎</strong>に加え、マレーシアでは<strong>到着後6泊7日ホテル</strong>をご用意（滞在中に住居探し）。</p>
+        <h3><span class="local-only">Flight·Arrival Support</span><span class="expat-only">机票·到达支持</span></h3>
+        <p>
+          <span class="local-only"><strong>One-way flight ticket提供·airport transfer</strong>加上，Malaysia是<strong>arrival后hotel</strong>prepare（stay期间找住所）。</span>
+          <span class="expat-only"><strong>单程机票提供·机场接送</strong>加上，马来西亚是<strong>到达后酒店</strong>准备（住宿期间找住所）。</span>
+        </p>
       </div>
     </div>
   </section>
 
   <!-- Process -->
   <section class="section" aria-labelledby="proc">
-    <h2 id="proc">入社までの流れ（概要）</h2>
-    <p class="lead">各プロジェクトのスケジュールに沿って進行します。</p>
+    <h2 id="proc">
+      <span class="local-only">入职的Flow（Overview）</span>
+      <span class="expat-only">入职的流程（概述）</span>
+    </h2>
+    <p class="lead">
+      <span class="local-only">根据each project的schedule progress。</span>
+      <span class="expat-only">根据每个项目的日程进行。</span>
+    </p>
     <div class="steps" role="list">
-      <div class="step" role="listitem"><strong>1. 内定</strong><small>条件・入社時期の調整</small></div>
-      <div class="step" role="listitem"><strong>2. 書類案内</strong><small>必要書類のご提出</small></div>
-      <div class="step" role="listitem"><strong>3. ビザ申請</strong><small>専門チームが申請を実施（会社負担）</small></div>
-      <div class="step" role="listitem"><strong>4. 航空券手配</strong><small>片道航空券・到着日の確定</small></div>
-      <div class="step" role="listitem"><strong>5. 到着サポート</strong><small>空港送迎・ホテル（MY:6泊7日）</small></div>
-      <div class="step" role="listitem"><strong>6. 研修開始</strong><small>入社手続き・トレーニング</small></div>
+      <div class="step" role="listitem">
+        <strong>1. <span class="local-only">Offer</span><span class="expat-only">录用</span></strong>
+        <small><span class="local-only">Condition·入职timing调整</span><span class="expat-only">条件·入职时间调整</span></small>
+      </div>
+      <div class="step" role="listitem">
+        <strong>2. <span class="local-only">Document Guide</span><span class="expat-only">文件指南</span></strong>
+        <small><span class="local-only">Requirement document提交</span><span class="expat-only">所需文件提交</span></small>
+      </div>
+      <div class="step" role="listitem">
+        <strong>3. <span class="local-only">Visa Apply</span><span class="expat-only">签证申请</span></strong>
+        <small><span class="local-only">Specialist team apply（company负担）</span><span class="expat-only">专业团队申请（公司负担）</span></small>
+      </div>
+      <div class="step" role="listitem">
+        <strong>4. <span class="local-only">Flight Booking</span><span class="expat-only">机票预订</span></strong>
+        <small><span class="local-only">One-way ticket·arrival date confirm</span><span class="expat-only">单程机票·到达日期确认</span></small>
+      </div>
+      <div class="step" role="listitem">
+        <strong>5. <span class="local-only">Arrival Support</span><span class="expat-only">到达支持</span></strong>
+        <small><span class="local-only">Airport transfer·hotel</span><span class="expat-only">机场接送·酒店</span></small>
+      </div>
+      <div class="step" role="listitem">
+        <strong>6. <span class="local-only">Training Start</span><span class="expat-only">培训开始</span></strong>
+        <small><span class="local-only">入职procedure·training</span><span class="expat-only">入职手续·培训</span></small>
+      </div>
     </div>
   </section>
 
   <!-- Accordion: Visa & Arrival -->
   <section class="section" aria-labelledby="visa">
-    <h2 id="visa">就労ビザと到着後サポート</h2>
+    <h2 id="visa">
+      <span class="local-only">Work Visa和Arrival后Support</span>
+      <span class="expat-only">工作签证和到达后支持</span>
+    </h2>
 
-    <div class="acc" role="region" aria-label="ビザと到着後サポート詳細">
+    <div class="acc" role="region" aria-label="签证和到达后支持详情">
       <div class="acc-item">
         <button class="acc-q" aria-expanded="false">
-          就労ビザ（Employment Pass, EP） <span class="plus">+</span>
+          <span class="local-only">Work Visa（Employment Pass, EP）</span>
+          <span class="expat-only">工作签证（Employment Pass, EP）</span>
+          <span class="plus">+</span>
         </button>
         <div class="acc-a">
           <ul>
-            <li>申請費用：<strong>会社負担</strong></li>
-            <li>発行目安：<strong>内定から1〜2ヶ月</strong></li>
-            <li>日本語サポート：必要書類のご案内・申請進捗の共有</li>
+            <li><span class="local-only">Application费用：<strong>Company负担</strong></span><span class="expat-only">申请费用：<strong>公司负担</strong></span></li>
+            <li><span class="local-only">Issue目安：<strong>从offer approximately 2个月</strong></span><span class="expat-only">发放大概：<strong>从录用大约2个月</strong></span></li>
+            <li><span class="local-only">华语support：Requirement document guide·application progress share</span><span class="expat-only">华语支持：所需文件指南·申请进度分享</span></li>
           </ul>
-          <p style="margin-top:0.5rem;color:var(--tp-gray-dark)">※詳細はポジション・国の規定により異なります。最新情報は選考時にご案内します。</p>
+          <p style="margin-top:0.5rem;color:var(--tp-gray-dark)">
+            <span class="local-only">※Detail根据position·country规定不同。Latest info在selection时guide。</span>
+            <span class="expat-only">※详细根据职位·国家规定不同。最新信息在选拔时指南。</span>
+          </p>
         </div>
       </div>
 
       <div class="acc-item">
         <button class="acc-q" aria-expanded="false">
-          家族帯同（Dependent Pass） <span class="plus">+</span>
+          <span class="local-only">Family帯同（Dependent Pass）</span>
+          <span class="expat-only">家属同行（Dependent Pass）</span>
+          <span class="plus">+</span>
         </button>
         <div class="acc-a">
-          <p>就労ビザ（EP）取得後、<strong>配偶者・お子さま向けのDependent Pass</strong>申請が可能です。日本語医療機関や日本人学校/コミュニティもあり、帯同での移住例も多くあります。</p>
+          <p>
+            <span class="local-only">Work visa（EP）取得后，<strong>配偶·孩子向的Dependent Pass</strong> apply可能。华语medical institution和华语school/community也有，带family relocate的example也很多。</span>
+            <span class="expat-only">工作签证（EP）取得后，<strong>配偶·孩子向的家属签证</strong>申请可能。华语医疗机构和华语学校/社区也有，带家属搬迁的例子也很多。</span>
+          </p>
         </div>
       </div>
 
       <div class="acc-item">
         <button class="acc-q" aria-expanded="false">
-          渡航・到着時の支援 <span class="plus">+</span>
+          <span class="local-only">Flight·Arrival时的Support</span>
+          <span class="expat-only">机票·到达时的支持</span>
+          <span class="plus">+</span>
         </button>
         <div class="acc-a">
           <ul>
-            <li><strong>片道航空券支給</strong>（入社時）</li>
-            <li><strong>空港送迎</strong>：到着時にサポート</li>
-            <li><strong>到着後6泊7日のホテル（マレーシア）</strong>：滞在中に住居探しを実施</li>
+            <li><span class="local-only"><strong>One-way flight ticket提供</strong>（入职时）</span><span class="expat-only"><strong>单程机票提供</strong>（入职时）</span></li>
+            <li><span class="local-only">Airport到公司指定hotel的transfer（Malaysia）</span><span class="expat-only">机场到公司指定酒店的接送（马来西亚）</span></li>
+            <li><span class="local-only"><strong>Arrival后的hotel</strong>：Stay期间找住所</span><span class="expat-only"><strong>到达后的酒店</strong>：住宿期间找住所</span></li>
           </ul>
-          <p style="margin-top:0.5rem;color:var(--tp-gray-dark)">※タイのホテル手配は職種により異なります。面接時にご案内します。</p>
+          <p style="margin-top:0.5rem;color:var(--tp-gray-dark)">
+            <span class="local-only">※Interview时guide。</span>
+            <span class="expat-only">※面试时指南。</span>
+          </p>
         </div>
       </div>
     </div>
@@ -999,44 +1157,64 @@ footer::before {
 
   <!-- Housing & Daily Life -->
   <section class="section" aria-labelledby="life">
-    <h2 id="life">住まい・生活立ち上げ</h2>
-    <p class="lead">現地日本人スタッフが、不動産エージェントの紹介や内見・契約の進め方をアドバイスします。</p>
+    <h2 id="life">
+      <span class="local-only">住所·Life Set Up</span>
+      <span class="expat-only">住所·生活建立</span>
+    </h2>
+    <p class="lead">
+      <span class="local-only">Real estate agent的introduction我们会做。</span>
+      <span class="expat-only">房产中介的介绍我们会做。</span>
+    </p>
     <div class="cards">
       <div class="card">
-        <h3>住居の一般像（KL/ペナン）</h3>
-        <p><strong>プール・ジム・24hセキュリティ</strong>付きのコンドが一般的。家具家電付きで即入居しやすい物件が多いです。</p>
+        <h3><span class="local-only">住所的General Image（KL/Penang）</span><span class="expat-only">住所的一般情况（KL/槟城）</span></h3>
+        <p>
+          <span class="local-only"><strong>Pool·Gym·24h Security</strong>付的condo是general。Furniture appliance付，可以immediately move in的property很多。</span>
+          <span class="expat-only"><strong>泳池·健身房·24小时保安</strong>付的公寓是一般。家具家电付，可以立即入住的房产很多。</span>
+        </p>
         <div class="pills" style="margin-top:0.5rem">
-          <span class="pill">家具・家電付き</span>
-          <span class="pill">プール/ジム</span>
-          <span class="pill">24hセキュリティ</span>
+          <span class="pill"><span class="local-only">Furniture·Appliance付</span><span class="expat-only">家具·家电付</span></span>
+          <span class="pill"><span class="local-only">Pool/Gym</span><span class="expat-only">泳池/健身房</span></span>
+          <span class="pill"><span class="local-only">24h Security</span><span class="expat-only">24小时保安</span></span>
         </div>
       </div>
       <div class="card">
-        <h3>生活コストの目安</h3>
-        <p>日本（東京）と比べて生活コストが抑えやすく、時間・お金・心に<strong>ゆとり</strong>が生まれます。詳しくは「<a href="https://tpmyandtpth.github.io/JLP/cost-of-living.html">生活コスト</a>」をご覧ください。</p>
+        <h3><span class="local-only">Cost of Living目安</span><span class="expat-only">生活成本大概</span></h3>
+        <p>
+          <span class="local-only">Compare China（北京·上海），cost of living容易control，time·money·心理都会有<strong>余裕</strong>。Detail请看「<a href="why-malaysia-thailand.html">城市介绍</a>」。</span>
+          <span class="expat-only">对比中国（北京·上海），生活成本容易控制，时间·金钱·心理都会有<strong>余裕</strong>。详细请看「<a href="why-malaysia-thailand.html">城市介绍</a>」。</span>
+        </p>
       </div>
       <div class="card">
-        <h3>現地生活情報</h3>
-        <p>日本食材店や日本語医療、交通手段などは「<a href="https://tpmyandtpth.github.io/JLP/daily-life-malaysia.html">現地生活</a>」「<a href="https://tpmyandtpth.github.io/JLP/why-malaysia-thailand.html">勤務地の魅力</a>」でまとめています。</p>
+        <h3><span class="local-only">Local Life Info</span><span class="expat-only">当地生活信息</span></h3>
+        <p>
+          <span class="local-only">Chinese food店、华语medical、transport等在「<a href="daily-life-malaysia.html">Daily Life</a>」「<a href="why-malaysia-thailand.html">城市介绍</a>」summarize了。</span>
+          <span class="expat-only">中餐店、华语医疗、交通等在「<a href="daily-life-malaysia.html">日常生活</a>」「<a href="why-malaysia-thailand.html">城市介绍</a>」总结了。</span>
+        </p>
       </div>
     </div>
   </section>
 
   <!-- Country specifics -->
   <section class="section" aria-labelledby="countries">
-    <h2 id="countries">国・都市別の特徴（抜粋）</h2>
+    <h2 id="countries">
+      <span class="local-only">Country·City的特色（抜粋）</span>
+      <span class="expat-only">国家·城市的特色（摘录）</span>
+    </h2>
     <div class="cards">
       <div class="card">
-        <h3>マレーシア（KL / ペナン）</h3>
-        <p>多文化で英語が広く通じ、日本語施設も充実。KLは都市型、ペナンは海や自然も身近。<strong>到着後6泊7日のホテル</strong>を手配（MY）。</p>
+        <h3><span class="local-only">Malaysia（KL / Penang）</span><span class="expat-only">马来西亚（KL / 槟城）</span></h3>
+        <p>
+          <span class="local-only">Multicultural English广泛通用，华语facility也complete。KL是city type，Penang是sea和nature也close。<strong>Arrival后hotel</strong>arrange（MY）。</span>
+          <span class="expat-only">多元文化英语广泛通用，华语设施也完善。KL是城市型，槟城是海和自然也近。<strong>到达后酒店</strong>安排（马来西亚）。</span>
+        </p>
       </div>
       <div class="card">
-        <h3>タイ（バンコク）</h3>
-        <p>日本語施設・病院が非常に充実。BTS/MRTで移動しやすく、家具付きコンドで快適に生活。<br>※ホテル手配の有無は職種により異なります。</p>
-      </div>
-      <div class="card">
-        <h3>家族帯同の方へ</h3>
-        <p>Dependent Pass申請、学校/医療/住居の選び方なども日本語でご相談可能です。</p>
+        <h3><span class="local-only">Thailand（Bangkok）</span><span class="expat-only">泰国（曼谷）</span></h3>
+        <p>
+          <span class="local-only">华语facility·hospital非常complete。BTS/MRT移动easy，furniture付condo comfortable live。<br>※Arrival后hotel arrange</span>
+          <span class="expat-only">华语设施·医院非常完善。BTS/MRT移动方便，家具付公寓舒适生活。<br>※到达后酒店安排</span>
+        </p>
       </div>
     </div>
   </section>
@@ -1044,19 +1222,16 @@ footer::before {
   <!-- Helper CTA -->
   <section class="helper">
     <div class="inner">
-      <h2>まずは日本語で相談しませんか？</h2>
-      <p>30分の <a href="https://tpmyandtpth.github.io/JLP/casual-interview.html">カジュアル面談</a> で、ビザ・住まい・生活の不安を解消。<br>
-        すぐ応募される方は <a href="https://tpmyandtpth.github.io/JLP/open-jobs.html">求人一覧</a> へ。</p>
-    </div>
-  </section>
-
-  <!-- Team images -->
-  <section class="team-strip" aria-label="チームフォト">
-    <div class="team-grid">
-      <div style="background-image:url('photos/team_relocation_1.jpg')"></div>
-      <div style="background-image:url('photos/team_relocation_2.jpg')"></div>
-      <div style="background-image:url('photos/team_relocation_3.jpg')"></div>
-      <div style="background-image:url('photos/team_relocation_4.jpg')"></div>
+      <h2>
+        <span class="local-only">先用华语consult吧？</span>
+        <span class="expat-only">先用华语咨询吧？</span>
+      </h2>
+      <p>
+        <span class="local-only">30分钟的<a href="casual-interview.html">Casual Chat</a>，visa·住所·life的不安都可以解消。<br>
+马上apply的话请去<a href="open-jobs.html">Job List</a>。</span>
+        <span class="expat-only">30分钟的<a href="casual-interview.html">休闲面谈</a>，签证·住所·生活的不安都可以消除。<br>
+马上申请的话请去<a href="open-jobs.html">职位列表</a>。</span>
+      </p>
     </div>
   </section>
 </main>
@@ -1069,67 +1244,87 @@ footer::before {
         <img src="photos/TPLogo11.png" alt="TP">
         <span class="footer-logo-text">TP</span>
       </div>
-      <p class="footer-desc">
-        世界100カ国以上で展開するグローバルBPO企業。<br>
-        日本語スピーカーの皆様の新たなキャリアをサポートします。
-      </p>
+      <p class="footer-desc">全球100多个国家运营的业务流程外包企业<br>支持华语人才开启职业新篇章</p>
       <div class="badges">
-        <span class="badge-item">🏆 Great Place to Work® 6年連続</span>
+        <span class="badge-item">🏆 马来西亚最佳职场 6年连续</span>
+        <span class="badge-item">🏆 全球最佳职场 5年连续</span>
       </div>
       <div class="footer-cta">
-        <a href="https://careerseng-teleperformance.icims.com/jobs/49026/customer-service-representative---japanese-speaking-%28kl%29/job?mode=job&iis=LANDINGPAGE" target="_blank" rel="noopener noreferrer" class="btn btn-accent">ご応募はこちら</a>
+        <a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=chinese" target="_blank" rel="noopener noreferrer" class="btn btn-solid">申请职位</a>
       </div>
     </div>
     
     <div class="footer-section">
-      <h3>会社情報</h3>
+      <h3>公司信息</h3>
       <ul>
-        <li><a href="https://tpmyandtpth.github.io/JLP/about-tp.html">会社紹介</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/salary-and-benefits.html#benefits">福利厚生</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/office-environment.html">オフィス環境</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/ta-team.html">採用チーム</a></li>
+        <li><a href="about-tp.html">公司介绍</a></li>
+        <li><a href="salary-and-benefits.html">薪资福利</a></li>
+        <li><a href="office-environment.html">办公环境</a></li>
+        <li><a href="ta-team.html">招聘团队</a></li>
       </ul>
     </div>
-
     <div class="footer-section">
-      <h3>求人・応募</h3>
+      <h3>职位申请</h3>
       <ul>
-        <li><a href="https://tpmyandtpth.github.io/JLP/open-jobs.html">求人一覧</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/interview-process.html">面接プロセス</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/faq.html">よくある質問</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/casual-interview.html">お問い合わせ</a></li>
+        <li><a href="open-jobs.html">职位列表</a></li>
+        <li><a href="hiring-process.html">招聘流程</a></li>
+        <li><a href="faq.html">常见问题</a></li>
+        <li><a href="casual-interview.html">联系我们</a></li>
       </ul>
     </div>
-
     <div class="footer-section">
-      <h3>生活情報</h3>
+      <h3>生活资讯</h3>
       <ul>
-        <li><a href="https://tpmyandtpth.github.io/JLP/why-malaysia-thailand.html">勤務先都市</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/relocation-visa.html" aria-current="page">移住サポート</a></li>
-        <li><a href="https://tpmyandtpth.github.io/JLP/daily-life-malaysia.html">ライフスタイル</a></li>
-        <li><a href="https://line.me/R/ti/p/@286nmdsd" target="_blank" rel="noopener noreferrer">LINE公式</a></li>
+        <li><a href="why-malaysia-thailand.html">城市介绍</a></li>
+        <li><a href="relocation-visa.html" aria-current="page">搬迁支持</a></li>
+        <li><a href="daily-life-malaysia.html">日常生活</a></li>
+        <li><a href="https://line.me/R/ti/p/@286nmdsd" target="_blank" rel="noopener noreferrer">官方LINE</a></li>
       </ul>
     </div>
   </div>
   
   <div class="footer-bottom">
-    <p>&copy; 2025 TP. All rights reserved. | 
-      <a href="#">プライバシーポリシー</a> | 
-      <a href="#">利用規約</a>
-    </p>
+    <p class="ssm-info">Teleperformance Malaysia Sdn Bhd 的 SSM（马来西亚公司委员会）注册号为 201601023769 (1194708-K)</p>
+    <p>&copy; 2026 TP. 版权所有。| <a href="#">隐私政策</a> | <a href="#">使用条款</a></p>
   </div>
 </footer>
 
 <!-- FLOATING BUTTONS -->
-<a href="https://careerseng-teleperformance.icims.com/jobs/49026/customer-service-representative---japanese-speaking-%28kl%29/job?mode=job&iis=LANDINGPAGE" target="_blank" rel="noopener noreferrer" class="floating-apply" aria-label="今すぐ応募">応募する</a>
+<a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=chinese" target="_blank" rel="noopener noreferrer" class="floating-apply" aria-label="立即申请"><span class="local-only">Apply Now</span><span class="expat-only">立即申请</span></a>
 
-<a href="https://forms.office.com/e/2UvpbweQww" target="_blank" rel="noopener noreferrer" class="floating-casual" aria-label="カジュアル面談">カジュアル面談</a>
+<a href="casual-interview.html" class="floating-casual" aria-label="预约面谈"><span class="local-only">Casual Chat</span><span class="expat-only">休闲面谈</span></a>
 
-<button class="back-to-top" id="backToTop" aria-label="ページトップへ">↑</button>
+<button class="back-to-top" id="backToTop" aria-label="回到顶部">↑</button>
 
 <!-- JAVASCRIPT -->
 <script>
-// Mobile Menu Toggle with Error Handling
+// ===== LANGUAGE TOGGLE SYSTEM =====
+function setLanguage(lang) {
+  const body = document.body;
+  const localBtn = document.getElementById('langLocal');
+  const expatBtn = document.getElementById('langExpat');
+  
+  if(lang === 'expat') {
+    body.classList.add('expat-mode');
+    localBtn.classList.remove('active');
+    expatBtn.classList.add('active');
+  } else {
+    body.classList.remove('expat-mode');
+    localBtn.classList.add('active');
+    expatBtn.classList.remove('active');
+  }
+  
+  // Save preference
+  localStorage.setItem('clpLang', lang);
+}
+
+// Initialize language on page load
+document.addEventListener('DOMContentLoaded', function() {
+  const savedLang = localStorage.getItem('clpLang') || 'local';
+  setLanguage(savedLang);
+});
+
+// ===== MOBILE MENU =====
 try {
   (function(){
     const toggle = document.getElementById('mobileToggle');
@@ -1142,7 +1337,6 @@ try {
         toggle.setAttribute('aria-expanded', menu.classList.contains('active'));
       });
       
-      // Close menu when clicking links
       menu.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
           toggle.classList.remove('active');
@@ -1151,7 +1345,6 @@ try {
         });
       });
       
-      // Close menu when clicking outside
       document.addEventListener('click', (e) => {
         if(!menu.contains(e.target) && !toggle.contains(e.target)) {
           menu.classList.remove('active');
@@ -1165,7 +1358,7 @@ try {
   console.warn('Mobile menu setup failed:', error);
 }
 
-// Back to Top Button
+// ===== BACK TO TOP =====
 try {
   (function(){
     const backToTop = document.getElementById('backToTop');
@@ -1190,7 +1383,7 @@ try {
   console.warn('Back to top button failed:', error);
 }
 
-// Accordion functionality with Error Handling
+// ===== ACCORDION =====
 try {
   document.querySelectorAll('.acc-q').forEach(btn => {
     btn.addEventListener('click', () => {
@@ -1217,7 +1410,7 @@ try {
   console.warn('Accordion setup failed:', error);
 }
 
-// Smooth Scroll for Anchor Links
+// ===== SMOOTH SCROLL =====
 try {
   (function(){
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -1228,7 +1421,7 @@ try {
         e.preventDefault();
         const target = document.querySelector(href);
         if(target){
-          const offset = 70;
+          const offset = 80;
           const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
           
           window.scrollTo({
@@ -1243,10 +1436,7 @@ try {
   console.warn('Smooth scroll failed:', error);
 }
 
-// Initialize when DOM is ready
-document.addEventListener('DOMContentLoaded', function() {
-  console.log('TP Japan relocation & visa page initialized');
-});
+console.log('TP Chinese relocation & visa page initialized');
 </script>
 </body>
 </html>
