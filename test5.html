@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TP招聘 - 背景 Emoji 效果展示</title>
+<title>TP招聘 - Photos + Subtle Emoji Watermarks</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&family=Noto+Serif+SC:wght@700;900&display=swap" rel="stylesheet">
@@ -73,7 +73,7 @@ body {
 }
 
 /* ========================================
-   CARDS WITH BACKGROUND EMOJI! 🎉
+   CARDS: PHOTOS + SUBTLE EMOJI WATERMARKS
    ======================================== */
 .cards {
     display: grid;
@@ -105,7 +105,7 @@ body {
     background: var(--gold-primary);
     transform: scaleX(0);
     transition: transform 0.3s;
-    z-index: 1;
+    z-index: 2;
 }
 
 .card:hover::before,
@@ -120,23 +120,24 @@ body {
     border-color: var(--gold-primary);
 }
 
-/* Image container with emoji background */
+/* Image container with subtle emoji watermark */
 .card-image-container {
     position: relative;
     height: 140px;
     overflow: hidden;
 }
 
-/* 🎨 HUGE BACKGROUND EMOJI - Just like 重要公告! */
+/* 🎨 SUBTLE EMOJI WATERMARK - 10% opacity like 🎉 */
 .card-image-container::before {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 8rem;
-    opacity: 0.08;
+    font-size: 6rem;
+    opacity: 0.1;  /* Very subtle, like announcement section! */
     pointer-events: none;
-    z-index: 0;
+    z-index: 1;
+    transition: all 0.3s;
 }
 
 /* Individual emoji for each card */
@@ -153,20 +154,24 @@ body {
 .card[data-emoji="📢"] .card-image-container::before { content: '📢'; }
 .card[data-emoji="💡"] .card-image-container::before { content: '💡'; }
 
-/* Emoji gets brighter on hover */
+/* Subtle hover effect - emoji barely becomes more visible */
 .card:hover .card-image-container::before {
     opacity: 0.15;
-    transform: translate(-50%, -50%) scale(1.1);
-    transition: all 0.3s;
+    transform: translate(-50%, -50%) scale(1.05);
 }
 
-/* Actual image */
+/* Actual photo */
 .card-image-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     position: relative;
-    z-index: 1;
+    z-index: 0;
+    transition: all 0.3s;
+}
+
+.card:hover .card-image-container img {
+    transform: scale(1.05);
 }
 
 /* Card content */
@@ -194,10 +199,6 @@ body {
     .cards {
         grid-template-columns: repeat(2, 1fr);
     }
-    
-    .card-image-container::before {
-        font-size: 6rem;
-    }
 }
 
 @media (max-width: 480px) {
@@ -206,20 +207,19 @@ body {
     }
 }
 
-/* Info box */
+/* Info boxes */
 .info-box {
     background: linear-gradient(135deg, var(--gold-primary) 0%, var(--gold-light) 100%);
     color: var(--tp-black);
     padding: 1.5rem;
     border-radius: 12px;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     text-align: center;
     box-shadow: var(--shadow-gold);
     position: relative;
     overflow: hidden;
 }
 
-/* EXACTLY like 重要公告! */
 .info-box::before {
     content: '🎉';
     position: absolute;
@@ -239,24 +239,101 @@ body {
     font-size: 0.9rem;
     opacity: 0.9;
 }
+
+.comparison-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.comparison-item {
+    background: var(--tp-white);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 2px solid var(--tp-light);
+}
+
+.comparison-item h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: var(--tp-black);
+}
+
+.comparison-item ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.comparison-item li {
+    padding: 0.4rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    font-size: 0.9rem;
+}
+
+.comparison-item.pros li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--gold-primary);
+    font-weight: bold;
+}
+
+.comparison-item.cons li::before {
+    content: '✗';
+    position: absolute;
+    left: 0;
+    color: #ff6b6b;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .comparison-box {
+        grid-template-columns: 1fr;
+    }
+}
 </style>
 </head>
 <body>
 
 <div class="container">
     <div class="info-box">
-        <h2>🎉 这才是正确的效果！</h2>
-        <p>大号 emoji 在背景中作为装饰 - 图片保留，就像重要公告那样！</p>
+        <h2>🎉 Best of Both Worlds!</h2>
+        <p>真实照片 + 超级微妙的 emoji 水印（10% 透明度）- 专业但有趣！</p>
+    </div>
+
+    <div class="comparison-box">
+        <div class="comparison-item pros">
+            <h3>✅ 这个方案的优点：</h3>
+            <ul>
+                <li>照片保持真实感和信任度</li>
+                <li>Emoji 水印增添趣味性</li>
+                <li>非常微妙，不会分散注意力</li>
+                <li>专业且现代化</li>
+                <li>悬停时稍微变亮</li>
+            </ul>
+        </div>
+        <div class="comparison-item cons">
+            <h3>⚠️ 对比纯 Emoji 方案：</h3>
+            <ul>
+                <li>纯 emoji 看起来像快速制作的网站</li>
+                <li>缺乏真实性证明</li>
+                <li>可能让人怀疑公司的合法性</li>
+                <li>不适合国际招聘场景</li>
+                <li>你的经理说得对！</li>
+            </ul>
+        </div>
     </div>
 
     <h2 class="section-title">热门话题</h2>
-    <p class="section-subtitle">快速访问你想了解的信息（悬停看效果）</p>
+    <p class="section-subtitle">真实照片 + 微妙 emoji 水印 - 悬停看效果 👇</p>
     
     <div class="cards">
         <!-- Card 1: About TP -->
         <a href="#" class="card" data-emoji="🏢">
             <div class="card-image-container">
-                <img src="https://via.placeholder.com/400x200/f5f5f5/666666?text=About+TP" alt="关于TP">
+                <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=200&fit=crop" alt="关于TP">
             </div>
             <div class="card-content">
                 <h3>关于TP</h3>
@@ -267,7 +344,7 @@ body {
         <!-- Card 2: Job Listings -->
         <a href="#" class="card" data-emoji="💼">
             <div class="card-image-container">
-                <img src="https://via.placeholder.com/400x200/f5f5f5/666666?text=Jobs" alt="职位信息">
+                <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=400&h=200&fit=crop" alt="职位信息">
             </div>
             <div class="card-content">
                 <h3>在招职位</h3>
@@ -278,7 +355,7 @@ body {
         <!-- Card 3: Salary & Benefits -->
         <a href="#" class="card" data-emoji="💰">
             <div class="card-image-container">
-                <img src="https://via.placeholder.com/400x200/f5f5f5/666666?text=Salary" alt="薪资福利">
+                <img src="https://images.unsplash.com/photo-1554224311-beee460201b4?w=400&h=200&fit=crop" alt="薪资福利">
             </div>
             <div class="card-content">
                 <h3>薪资福利</h3>
@@ -289,7 +366,7 @@ body {
         <!-- Card 4: Visa & Relocation -->
         <a href="#" class="card" data-emoji="✈️">
             <div class="card-image-container">
-                <img src="https://via.placeholder.com/400x200/f5f5f5/666666?text=Visa" alt="签证搬迁">
+                <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400&h=200&fit=crop" alt="签证搬迁">
             </div>
             <div class="card-content">
                 <h3>签证与搬迁协助</h3>
@@ -300,7 +377,7 @@ body {
         <!-- Card 5: Employee Stories -->
         <a href="#" class="card" data-emoji="⭐">
             <div class="card-image-container">
-                <img src="https://via.placeholder.com/400x200/f5f5f5/666666?text=Stories" alt="员工故事">
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&h=200&fit=crop" alt="员工故事">
             </div>
             <div class="card-content">
                 <h3>员工分享</h3>
@@ -311,7 +388,7 @@ body {
         <!-- Card 6: Why Malaysia/Thailand -->
         <a href="#" class="card" data-emoji="🌴">
             <div class="card-image-container">
-                <img src="https://via.placeholder.com/400x200/f5f5f5/666666?text=Malaysia" alt="马来西亚泰国">
+                <img src="https://images.unsplash.com/photo-1528127269322-539801943592?w=400&h=200&fit=crop" alt="马来西亚泰国">
             </div>
             <div class="card-content">
                 <h3>为什么选择马来西亚或泰国</h3>
@@ -322,7 +399,7 @@ body {
         <!-- Card 7: Casual Interview -->
         <a href="#" class="card" data-emoji="☕">
             <div class="card-image-container">
-                <img src="https://via.placeholder.com/400x200/f5f5f5/666666?text=Interview" alt="轻松面谈">
+                <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?w=400&h=200&fit=crop" alt="轻松面谈">
             </div>
             <div class="card-content">
                 <h3>轻松交流 Interview</h3>
@@ -333,7 +410,7 @@ body {
         <!-- Card 8: Hiring Process -->
         <a href="#" class="card" data-emoji="⚡">
             <div class="card-image-container">
-                <img src="https://via.placeholder.com/400x200/f5f5f5/666666?text=Process" alt="招聘流程">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=200&fit=crop" alt="招聘流程">
             </div>
             <div class="card-content">
                 <h3>招聘流程</h3>
@@ -344,7 +421,7 @@ body {
         <!-- Card 9: Office Environment -->
         <a href="#" class="card" data-emoji="👀">
             <div class="card-image-container">
-                <img src="https://via.placeholder.com/400x200/f5f5f5/666666?text=Office" alt="办公环境">
+                <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=400&h=200&fit=crop" alt="办公环境">
             </div>
             <div class="card-content">
                 <h3>办公环境·Virtual Tour</h3>
@@ -355,7 +432,7 @@ body {
         <!-- Card 10: Referral Rewards -->
         <a href="#" class="card" data-emoji="🎁">
             <div class="card-image-container">
-                <img src="https://via.placeholder.com/400x200/f5f5f5/666666?text=Rewards" alt="推荐奖励">
+                <img src="https://images.unsplash.com/photo-1513151233558-d860c5398176?w=400&h=200&fit=crop" alt="推荐奖励">
             </div>
             <div class="card-content">
                 <h3>推荐奖励</h3>
@@ -366,7 +443,7 @@ body {
         <!-- Card 11: Blog -->
         <a href="#" class="card" data-emoji="📢">
             <div class="card-image-container">
-                <img src="https://via.placeholder.com/400x200/f5f5f5/666666?text=Blog" alt="博客">
+                <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=400&h=200&fit=crop" alt="博客">
             </div>
             <div class="card-content">
                 <h3>Blog·最新消息</h3>
@@ -377,7 +454,7 @@ body {
         <!-- Card 12: FAQ -->
         <a href="#" class="card" data-emoji="💡">
             <div class="card-image-container">
-                <img src="https://via.placeholder.com/400x200/f5f5f5/666666?text=FAQ" alt="常见问题">
+                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=200&fit=crop" alt="常见问题">
             </div>
             <div class="card-content">
                 <h3>FAQ·常见问题</h3>
