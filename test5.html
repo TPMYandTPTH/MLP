@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TP招聘 - Emoji Only 卡片（最终版）</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&family=Noto+Serif+SC:wght@700;900&display=swap" rel="stylesheet">
+<style>
+:root {
+    --tp-black: #000;
+    --tp-dark: #1a1a1a;
+    --tp-gray: #666;
+    --tp-light: #e5e5e5;
+    --tp-off: #f5f5f5;
+    --tp-white: #fff;
+    --gold-primary: #FFD700;
+    --gold-light: #FFAA00;
+    --gold-dark: #E6B800;
+    --gold-pale: #FFFBEB;
+    --max-width: 1050px;
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.08);
+    --shadow-gold: 0 4px 12px rgba(255, 215, 0, 0.3);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, "Microsoft YaHei", sans-serif;
+    color: var(--tp-dark);
+    line-height: 1.8;
+    background: var(--tp-off);
+    padding: 60px 20px;
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 0.625rem;
+    font-weight: 900;
+    color: var(--tp-black);
+    font-family: 'Noto Serif SC', serif;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--gold-primary), transparent);
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--tp-gray);
+    margin-bottom: 3rem;
+    font-size: 0.9rem;
+}
+
+/* ========================================
+   EMOJI-ONLY CARDS (NO IMAGES!) 🎨
+   ======================================== */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+}
+
+.card {
+    background: var(--tp-white);
+    border: 1px solid var(--tp-light);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s;
+    position: relative;
+    cursor: pointer;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Gold accent bar on top */
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--gold-primary);
+    transform: scaleX(0);
+    transition: transform 0.3s;
+    z-index: 1;
+}
+
+.card:hover::before,
+.card:focus-within::before {
+    transform: scaleX(1);
+}
+
+.card:hover,
+.card:focus-within {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-gold);
+    border-color: var(--gold-primary);
+}
+
+/* ========================================
+   EMOJI SECTION - NO IMAGES, EMOJI ONLY!
+   ======================================== */
+.card-emoji-area {
+    position: relative;
+    height: 140px;
+    background: linear-gradient(135deg, var(--gold-pale) 0%, var(--tp-off) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+
+/* VISIBLE EMOJI - Much more prominent! */
+.card-emoji-area::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 7rem;
+    opacity: 0.35;  /* Much more visible! */
+    pointer-events: none;
+    transition: all 0.3s;
+}
+
+/* Each card gets its own emoji */
+.card[data-emoji="🏢"] .card-emoji-area::before { content: '🏢'; }
+.card[data-emoji="💼"] .card-emoji-area::before { content: '💼'; }
+.card[data-emoji="💰"] .card-emoji-area::before { content: '💰'; }
+.card[data-emoji="✈️"] .card-emoji-area::before { content: '✈️'; }
+.card[data-emoji="⭐"] .card-emoji-area::before { content: '⭐'; }
+.card[data-emoji="🌴"] .card-emoji-area::before { content: '🌴'; }
+.card[data-emoji="☕"] .card-emoji-area::before { content: '☕'; }
+.card[data-emoji="⚡"] .card-emoji-area::before { content: '⚡'; }
+.card[data-emoji="👀"] .card-emoji-area::before { content: '👀'; }
+.card[data-emoji="🎁"] .card-emoji-area::before { content: '🎁'; }
+.card[data-emoji="📢"] .card-emoji-area::before { content: '📢'; }
+.card[data-emoji="💡"] .card-emoji-area::before { content: '💡'; }
+
+/* Hover effects - emoji becomes even more visible and scales up */
+.card:hover .card-emoji-area {
+    background: linear-gradient(135deg, var(--gold-primary) 0%, var(--gold-light) 100%);
+}
+
+.card:hover .card-emoji-area::before {
+    opacity: 0.5;
+    transform: translate(-50%, -50%) scale(1.1);
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.15));
+}
+
+/* Card content */
+.card-content {
+    padding: 1rem;
+    position: relative;
+    background: var(--tp-white);
+}
+
+.card h3 {
+    margin-bottom: 0.3rem;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--tp-black);
+}
+
+.card p {
+    color: var(--tp-gray);
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .card-emoji-area::before {
+        font-size: 6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .card-emoji-area::before {
+        font-size: 5rem;
+    }
+}
+
+/* Info box */
+.info-box {
+    background: linear-gradient(135deg, var(--gold-primary) 0%, var(--gold-light) 100%);
+    color: var(--tp-black);
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 3rem;
+    text-align: center;
+    box-shadow: var(--shadow-gold);
+    position: relative;
+    overflow: hidden;
+}
+
+.info-box::before {
+    content: '🎉';
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    font-size: 8rem;
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+.info-box h2 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.info-box p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.comparison {
+    background: var(--tp-white);
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 3rem;
+    border: 2px solid var(--tp-light);
+}
+
+.comparison h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--tp-black);
+}
+
+.comparison ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.comparison li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.comparison li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--gold-primary);
+    font-weight: bold;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="info-box">
+        <h2>🎉 完美！这就是最终效果</h2>
+        <p>清除所有图片，只用可见的大号 emoji - 清爽、现代、快速加载！</p>
+    </div>
+
+    <div class="comparison">
+        <h3>✨ 最终设计特点：</h3>
+        <ul>
+            <li><strong>无图片</strong> - 只用 emoji，加载超快</li>
+            <li><strong>清晰可见</strong> - 35% 透明度，清楚但不抢眼</li>
+            <li><strong>渐变背景</strong> - 金色渐变增加质感</li>
+            <li><strong>悬停效果</strong> - 背景变亮金色，emoji 变大变清晰</li>
+            <li><strong>7rem 大小</strong> - 足够大，视觉冲击力强</li>
+        </ul>
+    </div>
+
+    <h2 class="section-title">热门话题</h2>
+    <p class="section-subtitle">快速访问你想了解的信息 - 悬停看效果 👇</p>
+    
+    <div class="cards">
+        <!-- Card 1: About TP -->
+        <a href="#" class="card" data-emoji="🏢">
+            <div class="card-emoji-area"></div>
+            <div class="card-content">
+                <h3>关于TP</h3>
+                <p>全球最大业务流程外包企业之一</p>
+            </div>
+        </a>
+        
+        <!-- Card 2: Job Listings -->
+        <a href="#" class="card" data-emoji="💼">
+            <div class="card-emoji-area"></div>
+            <div class="card-content">
+                <h3>在招职位</h3>
+                <p>华语人才职位</p>
+            </div>
+        </a>
+        
+        <!-- Card 3: Salary & Benefits -->
+        <a href="#" class="card" data-emoji="💰">
+            <div class="card-emoji-area"></div>
+            <div class="card-content">
+                <h3>薪资福利</h3>
+                <p>完善的待遇和支持</p>
+            </div>
+        </a>
+        
+        <!-- Card 4: Visa & Relocation -->
+        <a href="#" class="card" data-emoji="✈️">
+            <div class="card-emoji-area"></div>
+            <div class="card-content">
+                <h3>签证与搬迁协助</h3>
+                <p>全程支持体系</p>
+            </div>
+        </a>
+        
+        <!-- Card 5: Employee Stories -->
+        <a href="#" class="card" data-emoji="⭐">
+            <div class="card-emoji-area"></div>
+            <div class="card-content">
+                <h3>员工分享</h3>
+                <p>真实的工作体验分享</p>
+            </div>
+        </a>
+        
+        <!-- Card 6: Why Malaysia/Thailand -->
+        <a href="#" class="card" data-emoji="🌴">
+            <div class="card-emoji-area"></div>
+            <div class="card-content">
+                <h3>为什么选择马来西亚或泰国</h3>
+                <p>宜居生活与成长机会</p>
+            </div>
+        </a>
+        
+        <!-- Card 7: Casual Interview -->
+        <a href="#" class="card" data-emoji="☕">
+            <div class="card-emoji-area"></div>
+            <div class="card-content">
+                <h3>轻松交流 Interview</h3>
+                <p>先聊聊，无压力咨询</p>
+            </div>
+        </a>
+        
+        <!-- Card 8: Hiring Process -->
+        <a href="#" class="card" data-emoji="⚡">
+            <div class="card-emoji-area"></div>
+            <div class="card-content">
+                <h3>招聘流程</h3>
+                <p>全程 Online 完成</p>
+            </div>
+        </a>
+        
+        <!-- Card 9: Office Environment -->
+        <a href="#" class="card" data-emoji="👀">
+            <div class="card-emoji-area"></div>
+            <div class="card-content">
+                <h3>办公环境·Virtual Tour</h3>
+                <p>办公环境与发展机会</p>
+            </div>
+        </a>
+        
+        <!-- Card 10: Referral Rewards -->
+        <a href="#" class="card" data-emoji="🎁">
+            <div class="card-emoji-area"></div>
+            <div class="card-content">
+                <h3>推荐奖励</h3>
+                <p>推荐朋友获得奖励</p>
+            </div>
+        </a>
+        
+        <!-- Card 11: Blog -->
+        <a href="#" class="card" data-emoji="📢">
+            <div class="card-emoji-area"></div>
+            <div class="card-content">
+                <h3>Blog·最新消息</h3>
+                <p>员工分享与公司动态</p>
+            </div>
+        </a>
+        
+        <!-- Card 12: FAQ -->
+        <a href="#" class="card" data-emoji="💡">
+            <div class="card-emoji-area"></div>
+            <div class="card-content">
+                <h3>FAQ·常见问题</h3>
+                <p>申请前的疑问解答</p>
+            </div>
+        </a>
+    </div>
+</div>
+
+</body>
+</html>
