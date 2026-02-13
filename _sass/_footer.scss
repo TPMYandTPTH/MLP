@@ -1,0 +1,50 @@
+// ========================================
+// FOOTER
+// ========================================
+footer {
+  background: $tp-black;
+  color: $tp-white;
+  padding: 3rem 20px 1rem;
+}
+
+.footer-inner {
+  max-width: $max-width;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.footer-col {
+  h4 {
+    color: $gold-primary;
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+  }
+
+  ul { list-style: none; }
+
+  li { margin-bottom: 0.5rem; }
+
+  a {
+    color: $tp-silver;
+    font-size: 0.85rem;
+    transition: color 0.3s;
+
+    &:hover { color: $gold-primary; }
+  }
+}
+
+.footer-bottom {
+  max-width: $max-width;
+  margin: 2rem auto 0;
+  padding-top: 1rem;
+  border-top: 1px solid $tp-charcoal;
+  text-align: center;
+
+  p {
+    color: $tp-gray;
+    font-size: 0.8rem;
+  }
+}

@@ -1,0 +1,70 @@
+// ========================================
+// RESPONSIVE BREAKPOINTS
+// ========================================
+
+@media (max-width: $bp-xl) {
+  .timeline { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: $bp-lg) {
+  .cards-grid { grid-template-columns: repeat(2, 1fr); }
+  .ta-members-grid { grid-template-columns: repeat(3, 1fr); }
+  .offices-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: $bp-md) {
+  // Hide desktop nav, show mobile toggle
+  nav { display: none; }
+  .mobile-toggle { display: block; }
+  .lang-toggle-buttons { display: none; }
+  .lang-dropdown { display: block; }
+
+  // Reposition floating buttons
+  .floating-apply { right: 12px; bottom: 80px; padding: 0.6rem 1rem; font-size: 0.8rem; }
+  .floating-casual { right: 12px; bottom: 35px; padding: 0.5rem 0.9rem; font-size: 0.75rem; }
+  .back-to-top { right: 14px; bottom: 130px; }
+
+  .videos-grid { grid-template-columns: 1fr; }
+  .social-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: $bp-sm) {
+  .footer-inner { grid-template-columns: 1fr; gap: 1.5rem; }
+  .community-stats { grid-template-columns: repeat(2, 1fr); }
+  .gptw-gallery { grid-template-columns: repeat(2, 1fr);
+    &:nth-child(5) { grid-column: span 2; }
+  }
+  .testimonials-preview { grid-template-columns: 1fr; }
+  .ta-members-grid { grid-template-columns: repeat(2, 1fr); }
+  .icon-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .hero-light {
+    min-height: 60vh;
+    padding: 2rem 16px;
+    h1 { font-size: clamp(1.5rem, 5vw, 2.5rem); }
+  }
+
+  .hero-stats { gap: 1rem; }
+  .stat-item { padding-right: 1rem; }
+  .stat-number { font-size: 1.5rem; }
+}
+
+@media (max-width: $bp-xs) {
+  .cards-grid { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .process-rail { grid-template-columns: 1fr;
+    &::before { display: none; }
+  }
+  .offices-grid { grid-template-columns: 1fr; }
+  .lifestyle-grid { grid-template-columns: repeat(2, 1fr); }
+  .social-grid { grid-template-columns: 1fr; }
+  .ta-leader-card { flex-direction: column; text-align: center; }
+}
+
+@media (max-width: $bp-xxs) {
+  .icon-grid { grid-template-columns: 1fr; }
+  .ta-members-grid { grid-template-columns: 1fr; }
+  .community-stats { grid-template-columns: 1fr; }
+  .lifestyle-grid { grid-template-columns: 1fr; }
+  .timeline { grid-template-columns: 1fr; }
+}
