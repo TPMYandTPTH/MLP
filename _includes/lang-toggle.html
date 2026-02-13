@@ -1,0 +1,31 @@
+<!-- Language Toggle Banner -->
+<div class="lang-toggle-banner">
+  <div class="lang-toggle-inner">
+    <span class="lang-toggle-label">🌐 选择版本</span>
+    <!-- Desktop buttons -->
+    <div class="lang-toggle-buttons">
+      <button class="lang-btn active" data-lang="local" onclick="setLang('local')">
+        🇲🇾 本地华人版
+      </button>
+      <button class="lang-btn" data-lang="expat" onclick="setLang('expat')">
+        🇨🇳 中国外派版
+      </button>
+    </div>
+    <!-- Mobile dropdown -->
+    <div class="lang-dropdown">
+      <button class="lang-dropdown-btn" onclick="toggleLangDropdown()">
+        <span class="lang-dropdown-current">🇲🇾 本地华人版</span>
+      </button>
+      <div class="lang-dropdown-menu" id="langDropdownMenu">
+        <a class="lang-dropdown-item active" data-lang="local" onclick="setLang('local')">
+          🇲🇾 本地华人版
+          <small>Mixed English/Chinese</small>
+        </a>
+        <a class="lang-dropdown-item" data-lang="expat" onclick="setLang('expat')">
+          🇨🇳 中国外派版
+          <small>简体中文</small>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,42 @@
+<!-- Footer -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-col">
+      <h4>{{ site.data.navigation.footer_company.title }}</h4>
+      <ul>
+        {% for link in site.data.navigation.footer_company.links %}
+        <li><a href="{{ link.url | relative_url }}">{{ link.text }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>{{ site.data.navigation.footer_jobs.title }}</h4>
+      <ul>
+        {% for link in site.data.navigation.footer_jobs.links %}
+        <li><a href="{{ link.url | relative_url }}">{{ link.text }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>{{ site.data.navigation.footer_life.title }}</h4>
+      <ul>
+        {% for link in site.data.navigation.footer_life.links %}
+        <li>
+          <a href="{{ link.url | relative_url }}"{% if link.external %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ link.text }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>联系我们</h4>
+      <ul>
+        <li><a href="{{ site.ai_assessment_form }}" target="_blank" rel="noopener noreferrer">AI 能力评估</a></li>
+        <li><a href="{{ site.recruiter_booking_url }}" target="_blank" rel="noopener noreferrer">预约招聘顾问</a></li>
+        <li><a href="{{ site.xraf_url }}" target="_blank" rel="noopener noreferrer">内推计划</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© {{ 'now' | date: '%Y' }} Teleperformance. All rights reserved.</p>
+  </div>
+</footer>
