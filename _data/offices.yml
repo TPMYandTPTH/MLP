@@ -1,0 +1,68 @@
+# Office locations (Google Maps links baked in from apply_updates.py)
+offices:
+  - name: "G Tower（吉隆坡）"
+    features:
+      local: ["核心商务区", "交通便利 (LRT/MRT)", "高端写字楼"]
+      expat: ["核心商务区", "交通便利", "高端写字楼"]
+    map_url: "https://maps.app.goo.gl/vd5ju3VXhxfhpJuN7"
+    image: "G%20TOWER.jpg"
+
+  - name: "KCP（格拉那再也中心点）"
+    features:
+      local: ["KJ Line 直达", "商场餐饮齐全", "新办公地点"]
+      expat: ["轻轨直达", "商场餐饮齐全", "新办公地点"]
+    map_url: "https://maps.app.goo.gl/UE8tTboaukkeCWZW9"
+    image: "KCP.jpg"
+
+  - name: "Livingston（槟城）"
+    features:
+      local: ["槟城市区", "设施完善", "交通便利"]
+      expat: ["槟城市区", "设施完善", "交通便利"]
+    map_url: "https://maps.app.goo.gl/9i841vf18KRyunQK6"
+    image: "Livingston.jpg"
+
+  - name: "One Precinct（槟城）"
+    features:
+      local: ["新园区", "现代化办公", "周边生活便利"]
+      expat: ["新园区", "现代化办公", "周边生活便利"]
+    map_url: "https://maps.app.goo.gl/Nq6RKZ7spH89THG8A"
+    image: "OnePrecinct.jpg"
+
+  - name: "GBS@Mahsuri（槟城）"
+    features:
+      local: ["峇六拜区", "科技园区", "周边齐全"]
+      expat: ["峇六拜区", "科技园区", "周边齐全"]
+    map_url: "https://maps.app.goo.gl/Zpy6r8na4Wg31uhT8"
+    image: "GBS.jpeg"
+
+  - name: "Singha Complex（曼谷）"
+    features:
+      local: ["曼谷市区", "BTS 直达", "CBD 商务区"]
+      expat: ["曼谷市区", "轻轨直达", "中心商务区"]
+    map_url: "https://maps.app.goo.gl/vPuRsYp5fcNzX4kb6"
+    image: "Singha.jpg"
+
+  # Johor card (updated: Soon + Hiring now + Apply)
+  - name: "Johor（柔佛）"
+    features:
+      local: ["新办公地点", "🔜 Soon", "💼 Hiring now"]
+      expat: ["新办公地点", "🔜 即将开放", "💼 正在招聘"]
+    coming_soon: true
+    apply_url: "https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=chinese+johor"
+
+  # Coming soon offices
+  - name: "Cyberjaya"
+    features:
+      local: ["即将开放"]
+      expat: ["即将开放"]
+    coming_soon: true
+
+  # WFH card (updated: Interpreter job link)
+  - name_local: "居家办公"
+    name_expat: "居家办公"
+    features:
+      local: ["远程工作", "部分职位适用"]
+      expat: ["远程工作", "部分职位适用"]
+    coming_soon: true
+    apply_url: "https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=chinese+interpreter"
+    apply_label: "💼 Interpreter Job"

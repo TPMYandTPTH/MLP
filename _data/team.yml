@@ -1,0 +1,79 @@
+# TA Team Members
+# Kent = leader, others = members
+# LinkedIn buttons: Anna + Melaine + 3 new (Kent excluded)
+
+leader:
+  name_en: "Kent Teng"
+  name_cn: "邓伟健"
+  title:
+    local: "TA Team Manager"
+    expat: "招聘团队经理"
+  avatar: "kent.jpg"
+  bio:
+    local: "Kent 是我们华语招聘团队的负责人，拥有多年跨国招聘经验，致力于为每一位候选人提供最佳的求职体验。"
+    expat: "Kent 是华语招聘团队负责人，拥有多年跨国招聘经验，致力于为每一位候选人提供最佳的求职体验。"
+  show_linkedin: false
+
+members:
+  - name_en: "Anna Saw"
+    name_cn: "苏安娜"
+    title:
+      local: "TA Specialist"
+      expat: "招聘专员"
+    avatar: "anna.jpg"
+    linkedin: "https://www.linkedin.com/search/results/all/?keywords=Anna%20Saw%20Teleperformance"
+    show_linkedin: true
+
+  - name_en: "Melaine Sua"
+    name_cn: "苏美莲"
+    title:
+      local: "TA Specialist"
+      expat: "招聘专员"
+    avatar: "melaine.jpg"
+    linkedin: "https://www.linkedin.com/in/heyminlee/"
+    show_linkedin: true
+
+  - name_en: "Ts. Ng Hsiang Boon"
+    name_cn: "黄湘文"
+    title:
+      local: "TA Specialist"
+      expat: "招聘专员"
+    avatar: ""
+    linkedin: "https://www.linkedin.com/in/nghsiangboon"
+    show_linkedin: true
+
+  - name_en: "Tian Han Chuah"
+    name_cn: "蔡展瀚"
+    title:
+      local: "TA Specialist"
+      expat: "招聘专员"
+    avatar: ""
+    linkedin: "https://www.linkedin.com/in/jerry-chuah"
+    show_linkedin: true
+
+  - name_en: "Jocelyn Soh"
+    name_cn: "苏子凌"
+    title:
+      local: "Talent Attraction Partner"
+      expat: "人才吸引合作伙伴"
+    avatar: ""
+    linkedin: "https://www.linkedin.com/in/jocelyn-soh-11a33338/"
+    show_linkedin: true
+
+  - name_en: "Yong Xing Su"
+    name_cn: "PENDING"
+    title:
+      local: "PENDING"
+      expat: "PENDING"
+    avatar: ""
+    linkedin: ""
+    show_linkedin: false
+
+  - name_en: "Chia Yin Teh"
+    name_cn: "PENDING"
+    title:
+      local: "PENDING"
+      expat: "PENDING"
+    avatar: ""
+    linkedin: ""
+    show_linkedin: false

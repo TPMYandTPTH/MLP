@@ -1,0 +1,182 @@
+# ========================================
+# HOMEPAGE DATA
+# ========================================
+
+# Hero section
+hero:
+  rotating_text:
+    local:
+      - "用华语，开启国际职涯"
+      - "在东南亚，体验理想生活"
+      - "加入世界500强BPO企业"
+    expat:
+      - "用华语，开启全球化职业生涯"
+      - "在东南亚，体验理想生活"
+      - "加入世界500强业务流程外包企业"
+  subtitle:
+    local: "Teleperformance 是全球领先的 BPO 企业，在马来西亚和泰国设有多个办公地点，诚邀华语人才加入。我们提供有竞争力的薪酬、完善的签证支持和丰富的文化体验。"
+    expat: "Teleperformance 是全球领先的业务流程外包企业，在马来西亚和泰国设有多个办公地点，诚邀华语人才加入。我们提供有竞争力的薪酬、完善的签证支持和丰富的文化体验。"
+  stats:
+    - number: "500+"
+      label:
+        local: "FORTUNE GLOBAL"
+        expat: "世界500强"
+    - number: "100+"
+      label:
+        local: "COUNTRIES"
+        expat: "覆盖国家"
+    - number: "500K+"
+      label:
+        local: "EMPLOYEES"
+        expat: "全球员工"
+
+# Social proof banner
+social_proof:
+  - number: "🏆 6"
+    text:
+      local: "年连续 GPTW"
+      expat: "年连续获评最佳雇主"
+  - number: "📍 5"
+    text:
+      local: "个办公地点"
+      expat: "个办公地点"
+  - number: "🌐 20+"
+    text:
+      local: "种语言项目"
+      expat: "种语言项目"
+
+# Community stats
+community_stats:
+  - number: "200+"
+    label:
+      local: "华语员工"
+      expat: "华语员工"
+    icon: "👥"
+  - number: "5"
+    label:
+      local: "Office 地点"
+      expat: "办公地点"
+    icon: "🏢"
+  - number: "10+"
+    label:
+      local: "项目类型"
+      expat: "项目类型"
+    icon: "💼"
+  - number: "95%"
+    label:
+      local: "签证通过率"
+      expat: "签证通过率"
+    icon: "✅"
+
+# Priority menu cards (12 cards with emoji watermarks)
+priority_cards:
+  - title:
+      local: "About TP"
+      expat: "关于TP"
+    desc:
+      local: "了解公司背景与发展"
+      expat: "了解公司背景与发展"
+    url: "about-tp.html"
+    image: "GBS.jpeg"
+    emoji: "🏢"
+  - title:
+      local: "Open Jobs"
+      expat: "热门职位"
+    desc:
+      local: "查看最新职位空缺"
+      expat: "查看最新职位空缺"
+    url: "open-jobs.html"
+    image: "Reception.png"
+    emoji: "💼"
+  - title:
+      local: "Salary & Benefits"
+      expat: "薪资福利"
+    desc:
+      local: "薪酬福利详情"
+      expat: "薪酬福利详情"
+    url: "salary-and-benefits.html"
+    image: "Reception%20(1).png"
+    emoji: "💰"
+  - title:
+      local: "Relocation & Visa"
+      expat: "签证搬迁"
+    desc:
+      local: "签证流程与搬迁支持"
+      expat: "签证流程与搬迁支持"
+    url: "relocation-visa.html"
+    image: "Condo.jpg"
+    emoji: "✈️"
+  - title:
+      local: "Testimonials"
+      expat: "员工心声"
+    desc:
+      local: "听听同事怎么说"
+      expat: "听听同事怎么说"
+    url: "testimonials.html"
+    image: "KL%201.jpg"
+    emoji: "💬"
+  - title:
+      local: "城市介绍"
+      expat: "城市介绍"
+    desc:
+      local: "为什么选择马来西亚和泰国"
+      expat: "为什么选择马来西亚和泰国"
+    url: "why-malaysia-thailand.html"
+    image: "KL%202.jpg"
+    emoji: "🇲🇾🇹🇭"
+  - title:
+      local: "🤖 AI Assessment"
+      expat: "🤖 AI 能力评估"
+    desc:
+      local: "完成线上 AI 测评"
+      expat: "完成线上 AI 能力评估"
+    url: "https://app.hallo.ai/teleperformance/ai-assessment/interview/zh?assessmentTypeId=VEhDOEFMRHdKWmtZdFoxREJjMHQ="
+    image: "GTowerInside1.png"
+    emoji: "🤖"
+    external: true
+  - title:
+      local: "Hiring Process"
+      expat: "招聘流程"
+    desc:
+      local: "面试流程全解析"
+      expat: "面试流程全解析"
+    url: "hiring-process.html"
+    image: "Reception%20(2).png"
+    emoji: "📋"
+  - title:
+      local: "Office Tour"
+      expat: "办公环境"
+    desc:
+      local: "参观我们的办公室"
+      expat: "参观我们的办公室"
+    url: "office-environment.html"
+    image: "G%20TOWER.jpg"
+    emoji: "👀"
+  - title:
+      local: "推荐好友 xRAF"
+      expat: "推荐好友奖励"
+    desc:
+      local: "推荐朋友，赢取奖金"
+      expat: "推荐朋友，赢取奖金"
+    url: "https://tpmyandtpth.github.io/xRAF/"
+    image: "Reception.png"
+    emoji: "🎁"
+    external: true
+  - title:
+      local: "Blog 资讯"
+      expat: "最新资讯"
+    desc:
+      local: "最新动态和分享"
+      expat: "最新动态和分享"
+    url: "#"
+    image: "CafepicbyKoyoriinPenang.jpg"
+    emoji: "📢"
+  - title:
+      local: "FAQ 常见问题"
+      expat: "常见问题"
+    desc:
+      local: "你想知道的都在这里"
+      expat: "你想知道的都在这里"
+    url: "#faq"
+    image: "GTowerInside1.png"
+    emoji: "❓"
