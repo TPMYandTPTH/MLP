@@ -1,0 +1,35 @@
+# MLP - Mandarin Language Program Recruitment Website
+# Jekyll Configuration
+
+title: "TP 华语招聘"
+description: "Teleperformance 马来西亚/泰国 华语招聘官网"
+url: ""
+baseurl: "/test"
+
+# Build
+markdown: kramdown
+sass:
+  style: compressed
+  sass_dir: _sass
+
+# Exclude
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+
+# Collections & defaults
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+# Site data
+ga_id: "G-DDTL115MWE"
+icims_search: "https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=chinese"
+ai_assessment_form: "https://app.hallo.ai/teleperformance/ai-assessment/interview/zh?assessmentTypeId=VEhDOEFMRHdKWmtZdFoxREJjMHQ="
+recruiter_booking_url: "https://outlook.office.com/book/Chinese@teleperformance.onmicrosoft.com/s/tEpdSOHeX0SbvhMZg_dyvQ2?ismsaljsauthenabled"
+xraf_url: "https://tpmyandtpth.github.io/xRAF/"
+virtual_tour: "https://vtour.cloud/mh2n0j/29cekgq3/"
