@@ -49,7 +49,7 @@
             case 'linkedin':    return 'LinkedIn Recruiter';
             case 'broadcast':   return 'Broadcast Comms';
             case 'wechat':      return 'WeChat';
-            case 'line':        return 'LINE';
+            // LINE removed
             case 'xiaohongshu': return 'Xiaohongshu';
             case 'xhs':         return 'Xiaohongshu';
             case 'website':     return 'MLP Website';
@@ -202,7 +202,7 @@
             if (href.startsWith('tel:')) return;
             if (href.startsWith('javascript:')) return;
             if (href.includes('icims.com')) return;  // Already handled separately
-            if (href.includes('line.me')) return;     // External
+            // LINE removed     // External
             if (href.includes('forms.office.com')) return; // External
             if (href.includes('youtube.com')) return;  // External
             if (href.includes('vtour.cloud')) return;  // External

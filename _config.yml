@@ -1,10 +1,10 @@
 # MLP - Mandarin Language Program Recruitment Website
 # Jekyll Configuration
 
-title: "TP 华语招聘"
+title: "TP"
 description: "Teleperformance 马来西亚/泰国 华语招聘官网"
 url: ""
-baseurl: "/test"
+baseurl: "/MLP"
 
 # Build
 markdown: kramdown

@@ -1,27 +1,23 @@
-<!-- Footer -->
+<!-- FOOTER -->
 <footer>
   <div class="footer-content">
     <div class="footer-brand">
       <div class="footer-logo">
-        <img src="{{ '/assets/images/TPLogo11.png' | relative_url }}" alt="TP" width="42" height="42">
+        <img src="{{ '/assets/images/TPLogo11.png' | relative_url }}" alt="TP">
         <span class="footer-logo-text">TP</span>
       </div>
-      <p class="footer-desc">
-        <span class="local-only">在全球100多个国家运营的全球 BPO 企业<br>支持华语人才开启新 Career</span>
-        <span class="expat-only">在全球100多个国家运营的全球业务流程外包企业<br>支持华语人才开启新事业</span>
-      </p>
-      <div class="footer-badges">
-        <span class="badge-item">🏆 马来西亚最佳职场 连续6年</span>
-        <span class="badge-item">🏆 全球最佳职场 连续5年</span>
+      <p class="footer-desc">全球100多个国家运营的业务流程外包企业<br>支持华语人才开启职业新篇章</p>
+      <div class="badges">
+        <span class="badge-item">🏆 马来西亚最佳职场 6年连续</span>
+        <span class="badge-item">🏆 全球最佳职场 5年连续</span>
       </div>
       <div class="footer-cta">
-        <a href="{{ site.icims_search }}" target="_blank" rel="noopener noreferrer" class="btn btn-gold btn-sm">
-          <span class="local-only">Apply Now</span>
-          <span class="expat-only">点击申请</span>
-        </a>
+        <a href="{{ site.icims_search }}" target="_blank" rel="noopener noreferrer" class="btn btn-solid">申请职位</a>
+        <a href="https://www.tp.com/en-my/locations/malaysia/careers/?page=0#contactusmalaysia" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light">TP.COM</a>
       </div>
     </div>
-    <div class="footer-col">
+    
+    <div class="footer-section">
       <h3>公司信息</h3>
       <ul>
         <li><a href="{{ 'about-tp.html' | relative_url }}">公司介绍</a></li>
@@ -30,27 +26,28 @@
         <li><a href="{{ 'ta-team.html' | relative_url }}">招聘团队</a></li>
       </ul>
     </div>
-    <div class="footer-col">
-      <h3>职位·申请</h3>
+    <div class="footer-section">
+      <h3>职位申请</h3>
       <ul>
         <li><a href="{{ 'open-jobs.html' | relative_url }}">职位列表</a></li>
         <li><a href="{{ 'hiring-process.html' | relative_url }}">招聘流程</a></li>
-        <li><a href="{{ site.ai_assessment_form }}" target="_blank" rel="noopener noreferrer">AI 能力评估</a></li>
         <li><a href="{{ 'faq.html' | relative_url }}">常见问题</a></li>
+        <li><a href="{{ site.ai_assessment_form }}" target="_blank" rel="noopener noreferrer">AI 能力评估</a></li>
       </ul>
     </div>
-    <div class="footer-col">
-      <h3>生活信息</h3>
+    <div class="footer-section">
+      <h3>生活资讯</h3>
       <ul>
-        <li><a href="{{ 'why-malaysia-thailand.html' | relative_url }}">工作城市</a></li>
+        <li><a href="{{ 'area-around-office.html' | relative_url }}">周边环境</a></li>
         <li><a href="{{ 'relocation-visa.html' | relative_url }}">搬迁支持</a></li>
         <li><a href="{{ 'daily-life-malaysia.html' | relative_url }}">日常生活</a></li>
         <li><a href="{{ site.recruiter_booking_url }}" target="_blank" rel="noopener noreferrer">预约招聘顾问</a></li>
       </ul>
     </div>
   </div>
+  
   <div class="footer-bottom">
-    <p class="ssm-info">Teleperformance Malaysia Sdn Bhd · SSM: 201601023769 (1194708-K)</p>
-    <p>&copy; {{ 'now' | date: '%Y' }} Teleperformance. All rights reserved. | <a href="#">隐私政策</a> | <a href="#">使用条款</a></p>
+    <p class="ssm-info">Teleperformance Malaysia Sdn Bhd 的 SSM（马来西亚公司委员会）注册号为 201601023769 (1194708-K)</p>
+    <p>&copy; {{ 'now' | date: '%Y' }} TP. 版权所有。| <a href="#">隐私政策</a> | <a href="#">使用条款</a></p>
   </div>
 </footer>

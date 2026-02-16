@@ -175,7 +175,7 @@
 
   &:hover { background: $gold-pale; }
 
-  .icon-emoji { font-size: 3rem; }
+  .icon-emoji { font-size: 4.5rem; }
   .icon-label { font-size: 0.85rem; color: $tp-gray-dark; margin-top: 0.35rem; font-weight: 600; }
 }
 
@@ -776,13 +776,15 @@
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    background: $tp-off;
+    background: linear-gradient(135deg, $tp-off 0%, $tp-light 100%);
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto 0.5rem;
-    font-size: 2rem;
-    border: 2px solid $tp-light;
+    font-size: 2.5rem;
+    border: 3px solid $gold-primary;
+    color: $tp-gray;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   }
 
   .member-name { font-weight: 700; font-size: 0.9rem; }
@@ -846,4 +848,176 @@
   .contact-icon { font-size: 1.5rem; }
   .contact-text { font-weight: 600; font-size: 0.9rem; }
   .contact-arrow { margin-left: auto; color: $gold-primary; }
+}
+
+// ========================================
+// HOT JOBS - Open Jobs Style Cards
+// ========================================
+.hot-jobs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: $max-width;
+  margin: 0 auto;
+}
+
+.hot-jobs-grid .card {
+  background: $tp-white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: $shadow-sm;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s, box-shadow 0.3s;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: $shadow-lg;
+  }
+}
+
+.card-header {
+  padding: 1.25rem 1.25rem 0.75rem;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+
+  .role {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+
+    h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: $tp-black;
+    }
+  }
+
+  .tag {
+    background: $gold-primary;
+    color: $tp-black;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 0.2rem 0.6rem;
+    border-radius: 99px;
+    white-space: nowrap;
+  }
+
+  .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem 0.75rem;
+    font-size: 0.78rem;
+    color: $tp-gray-dark;
+  }
+}
+
+.card-body {
+  padding: 1rem 1.25rem;
+  flex: 1;
+
+  .content-scroll {
+    max-height: 220px;
+    overflow-y: auto;
+  }
+
+  .jd-section, .requirements-section {
+    margin-bottom: 0.75rem;
+
+    h4 {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: $tp-black;
+      margin-bottom: 0.35rem;
+      padding-bottom: 0.25rem;
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+    }
+
+    p {
+      font-size: 0.82rem;
+      color: $tp-gray-dark;
+      line-height: 1.5;
+      margin-bottom: 0.25rem;
+    }
+  }
+
+  .requirements-list {
+    list-style: none;
+    padding: 0;
+
+    li {
+      font-size: 0.82rem;
+      color: $tp-gray-dark;
+      padding: 0.15rem 0;
+      padding-left: 1.1rem;
+      position: relative;
+
+      &::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: $gold-primary;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+.card-footer {
+  padding: 0.75rem 1.25rem 1rem;
+  border-top: 1px solid rgba(0,0,0,0.06);
+
+  .footer-row {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+
+    &:last-child { margin-bottom: 0; }
+
+    &.two-buttons {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .process {
+    display: block;
+    text-align: center;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border: 1.5px solid $tp-black;
+    border-radius: 6px;
+    color: $tp-black;
+    transition: all 0.2s;
+
+    &:hover {
+      background: $tp-black;
+      color: $tp-white;
+    }
+  }
+
+  .apply {
+    display: block;
+    text-align: center;
+    padding: 0.6rem 0.75rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    background: $tp-black;
+    color: $tp-white;
+    border-radius: 6px;
+    transition: all 0.2s;
+
+    &:hover {
+      background: $gold-primary;
+      color: $tp-black;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .hot-jobs-grid {
+    grid-template-columns: 1fr;
+  }
 }

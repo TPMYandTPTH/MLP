@@ -130,3 +130,31 @@
 
   &:hover { color: $tp-black; }
 }
+
+// Solid button (footer CTA)
+.btn-solid {
+  background: $tp-white;
+  color: $tp-black;
+  border: 2px solid $tp-white;
+
+  &:hover {
+    background: $gold-primary;
+    color: $tp-black;
+    border-color: $gold-primary;
+    transform: translateY(-2px);
+  }
+}
+
+// Outline light (for dark backgrounds)
+.btn-outline-light {
+  background: transparent;
+  color: $tp-white;
+  border: 2px solid rgba(255,255,255,0.5);
+
+  &:hover {
+    background: $tp-white;
+    color: $tp-black;
+    border-color: $tp-white;
+    transform: translateY(-2px);
+  }
+}

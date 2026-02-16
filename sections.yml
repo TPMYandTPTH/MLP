@@ -143,36 +143,6 @@ icon_grid:
 # ========================================
 # SOCIAL CONNECT (4 cards with QR placeholders)
 # ========================================
-social_connect:
-  - platform: "WeChat"
-    icon: "💬"
-    desc:
-      local: "微信公众号"
-      expat: "微信公众号"
-    qr_image: "wechat-qr.png"
-  - platform: "预约招聘顾问"
-    icon: "📅"
-    desc:
-      local: "Book a Recruiter"
-      expat: "预约招聘顾问"
-    qr_image: ""
-    url: "https://outlook.office.com/book/Chinese@teleperformance.onmicrosoft.com/s/tEpdSOHeX0SbvhMZg_dyvQ2?ismsaljsauthenabled"
-  - platform: "小红书"
-    icon: "📕"
-    desc:
-      local: "Xiaohongshu"
-      expat: "小红书"
-    qr_image: "xhs-qr.png"
-  - platform: "WhatsApp"
-    icon: "📱"
-    desc:
-      local: "WhatsApp 群组"
-      expat: "WhatsApp 群组"
-    qr_image: "whatsapp-qr.png"
-
-# ========================================
-# VIDEOS (4 YouTube embeds)
-# ========================================
 videos:
   - id: "N6l7PUQR0tw"
     title:
