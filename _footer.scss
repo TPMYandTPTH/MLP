@@ -1,0 +1,122 @@
+// ========================================
+// FOOTER - Matches original design
+// ========================================
+footer {
+  background: $tp-black;
+  color: $tp-white;
+  padding: 40px 20px 16px;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, $gold-primary, transparent);
+  }
+}
+
+.footer-content {
+  max-width: $max-width;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+
+  img {
+    width: 42px;
+    height: 42px;
+    filter: brightness(0) invert(1);
+  }
+}
+
+.footer-logo-text {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.footer-desc {
+  opacity: 0.8;
+  line-height: 1.75;
+  font-size: 0.85rem;
+}
+
+.footer-badges {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  flex-wrap: wrap;
+
+  .badge-item {
+    font-size: 0.8rem;
+    opacity: 0.8;
+  }
+}
+
+.footer-cta {
+  margin-top: 0.5rem;
+}
+
+.footer-col {
+  h3 {
+    margin-bottom: 0.75rem;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    color: $gold-primary;
+    font-weight: 700;
+  }
+
+  ul { list-style: none; }
+  li { margin-bottom: 0.3rem; }
+
+  a {
+    color: rgba(255,255,255,0.7);
+    font-size: 0.8rem;
+    transition: all 0.3s;
+
+    &:hover, &:focus {
+      color: $gold-light;
+      opacity: 1;
+    }
+  }
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 12px;
+
+  p {
+    font-size: 0.75rem;
+    opacity: 0.6;
+  }
+
+  a {
+    color: $tp-white;
+    text-decoration: underline;
+    margin: 0 0.3rem;
+  }
+}
+
+.ssm-info {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 0.5rem;
+}

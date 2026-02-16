@@ -1,0 +1,270 @@
+# ========================================
+# INTERVIEW PROCESS (5 steps)
+# ========================================
+interview_process:
+  - step: 1
+    title:
+      local: "Submit Resume"
+      expat: "提交简历"
+    desc:
+      local: "通过 iCIMS 在线提交"
+      expat: "通过在线系统提交简历"
+  - step: 2
+    title:
+      local: "AI Assessment"
+      expat: "AI 测评"
+    desc:
+      local: "完成线上测评"
+      expat: "完成线上 AI 测评"
+  - step: 3
+    title:
+      local: "Interview"
+      expat: "面试"
+    desc:
+      local: "与招聘团队面试"
+      expat: "与招聘团队进行面试"
+  - step: 4
+    title:
+      local: "Offer Letter"
+      expat: "录用通知"
+    desc:
+      local: "收到 Offer"
+      expat: "收到录用通知书"
+  - step: 5
+    title:
+      local: "Onboarding"
+      expat: "入职培训"
+    desc:
+      local: "签证办理 + 入职"
+      expat: "签证办理与入职培训"
+
+# ========================================
+# BENEFITS (6 items for homepage)
+# ========================================
+benefits:
+  - icon: "💰"
+    title:
+      local: "Competitive Salary"
+      expat: "有竞争力的薪酬"
+    desc:
+      local: "具有市场竞争力的薪资 + 语言津贴"
+      expat: "具有市场竞争力的薪资加语言津贴"
+  - icon: "🏥"
+    title:
+      local: "Medical Insurance"
+      expat: "医疗保险"
+    desc:
+      local: "全面的医疗保险覆盖"
+      expat: "全面的医疗保险覆盖"
+  - icon: "✈️"
+    title:
+      local: "Visa Support"
+      expat: "签证支持"
+    desc:
+      local: "公司全程办理工作签证"
+      expat: "公司全程办理工作签证"
+  - icon: "🏠"
+    title:
+      local: "Housing Support"
+      expat: "住房支持"
+    desc:
+      local: "搬迁补贴和住房指导"
+      expat: "搬迁补贴和住房指导"
+  - icon: "📈"
+    title:
+      local: "Career Growth"
+      expat: "职业发展"
+    desc:
+      local: "清晰的晋升通道和培训"
+      expat: "清晰的晋升通道和培训"
+  - icon: "🎉"
+    title:
+      local: "Work Culture"
+      expat: "企业文化"
+    desc:
+      local: "GPTW 认证最佳雇主"
+      expat: "连续获评全球最佳雇主"
+
+# ========================================
+# GPTW Section
+# ========================================
+gptw:
+  years_count: 6
+  title:
+    local: "连续 <span class='gptw-counter' data-target='6'>1</span> 年入选 World's Best Workplaces™"
+    expat: "连续 <span class='gptw-counter' data-target='6'>1</span> 年入选全球最佳雇主™"
+  subtitle:
+    local: "Great Place to Work® 认证"
+    expat: "Great Place to Work® 认证"
+  gallery:
+    - "gptw-2019.jpg"
+    - "gptw-2020.jpg"
+    - "gptw-2021.jpg"
+    - "gptw-2022.jpg"
+    - "gptw-2023.jpg"
+
+# ========================================
+# ICON GRID (16 items)
+# ========================================
+icon_grid:
+  - icon: "🏢"
+    label: "500强企业"
+  - icon: "🌍"
+    label: "全球100国"
+  - icon: "👥"
+    label: "50万员工"
+  - icon: "📞"
+    label: "客户服务"
+  - icon: "💻"
+    label: "技术支持"
+  - icon: "📱"
+    label: "内容审核"
+  - icon: "📊"
+    label: "数据分析"
+  - icon: "🎮"
+    label: "游戏支持"
+  - icon: "🏥"
+    label: "医疗保险"
+  - icon: "✈️"
+    label: "签证支持"
+  - icon: "🏠"
+    label: "住房补贴"
+  - icon: "📈"
+    label: "晋升通道"
+  - icon: "🎓"
+    label: "专业培训"
+  - icon: "🏆"
+    label: "最佳雇主"
+  - icon: "🌴"
+    label: "带薪年假"
+  - icon: "💪"
+    label: "健身福利"
+
+# ========================================
+# SOCIAL CONNECT (4 cards with QR placeholders)
+# ========================================
+social_connect:
+  - platform: "WeChat"
+    icon: "💬"
+    desc:
+      local: "微信公众号"
+      expat: "微信公众号"
+    qr_image: "wechat-qr.png"
+  - platform: "预约招聘顾问"
+    icon: "📅"
+    desc:
+      local: "Book a Recruiter"
+      expat: "预约招聘顾问"
+    qr_image: ""
+    url: "https://outlook.office.com/book/Chinese@teleperformance.onmicrosoft.com/s/tEpdSOHeX0SbvhMZg_dyvQ2?ismsaljsauthenabled"
+  - platform: "小红书"
+    icon: "📕"
+    desc:
+      local: "Xiaohongshu"
+      expat: "小红书"
+    qr_image: "xhs-qr.png"
+  - platform: "WhatsApp"
+    icon: "📱"
+    desc:
+      local: "WhatsApp 群组"
+      expat: "WhatsApp 群组"
+    qr_image: "whatsapp-qr.png"
+
+# ========================================
+# VIDEOS (4 YouTube embeds)
+# ========================================
+videos:
+  - id: "N6l7PUQR0tw"
+    title:
+      local: "员工故事"
+      expat: "员工故事"
+  - id: "H4SVUrCjTPM"
+    title:
+      local: "办公环境"
+      expat: "办公环境"
+  - id: "VB6KSdFYLdE"
+    title:
+      local: "团队活动"
+      expat: "团队活动"
+  - id: "pa-qdCGkxA4"
+    title:
+      local: "生活体验"
+      expat: "生活体验"
+
+# ========================================
+# LIFESTYLE GRID (8 items)
+# ========================================
+lifestyle:
+  - image: "lifestyle-food.jpg"
+    label:
+      local: "美食天堂"
+      expat: "美食天堂"
+  - image: "lifestyle-nature.jpg"
+    label:
+      local: "自然风光"
+      expat: "自然风光"
+  - image: "lifestyle-city.jpg"
+    label:
+      local: "城市生活"
+      expat: "城市生活"
+  - image: "lifestyle-culture.jpg"
+    label:
+      local: "多元文化"
+      expat: "多元文化"
+  - image: "lifestyle-beach.jpg"
+    label:
+      local: "海滩度假"
+      expat: "海滩度假"
+  - image: "lifestyle-shopping.jpg"
+    label:
+      local: "购物天堂"
+      expat: "购物天堂"
+  - image: "lifestyle-temple.jpg"
+    label:
+      local: "历史古迹"
+      expat: "历史古迹"
+  - image: "lifestyle-nightlife.jpg"
+    label:
+      local: "夜生活"
+      expat: "夜生活"
+
+# ========================================
+# FAQ (homepage version)
+# ========================================
+faq:
+  - q:
+      local: "需要会说 Malay 吗？"
+      expat: "需要会说马来语吗？"
+    a:
+      local: "不需要！我们的华语项目以中文为主要工作语言，基本的英语沟通能力即可。"
+      expat: "不需要。华语项目以中文为主要工作语言，具备基本英语沟通能力即可。"
+  - q:
+      local: "公司帮忙办签证吗？"
+      expat: "公司提供签证支持吗？"
+    a:
+      local: "Yes！公司全程办理工作签证（Employment Pass），包括申请、续签，费用由公司承担。"
+      expat: "是的。公司全程办理工作签证，包括申请和续签，费用由公司承担。"
+  - q:
+      local: "面试是什么形式？"
+      expat: "面试形式是什么？"
+    a:
+      local: "一般是 online interview，也可以选择 walk-in。可以先完成 AI 能力评估了解更多。"
+      expat: "一般为线上面试，也可以选择现场面试。您可以先完成 AI 能力评估了解更多。"
+  - q:
+      local: "薪水大概多少？"
+      expat: "薪资水平如何？"
+    a:
+      local: "薪资根据项目和岗位不同，一般都有语言津贴。详情可以看我们的 Salary & Benefits 页面。"
+      expat: "薪资根据项目和岗位而定，均包含语言津贴。详情请参阅薪资福利页面。"
+  - q:
+      local: "有提供住宿吗？"
+      expat: "提供住宿吗？"
+    a:
+      local: "公司提供搬迁补贴和住房指导，帮你找到合适的住处。部分项目有 housing support。"
+      expat: "公司提供搬迁补贴和住房指导，协助您找到合适的住处。"
+  - q:
+      local: "多久可以入职？"
+      expat: "入职需要多长时间？"
+    a:
+      local: "从面试到入职一般 2-4 weeks，签证办理大约 2-3 周。"
+      expat: "从面试到入职一般需要两到四周，签证办理约两到三周。"

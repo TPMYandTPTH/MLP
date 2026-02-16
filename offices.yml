@@ -1,0 +1,68 @@
+# Office locations - matches original index.html
+offices:
+  - name: "G Tower（吉隆坡）"
+    features:
+      local: ["Ampang Park 站直达", "KLCC 步行可达", "Grade A Office Building"]
+      expat: ["安邦公园站直达", "双子塔步行可达", "甲级办公楼"]
+    map_url: "https://maps.app.goo.gl/vd5ju3VXhxfhpJuN7"
+    image: "G%20TOWER.jpg"
+
+  - name: "Livingston（槟城）"
+    features:
+      local: ["安静的环境", "餐厅·Pharmacy nearby", "交通便利"]
+      expat: ["安静的环境", "餐厅·药房近在咫尺", "交通便利"]
+    map_url: "https://maps.app.goo.gl/9i841vf18KRyunQK6"
+    image: "Reception.png"
+
+  - name: "One Precinct（槟城）"
+    features:
+      local: ["Bayan Baru 区域", "距机场 15 分钟", "Queensbay Mall nearby"]
+      expat: ["峇央峇鲁区域", "距机场 15 分钟", "皇后湾广场附近"]
+    map_url: "https://maps.app.goo.gl/Nq6RKZ7spH89THG8A"
+    image: "Reception%20(1).png"
+
+  - name: "GBS@Mahsuri（槟城）"
+    features:
+      local: ["州 GBS Hub", "IT/BPO 集聚地", "生活设施完善"]
+      expat: ["州全球商务服务中心", "IT/业务流程外包集聚地", "生活设施完善"]
+    map_url: "https://maps.app.goo.gl/Zpy6r8na4Wg31uhT8"
+    image: "GBS.jpeg"
+
+  - name: "KCP（格拉那再也中心点）"
+    features:
+      local: ["LRT 站附近", "Shopping 便利"]
+      expat: ["轻轨站附近", "购物便利"]
+    map_url: "https://maps.app.goo.gl/UE8tTboaukkeCWZW9"
+    image: "KL%201.jpg"
+
+  - name: "Singha Complex（曼谷）"
+    features:
+      local: ["BTS/MRT nearby", "华人区域", "商业综合体内"]
+      expat: ["轻轨/地铁附近", "华人区域", "商业综合体内"]
+    map_url: "https://maps.app.goo.gl/vPuRsYp5fcNzX4kb6"
+    image: "Singha%20Complex1.jpg"
+
+  - name: "Sunway（双威）"
+    features:
+      local: ["Sunway Pyramid nearby", "BRT 直达", "新兴商业区"]
+      expat: ["双威金字塔购物中心附近", "快速公交直达", "新兴商业区"]
+    coming_soon: true
+    image: "KL%202.jpg"
+
+  - name: "Johor（柔佛）"
+    features:
+      local: ["靠近新加坡", "生活成本更低", "新办公地点"]
+      expat: ["靠近新加坡", "生活成本更低", "新办公地点"]
+    coming_soon: true
+    apply_url: "https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=chinese+johor"
+    image: "Penang.jpg"
+
+  - name_local: "WFH（居家办公）"
+    name_expat: "居家办公"
+    features:
+      local: ["Remote Work Option", "灵活工作安排", "部分职位适用"]
+      expat: ["远程工作选项", "灵活工作安排", "部分职位适用"]
+    coming_soon: true
+    apply_url: "https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=chinese+interpreter"
+    apply_label: "💼 Interpreter Job"
+    image: "Condo.jpg"

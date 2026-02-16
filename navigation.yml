@@ -1,0 +1,54 @@
+# Main navigation
+main:
+  - url: "index.html"
+    local: "Home"
+    expat: "首页"
+  - url: "about-tp.html"
+    local: "About TP"
+    expat: "关于TP"
+  - url: "salary-and-benefits.html"
+    local: "Benefits"
+    expat: "薪资福利"
+  - url: "hiring-process.html"
+    local: "Hiring Process"
+    expat: "招聘流程"
+  - url: "why-malaysia-thailand.html"
+    local: "城市介绍"
+    expat: "城市介绍"
+  - url: "relocation-visa.html"
+    local: "Visa Support"
+    expat: "签证支持"
+
+# Footer
+footer_company:
+  title: "公司信息"
+  links:
+    - url: "about-tp.html"
+      text: "公司介绍"
+    - url: "salary-and-benefits.html"
+      text: "薪资福利"
+    - url: "office-environment.html"
+      text: "办公环境"
+    - url: "ta-team.html"
+      text: "招聘团队"
+
+footer_jobs:
+  title: "职位申请"
+  links:
+    - url: "open-jobs.html"
+      text: "职位列表"
+    - url: "hiring-process.html"
+      text: "招聘流程"
+    - url: "https://app.hallo.ai/teleperformance/ai-assessment/interview/zh?assessmentTypeId=VEhDOEFMRHdKWmtZdFoxREJjMHQ="
+      text: "AI 能力评估"
+      external: true
+
+footer_life:
+  title: "生活资讯"
+  links:
+    - url: "why-malaysia-thailand.html"
+      text: "城市介绍"
+    - url: "relocation-visa.html"
+      text: "搬迁支持"
+    - url: "daily-life-malaysia.html"
+      text: "日常生活"

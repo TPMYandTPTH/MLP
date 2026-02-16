@@ -1,0 +1,162 @@
+// ========================================
+// HERO SECTIONS
+// ========================================
+
+// Dark hero (subpages: ta-team, hiring, etc.)
+.hero-dark {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, $tp-black 0%, $tp-charcoal 100%);
+  padding: 3.6rem 20px;
+  text-align: center;
+  color: $tp-white;
+
+  &::before {
+    content: '华';
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    font-size: clamp(150px, 25vw, 350px);
+    font-weight: 900;
+    font-family: 'Noto Serif SC', serif;
+    opacity: 0.03;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: $gold-primary;
+  }
+
+  h1 {
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    font-weight: 900;
+    color: $gold-primary;
+    margin-bottom: 0.5rem;
+    font-family: 'Noto Serif SC', serif;
+  }
+
+  p {
+    color: $tp-silver;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.8;
+  }
+}
+
+// Light hero (index page)
+.hero-light {
+  min-height: 75vh;
+  background: linear-gradient(135deg, $tp-white 0%, $tp-off 50%, $gold-pale 100%);
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 2.5rem 20px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    width: clamp(240px, 35vw, 520px);
+    height: clamp(240px, 35vw, 520px);
+    background-image: url('../images/TPLogo11.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.04;
+    filter: saturate(0);
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+
+  .hero-container {
+    max-width: $max-width;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 4.5vw, 3.5rem);
+    font-weight: 900;
+    color: $tp-black;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+    font-family: 'Noto Serif SC', serif;
+    letter-spacing: 0.02em;
+    min-height: 1.5em;
+  }
+
+  .hero-subtitle {
+    font-size: 1.05rem;
+    color: $tp-gray-dark;
+    max-width: 620px;
+    margin-bottom: 1.75rem;
+    line-height: 1.9;
+  }
+}
+
+// Shared hero elements
+.hero-cta {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+
+  .hero-light & { margin-bottom: 2rem; margin-top: 0; }
+  .hero-dark & { justify-content: center; }
+}
+
+.hero-stats {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  padding-right: 2rem;
+  border-right: 1px solid $tp-light;
+
+  &:last-child { border-right: none; }
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: 900;
+  color: $tp-black;
+  display: block;
+  line-height: 1;
+  margin-bottom: 0.3rem;
+  font-family: 'Noto Serif SC', serif;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: $tp-gray;
+  letter-spacing: 0.05em;
+}
+
+// Pill navigation (within hero)
+.pill-nav {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.pill {
+  padding: 0.45rem 0.85rem;
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-decoration: none;
+  color: $tp-silver;
+  transition: all 0.3s;
+
+  &:hover {
+    border-color: $gold-primary;
+    color: $gold-primary;
+    background: rgba(255,215,0,0.1);
+  }
+}
