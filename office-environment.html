@@ -16,7 +16,7 @@ description: "TP 马来西亚·泰国办公环境"
       {% for office in site.data.offices.offices %}
       <div class="office-card{% if office.coming_soon %} coming-soon{% endif %}">
         {% if office.image %}
-        <img src="photos/{{ office.image }}" alt="{{ office.name }}" class="office-image" loading="lazy">
+        <img src="{{ site.baseurl }}/photos/{{ office.image }}" alt="{{ office.name }}" class="office-image" loading="lazy">
         {% endif %}
         <div class="office-info">
           <h3 class="office-name">{{ office.name }}</h3>

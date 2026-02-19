@@ -15,7 +15,7 @@ description: "认识 TP 华语招聘团队"
     {% assign leader = site.data.team.leader %}
     <div class="ta-leader-card">
       {% if leader.avatar != "" %}
-      <img src="photos/{{ leader.avatar }}" alt="{{ leader.name_en }}">
+      <img src="{{ site.baseurl }}/photos/{{ leader.avatar }}" alt="{{ leader.name_en }}">
       {% else %}
       <div class="member-placeholder">👤</div>
       {% endif %}
@@ -37,7 +37,7 @@ description: "认识 TP 华语招聘团队"
       {% for member in site.data.team.members %}
       <div class="ta-member-card">
         {% if member.avatar != "" %}
-        <img src="photos/{{ member.avatar }}" alt="{{ member.name_en }}">
+        <img src="{{ site.baseurl }}/photos/{{ member.avatar }}" alt="{{ member.name_en }}">
         {% else %}
         <div class="member-placeholder">👤</div>
         {% endif %}

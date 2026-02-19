@@ -13,6 +13,7 @@
 }
 
 @media (max-width: $bp-md) {
+  .footer-content { grid-template-columns: 1fr 1fr; }
   // Hide desktop nav, show mobile toggle
   nav { display: none; }
   .mobile-toggle { display: block; }

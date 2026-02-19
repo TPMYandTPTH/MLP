@@ -29,7 +29,7 @@ description: "马来西亚和泰国的生活、文化和工作优势"
     <div class="lifestyle-grid">
       {% for item in site.data.sections.lifestyle %}
       <div class="lifestyle-item">
-        <img src="photos/{{ item.image }}" alt="{{ item.label.expat }}" loading="lazy">
+        <img src="{{ site.baseurl }}/photos/{{ item.image }}" alt="{{ item.label.expat }}" loading="lazy">
         <div class="lifestyle-label">{{ item.label.expat }}</div>
       </div>
       {% endfor %}

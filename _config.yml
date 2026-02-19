@@ -18,6 +18,8 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - node_modules
+  - "*.scss"
+  - main.scss
 
 # Collections & defaults
 defaults:
