@@ -1021,3 +1021,160 @@
     grid-template-columns: 1fr;
   }
 }
+
+// ========================================
+// OPEN JOBS - Filters, Tabs, Book Button
+// ========================================
+.filters {
+  background: $tp-white;
+  padding: 1.5rem 20px;
+  border-bottom: 1px solid $tp-light;
+}
+
+.filters .wrap {
+  max-width: $max-width;
+  margin: 0 auto;
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.search-input {
+  flex: 2;
+  min-width: 200px;
+  padding: 0.6rem 1rem;
+  border: 1.5px solid $tp-light;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-family: inherit;
+  transition: border-color 0.2s;
+
+  &:focus {
+    outline: none;
+    border-color: $gold-primary;
+  }
+}
+
+.select {
+  flex: 1;
+  min-width: 140px;
+  padding: 0.6rem 0.75rem;
+  border: 1.5px solid $tp-light;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-family: inherit;
+  background: $tp-white;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+    border-color: $gold-primary;
+  }
+}
+
+.tabs {
+  background: $tp-off;
+  padding: 0.75rem 20px;
+  border-bottom: 1px solid $tp-light;
+}
+
+.tabs .inner {
+  max-width: $max-width;
+  margin: 0 auto;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.tab {
+  padding: 0.45rem 1rem;
+  border: 1.5px solid $tp-light;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  font-family: inherit;
+  background: $tp-white;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:hover {
+    border-color: $gold-primary;
+    color: $gold-dark;
+  }
+
+  &.active {
+    background: $gold-primary;
+    color: $tp-black;
+    border-color: $gold-primary;
+  }
+}
+
+.jobs {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 1.5rem 20px;
+}
+
+.jobs .count {
+  font-size: 0.85rem;
+  color: $tp-gray;
+  margin-bottom: 1rem;
+}
+
+.jobs .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.25rem;
+}
+
+// Book button (new - matches Japanese page)
+.card-footer .book {
+  display: block;
+  text-align: center;
+  padding: 0.6rem 0.75rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  background: $tp-white;
+  color: $tp-black;
+  border: 1.5px solid $gold-primary;
+  border-radius: 6px;
+  transition: all 0.2s;
+  position: relative;
+
+  &:hover {
+    background: $gold-primary;
+    color: $tp-black;
+  }
+
+  &[data-tooltip]:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: $tp-black;
+    color: $tp-white;
+    font-size: 0.72rem;
+    font-weight: 400;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    white-space: nowrap;
+    z-index: 10;
+    pointer-events: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .filters .wrap {
+    flex-direction: column;
+  }
+
+  .search-input, .select {
+    flex: none;
+    width: 100%;
+  }
+
+  .jobs .grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -10,91 +10,264 @@ description: "TP 马来西亚·泰国华语职位列表"
   </div>
 </section>
 
-<section class="section-padded">
-  <div class="section" style="max-width: var(--max);">
-    <div class="hot-jobs-grid">
-
-      <article class="card" role="listitem">
-        <div class="card-header">
-          <div class="role"><h3>客户服务代表</h3><span class="tag">招聘中</span></div>
-          <div class="meta"><span>地点：吉隆坡</span><span>语言：中文/日语</span><span>类型：正式员工</span><span>班次：轮班制</span></div>
-        </div>
-        <div class="card-body"><div class="content-scroll">
-          <div class="jd-section"><h4>职务说明</h4>
-            <p>为全球电商平台用户提供华语客服。</p>
-            <p>处理订单、配送、退货等相关事务。</p>
-            <p>通过多渠道提供客户支持。</p>
-          </div>
-          <div class="requirements-section"><h4>应聘条件</h4>
-            <ul class="requirements-list">
-              <li>中文流利（书写和交流）</li><li>大专或以上学历</li><li>欢迎无经验应聘者</li><li>能适应轮班制工作</li><li>客服经验者优先</li>
-            </ul>
-          </div>
-        </div></div>
-        <div class="card-footer">
-          <div class="footer-row two-buttons">
-            <a class="process" target="_blank" rel="noopener" href="{{ site.ai_assessment_form }}">AI 能力评估</a>
-            <a class="process" href="{{ 'hiring-process.html' | relative_url }}">了解流程</a>
-          </div>
-          <div class="footer-row"><a class="apply" target="_blank" rel="noopener" href="{{ site.icims_search }}">立即申请</a></div>
-        </div>
-      </article>
-
-      <article class="card" role="listitem">
-        <div class="card-header">
-          <div class="role"><h3>金融支持顾问</h3><span class="tag">招聘中</span></div>
-          <div class="meta"><span>地点：槟城</span><span>语言：中文主要</span><span>类型：正式员工</span><span>班次：轮班制</span></div>
-        </div>
-        <div class="card-body"><div class="content-scroll">
-          <div class="jd-section"><h4>职务说明</h4>
-            <p>为全球在线支付用户提供一级支持。</p>
-            <p>处理账户查询、交易问题、技术支持。</p>
-            <p>记录详情并适当升级复杂案例。</p>
-          </div>
-          <div class="requirements-section"><h4>应聘条件</h4>
-            <ul class="requirements-list">
-              <li>中文和英文流利</li><li>客服或财务背景优先</li><li>Windows基础操作能力</li><li>强沟通和问题解决能力</li><li>欢迎初入职场者</li>
-            </ul>
-          </div>
-        </div></div>
-        <div class="card-footer">
-          <div class="footer-row two-buttons">
-            <a class="process" target="_blank" rel="noopener" href="{{ site.ai_assessment_form }}">AI 能力评估</a>
-            <a class="process" href="{{ 'hiring-process.html' | relative_url }}">了解流程</a>
-          </div>
-          <div class="footer-row"><a class="apply" target="_blank" rel="noopener" href="{{ site.icims_search }}">立即申请</a></div>
-        </div>
-      </article>
-
-      <article class="card" role="listitem">
-        <div class="card-header">
-          <div class="role"><h3>销售代表</h3><span class="tag">招聘中</span></div>
-          <div class="meta"><span>地点：曼谷</span><span>语言：中文/英文</span><span>类型：正式员工</span><span>班次：日班</span></div>
-        </div>
-        <div class="card-body"><div class="content-scroll">
-          <div class="jd-section"><h4>职务说明</h4>
-            <p>销售企业云安全解决方案给亚太地区。</p>
-            <p>发现潜在客户并推进销售机会。</p>
-            <p>使用销售工具管理客户信息和活动。</p>
-          </div>
-          <div class="requirements-section"><h4>应聘条件</h4>
-            <ul class="requirements-list">
-              <li>中文和英文流利</li><li>销售、市场推广或客户管理经验</li><li>自驱力强、独立工作能力强</li><li>问题解决和谈判能力出色</li><li>对数字营销感兴趣</li>
-            </ul>
-          </div>
-        </div></div>
-        <div class="card-footer">
-          <div class="footer-row two-buttons">
-            <a class="process" target="_blank" rel="noopener" href="{{ site.ai_assessment_form }}">AI 能力评估</a>
-            <a class="process" href="{{ 'hiring-process.html' | relative_url }}">了解流程</a>
-          </div>
-          <div class="footer-row"><a class="apply" target="_blank" rel="noopener" href="{{ site.icims_search }}">立即申请</a></div>
-        </div>
-      </article>
-
-    </div>
-    <div style="text-align: center; margin-top: 2rem;">
-      <a href="{{ site.icims_search }}" target="_blank" rel="noopener noreferrer" class="btn btn-gold">查看全部职位 →</a>
-    </div>
+<!-- Filters -->
+<section class="filters" aria-label="搜索与筛选">
+  <div class="wrap">
+    <input id="q" class="search-input" type="text" placeholder="关键词搜索（例：电商、技术支持、日班）…" aria-label="搜索职位">
+    <select id="loc" class="select" aria-label="按地点筛选">
+      <option value="">地点（全部）</option>
+      <option value="kl">吉隆坡</option>
+      <option value="penang">槟城</option>
+      <option value="bangkok">曼谷</option>
+    </select>
+    <select id="lang" class="select" aria-label="按语言筛选">
+      <option value="">语言（全部）</option>
+      <option value="zh">中文为主</option>
+      <option value="bilingual">中英双语</option>
+    </select>
+    <select id="shift" class="select" aria-label="按班次筛选">
+      <option value="">班次（全部）</option>
+      <option value="day">日班</option>
+      <option value="shift">轮班制</option>
+    </select>
+    <select id="type" class="select" aria-label="按类型筛选">
+      <option value="">类型（全部）</option>
+      <option value="fulltime">正式员工</option>
+      <option value="talent">人才库</option>
+    </select>
   </div>
 </section>
+
+<!-- Category Tabs -->
+<section class="tabs" aria-label="分类标签">
+  <div class="inner">
+    <button class="tab active" data-tab="all">全部</button>
+    <button class="tab" data-tab="kl">吉隆坡</button>
+    <button class="tab" data-tab="penang">槟城</button>
+    <button class="tab" data-tab="bangkok">曼谷</button>
+    <button class="tab" data-tab="zh">中文职位</button>
+    <button class="tab" data-tab="bilingual">双语职位</button>
+  </div>
+</section>
+
+<!-- Jobs grid -->
+<section class="jobs">
+  <div class="count" id="count" aria-live="polite"></div>
+  <div class="grid" id="jobGrid" role="list">
+
+    <!-- Card 1: 客户服务代表 (电商) -->
+    <article class="card" role="listitem" data-loc="kl" data-lang="zh" data-shift="shift" data-type="fulltime" data-keywords="客户服务 电商 订单 配送 退货 客服">
+      <div class="card-header">
+        <div class="role">
+          <h3>客户服务代表（电商平台）</h3>
+          <span class="tag">招聘中</span>
+        </div>
+        <div class="meta">
+          <span>地点：G Tower，吉隆坡，马来西亚</span>
+          <span>语言：中文为主</span>
+          <span>类型：正式员工</span>
+          <span>班次：轮班制（周5天，每天8小时，7:00-22:30）</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="content-scroll">
+          <div class="jd-section">
+            <h4>职务说明</h4>
+            <p>为全球电商平台华语用户提供客户支持（电话、邮件、在线聊天）。</p>
+            <p>处理订单查询、配送跟踪、退货退款、账户问题等。</p>
+            <p>所有沟通和记录均使用中文完成。</p>
+            <p>提供完善的入职培训，无需相关经验。</p>
+          </div>
+          <div class="requirements-section">
+            <h4>应聘条件</h4>
+            <ul class="requirements-list">
+              <li>中文流利（听说读写）。</li>
+              <li>英语不做要求。</li>
+              <li>大专或以上学历。</li>
+              <li>欢迎应届毕业生和无经验者。</li>
+              <li>能适应轮班制工作。</li>
+              <li>能在马来西亚工作和生活。</li>
+              <li>有客服经验者优先。</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer">
+        <div class="footer-row two-buttons">
+          <a class="process" target="_blank" rel="noopener" href="https://app.hallo.ai/teleperformance/ai-assessment/interview/zh?assessmentTypeId=VEhDOEFMRHdKWmtZdFoxREJjMHQ=">AI 能力评估</a>
+          <a class="process" href="hiring-process.html">了解招聘流程</a>
+        </div>
+        <div class="footer-row two-buttons">
+          <a class="apply" target="_blank" rel="noopener" href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=chinese">立即申请</a>
+          <a class="book" href="https://outlook.office.com/book/Chinese@teleperformance.onmicrosoft.com/s/tEpdSOHeX0SbvhMZg_dyvQ2?ismsaljsauthenabled" data-tooltip="申请后，请预约方便的面试时间。">预约面试</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- Card 2: 金融支持顾问 -->
+    <article class="card" role="listitem" data-loc="penang" data-lang="bilingual" data-shift="shift" data-type="fulltime" data-keywords="金融 支付 账户 交易 技术支持 财务">
+      <div class="card-header">
+        <div class="role">
+          <h3>金融支持顾问（在线支付平台）</h3>
+          <span class="tag">招聘中</span>
+        </div>
+        <div class="meta">
+          <span>地点：GBS@Mahsuri，槟城，马来西亚</span>
+          <span>语言：中文＋英文</span>
+          <span>类型：正式员工</span>
+          <span>班次：轮班制（周5天，每天8小时）</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="content-scroll">
+          <div class="jd-section">
+            <h4>职务说明</h4>
+            <p>为全球在线支付平台用户提供一级客户支持。</p>
+            <p>处理账户查询、交易问题、技术支持等。</p>
+            <p>记录详细信息并将复杂案例适当升级。</p>
+            <p>通过高质量服务提升客户满意度。</p>
+            <p>全球领先在线支付平台的支持岗位，适合对金融科技感兴趣的候选人。</p>
+          </div>
+          <div class="requirements-section">
+            <h4>应聘条件</h4>
+            <ul class="requirements-list">
+              <li>中文流利（听说读写）。</li>
+              <li>英语 B1 以上（基本读写和沟通能力）。</li>
+              <li>客服或金融背景优先（欢迎新人）。</li>
+              <li>良好的沟通和问题解决能力。</li>
+              <li>基本的电脑操作能力。</li>
+              <li>能适应轮班制工作。</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer">
+        <div class="footer-row two-buttons">
+          <a class="process" target="_blank" rel="noopener" href="https://app.hallo.ai/teleperformance/ai-assessment/interview/zh?assessmentTypeId=VEhDOEFMRHdKWmtZdFoxREJjMHQ=">AI 能力评估</a>
+          <a class="process" href="hiring-process.html">了解招聘流程</a>
+        </div>
+        <div class="footer-row two-buttons">
+          <a class="apply" target="_blank" rel="noopener" href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=chinese">立即申请</a>
+          <a class="book" href="https://outlook.office.com/book/Chinese@teleperformance.onmicrosoft.com/s/tEpdSOHeX0SbvhMZg_dyvQ2?ismsaljsauthenabled" data-tooltip="申请后，请预约方便的面试时间。">预约面试</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- Card 3: 销售代表 (曼谷) -->
+    <article class="card" role="listitem" data-loc="bangkok" data-lang="bilingual" data-shift="day" data-type="fulltime" data-keywords="销售 云安全 市场 客户管理 亚太 数字营销">
+      <div class="card-header">
+        <div class="role">
+          <h3>销售代表（云安全解决方案）</h3>
+          <span class="tag">招聘中</span>
+        </div>
+        <div class="meta">
+          <span>地点：Singha Complex，曼谷，泰国</span>
+          <span>语言：中文＋英文</span>
+          <span>类型：正式员工</span>
+          <span>班次：日班（周一至周五）</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="content-scroll">
+          <div class="jd-section">
+            <h4>职务说明</h4>
+            <p>面向亚太地区销售企业云安全解决方案。</p>
+            <p>发掘潜在客户并推进销售机会。</p>
+            <p>使用 CRM 系统管理客户信息和销售活动。</p>
+            <p>与跨国团队合作达成销售目标。</p>
+            <p>立足曼谷面向亚太市场的 B2B 销售岗位，适合有销售热情和自驱力的候选人。</p>
+          </div>
+          <div class="requirements-section">
+            <h4>应聘条件</h4>
+            <ul class="requirements-list">
+              <li>中文和英文流利。</li>
+              <li>销售、市场推广或客户管理经验。</li>
+              <li>自驱力强，能独立工作。</li>
+              <li>出色的问题解决和谈判能力。</li>
+              <li>对数字营销或科技行业感兴趣。</li>
+              <li>有 B2B 销售经验者优先。</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer">
+        <div class="footer-row two-buttons">
+          <a class="process" target="_blank" rel="noopener" href="https://app.hallo.ai/teleperformance/ai-assessment/interview/zh?assessmentTypeId=VEhDOEFMRHdKWmtZdFoxREJjMHQ=">AI 能力评估</a>
+          <a class="process" href="hiring-process.html">了解招聘流程</a>
+        </div>
+        <div class="footer-row two-buttons">
+          <a class="apply" target="_blank" rel="noopener" href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=chinese">立即申请</a>
+          <a class="book" href="https://outlook.office.com/book/Chinese@teleperformance.onmicrosoft.com/s/tEpdSOHeX0SbvhMZg_dyvQ2?ismsaljsauthenabled" data-tooltip="申请后，请预约方便的面试时间。">预约面试</a>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<section class="section-padded" style="text-align: center; background: var(--tp-off);">
+  <p style="color: var(--tp-gray); margin-bottom: 1rem;">查看更多职位或其他语言机会</p>
+  <a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=chinese" target="_blank" class="btn btn-gold">查看全部华语职位 →</a>
+  <a href="https://tpmyandtpth.github.io/LP/" target="_blank" class="btn btn-primary" style="margin-left: 0.75rem;">其他语言职位 →</a>
+</section>
+
+<script>
+(function(){
+  const cards = document.querySelectorAll('#jobGrid .card');
+  const q     = document.getElementById('q');
+  const loc   = document.getElementById('loc');
+  const lang  = document.getElementById('lang');
+  const shift = document.getElementById('shift');
+  const type  = document.getElementById('type');
+  const tabs  = document.querySelectorAll('.tab');
+  const count = document.getElementById('count');
+
+  function filter(){
+    const keyword = q.value.toLowerCase();
+    const fLoc    = loc.value;
+    const fLang   = lang.value;
+    const fShift  = shift.value;
+    const fType   = type.value;
+    let activeTab = 'all';
+    tabs.forEach(t => { if(t.classList.contains('active')) activeTab = t.dataset.tab; });
+
+    let visible = 0;
+    cards.forEach(c => {
+      const cLoc   = c.dataset.loc;
+      const cLang  = c.dataset.lang;
+      const cShift = c.dataset.shift;
+      const cType  = c.dataset.type;
+      const cKeys  = (c.dataset.keywords || '').toLowerCase();
+      const cText  = c.textContent.toLowerCase();
+
+      let show = true;
+      if(keyword && !cText.includes(keyword) && !cKeys.includes(keyword)) show = false;
+      if(fLoc   && cLoc   !== fLoc)   show = false;
+      if(fLang  && cLang  !== fLang)  show = false;
+      if(fShift && cShift !== fShift) show = false;
+      if(fType  && cType  !== fType)  show = false;
+
+      if(activeTab !== 'all'){
+        if(activeTab === 'zh' || activeTab === 'bilingual'){
+          if(cLang !== activeTab) show = false;
+        } else {
+          if(cLoc !== activeTab) show = false;
+        }
+      }
+
+      c.style.display = show ? '' : 'none';
+      if(show) visible++;
+    });
+    count.textContent = visible + ' 个职位';
+  }
+
+  [q, loc, lang, shift, type].forEach(el => el.addEventListener('input', filter));
+  tabs.forEach(t => t.addEventListener('click', function(){
+    tabs.forEach(x => x.classList.remove('active'));
+    this.classList.add('active');
+    filter();
+  }));
+
+  filter();
+})();
+</script>
