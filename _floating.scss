@@ -2,7 +2,7 @@
 // FLOATING BUTTONS
 // ========================================
 .floating-apply,
-.floating-casual {
+.floating-ai {
   position: fixed;
   z-index: 999;
   border-radius: 999px;
@@ -29,7 +29,7 @@
   }
 }
 
-.floating-casual {
+.floating-ai {
   bottom: 50px;
   right: 20px;
   background: $tp-black;

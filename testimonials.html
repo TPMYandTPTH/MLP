@@ -1,22 +1,37 @@
 ---
 layout: default
 title: "员工心声"
-description: "TP 员工心声"
+description: "听听 TP 同事怎么说"
 ---
-<section class="hero-dark" style="min-height: 30vh; display: flex; align-items: center; justify-content: center;">
+<section class="hero-dark" style="min-height: 25vh; display: flex; align-items: center; justify-content: center;">
   <div style="text-align: center;">
     <h1 style="font-size: 2rem; margin-bottom: 0.5rem;">员工心声</h1>
-    <p style="opacity: 0.7;">听听同事怎么说</p>
+    <p style="opacity: 0.7;">听听同事们怎么说</p>
   </div>
 </section>
+
 <section class="section-padded">
-  <div class="section" style="max-width: var(--max); text-align: center;">
-    <div style="padding: 3rem 1rem;">
-      <p style="font-size: 1.2rem; color: var(--tp-gray-dark); margin-bottom: 1.5rem;">此页面正在建设中，敬请期待</p>
-      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-        <a href="{{ '/' | relative_url }}" class="btn btn-primary">返回首页</a>
-        <a href="{{ site.icims_search }}" target="_blank" rel="noopener noreferrer" class="btn btn-gold">申请职位</a>
+  <div class="section" style="max-width: var(--max);">
+    <div class="grid-2">
+      <div class="card" style="border-left: 4px solid var(--gold-primary);">
+        <p style="font-style: italic; color: var(--tp-gray-dark); line-height: 1.8; margin-bottom: 1rem;">"加入 TP 是我做过的最好的决定之一。公司不仅提供了完善的签证支持，还帮我快速适应了马来西亚的生活。团队氛围很好，大家都很友善。"</p>
+        <div><strong>小陈</strong><br><span style="font-size: 0.85rem; color: var(--tp-gray);">客户服务代表 · 吉隆坡 · 入职1年</span></div>
       </div>
+      <div class="card" style="border-left: 4px solid var(--gold-primary);">
+        <p style="font-style: italic; color: var(--tp-gray-dark); line-height: 1.8; margin-bottom: 1rem;">"作为应届毕业生，我很感谢 TP 给了我这个机会。培训很系统，同事们也很愿意帮忙。现在已经晋升为 Team Lead 了！"</p>
+        <div><strong>小林</strong><br><span style="font-size: 0.85rem; color: var(--tp-gray);">Team Lead · 槟城 · 入职2年</span></div>
+      </div>
+      <div class="card" style="border-left: 4px solid var(--gold-primary);">
+        <p style="font-style: italic; color: var(--tp-gray-dark); line-height: 1.8; margin-bottom: 1rem;">"曼谷的生活真的很棒，生活成本低，美食多，周末还可以去海岛玩。公司的华语团队也很大，一点都不孤单。"</p>
+        <div><strong>小张</strong><br><span style="font-size: 0.85rem; color: var(--tp-gray);">销售代表 · 曼谷 · 入职6个月</span></div>
+      </div>
+      <div class="card" style="border-left: 4px solid var(--gold-primary);">
+        <p style="font-style: italic; color: var(--tp-gray-dark); line-height: 1.8; margin-bottom: 1rem;">"签证办理比想象中简单得多，公司全程帮忙，我基本只需要提供资料就行了。入职后还有专人带我办银行卡、找房子。"</p>
+        <div><strong>小王</strong><br><span style="font-size: 0.85rem; color: var(--tp-gray);">技术支持 · 吉隆坡 · 入职8个月</span></div>
+      </div>
+    </div>
+    <div style="text-align: center; margin-top: 2rem;">
+      <a href="{{ site.icims_search }}" target="_blank" class="btn btn-gold">加入我们 →</a>
     </div>
   </div>
 </section>

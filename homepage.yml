@@ -125,7 +125,7 @@ priority_cards:
     image: "KL%202.jpg"
     emoji: "🇲🇾🇹🇭"
   - title:
-      local: "🤖 AI Assessment"
+      local: "🤖 AI 能力评估"
       expat: "🤖 AI 能力评估"
     desc:
       local: "完成线上 AI 测评"

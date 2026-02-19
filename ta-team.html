@@ -1,22 +1,60 @@
 ---
 layout: default
 title: "招聘团队"
-description: "TP 招聘团队"
+description: "认识 TP 华语招聘团队"
 ---
-<section class="hero-dark" style="min-height: 30vh; display: flex; align-items: center; justify-content: center;">
+<section class="hero-dark" style="min-height: 25vh; display: flex; align-items: center; justify-content: center;">
   <div style="text-align: center;">
     <h1 style="font-size: 2rem; margin-bottom: 0.5rem;">招聘团队</h1>
-    <p style="opacity: 0.7;">认识我们的招聘团队</p>
+    <p style="opacity: 0.7;">认识我们的华语招聘顾问</p>
   </div>
 </section>
+
 <section class="section-padded">
-  <div class="section" style="max-width: var(--max); text-align: center;">
-    <div style="padding: 3rem 1rem;">
-      <p style="font-size: 1.2rem; color: var(--tp-gray-dark); margin-bottom: 1.5rem;">此页面正在建设中，敬请期待</p>
-      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-        <a href="{{ '/' | relative_url }}" class="btn btn-primary">返回首页</a>
-        <a href="{{ site.icims_search }}" target="_blank" rel="noopener noreferrer" class="btn btn-gold">申请职位</a>
+  <div class="section" style="max-width: var(--max);">
+    {% assign leader = site.data.team.leader %}
+    <div class="ta-leader-card">
+      {% if leader.avatar != "" %}
+      <img src="{{ '/photos/' | append: leader.avatar | relative_url }}" alt="{{ leader.name_en }}">
+      {% else %}
+      <div class="member-placeholder">👤</div>
+      {% endif %}
+      <div>
+        <div style="font-weight: 700; font-size: 1.1rem;">{{ leader.name_en }}</div>
+        <div style="color: var(--tp-gray);">{{ leader.name_cn }}</div>
+        <div style="font-size: 0.85rem; color: var(--gold-dark);">
+          <span class="local-only">{{ leader.title.local }}</span>
+          <span class="expat-only">{{ leader.title.expat }}</span>
+        </div>
+        <p style="font-size: 0.85rem; color: var(--tp-gray-dark); margin-top: 0.5rem; line-height: 1.6;">
+          <span class="local-only">{{ leader.bio.local }}</span>
+          <span class="expat-only">{{ leader.bio.expat }}</span>
+        </p>
       </div>
+    </div>
+
+    <div class="ta-members-grid">
+      {% for member in site.data.team.members %}
+      <div class="ta-member-card">
+        {% if member.avatar != "" %}
+        <img src="{{ '/photos/' | append: member.avatar | relative_url }}" alt="{{ member.name_en }}">
+        {% else %}
+        <div class="member-placeholder">👤</div>
+        {% endif %}
+        <div class="member-name">{{ member.name_en }}</div>
+        <div class="member-cn">{{ member.name_cn }}</div>
+        {% if member.show_linkedin and member.linkedin %}
+        <a href="{{ member.linkedin }}" target="_blank" rel="noopener noreferrer" class="ta-linkedin-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"/></svg>
+          LinkedIn
+        </a>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+
+    <div style="text-align: center; margin-top: 2rem;">
+      <a href="{{ site.recruiter_booking_url }}" target="_blank" class="btn btn-gold">📅 预约招聘顾问</a>
     </div>
   </div>
 </section>

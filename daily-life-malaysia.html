@@ -1,22 +1,38 @@
 ---
 layout: default
 title: "日常生活"
-description: "TP 日常生活"
+description: "马来西亚日常生活指南"
 ---
-<section class="hero-dark" style="min-height: 30vh; display: flex; align-items: center; justify-content: center;">
+<section class="hero-dark" style="min-height: 25vh; display: flex; align-items: center; justify-content: center;">
   <div style="text-align: center;">
-    <h1 style="font-size: 2rem; margin-bottom: 0.5rem;">日常生活</h1>
-    <p style="opacity: 0.7;">马来西亚日常生活指南</p>
+    <h1 style="font-size: 2rem; margin-bottom: 0.5rem;">日常生活指南</h1>
+    <p style="opacity: 0.7;">马来西亚和泰国的衣食住行</p>
   </div>
 </section>
+
 <section class="section-padded">
-  <div class="section" style="max-width: var(--max); text-align: center;">
-    <div style="padding: 3rem 1rem;">
-      <p style="font-size: 1.2rem; color: var(--tp-gray-dark); margin-bottom: 1.5rem;">此页面正在建设中，敬请期待</p>
-      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-        <a href="{{ '/' | relative_url }}" class="btn btn-primary">返回首页</a>
-        <a href="{{ site.icims_search }}" target="_blank" rel="noopener noreferrer" class="btn btn-gold">申请职位</a>
+  <div class="section" style="max-width: var(--max);">
+    <div class="grid-2">
+      <div class="card"><h3>🏠 住房</h3><p>吉隆坡公寓月租约 RM1,500-3,000（约 ¥2,300-4,600），通常包含泳池、健身房。公司提供搬迁补贴和住房指导。</p></div>
+      <div class="card"><h3>🍜 饮食</h3><p>一顿饭约 RM10-25（约 ¥15-40），中餐馆遍布。超市有丰富的中国食材和调料。</p></div>
+      <div class="card"><h3>🚇 交通</h3><p>吉隆坡有完善的地铁和公交系统。Grab（东南亚版滴滴）非常方便。月交通费约 RM200-400。</p></div>
+      <div class="card"><h3>📱 通讯</h3><p>手机套餐便宜，月费约 RM30-60（约 ¥45-90），网络覆盖好。支付宝、微信支付部分商户可用。</p></div>
+      <div class="card"><h3>🏥 医疗</h3><p>公司提供全面医疗保险。马来西亚医疗水平高，私立医院服务好，费用远低于中国。</p></div>
+      <div class="card"><h3>🎉 娱乐</h3><p>购物中心多，电影、KTV、健身房等应有尽有。周末可以去海岛、高原避暑、或邻国旅行。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section-padded" style="background: var(--tp-off);">
+  <div class="section" style="max-width: var(--max);">
+    <h2 class="section-title section-title-decorated">生活掠影</h2>
+    <div class="lifestyle-grid">
+      {% for item in site.data.sections.lifestyle %}
+      <div class="lifestyle-item">
+        <img src="{{ '/photos/' | append: item.image | relative_url }}" alt="{{ item.label.expat }}" loading="lazy">
+        <div class="lifestyle-label">{{ item.label.expat }}</div>
       </div>
+      {% endfor %}
     </div>
   </div>
 </section>

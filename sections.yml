@@ -165,35 +165,35 @@ videos:
 # LIFESTYLE GRID (8 items)
 # ========================================
 lifestyle:
-  - image: "lifestyle-food.jpg"
+  - image: "Bangkok1.jpg"
     label:
       local: "美食天堂"
       expat: "美食天堂"
-  - image: "lifestyle-nature.jpg"
+  - image: "Penang.jpg"
     label:
       local: "自然风光"
       expat: "自然风光"
-  - image: "lifestyle-city.jpg"
+  - image: "KL%201.jpg"
     label:
       local: "城市生活"
       expat: "城市生活"
-  - image: "lifestyle-culture.jpg"
+  - image: "Singha%20Complex1.jpg"
     label:
       local: "多元文化"
       expat: "多元文化"
-  - image: "lifestyle-beach.jpg"
+  - image: "KL%202.jpg"
     label:
       local: "海滩度假"
       expat: "海滩度假"
-  - image: "lifestyle-shopping.jpg"
+  - image: "Bangkok%202.jpg"
     label:
       local: "购物天堂"
       expat: "购物天堂"
-  - image: "lifestyle-temple.jpg"
+  - image: "Singha%20Complex2.jpg"
     label:
       local: "历史古迹"
       expat: "历史古迹"
-  - image: "lifestyle-nightlife.jpg"
+  - image: "Condo.jpg"
     label:
       local: "夜生活"
       expat: "夜生活"

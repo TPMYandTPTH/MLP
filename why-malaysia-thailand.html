@@ -1,22 +1,38 @@
 ---
 layout: default
 title: "为什么选择马来西亚和泰国"
-description: "TP 为什么选择马来西亚和泰国"
+description: "马来西亚和泰国的生活、文化和工作优势"
 ---
-<section class="hero-dark" style="min-height: 30vh; display: flex; align-items: center; justify-content: center;">
+<section class="hero-dark" style="min-height: 25vh; display: flex; align-items: center; justify-content: center;">
   <div style="text-align: center;">
-    <h1 style="font-size: 2rem; margin-bottom: 0.5rem;">为什么选择马来西亚和泰国</h1>
-    <p style="opacity: 0.7;">城市介绍</p>
+    <h1 style="font-size: 2rem; margin-bottom: 0.5rem;">🇲🇾 马来西亚 · 🇹🇭 泰国</h1>
+    <p style="opacity: 0.7;">为什么选择在这里开启职业新篇章</p>
   </div>
 </section>
+
 <section class="section-padded">
-  <div class="section" style="max-width: var(--max); text-align: center;">
-    <div style="padding: 3rem 1rem;">
-      <p style="font-size: 1.2rem; color: var(--tp-gray-dark); margin-bottom: 1.5rem;">此页面正在建设中，敬请期待</p>
-      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-        <a href="{{ '/' | relative_url }}" class="btn btn-primary">返回首页</a>
-        <a href="{{ site.icims_search }}" target="_blank" rel="noopener noreferrer" class="btn btn-gold">申请职位</a>
+  <div class="section" style="max-width: var(--max);">
+    <div class="grid-3">
+      <div class="card"><div style="font-size:2rem;margin-bottom:0.5rem;">🌡️</div><h3>舒适的气候</h3><p>全年温暖的热带气候，平均气温25-33°C，四季如夏。</p></div>
+      <div class="card"><div style="font-size:2rem;margin-bottom:0.5rem;">🍜</div><h3>美食天堂</h3><p>多元文化带来丰富的美食选择，中餐、马来餐、泰餐、印度餐应有尽有。</p></div>
+      <div class="card"><div style="font-size:2rem;margin-bottom:0.5rem;">💰</div><h3>低生活成本</h3><p>相比中国一线城市，生活成本低30-50%，生活品质更高。</p></div>
+      <div class="card"><div style="font-size:2rem;margin-bottom:0.5rem;">🏙️</div><h3>现代化城市</h3><p>吉隆坡和曼谷都是现代化国际都市，基础设施完善。</p></div>
+      <div class="card"><div style="font-size:2rem;margin-bottom:0.5rem;">🌏</div><h3>多元文化</h3><p>华人社区发达，中文通用度高，文化适应容易。</p></div>
+      <div class="card"><div style="font-size:2rem;margin-bottom:0.5rem;">✈️</div><h3>便捷出行</h3><p>东南亚中心位置，飞往周边国家方便，廉价航空发达。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section-padded" style="background: var(--tp-off);">
+  <div class="section" style="max-width: var(--max);">
+    <h2 class="section-title section-title-decorated">生活掠影</h2>
+    <div class="lifestyle-grid">
+      {% for item in site.data.sections.lifestyle %}
+      <div class="lifestyle-item">
+        <img src="{{ '/photos/' | append: item.image | relative_url }}" alt="{{ item.label.expat }}" loading="lazy">
+        <div class="lifestyle-label">{{ item.label.expat }}</div>
       </div>
+      {% endfor %}
     </div>
   </div>
 </section>

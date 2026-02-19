@@ -1,22 +1,59 @@
 ---
 layout: default
 title: "薪资福利"
-description: "TP 薪资福利"
+description: "TP 马来西亚·泰国薪酬福利详情"
 ---
-<section class="hero-dark" style="min-height: 30vh; display: flex; align-items: center; justify-content: center;">
+<section class="hero-dark" style="min-height: 25vh; display: flex; align-items: center; justify-content: center;">
   <div style="text-align: center;">
     <h1 style="font-size: 2rem; margin-bottom: 0.5rem;">薪资福利</h1>
-    <p style="opacity: 0.7;">薪酬福利详情</p>
+    <p style="opacity: 0.7;">有竞争力的薪酬 + 全面的福利保障</p>
   </div>
 </section>
+
 <section class="section-padded">
-  <div class="section" style="max-width: var(--max); text-align: center;">
-    <div style="padding: 3rem 1rem;">
-      <p style="font-size: 1.2rem; color: var(--tp-gray-dark); margin-bottom: 1.5rem;">此页面正在建设中，敬请期待</p>
-      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-        <a href="{{ '/' | relative_url }}" class="btn btn-primary">返回首页</a>
-        <a href="{{ site.icims_search }}" target="_blank" rel="noopener noreferrer" class="btn btn-gold">申请职位</a>
+  <div class="section" style="max-width: var(--max);">
+    <div class="grid-3">
+      {% for benefit in site.data.sections.benefits %}
+      <div class="card">
+        <div style="font-size: 2rem; margin-bottom: 0.5rem;">{{ benefit.icon }}</div>
+        <h3>
+          <span class="local-only">{{ benefit.title.local }}</span>
+          <span class="expat-only">{{ benefit.title.expat }}</span>
+        </h3>
+        <p>
+          <span class="local-only">{{ benefit.desc.local }}</span>
+          <span class="expat-only">{{ benefit.desc.expat }}</span>
+        </p>
       </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section-padded" style="background: var(--tp-off);">
+  <div class="section" style="max-width: var(--max);">
+    <h2 class="section-title section-title-decorated">薪资结构</h2>
+    <div class="grid-2">
+      <div class="card">
+        <h3>💰 基本薪资</h3>
+        <p>根据岗位和项目提供有竞争力的基本薪资，均包含语言津贴。具体薪资在面试阶段详细沟通。</p>
+      </div>
+      <div class="card">
+        <h3>🎯 绩效奖金</h3>
+        <p>根据个人和团队绩效，提供季度和年度奖金激励。</p>
+      </div>
+      <div class="card">
+        <h3>🏥 医疗保险</h3>
+        <p>全面的医疗保险覆盖，包括门诊、住院和牙科。部分项目覆盖家属。</p>
+      </div>
+      <div class="card">
+        <h3>🌴 带薪假期</h3>
+        <p>年假、病假、公共假期等全面的假期福利。</p>
+      </div>
+    </div>
+    <div style="text-align: center; margin-top: 2rem;">
+      <a href="{{ site.ai_assessment_form }}" target="_blank" class="btn btn-gold">🤖 AI 能力评估</a>
+      <a href="{{ site.icims_search }}" target="_blank" class="btn btn-primary" style="margin-left: 0.75rem;">申请职位</a>
     </div>
   </div>
 </section>

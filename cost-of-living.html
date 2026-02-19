@@ -1,22 +1,49 @@
 ---
 layout: default
 title: "生活成本"
-description: "TP 生活成本"
+description: "马来西亚和泰国生活成本参考"
 ---
-<section class="hero-dark" style="min-height: 30vh; display: flex; align-items: center; justify-content: center;">
+<section class="hero-dark" style="min-height: 25vh; display: flex; align-items: center; justify-content: center;">
   <div style="text-align: center;">
-    <h1 style="font-size: 2rem; margin-bottom: 0.5rem;">生活成本</h1>
-    <p style="opacity: 0.7;">马来西亚生活成本参考</p>
+    <h1 style="font-size: 2rem; margin-bottom: 0.5rem;">生活成本参考</h1>
+    <p style="opacity: 0.7;">马来西亚和泰国的日常开支</p>
   </div>
 </section>
+
 <section class="section-padded">
-  <div class="section" style="max-width: var(--max); text-align: center;">
-    <div style="padding: 3rem 1rem;">
-      <p style="font-size: 1.2rem; color: var(--tp-gray-dark); margin-bottom: 1.5rem;">此页面正在建设中，敬请期待</p>
-      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-        <a href="{{ '/' | relative_url }}" class="btn btn-primary">返回首页</a>
-        <a href="{{ site.icims_search }}" target="_blank" rel="noopener noreferrer" class="btn btn-gold">申请职位</a>
-      </div>
+  <div class="section" style="max-width: var(--max);">
+    <h2 class="section-title section-title-decorated">🇲🇾 吉隆坡月均开支参考</h2>
+    <div class="grid-2">
+      <div class="card"><h3>🏠 住房</h3><p>单间公寓（含泳池/健身房）：RM1,500 - 3,000/月<br>约 ¥2,300 - 4,600</p></div>
+      <div class="card"><h3>🍜 餐饮</h3><p>一日三餐：RM30 - 60/天<br>月均约 RM900 - 1,800（¥1,400 - 2,800）</p></div>
+      <div class="card"><h3>🚇 交通</h3><p>月票 + Grab：RM200 - 400/月<br>约 ¥300 - 620</p></div>
+      <div class="card"><h3>📱 通讯</h3><p>手机套餐：RM30 - 60/月<br>宽带：RM100 - 150/月</p></div>
+    </div>
+    <div style="background: var(--gold-pale); border: 2px solid var(--gold-primary); border-radius: 12px; padding: 1.5rem; margin-top: 1.5rem; text-align: center;">
+      <p style="font-size: 1.1rem; font-weight: 700;">月均总开支约 RM2,500 - 5,000（¥3,800 - 7,700）</p>
+      <p style="color: var(--tp-gray); font-size: 0.85rem; margin-top: 0.5rem;">*以上为参考值，实际因个人生活方式而异</p>
     </div>
   </div>
+</section>
+
+<section class="section-padded" style="background: var(--tp-off);">
+  <div class="section" style="max-width: var(--max);">
+    <h2 class="section-title section-title-decorated">🇹🇭 曼谷月均开支参考</h2>
+    <div class="grid-2">
+      <div class="card"><h3>🏠 住房</h3><p>单间公寓：฿8,000 - 15,000/月<br>约 ¥1,600 - 3,000</p></div>
+      <div class="card"><h3>🍜 餐饮</h3><p>一日三餐：฿200 - 500/天<br>月均约 ฿6,000 - 15,000（¥1,200 - 3,000）</p></div>
+      <div class="card"><h3>🚆 交通</h3><p>BTS/MRT + Grab：฿2,000 - 4,000/月<br>约 ¥400 - 800</p></div>
+      <div class="card"><h3>📱 通讯</h3><p>手机套餐：฿300 - 600/月<br>宽带：฿500 - 800/月</p></div>
+    </div>
+    <div style="background: var(--gold-pale); border: 2px solid var(--gold-primary); border-radius: 12px; padding: 1.5rem; margin-top: 1.5rem; text-align: center;">
+      <p style="font-size: 1.1rem; font-weight: 700;">月均总开支约 ฿16,000 - 35,000（¥3,200 - 7,000）</p>
+      <p style="color: var(--tp-gray); font-size: 0.85rem; margin-top: 0.5rem;">*以上为参考值，实际因个人生活方式而异</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-padded" style="text-align: center;">
+  <p style="color: var(--tp-gray); margin-bottom: 1rem;">了解更多关于薪酬福利</p>
+  <a href="{{ 'salary-and-benefits.html' | relative_url }}" class="btn btn-gold">💰 薪资福利</a>
+  <a href="{{ site.icims_search }}" target="_blank" class="btn btn-primary" style="margin-left: 0.75rem;">申请职位</a>
 </section>

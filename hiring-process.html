@@ -1,22 +1,56 @@
 ---
 layout: default
 title: "招聘流程"
-description: "TP 招聘流程"
+description: "TP 招聘流程全解析"
 ---
-<section class="hero-dark" style="min-height: 30vh; display: flex; align-items: center; justify-content: center;">
+<section class="hero-dark" style="min-height: 25vh; display: flex; align-items: center; justify-content: center;">
   <div style="text-align: center;">
     <h1 style="font-size: 2rem; margin-bottom: 0.5rem;">招聘流程</h1>
-    <p style="opacity: 0.7;">面试流程全解析</p>
+    <p style="opacity: 0.7;">从申请到入职，一步步带你了解</p>
   </div>
 </section>
+
 <section class="section-padded">
-  <div class="section" style="max-width: var(--max); text-align: center;">
-    <div style="padding: 3rem 1rem;">
-      <p style="font-size: 1.2rem; color: var(--tp-gray-dark); margin-bottom: 1.5rem;">此页面正在建设中，敬请期待</p>
-      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-        <a href="{{ '/' | relative_url }}" class="btn btn-primary">返回首页</a>
-        <a href="{{ site.icims_search }}" target="_blank" rel="noopener noreferrer" class="btn btn-gold">申请职位</a>
+  <div class="section" style="max-width: var(--max);">
+    <ol class="process-rail">
+      {% for step in site.data.sections.interview_process %}
+      <li class="step-card">
+        <div class="step-head">
+          <span class="step-dot">{{ step.step }}</span>
+          <span class="step-title">
+            <span class="local-only">{{ step.title.local }}</span>
+            <span class="expat-only">{{ step.title.expat }}</span>
+          </span>
+        </div>
+        <p class="step-desc">
+          <span class="local-only">{{ step.desc.local }}</span>
+          <span class="expat-only">{{ step.desc.expat }}</span>
+        </p>
+      </li>
+      {% endfor %}
+    </ol>
+    <div style="text-align: center; margin-top: 2.5rem;">
+      <a href="{{ site.ai_assessment_form }}" target="_blank" class="btn btn-gold">🤖 开始 AI 评估</a>
+      <a href="{{ site.icims_search }}" target="_blank" class="btn btn-primary" style="margin-left: 0.75rem;">申请职位</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-padded" style="background: var(--tp-off);">
+  <div class="section" style="max-width: var(--max);">
+    <h2 class="section-title section-title-decorated">常见问题</h2>
+    <div style="max-width: 800px; margin: 0 auto;">
+      {% for faq in site.data.sections.faq %}
+      <div class="faq-item">
+        <div class="faq-question">
+          <span class="local-only">{{ faq.q.local }}</span>
+          <span class="expat-only">{{ faq.q.expat }}</span>
+        </div>
+        <div class="faq-answer">
+          <p><span class="local-only">{{ faq.a.local }}</span><span class="expat-only">{{ faq.a.expat }}</span></p>
+        </div>
       </div>
+      {% endfor %}
     </div>
   </div>
 </section>

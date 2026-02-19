@@ -1,21 +1,42 @@
 ---
 layout: default
 title: "推荐好友奖励"
-description: "TP 推荐好友奖励"
+description: "推荐朋友加入 TP，赢取奖金"
 ---
-<section class="hero-dark" style="min-height: 30vh; display: flex; align-items: center; justify-content: center;">
+<section class="hero-dark" style="min-height: 25vh; display: flex; align-items: center; justify-content: center;">
   <div style="text-align: center;">
-    <h1 style="font-size: 2rem; margin-bottom: 0.5rem;">推荐好友奖励</h1>
-    <p style="opacity: 0.7;">推荐朋友，赢取奖金</p>
+    <h1 style="font-size: 2rem; margin-bottom: 0.5rem;">🎁 推荐好友奖励</h1>
+    <p style="opacity: 0.7;">推荐朋友加入 TP，双方都有奖金</p>
   </div>
 </section>
+
 <section class="section-padded">
-  <div class="section" style="max-width: var(--max); text-align: center;">
-    <div style="padding: 3rem 1rem;">
-      <p style="font-size: 1.2rem; color: var(--tp-gray-dark); margin-bottom: 1.5rem;">此页面正在建设中，敬请期待</p>
-      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-        <a href="{{ '/' | relative_url }}" class="btn btn-primary">返回首页</a>
-        <a href="{{ site.icims_search }}" target="_blank" rel="noopener noreferrer" class="btn btn-gold">申请职位</a>
+  <div class="section" style="max-width: var(--max);">
+    <div style="max-width: 700px; margin: 0 auto;">
+      <div class="card" style="border: 2px solid var(--gold-primary); padding: 2rem; text-align: center; margin-bottom: 1.5rem;">
+        <div style="font-size: 3rem; margin-bottom: 1rem;">🎁</div>
+        <h2 style="margin-bottom: 1rem;">推荐奖金</h2>
+        <p style="font-size: 1.1rem; line-height: 1.8;">推荐你的朋友加入 TP 马来西亚或泰国的华语项目。成功入职后，推荐人和被推荐人均可获得奖金。</p>
+      </div>
+
+      <h3 class="section-title section-title-decorated" style="font-size: 1.3rem;">如何推荐</h3>
+      <ol class="process-rail" style="grid-template-columns: repeat(3, 1fr); margin-top: 1rem;">
+        <li class="step-card">
+          <div class="step-head"><span class="step-dot">1</span><span class="step-title">填写推荐表</span></div>
+          <p class="step-desc">在 xRAF 系统中填写推荐信息</p>
+        </li>
+        <li class="step-card">
+          <div class="step-head"><span class="step-dot">2</span><span class="step-title">朋友面试</span></div>
+          <p class="step-desc">被推荐人完成面试流程</p>
+        </li>
+        <li class="step-card">
+          <div class="step-head"><span class="step-dot">3</span><span class="step-title">获得奖金</span></div>
+          <p class="step-desc">成功入职后双方获得奖金</p>
+        </li>
+      </ol>
+
+      <div style="text-align: center; margin-top: 2rem;">
+        <a href="{{ site.xraf_url }}" target="_blank" class="btn btn-gold">🎁 立即推荐 →</a>
       </div>
     </div>
   </div>
