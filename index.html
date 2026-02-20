@@ -194,12 +194,7 @@ nav a[aria-current="page"]::after{width:100%;background:var(--tp-black)}
 /* Chinese Community */
 .chinese-community{padding:60px 20px;background:linear-gradient(135deg,var(--gold-pale) 0%,var(--tp-white) 100%);position:relative}
 .chinese-community::before{content:'华';position:absolute;top:50%;right:10%;transform:translateY(-50%);font-size:20rem;font-family:'Noto Serif SC',serif;color:var(--gold-primary);opacity:0.03;pointer-events:none}
-.community-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;max-width:var(--max-width);margin:2rem auto 0}
-.community-stat{background:var(--tp-white);border:2px solid var(--gold-primary);border-radius:12px;padding:1.5rem;text-align:center;box-shadow:var(--shadow-gold);transition:all 0.3s}
 .community-stat:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(212,175,55,0.3)}
-.community-stat-icon{font-size:2rem;margin-bottom:0.5rem}
-.community-stat-number{font-size:2rem;font-weight:900;color:var(--tp-black);font-family:'Noto Serif SC',serif}
-.community-stat-label{font-size:0.85rem;color:var(--tp-gray);margin-top:0.3rem}
 
 /* GPTW */
 .gptw-section{padding:60px 20px;background:var(--tp-silver);position:relative;overflow:hidden}
@@ -432,10 +427,8 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
 
 /* Responsive */
 @media(min-width:720px){.cta-links{grid-template-columns:1fr 1fr 1fr}}
-@media(max-width:980px){.process-rail{grid-template-columns:1fr 1fr 1fr}.ta-team-grid{grid-template-columns:repeat(3,1fr)}.community-stats{grid-template-columns:repeat(2,1fr)}.social-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:900px){nav{display:none}.mobile-toggle{display:block}.lang-toggle-buttons{display:none}.lang-dropdown{display:block}.video-grid{grid-template-columns:1fr}.floating-ai{bottom:80px;right:20px}.back-to-top{bottom:140px}.lang-toggle-inner{justify-content:center}}
 @media(max-width:768px){.hero h1{font-size:1.8rem}.section-title{font-size:1.4rem}.hero-stats{justify-content:center}.stat-item{padding-right:1.25rem}.about-content{grid-template-columns:1fr}.cards{grid-template-columns:repeat(2,1fr)}.icon-grid-container{grid-template-columns:repeat(2,1fr)}.city-cards{grid-template-columns:1fr}.benefits-list{grid-template-columns:repeat(2,1fr)}.ta-team-grid{grid-template-columns:repeat(2,1fr)}.footer-content{grid-template-columns:1fr;text-align:center}.floating-apply{bottom:14px;right:14px;padding:0.625rem 1rem;font-size:0.8rem}.social-proof-inner{flex-direction:column;gap:0.5rem}.gptw-header{flex-direction:column;text-align:center}.gptw-title-block{text-align:center}.gptw-section .section-title,.gptw-section .section-subtitle{text-align:center}.gptw-gallery{grid-template-columns:repeat(2,1fr)}.gptw-gallery-item:nth-child(5){grid-column:span 2;max-width:50%;margin:0 auto}.gptw-stats{gap:1.5rem}.gptw-stat-number{font-size:2rem}.lifestyle-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:640px){.process-rail{grid-template-columns:1fr}.process-rail::before{display:none}.community-stats{grid-template-columns:1fr}.social-grid{grid-template-columns:1fr}}
 @media(max-width:480px){.cards{grid-template-columns:1fr}.benefits-list{grid-template-columns:1fr}.icon-grid-container{grid-template-columns:1fr}.ta-team-grid{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
 </style>
@@ -520,7 +513,6 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
   <!-- Social Proof -->
   <section class="social-proof-banner">
     <div class="social-proof-inner">
-      <div class="proof-item"><span class="number">500+</span><span>华语同事在TP工作</span></div>
       <div class="proof-item"><span class="number">6</span><span>年连续最佳职场认证</span></div>
       <div class="proof-item"><span class="number">5</span><span>年全球最佳职场</span></div>
     </div>
@@ -576,21 +568,6 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
       </div>
     </div>
   </section>
-
-  <!-- Chinese Community -->
-  <section class="chinese-community" id="chinese-community">
-    <div class="container">
-      <h2 class="section-title section-title-decorated">TP的华语社区</h2>
-      <p class="section-subtitle">加入我们，你不会孤单！</p>
-      <div class="community-stats">
-        <div class="community-stat"><div class="community-stat-icon">👥</div><div class="community-stat-number">500+</div><div class="community-stat-label">华语同事</div></div>
-        <div class="community-stat"><div class="community-stat-icon">💬</div><div class="community-stat-number">10+</div><div class="community-stat-label">微信群组</div></div>
-        <div class="community-stat"><div class="community-stat-icon">🎉</div><div class="community-stat-number">12+</div><div class="community-stat-label">年度庆祝活动</div></div>
-        <div class="community-stat"><div class="community-stat-icon">🍜</div><div class="community-stat-number">50+</div><div class="community-stat-label">同事推荐的华人餐厅</div></div>
-      </div>
-    </div>
-  </section>
-
   <!-- Priority Menu -->
   <section class="priority-menu">
     <div class="container">
@@ -601,13 +578,11 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
         <a href="open-jobs.html" class="card"><img src="photos/Reception.png" alt="职位信息" loading="lazy"><div class="card-content"><h3>职位列表</h3><p>华语人才职位</p></div></a>
         <a href="salary-and-benefits.html" class="card"><img src="photos/Reception%20(1).png" alt="福利待遇" loading="lazy"><div class="card-content"><h3>薪资福利</h3><p>完善的待遇和支持</p></div></a>
         <a href="relocation-visa.html" class="card"><img src="photos/Condo.jpg" alt="搬迁支持" loading="lazy"><div class="card-content"><h3>签证·搬迁支持</h3><p>全程支持体系</p></div></a>
-        <a href="testimonials.html" class="card"><img src="photos/KL%201.jpg" alt="员工故事" loading="lazy"><div class="card-content"><h3>员工故事</h3><p>真实的工作体验分享</p></div></a>
         <a href="why-malaysia-thailand.html" class="card"><img src="photos/KL%202.jpg" alt="工作地点" loading="lazy"><div class="card-content"><h3>为什么选择马来西亚和泰国</h3><p>宜居生活与成长机会</p></div></a>
         <a href="https://app.hallo.ai/teleperformance/ai-assessment/interview/zh?assessmentTypeId=VEhDOEFMRHdKWmtZdFoxREJjMHQ=" target="_blank" rel="noopener noreferrer" class="card"><img src="photos/GTowerInside1.png" alt="AI 能力评估" loading="lazy"><div class="card-content"><h3>🤖 AI 能力评估</h3><p>在线AI面试，快速了解你的能力</p></div></a>
         <a href="hiring-process.html" class="card"><img src="photos/Reception%20(2).png" alt="招聘流程" loading="lazy"><div class="card-content"><h3>招聘流程</h3><p>在线完成全部流程</p></div></a>
         <a href="office-environment.html" class="card"><img src="photos/G%20TOWER.jpg" alt="办公环境" loading="lazy"><div class="card-content"><h3>办公环境·虚拟参观</h3><p>办公环境与职业发展</p></div></a>
         <a href="external-raf.html" class="card"><img src="photos/Reception.png" alt="推荐奖励" loading="lazy"><div class="card-content"><h3>推荐奖励</h3><p>推荐朋友获得奖励</p></div></a>
-        <a href="blog.html" class="card"><img src="photos/CafepicbyKoyoriinPenang.jpg" alt="博客" loading="lazy"><div class="card-content"><h3>博客·最新消息</h3><p>员工分享与公司动态</p></div></a>
         <a href="faq.html" class="card"><img src="photos/GTowerInside1.png" alt="常见问题" loading="lazy"><div class="card-content"><h3>FAQ·常见问题</h3><p>申请前的疑问解答</p></div></a>
       </div>
     </div>
@@ -637,17 +612,6 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
         <a href="ta-team.html" class="icon-card"><span class="icon-card-icon">🤝</span><div class="icon-card-meta"><div class="icon-card-title">招聘团队介绍</div><div class="icon-card-desc">华语支持</div></div></a>
         <a href="area-around-office.html" class="icon-card"><span class="icon-card-icon">📍</span><div class="icon-card-meta"><div class="icon-card-title">办公室周边</div><div class="icon-card-desc">周边环境信息</div></div></a>
         <a href="daily-life-malaysia.html" class="icon-card"><span class="icon-card-icon">🇲🇾</span><div class="icon-card-meta"><div class="icon-card-title">当地生活</div><div class="icon-card-desc">餐饮·交通·住房</div></div></a>
-        <a href="career-growth.html" class="icon-card"><span class="icon-card-icon">📈</span><div class="icon-card-meta"><div class="icon-card-title">职业发展·晋升</div><div class="icon-card-desc">语言·培训项目</div></div></a>
-        <a href="culture-and-events.html" class="icon-card"><span class="icon-card-icon">🎉</span><div class="icon-card-meta"><div class="icon-card-title">活动·企业文化</div><div class="icon-card-desc">欢乐的工作环境</div></div></a>
-        <a href="chinese-community.html" class="icon-card"><span class="icon-card-icon">🏠</span><div class="icon-card-meta"><div class="icon-card-title">华语社区</div><div class="icon-card-desc">500+ 华语同事</div></div></a>
-        <a href="language-requirements.html" class="icon-card"><span class="icon-card-icon">🗣️</span><div class="icon-card-meta"><div class="icon-card-title">语言要求</div><div class="icon-card-desc">英语·华语·其他</div></div></a>
-        <a href="onboarding-guide.html" class="icon-card"><span class="icon-card-icon">📋</span><div class="icon-card-meta"><div class="icon-card-title">入职指南</div><div class="icon-card-desc">入职流程详解</div></div></a>
-        <a href="my-vs-th.html" class="icon-card"><span class="icon-card-icon">🔄</span><div class="icon-card-meta"><div class="icon-card-title">马来西亚 vs 泰国</div><div class="icon-card-desc">两国差异比较</div></div></a>
-        <a href="success-stories.html" class="icon-card"><span class="icon-card-icon">⭐</span><div class="icon-card-meta"><div class="icon-card-title">成功案例</div><div class="icon-card-desc">华人员工故事</div></div></a>
-        <a href="health-safety.html" class="icon-card"><span class="icon-card-icon">🏥</span><div class="icon-card-meta"><div class="icon-card-title">健康与安全</div><div class="icon-card-desc">医疗·保险·安全</div></div></a>
-        <a href="family-visa.html" class="icon-card"><span class="icon-card-icon">👨‍👩‍👧</span><div class="icon-card-meta"><div class="icon-card-title">家属签证</div><div class="icon-card-desc">带家人一起来</div></div></a>
-        <a href="remote-work.html" class="icon-card"><span class="icon-card-icon">🏠</span><div class="icon-card-meta"><div class="icon-card-title">远程办公</div><div class="icon-card-desc">居家办公选项</div></div></a>
-        <a href="#" class="icon-card" id="wechatCard"><span class="icon-card-icon">💬</span><div class="icon-card-meta"><div class="icon-card-title">微信官方账号</div><div class="icon-card-desc">最新信息推送</div></div></a>
         <a href="https://tpmyandtpth.github.io/LP/" target="_blank" rel="noopener noreferrer" class="icon-card"><span class="icon-card-icon">🌐</span><div class="icon-card-meta"><div class="icon-card-title">其他语言职位</div><div class="icon-card-desc">日语·韩语·英语等</div></div></a>
       </div>
     </div>
