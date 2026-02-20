@@ -1,273 +1,438 @@
----
-layout: default
-title: "职位列表"
-description: "TP 马来西亚·泰国华语职位列表"
----
-<section class="hero-dark" style="min-height: 25vh; display: flex; align-items: center; justify-content: center;">
-  <div style="text-align: center;">
-    <h1 style="font-size: 2rem; margin-bottom: 0.5rem;">职位列表</h1>
-    <p style="opacity: 0.7;">查看最新华语职位空缺</p>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<!-- Google Analytics 4 - MLP -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DDTL115MWE"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-DDTL115MWE', { send_page_view: true });
+    function trackCustomEvent(n, p = {}) { gtag('event', n, { event_category: 'MLP_Program', event_label: 'Chinese_Recruitment', ...p }); }
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>职位列表 | TP招聘 马来西亚·泰国</title>
+<meta name="description" content="TP 华语职位列表。吉隆坡、槟城、曼谷多个城市，华语客服、技术支持、内容审核等多种职位。">
+<meta name="theme-color" content="#000000">
+<link rel="icon" href="photos/TPLogo11.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&family=Noto+Serif+SC:wght@700;900&display=swap" rel="stylesheet">
+<style>
+:root{--tp-black:#000;--tp-dark:#1a1a1a;--tp-charcoal:#2d2d2d;--tp-gray-dark:#4a4a4a;--tp-gray:#666;--tp-gray-light:#999;--tp-silver:#ccc;--tp-light:#e5e5e5;--tp-off:#f5f5f5;--tp-white:#fff;--gold-primary:#FFD700;--gold-light:#FFAA00;--gold-dark:#E6B800;--gold-pale:#FFFBEB;--accent-green:#00a86b;--max:1200px;--shadow-sm:0 2px 4px rgba(0,0,0,.08);--shadow-md:0 4px 8px rgba(0,0,0,.12);--shadow-lg:0 8px 16px rgba(0,0,0,.16);--shadow-gold:0 4px 12px rgba(255,215,0,.3);--transition:all .3s cubic-bezier(.4,0,.2,1)}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Sans SC',-apple-system,BlinkMacSystemFont,"Microsoft YaHei",sans-serif;color:var(--tp-dark);line-height:1.8;background:var(--tp-white);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none;transition:var(--transition)}
+img{max-width:100%;height:auto}
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.container{max-width:var(--max);margin:0 auto;padding:0 20px}
+
+/* Header */
+header{position:sticky;top:0;background:rgba(255,255,255,.97);border-bottom:1px solid var(--tp-light);z-index:1000;backdrop-filter:blur(10px);box-shadow:var(--shadow-sm)}
+.header-inner{max-width:var(--max);margin:0 auto;padding:.75rem 20px;display:flex;justify-content:space-between;align-items:center;gap:1.25rem}
+.brand{display:flex;align-items:center;gap:.625rem}
+.brand img{width:40px;height:40px;object-fit:contain}
+.brand-text{display:flex;flex-direction:column;line-height:1.2}
+.brand-name{font-size:1rem;font-weight:700;color:var(--tp-black)}
+.brand-tagline{font-size:.7rem;color:var(--tp-gray)}
+nav ul{display:flex;gap:1rem;list-style:none;align-items:center}
+nav a{font-size:.85rem;position:relative;transition:var(--transition);padding:.2rem 0;white-space:nowrap}
+nav a::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:2px;background:var(--gold-primary);transition:width .3s ease}
+nav a:hover::after{width:100%}
+nav a[aria-current="page"]{font-weight:600}
+nav a[aria-current="page"]::after{width:100%;background:var(--tp-black)}
+.apply-btn{background:var(--tp-black);color:var(--tp-white);padding:.5rem 1.25rem;border-radius:4px;font-weight:600;border:2px solid var(--tp-black);transition:all .3s}
+.apply-btn:hover{background:var(--gold-primary);color:var(--tp-black);border-color:var(--gold-primary)}
+.apply-btn::after{display:none}
+.mobile-toggle{display:none;width:36px;height:36px;background:transparent;border:2px solid var(--tp-black);border-radius:4px;cursor:pointer;position:relative}
+.mobile-toggle span{display:block;width:18px;height:2px;background:var(--tp-black);position:absolute;left:50%;transform:translateX(-50%);transition:all .3s}
+.mobile-toggle span:nth-child(1){top:10px}
+.mobile-toggle span:nth-child(2){top:17px}
+.mobile-toggle span:nth-child(3){bottom:10px}
+.mobile-toggle.active span:nth-child(1){transform:translateX(-50%) rotate(45deg);top:17px}
+.mobile-toggle.active span:nth-child(2){opacity:0}
+.mobile-toggle.active span:nth-child(3){transform:translateX(-50%) rotate(-45deg);bottom:17px}
+.mobile-menu{display:none;position:fixed;top:60px;left:0;right:0;background:var(--tp-white);border-top:1px solid var(--tp-light);box-shadow:var(--shadow-lg);max-height:calc(100vh - 60px);overflow-y:auto;z-index:999}
+.mobile-menu.active{display:block}
+.mobile-menu ul{list-style:none;padding:.875rem 0}
+.mobile-menu a{display:block;padding:.625rem 1.25rem;border-bottom:1px solid var(--tp-light);transition:background .3s}
+.mobile-menu a:hover{background:var(--gold-pale)}
+
+/* Hero */
+.hero{position:relative;overflow:hidden;background:linear-gradient(135deg,var(--tp-white) 0%,var(--tp-off) 100%);padding:3.75rem 20px;text-align:center}
+.hero::before{content:'';position:absolute;top:50%;right:6%;width:clamp(220px,32vw,480px);height:clamp(220px,32vw,480px);background-image:url('photos/TPLogo11.png');background-size:contain;background-repeat:no-repeat;background-position:center;opacity:.04;filter:saturate(0);transform:translateY(-50%);pointer-events:none}
+.hero h1{font-size:2.4rem;font-weight:900;color:#000;margin-bottom:.6rem;font-family:'Noto Serif SC',serif}
+.hero p{color:var(--tp-gray-dark)}
+.hero .hero-cta{margin-top:1rem;display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}
+.btn{padding:.8rem 1.2rem;font-weight:900;border-radius:999px;text-decoration:none;display:inline-block;border:2px solid var(--gold-primary);color:var(--gold-primary);transition:var(--transition)}
+.btn:hover{background:var(--gold-primary);color:#000;transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.btn-solid{background:var(--gold-primary);color:#000;border:2px solid var(--gold-primary);border-radius:999px;padding:.85rem 1.2rem;font-weight:900;display:inline-block}
+.btn-solid:hover{filter:brightness(.95);transform:translateY(-2px);box-shadow:var(--shadow-md)}
+
+/* Hot Jobs */
+.hot-jobs{padding:40px 20px;background:var(--tp-off)}
+.hot-jobs .section-title{text-align:center;font-size:1.6rem;font-weight:900;color:#000;margin-bottom:.5rem;font-family:'Noto Serif SC',serif}
+.hot-jobs .section-subtitle{text-align:center;color:var(--tp-gray);margin-bottom:1.5rem;font-size:.9rem}
+.hot-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;max-width:var(--max);margin:0 auto}
+
+/* Jobs */
+.jobs{max-width:1200px;margin:2rem auto 3rem;padding:0 20px}
+.count{font-weight:800;margin-bottom:.75rem;color:#000;font-size:1.1rem}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+
+/* Card */
+.card{background:var(--tp-white);border:1px solid var(--tp-light);border-radius:16px;overflow:visible;transition:var(--transition);display:flex;flex-direction:column;min-height:550px;box-shadow:var(--shadow-sm);position:relative}
+.card:hover{box-shadow:var(--shadow-lg);transform:translateY(-4px)}
+.card-header{background:var(--tp-off);color:var(--tp-dark);padding:1.25rem;position:relative}
+.card-header::after{content:'';position:absolute;bottom:0;left:0;right:0;height:4px;background:var(--gold-primary)}
+.card-body{padding:1.25rem;flex:1;display:flex;flex-direction:column;overflow:hidden}
+.role{display:flex;gap:.5rem;align-items:flex-start;margin-bottom:.75rem}
+.role h3{font-size:1.15rem;font-weight:900;color:var(--tp-dark);line-height:1.3;flex:1}
+.tag{font-size:.75rem;background:var(--gold-primary);color:#000;border:1px solid var(--gold-primary);padding:.25rem .6rem;border-radius:999px;font-weight:700;white-space:nowrap}
+.meta{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1rem}
+.meta span{font-size:.8rem;color:var(--tp-gray-dark);background:var(--tp-off);border:1px solid var(--tp-light);padding:.25rem .6rem;border-radius:6px;font-weight:500}
+.content-scroll{flex:1;overflow-y:auto;padding-right:.5rem;margin-bottom:1rem}
+.content-scroll::-webkit-scrollbar{width:6px}
+.content-scroll::-webkit-scrollbar-track{background:var(--tp-off);border-radius:3px}
+.content-scroll::-webkit-scrollbar-thumb{background:var(--tp-gray-light);border-radius:3px}
+.jd-section,.requirements-section{margin-bottom:1.5rem}
+.jd-section h4,.requirements-section h4{font-size:.95rem;font-weight:700;color:var(--tp-dark);margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem}
+.jd-section h4::before{content:'📋';font-size:1rem}
+.requirements-section h4::before{content:'✅';font-size:1rem}
+.jd-section p{font-size:.9rem;color:var(--tp-gray-dark);line-height:1.6;margin-bottom:.5rem}
+.requirements-list{list-style:none;padding-left:0}
+.requirements-list li{font-size:.9rem;color:var(--tp-gray-dark);margin-bottom:.5rem;position:relative;padding-left:1.5rem;line-height:1.5}
+.requirements-list li::before{content:'✓';position:absolute;left:0;color:var(--accent-green);font-weight:bold;font-size:.95rem}
+.card-footer{display:flex;flex-direction:column;gap:.75rem;padding:1.25rem;margin-top:auto;background:var(--tp-off);border-top:1px solid var(--tp-light);border-radius:0 0 16px 16px;overflow:visible}
+.footer-row{display:flex;gap:.75rem;width:100%}
+.footer-row.two-buttons{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
+.apply,.book,.process{padding:.75rem 1.25rem;border-radius:999px;font-weight:700;text-decoration:none;transition:var(--transition);font-size:.9rem;text-align:center;display:flex;align-items:center;justify-content:center;gap:.5rem;white-space:nowrap;cursor:pointer;border:2px solid}
+.apply{background:var(--gold-primary);color:#000;border-color:var(--gold-primary)}
+.apply:hover{background:var(--gold-dark);transform:translateY(-2px);box-shadow:var(--shadow-gold)}
+.process{border-color:var(--tp-charcoal);color:var(--tp-charcoal);background:var(--tp-white);position:relative}
+.process:hover{background:var(--tp-charcoal);color:var(--tp-white);transform:translateY(-2px)}
+.process::after{content:'→';font-size:1.1rem;transition:var(--transition)}
+.process:hover::after{transform:translateX(2px)}
+
+/* Helper */
+.helper{background:#fff;border-top:1px solid var(--tp-light);border-bottom:1px solid var(--tp-light);padding:2rem 20px}
+.helper .inner{max-width:1000px;margin:0 auto;text-align:center}
+.helper h2{font-size:1.6rem;font-weight:900;color:#000;margin-bottom:.4rem;font-family:'Noto Serif SC',serif}
+.helper p{color:var(--tp-gray-dark)}
+
+/* Footer */
+footer{background:var(--tp-black);color:var(--tp-white);padding:40px 20px 16px;position:relative;overflow:hidden;margin-top:40px}
+footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,var(--gold-primary),transparent)}
+.footer-content{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:2fr repeat(3,1fr);gap:2rem;margin-bottom:2rem;padding-bottom:2rem;border-bottom:1px solid rgba(255,255,255,.1)}
+.footer-brand{display:flex;flex-direction:column;gap:.875rem}
+.footer-logo{display:flex;align-items:center;gap:.625rem}
+.footer-logo img{width:42px;height:42px;filter:brightness(0) invert(1)}
+.footer-logo-text{font-size:1.15rem;font-weight:700}
+.footer-desc{opacity:.8;line-height:1.75;font-size:.85rem}
+.footer-section h3{margin-bottom:.75rem;font-size:.9rem;letter-spacing:.05em;color:var(--gold-primary)}
+.footer-section ul{list-style:none}
+.footer-section li{margin-bottom:.3rem}
+.footer-section a{opacity:.7;transition:opacity .3s;font-size:.8rem}
+.footer-section a:hover{opacity:1}
+.badges{display:flex;gap:.75rem;align-items:center;margin-top:.75rem;flex-wrap:wrap}
+.badges .badge-item{display:flex;align-items:center;gap:.3rem;font-size:.8rem;opacity:.8}
+.footer-cta{margin-top:1rem}
+.footer-bottom{text-align:center;padding-top:12px;font-size:.75rem;opacity:.6}
+.footer-bottom a{color:var(--tp-white);text-decoration:underline;margin:0 .3rem}
+.ssm-info{font-size:.8rem;color:rgba(255,255,255,.5);margin-bottom:.5rem}
+
+/* Floating */
+.floating-apply{position:fixed;bottom:20px;right:20px;background:var(--tp-black);color:var(--tp-white);padding:.75rem 1.25rem;border-radius:50px;font-weight:600;box-shadow:0 4px 12px rgba(0,0,0,.3);z-index:999;transition:all .3s;border:2px solid var(--gold-primary);font-size:.85rem;backdrop-filter:blur(10px)}
+.floating-apply:hover{transform:scale(1.05);box-shadow:var(--shadow-gold);background:var(--gold-primary);color:var(--tp-black)}
+.floating-ai{position:fixed;bottom:20px;right:130px;background:rgba(255,255,255,.9);color:var(--tp-black);padding:.75rem 1.25rem;border-radius:50px;font-weight:600;box-shadow:0 4px 12px rgba(0,0,0,.15);z-index:998;transition:all .3s;border:2px solid var(--tp-black);font-size:.85rem;backdrop-filter:blur(10px)}
+.floating-ai:hover{transform:scale(1.05);box-shadow:var(--shadow-gold);border-color:var(--gold-primary)}
+.back-to-top{position:fixed;bottom:80px;right:20px;width:40px;height:40px;background:rgba(255,255,255,.9);border:2px solid var(--gold-primary);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:0;visibility:hidden;transition:all .3s;z-index:997;backdrop-filter:blur(10px);font-size:1rem;font-weight:bold;color:var(--gold-dark)}
+.back-to-top.show{opacity:1;visibility:visible}
+.back-to-top:hover{background:var(--gold-primary);color:var(--tp-black);transform:translateY(-2px)}
+
+/* Responsive */
+@media(max-width:1060px){.grid,.hot-grid{grid-template-columns:repeat(2,1fr)}.card{min-height:600px}}
+@media(max-width:768px){.grid,.hot-grid{grid-template-columns:1fr}.card{min-height:auto}.content-scroll{max-height:400px}.footer-row.two-buttons{grid-template-columns:1fr}nav{display:none}.mobile-toggle{display:block}.floating-ai{bottom:80px;right:20px}.back-to-top{bottom:140px}.footer-content{grid-template-columns:1fr;text-align:center}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<a href="#main" class="sr-only">跳转至主要内容</a>
+<header role="banner">
+  <div class="header-inner">
+    <a class="brand" href="index.html"><img src="photos/TPLogo11.png" alt="TP" width="40" height="40"><div class="brand-text"><span class="brand-name">TP</span><span class="brand-tagline">马来西亚·泰国</span></div></a>
+    <nav aria-label="主导航"><ul><li><a href="index.html">首页</a></li><li><a href="open-jobs.html" aria-current="page">职位列表</a></li><li><a href="about-tp.html">关于TP</a></li><li><a href="salary-and-benefits.html">薪资福利</a></li><li><a href="hiring-process.html">招聘流程</a></li><li><a href="why-malaysia-thailand.html">城市介绍</a></li><li><a href="relocation-visa.html">签证·搬迁</a></li><li><a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=chinese" target="_blank" rel="noopener noreferrer" class="apply-btn">立即申请</a></li></ul></nav>
+    <button class="mobile-toggle" id="mobileToggle" aria-label="打开菜单" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
-</section>
+  <nav class="mobile-menu" id="mobileMenu" aria-label="移动端导航"><ul><li><a href="index.html">首页</a></li><li><a href="open-jobs.html">职位列表</a></li><li><a href="about-tp.html">关于TP</a></li><li><a href="salary-and-benefits.html">薪资福利</a></li><li><a href="hiring-process.html">招聘流程</a></li><li><a href="why-malaysia-thailand.html">城市介绍</a></li><li><a href="relocation-visa.html">签证·搬迁</a></li><li><a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=chinese" target="_blank" rel="noopener noreferrer" class="apply-btn">立即申请</a></li></ul></nav>
+</header>
+<main id="main">
+  <section class="hero">
+    <h1>职位列表</h1>
+    <p>华语职位招聘中。工作地点：吉隆坡、槟城、曼谷。提供工作签证及搬迁支持。</p>
+    <div class="hero-cta" role="group" aria-label="快捷链接">
+      <a class="btn" href="salary-and-benefits.html">薪资福利</a>
+      <a class="btn-solid" href="hiring-process.html">招聘流程</a>
+      <a class="btn" href="https://outlook.office.com/book/Chinese@teleperformance.onmicrosoft.com/s/tEpdSOHeX0SbvhMZg_dyvQ2?ismsaljsauthenabled" target="_blank" rel="noopener noreferrer">预约面谈</a>
+    </div>
+  </section>
 
-<!-- Filters -->
-<section class="filters" aria-label="搜索与筛选">
-  <div class="wrap">
-    <input id="q" class="search-input" type="text" placeholder="关键词搜索（例：电商、技术支持、日班）…" aria-label="搜索职位">
-    <select id="loc" class="select" aria-label="按地点筛选">
-      <option value="">地点（全部）</option>
-      <option value="kl">吉隆坡</option>
-      <option value="penang">槟城</option>
-      <option value="bangkok">曼谷</option>
-    </select>
-    <select id="lang" class="select" aria-label="按语言筛选">
-      <option value="">语言（全部）</option>
-      <option value="zh">中文为主</option>
-      <option value="bilingual">中英双语</option>
-    </select>
-    <select id="shift" class="select" aria-label="按班次筛选">
-      <option value="">班次（全部）</option>
-      <option value="day">日班</option>
-      <option value="shift">轮班制</option>
-    </select>
-    <select id="type" class="select" aria-label="按类型筛选">
-      <option value="">类型（全部）</option>
-      <option value="fulltime">正式员工</option>
-      <option value="talent">人才库</option>
-    </select>
+  <!-- Hot Jobs -->
+  <section class="hot-jobs">
+    <h2 class="section-title">🔥 热门职位</h2>
+    <p class="section-subtitle">精选正在招聘的华语岗位</p>
+    <div class="hot-grid">
+
+      <article class="card" role="listitem">
+        <div class="card-header">
+          <div class="role"><h3>内容审核员</h3><span class="tag">热招</span></div>
+          <div class="meta"><span>📍 曼谷</span><span>🗣️ 普通话</span><span>📄 全职</span></div>
+        </div>
+        <div class="card-body">
+          <div class="content-scroll">
+            <div class="jd-section"><h4>职位描述</h4><p>负责全球社交媒体平台的普通话内容审核。</p><p>根据社区准则对内容进行分类和判断。</p><p>提升平台安全性和用户体验。</p></div>
+            <div class="requirements-section"><h4>任职资格</h4><ul class="requirements-list"><li>普通话流利（读/写/说）</li><li>熟悉数字内容和互联网文化</li><li>注重细节，具有判断力</li><li>能处理敏感内容</li><li>能够团队协作</li></ul></div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <div class="footer-row two-buttons">
+            <a class="process" target="_blank" rel="noopener" href="https://app.hallo.ai/teleperformance/ai-assessment/interview/zh?assessmentTypeId=VEhDOEFMRHdKWmtZdFoxREJjMHQ=">AI 能力评估</a>
+            <a class="process" target="_blank" rel="noopener" href="https://outlook.office.com/book/Chinese@teleperformance.onmicrosoft.com/s/tEpdSOHeX0SbvhMZg_dyvQ2?ismsaljsauthenabled">预约面谈</a>
+          </div>
+          <div class="footer-row two-buttons">
+            <a class="process" href="hiring-process.html">招聘流程</a>
+            <a class="apply" target="_blank" rel="noopener" href="https://careerseng-teleperformance.icims.com/jobs/59761/content-moderator---mandarin---thailand/job?mode=job&iis=MLP&iisn=">立即申请</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" role="listitem">
+        <div class="card-header">
+          <div class="role"><h3>客户服务代表（粤语）</h3><span class="tag">热招</span></div>
+          <div class="meta"><span>📍 吉隆坡</span><span>🗣️ 粤语</span><span>📄 全职</span></div>
+        </div>
+        <div class="card-body">
+          <div class="content-scroll">
+            <div class="jd-section"><h4>职位描述</h4><p>为全球预订平台客户提供粤语客服支持。</p><p>处理预订、变更、取消等相关咨询。</p><p>通过电话、邮件和在线聊天提供客户支持。</p></div>
+            <div class="requirements-section"><h4>任职资格</h4><ul class="requirements-list"><li>粤语流利（读/写/说）</li><li>英语基本沟通能力</li><li>无需经验，欢迎应届毕业生</li><li>具有服务意识和客户导向</li><li>有客服经验者优先</li></ul></div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <div class="footer-row two-buttons">
+            <a class="process" target="_blank" rel="noopener" href="https://app.hallo.ai/teleperformance/ai-assessment/interview/zh?assessmentTypeId=VEhDOEFMRHdKWmtZdFoxREJjMHQ=">AI 能力评估</a>
+            <a class="process" target="_blank" rel="noopener" href="https://outlook.office.com/book/Chinese@teleperformance.onmicrosoft.com/s/tEpdSOHeX0SbvhMZg_dyvQ2?ismsaljsauthenabled">预约面谈</a>
+          </div>
+          <div class="footer-row two-buttons">
+            <a class="process" href="hiring-process.html">招聘流程</a>
+            <a class="apply" target="_blank" rel="noopener" href="https://careerseng-teleperformance.icims.com/jobs/48973/customer-service-representative---cantonese-support---reservation-project/job?mode=job&iis=MLP&iisn=">立即申请</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" role="listitem">
+        <div class="card-header">
+          <div class="role"><h3>客户成功专员</h3><span class="tag">热招</span></div>
+          <div class="meta"><span>📍 槟城</span><span>🗣️ 普通话</span><span>📄 全职</span></div>
+        </div>
+        <div class="card-body">
+          <div class="content-scroll">
+            <div class="jd-section"><h4>职位描述</h4><p>为全球平台客户提供普通话支持服务。</p><p>处理账户咨询、交易问题和技术支持。</p><p>记录详细信息并升级复杂案例。</p></div>
+            <div class="requirements-section"><h4>任职资格</h4><ul class="requirements-list"><li>普通话流利，英语中级以上</li><li>有客服或金融相关经验优先</li><li>基本电脑操作能力</li><li>优秀的沟通和问题解决能力</li><li>欢迎应届毕业生</li></ul></div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <div class="footer-row two-buttons">
+            <a class="process" target="_blank" rel="noopener" href="https://app.hallo.ai/teleperformance/ai-assessment/interview/zh?assessmentTypeId=VEhDOEFMRHdKWmtZdFoxREJjMHQ=">AI 能力评估</a>
+            <a class="process" target="_blank" rel="noopener" href="https://outlook.office.com/book/Chinese@teleperformance.onmicrosoft.com/s/tEpdSOHeX0SbvhMZg_dyvQ2?ismsaljsauthenabled">预约面谈</a>
+          </div>
+          <div class="footer-row two-buttons">
+            <a class="process" href="hiring-process.html">招聘流程</a>
+            <a class="apply" target="_blank" rel="noopener" href="https://careerseng-teleperformance.icims.com/jobs/49438/customer-success-specialist---mandarin----penang/job?mode=job&iis=MLP&iisn=">立即申请</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- All Jobs -->
+  <section class="jobs">
+    <div class="count" id="count" aria-live="polite"></div>
+    <div class="grid" id="jobGrid" role="list">
+
+      <article class="card" role="listitem" data-loc="kl" data-lang="mandarin" data-keywords="客服 电商 订单 发货">
+        <div class="card-header">
+          <div class="role"><h3>客服代表</h3><span class="tag">招聘中</span></div>
+          <div class="meta"><span>📍 吉隆坡</span><span>🗣️ 普通话/英语</span><span>📄 全职</span><span>⏰ 轮班</span></div>
+        </div>
+        <div class="card-body">
+          <div class="content-scroll">
+            <div class="jd-section"><h4>职位描述</h4><p>为全球电商平台的客户提供普通话客服支持。</p><p>处理订单、发货、退货等相关咨询。</p><p>通过电话、邮件和在线聊天提供客户支持。</p></div>
+            <div class="requirements-section"><h4>任职资格</h4><ul class="requirements-list"><li>普通话流利（读/写/说）</li><li>无需经验，欢迎应届毕业生</li><li>能够轮班工作</li><li>有客服经验者优先</li></ul></div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <div class="footer-row two-buttons">
+            <a class="process" target="_blank" rel="noopener" href="https://app.hallo.ai/teleperformance/ai-assessment/interview/zh?assessmentTypeId=VEhDOEFMRHdKWmtZdFoxREJjMHQ=">AI 能力评估</a>
+            <a class="process" target="_blank" rel="noopener" href="https://outlook.office.com/book/Chinese@teleperformance.onmicrosoft.com/s/tEpdSOHeX0SbvhMZg_dyvQ2?ismsaljsauthenabled">预约面谈</a>
+          </div>
+          <div class="footer-row two-buttons">
+            <a class="process" href="hiring-process.html">招聘流程</a>
+            <a class="apply" target="_blank" rel="noopener" href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=chinese">立即申请</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" role="listitem" data-loc="penang" data-lang="mandarin" data-keywords="金融 支付 账户">
+        <div class="card-header">
+          <div class="role"><h3>金融支持顾问</h3><span class="tag">招聘中</span></div>
+          <div class="meta"><span>📍 槟城</span><span>🗣️ 普通话/英语</span><span>📄 全职</span><span>⏰ 轮班</span></div>
+        </div>
+        <div class="card-body">
+          <div class="content-scroll">
+            <div class="jd-section"><h4>职位描述</h4><p>为全球在线支付用户提供一线支持。</p><p>处理账户咨询、交易问题和技术支持。</p><p>记录详细信息并升级复杂案例。</p></div>
+            <div class="requirements-section"><h4>任职资格</h4><ul class="requirements-list"><li>普通话及英语流利</li><li>有客服或金融相关经验优先</li><li>基本电脑操作能力</li><li>优秀的沟通和问题解决能力</li><li>欢迎应届毕业生</li></ul></div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <div class="footer-row two-buttons">
+            <a class="process" target="_blank" rel="noopener" href="https://app.hallo.ai/teleperformance/ai-assessment/interview/zh?assessmentTypeId=VEhDOEFMRHdKWmtZdFoxREJjMHQ=">AI 能力评估</a>
+            <a class="process" target="_blank" rel="noopener" href="https://outlook.office.com/book/Chinese@teleperformance.onmicrosoft.com/s/tEpdSOHeX0SbvhMZg_dyvQ2?ismsaljsauthenabled">预约面谈</a>
+          </div>
+          <div class="footer-row two-buttons">
+            <a class="process" href="hiring-process.html">招聘流程</a>
+            <a class="apply" target="_blank" rel="noopener" href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=chinese">立即申请</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" role="listitem" data-loc="bangkok" data-lang="mandarin" data-keywords="销售 云安全">
+        <div class="card-header">
+          <div class="role"><h3>销售代表</h3><span class="tag">招聘中</span></div>
+          <div class="meta"><span>📍 曼谷</span><span>🗣️ 普通话/英语</span><span>📄 全职</span><span>⏰ 日班</span></div>
+        </div>
+        <div class="card-body">
+          <div class="content-scroll">
+            <div class="jd-section"><h4>职位描述</h4><p>面向亚太地区企业推广云安全解决方案。</p><p>开发潜在客户并推动销售机会。</p><p>使用销售工具管理客户信息和活动。</p></div>
+            <div class="requirements-section"><h4>任职资格</h4><ul class="requirements-list"><li>普通话及英语流利</li><li>有销售、市场营销或客户管理经验</li><li>自主性强，能独立工作</li><li>优秀的问题解决和谈判能力</li><li>对数字营销感兴趣者优先</li></ul></div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <div class="footer-row two-buttons">
+            <a class="process" target="_blank" rel="noopener" href="https://app.hallo.ai/teleperformance/ai-assessment/interview/zh?assessmentTypeId=VEhDOEFMRHdKWmtZdFoxREJjMHQ=">AI 能力评估</a>
+            <a class="process" target="_blank" rel="noopener" href="https://outlook.office.com/book/Chinese@teleperformance.onmicrosoft.com/s/tEpdSOHeX0SbvhMZg_dyvQ2?ismsaljsauthenabled">预约面谈</a>
+          </div>
+          <div class="footer-row two-buttons">
+            <a class="process" href="hiring-process.html">招聘流程</a>
+            <a class="apply" target="_blank" rel="noopener" href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=chinese">立即申请</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" role="listitem" data-loc="kl" data-lang="mandarin" data-keywords="技术支持 IT">
+        <div class="card-header">
+          <div class="role"><h3>技术支持专员</h3><span class="tag">招聘中</span></div>
+          <div class="meta"><span>📍 吉隆坡</span><span>🗣️ 普通话/英语</span><span>📄 全职</span><span>⏰ 轮班</span></div>
+        </div>
+        <div class="card-body">
+          <div class="content-scroll">
+            <div class="jd-section"><h4>职位描述</h4><p>为全球科技公司客户提供技术支持。</p><p>硬件/软件问题排查和故障处理。</p><p>通过工单系统管理和记录案例。</p></div>
+            <div class="requirements-section"><h4>任职资格</h4><ul class="requirements-list"><li>普通话流利，英语中级以上</li><li>有IT/技术相关经验或兴趣</li><li>问题解决和分析能力</li><li>学习意愿强，具有团队精神</li><li>持有相关证书者优先</li></ul></div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <div class="footer-row two-buttons">
+            <a class="process" target="_blank" rel="noopener" href="https://app.hallo.ai/teleperformance/ai-assessment/interview/zh?assessmentTypeId=VEhDOEFMRHdKWmtZdFoxREJjMHQ=">AI 能力评估</a>
+            <a class="process" target="_blank" rel="noopener" href="https://outlook.office.com/book/Chinese@teleperformance.onmicrosoft.com/s/tEpdSOHeX0SbvhMZg_dyvQ2?ismsaljsauthenabled">预约面谈</a>
+          </div>
+          <div class="footer-row two-buttons">
+            <a class="process" href="hiring-process.html">招聘流程</a>
+            <a class="apply" target="_blank" rel="noopener" href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=chinese">立即申请</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" role="listitem" data-loc="penang" data-lang="mandarin" data-keywords="内容审核 社交媒体">
+        <div class="card-header">
+          <div class="role"><h3>内容审核员</h3><span class="tag">招聘中</span></div>
+          <div class="meta"><span>📍 槟城</span><span>🗣️ 普通话</span><span>📄 全职</span><span>⏰ 日班</span></div>
+        </div>
+        <div class="card-body">
+          <div class="content-scroll">
+            <div class="jd-section"><h4>职位描述</h4><p>负责全球社交媒体平台的普通话内容审核。</p><p>根据社区准则对内容进行分类和判断。</p><p>提升平台安全性和用户体验。</p></div>
+            <div class="requirements-section"><h4>任职资格</h4><ul class="requirements-list"><li>普通话母语水平</li><li>熟悉数字内容和互联网文化</li><li>注重细节，具有判断力</li><li>能处理敏感内容</li><li>能够团队协作</li></ul></div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <div class="footer-row two-buttons">
+            <a class="process" target="_blank" rel="noopener" href="https://app.hallo.ai/teleperformance/ai-assessment/interview/zh?assessmentTypeId=VEhDOEFMRHdKWmtZdFoxREJjMHQ=">AI 能力评估</a>
+            <a class="process" target="_blank" rel="noopener" href="https://outlook.office.com/book/Chinese@teleperformance.onmicrosoft.com/s/tEpdSOHeX0SbvhMZg_dyvQ2?ismsaljsauthenabled">预约面谈</a>
+          </div>
+          <div class="footer-row two-buttons">
+            <a class="process" href="hiring-process.html">招聘流程</a>
+            <a class="apply" target="_blank" rel="noopener" href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=chinese">立即申请</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" role="listitem" data-loc="kl" data-lang="mandarin" data-keywords="旅行 航空 酒店 预订">
+        <div class="card-header">
+          <div class="role"><h3>旅行服务顾问</h3><span class="tag">招聘中</span></div>
+          <div class="meta"><span>📍 吉隆坡</span><span>🗣️ 普通话/英语</span><span>📄 全职</span><span>⏰ 日班</span></div>
+        </div>
+        <div class="card-body">
+          <div class="content-scroll">
+            <div class="jd-section"><h4>职位描述</h4><p>为全球旅行平台提供普通话客户支持。</p><p>处理机票、酒店、租车预订相关咨询。</p><p>管理变更、取消和退款等预订事务。</p></div>
+            <div class="requirements-section"><h4>任职资格</h4><ul class="requirements-list"><li>普通话流利，英语可沟通</li><li>有旅行/旅游行业经验优先</li><li>具有服务意识和客户导向</li><li>多任务处理和问题解决能力</li><li>有GDS系统经验者优先</li></ul></div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <div class="footer-row two-buttons">
+            <a class="process" target="_blank" rel="noopener" href="https://app.hallo.ai/teleperformance/ai-assessment/interview/zh?assessmentTypeId=VEhDOEFMRHdKWmtZdFoxREJjMHQ=">AI 能力评估</a>
+            <a class="process" target="_blank" rel="noopener" href="https://outlook.office.com/book/Chinese@teleperformance.onmicrosoft.com/s/tEpdSOHeX0SbvhMZg_dyvQ2?ismsaljsauthenabled">预约面谈</a>
+          </div>
+          <div class="footer-row two-buttons">
+            <a class="process" href="hiring-process.html">招聘流程</a>
+            <a class="apply" target="_blank" rel="noopener" href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=chinese">立即申请</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="helper">
+    <div class="inner">
+      <h2>不确定哪个职位适合你？</h2>
+      <p>预约30分钟面谈，轻松咨询任何问题。</p>
+      <div style="margin-top:.8rem">
+        <a class="btn" href="https://outlook.office.com/book/Chinese@teleperformance.onmicrosoft.com/s/tEpdSOHeX0SbvhMZg_dyvQ2?ismsaljsauthenabled" target="_blank" rel="noopener noreferrer">预约面谈</a>
+        <a class="btn-solid" href="https://app.hallo.ai/teleperformance/ai-assessment/interview/zh?assessmentTypeId=VEhDOEFMRHdKWmtZdFoxREJjMHQ=" target="_blank" rel="noopener noreferrer" style="margin-left:.5rem">AI 能力评估</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-content">
+    <div class="footer-brand"><div class="footer-logo"><img src="photos/TPLogo11.png" alt="TP"><span class="footer-logo-text">TP</span></div><p class="footer-desc">在全球100多个国家运营的全球业务流程外包企业<br>支持华语人才开启新事业</p><div class="badges"><span class="badge-item">🏆 马来西亚最佳职场 连续6年</span><span class="badge-item">🏆 全球最佳职场 连续5年</span></div><div class="footer-cta"><a href="https://www.tp.com/en-my/locations/malaysia/careers/?page=1#contactusmalaysia" target="_blank" rel="noopener noreferrer" class="btn btn-solid">TP.COM</a></div></div>
+    <div class="footer-section"><h3>公司信息</h3><ul><li><a href="about-tp.html">公司介绍</a></li><li><a href="salary-and-benefits.html">薪资福利</a></li><li><a href="office-environment.html">办公环境</a></li><li><a href="ta-team.html">招聘团队</a></li></ul></div>
+    <div class="footer-section"><h3>职位·申请</h3><ul><li><a href="open-jobs.html" aria-current="page">职位列表</a></li><li><a href="hiring-process.html">招聘流程</a></li><li><a href="https://app.hallo.ai/teleperformance/ai-assessment/interview/zh?assessmentTypeId=VEhDOEFMRHdKWmtZdFoxREJjMHQ=" target="_blank" rel="noopener noreferrer">AI 能力评估</a></li><li><a href="https://tpmyandtpth.github.io/LP/" target="_blank" rel="noopener noreferrer">其他语言职位</a></li></ul></div>
+    <div class="footer-section"><h3>生活信息</h3><ul><li><a href="why-malaysia-thailand.html">工作城市</a></li><li><a href="relocation-visa.html">搬迁支持</a></li><li><a href="daily-life-malaysia.html">日常生活</a></li><li><a href="https://outlook.office.com/book/Chinese@teleperformance.onmicrosoft.com/s/tEpdSOHeX0SbvhMZg_dyvQ2?ismsaljsauthenabled" target="_blank" rel="noopener noreferrer">预约招聘顾问</a></li></ul></div>
   </div>
-</section>
+  <div class="footer-bottom"><p class="ssm-info">Teleperformance Malaysia Sdn Bhd 的 SSM（马来西亚公司委员会）注册号为 201601023769 (1194708-K)</p><p>&copy; 2026 TP. All rights reserved. | <a href="#">隐私政策</a> | <a href="#">使用条款</a></p></div>
+</footer>
 
-<!-- Category Tabs -->
-<section class="tabs" aria-label="分类标签">
-  <div class="inner">
-    <button class="tab active" data-tab="all">全部</button>
-    <button class="tab" data-tab="kl">吉隆坡</button>
-    <button class="tab" data-tab="penang">槟城</button>
-    <button class="tab" data-tab="bangkok">曼谷</button>
-    <button class="tab" data-tab="zh">中文职位</button>
-    <button class="tab" data-tab="bilingual">双语职位</button>
-  </div>
-</section>
-
-<!-- Jobs grid -->
-<section class="jobs section-padded">
-  <div class="count" id="count" aria-live="polite"></div>
-  <div class="hot-jobs-grid" id="jobGrid" role="list">
-
-    <!-- Card 1: 客户服务代表 (电商) -->
-    <article class="card" role="listitem" data-loc="kl" data-lang="zh" data-shift="shift" data-type="fulltime" data-keywords="客户服务 电商 订单 配送 退货 客服">
-      <div class="card-header">
-        <div class="role">
-          <h3>客户服务代表（电商平台）</h3>
-          <span class="tag">招聘中</span>
-        </div>
-        <div class="meta">
-          <span>地点：G Tower，吉隆坡，马来西亚</span>
-          <span>语言：中文为主</span>
-          <span>类型：正式员工</span>
-          <span>班次：轮班制（周5天，每天8小时，7:00-22:30）</span>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="content-scroll">
-          <div class="jd-section">
-            <h4>职务说明</h4>
-            <p>为全球电商平台华语用户提供客户支持（电话、邮件、在线聊天）。</p>
-            <p>处理订单查询、配送跟踪、退货退款、账户问题等。</p>
-            <p>所有沟通和记录均使用中文完成。</p>
-            <p>提供完善的入职培训，无需相关经验。</p>
-          </div>
-          <div class="requirements-section">
-            <h4>应聘条件</h4>
-            <ul class="requirements-list">
-              <li>中文流利（听说读写）。</li>
-              <li>英语不做要求。</li>
-              <li>大专或以上学历。</li>
-              <li>欢迎应届毕业生和无经验者。</li>
-              <li>能适应轮班制工作。</li>
-              <li>能在马来西亚工作和生活。</li>
-              <li>有客服经验者优先。</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="card-footer">
-        <div class="footer-row two-buttons">
-          <a class="process" target="_blank" rel="noopener" href="https://app.hallo.ai/teleperformance/ai-assessment/interview/zh?assessmentTypeId=VEhDOEFMRHdKWmtZdFoxREJjMHQ=">AI 能力评估</a>
-          <a class="process" href="{{ site.baseurl }}/hiring-process.html">了解招聘流程</a>
-        </div>
-        <div class="footer-row two-buttons">
-          <a class="apply" target="_blank" rel="noopener" href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=chinese">立即申请</a>
-          <a class="book" href="https://outlook.office.com/book/Chinese@teleperformance.onmicrosoft.com/s/tEpdSOHeX0SbvhMZg_dyvQ2?ismsaljsauthenabled" data-tooltip="申请后，请预约方便的面试时间。">预约面试</a>
-        </div>
-      </div>
-    </article>
-
-    <!-- Card 2: 金融支持顾问 -->
-    <article class="card" role="listitem" data-loc="penang" data-lang="bilingual" data-shift="shift" data-type="fulltime" data-keywords="金融 支付 账户 交易 技术支持 财务">
-      <div class="card-header">
-        <div class="role">
-          <h3>金融支持顾问（在线支付平台）</h3>
-          <span class="tag">招聘中</span>
-        </div>
-        <div class="meta">
-          <span>地点：GBS@Mahsuri，槟城，马来西亚</span>
-          <span>语言：中文＋英文</span>
-          <span>类型：正式员工</span>
-          <span>班次：轮班制（周5天，每天8小时）</span>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="content-scroll">
-          <div class="jd-section">
-            <h4>职务说明</h4>
-            <p>为全球在线支付平台用户提供一级客户支持。</p>
-            <p>处理账户查询、交易问题、技术支持等。</p>
-            <p>记录详细信息并将复杂案例适当升级。</p>
-            <p>通过高质量服务提升客户满意度。</p>
-            <p>全球领先在线支付平台的支持岗位，适合对金融科技感兴趣的候选人。</p>
-          </div>
-          <div class="requirements-section">
-            <h4>应聘条件</h4>
-            <ul class="requirements-list">
-              <li>中文流利（听说读写）。</li>
-              <li>英语 B1 以上（基本读写和沟通能力）。</li>
-              <li>客服或金融背景优先（欢迎新人）。</li>
-              <li>良好的沟通和问题解决能力。</li>
-              <li>基本的电脑操作能力。</li>
-              <li>能适应轮班制工作。</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="card-footer">
-        <div class="footer-row two-buttons">
-          <a class="process" target="_blank" rel="noopener" href="https://app.hallo.ai/teleperformance/ai-assessment/interview/zh?assessmentTypeId=VEhDOEFMRHdKWmtZdFoxREJjMHQ=">AI 能力评估</a>
-          <a class="process" href="{{ site.baseurl }}/hiring-process.html">了解招聘流程</a>
-        </div>
-        <div class="footer-row two-buttons">
-          <a class="apply" target="_blank" rel="noopener" href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=chinese">立即申请</a>
-          <a class="book" href="https://outlook.office.com/book/Chinese@teleperformance.onmicrosoft.com/s/tEpdSOHeX0SbvhMZg_dyvQ2?ismsaljsauthenabled" data-tooltip="申请后，请预约方便的面试时间。">预约面试</a>
-        </div>
-      </div>
-    </article>
-
-    <!-- Card 3: 销售代表 (曼谷) -->
-    <article class="card" role="listitem" data-loc="bangkok" data-lang="bilingual" data-shift="day" data-type="fulltime" data-keywords="销售 云安全 市场 客户管理 亚太 数字营销">
-      <div class="card-header">
-        <div class="role">
-          <h3>销售代表（云安全解决方案）</h3>
-          <span class="tag">招聘中</span>
-        </div>
-        <div class="meta">
-          <span>地点：Singha Complex，曼谷，泰国</span>
-          <span>语言：中文＋英文</span>
-          <span>类型：正式员工</span>
-          <span>班次：日班（周一至周五）</span>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="content-scroll">
-          <div class="jd-section">
-            <h4>职务说明</h4>
-            <p>面向亚太地区销售企业云安全解决方案。</p>
-            <p>发掘潜在客户并推进销售机会。</p>
-            <p>使用 CRM 系统管理客户信息和销售活动。</p>
-            <p>与跨国团队合作达成销售目标。</p>
-            <p>立足曼谷面向亚太市场的 B2B 销售岗位，适合有销售热情和自驱力的候选人。</p>
-          </div>
-          <div class="requirements-section">
-            <h4>应聘条件</h4>
-            <ul class="requirements-list">
-              <li>中文和英文流利。</li>
-              <li>销售、市场推广或客户管理经验。</li>
-              <li>自驱力强，能独立工作。</li>
-              <li>出色的问题解决和谈判能力。</li>
-              <li>对数字营销或科技行业感兴趣。</li>
-              <li>有 B2B 销售经验者优先。</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="card-footer">
-        <div class="footer-row two-buttons">
-          <a class="process" target="_blank" rel="noopener" href="https://app.hallo.ai/teleperformance/ai-assessment/interview/zh?assessmentTypeId=VEhDOEFMRHdKWmtZdFoxREJjMHQ=">AI 能力评估</a>
-          <a class="process" href="{{ site.baseurl }}/hiring-process.html">了解招聘流程</a>
-        </div>
-        <div class="footer-row two-buttons">
-          <a class="apply" target="_blank" rel="noopener" href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=chinese">立即申请</a>
-          <a class="book" href="https://outlook.office.com/book/Chinese@teleperformance.onmicrosoft.com/s/tEpdSOHeX0SbvhMZg_dyvQ2?ismsaljsauthenabled" data-tooltip="申请后，请预约方便的面试时间。">预约面试</a>
-        </div>
-      </div>
-    </article>
-
-  </div>
-</section>
-
-<section class="section-padded" style="text-align: center; background: var(--tp-off);">
-  <p style="color: var(--tp-gray); margin-bottom: 1rem;">查看更多职位或其他语言机会</p>
-  <a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=chinese" target="_blank" class="btn btn-gold">查看全部华语职位 →</a>
-  <a href="https://tpmyandtpth.github.io/LP/" target="_blank" class="btn btn-primary" style="margin-left: 0.75rem;">其他语言职位 →</a>
-</section>
+<a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=chinese" target="_blank" rel="noopener noreferrer" class="floating-apply">立即申请</a>
+<a href="https://app.hallo.ai/teleperformance/ai-assessment/interview/zh?assessmentTypeId=VEhDOEFMRHdKWmtZdFoxREJjMHQ=" target="_blank" rel="noopener noreferrer" class="floating-ai">🤖 AI 能力评估</a>
+<button class="back-to-top" id="backToTop">↑</button>
 
 <script>
-(function(){
-  const cards = document.querySelectorAll('#jobGrid .card');
-  const q     = document.getElementById('q');
-  const loc   = document.getElementById('loc');
-  const lang  = document.getElementById('lang');
-  const shift = document.getElementById('shift');
-  const type  = document.getElementById('type');
-  const tabs  = document.querySelectorAll('.tab');
-  const count = document.getElementById('count');
-
-  function filter(){
-    const keyword = q.value.toLowerCase();
-    const fLoc    = loc.value;
-    const fLang   = lang.value;
-    const fShift  = shift.value;
-    const fType   = type.value;
-    let activeTab = 'all';
-    tabs.forEach(t => { if(t.classList.contains('active')) activeTab = t.dataset.tab; });
-
-    let visible = 0;
-    cards.forEach(c => {
-      const cLoc   = c.dataset.loc;
-      const cLang  = c.dataset.lang;
-      const cShift = c.dataset.shift;
-      const cType  = c.dataset.type;
-      const cKeys  = (c.dataset.keywords || '').toLowerCase();
-      const cText  = c.textContent.toLowerCase();
-
-      let show = true;
-      if(keyword && !cText.includes(keyword) && !cKeys.includes(keyword)) show = false;
-      if(fLoc   && cLoc   !== fLoc)   show = false;
-      if(fLang  && cLang  !== fLang)  show = false;
-      if(fShift && cShift !== fShift) show = false;
-      if(fType  && cType  !== fType)  show = false;
-
-      if(activeTab !== 'all'){
-        if(activeTab === 'zh' || activeTab === 'bilingual'){
-          if(cLang !== activeTab) show = false;
-        } else {
-          if(cLoc !== activeTab) show = false;
-        }
-      }
-
-      c.style.display = show ? '' : 'none';
-      if(show) visible++;
-    });
-    count.textContent = visible + ' 个职位';
-  }
-
-  [q, loc, lang, shift, type].forEach(el => el.addEventListener('input', filter));
-  tabs.forEach(t => t.addEventListener('click', function(){
-    tabs.forEach(x => x.classList.remove('active'));
-    this.classList.add('active');
-    filter();
-  }));
-
-  filter();
-})();
+(function(){const t=document.getElementById('mobileToggle'),m=document.getElementById('mobileMenu');if(t&&m){t.addEventListener('click',function(){t.classList.toggle('active');m.classList.toggle('active');t.setAttribute('aria-expanded',m.classList.contains('active'))});m.querySelectorAll('a').forEach(a=>{a.addEventListener('click',()=>{t.classList.remove('active');m.classList.remove('active');t.setAttribute('aria-expanded','false')})});document.addEventListener('click',e=>{if(!m.contains(e.target)&&!t.contains(e.target)){m.classList.remove('active');t.classList.remove('active');t.setAttribute('aria-expanded','false')}})}})();
+(function(){const b=document.getElementById('backToTop');if(!b)return;window.addEventListener('scroll',()=>{b.classList.toggle('show',window.pageYOffset>300)});b.addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})})})();
+const cards=[...document.querySelectorAll('.jobs .card')];const count=document.getElementById('count');if(count)count.textContent='当前招聘中：'+cards.length+'个职位';
 </script>
+</body>
+</html>
