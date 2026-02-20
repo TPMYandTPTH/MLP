@@ -203,7 +203,6 @@
             if (href.startsWith('javascript:')) return;
             if (href.includes('icims.com')) return;  // Already handled separately
             // LINE removed     // External
-            if (href.includes('forms.office.com')) return; // External
             if (href.includes('youtube.com')) return;  // External
             if (href.includes('vtour.cloud')) return;  // External
             if (href.includes('linkedin.com')) return;  // External
