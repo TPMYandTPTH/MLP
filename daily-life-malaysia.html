@@ -184,6 +184,57 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
 @media(max-width:768px){.grid-3{grid-template-columns:1fr}.grid-2{grid-template-columns:1fr}.process-rail{grid-template-columns:1fr}.process-rail::before{display:none}.ta-team-grid{grid-template-columns:repeat(2,1fr)}.offices-grid{grid-template-columns:1fr}.footer-content{grid-template-columns:1fr;text-align:center}nav{display:none}.mobile-toggle{display:block}.floating-ai{bottom:80px;right:20px}.back-to-top{bottom:140px}.cta-buttons{flex-direction:column;align-items:center}}
 @media(max-width:480px){.ta-team-grid{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+
+/* Bilingual toggle */
+.local-only{display:inline}
+.expat-only{display:none}
+body.expat-mode .local-only{display:none!important}
+body.expat-mode .expat-only{display:inline!important}
+div.local-only{display:block}
+div.expat-only{display:none}
+body.expat-mode div.local-only{display:none!important}
+body.expat-mode div.expat-only{display:block!important}
+li.local-only{display:list-item}
+li.expat-only{display:none}
+body.expat-mode li.local-only{display:none!important}
+body.expat-mode li.expat-only{display:list-item!important}
+/* Scroll animations */
+.fade-in{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.fade-in.visible{opacity:1;transform:translateY(0)}
+.fade-in-left{opacity:0;transform:translateX(-30px);transition:opacity .7s ease,transform .7s ease}
+.fade-in-left.visible{opacity:1;transform:translateX(0)}
+.fade-in-right{opacity:0;transform:translateX(30px);transition:opacity .7s ease,transform .7s ease}
+.fade-in-right.visible{opacity:1;transform:translateX(0)}
+/* Header lang switcher */
+.header-lang-switch{display:flex;gap:4px;align-items:center;margin-left:.5rem}
+.header-lang-btn{padding:.25rem .6rem;border-radius:14px;font-size:.7rem;font-weight:600;cursor:pointer;border:1.5px solid var(--tp-light);background:transparent;color:var(--tp-gray);transition:all .3s;white-space:nowrap}
+.header-lang-btn:hover{border-color:var(--gold-primary);color:#000}
+.header-lang-btn.active{background:var(--gold-primary);color:#000;border-color:var(--gold-primary)}
+/* Compare table */
+.compare-table{width:100%;border-collapse:collapse;max-width:var(--max-width);margin:1rem auto;border-radius:12px;overflow:hidden;box-shadow:var(--shadow-sm)}
+.compare-table th{background:var(--tp-black);color:#fff;padding:.75rem 1rem;font-size:.85rem;text-align:left}
+.compare-table td{padding:.65rem 1rem;border-bottom:1px solid var(--tp-light);font-size:.85rem}
+.compare-table tr:nth-child(even){background:var(--tp-off)}
+.compare-table tr:hover{background:var(--gold-pale)}
+/* Note box */
+.note-box{background:var(--tp-off);border-left:4px solid var(--gold-primary);padding:1rem 1.25rem;border-radius:0 8px 8px 0;margin-top:1.5rem;max-width:var(--max-width);margin-left:auto;margin-right:auto}
+.note-box p{font-size:.85rem;color:var(--tp-gray-dark)}
+/* Quick stats */
+.quick-stats{display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;margin-bottom:2rem}
+.quick-stat{text-align:center;padding:.75rem 1.5rem;background:#fff;border-radius:12px;border:1px solid var(--tp-light);min-width:120px}
+.quick-stat-number{font-size:1.5rem;font-weight:900;color:var(--gold-dark);display:block}
+.quick-stat-label{font-size:.75rem;color:var(--tp-gray)}
+/* Numbered tips */
+.tips-list{list-style:none;max-width:800px;margin:0 auto;counter-reset:tip}
+.tips-list li{padding:.75rem 0 .75rem 2.5rem;border-bottom:1px solid var(--tp-light);position:relative;font-size:.9rem;color:var(--tp-gray-dark)}
+.tips-list li::before{counter-increment:tip;content:counter(tip);position:absolute;left:0;width:28px;height:28px;background:var(--gold-primary);color:#000;border-radius:50%;display:grid;place-items:center;font-weight:700;font-size:.8rem}
+/* Blockquote */
+.testimonial-card{background:var(--tp-white);border:1px solid var(--tp-light);border-left:4px solid var(--gold-primary);border-radius:12px;padding:1.5rem;box-shadow:var(--shadow-sm)}
+.testimonial-card blockquote{font-style:italic;line-height:1.8;margin-bottom:1rem;color:var(--tp-gray-dark)}
+.testimonial-card cite{font-style:normal;font-weight:600;font-size:.85rem}
+@media(max-width:768px){.quick-stats{gap:.75rem}.quick-stat{min-width:90px;padding:.5rem .75rem}}
+@media(prefers-reduced-motion:reduce){.fade-in,.fade-in-left,.fade-in-right{opacity:1;transform:none}}
+
 </style>
 </head>
 <body>
@@ -196,36 +247,106 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
   </div>
   <nav class="mobile-menu" id="mobileMenu" aria-label="移动端导航"><ul><li><a href="index.html">首页</a></li><li><a href="open-jobs.html">职位列表</a></li><li><a href="about-tp.html">关于TP</a></li><li><a href="salary-and-benefits.html">薪资福利</a></li><li><a href="hiring-process.html">招聘流程</a></li><li><a href="why-malaysia-thailand.html">城市介绍</a></li><li><a href="relocation-visa.html">签证·搬迁</a></li><li><a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=chinese" target="_blank" rel="noopener noreferrer" class="apply-btn">立即申请</a></li></ul></nav>
 </header>
-<main id="main">
+<main>
+  <section class="page-hero"><div class="container">
+    <h1 class="fade-in" data-local="Daily Life in Malaysia" data-expat="当地生活">当地生活</h1>
+    <p class="hero-sub fade-in" data-local="Compare China更有&quot;余裕&quot;的life可以feel的country。Food、transport、住所、medical、weekend到，life的全貌介绍。" data-expat="比中国更有&quot;余裕&quot;的生活可以感受的国家。餐饮、交通、住所、医疗、周末，生活的全貌介绍。">比中国更有"余裕"的生活可以感受的国家。餐饮、交通、住所、医疗、周末，生活的全貌介绍。</p>
+  </div></section>
 
-  <section class="hero-dark">
-    <h1>日常生活指南</h1>
-    <p>马来西亚和泰国的衣食住行</p>
-  </section>
-  <section class="section-padded">
-    <div class="container">
-      <h2 class="section-title">生活全攻略</h2>
-      <div class="grid-2">
-        <div class="card"><div class="card-icon">🏠</div><h3>住房</h3><p>吉隆坡公寓月租约 RM1,500-3,000（约 ¥2,300-4,600），通常包含泳池、健身房。公司提供搬迁补贴和住房指导。</p></div>
-        <div class="card"><div class="card-icon">🍜</div><h3>饮食</h3><p>一顿饭约 RM10-25（约 ¥15-40），中餐馆遍布。超市有丰富的中国食材和调料。</p></div>
-        <div class="card"><div class="card-icon">🚇</div><h3>交通</h3><p>吉隆坡有完善的地铁和公交系统。Grab（东南亚版滴滴）非常方便。月交通费约 RM200-400。</p></div>
-        <div class="card"><div class="card-icon">📱</div><h3>通讯</h3><p>手机套餐便宜，月费约 RM30-60（约 ¥45-90），网络覆盖好。支付宝、微信支付部分商户可用。</p></div>
-        <div class="card"><div class="card-icon">🏥</div><h3>医疗</h3><p>公司提供全面医疗保险。马来西亚医疗水平高，私立医院服务好，费用远低于中国。</p></div>
-        <div class="card"><div class="card-icon">🎉</div><h3>娱乐</h3><p>购物中心多，电影、KTV、健身房等应有尽有。周末可以去海岛、高原避暑或邻国旅行。</p></div>
-      </div>
+  <section class="content-section" style="padding:50px 20px"><div class="container">
+    <h2 class="section-title fade-in" data-local="Food：Affordable Price" data-expat="餐饮：实惠价格">餐饮：实惠价格</h2>
+    <p class="section-subtitle fade-in" data-local="Multinational Gourmet是Daily" data-expat="多国美食是日常">多国美食是日常</p>
+    <div class="fade-in" style="background:var(--tp-off);border-radius:12px;padding:2rem;margin-bottom:1.5rem">
+      <p data-local="Malay/Chinese/Indian/hawker加上，Korean·Western·Japanese到wide range选择。华人food especially complete。" data-expat="马来/中华/印度/小贩加上，韩国·西餐·日本料理广泛选择。华人餐饮特别完善。">马来/中华/印度/小贩加上，韩国·西餐·日本料理广泛选择。华人餐饮特别完善。</p>
     </div>
-  </section>
-  <section class="cta-section">
-    <div class="container" style="text-align:center">
-      <h2 class="section-title">准备好了吗？</h2>
-      <p class="section-subtitle">开始你的海外职业之旅</p>
-      <div class="cta-buttons">
-        <a class="btn-cta-primary" href="https://app.hallo.ai/teleperformance/ai-assessment/interview/zh?assessmentTypeId=VEhDOEFMRHdKWmtZdFoxREJjMHQ=" target="_blank" rel="noopener noreferrer">AI 能力评估</a>
-        <a class="btn-cta-secondary" href="https://outlook.office.com/book/Chinese@teleperformance.onmicrosoft.com/s/tEpdSOHeX0SbvhMZg_dyvQ2?ismsaljsauthenabled" target="_blank" rel="noopener noreferrer">预约面谈</a>
-        <a class="btn-cta-outline" href="open-jobs.html">查看职位</a>
-      </div>
+    <div class="fade-in" style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;background:#fff;border-radius:12px;overflow:hidden;box-shadow:var(--shadow-sm)">
+      <thead><tr style="background:var(--tp-black);color:var(--tp-white)"><th style="padding:.75rem 1rem;text-align:left" data-local="Category" data-expat="类别">类别</th><th style="padding:.75rem 1rem" data-local="Price(KL)" data-expat="价格(KL)">价格(KL)</th><th style="padding:.75rem 1rem" data-local="人民币约" data-expat="人民币约">人民币约</th></tr></thead>
+      <tbody>
+        <tr style="border-bottom:1px solid var(--tp-light)"><td style="padding:.75rem 1rem" data-local="Hawker·Local食堂" data-expat="小贩·当地食堂">小贩·当地食堂</td><td style="padding:.75rem 1rem">RM10〜18</td><td style="padding:.75rem 1rem">约¥15〜27</td></tr>
+        <tr style="border-bottom:1px solid var(--tp-light)"><td style="padding:.75rem 1rem" data-local="Cafe系Lunch" data-expat="咖啡馆午餐">咖啡馆午餐</td><td style="padding:.75rem 1rem">RM25〜45</td><td style="padding:.75rem 1rem">约¥38〜68</td></tr>
+        <tr><td style="padding:.75rem 1rem" data-local="Coffee" data-expat="咖啡">咖啡</td><td style="padding:.75rem 1rem">RM8〜15</td><td style="padding:.75rem 1rem">约¥12〜23</td></tr>
+      </tbody>
+    </table></div>
+    <p class="fade-in" style="font-size:.85rem;color:var(--tp-gray);margin-top:1rem" data-local="KL是AEON/Village Grocer/NSK等Chinese supermarket complete" data-expat="KL有AEON/Village Grocer/NSK等华人超市完善">KL有AEON/Village Grocer/NSK等华人超市完善</p>
+  </div></section>
+
+  <section class="content-section" style="padding:50px 20px;background:var(--tp-off)"><div class="container">
+    <h2 class="section-title fade-in" data-local="Transport：电车＋Grab Easy Move" data-expat="交通：电车＋Grab轻松移动">交通：电车＋Grab轻松移动</h2>
+    <div class="cards fade-in" style="grid-template-columns:repeat(2,1fr)">
+      <div class="card"><div class="card-icon">🚇</div><h3 data-local="Public Transport" data-expat="公共交通">公共交通</h3><p data-local="LRT/MRT/Monorail cover main area。Door to door是Grab很convenient & affordable。Monthly total是几百块level。" data-expat="LRT/MRT/单轨覆盖主要区域。门到门是Grab很方便又实惠。月度总计是几百块水平。">LRT/MRT/单轨覆盖主要区域。门到门是Grab很方便又实惠。月度总计是几百块水平。</p></div>
+      <div class="card"><div class="card-icon">💡</div><h3 data-local="Commute TIPS" data-expat="通勤小贴士">通勤小贴士</h3><ul style="padding-left:1.2rem;font-size:.9rem">
+        <li data-local="沿线near station住→transport cost & time save" data-expat="沿线近站住→交通费和时间节省">沿线近站住→交通费和时间节省</li>
+        <li data-local="Peak time Grab price up，错峰commute也consider" data-expat="高峰时间Grab价格上涨，错峰通勤也考虑">高峰时间Grab价格上涨，错峰通勤也考虑</li>
+        <li data-local="短distance walk＋电车，回家Grab等smart combine" data-expat="短距离步行＋电车，回家Grab等聪明组合">短距离步行＋电车，回家Grab等聪明组合</li>
+      </ul></div>
     </div>
-  </section></main>
+  </div></section>
+
+  <section class="content-section" style="padding:50px 20px"><div class="container">
+    <h2 class="section-title fade-in" data-local="住所：Equipment Included是Standard" data-expat="住所：设备包含是标准">住所：设备包含是标准</h2>
+    <div class="cards fade-in">
+      <div class="card"><div class="card-icon">🏢</div><h3 data-local="Property Feature" data-expat="房产特色">房产特色</h3><ul style="padding-left:1.2rem;font-size:.9rem">
+        <li data-local="Furniture·appliance（full furnished）付" data-expat="家具·家电（全配）齐全">家具·家电（全配）齐全</li>
+        <li data-local="24h security & gate" data-expat="24小时保安和门禁">24小时保安和门禁</li>
+        <li data-local="Common facility：Pool/Gym/Sauna/BBQ/Lounge" data-expat="公共设施：泳池/健身房/桑拿/烧烤/休息室">公共设施：泳池/健身房/桑拿/烧烤/休息室</li>
+        <li data-local="Parking 1台included的property也很多" data-expat="停车位1个包含的房产也很多">停车位1个包含的房产也很多</li>
+      </ul></div>
+      <div class="card"><div class="card-icon">📍</div><h3 data-local="Area Image" data-expat="区域印象">区域印象</h3><ul style="padding-left:1.2rem;font-size:.9rem">
+        <li data-local="Mont Kiara — Expat多·高级condo·生活convenience◎" data-expat="满家乐 — 外籍人士多·高级公寓·生活便利◎">满家乐 — 外籍人士多·高级公寓·生活便利◎</li>
+        <li data-local="KLCC周边 — Downtown·最新property·commute便利◎" data-expat="KLCC周边 — 市中心·最新房产·通勤便利◎">KLCC周边 — 市中心·最新房产·通勤便利◎</li>
+        <li data-local="George Town — 历史区near·food complete·热闹" data-expat="乔治城 — 历史区近·餐饮完善·热闹">乔治城 — 历史区近·餐饮完善·热闹</li>
+      </ul></div>
+      <div class="card"><div class="card-icon">💵</div><h3 data-local="Rent相场（1LDK）" data-expat="租金行情（一室一厅）">租金行情（一室一厅）</h3><ul style="padding-left:1.2rem;font-size:.9rem">
+        <li>KL: RM1,500〜2,500（约¥2,300〜3,800）</li>
+        <li data-local="Penang: RM1,300〜2,100（compare KL略低）" data-expat="槟城: RM1,300〜2,100（比KL略低）">槟城: RM1,300〜2,100（比KL略低）</li>
+      </ul><p style="font-size:.8rem;color:var(--tp-gray);margin-top:.5rem">※参考：根据房产·设施变动</p></div>
+    </div>
+  </div></section>
+
+  <section class="content-section" style="padding:50px 20px;background:var(--tp-off)"><div class="container">
+    <h2 class="section-title fade-in" data-local="Medical·Safety" data-expat="医疗·安全">医疗·安全</h2>
+    <div class="cards fade-in" style="grid-template-columns:repeat(2,1fr)">
+      <div class="card"><div class="card-icon">🏥</div><h3 data-local="Medical" data-expat="医疗">医疗</h3><p data-local="Medical水准高，KL/Penang都有华语service的hospital·clinic。Company的medical insurance也complete安心。" data-expat="医疗水准高，KL/槟城都有华语服务的医院·诊所。公司的医疗保险也完善安心。">医疗水准高，KL/槟城都有华语服务的医院·诊所。公司的医疗保险也完善安心。</p></div>
+      <div class="card"><div class="card-icon">🛡️</div><h3 data-local="Safety" data-expat="安全">安全</h3><p data-local="治安relatively stable。Night是bright的road·人多的area choose。Grab pickup pin accurate。" data-expat="治安相对稳定。夜间选择明亮道路·人多的区域。Grab接车定位准确。">治安相对稳定。夜间选择明亮道路·人多的区域。Grab接车定位准确。</p></div>
+    </div>
+  </div></section>
+
+  <section class="content-section" style="padding:50px 20px"><div class="container">
+    <h2 class="section-title fade-in" data-local="Shopping & Communication" data-expat="购物与通讯">购物与通讯</h2>
+    <div class="cards fade-in" style="grid-template-columns:repeat(3,1fr)">
+      <div class="card"><div class="card-icon">🛍️</div><h3 data-local="Shopping" data-expat="购物">购物</h3><p data-local="Giant mall·supermarket点在。KLCC、Pavilion、Mid Valley等&quot;what ever都有&quot;" data-expat="大型商场·超市遍布。KLCC、Pavilion、Mid Valley等&quot;什么都有&quot;">大型商场·超市遍布。KLCC、Pavilion、Mid Valley等"什么都有"</p></div>
+      <div class="card"><div class="card-icon">📱</div><h3 data-local="Communication" data-expat="通讯">通讯</h3><p data-local="Mobile是prepaid和low price plan complete。月RM40前后是目安。" data-expat="手机预付费和低价套餐完善。月RM40前后（约¥60）是参考。">手机预付费和低价套餐完善。月RM40前后（约¥60）是参考。</p></div>
+      <div class="card"><div class="card-icon">🍜</div><h3 data-local="Chinese Store" data-expat="华人店铺">华人店铺</h3><p data-local="Chinese supermarket、中餐厅very多（KL）。Hometown的taste easy to find。" data-expat="华人超市、中餐厅非常多（KL）。家乡的味道容易找到。">华人超市、中餐厅非常多（KL）。家乡的味道容易找到。</p></div>
+    </div>
+  </div></section>
+
+  <section class="content-section" style="padding:50px 20px;background:var(--tp-off)"><div class="container">
+    <h2 class="section-title fade-in" data-local="Weekend：Sea也Mountain也马上那里" data-expat="周末：海也山也马上那里">周末：海也山也马上那里</h2>
+    <div class="cards fade-in" style="grid-template-columns:repeat(3,1fr)">
+      <div class="card"><div class="card-icon">🏖️</div><h3 data-local="Weekend Resort" data-expat="周末度假">周末度假</h3><p data-local="Langkawi/Redang/Penang等island resort。Grab＋short flight easy travel" data-expat="兰卡威/热浪岛/槟城等岛屿度假。Grab＋短途飞行轻松旅行">兰卡威/热浪岛/槟城等岛屿度假。Grab＋短途飞行轻松旅行</p></div>
+      <div class="card"><div class="card-icon">✈️</div><h3 data-local="Nearby Country" data-expat="邻近国家">邻近国家</h3><p data-local="LCC（AirAsia）Singapore/Vietnam/Bali/Taiwan等2〜4 hour圈内。Weekend海外trip也日常。" data-expat="廉航（AirAsia）新加坡/越南/巴厘岛/台湾等2〜4小时圈内。周末海外旅行也是日常。">廉航（AirAsia）新加坡/越南/巴厘岛/台湾等2〜4小时圈内。周末海外旅行也是日常。</p></div>
+      <div class="card"><div class="card-icon">☕</div><h3 data-local="Cafe & Food" data-expat="咖啡馆和美食">咖啡馆和美食</h3><p data-local="Eating out是daily price。New店explore的fun endless。" data-expat="外出就餐是日常价格。新店探索的乐趣无穷。">外出就餐是日常价格。新店探索的乐趣无穷。</p></div>
+    </div>
+  </div></section>
+
+  <section class="content-section" style="padding:50px 20px"><div class="container">
+    <h2 class="section-title fade-in" data-local="Life TIPS" data-expat="生活小贴士">生活小贴士</h2>
+    <div class="cards fade-in" style="grid-template-columns:repeat(3,1fr)">
+      <div class="card"><div class="card-icon">🏠</div><h3 data-local="House Hunting" data-expat="找房">找房</h3><p data-local="Arrival後hotel stay期间viewing→apply smooth。Near station priority决定好效率高。" data-expat="到达后酒店住宿期间看房→申请顺畅。近站优先顺序决定好效率高。">到达后酒店住宿期间看房→申请顺畅。近站优先顺序决定好效率高。</p></div>
+      <div class="card"><div class="card-icon">💳</div><h3 data-local="Payment" data-expat="支付">支付</h3><p data-local="Card & QR payment普及。Rent是bank transfer。Cash少量常备。" data-expat="卡和QR支付普及。租金是银行转账。现金少量常备。">卡和QR支付普及。租金是银行转账。现金少量常备。</p></div>
+      <div class="card"><div class="card-icon">🤝</div><h3 data-local="Community" data-expat="社区">社区</h3><p data-local="Company event和hobby community参加→生活info和friend increase更安心。" data-expat="公司活动和兴趣社区参加→生活信息和朋友增加更安心。">公司活动和兴趣社区参加→生活信息和朋友增加更安心。</p></div>
+    </div>
+  </div></section>
+
+  <section class="cta-section"><div class="container">
+    <h2 class="fade-in">Next Step</h2>
+    <div class="cta-buttons fade-in">
+      <a href="open-jobs.html" class="btn btn-gold" data-local="View Jobs" data-expat="查看职位">查看职位</a>
+      <a href="relocation-visa.html" class="btn btn-secondary" data-local="Relocation Support" data-expat="搬迁支持">搬迁支持</a>
+      <a href="https://outlook.office.com/book/Chinese@teleperformance.onmicrosoft.com/s/tEpdSOHeX0SbvhMZg_dyvQ2?ismsaljsauthenabled" target="_blank" rel="noopener noreferrer" class="btn btn-outline" data-local="Book Chat" data-expat="预约面谈">预约面谈</a>
+    </div>
+  </div></section>
+</main>
 <footer>
   <div class="footer-content">
     <div class="footer-brand"><div class="footer-logo"><img src="photos/TPLogo11.png" alt="TP"><span class="footer-logo-text">TP</span></div><p class="footer-desc">在全球100多个国家运营的全球业务流程外包企业<br>支持华语人才开启新事业</p><div class="badges"><span class="badge-item">🏆 马来西亚最佳职场 连续6年</span><span class="badge-item">🏆 全球最佳职场 连续5年</span></div><div class="footer-cta"><a href="https://www.tp.com/en-my/locations/malaysia/careers/?page=1#contactusmalaysia" target="_blank" rel="noopener noreferrer" class="btn-footer">TP.COM</a></div></div>
@@ -241,6 +362,16 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
 <script>
 (function(){const t=document.getElementById('mobileToggle'),m=document.getElementById('mobileMenu');if(t&&m){t.addEventListener('click',function(){t.classList.toggle('active');m.classList.toggle('active');t.setAttribute('aria-expanded',m.classList.contains('active'))});m.querySelectorAll('a').forEach(a=>{a.addEventListener('click',()=>{t.classList.remove('active');m.classList.remove('active');t.setAttribute('aria-expanded','false')})});document.addEventListener('click',e=>{if(!m.contains(e.target)&&!t.contains(e.target)){m.classList.remove('active');t.classList.remove('active');t.setAttribute('aria-expanded','false')}})}})();
 (function(){const b=document.getElementById('backToTop');if(!b)return;window.addEventListener('scroll',()=>{b.classList.toggle('show',window.pageYOffset>300)});b.addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})})})();
+
+// Language system
+let currentLanguage=localStorage.getItem('mlpLang')||'local';
+function setLanguage(l){currentLanguage=l;localStorage.setItem('mlpLang',l);document.body.classList.toggle('expat-mode',l==='expat');var hL=document.getElementById('hdrLocal'),hE=document.getElementById('hdrExpat');if(hL)hL.classList.toggle('active',l==='local');if(hE)hE.classList.toggle('active',l==='expat');}
+document.addEventListener('DOMContentLoaded',function(){setLanguage(currentLanguage)});
+// Scroll animations
+(function(){var els=document.querySelectorAll('.fade-in,.fade-in-left,.fade-in-right');if(!els.length)return;var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});els.forEach(function(el){obs.observe(el)})})();
+
+
+var currentLanguage=localStorage.getItem('mlpLang')||'expat';function setLanguage(l){currentLanguage=l;localStorage.setItem('mlpLang',l);var a=document.getElementById('hdrLocal'),b=document.getElementById('hdrExpat');if(a)a.classList.toggle('active',l==='local');if(b)b.classList.toggle('active',l==='expat');updateAllText(l)}function updateAllText(l){var a=l==='local'?'data-local':'data-expat';document.querySelectorAll('[data-local][data-expat]').forEach(function(e){var t=e.getAttribute(a);if(t)e.innerHTML=t})}document.addEventListener('DOMContentLoaded',function(){setLanguage(currentLanguage)});
 </script>
 </body>
 </html>

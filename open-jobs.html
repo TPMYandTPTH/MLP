@@ -44,7 +44,7 @@ nav a:hover::after{width:100%}
 nav a[aria-current="page"]{font-weight:600}
 nav a[aria-current="page"]::after{width:100%;background:var(--tp-black)}
 .apply-btn{background:var(--tp-black);color:var(--tp-white);padding:.5rem 1.25rem;border-radius:4px;font-weight:600;border:2px solid var(--tp-black);transition:all .3s}
-.apply-btn:hover{background:var(--gold-primary);color:var(--tp-black);border-color:var(--gold-primary)}
+.header-lang-switch{display:flex;gap:4px;align-items:center;margin-left:.5rem}.header-lang-btn{padding:.25rem .6rem;border-radius:14px;font-size:.7rem;font-weight:600;cursor:pointer;border:1.5px solid var(--tp-light);background:transparent;color:var(--tp-gray);transition:all .3s;white-space:nowrap}.header-lang-btn:hover{border-color:var(--gold-primary);color:#000}.header-lang-btn.active{background:var(--gold-primary);color:#000;border-color:var(--gold-primary)}.apply-btn:hover{background:var(--gold-primary);color:var(--tp-black);border-color:var(--gold-primary)}
 .apply-btn::after{display:none}
 .mobile-toggle{display:none;width:36px;height:36px;background:transparent;border:2px solid var(--tp-black);border-radius:4px;cursor:pointer;position:relative}
 .mobile-toggle span{display:block;width:18px;height:2px;background:var(--tp-black);position:absolute;left:50%;transform:translateX(-50%);transition:all .3s}
@@ -156,6 +156,8 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
 @media(max-width:1060px){.grid,.hot-grid{grid-template-columns:repeat(2,1fr)}.card{min-height:600px}}
 @media(max-width:768px){.grid,.hot-grid{grid-template-columns:1fr}.card{min-height:auto}.content-scroll{max-height:400px}.footer-row.two-buttons{grid-template-columns:1fr}nav{display:none}.mobile-toggle{display:block}.floating-ai{bottom:80px;right:20px}.back-to-top{bottom:140px}.footer-content{grid-template-columns:1fr;text-align:center}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+.fade-in{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}.fade-in.visible{opacity:1;transform:translateY(0)}.fade-in-left{opacity:0;transform:translateX(-30px);transition:opacity .7s ease,transform .7s ease}.fade-in-left.visible{opacity:1;transform:translateX(0)}.fade-in-right{opacity:0;transform:translateX(30px);transition:opacity .7s ease,transform .7s ease}.fade-in-right.visible{opacity:1;transform:translateX(0)}
+@media(prefers-reduced-motion:reduce){.fade-in,.fade-in-left,.fade-in-right{opacity:1;transform:none}}
 </style>
 </head>
 <body>
@@ -433,6 +435,9 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
 (function(){const t=document.getElementById('mobileToggle'),m=document.getElementById('mobileMenu');if(t&&m){t.addEventListener('click',function(){t.classList.toggle('active');m.classList.toggle('active');t.setAttribute('aria-expanded',m.classList.contains('active'))});m.querySelectorAll('a').forEach(a=>{a.addEventListener('click',()=>{t.classList.remove('active');m.classList.remove('active');t.setAttribute('aria-expanded','false')})});document.addEventListener('click',e=>{if(!m.contains(e.target)&&!t.contains(e.target)){m.classList.remove('active');t.classList.remove('active');t.setAttribute('aria-expanded','false')}})}})();
 (function(){const b=document.getElementById('backToTop');if(!b)return;window.addEventListener('scroll',()=>{b.classList.toggle('show',window.pageYOffset>300)});b.addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})})})();
 const cards=[...document.querySelectorAll('.jobs .card')];const count=document.getElementById('count');if(count)count.textContent='当前招聘中：'+cards.length+'个职位';
+
+var currentLanguage=localStorage.getItem('mlpLang')||'expat';function setLanguage(l){currentLanguage=l;localStorage.setItem('mlpLang',l);var a=document.getElementById('hdrLocal'),b=document.getElementById('hdrExpat');if(a)a.classList.toggle('active',l==='local');if(b)b.classList.toggle('active',l==='expat');updateAllText(l)}function updateAllText(l){var a=l==='local'?'data-local':'data-expat';document.querySelectorAll('[data-local][data-expat]').forEach(function(e){var t=e.getAttribute(a);if(t)e.innerHTML=t})}document.addEventListener('DOMContentLoaded',function(){setLanguage(currentLanguage)});
+(function(){var els=document.querySelectorAll('.fade-in,.fade-in-left,.fade-in-right');if(!els.length)return;var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});els.forEach(function(el){obs.observe(el)})})();
 </script>
 </body>
 </html>

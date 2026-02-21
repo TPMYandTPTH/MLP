@@ -184,6 +184,57 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
 @media(max-width:768px){.grid-3{grid-template-columns:1fr}.grid-2{grid-template-columns:1fr}.process-rail{grid-template-columns:1fr}.process-rail::before{display:none}.ta-team-grid{grid-template-columns:repeat(2,1fr)}.offices-grid{grid-template-columns:1fr}.footer-content{grid-template-columns:1fr;text-align:center}nav{display:none}.mobile-toggle{display:block}.floating-ai{bottom:80px;right:20px}.back-to-top{bottom:140px}.cta-buttons{flex-direction:column;align-items:center}}
 @media(max-width:480px){.ta-team-grid{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+
+/* Bilingual toggle */
+.local-only{display:inline}
+.expat-only{display:none}
+body.expat-mode .local-only{display:none!important}
+body.expat-mode .expat-only{display:inline!important}
+div.local-only{display:block}
+div.expat-only{display:none}
+body.expat-mode div.local-only{display:none!important}
+body.expat-mode div.expat-only{display:block!important}
+li.local-only{display:list-item}
+li.expat-only{display:none}
+body.expat-mode li.local-only{display:none!important}
+body.expat-mode li.expat-only{display:list-item!important}
+/* Scroll animations */
+.fade-in{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.fade-in.visible{opacity:1;transform:translateY(0)}
+.fade-in-left{opacity:0;transform:translateX(-30px);transition:opacity .7s ease,transform .7s ease}
+.fade-in-left.visible{opacity:1;transform:translateX(0)}
+.fade-in-right{opacity:0;transform:translateX(30px);transition:opacity .7s ease,transform .7s ease}
+.fade-in-right.visible{opacity:1;transform:translateX(0)}
+/* Header lang switcher */
+.header-lang-switch{display:flex;gap:4px;align-items:center;margin-left:.5rem}
+.header-lang-btn{padding:.25rem .6rem;border-radius:14px;font-size:.7rem;font-weight:600;cursor:pointer;border:1.5px solid var(--tp-light);background:transparent;color:var(--tp-gray);transition:all .3s;white-space:nowrap}
+.header-lang-btn:hover{border-color:var(--gold-primary);color:#000}
+.header-lang-btn.active{background:var(--gold-primary);color:#000;border-color:var(--gold-primary)}
+/* Compare table */
+.compare-table{width:100%;border-collapse:collapse;max-width:var(--max-width);margin:1rem auto;border-radius:12px;overflow:hidden;box-shadow:var(--shadow-sm)}
+.compare-table th{background:var(--tp-black);color:#fff;padding:.75rem 1rem;font-size:.85rem;text-align:left}
+.compare-table td{padding:.65rem 1rem;border-bottom:1px solid var(--tp-light);font-size:.85rem}
+.compare-table tr:nth-child(even){background:var(--tp-off)}
+.compare-table tr:hover{background:var(--gold-pale)}
+/* Note box */
+.note-box{background:var(--tp-off);border-left:4px solid var(--gold-primary);padding:1rem 1.25rem;border-radius:0 8px 8px 0;margin-top:1.5rem;max-width:var(--max-width);margin-left:auto;margin-right:auto}
+.note-box p{font-size:.85rem;color:var(--tp-gray-dark)}
+/* Quick stats */
+.quick-stats{display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;margin-bottom:2rem}
+.quick-stat{text-align:center;padding:.75rem 1.5rem;background:#fff;border-radius:12px;border:1px solid var(--tp-light);min-width:120px}
+.quick-stat-number{font-size:1.5rem;font-weight:900;color:var(--gold-dark);display:block}
+.quick-stat-label{font-size:.75rem;color:var(--tp-gray)}
+/* Numbered tips */
+.tips-list{list-style:none;max-width:800px;margin:0 auto;counter-reset:tip}
+.tips-list li{padding:.75rem 0 .75rem 2.5rem;border-bottom:1px solid var(--tp-light);position:relative;font-size:.9rem;color:var(--tp-gray-dark)}
+.tips-list li::before{counter-increment:tip;content:counter(tip);position:absolute;left:0;width:28px;height:28px;background:var(--gold-primary);color:#000;border-radius:50%;display:grid;place-items:center;font-weight:700;font-size:.8rem}
+/* Blockquote */
+.testimonial-card{background:var(--tp-white);border:1px solid var(--tp-light);border-left:4px solid var(--gold-primary);border-radius:12px;padding:1.5rem;box-shadow:var(--shadow-sm)}
+.testimonial-card blockquote{font-style:italic;line-height:1.8;margin-bottom:1rem;color:var(--tp-gray-dark)}
+.testimonial-card cite{font-style:normal;font-weight:600;font-size:.85rem}
+@media(max-width:768px){.quick-stats{gap:.75rem}.quick-stat{min-width:90px;padding:.5rem .75rem}}
+@media(prefers-reduced-motion:reduce){.fade-in,.fade-in-left,.fade-in-right{opacity:1;transform:none}}
+
 </style>
 </head>
 <body>
@@ -196,47 +247,64 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
   </div>
   <nav class="mobile-menu" id="mobileMenu" aria-label="移动端导航"><ul><li><a href="index.html">首页</a></li><li><a href="open-jobs.html">职位列表</a></li><li><a href="about-tp.html">关于TP</a></li><li><a href="salary-and-benefits.html">薪资福利</a></li><li><a href="hiring-process.html">招聘流程</a></li><li><a href="why-malaysia-thailand.html">城市介绍</a></li><li><a href="relocation-visa.html">签证·搬迁</a></li><li><a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=chinese" target="_blank" rel="noopener noreferrer" class="apply-btn">立即申请</a></li></ul></nav>
 </header>
-<main id="main">
+<main>
+  <section class="page-hero"><div class="container">
+    <h1 class="fade-in" data-local="Hiring Process" data-expat="招聘流程">招聘流程</h1>
+    <p class="hero-sub fade-in" data-local="华语recruitment team全程协助。从投递resume到成功入职，每一步都有professional guidance。" data-expat="华语招聘团队全程协助。从投递简历到成功入职，每一步都有专业指导。">华语招聘团队全程协助。从投递简历到成功入职，每一步都有专业指导。</p>
+  </div></section>
 
-  <section class="hero-dark">
-    <h1>招聘流程</h1>
-    <p>从申请到入职，一步步带你了解</p>
-  </section>
-  <section class="section-padded">
-    <div class="container">
-      <h2 class="section-title">五步入职</h2>
-      <p class="section-subtitle">整个流程大约2-4周</p>
-      <ol class="process-rail">
-        <li class="step-card"><div class="step-head"><span class="step-dot">1</span><span class="step-title">提交简历</span></div><p class="step-desc">通过 iCIMS 在线系统提交简历</p></li>
-        <li class="step-card"><div class="step-head"><span class="step-dot">2</span><span class="step-title">AI 能力评估</span></div><p class="step-desc">完成线上 AI 测评</p></li>
-        <li class="step-card"><div class="step-head"><span class="step-dot">3</span><span class="step-title">面试</span></div><p class="step-desc">与招聘团队线上/现场面试</p></li>
-        <li class="step-card"><div class="step-head"><span class="step-dot">4</span><span class="step-title">录用通知</span></div><p class="step-desc">收到 Offer，确认入职细节</p></li>
-        <li class="step-card"><div class="step-head"><span class="step-dot">5</span><span class="step-title">入职培训</span></div><p class="step-desc">签证办理 + 入职培训</p></li>
-      </ol>
+  <section class="content-section" style="padding:50px 20px"><div class="container">
+    <h2 class="section-title fade-in" data-local="Quick Overview" data-expat="速览">速览</h2>
+    <div class="cards fade-in" style="grid-template-columns:repeat(3,1fr)">
+      <div class="card" style="text-align:center;padding:2rem"><div style="font-size:2rem">💬</div><h3 data-local="Interview Rounds" data-expat="面试次数">面试次数</h3><p data-local="<strong>2-3轮</strong>（Recruiter > Department Manager），具体次数因project而异" data-expat="<strong>2-3轮</strong>（招聘官 > 部门经理），具体次数因项目而异"><strong>2-3轮</strong>（招聘官 > 部门经理），具体次数因项目而异</p></div>
+      <div class="card" style="text-align:center;padding:2rem"><div style="font-size:2rem">⏱️</div><h3 data-local="Duration" data-expat="所需时间">所需时间</h3><p data-local="每轮interview <strong>30-45分钟</strong>，overall cycle约 <strong>2-3周</strong>" data-expat="每轮面试 <strong>30-45分钟</strong>，整体周期约 <strong>2-3周</strong>">每轮面试 <strong>30-45分钟</strong>，整体周期约 <strong>2-3周</strong></p></div>
+      <div class="card" style="text-align:center;padding:2rem"><div style="font-size:2rem">💻</div><h3 data-local="Interview Tool" data-expat="面试工具">面试工具</h3><p data-local="Microsoft Teams（send link）。需要stable network和quiet environment。" data-expat="Microsoft Teams（发送链接）。需要稳定网络和安静环境。">Microsoft Teams（发送链接）。需要稳定网络和安静环境。</p></div>
     </div>
-  </section>
-  <section class="section-padded alt">
-    <div class="container">
-      <h2 class="section-title">常见问题</h2>
-      <div class="grid-2">
-        <div class="card"><h3>面试是什么形式？</h3><p>一般为线上面试（Zoom/Teams），也可以选择现场面试。全程可用华语沟通。</p></div>
-        <div class="card"><h3>需要准备什么？</h3><p>简历（中文或英文均可）、身份证/护照信息。无需特殊证书。</p></div>
-        <div class="card"><h3>多久可以入职？</h3><p>从面试到入职一般需要2-4周，签证办理约2-3周。</p></div>
-        <div class="card"><h3>没有经验可以吗？</h3><p>可以！很多岗位欢迎应届毕业生，公司会提供系统的入职培训。</p></div>
-      </div>
+  </div></section>
+
+  <section class="content-section" style="padding:50px 20px;background:var(--tp-off)"><div class="container">
+    <h2 class="section-title fade-in" data-local="Hiring Process（Standard Steps）" data-expat="招聘流程（标准步骤）">招聘流程（标准步骤）</h2>
+    <p class="section-subtitle fade-in" data-local="具体steps因project可能有所不同" data-expat="具体步骤因项目可能有所不同">具体步骤因项目可能有所不同</p>
+    <div class="process-rail fade-in">
+      <div class="process-step"><div class="step-number">1</div><h3 data-local="Submit Resume" data-expat="投递简历">投递简历</h3><p data-local="提交resume" data-expat="提交简历">提交简历</p></div>
+      <div class="process-step"><div class="step-number">2</div><h3 data-local="初审" data-expat="初审">初审</h3><p data-local="3个work days" data-expat="3个工作日">3个工作日</p></div>
+      <div class="process-step"><div class="step-number">3</div><h3 data-local="Interview ①" data-expat="面试 ①">面试 ①</h3><p data-local="Recruiter Interview" data-expat="招聘官面试">招聘官面试</p></div>
+      <div class="process-step"><div class="step-number">4</div><h3 data-local="Interview ②" data-expat="面试 ②">面试 ②</h3><p data-local="Manager Interview" data-expat="经理面试">经理面试</p></div>
+      <div class="process-step"><div class="step-number">5</div><h3 data-local="Skill Assessment" data-expat="能力测评">能力测评</h3><p data-local="Skill Evaluation" data-expat="技能评估">技能评估</p></div>
+      <div class="process-step"><div class="step-number">6</div><h3 data-local="Result" data-expat="结果通知">结果通知</h3><p data-local="约1 week" data-expat="约1周">约1周</p></div>
+      <div class="process-step"><div class="step-number">7</div><h3 data-local="Offer" data-expat="录用">录用</h3><p data-local="Confirm入职" data-expat="确认入职">确认入职</p></div>
     </div>
-  </section>
-  <section class="cta-section">
-    <div class="container" style="text-align:center">
-      <h2 class="section-title">准备好了吗？</h2>
-      <p class="section-subtitle">开始你的海外职业之旅</p>
-      <div class="cta-buttons">
-        <a class="btn-cta-primary" href="https://app.hallo.ai/teleperformance/ai-assessment/interview/zh?assessmentTypeId=VEhDOEFMRHdKWmtZdFoxREJjMHQ=" target="_blank" rel="noopener noreferrer">AI 能力评估</a>
-        <a class="btn-cta-secondary" href="https://outlook.office.com/book/Chinese@teleperformance.onmicrosoft.com/s/tEpdSOHeX0SbvhMZg_dyvQ2?ismsaljsauthenabled" target="_blank" rel="noopener noreferrer">预约面谈</a>
-        <a class="btn-cta-outline" href="open-jobs.html">查看职位</a>
-      </div>
+  </div></section>
+
+  <section class="content-section" style="padding:50px 20px"><div class="container">
+    <h2 class="section-title fade-in" data-local="Online Interview Tips" data-expat="在线面试要点">在线面试要点</h2>
+    <div class="cards fade-in" style="grid-template-columns:repeat(3,1fr)">
+      <div class="card"><div class="card-icon">🖥️</div><h3 data-local="进入Meeting" data-expat="进入会议">进入会议</h3><p data-local="点击link进入，用你的real name（拼音）进入" data-expat="点击链接进入，使用真实姓名">点击链接进入，使用真实姓名</p></div>
+      <div class="card"><div class="card-icon">⏰</div><h3 data-local="前期Preparation" data-expat="前期准备">前期准备</h3><p data-local="提前10分钟check设备。简洁background，close通知" data-expat="提前10分钟检查设备。简洁背景，关闭通知">提前10分钟检查设备。简洁背景，关闭通知</p></div>
+      <div class="card"><div class="card-icon">👔</div><h3 data-local="Dress Code" data-expat="服装建议">服装建议</h3><p data-local="整洁business casual。浅色衣服看起来更精神" data-expat="整洁商务休闲。浅色衣服看起来更精神">整洁商务休闲。浅色衣服看起来更精神</p></div>
     </div>
-  </section></main>
+  </div></section>
+
+  <section class="content-section" style="padding:50px 20px;background:var(--tp-off)"><div class="container">
+    <h2 class="section-title fade-in" data-local="Common Interview Questions" data-expat="常见面试问题">常见面试问题</h2>
+    <div class="cards fade-in" style="grid-template-columns:repeat(2,1fr)">
+      <div class="card" style="padding:1.5rem"><h3 data-local="自我介绍 & Motivation" data-expat="自我介绍和求职动机">自我介绍和求职动机</h3><ul style="padding-left:1.2rem;margin-top:.5rem;font-size:.9rem"><li data-local="简要经历和apply的reason" data-expat="简要经历和应聘理由">简要经历和应聘理由</li><li data-local="为什么choose TP和这个region" data-expat="为什么选择TP和这个地区">为什么选择TP和这个地区</li><li data-local="1年和3年的career goal" data-expat="1年和3年的职业目标">1年和3年的职业目标</li></ul></div>
+      <div class="card" style="padding:1.5rem"><h3 data-local="Customer Service Experience" data-expat="客户服务经验">客户服务经验</h3><ul style="padding-left:1.2rem;margin-top:.5rem;font-size:.9rem"><li data-local="处理difficult client的具体case" data-expat="处理困难客户的具体案例">处理困难客户的具体案例</li><li data-local="如何ensure service quality" data-expat="如何确保服务质量">如何确保服务质量</li><li data-local="收到feedback后的improve方案" data-expat="收到反馈后的改进方案">收到反馈后的改进方案</li></ul></div>
+      <div class="card" style="padding:1.5rem"><h3 data-local="Multicultural & Teamwork" data-expat="多元文化和团队协作">多元文化和团队协作</h3><ul style="padding-left:1.2rem;margin-top:.5rem;font-size:.9rem"><li data-local="与different background同事的cooperation experience" data-expat="与不同背景同事的合作经验">与不同背景同事的合作经验</li><li data-local="Communication时的注意事项" data-expat="沟通时的注意事项">沟通时的注意事项</li><li data-local="遇到problem时的协调方式" data-expat="遇到问题时的协调方式">遇到问题时的协调方式</li></ul></div>
+      <div class="card" style="padding:1.5rem"><h3 data-local="Language & PC Skills" data-expat="语言和电脑技能">语言和电脑技能</h3><ul style="padding-left:1.2rem;margin-top:.5rem;font-size:.9rem"><li data-local="华语business表达和written communication" data-expat="华语商务表达和书面沟通">华语商务表达和书面沟通</li><li data-local="English使用场景（内部communication）" data-expat="英语使用场景（内部沟通）">英语使用场景（内部沟通）</li><li data-local="打字speed和shortcut key应用" data-expat="打字速度和快捷键应用">打字速度和快捷键应用</li></ul></div>
+    </div>
+  </div></section>
+
+  <section class="cta-section"><div class="container">
+    <h2 class="fade-in" data-local="想先understand一下？" data-expat="想先了解一下？">想先了解一下？</h2>
+    <p class="fade-in" data-local="30分钟Casual Chat可以consult任何question，用华语" data-expat="30分钟休闲面谈可以咨询任何问题，用华语">30分钟休闲面谈可以咨询任何问题，用华语</p>
+    <div class="cta-buttons fade-in">
+      <a href="https://app.hallo.ai/teleperformance/ai-assessment/interview/zh?assessmentTypeId=VEhDOEFMRHdKWmtZdFoxREJjMHQ=" target="_blank" rel="noopener noreferrer" class="btn btn-gold">🤖 AI 能力评估</a>
+      <a href="https://outlook.office.com/book/Chinese@teleperformance.onmicrosoft.com/s/tEpdSOHeX0SbvhMZg_dyvQ2?ismsaljsauthenabled" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" data-local="Book Chat" data-expat="预约面谈">预约面谈</a>
+      <a href="open-jobs.html" class="btn btn-outline" data-local="Apply Now" data-expat="立即申请">立即申请</a>
+    </div>
+  </div></section>
+</main>
 <footer>
   <div class="footer-content">
     <div class="footer-brand"><div class="footer-logo"><img src="photos/TPLogo11.png" alt="TP"><span class="footer-logo-text">TP</span></div><p class="footer-desc">在全球100多个国家运营的全球业务流程外包企业<br>支持华语人才开启新事业</p><div class="badges"><span class="badge-item">🏆 马来西亚最佳职场 连续6年</span><span class="badge-item">🏆 全球最佳职场 连续5年</span></div><div class="footer-cta"><a href="https://www.tp.com/en-my/locations/malaysia/careers/?page=1#contactusmalaysia" target="_blank" rel="noopener noreferrer" class="btn-footer">TP.COM</a></div></div>
@@ -252,6 +320,19 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
 <script>
 (function(){const t=document.getElementById('mobileToggle'),m=document.getElementById('mobileMenu');if(t&&m){t.addEventListener('click',function(){t.classList.toggle('active');m.classList.toggle('active');t.setAttribute('aria-expanded',m.classList.contains('active'))});m.querySelectorAll('a').forEach(a=>{a.addEventListener('click',()=>{t.classList.remove('active');m.classList.remove('active');t.setAttribute('aria-expanded','false')})});document.addEventListener('click',e=>{if(!m.contains(e.target)&&!t.contains(e.target)){m.classList.remove('active');t.classList.remove('active');t.setAttribute('aria-expanded','false')}})}})();
 (function(){const b=document.getElementById('backToTop');if(!b)return;window.addEventListener('scroll',()=>{b.classList.toggle('show',window.pageYOffset>300)});b.addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})})})();
+
+// Language system
+let currentLanguage=localStorage.getItem('mlpLang')||'local';
+function setLanguage(l){currentLanguage=l;localStorage.setItem('mlpLang',l);document.body.classList.toggle('expat-mode',l==='expat');var hL=document.getElementById('hdrLocal'),hE=document.getElementById('hdrExpat');if(hL)hL.classList.toggle('active',l==='local');if(hE)hE.classList.toggle('active',l==='expat');}
+document.addEventListener('DOMContentLoaded',function(){setLanguage(currentLanguage)});
+// Scroll animations
+(function(){var els=document.querySelectorAll('.fade-in,.fade-in-left,.fade-in-right');if(!els.length)return;var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});els.forEach(function(el){obs.observe(el)})})();
+
+
+var currentLanguage=localStorage.getItem('mlpLang')||'expat';
+function setLanguage(l){currentLanguage=l;localStorage.setItem('mlpLang',l);var a=document.getElementById('hdrLocal'),b=document.getElementById('hdrExpat');if(a)a.classList.toggle('active',l==='local');if(b)b.classList.toggle('active',l==='expat');updateAllText(l)}
+function updateAllText(l){var a=l==='local'?'data-local':'data-expat';document.querySelectorAll('[data-local][data-expat]').forEach(function(e){var t=e.getAttribute(a);if(t)e.innerHTML=t})}
+document.addEventListener('DOMContentLoaded',function(){setLanguage(currentLanguage)});
 </script>
 </body>
 </html>

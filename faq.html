@@ -38,7 +38,7 @@ nav a:hover::after{width:100%}
 nav a[aria-current="page"]{font-weight:600}
 nav a[aria-current="page"]::after{width:100%;background:var(--tp-black)}
 .apply-btn{background:var(--tp-black);color:var(--tp-white);padding:.5rem 1.25rem;border-radius:4px;font-weight:600;border:2px solid var(--tp-black);transition:all .3s}
-.apply-btn:hover{background:var(--gold-primary);color:var(--tp-black);border-color:var(--gold-primary)}
+.header-lang-switch{display:flex;gap:4px;align-items:center;margin-left:.5rem}.header-lang-btn{padding:.25rem .6rem;border-radius:14px;font-size:.7rem;font-weight:600;cursor:pointer;border:1.5px solid var(--tp-light);background:transparent;color:var(--tp-gray);transition:all .3s;white-space:nowrap}.header-lang-btn:hover{border-color:var(--gold-primary);color:#000}.header-lang-btn.active{background:var(--gold-primary);color:#000;border-color:var(--gold-primary)}.apply-btn:hover{background:var(--gold-primary);color:var(--tp-black);border-color:var(--gold-primary)}
 .apply-btn::after{display:none}
 .mobile-toggle{display:none;width:36px;height:36px;background:transparent;border:2px solid var(--tp-black);border-radius:4px;cursor:pointer;position:relative}
 .mobile-toggle span{display:block;width:18px;height:2px;background:var(--tp-black);position:absolute;left:50%;transform:translateX(-50%);transition:all .3s}
@@ -184,6 +184,8 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
 @media(max-width:768px){.grid-3{grid-template-columns:1fr}.grid-2{grid-template-columns:1fr}.process-rail{grid-template-columns:1fr}.process-rail::before{display:none}.ta-team-grid{grid-template-columns:repeat(2,1fr)}.offices-grid{grid-template-columns:1fr}.footer-content{grid-template-columns:1fr;text-align:center}nav{display:none}.mobile-toggle{display:block}.floating-ai{bottom:80px;right:20px}.back-to-top{bottom:140px}.cta-buttons{flex-direction:column;align-items:center}}
 @media(max-width:480px){.ta-team-grid{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+.fade-in{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}.fade-in.visible{opacity:1;transform:translateY(0)}.fade-in-left{opacity:0;transform:translateX(-30px);transition:opacity .7s ease,transform .7s ease}.fade-in-left.visible{opacity:1;transform:translateX(0)}.fade-in-right{opacity:0;transform:translateX(30px);transition:opacity .7s ease,transform .7s ease}.fade-in-right.visible{opacity:1;transform:translateX(0)}
+@media(prefers-reduced-motion:reduce){.fade-in,.fade-in-left,.fade-in-right{opacity:1;transform:none}}
 </style>
 </head>
 <body>
@@ -196,37 +198,46 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
   </div>
   <nav class="mobile-menu" id="mobileMenu" aria-label="移动端导航"><ul><li><a href="index.html">首页</a></li><li><a href="open-jobs.html">职位列表</a></li><li><a href="about-tp.html">关于TP</a></li><li><a href="salary-and-benefits.html">薪资福利</a></li><li><a href="hiring-process.html">招聘流程</a></li><li><a href="why-malaysia-thailand.html">城市介绍</a></li><li><a href="relocation-visa.html">签证·搬迁</a></li><li><a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=chinese" target="_blank" rel="noopener noreferrer" class="apply-btn">立即申请</a></li></ul></nav>
 </header>
-<main id="main">
+<main>
+  <section class="page-hero"><div class="container">
+    <h1 class="fade-in" data-local="FAQ" data-expat="常见问题">常见问题</h1>
+    <p class="hero-sub fade-in" data-local="Apply前的疑问，这里解答" data-expat="申请前的疑问，这里解答">申请前的疑问，这里解答</p>
+  </div></section>
 
-  <section class="hero-dark">
-    <h1>常见问题</h1>
-    <p>你想知道的都在这里</p>
-  </section>
-  <section class="section-padded">
-    <div class="container">
-      <div class="faq-container">
-        <div class="faq-item"><div class="faq-question">需要会说马来语吗？</div><div class="faq-answer"><p>不需要。华语项目以中文为主要工作语言，具备基本英语沟通能力即可。</p></div></div>
-        <div class="faq-item"><div class="faq-question">公司帮忙办签证吗？</div><div class="faq-answer"><p>是的。公司全程办理工作签证，包括申请和续签，费用由公司承担。</p></div></div>
-        <div class="faq-item"><div class="faq-question">面试是什么形式？</div><div class="faq-answer"><p>一般为线上面试（Zoom/Teams），也可以选择现场面试。全程可用华语沟通。您也可以先完成 AI 能力评估了解更多。</p></div></div>
-        <div class="faq-item"><div class="faq-question">薪水大概多少？</div><div class="faq-answer"><p>薪资根据项目和岗位而定，均包含语言津贴。详情请参阅<a href="salary-and-benefits.html" style="color:var(--gold-dark);text-decoration:underline">薪资福利页面</a>。</p></div></div>
-        <div class="faq-item"><div class="faq-question">有提供住宿吗？</div><div class="faq-answer"><p>公司提供搬迁补贴和住房指导，协助您找到合适的住处。</p></div></div>
-        <div class="faq-item"><div class="faq-question">多久可以入职？</div><div class="faq-answer"><p>从面试到入职一般需要两到四周，签证办理约两到三周。</p></div></div>
-        <div class="faq-item"><div class="faq-question">英语不太好也能申请吗？</div><div class="faq-answer"><p>是的。华语为主的职位很多，入职后还有 GoFluent 等英语学习支持项目，可以循序渐进提升。</p></div></div>
-      </div>
+  <section class="content-section" style="padding:50px 20px"><div class="container">
+    <h2 class="section-title fade-in" data-local="Language & Skills" data-expat="语言与技能">语言与技能</h2>
+    <div class="faq-list fade-in">
+      <details class="faq-item"><summary data-local="English不太confident，okay吗？" data-expat="英语不太自信，可以吗？">英语不太自信，可以吗？</summary><p data-local="完全okay！华语为main的position很多。入职后有Language Bootcamp和GoFluent可以step by step improve。Interview也mainly用华语conduct。" data-expat="完全可以！华语为主的职位很多。入职后有语言训练营和GoFluent可以循序渐进提升。面试也主要用华语进行。">完全可以！华语为主的职位很多。入职后有语言训练营和GoFluent可以循序渐进提升。面试也主要用华语进行。</p></details>
+      <details class="faq-item"><summary data-local="需要什么qualification或certificate？" data-expat="需要什么资质或证书？">需要什么资质或证书？</summary><p data-local="大部分position不需要special certificate。有customer service experience是plus，但fresh graduate也welcome。" data-expat="大部分职位不需要特殊证书。有客户服务经验是加分，但应届毕业生也欢迎。">大部分职位不需要特殊证书。有客户服务经验是加分，但应届毕业生也欢迎。</p></details>
     </div>
-  </section>
-  <script>document.querySelectorAll('.faq-question').forEach(q=>{q.addEventListener('click',()=>{const item=q.parentElement;item.classList.toggle('active');document.querySelectorAll('.faq-item').forEach(i=>{if(i!==item)i.classList.remove('active')})})});</script>
-  <section class="cta-section">
-    <div class="container" style="text-align:center">
-      <h2 class="section-title">准备好了吗？</h2>
-      <p class="section-subtitle">开始你的海外职业之旅</p>
-      <div class="cta-buttons">
-        <a class="btn-cta-primary" href="https://app.hallo.ai/teleperformance/ai-assessment/interview/zh?assessmentTypeId=VEhDOEFMRHdKWmtZdFoxREJjMHQ=" target="_blank" rel="noopener noreferrer">AI 能力评估</a>
-        <a class="btn-cta-secondary" href="https://outlook.office.com/book/Chinese@teleperformance.onmicrosoft.com/s/tEpdSOHeX0SbvhMZg_dyvQ2?ismsaljsauthenabled" target="_blank" rel="noopener noreferrer">预约面谈</a>
-        <a class="btn-cta-outline" href="open-jobs.html">查看职位</a>
-      </div>
+  </div></section>
+
+  <section class="content-section" style="padding:50px 20px;background:var(--tp-off)"><div class="container">
+    <h2 class="section-title fade-in" data-local="Relocation & Life" data-expat="搬迁与生活">搬迁与生活</h2>
+    <div class="faq-list fade-in">
+      <details class="faq-item"><summary data-local="First time出国，很worried。" data-expat="第一次出国，很担心。">第一次出国，很担心。</summary><p data-local="Don't worry！Work visa support、airport pickup、arrival後hotel（Malaysia）等，initial support都很complete。找house也会用华语advice你。" data-expat="别担心！工作签证支持、机场接机、到达后酒店（马来西亚）等，初期支持都很完善。找房子也会用华语建议你。">别担心！工作签证支持、机场接机、到达后酒店（马来西亚）等，初期支持都很完善。找房子也会用华语建议你。</p></details>
+      <details class="faq-item"><summary data-local="可以带family一起吗？" data-expat="可以带家人一起吗？">可以带家人一起吗？</summary><p data-local="拿到work visa之后，spouse和kids的dependent pass可以apply（根据country和employment条件不同，会individual guide你）。" data-expat="拿到工作签证之后，配偶和孩子的家属签证可以申请（根据国家和雇用条件不同，会个别指导你）。">拿到工作签证之后，配偶和孩子的家属签证可以申请（根据国家和雇用条件不同，会个别指导你）。</p></details>
+      <details class="faq-item"><summary data-local="住所怎么find？" data-expat="住所怎么找？">住所怎么找？</summary><p data-local="Arrival後hotel stay期间，华语staff会help你find agent和viewing。一般是有Pool/Gym/Security的condo，furniture appliance付。" data-expat="到达后酒店住宿期间，华语员工会帮你找中介和看房。一般是有泳池/健身房/保安的公寓，家具家电齐全。">到达后酒店住宿期间，华语员工会帮你找中介和看房。一般是有泳池/健身房/保安的公寓，家具家电齐全。</p></details>
     </div>
-  </section></main>
+  </div></section>
+
+  <section class="content-section" style="padding:50px 20px"><div class="container">
+    <h2 class="section-title fade-in" data-local="Hiring Process" data-expat="招聘流程">招聘流程</h2>
+    <div class="faq-list fade-in">
+      <details class="faq-item"><summary data-local="从apply到入职大概要多久？" data-expat="从申请到入职大概要多久？">从申请到入职大概要多久？</summary><p data-local="整个process大概2〜3 weeks（document→interview 2 rounds→final result）。Work visa在offer之后大概1〜2 months左右。" data-expat="整个流程大概2〜3周（文件→面试2轮→最终结果）。工作签证在录用之后大概1〜2个月左右。">整个流程大概2〜3周（文件→面试2轮→最终结果）。工作签证在录用之后大概1〜2个月左右。</p></details>
+      <details class="faq-item"><summary data-local="Interview是什么format？" data-expat="面试是什么形式？">面试是什么形式？</summary><p data-local="Online interview（Microsoft Teams）。HR interview + Operation Manager interview，各30-45分钟左右。主要用华语。" data-expat="在线面试（Microsoft Teams）。人事面试 + 运营经理面试，各30-45分钟左右。主要用华语。">在线面试（Microsoft Teams）。人事面试 + 运营经理面试，各30-45分钟左右。主要用华语。</p></details>
+      <details class="faq-item"><summary data-local="No experience也可以apply吗？" data-expat="没有经验也可以申请吗？">没有经验也可以申请吗？</summary><p data-local="Yes！很多position是no experience OK。入职后有complete的training program support你grow。" data-expat="可以！很多职位不需要经验。入职后有完善的培训计划支持你成长。">可以！很多职位不需要经验。入职后有完善的培训计划支持你成长。</p></details>
+    </div>
+  </div></section>
+
+  <section class="cta-section"><div class="container">
+    <h2 class="fade-in" data-local="Question还没solve？" data-expat="问题还没解决？">问题还没解决？</h2>
+    <div class="cta-buttons fade-in">
+      <a href="https://outlook.office.com/book/Chinese@teleperformance.onmicrosoft.com/s/tEpdSOHeX0SbvhMZg_dyvQ2?ismsaljsauthenabled" target="_blank" rel="noopener noreferrer" class="btn btn-gold" data-local="Book Casual Chat" data-expat="预约面谈">预约面谈</a>
+      <a href="open-jobs.html" class="btn btn-secondary" data-local="View Jobs" data-expat="查看职位">查看职位</a>
+    </div>
+  </div></section>
+</main>
 <footer>
   <div class="footer-content">
     <div class="footer-brand"><div class="footer-logo"><img src="photos/TPLogo11.png" alt="TP"><span class="footer-logo-text">TP</span></div><p class="footer-desc">在全球100多个国家运营的全球业务流程外包企业<br>支持华语人才开启新事业</p><div class="badges"><span class="badge-item">🏆 马来西亚最佳职场 连续6年</span><span class="badge-item">🏆 全球最佳职场 连续5年</span></div><div class="footer-cta"><a href="https://www.tp.com/en-my/locations/malaysia/careers/?page=1#contactusmalaysia" target="_blank" rel="noopener noreferrer" class="btn-footer">TP.COM</a></div></div>
@@ -242,6 +253,9 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
 <script>
 (function(){const t=document.getElementById('mobileToggle'),m=document.getElementById('mobileMenu');if(t&&m){t.addEventListener('click',function(){t.classList.toggle('active');m.classList.toggle('active');t.setAttribute('aria-expanded',m.classList.contains('active'))});m.querySelectorAll('a').forEach(a=>{a.addEventListener('click',()=>{t.classList.remove('active');m.classList.remove('active');t.setAttribute('aria-expanded','false')})});document.addEventListener('click',e=>{if(!m.contains(e.target)&&!t.contains(e.target)){m.classList.remove('active');t.classList.remove('active');t.setAttribute('aria-expanded','false')}})}})();
 (function(){const b=document.getElementById('backToTop');if(!b)return;window.addEventListener('scroll',()=>{b.classList.toggle('show',window.pageYOffset>300)});b.addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})})})();
+
+var currentLanguage=localStorage.getItem('mlpLang')||'expat';function setLanguage(l){currentLanguage=l;localStorage.setItem('mlpLang',l);var a=document.getElementById('hdrLocal'),b=document.getElementById('hdrExpat');if(a)a.classList.toggle('active',l==='local');if(b)b.classList.toggle('active',l==='expat');updateAllText(l)}function updateAllText(l){var a=l==='local'?'data-local':'data-expat';document.querySelectorAll('[data-local][data-expat]').forEach(function(e){var t=e.getAttribute(a);if(t)e.innerHTML=t})}document.addEventListener('DOMContentLoaded',function(){setLanguage(currentLanguage)});
+(function(){var els=document.querySelectorAll('.fade-in,.fade-in-left,.fade-in-right');if(!els.length)return;var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});els.forEach(function(el){obs.observe(el)})})();
 </script>
 </body>
 </html>

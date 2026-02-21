@@ -184,6 +184,57 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
 @media(max-width:768px){.grid-3{grid-template-columns:1fr}.grid-2{grid-template-columns:1fr}.process-rail{grid-template-columns:1fr}.process-rail::before{display:none}.ta-team-grid{grid-template-columns:repeat(2,1fr)}.offices-grid{grid-template-columns:1fr}.footer-content{grid-template-columns:1fr;text-align:center}nav{display:none}.mobile-toggle{display:block}.floating-ai{bottom:80px;right:20px}.back-to-top{bottom:140px}.cta-buttons{flex-direction:column;align-items:center}}
 @media(max-width:480px){.ta-team-grid{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+
+/* Bilingual toggle */
+.local-only{display:inline}
+.expat-only{display:none}
+body.expat-mode .local-only{display:none!important}
+body.expat-mode .expat-only{display:inline!important}
+div.local-only{display:block}
+div.expat-only{display:none}
+body.expat-mode div.local-only{display:none!important}
+body.expat-mode div.expat-only{display:block!important}
+li.local-only{display:list-item}
+li.expat-only{display:none}
+body.expat-mode li.local-only{display:none!important}
+body.expat-mode li.expat-only{display:list-item!important}
+/* Scroll animations */
+.fade-in{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.fade-in.visible{opacity:1;transform:translateY(0)}
+.fade-in-left{opacity:0;transform:translateX(-30px);transition:opacity .7s ease,transform .7s ease}
+.fade-in-left.visible{opacity:1;transform:translateX(0)}
+.fade-in-right{opacity:0;transform:translateX(30px);transition:opacity .7s ease,transform .7s ease}
+.fade-in-right.visible{opacity:1;transform:translateX(0)}
+/* Header lang switcher */
+.header-lang-switch{display:flex;gap:4px;align-items:center;margin-left:.5rem}
+.header-lang-btn{padding:.25rem .6rem;border-radius:14px;font-size:.7rem;font-weight:600;cursor:pointer;border:1.5px solid var(--tp-light);background:transparent;color:var(--tp-gray);transition:all .3s;white-space:nowrap}
+.header-lang-btn:hover{border-color:var(--gold-primary);color:#000}
+.header-lang-btn.active{background:var(--gold-primary);color:#000;border-color:var(--gold-primary)}
+/* Compare table */
+.compare-table{width:100%;border-collapse:collapse;max-width:var(--max-width);margin:1rem auto;border-radius:12px;overflow:hidden;box-shadow:var(--shadow-sm)}
+.compare-table th{background:var(--tp-black);color:#fff;padding:.75rem 1rem;font-size:.85rem;text-align:left}
+.compare-table td{padding:.65rem 1rem;border-bottom:1px solid var(--tp-light);font-size:.85rem}
+.compare-table tr:nth-child(even){background:var(--tp-off)}
+.compare-table tr:hover{background:var(--gold-pale)}
+/* Note box */
+.note-box{background:var(--tp-off);border-left:4px solid var(--gold-primary);padding:1rem 1.25rem;border-radius:0 8px 8px 0;margin-top:1.5rem;max-width:var(--max-width);margin-left:auto;margin-right:auto}
+.note-box p{font-size:.85rem;color:var(--tp-gray-dark)}
+/* Quick stats */
+.quick-stats{display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;margin-bottom:2rem}
+.quick-stat{text-align:center;padding:.75rem 1.5rem;background:#fff;border-radius:12px;border:1px solid var(--tp-light);min-width:120px}
+.quick-stat-number{font-size:1.5rem;font-weight:900;color:var(--gold-dark);display:block}
+.quick-stat-label{font-size:.75rem;color:var(--tp-gray)}
+/* Numbered tips */
+.tips-list{list-style:none;max-width:800px;margin:0 auto;counter-reset:tip}
+.tips-list li{padding:.75rem 0 .75rem 2.5rem;border-bottom:1px solid var(--tp-light);position:relative;font-size:.9rem;color:var(--tp-gray-dark)}
+.tips-list li::before{counter-increment:tip;content:counter(tip);position:absolute;left:0;width:28px;height:28px;background:var(--gold-primary);color:#000;border-radius:50%;display:grid;place-items:center;font-weight:700;font-size:.8rem}
+/* Blockquote */
+.testimonial-card{background:var(--tp-white);border:1px solid var(--tp-light);border-left:4px solid var(--gold-primary);border-radius:12px;padding:1.5rem;box-shadow:var(--shadow-sm)}
+.testimonial-card blockquote{font-style:italic;line-height:1.8;margin-bottom:1rem;color:var(--tp-gray-dark)}
+.testimonial-card cite{font-style:normal;font-weight:600;font-size:.85rem}
+@media(max-width:768px){.quick-stats{gap:.75rem}.quick-stat{min-width:90px;padding:.5rem .75rem}}
+@media(prefers-reduced-motion:reduce){.fade-in,.fade-in-left,.fade-in-right{opacity:1;transform:none}}
+
 </style>
 </head>
 <body>
@@ -196,40 +247,79 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
   </div>
   <nav class="mobile-menu" id="mobileMenu" aria-label="移动端导航"><ul><li><a href="index.html">首页</a></li><li><a href="open-jobs.html">职位列表</a></li><li><a href="about-tp.html">关于TP</a></li><li><a href="salary-and-benefits.html">薪资福利</a></li><li><a href="hiring-process.html">招聘流程</a></li><li><a href="why-malaysia-thailand.html">城市介绍</a></li><li><a href="relocation-visa.html">签证·搬迁</a></li><li><a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=chinese" target="_blank" rel="noopener noreferrer" class="apply-btn">立即申请</a></li></ul></nav>
 </header>
-<main id="main">
+<main>
+  <section class="page-hero"><div class="container">
+    <h1 class="fade-in" data-local="Office & Work Environment" data-expat="办公环境">办公环境</h1>
+    <p class="hero-sub fade-in" data-local="Focus、交流、learning共存的comfortable和safe的workspace。KL/Penang/Bangkok的office facility和周边environment介绍。" data-expat="专注、交流、学习共存的舒适和安全的工作空间。KL/槟城/曼谷的办公设施和周边环境介绍。">专注、交流、学习共存的舒适和安全的工作空间。KL/槟城/曼谷的办公设施和周边环境介绍。</p>
+  </div></section>
 
-  <section class="hero-dark">
-    <h1>办公环境</h1>
-    <p>参观我们的办公室</p>
-  </section>
-  <section class="section-padded">
-    <div class="container">
-      <h2 class="section-title">办公地点</h2>
-      <p class="section-subtitle">马来西亚和泰国多个办公地点</p>
-      <div class="offices-grid">
-        <div class="office-card"><img src="photos/G%20TOWER.jpg" alt="G Tower" class="office-image" loading="lazy"><div class="office-info"><h3 class="office-name">G Tower（吉隆坡）</h3><ul class="office-features"><li>安邦公园站直达</li><li>双子塔步行可达</li><li>甲级办公楼</li></ul><div class="office-links"><a href="https://maps.app.goo.gl/vd5ju3VXhxfhpJuN7" target="_blank" rel="noopener noreferrer" class="office-map-btn">📍 地图</a></div></div></div>
-        <div class="office-card"><img src="photos/Reception.png" alt="Livingston" class="office-image" loading="lazy"><div class="office-info"><h3 class="office-name">Livingston（槟城）</h3><ul class="office-features"><li>安静的环境</li><li>餐厅·药房近在咫尺</li><li>交通便利</li></ul><div class="office-links"><a href="https://maps.app.goo.gl/9i841vf18KRyunQK6" target="_blank" rel="noopener noreferrer" class="office-map-btn">📍 地图</a></div></div></div>
-        <div class="office-card"><img src="photos/Reception%20(1).png" alt="One Precinct" class="office-image" loading="lazy"><div class="office-info"><h3 class="office-name">One Precinct（槟城）</h3><ul class="office-features"><li>峇央峇鲁区域</li><li>距机场15分钟</li><li>皇后湾广场附近</li></ul><div class="office-links"><a href="https://maps.app.goo.gl/Nq6RKZ7spH89THG8A" target="_blank" rel="noopener noreferrer" class="office-map-btn">📍 地图</a></div></div></div>
-        <div class="office-card"><img src="photos/GBS.jpeg" alt="GBS@Mahsuri" class="office-image" loading="lazy"><div class="office-info"><h3 class="office-name">GBS@Mahsuri（槟城）</h3><ul class="office-features"><li>州全球商务服务中心</li><li>IT/业务流程外包集聚地</li><li>生活设施完善</li></ul><div class="office-links"><a href="https://maps.app.goo.gl/Zpy6r8na4Wg31uhT8" target="_blank" rel="noopener noreferrer" class="office-map-btn">📍 地图</a></div></div></div>
-        <div class="office-card"><img src="photos/KL%201.jpg" alt="KCP" class="office-image" loading="lazy"><div class="office-info"><h3 class="office-name">KCP（格拉那再也中心点）</h3><ul class="office-features"><li>轻轨站附近</li><li>购物便利</li></ul><div class="office-links"><a href="https://maps.app.goo.gl/UE8tTboaukkeCWZW9" target="_blank" rel="noopener noreferrer" class="office-map-btn">📍 地图</a></div></div></div>
-        <div class="office-card"><img src="photos/Singha%20Complex1.jpg" alt="Singha Complex" class="office-image" loading="lazy"><div class="office-info"><h3 class="office-name">Singha Complex（曼谷）</h3><ul class="office-features"><li>轻轨/地铁附近</li><li>华人区域</li><li>商业综合体内</li></ul><div class="office-links"><a href="https://maps.app.goo.gl/vPuRsYp5fcNzX4kb6" target="_blank" rel="noopener noreferrer" class="office-map-btn">📍 地图</a></div></div></div>
-        <div class="office-card coming-soon"><img src="photos/KL%202.jpg" alt="Sunway" class="office-image" loading="lazy"><div class="office-info"><h3 class="office-name">Sunway（双威）</h3><ul class="office-features"><li>双威金字塔购物中心附近</li><li>快速公交直达</li><li>新兴商业区</li></ul></div></div>
-        <div class="office-card coming-soon"><img src="photos/Penang.jpg" alt="Johor" class="office-image" loading="lazy"><div class="office-info"><h3 class="office-name">Johor（柔佛）</h3><ul class="office-features"><li>靠近新加坡</li><li>生活成本更低</li><li>新办公地点</li></ul><div class="office-links"><a href="https://careerseng-teleperformance.icims.com/jobs/50874/customer-success-specialist---mandarin---johor/job?mode=job&iis=MLP&iisn=" target="_blank" rel="noopener noreferrer" class="office-job-btn">💼 立即申请</a></div></div></div>
-        <div class="office-card coming-soon"><img src="photos/Condo.jpg" alt="WFH" class="office-image" loading="lazy"><div class="office-info"><h3 class="office-name">居家办公</h3><ul class="office-features"><li>远程工作选项</li><li>灵活工作安排</li><li>部分职位适用</li></ul><div class="office-links"><a href="https://careerseng-teleperformance.icims.com/jobs/49561/interpreter---mandarin---work-from-home/job?mode=job&iis=MLP&iisn=" target="_blank" rel="noopener noreferrer" class="office-job-btn">💼 口译员职位</a></div></div></div>
+  <section class="content-section" style="padding:50px 20px"><div class="container">
+    <h2 class="section-title fade-in" data-local="Common Features" data-expat="共通特色">共通特色</h2>
+    <p class="section-subtitle fade-in" data-local="Smooth onboarding，focus的seat，promote交流的lounge" data-expat="顺畅的入职，专注的座位，促进交流的休息室">顺畅的入职，专注的座位，促进交流的休息室</p>
+    <div class="cards fade-in">
+      <div class="card"><div class="card-icon">💻</div><h3 data-local="Workspace" data-expat="工作空间">工作空间</h3><p data-local="Monitor complete的desk、meeting room、focus booth/phone booth combine，静音性和convenience两立" data-expat="显示器完备的桌子、会议室、专注隔间/电话隔间组合，静音性和便利性兼顾">显示器完备的桌子、会议室、专注隔间/电话隔间组合，静音性和便利性兼顾</p></div>
+      <div class="card"><div class="card-icon">🧑‍🏫</div><h3 data-local="Training Facility" data-expat="培训设施">培训设施</h3><p data-local="Training room、QA room、OJT seat确保。Language Bootcamp / GoFluent等learning support" data-expat="培训室、QA室、OJT座位确保。语言训练营 / GoFluent等学习支持">培训室、QA室、OJT座位确保。语言训练营 / GoFluent等学习支持</p></div>
+      <div class="card"><div class="card-icon">☕</div><h3 data-local="Pantry & Social" data-expat="茶水间和交流">茶水间和交流</h3><p data-local="Fridge、microwave、water dispenser配备的pantry，team交流产生的casual space" data-expat="冰箱、微波炉、饮水机配备的茶水间，团队交流的休闲空间">冰箱、微波炉、饮水机配备的茶水间，团队交流的休闲空间</p></div>
+      <div class="card"><div class="card-icon">🔐</div><h3 data-local="Security" data-expat="安全">安全</h3><p data-local="Entry exit management、reception、CCTV。Building的fire safety和cleaning也appropriate运用" data-expat="出入管理、前台、监控摄像。大楼的消防安全和清洁也适当运用">出入管理、前台、监控摄像。大楼的消防安全和清洁也适当运用</p></div>
+      <div class="card"><div class="card-icon">🚇</div><h3 data-local="Access" data-expat="交通">交通</h3><p data-local="Near station、mall直结等，public transport和daily convenience重视（KL：MRT/Monorail、Bangkok：BTS/MRT）" data-expat="近站、商场直通等，公共交通和日常便利重视（KL：MRT/单轨、曼谷：BTS/MRT）">近站、商场直通等，公共交通和日常便利重视（KL：MRT/单轨、曼谷：BTS/MRT）</p></div>
+      <div class="card"><div class="card-icon">🧑‍🤝‍🧑</div><h3 data-local="Multicultural & Flat" data-expat="多元文化和扁平">多元文化和扁平</h3><p data-local="不论nationality、age、gender都互相respect的culture。Great Place to Work® 认证location" data-expat="不论国籍、年龄、性别都互相尊重的文化。Great Place to Work® 认证地点">不论国籍、年龄、性别都互相尊重的文化。Great Place to Work® 认证地点</p></div>
+    </div>
+  </div></section>
+
+  <section class="content-section" style="padding:50px 20px;background:var(--tp-off)"><div class="container">
+    <h2 class="section-title fade-in" data-local="Kuala Lumpur（KL）" data-expat="吉隆坡（KL）">🇲🇾 吉隆坡（KL）</h2>
+    <div class="fade-in" style="background:#fff;border-radius:12px;padding:2rem;box-shadow:var(--shadow-sm)">
+      <p data-local="从Twin Tower步行approximately 10分钟的convenient area。Nearest station有MRT和LRT两种train通过，station到Office步行约2分钟。步行范围内mall、restaurant、ISETAN和supermarket、gym等complete。" data-expat="从双子塔步行大约10分钟的便利区域。最近的站有MRT和LRT两种电车通过，站到办公大楼步行约2分钟。步行范围内商场、餐厅、伊势丹和超市、健身房等配备齐全。">从双子塔步行大约10分钟的便利区域。最近的站有MRT和LRT两种电车通过，站到办公大楼步行约2分钟。步行范围内商场、餐厅、伊势丹和超市、健身房等配备齐全。</p>
+      <div class="cards" style="grid-template-columns:repeat(3,1fr);margin-top:1.5rem">
+        <div class="card" style="padding:1rem"><h4 data-local="Nearest" data-expat="交通">交通</h4><p style="font-size:.85rem">LRT / MRT / Bus / Grab</p></div>
+        <div class="card" style="padding:1rem"><h4 data-local="Facility" data-expat="设施">设施</h4><p style="font-size:.85rem" data-local="Meeting room、training room、pantry、billiard table、game、snack、cafe machine等" data-expat="会议室、培训室、茶水间、台球桌、游戏、零食、咖啡机等">会议室、培训室、茶水间、台球桌、游戏、零食、咖啡机等</p></div>
+        <div class="card" style="padding:1rem"><h4 data-local="Surroundings" data-expat="周边">周边</h4><p style="font-size:.85rem" data-local="KLCC / Large mall·clinic·bank·Chinese food" data-expat="KLCC / 大型商场·诊所·银行·中餐">KLCC / 大型商场·诊所·银行·中餐</p></div>
       </div>
     </div>
-  </section>
-  <section class="cta-section">
-    <div class="container" style="text-align:center">
-      <h2 class="section-title">准备好了吗？</h2>
-      <p class="section-subtitle">开始你的海外职业之旅</p>
-      <div class="cta-buttons">
-        <a class="btn-cta-primary" href="https://app.hallo.ai/teleperformance/ai-assessment/interview/zh?assessmentTypeId=VEhDOEFMRHdKWmtZdFoxREJjMHQ=" target="_blank" rel="noopener noreferrer">AI 能力评估</a>
-        <a class="btn-cta-secondary" href="https://outlook.office.com/book/Chinese@teleperformance.onmicrosoft.com/s/tEpdSOHeX0SbvhMZg_dyvQ2?ismsaljsauthenabled" target="_blank" rel="noopener noreferrer">预约面谈</a>
-        <a class="btn-cta-outline" href="open-jobs.html">查看职位</a>
+  </div></section>
+
+  <section class="content-section" style="padding:50px 20px"><div class="container">
+    <h2 class="section-title fade-in" data-local="Penang" data-expat="槟城（Penang）">🇲🇾 槟城（Penang）</h2>
+    <div class="fade-in" style="background:var(--tp-off);border-radius:12px;padding:2rem">
+      <p data-local="Bayan Lepas/George Town area有3个office。Penang是world heritage的city，Malaysia number one的美食city。Meal compare KL也cheap。Personal cafe也排排站，street walk和seaside relax可以的environment。" data-expat="Bayan Lepas/乔治城区域有3个办公室。槟城是世界遗产的城市，马来西亚数一数二的美食城市。餐饮比KL便宜。个人咖啡馆排排站，街头漫步和海边放松的环境。">Bayan Lepas/乔治城区域有3个办公室。槟城是世界遗产的城市，马来西亚数一数二的美食城市。餐饮比KL便宜。个人咖啡馆排排站，街头漫步和海边放松的环境。</p>
+      <div class="cards" style="grid-template-columns:repeat(3,1fr);margin-top:1.5rem">
+        <div class="card" style="padding:1rem"><h4 data-local="Nearest" data-expat="交通">交通</h4><p style="font-size:.85rem" data-local="Main road/airport access good、bus/Grab" data-expat="主要道路/机场通达好、巴士/Grab">主要道路/机场通达好、巴士/Grab</p></div>
+        <div class="card" style="padding:1rem"><h4 data-local="Facility" data-expat="设施">设施</h4><p style="font-size:.85rem" data-local="Meeting room、phone booth、training room、rest space" data-expat="会议室、电话隔间、培训室、休息空间">会议室、电话隔间、培训室、休息空间</p></div>
+        <div class="card" style="padding:1rem"><h4 data-local="Surroundings" data-expat="周边">周边</h4><p style="font-size:.85rem" data-local="Seaside condo、cafe、hospital、supermarket、Chinese food" data-expat="海边公寓、咖啡馆、医院、超市、中餐厅">海边公寓、咖啡馆、医院、超市、中餐厅</p></div>
       </div>
     </div>
-  </section></main>
+  </div></section>
+
+  <section class="content-section" style="padding:50px 20px;background:var(--tp-off)"><div class="container">
+    <h2 class="section-title fade-in" data-local="Bangkok" data-expat="曼谷（Bangkok）">🇹🇭 曼谷（Bangkok）</h2>
+    <div class="fade-in" style="background:#fff;border-radius:12px;padding:2rem;box-shadow:var(--shadow-sm)">
+      <p data-local="BTS/MRT near的downtown office。Chinese很多live的area adjacent，supermarket/restaurant/medical facility complete。" data-expat="BTS/MRT近的市中心办公室。华人很多居住的区域邻近，超市/餐厅/医疗设施完善。">BTS/MRT近的市中心办公室。华人很多居住的区域邻近，超市/餐厅/医疗设施完善。</p>
+      <div class="cards" style="grid-template-columns:repeat(3,1fr);margin-top:1.5rem">
+        <div class="card" style="padding:1rem"><h4 data-local="Nearest" data-expat="交通">交通</h4><p style="font-size:.85rem" data-local="BTS/MRT walking distance、Grab·bus也convenient" data-expat="BTS/MRT步行距离、Grab·巴士也方便">BTS/MRT步行距离、Grab·巴士也方便</p></div>
+        <div class="card" style="padding:1rem"><h4 data-local="Facility" data-expat="设施">设施</h4><p style="font-size:.85rem" data-local="Meeting room、phone booth、training room、pantry、refresh space" data-expat="会议室、电话隔间、培训室、茶水间、休息空间">会议室、电话隔间、培训室、茶水间、休息空间</p></div>
+        <div class="card" style="padding:1rem"><h4 data-local="Surroundings" data-expat="周边">周边</h4><p style="font-size:.85rem" data-local="Large mall、Chinese supermarket、中餐厅、bank" data-expat="大型商场、华人超市、中餐厅、银行">大型商场、华人超市、中餐厅、银行</p></div>
+      </div>
+    </div>
+  </div></section>
+
+  <section class="content-section" style="padding:50px 20px"><div class="container">
+    <h2 class="section-title fade-in" data-local="Work Style & Health" data-expat="工作方式与安全卫生">工作方式与安全卫生</h2>
+    <div class="cards fade-in" style="grid-template-columns:repeat(3,1fr)">
+      <div class="card"><div class="card-icon">⏰</div><h3 data-local="Work Type" data-expat="工作形态">工作形态</h3><p data-local="Basic week 5 days / 1 day 8〜9 hours。Project depend可能hybrid work，early/night shift有allowance" data-expat="基本每周5天/每天8〜9小时。根据项目可能混合工作，早晨/夜间轮班有津贴">基本每周5天/每天8〜9小时。根据项目可能混合工作，早晨/夜间轮班有津贴</p></div>
+      <div class="card"><div class="card-icon">🏥</div><h3 data-local="Health & Hygiene" data-expat="健康和卫生">健康和卫生</h3><p data-local="Common area定期cleaning、hand sanitizer、AC check。Medical insurance有，华语medical facility容易use" data-expat="公共区域定期清洁、手部消毒、空调检查。医疗保险有，华语医疗设施容易使用">公共区域定期清洁、手部消毒、空调检查。医疗保险有，华语医疗设施容易使用</p></div>
+      <div class="card"><div class="card-icon">🌍</div><h3 data-local="Inclusion" data-expat="包容性">包容性</h3><p data-local="Multinational flat company culture。Event、award、team building的交流opportunity也很多" data-expat="多国籍扁平的公司文化。活动、表彰、团队建设的交流机会也很多">多国籍扁平的公司文化。活动、表彰、团队建设的交流机会也很多</p></div>
+    </div>
+  </div></section>
+
+  <section class="cta-section"><div class="container">
+    <h2 class="fade-in" data-local="Next做什么？" data-expat="下一步做什么？">下一步做什么？</h2>
+    <div class="cta-buttons fade-in">
+      <a href="open-jobs.html" class="btn btn-gold" data-local="View Jobs" data-expat="查看职位">查看职位</a>
+      <a href="relocation-visa.html" class="btn btn-secondary" data-local="Relocation Support" data-expat="搬迁支持">搬迁支持</a>
+      <a href="https://outlook.office.com/book/Chinese@teleperformance.onmicrosoft.com/s/tEpdSOHeX0SbvhMZg_dyvQ2?ismsaljsauthenabled" target="_blank" rel="noopener noreferrer" class="btn btn-outline" data-local="Book Chat" data-expat="预约面谈">预约面谈</a>
+    </div>
+  </div></section>
+</main>
 <footer>
   <div class="footer-content">
     <div class="footer-brand"><div class="footer-logo"><img src="photos/TPLogo11.png" alt="TP"><span class="footer-logo-text">TP</span></div><p class="footer-desc">在全球100多个国家运营的全球业务流程外包企业<br>支持华语人才开启新事业</p><div class="badges"><span class="badge-item">🏆 马来西亚最佳职场 连续6年</span><span class="badge-item">🏆 全球最佳职场 连续5年</span></div><div class="footer-cta"><a href="https://www.tp.com/en-my/locations/malaysia/careers/?page=1#contactusmalaysia" target="_blank" rel="noopener noreferrer" class="btn-footer">TP.COM</a></div></div>
@@ -245,6 +335,16 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
 <script>
 (function(){const t=document.getElementById('mobileToggle'),m=document.getElementById('mobileMenu');if(t&&m){t.addEventListener('click',function(){t.classList.toggle('active');m.classList.toggle('active');t.setAttribute('aria-expanded',m.classList.contains('active'))});m.querySelectorAll('a').forEach(a=>{a.addEventListener('click',()=>{t.classList.remove('active');m.classList.remove('active');t.setAttribute('aria-expanded','false')})});document.addEventListener('click',e=>{if(!m.contains(e.target)&&!t.contains(e.target)){m.classList.remove('active');t.classList.remove('active');t.setAttribute('aria-expanded','false')}})}})();
 (function(){const b=document.getElementById('backToTop');if(!b)return;window.addEventListener('scroll',()=>{b.classList.toggle('show',window.pageYOffset>300)});b.addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})})})();
+
+// Language system
+let currentLanguage=localStorage.getItem('mlpLang')||'local';
+function setLanguage(l){currentLanguage=l;localStorage.setItem('mlpLang',l);document.body.classList.toggle('expat-mode',l==='expat');var hL=document.getElementById('hdrLocal'),hE=document.getElementById('hdrExpat');if(hL)hL.classList.toggle('active',l==='local');if(hE)hE.classList.toggle('active',l==='expat');}
+document.addEventListener('DOMContentLoaded',function(){setLanguage(currentLanguage)});
+// Scroll animations
+(function(){var els=document.querySelectorAll('.fade-in,.fade-in-left,.fade-in-right');if(!els.length)return;var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});els.forEach(function(el){obs.observe(el)})})();
+
+
+var currentLanguage=localStorage.getItem('mlpLang')||'expat';function setLanguage(l){currentLanguage=l;localStorage.setItem('mlpLang',l);var a=document.getElementById('hdrLocal'),b=document.getElementById('hdrExpat');if(a)a.classList.toggle('active',l==='local');if(b)b.classList.toggle('active',l==='expat');updateAllText(l)}function updateAllText(l){var a=l==='local'?'data-local':'data-expat';document.querySelectorAll('[data-local][data-expat]').forEach(function(e){var t=e.getAttribute(a);if(t)e.innerHTML=t})}document.addEventListener('DOMContentLoaded',function(){setLanguage(currentLanguage)});
 </script>
 </body>
 </html>

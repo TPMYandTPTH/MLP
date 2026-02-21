@@ -90,25 +90,28 @@ a{color:inherit;text-decoration:none}
 .sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 
 /* Lang Toggle */
-.lang-toggle-banner{background:linear-gradient(135deg,var(--tp-black) 0%,var(--tp-charcoal) 100%);color:var(--tp-white);padding:0.5rem 20px;position:relative;z-index:1001}
-.lang-toggle-inner{max-width:var(--max-width);margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}
-.lang-toggle-label{font-size:0.8rem;color:var(--tp-silver);display:flex;align-items:center;gap:0.5rem}
-.lang-toggle-label::before{content:'🌐'}
-.lang-toggle-buttons{display:flex;gap:0.5rem;align-items:center}
-.lang-btn{padding:0.4rem 1rem;border-radius:20px;font-size:0.8rem;font-weight:500;cursor:pointer;transition:all 0.3s;border:1px solid transparent;background:transparent;color:var(--tp-silver)}
-.lang-btn:hover{color:var(--tp-white);border-color:var(--gold-primary)}
-.lang-btn.active{background:var(--gold-primary);color:var(--tp-black);font-weight:700;border-color:var(--gold-primary)}
-.lang-dropdown{position:relative;display:none}
-.lang-dropdown-btn{padding:0.4rem 1rem;border-radius:20px;font-size:0.8rem;font-weight:500;cursor:pointer;background:rgba(255,255,255,0.1);color:var(--tp-white);border:1px solid var(--tp-gray);display:flex;align-items:center;gap:0.5rem}
-.lang-dropdown-btn::after{content:'▼';font-size:0.6rem}
-.lang-dropdown-menu{position:absolute;top:100%;right:0;background:var(--tp-white);border-radius:8px;box-shadow:var(--shadow-lg);min-width:180px;display:none;z-index:1002;overflow:hidden;margin-top:0.5rem}
-.lang-dropdown-menu.show{display:block}
-.lang-dropdown-item{display:block;padding:0.75rem 1rem;color:var(--tp-dark);font-size:0.85rem;border-bottom:1px solid var(--tp-light);transition:all 0.3s}
-.lang-dropdown-item:last-child{border-bottom:none}
-.lang-dropdown-item:hover{background:var(--gold-pale)}
-.lang-dropdown-item.active{background:var(--gold-primary);color:var(--tp-black);font-weight:600}
-.lang-dropdown-item small{display:block;font-size:0.7rem;color:var(--tp-gray);margin-top:0.2rem}
-.lang-dropdown-item.active small{color:var(--tp-charcoal)}
+/* Language Popup Overlay */
+.lang-popup-overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.55);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);z-index:9999;display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:all .4s ease}
+.lang-popup-overlay.show{opacity:1;visibility:visible}
+.lang-popup{background:rgba(255,255,255,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-radius:20px;padding:2.5rem 2rem;max-width:440px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,.3);border:1px solid rgba(255,255,255,.6);transform:translateY(20px) scale(.95);transition:all .4s cubic-bezier(.4,0,.2,1)}
+.lang-popup-overlay.show .lang-popup{transform:translateY(0) scale(1)}
+.lang-popup-icon{font-size:2.5rem;margin-bottom:.75rem}
+.lang-popup h2{font-size:1.3rem;font-weight:900;color:#000;margin-bottom:.3rem;font-family:'Noto Serif SC',serif}
+.lang-popup p{color:var(--tp-gray);font-size:.85rem;margin-bottom:1.5rem;line-height:1.6}
+.lang-popup-options{display:flex;gap:1rem;justify-content:center}
+.lang-option{flex:1;padding:1.25rem 1rem;border-radius:14px;cursor:pointer;transition:all .3s;border:2px solid var(--tp-light);background:rgba(255,255,255,.7);text-align:center}
+.lang-option:hover{border-color:var(--gold-primary);transform:translateY(-3px);box-shadow:0 8px 24px rgba(255,215,0,.25)}
+.lang-option-flag{font-size:2.5rem;display:block;margin-bottom:.5rem}
+.lang-option-title{font-size:1rem;font-weight:700;color:#000;display:block;margin-bottom:.25rem}
+.lang-option-desc{font-size:.72rem;color:var(--tp-gray);display:block;line-height:1.4}
+/* Header lang switcher (small, persistent) */
+.header-lang-switch{display:flex;gap:4px;align-items:center;margin-left:.5rem}
+.header-lang-btn{padding:.25rem .6rem;border-radius:14px;font-size:.7rem;font-weight:600;cursor:pointer;border:1.5px solid var(--tp-light);background:transparent;color:var(--tp-gray);transition:all .3s;white-space:nowrap}
+.header-lang-btn:hover{border-color:var(--gold-primary);color:#000}
+.header-lang-btn.active{background:var(--gold-primary);color:#000;border-color:var(--gold-primary)}
+/* Instagram embed */
+.ig-embed-wrapper{max-width:400px;margin:0 auto}
+.ig-embed-wrapper blockquote{margin:0!important}
 
 /* Header */
 header{position:sticky;top:0;background:rgba(255,255,255,0.97);border-bottom:1px solid var(--tp-light);z-index:1000;backdrop-filter:blur(10px);box-shadow:var(--shadow-sm)}
@@ -192,8 +195,6 @@ nav a[aria-current="page"]::after{width:100%;background:var(--tp-black)}
 .gptw-years strong{font-weight:800;color:var(--gold-dark)}
 
 /* Chinese Community */
-.chinese-community{padding:60px 20px;background:linear-gradient(135deg,var(--gold-pale) 0%,var(--tp-white) 100%);position:relative}
-.chinese-community::before{content:'华';position:absolute;top:50%;right:10%;transform:translateY(-50%);font-size:20rem;font-family:'Noto Serif SC',serif;color:var(--gold-primary);opacity:0.03;pointer-events:none}
 .community-stat:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(212,175,55,0.3)}
 
 /* GPTW */
@@ -427,7 +428,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
 
 /* Responsive */
 @media(min-width:720px){.cta-links{grid-template-columns:1fr 1fr 1fr}}
-@media(max-width:900px){nav{display:none}.mobile-toggle{display:block}.lang-toggle-buttons{display:none}.lang-dropdown{display:block}.video-grid{grid-template-columns:1fr}.floating-ai{bottom:80px;right:20px}.back-to-top{bottom:140px}.lang-toggle-inner{justify-content:center}}
+@media(max-width:900px){nav{display:none}.mobile-toggle{display:block}.video-grid{grid-template-columns:1fr}.floating-ai{bottom:80px;right:20px}.back-to-top{bottom:140px}}
 @media(max-width:768px){.hero h1{font-size:1.8rem}.section-title{font-size:1.4rem}.hero-stats{justify-content:center}.stat-item{padding-right:1.25rem}.about-content{grid-template-columns:1fr}.cards{grid-template-columns:repeat(2,1fr)}.icon-grid-container{grid-template-columns:repeat(2,1fr)}.city-cards{grid-template-columns:1fr}.benefits-list{grid-template-columns:repeat(2,1fr)}.ta-team-grid{grid-template-columns:repeat(2,1fr)}.footer-content{grid-template-columns:1fr;text-align:center}.floating-apply{bottom:14px;right:14px;padding:0.625rem 1rem;font-size:0.8rem}.social-proof-inner{flex-direction:column;gap:0.5rem}.gptw-header{flex-direction:column;text-align:center}.gptw-title-block{text-align:center}.gptw-section .section-title,.gptw-section .section-subtitle{text-align:center}.gptw-gallery{grid-template-columns:repeat(2,1fr)}.gptw-gallery-item:nth-child(5){grid-column:span 2;max-width:50%;margin:0 auto}.gptw-stats{gap:1.5rem}.gptw-stat-number{font-size:2rem}.lifestyle-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:480px){.cards{grid-template-columns:1fr}.benefits-list{grid-template-columns:1fr}.icon-grid-container{grid-template-columns:1fr}.ta-team-grid{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
@@ -436,19 +437,22 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
 <body>
 <a href="#main" class="sr-only">跳转至主要内容</a>
 
-<!-- Language Toggle Banner -->
-<div class="lang-toggle-banner">
-  <div class="lang-toggle-inner">
-    <span class="lang-toggle-label">选择语言版本</span>
-    <div class="lang-toggle-buttons">
-      <button class="lang-btn active" id="langLocal" onclick="setLanguage('local')">🇲🇾 本地华人</button>
-      <button class="lang-btn" id="langExpat" onclick="setLanguage('expat')">🌏 海外华人</button>
-    </div>
-    <div class="lang-dropdown" id="langDropdown">
-      <button class="lang-dropdown-btn" onclick="toggleDropdown()"><span id="currentLang">🇲🇾 本地华人</span></button>
-      <div class="lang-dropdown-menu" id="dropdownMenu">
-        <a href="#" class="lang-dropdown-item active" onclick="setLanguage('local');return false;">🇲🇾 本地华人<small>Malaysian Chinese - 混合英文词汇</small></a>
-        <a href="#" class="lang-dropdown-item" onclick="setLanguage('expat');return false;">🌏 海外华人<small>Expat Chinese - 纯中文版本</small></a>
+<!-- Language Selection Popup -->
+<div class="lang-popup-overlay" id="langPopup">
+  <div class="lang-popup">
+    <div class="lang-popup-icon">🌐</div>
+    <h2>选择你的语言版本</h2>
+    <p>请选择适合你的中文版本<br>随时可以在页面顶部切换</p>
+    <div class="lang-popup-options">
+      <div class="lang-option" onclick="chooseLang('local')">
+        <span class="lang-option-flag">🇲🇾</span>
+        <span class="lang-option-title">本地华人</span>
+        <span class="lang-option-desc">Malaysian Chinese<br>混合英文词汇</span>
+      </div>
+      <div class="lang-option" onclick="chooseLang('expat')">
+        <span class="lang-option-flag">🌏</span>
+        <span class="lang-option-title">海外华人</span>
+        <span class="lang-option-desc">Native Mandarin<br>纯中文版本</span>
       </div>
     </div>
   </div>
@@ -468,9 +472,9 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
       <ul>
         <li><a href="index.html" aria-current="page">首页</a></li>
         <li><a href="open-jobs.html">职位列表</a></li>
-        <li><a href="about-tp.html">关于TP</a></li>
+        <li><a href="about-tp.html" data-local="About TP" data-expat="关于TP">关于TP</a></li>
         <li><a href="salary-and-benefits.html">薪资福利</a></li>
-        <li><a href="hiring-process.html">招聘流程</a></li>
+        <li><a href="hiring-process.html" data-local="Hiring Process" data-expat="招聘流程">招聘流程</a></li>
         <li><a href="why-malaysia-thailand.html">为什么选择马来西亚和泰国</a></li>
         <li><a href="relocation-visa.html">签证·搬迁</a></li>
         <li><a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=chinese" target="_blank" rel="noopener noreferrer" class="apply-btn">立即申请</a></li>
@@ -521,9 +525,9 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
   <!-- About -->
   <section class="about-section" id="about">
     <div class="container">
-      <h2 class="section-title section-title-decorated">欢迎来到TP马来西亚·泰国招聘</h2>
-      <p class="section-subtitle">你的下一份事业从这里开始！</p>
-      <div class="about-content">
+      <h2 class="section-title section-title-decorated fade-in">欢迎来到TP马来西亚·泰国招聘</h2>
+      <p class="section-subtitle fade-in">你的下一份事业从这里开始！</p>
+      <div class="about-content fade-in">
         <div class="about-text">
           <p>TP（Teleperformance）于1978年在法国巴黎成立，是全球领先的业务流程外包企业目前在全球100多个国家运营，拥有超过50万名员工</p>
           <p>我们将尖端技术与优秀人才相结合，为全球知名品牌提供卓越的客户体验服务目前，我们正在马来西亚和泰国积极招聘华语人才</p>
@@ -545,23 +549,23 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
         <p>官方发布：TP 荣获 Great Place to Work® 评选的「World's Best Workplaces™」，并已<strong>连续 5 年</strong>获得该认证！</p>
         <p class="gptw-quote">"这一认证基于员工的反馈与信任，充分展现了我们强大的企业文化"</p>
       </div>
-      <div class="gptw-header">
+      <div class="gptw-header fade-in">
         <img src="photos/World'sBestWorkplaces.png" alt="World's Best Workplaces 2025" class="gptw-badge">
         <div class="gptw-title-block">
           <h2 class="section-title">World's Best Workplaces™ <span class="gptw-highlight">连续 5 年获奖</span></h2>
-          <p class="section-subtitle">Great Place to Work® 认证</p>
+          <p class="section-subtitle fade-in">Great Place to Work® 认证</p>
         </div>
       </div>
       <p class="gptw-description">TP 荣获 Great Place to Work® 评选的「World's Best Workplaces™」，并已<strong>连续 5 年</strong>获得认证<br>这一认证基于员工的反馈与信任，体现了我们卓越而稳固的企业文化<br>我们携手并进，赋能员工，尊重多元文化，并每天为社会带来积极影响</p>
       <div class="gptw-banner"><img src="photos/GMT_SoMe_GPTWWorldBestWorkplacesKit_November_2025_Banner.png" alt="GPTW Banner" loading="lazy"></div>
-      <div class="gptw-gallery">
+      <div class="gptw-gallery fade-in">
         <div class="gptw-gallery-item"><img src="photos/GMT_SoMe_GPTWWorldBestWorkplacesKit_November_2025_1.png" alt="GPTW 1" loading="lazy"></div>
         <div class="gptw-gallery-item"><img src="photos/GMT_SoMe_GPTWWorldBestWorkplacesKit_November_2025_2.png" alt="GPTW 2" loading="lazy"></div>
         <div class="gptw-gallery-item"><img src="photos/GMT_SoMe_GPTWWorldBestWorkplacesKit_November_2025_3.png" alt="GPTW 3" loading="lazy"></div>
         <div class="gptw-gallery-item"><img src="photos/GMT_SoMe_GPTWWorldBestWorkplacesKit_November_2025_4.png" alt="GPTW 4" loading="lazy"></div>
         <div class="gptw-gallery-item"><img src="photos/GMT_SoMe_GPTWWorldBestWorkplacesKit_November_2025_5.png" alt="GPTW 5" loading="lazy"></div>
       </div>
-      <div class="gptw-stats">
+      <div class="gptw-stats fade-in">
         <div class="gptw-stat"><div class="gptw-stat-number">5</div><div class="gptw-stat-label">连续获奖年数</div></div>
         <div class="gptw-stat"><div class="gptw-stat-number">100+</div><div class="gptw-stat-label">业务覆盖国家</div></div>
         <div class="gptw-stat"><div class="gptw-stat-number">500K+</div><div class="gptw-stat-label">全球员工人数</div></div>
@@ -571,9 +575,9 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
   <!-- Priority Menu -->
   <section class="priority-menu">
     <div class="container">
-      <h2 class="section-title section-title-decorated">热门话题</h2>
-      <p class="section-subtitle">快速访问你想了解的信息</p>
-      <div class="cards">
+      <h2 class="section-title section-title-decorated fade-in" data-local="Quick Navigation" data-expat="快速导航">快速导航</h2>
+      <p class="section-subtitle fade-in" data-local="Quick access你想了解的information" data-expat="快速访问你想了解的信息">快速访问你想了解的信息</p>
+      <div class="cards fade-in">
         <a href="about-tp.html" class="card"><img src="photos/GBS.jpeg" alt="关于TP" loading="lazy"><div class="card-content"><h3>关于TP</h3><p>全球最大业务流程外包企业之一</p></div></a>
         <a href="open-jobs.html" class="card"><img src="photos/Reception.png" alt="职位信息" loading="lazy"><div class="card-content"><h3>职位列表</h3><p>华语人才职位</p></div></a>
         <a href="salary-and-benefits.html" class="card"><img src="photos/Reception%20(1).png" alt="福利待遇" loading="lazy"><div class="card-content"><h3>薪资福利</h3><p>完善的待遇和支持</p></div></a>
@@ -585,29 +589,8 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
         <a href="external-raf.html" class="card"><img src="photos/Reception.png" alt="推荐奖励" loading="lazy"><div class="card-content"><h3>推荐奖励</h3><p>推荐朋友获得奖励</p></div></a>
         <a href="faq.html" class="card"><img src="photos/GTowerInside1.png" alt="常见问题" loading="lazy"><div class="card-content"><h3>FAQ·常见问题</h3><p>申请前的疑问解答</p></div></a>
       </div>
-    </div>
-  </section>
 
-  <!-- Social Connect -->
-  <section class="social-connect" id="social">
-    <div class="container">
-      <h2 class="section-title section-title-decorated">关注我们·保持联系</h2>
-      <p class="section-subtitle">通过社交平台获取最新招聘信息</p>
-      <div class="social-grid">
-        <div class="social-card"><div class="social-card-icon">💬</div><div class="social-card-title">微信</div><div class="social-card-desc">扫码关注官方账号</div><div class="social-qr">WeChat QR<br>(即将上线)</div><a href="#" class="btn btn-sm btn-ghost">关注我们</a></div>
-        <div class="social-card"><div class="social-card-icon">📕</div><div class="social-card-title">小红书</div><div class="social-card-desc">查看员工生活分享</div><div class="social-qr">小红书<br>(即将上线)</div><a href="#" class="btn btn-sm btn-ghost">关注我们</a></div>
-        <div class="social-card"><div class="social-card-icon">📺</div><div class="social-card-title">YouTube</div><div class="social-card-desc">观看员工访谈视频</div><div class="social-qr">Video Channel</div><a href="https://www.youtube.com/@user-ms8fy8qm9j" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-ghost">立即观看</a></div>
-        <div class="social-card"><div class="social-card-icon">📅</div><div class="social-card-title">预约招聘顾问</div><div class="social-card-desc">在线预约面试时间</div><div class="social-qr">30分钟<br>在线咨询</div><a href="https://outlook.office.com/book/Chinese@teleperformance.onmicrosoft.com/s/tEpdSOHeX0SbvhMZg_dyvQ2?ismsaljsauthenabled" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-ghost">立即预约</a></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Icon Grid -->
-  <section class="icon-grid" id="resources">
-    <div class="container">
-      <h2 class="section-title section-title-decorated">生活信息·支持</h2>
-      <p class="section-subtitle">实用生活信息和资源</p>
-      <div class="icon-grid-container">
+      <div class="icon-grid-container fade-in" style="margin-top:1.5rem">
         <a href="cost-of-living.html" class="icon-card"><span class="icon-card-icon">💰</span><div class="icon-card-meta"><div class="icon-card-title">马来西亚生活成本</div><div class="icon-card-desc">餐饮·交通·住房</div></div></a>
         <a href="ta-team.html" class="icon-card"><span class="icon-card-icon">🤝</span><div class="icon-card-meta"><div class="icon-card-title">招聘团队介绍</div><div class="icon-card-desc">华语支持</div></div></a>
         <a href="area-around-office.html" class="icon-card"><span class="icon-card-icon">📍</span><div class="icon-card-meta"><div class="icon-card-title">办公室周边</div><div class="icon-card-desc">周边环境信息</div></div></a>
@@ -617,12 +600,26 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
     </div>
   </section>
 
+  <!-- Social Connect -->
+  <section class="social-connect" id="social">
+    <div class="container">
+      <h2 class="section-title section-title-decorated fade-in" data-local="Follow Us · Stay Connected" data-expat="关注我们·保持联系">关注我们·保持联系</h2>
+      <p class="section-subtitle fade-in" data-local="通过social platform获取latest recruitment info" data-expat="通过社交平台获取最新招聘信息">通过社交平台获取最新招聘信息</p>
+      <div class="social-grid fade-in">
+        <div class="social-card"><div class="social-card-icon">📕</div><div class="social-card-title">小红书</div><div class="social-card-desc">查看员工生活分享</div><div class="social-qr">小红书<br>(即将上线)</div><a href="#" class="btn btn-sm btn-ghost">关注我们</a></div>
+        <div class="social-card"><div class="social-card-icon">📺</div><div class="social-card-title">YouTube</div><div class="social-card-desc">观看员工访谈视频</div><div class="social-qr">Video Channel</div><a href="https://www.youtube.com/@user-ms8fy8qm9j" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-ghost">立即观看</a></div>
+        <div class="social-card"><div class="social-card-icon">📅</div><div class="social-card-title">预约招聘顾问</div><div class="social-card-desc">在线预约面试时间</div><div class="social-qr">30分钟<br>在线咨询</div><a href="https://outlook.office.com/book/Chinese@teleperformance.onmicrosoft.com/s/tEpdSOHeX0SbvhMZg_dyvQ2?ismsaljsauthenabled" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-ghost">立即预约</a></div>
+      </div>
+    </div>
+  </section>
+
+
   <!-- Cities -->
   <section class="cities" id="cities">
     <div class="container">
-      <h2 class="section-title section-title-decorated">工作城市介绍</h2>
-      <p class="section-subtitle">马来西亚和泰国的3座魅力城市</p>
-      <div class="city-cards">
+      <h2 class="section-title section-title-decorated fade-in" data-local="Work City Guide" data-expat="工作城市介绍">工作城市介绍</h2>
+      <p class="section-subtitle fade-in">马来西亚和泰国的3座魅力城市</p>
+      <div class="city-cards fade-in">
         <article class="city-card"><img src="photos/KL%201.jpg" alt="吉隆坡" loading="lazy"><div class="city-card-content"><h3>吉隆坡（KL）</h3><p class="city-country">马来西亚</p><ul class="city-features"><li>大量华人居住的国际都市</li><li>唐吉诃德、永旺、伊势丹等购物中心</li><li>华语医院·诊所完善</li><li>地铁·单轨列车通勤便利</li></ul><a href="why-malaysia-thailand.html#kl">查看详情 →</a></div></article>
         <article class="city-card"><img src="photos/Penang.jpg" alt="槟城" loading="lazy"><div class="city-card-content"><h3>槟城（Penang）</h3><p class="city-country">马来西亚</p><ul class="city-features"><li>世界遗产乔治城历史之城</li><li>度假与都市融合的环境</li><li>物价非常实惠，生活舒适</li><li>华人社区活跃</li></ul><a href="why-malaysia-thailand.html#penang">查看详情 →</a></div></article>
         <article class="city-card"><img src="photos/Bangkok%202.jpg" alt="曼谷" loading="lazy"><div class="city-card-content"><h3>曼谷（Bangkok）</h3><p class="city-country">泰国</p><ul class="city-features"><li>超过8万华人居住的城市</li><li>华人超市、伊势丹等完善</li><li>轻轨和地铁出行便捷</li><li>医疗水平非常高</li></ul><a href="why-malaysia-thailand.html#bangkok">查看详情 →</a></div></article>
@@ -634,9 +631,10 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
   <!-- Video Section -->
   <section class="video-section" id="videos">
     <div class="container">
-      <h2 class="section-title section-title-decorated">员工访谈（视频）</h2>
-      <p class="section-subtitle">通过短视频了解真实的工作体验</p>
-      <div class="video-grid">
+      <h2 class="section-title section-title-decorated fade-in" data-local="Employee Interview（Video）" data-expat="员工访谈（视频）">员工访谈（视频）</h2>
+      <p class="section-subtitle fade-in" data-local="通过short video了解real的work experience" data-expat="通过短视频了解真实的工作体验">通过短视频了解真实的工作体验</p>
+      <div class="video-grid fade-in">
+        <article class="video-card"><div class="video-embed ig-embed-wrapper"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DP0IccCksyo/" data-instgrm-version="14" style="background:#FFF;border:0;border-radius:3px;box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15);margin:1px;max-width:540px;min-width:326px;padding:0;width:99.375%;width:-webkit-calc(100% - 2px);width:calc(100% - 2px);"></blockquote></div><header class="video-meta"><h3 class="video-title">TP 最新动态</h3><p class="video-desc">关注我们的Instagram获取更多</p><a class="video-link" href="https://www.instagram.com/p/DP0IccCksyo/" target="_blank" rel="noopener noreferrer">在Instagram查看 →</a></header></article>
         <article class="video-card"><div class="video-embed"><iframe src="https://www.youtube.com/embed/N6l7PUQR0tw" title="TP员工访谈" loading="lazy" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div><header class="video-meta"><h3 class="video-title">TP员工访谈：最新视频</h3><p class="video-desc">听听真实员工的声音</p><a class="video-link" href="https://youtu.be/N6l7PUQR0tw" target="_blank" rel="noopener noreferrer">在YouTube观看 →</a></header></article>
         <article class="video-card"><div class="video-embed"><iframe src="https://www.youtube.com/embed/H4SVUrCjTPM" title="客服代表篇" loading="lazy" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div><header class="video-meta"><h3 class="video-title">TP员工访谈：客服代表篇</h3><p class="video-desc">一线客服代表的工作日常</p><a class="video-link" href="https://youtu.be/H4SVUrCjTPM" target="_blank" rel="noopener noreferrer">在YouTube观看 →</a></header></article>
         <article class="video-card"><div class="video-embed"><iframe src="https://www.youtube.com/embed/VB6KSdFYLdE" title="团队主管篇" loading="lazy" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div><header class="video-meta"><h3 class="video-title">TP员工访谈：团队主管篇</h3><p class="video-desc">现场管理和人才培养的真实情况</p><a class="video-link" href="https://youtu.be/VB6KSdFYLdE" target="_blank" rel="noopener noreferrer">在YouTube观看 →</a></header></article>
@@ -648,8 +646,8 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
   <!-- World Map -->
   <section class="world-map-section">
     <div class="container">
-      <h2 class="section-title section-title-decorated">TP 全球网络</h2>
-      <p class="section-subtitle">在 100 多个国家提供全球服务</p>
+      <h2 class="section-title section-title-decorated fade-in">TP 全球网络</h2>
+      <p class="section-subtitle fade-in">在 100 多个国家提供全球服务</p>
       <div class="world-map-container"><img src="photos/world map locations.png" alt="TP 全球分布地图" loading="lazy"></div>
     </div>
   </section>
@@ -657,8 +655,8 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
   <!-- Office Section -->
   <section class="office-section" id="office">
     <div class="container">
-      <h2 class="section-title section-title-decorated">工作环境</h2>
-      <p class="section-subtitle">舒适且交通便利的工作场所</p>
+      <h2 class="section-title section-title-decorated fade-in">工作环境</h2>
+      <p class="section-subtitle fade-in">舒适且交通便利的工作场所</p>
       <div class="office-grid">
         <div class="office-card"><img src="photos/G%20TOWER.jpg" alt="G Tower KL" class="office-image" loading="lazy"><div class="office-info"><h3 class="office-name">G Tower（吉隆坡）</h3><ul class="office-features"><li>安邦公园站直达</li><li>双子塔步行可达</li><li>甲级办公楼</li></ul><div class="office-links"><a href="https://maps.app.goo.gl/vd5ju3VXhxfhpJuN7" target="_blank" rel="noopener noreferrer" class="office-map-btn">📍 地图</a></div></div></div>
         <div class="office-card"><img src="photos/Reception.png" alt="Livingston" class="office-image" loading="lazy"><div class="office-info"><h3 class="office-name">Livingston（槟城）</h3><ul class="office-features"><li>安静的环境</li><li>餐厅·药房近在咫尺</li><li>交通便利</li></ul><div class="office-links"><a href="https://maps.app.goo.gl/9i841vf18KRyunQK6" target="_blank" rel="noopener noreferrer" class="office-map-btn">📍 地图</a></div></div></div>
@@ -677,9 +675,9 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
   <!-- Lifestyle -->
   <section class="lifestyle-section">
     <div class="container">
-      <h2 class="section-title section-title-decorated">不只是工作充实的活力生活</h2>
-      <p class="section-subtitle">周末去旅行下班后享受爱好和放松，每天都精彩</p>
-      <div class="lifestyle-grid">
+      <h2 class="section-title section-title-decorated fade-in">不只是工作充实的活力生活</h2>
+      <p class="section-subtitle fade-in">周末去旅行下班后享受爱好和放松，每天都精彩</p>
+      <div class="lifestyle-grid fade-in">
         <div class="lifestyle-item"><img src="photos/KL%202.jpg" alt="购物" loading="lazy"><div class="lifestyle-caption">购物</div></div>
         <div class="lifestyle-item"><img src="photos/Penang.jpg" alt="海滩" loading="lazy"><div class="lifestyle-caption">海滩放松</div></div>
         <div class="lifestyle-item"><img src="photos/Bangkok1.jpg" alt="夜市" loading="lazy"><div class="lifestyle-caption">夜市</div></div>
@@ -695,8 +693,8 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
   <!-- Testimonials -->
   <section class="testimonials" id="testimonials">
     <div class="container">
-      <h2 class="section-title section-title-decorated">员工的声音</h2>
-      <p class="section-subtitle">来自真实员工的真实反馈</p>
+      <h2 class="section-title section-title-decorated fade-in">员工的声音</h2>
+      <p class="section-subtitle fade-in">来自真实员工的真实反馈</p>
       <div class="testimonial-cards">
         <div class="testimonial"><p class="testimonial-content">物价便宜，可以轻松享受咖啡厅和外食通勤压力消失了，平时晚上也能悠闲地做瑜伽或和朋友相聚</p><div class="testimonial-author"><img src="photos/TPLogo11.png" alt="TP" class="author-img"><div class="author-info"><strong>M.S</strong><span>招聘团队·20多岁女性</span></div></div></div>
         <div class="testimonial"><p class="testimonial-content">每个周末都能去泳池、桑拿、健身房这种生活在中国想都不敢想！休息日和朋友去海滩或夜市工作和生活平衡很好！</p><div class="testimonial-author"><img src="photos/TPLogo11.png" alt="员工" class="author-img"><div class="author-info"><strong>A.T</strong><span>客户支持·30多岁男性</span></div></div></div>
@@ -711,9 +709,9 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
   <!-- Benefits -->
   <section class="benefits" id="benefits">
     <div class="container">
-      <h2 class="section-title">福利亮点</h2>
-      <p class="section-subtitle">安心·成长·快乐，全方位支持</p>
-      <div class="benefits-list">
+      <h2 class="section-title" data-local="Benefits Highlight" data-expat="福利亮点">福利亮点</h2>
+      <p class="section-subtitle fade-in">安心·成长·快乐，全方位支持</p>
+      <div class="benefits-list fade-in">
         <div class="benefit-item"><div class="benefit-icon">🏥</div><div class="benefit-text"><h4>医疗保险完善</h4></div></div>
         <div class="benefit-item"><div class="benefit-icon">✈️</div><div class="benefit-text"><h4>搬迁支持</h4><p>单程机票·初期住宿</p></div></div>
         <div class="benefit-item"><div class="benefit-icon">💰</div><div class="benefit-text"><h4>各类津贴</h4><p>夜班·住房·加班</p></div></div>
@@ -727,9 +725,9 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
   <!-- Interview Process -->
   <section class="interview-process" id="interview">
     <div class="container">
-      <h2 class="section-title section-title-decorated">招聘流程</h2>
-      <p class="section-subtitle">全部在线完成每个步骤都有华语支持</p>
-      <ol class="process-rail">
+      <h2 class="section-title section-title-decorated fade-in">招聘流程</h2>
+      <p class="section-subtitle fade-in">全部在线完成每个步骤都有华语支持</p>
+      <ol class="process-rail fade-in">
         <li class="step-card"><div class="step-head"><span class="step-dot">1</span><h3 class="step-title">简历筛选</h3></div><p class="step-desc">请提交你的简历</p></li>
         <li class="step-card"><div class="step-head"><span class="step-dot">2</span><h3 class="step-title">在线测试</h3></div><p class="step-desc">语言·能力简短测试</p></li>
         <li class="step-card"><div class="step-head"><span class="step-dot">3</span><h3 class="step-title">一面（招聘面试）</h3></div><p class="step-desc">确认工作内容和你的期望</p></li>
@@ -742,8 +740,8 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
   <!-- TA Team -->
   <section class="ta-team" id="ta-team">
     <div class="container">
-      <h2 class="section-title section-title-decorated">招聘团队</h2>
-      <p class="section-subtitle">从申请到入职，华语全程陪伴</p>
+      <h2 class="section-title section-title-decorated fade-in">招聘团队</h2>
+      <p class="section-subtitle fade-in">从申请到入职，华语全程陪伴</p>
       <div class="ta-team-container">
         <div class="ta-leader" id="kent">
           <img src="photos/TPLogo11.png" alt="Kent Teng" class="ta-leader-img" loading="lazy">
@@ -756,14 +754,14 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
             <a class="btn btn-sm btn-ghost" href="open-jobs.html">查看职位</a>
           </div>
         </div>
-        <div class="ta-team-grid">
+        <div class="ta-team-grid fade-in">
           <article class="ta-member"><img src="photos/TPLogo11.png" alt="Anna Saw" class="ta-member-img" loading="lazy"><h3 class="ta-member-name">Anna Saw</h3><p class="ta-member-role">人才招聘｜招聘专员</p><p class="ta-member-desc">第一次海外就职也能华语支持</p><div class="ta-member-links"><a href="https://outlook.office.com/book/Chinese@teleperformance.onmicrosoft.com/s/tEpdSOHeX0SbvhMZg_dyvQ2?ismsaljsauthenabled" target="_blank" rel="noopener noreferrer" class="text-link">预约面谈</a> · <a href="open-jobs.html" class="text-link">查看职位</a></div></article>
           <article class="ta-member"><img src="photos/TPLogo11.png" alt="Melaine Sua" class="ta-member-img" loading="lazy"><h3 class="ta-member-name">Melaine Sua</h3><p class="ta-member-role">人才招聘｜招聘专员</p><p class="ta-member-desc">职业咨询，随时欢迎</p><div class="ta-member-links"><a href="https://outlook.office.com/book/Chinese@teleperformance.onmicrosoft.com/s/tEpdSOHeX0SbvhMZg_dyvQ2?ismsaljsauthenabled" target="_blank" rel="noopener noreferrer" class="text-link">预约面谈</a> · <a href="open-jobs.html" class="text-link">查看职位</a></div></article>
           <article class="ta-member"><img src="photos/TPLogo11.png" alt="Nuttaporn" class="ta-member-img" loading="lazy"><h3 class="ta-member-name">Nuttaporn Buapradith</h3><p class="ta-member-role">人才招聘｜招聘专员</p><p class="ta-member-desc">出行手续和当地生活也会跟进</p><div class="ta-member-links"><a href="https://outlook.office.com/book/Chinese@teleperformance.onmicrosoft.com/s/tEpdSOHeX0SbvhMZg_dyvQ2?ismsaljsauthenabled" target="_blank" rel="noopener noreferrer" class="text-link">预约面谈</a> · <a href="open-jobs.html" class="text-link">查看职位</a></div></article>
           <article class="ta-member"><img src="photos/TPLogo11.png" alt="Careen Teh" class="ta-member-img" loading="lazy"><h3 class="ta-member-name">Careen Teh</h3><p class="ta-member-role">人才招聘｜招聘专员</p><p class="ta-member-desc">一起寻找你期望的项目</p><div class="ta-member-links"><a href="https://www.linkedin.com/in/chia-yin-teh/" target="_blank" rel="noopener noreferrer" class="text-link">LinkedIn</a> · <a href="open-jobs.html" class="text-link">查看职位</a></div></article>
           <article class="ta-member"><img src="photos/TPLogo11.png" alt="Yong Xing Su" class="ta-member-img" loading="lazy"><h3 class="ta-member-name">Yong Xing Su</h3><p class="ta-member-role">人才招聘｜招聘专员</p><p class="ta-member-desc">泰国相关咨询欢迎联系</p><div class="ta-member-links"><a href="https://www.linkedin.com/in/yong-xing-su/" target="_blank" rel="noopener noreferrer" class="text-link">LinkedIn</a> · <a href="open-jobs.html" class="text-link">查看职位</a></div></article>
         </div>
-        <div class="ta-team-grid" style="margin-top:1.5rem">
+        <div class="ta-team-grid fade-in" style="margin-top:1.5rem">
           <article class="ta-member"><img src="photos/TPLogo11.png" alt="Jocelyn Soh" class="ta-member-img" loading="lazy"><h3 class="ta-member-name">Jocelyn Soh</h3><p class="ta-member-role">人才招聘｜招聘专员</p><p class="ta-member-desc">帮助你找到合适的职位</p><div class="ta-member-links"><a href="open-jobs.html" class="text-link">查看职位</a></div></article>
           <article class="ta-member"><img src="photos/TPLogo11.png" alt="Tian Han Chuah" class="ta-member-img" loading="lazy"><h3 class="ta-member-name">Tian Han Chuah</h3><p class="ta-member-role">人才招聘｜招聘专员</p><p class="ta-member-desc">职业规划咨询欢迎联系</p><div class="ta-member-links"><a href="open-jobs.html" class="text-link">查看职位</a></div></article>
           <article class="ta-member"><img src="photos/TPLogo11.png" alt="Ts. Ng Hsiang Boon" class="ta-member-img" loading="lazy"><h3 class="ta-member-name">Ts. Ng Hsiang Boon</h3><p class="ta-member-role">人才招聘｜招聘专员</p><p class="ta-member-desc">技术与专业岗位咨询</p><div class="ta-member-links"><a href="open-jobs.html" class="text-link">查看职位</a></div></article>
@@ -775,8 +773,8 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
   <!-- FAQ -->
   <section class="faq-section" id="faq">
     <div class="container">
-      <h2 class="section-title section-title-decorated">常见问题</h2>
-      <p class="section-subtitle">申请前的疑问解答</p>
+      <h2 class="section-title section-title-decorated fade-in" data-local="FAQ" data-expat="常见问题">常见问题</h2>
+      <p class="section-subtitle fade-in">申请前的疑问解答</p>
       <div class="faq-container">
         <div class="faq-item"><div class="faq-question">英语不太好也能申请吗？</div><div class="faq-answer"><p>是的，华语为主的职位很多入职后还有GoFluent等英语学习支持项目，可以循序渐进提升技能</p></div></div>
         <div class="faq-item"><div class="faq-question">签证手续难吗？</div><div class="faq-answer"><p>公司会代办申请，请放心所需文件的准备也会用华语说明，从申请到批准全程支持</p></div></div>
@@ -791,8 +789,8 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
   <!-- Contact -->
   <section class="contact-min" id="contact">
     <div class="container">
-      <h2 class="section-title section-title-decorated">联系我们</h2>
-      <p class="section-subtitle">根据目的，快速访问</p>
+      <h2 class="section-title section-title-decorated fade-in" data-local="Contact Us" data-expat="联系我们">联系我们</h2>
+      <p class="section-subtitle fade-in">根据目的，快速访问</p>
       <div class="cta-links">
         <a class="cta-link" href="https://outlook.office.com/book/Chinese@teleperformance.onmicrosoft.com/s/tEpdSOHeX0SbvhMZg_dyvQ2?ismsaljsauthenabled" target="_blank" rel="noopener noreferrer"><span class="cta-ico">🗓️</span><span class="cta-main"><strong>预约招聘顾问</strong><em>30分钟在线咨询</em></span><span class="cta-arrow">→</span></a>
         <a class="cta-link" href="https://app.hallo.ai/teleperformance/ai-assessment/interview/zh?assessmentTypeId=VEhDOEFMRHdKWmtZdFoxREJjMHQ=" target="_blank" rel="noopener noreferrer"><span class="cta-ico">🤖</span><span class="cta-main"><strong>AI 能力评估</strong><em>在线AI面试，了解你的匹配度</em></span><span class="cta-arrow">→</span></a>
@@ -811,7 +809,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
       <div class="badges"><span class="badge-item">🏆 马来西亚最佳职场 连续6年</span><span class="badge-item">🏆 全球最佳职场 连续5年</span></div>
       <div class="footer-cta"><a href="https://www.tp.com/en-my/locations/malaysia/careers/?page=1#contactusmalaysia" target="_blank" rel="noopener noreferrer" class="btn btn-gold">TP.COM</a></div>
     </div>
-    <div class="footer-section"><h3>公司信息</h3><ul><li><a href="about-tp.html">公司介绍</a></li><li><a href="salary-and-benefits.html#benefits">福利待遇</a></li><li><a href="office-environment.html">办公环境</a></li><li><a href="ta-team.html">招聘团队</a></li></ul></div>
+    <div class="footer-section"><h3>公司信息</h3><ul><li><a href="about-tp.html">公司介绍</a></li><li><a href="salary-and-benefits.html#benefits">福利待遇</a></li><li><a href="office-environment.html" data-local="Office Environment" data-expat="办公环境">办公环境</a></li><li><a href="ta-team.html">招聘团队</a></li></ul></div>
     <div class="footer-section"><h3>职位·申请</h3><ul><li><a href="open-jobs.html">职位列表</a></li><li><a href="hiring-process.html">招聘流程</a></li><li><a href="https://app.hallo.ai/teleperformance/ai-assessment/interview/zh?assessmentTypeId=VEhDOEFMRHdKWmtZdFoxREJjMHQ=" target="_blank" rel="noopener noreferrer">AI 能力评估</a></li><li><a href="https://tpmyandtpth.github.io/LP/" target="_blank" rel="noopener noreferrer">其他语言职位</a></li></ul></div>
     <div class="footer-section"><h3>生活信息</h3><ul><li><a href="why-malaysia-thailand.html">工作城市</a></li><li><a href="relocation-visa.html">搬迁支持</a></li><li><a href="daily-life-malaysia.html">日常生活</a></li><li><a href="https://outlook.office.com/book/Chinese@teleperformance.onmicrosoft.com/s/tEpdSOHeX0SbvhMZg_dyvQ2?ismsaljsauthenabled" target="_blank" rel="noopener noreferrer">预约招聘顾问</a></li></ul></div>
   </div>
@@ -827,18 +825,22 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
 <button class="back-to-top" id="backToTop">↑</button>
 
 <script>
-// Language Toggle System
-let currentLanguage = localStorage.getItem('mlpLang') || 'local';
+// Language System — Popup + Persistent Toggle
+let currentLanguage = localStorage.getItem('mlpLang') || null;
+
+function chooseLang(lang) {
+    setLanguage(lang);
+    document.getElementById('langPopup').classList.remove('show');
+}
 
 function setLanguage(lang) {
     currentLanguage = lang;
     localStorage.setItem('mlpLang', lang);
-    document.getElementById('langLocal').classList.toggle('active', lang === 'local');
-    document.getElementById('langExpat').classList.toggle('active', lang === 'expat');
-    document.getElementById('currentLang').textContent = lang === 'local' ? '🇲🇾 本地华人' : '🌏 海外华人';
-    document.querySelectorAll('.lang-dropdown-item').forEach(item => item.classList.remove('active'));
-    document.querySelector('.lang-dropdown-item[onclick*="' + lang + '"]').classList.add('active');
-    document.getElementById('dropdownMenu').classList.remove('show');
+    // Update header buttons
+    const hL = document.getElementById('hdrLocal');
+    const hE = document.getElementById('hdrExpat');
+    if (hL) hL.classList.toggle('active', lang === 'local');
+    if (hE) hE.classList.toggle('active', lang === 'expat');
     updateAllText(lang);
 }
 
@@ -856,17 +858,14 @@ function updateAllText(lang) {
     });
 }
 
-function toggleDropdown() {
-    document.getElementById('dropdownMenu').classList.toggle('show');
-}
-
-document.addEventListener('click', e => {
-    if (!e.target.closest('.lang-dropdown')) {
-        document.getElementById('dropdownMenu').classList.remove('show');
+document.addEventListener('DOMContentLoaded', () => {
+    if (!currentLanguage) {
+        // First visit — show popup
+        setTimeout(() => document.getElementById('langPopup').classList.add('show'), 600);
+    } else {
+        setLanguage(currentLanguage);
     }
 });
-
-document.addEventListener('DOMContentLoaded', () => setLanguage(currentLanguage));
 
 // Typewriter Effect
 (function() {
@@ -955,5 +954,6 @@ document.addEventListener('DOMContentLoaded', () => setLanguage(currentLanguage)
     });
 })();
 </script>
+<script async src="//www.instagram.com/embed.js"></script>
 </body>
 </html>

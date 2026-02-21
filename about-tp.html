@@ -184,6 +184,57 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
 @media(max-width:768px){.grid-3{grid-template-columns:1fr}.grid-2{grid-template-columns:1fr}.process-rail{grid-template-columns:1fr}.process-rail::before{display:none}.ta-team-grid{grid-template-columns:repeat(2,1fr)}.offices-grid{grid-template-columns:1fr}.footer-content{grid-template-columns:1fr;text-align:center}nav{display:none}.mobile-toggle{display:block}.floating-ai{bottom:80px;right:20px}.back-to-top{bottom:140px}.cta-buttons{flex-direction:column;align-items:center}}
 @media(max-width:480px){.ta-team-grid{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+
+/* Bilingual toggle */
+.local-only{display:inline}
+.expat-only{display:none}
+body.expat-mode .local-only{display:none!important}
+body.expat-mode .expat-only{display:inline!important}
+div.local-only{display:block}
+div.expat-only{display:none}
+body.expat-mode div.local-only{display:none!important}
+body.expat-mode div.expat-only{display:block!important}
+li.local-only{display:list-item}
+li.expat-only{display:none}
+body.expat-mode li.local-only{display:none!important}
+body.expat-mode li.expat-only{display:list-item!important}
+/* Scroll animations */
+.fade-in{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.fade-in.visible{opacity:1;transform:translateY(0)}
+.fade-in-left{opacity:0;transform:translateX(-30px);transition:opacity .7s ease,transform .7s ease}
+.fade-in-left.visible{opacity:1;transform:translateX(0)}
+.fade-in-right{opacity:0;transform:translateX(30px);transition:opacity .7s ease,transform .7s ease}
+.fade-in-right.visible{opacity:1;transform:translateX(0)}
+/* Header lang switcher */
+.header-lang-switch{display:flex;gap:4px;align-items:center;margin-left:.5rem}
+.header-lang-btn{padding:.25rem .6rem;border-radius:14px;font-size:.7rem;font-weight:600;cursor:pointer;border:1.5px solid var(--tp-light);background:transparent;color:var(--tp-gray);transition:all .3s;white-space:nowrap}
+.header-lang-btn:hover{border-color:var(--gold-primary);color:#000}
+.header-lang-btn.active{background:var(--gold-primary);color:#000;border-color:var(--gold-primary)}
+/* Compare table */
+.compare-table{width:100%;border-collapse:collapse;max-width:var(--max-width);margin:1rem auto;border-radius:12px;overflow:hidden;box-shadow:var(--shadow-sm)}
+.compare-table th{background:var(--tp-black);color:#fff;padding:.75rem 1rem;font-size:.85rem;text-align:left}
+.compare-table td{padding:.65rem 1rem;border-bottom:1px solid var(--tp-light);font-size:.85rem}
+.compare-table tr:nth-child(even){background:var(--tp-off)}
+.compare-table tr:hover{background:var(--gold-pale)}
+/* Note box */
+.note-box{background:var(--tp-off);border-left:4px solid var(--gold-primary);padding:1rem 1.25rem;border-radius:0 8px 8px 0;margin-top:1.5rem;max-width:var(--max-width);margin-left:auto;margin-right:auto}
+.note-box p{font-size:.85rem;color:var(--tp-gray-dark)}
+/* Quick stats */
+.quick-stats{display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;margin-bottom:2rem}
+.quick-stat{text-align:center;padding:.75rem 1.5rem;background:#fff;border-radius:12px;border:1px solid var(--tp-light);min-width:120px}
+.quick-stat-number{font-size:1.5rem;font-weight:900;color:var(--gold-dark);display:block}
+.quick-stat-label{font-size:.75rem;color:var(--tp-gray)}
+/* Numbered tips */
+.tips-list{list-style:none;max-width:800px;margin:0 auto;counter-reset:tip}
+.tips-list li{padding:.75rem 0 .75rem 2.5rem;border-bottom:1px solid var(--tp-light);position:relative;font-size:.9rem;color:var(--tp-gray-dark)}
+.tips-list li::before{counter-increment:tip;content:counter(tip);position:absolute;left:0;width:28px;height:28px;background:var(--gold-primary);color:#000;border-radius:50%;display:grid;place-items:center;font-weight:700;font-size:.8rem}
+/* Blockquote */
+.testimonial-card{background:var(--tp-white);border:1px solid var(--tp-light);border-left:4px solid var(--gold-primary);border-radius:12px;padding:1.5rem;box-shadow:var(--shadow-sm)}
+.testimonial-card blockquote{font-style:italic;line-height:1.8;margin-bottom:1rem;color:var(--tp-gray-dark)}
+.testimonial-card cite{font-style:normal;font-weight:600;font-size:.85rem}
+@media(max-width:768px){.quick-stats{gap:.75rem}.quick-stat{min-width:90px;padding:.5rem .75rem}}
+@media(prefers-reduced-motion:reduce){.fade-in,.fade-in-left,.fade-in-right{opacity:1;transform:none}}
+
 </style>
 </head>
 <body>
@@ -196,50 +247,77 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
   </div>
   <nav class="mobile-menu" id="mobileMenu" aria-label="移动端导航"><ul><li><a href="index.html">首页</a></li><li><a href="open-jobs.html">职位列表</a></li><li><a href="about-tp.html">关于TP</a></li><li><a href="salary-and-benefits.html">薪资福利</a></li><li><a href="hiring-process.html">招聘流程</a></li><li><a href="why-malaysia-thailand.html">城市介绍</a></li><li><a href="relocation-visa.html">签证·搬迁</a></li><li><a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=chinese" target="_blank" rel="noopener noreferrer" class="apply-btn">立即申请</a></li></ul></nav>
 </header>
-<main id="main">
+<main>
+  <section class="page-hero"><div class="container">
+    <h1 class="fade-in" data-local="About TP" data-expat="关于TP">关于TP</h1>
+    <p class="hero-sub fade-in" data-local="全球最大的Business Process Outsourcing企业，为华语talent提供career opportunity" data-expat="全球最大的业务流程外包企业，为华语人才提供职业机会">全球最大的业务流程外包企业，为华语人才提供职业机会</p>
+  </div></section>
 
-  <section class="hero-dark">
-    <h1>关于 TP</h1>
-    <p>全球领先的业务流程外包企业</p>
-  </section>
-  <section class="section-padded">
-    <div class="container">
-      <h2 class="section-title">关于 Teleperformance</h2>
-      <p class="section-subtitle">1978年成立于法国巴黎，全球100+国家，50万+员工</p>
-      <div class="grid-2">
-        <div>
-          <p style="color:var(--tp-gray-dark);line-height:2;font-size:.95rem">TP（Teleperformance）是全球领先的业务流程外包企业，于1978年在法国巴黎成立。目前在全球100多个国家运营，拥有超过50万名员工。</p>
-          <p style="color:var(--tp-gray-dark);line-height:2;font-size:.95rem;margin-top:1rem">我们将尖端技术与优秀人才相结合，为全球知名品牌提供卓越的客户体验服务。目前，我们正在马来西亚和泰国积极招聘华语人才。</p>
-          <p style="color:var(--tp-gray-dark);line-height:2;font-size:.95rem;margin-top:1rem">无论你是应届毕业生还是经验丰富的专业人士，我们都为你准备了多元化、包容的工作环境。</p>
-        </div>
-        <div style="text-align:center"><img src="photos/TPLogo11.png" alt="TP Logo" style="max-width:200px;opacity:.15"></div>
-      </div>
+  <section class="content-section" style="padding:50px 20px"><div class="container">
+    <div class="fade-in" style="max-width:800px;margin:0 auto">
+      <p data-local="TP（Teleperformance）于1978年在France Paris成立，是global leading的Business Process Outsourcing企业。目前在全球100多个country运营，拥有超过50万名employee。" data-expat="TP（Teleperformance）于1978年在法国巴黎成立，是全球领先的业务流程外包企业。目前在全球100多个国家运营，拥有超过50万名员工。">TP（Teleperformance）于1978年在法国巴黎成立，是全球领先的业务流程外包企业。目前在全球100多个国家运营，拥有超过50万名员工。</p>
+      <p style="margin-top:1rem" data-local="我们将cutting-edge的technology和excellent的talent combine，为全球知名brand提供outstanding的customer experience service。目前在Malaysia和Thailand积极recruit华语talent。" data-expat="我们将尖端技术与优秀人才相结合，为全球知名品牌提供卓越的客户体验服务。目前在马来西亚和泰国积极招聘华语人才。">我们将尖端技术与优秀人才相结合，为全球知名品牌提供卓越的客户体验服务。目前在马来西亚和泰国积极招聘华语人才。</p>
+      <p style="margin-top:1rem" data-local="无论你是fresh graduate还是experienced professional，我们都为你prepare了diverse、inclusive的work environment。" data-expat="无论你是应届毕业生还是经验丰富的专业人士，我们都为你准备了多元化、包容的工作环境。">无论你是应届毕业生还是经验丰富的专业人士，我们都为你准备了多元化、包容的工作环境。</p>
     </div>
-  </section>
-  <section class="section-padded alt">
-    <div class="container">
-      <h2 class="section-title">为什么选择 TP？</h2>
-      <div class="grid-3">
-        <div class="card"><div class="card-icon">🏆</div><h3>全球最佳职场</h3><p>连续5年获评 Great Place to Work® 全球最佳职场，连续6年获评马来西亚最佳职场。</p></div>
-        <div class="card"><div class="card-icon">🌏</div><h3>全球化平台</h3><p>在100多个国家运营，与全球顶级品牌合作，提供国际化的工作体验。</p></div>
-        <div class="card"><div class="card-icon">📈</div><h3>职业发展</h3><p>清晰的晋升通道，丰富的培训资源，帮助你不断成长。</p></div>
-        <div class="card"><div class="card-icon">🤝</div><h3>多元包容</h3><p>来自全球各地的同事，多元文化融合的工作环境。</p></div>
-        <div class="card"><div class="card-icon">💼</div><h3>稳定雇佣</h3><p>正规全职合同，完善的社保和福利保障。</p></div>
-        <div class="card"><div class="card-icon">🎯</div><h3>技术驱动</h3><p>AI、自动化等前沿技术赋能，走在行业前沿。</p></div>
-      </div>
+  </div></section>
+
+  <section class="content-section" style="padding:40px 20px;background:var(--gold-pale)"><div class="container">
+    <div class="fade-in" style="background:#fff;border-radius:12px;padding:2rem;border-left:4px solid var(--gold-primary);box-shadow:var(--shadow-md)">
+      <h2 style="font-size:1.2rem;margin-bottom:.75rem" data-local="🎉 Important Announcement" data-expat="🎉 重要公告">🎉 重要公告</h2>
+      <p data-local="Official发布：TP 荣获 Great Place to Work® 评选的「World's Best Workplaces™」，并已<strong>连续 5 年</strong>获得该certification！" data-expat="官方发布：TP 荣获 Great Place to Work® 评选的「全球最佳职场」，并已<strong>连续 5 年</strong>获得该认证！">官方发布：TP 荣获 Great Place to Work® 评选的「全球最佳职场」，并已<strong>连续 5 年</strong>获得该认证！</p>
+      <p style="font-style:italic;color:var(--tp-gray);margin-top:.5rem">"这一认证基于员工的反馈与信任，充分展现了我们强大的企业文化"</p>
     </div>
-  </section>
-  <section class="cta-section">
-    <div class="container" style="text-align:center">
-      <h2 class="section-title">准备好了吗？</h2>
-      <p class="section-subtitle">开始你的海外职业之旅</p>
-      <div class="cta-buttons">
-        <a class="btn-cta-primary" href="https://app.hallo.ai/teleperformance/ai-assessment/interview/zh?assessmentTypeId=VEhDOEFMRHdKWmtZdFoxREJjMHQ=" target="_blank" rel="noopener noreferrer">AI 能力评估</a>
-        <a class="btn-cta-secondary" href="https://outlook.office.com/book/Chinese@teleperformance.onmicrosoft.com/s/tEpdSOHeX0SbvhMZg_dyvQ2?ismsaljsauthenabled" target="_blank" rel="noopener noreferrer">预约面谈</a>
-        <a class="btn-cta-outline" href="open-jobs.html">查看职位</a>
-      </div>
+  </div></section>
+
+  <section class="content-section" style="padding:50px 20px"><div class="container">
+    <h2 class="section-title fade-in" data-local="Global Scale" data-expat="全球规模">全球规模</h2>
+    <p class="section-subtitle fade-in" data-local="在全球各地为client提供high-quality service" data-expat="在全球各地为客户提供优质服务">在全球各地为客户提供优质服务</p>
+    <div class="cards fade-in" style="grid-template-columns:repeat(3,1fr)">
+      <div class="card" style="text-align:center;padding:2rem"><div style="font-size:2.5rem;font-weight:900;color:var(--gold-primary)">100+</div><h3 data-local="运营Country" data-expat="运营国家">运营国家</h3><p data-local="遍布global的service center" data-expat="遍布全球的服务中心">遍布全球的服务中心</p></div>
+      <div class="card" style="text-align:center;padding:2rem"><div style="font-size:2.5rem;font-weight:900;color:var(--gold-primary)">500,000+</div><h3 data-local="Global Employee" data-expat="全球员工">全球员工</h3><p data-local="来自多元background的excellent talent" data-expat="来自多元背景的优秀人才">来自多元背景的优秀人才</p></div>
+      <div class="card" style="text-align:center;padding:2rem"><div style="font-size:2.5rem;font-weight:900;color:var(--gold-primary)">7,000+</div><h3 data-local="Malaysia/Thailand Employee" data-expat="马来西亚/泰国员工">马来西亚/泰国员工</h3><p data-local="两地合计（持续growth中）" data-expat="两地合计（持续增长中）">两地合计（持续增长中）</p></div>
     </div>
-  </section></main>
+  </div></section>
+
+  <section class="content-section" style="padding:50px 20px;background:var(--tp-off)"><div class="container">
+    <h2 class="section-title fade-in" data-local="Awards & Certifications" data-expat="荣誉与认证">荣誉与认证</h2>
+    <div class="cards fade-in" style="grid-template-columns:repeat(3,1fr)">
+      <div class="card" style="text-align:center;padding:2rem"><div style="font-size:2rem">🏆</div><h3>Great Place to Work®</h3><p data-local="Malaysia据点 6年连续受奖" data-expat="马来西亚据点 6年连续受奖">马来西亚据点 6年连续受奖</p></div>
+      <div class="card" style="text-align:center;padding:2rem"><div style="font-size:2rem">🌏</div><h3>World's Best Workplaces™</h3><p data-local="Global 5年连续certification" data-expat="全球5年连续认证">全球5年连续认证</p></div>
+      <div class="card" style="text-align:center;padding:2rem"><div style="font-size:2rem">📈</div><h3 data-local="Growth企业" data-expat="成长企业">成长企业</h3><p data-local="华语talent recruitment持续扩大" data-expat="华语人才招聘持续扩大">华语人才招聘持续扩大</p></div>
+    </div>
+  </div></section>
+
+  <section class="content-section" style="padding:50px 20px"><div class="container">
+    <h2 class="section-title fade-in" data-local="为什么Choose TP" data-expat="为什么选择TP">为什么选择TP</h2>
+    <div class="cards fade-in">
+      <div class="card"><div class="card-icon">🏆</div><h3 data-local="Best Workplace认证" data-expat="最佳职场认证">最佳职场认证</h3><p data-local="Great Place to Work® 连续6年certification，employee satisfaction非常高" data-expat="Great Place to Work® 连续6年认证，员工满意度非常高">Great Place to Work® 连续6年认证，员工满意度非常高</p></div>
+      <div class="card"><div class="card-icon">🌏</div><h3 data-local="Global Platform" data-expat="全球平台">全球平台</h3><p data-local="100多个country运营的global企业，international career可以expand" data-expat="100多个国家运营的全球企业，国际化职业可以拓展">100多个国家运营的全球企业，国际化职业可以拓展</p></div>
+      <div class="card"><div class="card-icon">📈</div><h3 data-local="Career Development" data-expat="职业发展">职业发展</h3><p data-local="入职training + continuous learning，Language Bootcamp / GoFluent support English improve" data-expat="入职培训 + 持续学习，语言训练营 / GoFluent 支持英语提升">入职培训 + 持续学习，语言训练营 / GoFluent 支持英语提升</p></div>
+      <div class="card"><div class="card-icon">🤝</div><h3 data-local="Diversity & Inclusion" data-expat="多元与包容">多元与包容</h3><p data-local="不论nationality、age、gender都互相respect的culture" data-expat="不论国籍、年龄、性别都互相尊重的文化">不论国籍、年龄、性别都互相尊重的文化</p></div>
+      <div class="card"><div class="card-icon">💼</div><h3 data-local="Stable Employment" data-expat="稳定雇佣">稳定雇佣</h3><p data-local="Full-time正式雇用，medical insurance + complete benefits" data-expat="全职正式雇用，医疗保险 + 完善福利">全职正式雇用，医疗保险 + 完善福利</p></div>
+      <div class="card"><div class="card-icon">💡</div><h3 data-local="Tech-Driven" data-expat="技术驱动">技术驱动</h3><p data-local="Cutting-edge technology combine，growth enterprise的dynamic environment" data-expat="尖端技术结合，成长企业的活力环境">尖端技术结合，成长企业的活力环境</p></div>
+    </div>
+  </div></section>
+
+  <section class="content-section" style="padding:50px 20px;background:var(--tp-off)"><div class="container">
+    <h2 class="section-title fade-in" data-local="Employee的Voice" data-expat="员工心声">员工心声</h2>
+    <div class="cards fade-in" style="grid-template-columns:repeat(3,1fr)">
+      <div class="card" style="padding:2rem"><p style="font-style:italic;margin-bottom:1rem" data-local="&quot;Multinational culture让我心灵得到解放。自己能更honestly地work和live。&quot;" data-expat="&quot;多元文化让我心灵得到解放。自己能更坦诚地工作和生活。&quot;">"多元文化让我心灵得到解放。自己能更坦诚地工作和生活。"</p><p style="font-weight:700">H.N</p><p style="font-size:.85rem;color:var(--tp-gray)" data-local="Recruitment Team" data-expat="招聘团队">招聘团队</p></div>
+      <div class="card" style="padding:2rem"><p style="font-style:italic;margin-bottom:1rem" data-local="&quot;坚持ability evaluation，我有opportunity promote为Team Lead。Career的可能性unlimited！&quot;" data-expat="&quot;坚持能力评价，我有机会晋升为Team Lead。职业的可能性无限！&quot;">"坚持能力评价，我有机会晋升为Team Lead。职业的可能性无限！"</p><p style="font-weight:700">N.T</p><p style="font-size:.85rem;color:var(--tp-gray)" data-local="Team Supervisor" data-expat="团队主管">团队主管</p></div>
+      <div class="card" style="padding:2rem"><p style="font-style:italic;margin-bottom:1rem" data-local="&quot;Malaysia life比imagine中comfortable。中餐充足，weekend还能去nearby country trip！&quot;" data-expat="&quot;马来西亚生活比想象中舒适。中餐充足，周末还能去周边国家旅行！&quot;">"马来西亚生活比想象中舒适。中餐充足，周末还能去周边国家旅行！"</p><p style="font-weight:700">H.K</p><p style="font-size:.85rem;color:var(--tp-gray)" data-local="Quality Specialist" data-expat="质量专员">质量专员</p></div>
+    </div>
+  </div></section>
+
+  <section class="cta-section"><div class="container">
+    <h2 class="fade-in" data-local="Ready to Start?" data-expat="准备开始？">准备开始？</h2>
+    <div class="cta-buttons fade-in">
+      <a href="https://app.hallo.ai/teleperformance/ai-assessment/interview/zh?assessmentTypeId=VEhDOEFMRHdKWmtZdFoxREJjMHQ=" target="_blank" rel="noopener noreferrer" class="btn btn-gold">🤖 AI 能力评估</a>
+      <a href="https://outlook.office.com/book/Chinese@teleperformance.onmicrosoft.com/s/tEpdSOHeX0SbvhMZg_dyvQ2?ismsaljsauthenabled" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" data-local="Book Recruiter" data-expat="预约招聘顾问">预约招聘顾问</a>
+      <a href="open-jobs.html" class="btn btn-outline" data-local="View Jobs" data-expat="查看职位">查看职位</a>
+    </div>
+  </div></section>
+</main>
 <footer>
   <div class="footer-content">
     <div class="footer-brand"><div class="footer-logo"><img src="photos/TPLogo11.png" alt="TP"><span class="footer-logo-text">TP</span></div><p class="footer-desc">在全球100多个国家运营的全球业务流程外包企业<br>支持华语人才开启新事业</p><div class="badges"><span class="badge-item">🏆 马来西亚最佳职场 连续6年</span><span class="badge-item">🏆 全球最佳职场 连续5年</span></div><div class="footer-cta"><a href="https://www.tp.com/en-my/locations/malaysia/careers/?page=1#contactusmalaysia" target="_blank" rel="noopener noreferrer" class="btn-footer">TP.COM</a></div></div>
@@ -255,6 +333,35 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
 <script>
 (function(){const t=document.getElementById('mobileToggle'),m=document.getElementById('mobileMenu');if(t&&m){t.addEventListener('click',function(){t.classList.toggle('active');m.classList.toggle('active');t.setAttribute('aria-expanded',m.classList.contains('active'))});m.querySelectorAll('a').forEach(a=>{a.addEventListener('click',()=>{t.classList.remove('active');m.classList.remove('active');t.setAttribute('aria-expanded','false')})});document.addEventListener('click',e=>{if(!m.contains(e.target)&&!t.contains(e.target)){m.classList.remove('active');t.classList.remove('active');t.setAttribute('aria-expanded','false')}})}})();
 (function(){const b=document.getElementById('backToTop');if(!b)return;window.addEventListener('scroll',()=>{b.classList.toggle('show',window.pageYOffset>300)});b.addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})})})();
+
+// Language system
+let currentLanguage=localStorage.getItem('mlpLang')||'local';
+function setLanguage(l){currentLanguage=l;localStorage.setItem('mlpLang',l);document.body.classList.toggle('expat-mode',l==='expat');var hL=document.getElementById('hdrLocal'),hE=document.getElementById('hdrExpat');if(hL)hL.classList.toggle('active',l==='local');if(hE)hE.classList.toggle('active',l==='expat');}
+document.addEventListener('DOMContentLoaded',function(){setLanguage(currentLanguage)});
+// Scroll animations
+(function(){var els=document.querySelectorAll('.fade-in,.fade-in-left,.fade-in-right');if(!els.length)return;var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});els.forEach(function(el){obs.observe(el)})})();
+
+
+// Bilingual System
+var currentLanguage = localStorage.getItem('mlpLang') || 'expat';
+function setLanguage(lang) {
+    currentLanguage = lang;
+    localStorage.setItem('mlpLang', lang);
+    var hL = document.getElementById('hdrLocal');
+    var hE = document.getElementById('hdrExpat');
+    if (hL) hL.classList.toggle('active', lang === 'local');
+    if (hE) hE.classList.toggle('active', lang === 'expat');
+    updateAllText(lang);
+}
+function updateAllText(lang) {
+    var attr = lang === 'local' ? 'data-local' : 'data-expat';
+    document.querySelectorAll('[data-local][data-expat]').forEach(function(el) {
+        var text = el.getAttribute(attr);
+        if (text) { el.innerHTML = text; }
+    });
+}
+document.addEventListener('DOMContentLoaded', function() { setLanguage(currentLanguage); });
+
 </script>
 </body>
 </html>
