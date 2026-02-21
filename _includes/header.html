@@ -1,12 +1,12 @@
 <!-- Header -->
 <header>
   <div class="header-inner">
-    <a href="{{ '/' | relative_url }}" class="brand">
-      <img src="{{ '/assets/images/TPLogo11.png' | relative_url }}" alt="TP Logo" width="40" height="40">
+    <a href="/" class="brand">
+      <img src="{{ site.baseurl }}/photos/TPLogo11.png" alt="TP Logo" width="40" height="40">
       <div class="brand-text">
         <span class="brand-name">
-          <span class="local-only">TP 华语招聘</span>
-          <span class="expat-only">TP 华语招聘</span>
+          <span class="local-only">TP</span>
+          <span class="expat-only">TP</span>
         </span>
         <span class="brand-tagline">
           <span class="local-only">Your Career, Our Mission</span>
@@ -19,7 +19,7 @@
       <ul>
         {% for item in site.data.navigation.main %}
         <li>
-          <a href="{{ item.url | relative_url }}"
+          <a href="{{ site.baseurl }}/{{ item.url }}"
              {% if page.url == '/' and item.url == 'index.html' %}aria-current="page"{% endif %}
              {% if page.url contains item.url and item.url != 'index.html' %}aria-current="page"{% endif %}>
             <span class="local-only">{{ item.local }}</span>
@@ -30,7 +30,7 @@
         <li>
           <a href="{{ site.icims_search }}" target="_blank" rel="noopener noreferrer" class="apply-btn"
              onclick="trackCustomEvent('apply_click', {button_name: 'Nav Apply'})">
-            <span class="local-only">Apply Now</span>
+            <span class="local-only">立即申请</span>
             <span class="expat-only">立即申请</span>
           </a>
         </li>
@@ -47,7 +47,7 @@
     <ul>
       {% for item in site.data.navigation.main %}
       <li>
-        <a href="{{ item.url | relative_url }}">
+        <a href="{{ site.baseurl }}/{{ item.url }}">
           <span class="local-only">{{ item.local }}</span>
           <span class="expat-only">{{ item.expat }}</span>
         </a>
@@ -55,7 +55,7 @@
       {% endfor %}
       <li>
         <a href="{{ site.icims_search }}" target="_blank" rel="noopener noreferrer" class="apply-btn">
-          <span class="local-only">Apply Now</span>
+          <span class="local-only">立即申请</span>
           <span class="expat-only">立即申请</span>
         </a>
       </li>
