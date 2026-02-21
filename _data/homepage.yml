@@ -19,15 +19,15 @@ hero:
   stats:
     - number: "500+"
       label:
-        local: "FORTUNE GLOBAL"
+        local: "世界500强"
         expat: "世界500强"
     - number: "100+"
       label:
-        local: "COUNTRIES"
+        local: "覆盖国家"
         expat: "覆盖国家"
     - number: "500K+"
       label:
-        local: "EMPLOYEES"
+        local: "全球员工"
         expat: "全球员工"
 
 # Social proof banner
@@ -54,7 +54,7 @@ community_stats:
     icon: "👥"
   - number: "5"
     label:
-      local: "Office 地点"
+      local: "办公地点"
       expat: "办公地点"
     icon: "🏢"
   - number: "10+"
@@ -80,7 +80,7 @@ priority_cards:
     image: "GBS.jpeg"
     emoji: "🏢"
   - title:
-      local: "Open Jobs"
+      local: "职位列表"
       expat: "热门职位"
     desc:
       local: "查看最新职位空缺"
@@ -89,7 +89,7 @@ priority_cards:
     image: "Reception.png"
     emoji: "💼"
   - title:
-      local: "Salary & Benefits"
+      local: "薪资福利"
       expat: "薪资福利"
     desc:
       local: "薪酬福利详情"
@@ -98,7 +98,7 @@ priority_cards:
     image: "Reception%20(1).png"
     emoji: "💰"
   - title:
-      local: "Relocation & Visa"
+      local: "签证·搬迁"
       expat: "签证搬迁"
     desc:
       local: "签证流程与搬迁支持"
@@ -107,7 +107,7 @@ priority_cards:
     image: "Condo.jpg"
     emoji: "✈️"
   - title:
-      local: "Testimonials"
+      local: "员工故事"
       expat: "员工心声"
     desc:
       local: "听听同事怎么说"
@@ -125,7 +125,7 @@ priority_cards:
     image: "KL%202.jpg"
     emoji: "🇲🇾🇹🇭"
   - title:
-      local: "🤖 AI Assessment"
+      local: "🤖 AI 能力评估"
       expat: "🤖 AI 能力评估"
     desc:
       local: "完成线上 AI 测评"
@@ -135,7 +135,7 @@ priority_cards:
     emoji: "🤖"
     external: true
   - title:
-      local: "Hiring Process"
+      local: "招聘流程"
       expat: "招聘流程"
     desc:
       local: "面试流程全解析"
@@ -144,7 +144,7 @@ priority_cards:
     image: "Reception%20(2).png"
     emoji: "📋"
   - title:
-      local: "Office Tour"
+      local: "办公环境"
       expat: "办公环境"
     desc:
       local: "参观我们的办公室"
@@ -158,17 +158,17 @@ priority_cards:
     desc:
       local: "推荐朋友，赢取奖金"
       expat: "推荐朋友，赢取奖金"
-    url: "https://tpmyandtpth.github.io/xRAF/"
+    url: "external-raf.html"
     image: "Reception.png"
     emoji: "🎁"
     external: true
   - title:
-      local: "Blog 资讯"
+      local: "博客·资讯"
       expat: "最新资讯"
     desc:
       local: "最新动态和分享"
       expat: "最新动态和分享"
-    url: "#"
+    url: "blog.html"
     image: "CafepicbyKoyoriinPenang.jpg"
     emoji: "📢"
   - title:
@@ -177,6 +177,6 @@ priority_cards:
     desc:
       local: "你想知道的都在这里"
       expat: "你想知道的都在这里"
-    url: "#faq"
+    url: "faq.html"
     image: "GTowerInside1.png"
     emoji: "❓"

@@ -4,35 +4,35 @@
 interview_process:
   - step: 1
     title:
-      local: "Submit Resume"
+      local: "提交简历"
       expat: "提交简历"
     desc:
       local: "通过 iCIMS 在线提交"
       expat: "通过在线系统提交简历"
   - step: 2
     title:
-      local: "AI Assessment"
+      local: "AI 能力评估"
       expat: "AI 测评"
     desc:
       local: "完成线上测评"
       expat: "完成线上 AI 测评"
   - step: 3
     title:
-      local: "Interview"
+      local: "面试"
       expat: "面试"
     desc:
       local: "与招聘团队面试"
       expat: "与招聘团队进行面试"
   - step: 4
     title:
-      local: "Offer Letter"
+      local: "录用通知"
       expat: "录用通知"
     desc:
       local: "收到 Offer"
       expat: "收到录用通知书"
   - step: 5
     title:
-      local: "Onboarding"
+      local: "入职培训"
       expat: "入职培训"
     desc:
       local: "签证办理 + 入职"
@@ -44,42 +44,42 @@ interview_process:
 benefits:
   - icon: "💰"
     title:
-      local: "Competitive Salary"
+      local: "有竞争力的薪资"
       expat: "有竞争力的薪酬"
     desc:
       local: "具有市场竞争力的薪资 + 语言津贴"
       expat: "具有市场竞争力的薪资加语言津贴"
   - icon: "🏥"
     title:
-      local: "Medical Insurance"
+      local: "医疗保险"
       expat: "医疗保险"
     desc:
       local: "全面的医疗保险覆盖"
       expat: "全面的医疗保险覆盖"
   - icon: "✈️"
     title:
-      local: "Visa Support"
+      local: "签证支持"
       expat: "签证支持"
     desc:
       local: "公司全程办理工作签证"
       expat: "公司全程办理工作签证"
   - icon: "🏠"
     title:
-      local: "Housing Support"
+      local: "住房支持"
       expat: "住房支持"
     desc:
       local: "搬迁补贴和住房指导"
       expat: "搬迁补贴和住房指导"
   - icon: "📈"
     title:
-      local: "Career Growth"
+      local: "职业发展"
       expat: "职业发展"
     desc:
       local: "清晰的晋升通道和培训"
       expat: "清晰的晋升通道和培训"
   - icon: "🎉"
     title:
-      local: "Work Culture"
+      local: "企业文化"
       expat: "企业文化"
     desc:
       local: "GPTW 认证最佳雇主"
@@ -143,36 +143,6 @@ icon_grid:
 # ========================================
 # SOCIAL CONNECT (4 cards with QR placeholders)
 # ========================================
-social_connect:
-  - platform: "WeChat"
-    icon: "💬"
-    desc:
-      local: "微信公众号"
-      expat: "微信公众号"
-    qr_image: "wechat-qr.png"
-  - platform: "预约招聘顾问"
-    icon: "📅"
-    desc:
-      local: "Book a Recruiter"
-      expat: "预约招聘顾问"
-    qr_image: ""
-    url: "https://outlook.office.com/book/Chinese@teleperformance.onmicrosoft.com/s/tEpdSOHeX0SbvhMZg_dyvQ2?ismsaljsauthenabled"
-  - platform: "小红书"
-    icon: "📕"
-    desc:
-      local: "Xiaohongshu"
-      expat: "小红书"
-    qr_image: "xhs-qr.png"
-  - platform: "WhatsApp"
-    icon: "📱"
-    desc:
-      local: "WhatsApp 群组"
-      expat: "WhatsApp 群组"
-    qr_image: "whatsapp-qr.png"
-
-# ========================================
-# VIDEOS (4 YouTube embeds)
-# ========================================
 videos:
   - id: "N6l7PUQR0tw"
     title:
@@ -195,35 +165,35 @@ videos:
 # LIFESTYLE GRID (8 items)
 # ========================================
 lifestyle:
-  - image: "lifestyle-food.jpg"
+  - image: "Bangkok1.jpg"
     label:
       local: "美食天堂"
       expat: "美食天堂"
-  - image: "lifestyle-nature.jpg"
+  - image: "Penang.jpg"
     label:
       local: "自然风光"
       expat: "自然风光"
-  - image: "lifestyle-city.jpg"
+  - image: "KL%201.jpg"
     label:
       local: "城市生活"
       expat: "城市生活"
-  - image: "lifestyle-culture.jpg"
+  - image: "Singha%20Complex1.jpg"
     label:
       local: "多元文化"
       expat: "多元文化"
-  - image: "lifestyle-beach.jpg"
+  - image: "KL%202.jpg"
     label:
       local: "海滩度假"
       expat: "海滩度假"
-  - image: "lifestyle-shopping.jpg"
+  - image: "Bangkok%202.jpg"
     label:
       local: "购物天堂"
       expat: "购物天堂"
-  - image: "lifestyle-temple.jpg"
+  - image: "Singha%20Complex2.jpg"
     label:
       local: "历史古迹"
       expat: "历史古迹"
-  - image: "lifestyle-nightlife.jpg"
+  - image: "Condo.jpg"
     label:
       local: "夜生活"
       expat: "夜生活"
@@ -233,7 +203,7 @@ lifestyle:
 # ========================================
 faq:
   - q:
-      local: "需要会说 Malay 吗？"
+      local: "需要会说马来语吗？"
       expat: "需要会说马来语吗？"
     a:
       local: "不需要！我们的华语项目以中文为主要工作语言，基本的英语沟通能力即可。"
@@ -242,7 +212,7 @@ faq:
       local: "公司帮忙办签证吗？"
       expat: "公司提供签证支持吗？"
     a:
-      local: "Yes！公司全程办理工作签证（Employment Pass），包括申请、续签，费用由公司承担。"
+      local: "是的！公司全程办理工作签证（工作签证），包括申请、续签，费用由公司承担。"
       expat: "是的。公司全程办理工作签证，包括申请和续签，费用由公司承担。"
   - q:
       local: "面试是什么形式？"
@@ -254,7 +224,7 @@ faq:
       local: "薪水大概多少？"
       expat: "薪资水平如何？"
     a:
-      local: "薪资根据项目和岗位不同，一般都有语言津贴。详情可以看我们的 Salary & Benefits 页面。"
+      local: "薪资根据项目和岗位不同，一般都有语言津贴。详情可以看我们的 薪资福利页面。"
       expat: "薪资根据项目和岗位而定，均包含语言津贴。详情请参阅薪资福利页面。"
   - q:
       local: "有提供住宿吗？"

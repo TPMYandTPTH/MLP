@@ -1,79 +1,60 @@
 # TA Team Members
-# Kent = leader, others = members
-# LinkedIn buttons: Anna + Melaine + 3 new (Kent excluded)
+# Kent = leader, Row 1 = 5 members, Row 2 = 3 members
+# All profile pictures: TPLogo11.png
 
 leader:
   name_en: "Kent Teng"
   name_cn: "邓伟健"
-  title:
-    local: "TA Team Manager"
-    expat: "招聘团队经理"
-  avatar: "kent.jpg"
-  bio:
-    local: "Kent 是我们华语招聘团队的负责人，拥有多年跨国招聘经验，致力于为每一位候选人提供最佳的求职体验。"
-    expat: "Kent 是华语招聘团队负责人，拥有多年跨国招聘经验，致力于为每一位候选人提供最佳的求职体验。"
+  title: "经理｜人才招聘"
+  avatar: "TPLogo11.png"
+  bio: "Kent 是华语招聘团队负责人，拥有多年跨国招聘经验，致力于为每一位候选人提供最佳的求职体验。"
   show_linkedin: false
 
-members:
+# Row 1
+members_row1:
   - name_en: "Anna Saw"
-    name_cn: "苏安娜"
-    title:
-      local: "TA Specialist"
-      expat: "招聘专员"
-    avatar: "anna.jpg"
-    linkedin: "https://www.linkedin.com/search/results/all/?keywords=Anna%20Saw%20Teleperformance"
-    show_linkedin: true
+    title: "人才招聘｜招聘专员"
+    avatar: "TPLogo11.png"
+    desc: "第一次海外就职也能华语支持"
 
   - name_en: "Melaine Sua"
-    name_cn: "苏美莲"
-    title:
-      local: "TA Specialist"
-      expat: "招聘专员"
-    avatar: "melaine.jpg"
-    linkedin: "https://www.linkedin.com/in/heyminlee/"
-    show_linkedin: true
+    title: "人才招聘｜招聘专员"
+    avatar: "TPLogo11.png"
+    desc: "职业咨询，随时欢迎"
 
-  - name_en: "Ts. Ng Hsiang Boon"
-    name_cn: "黄湘文"
-    title:
-      local: "TA Specialist"
-      expat: "招聘专员"
-    avatar: ""
-    linkedin: "https://www.linkedin.com/in/nghsiangboon"
-    show_linkedin: true
+  - name_en: "Nuttaporn Buapradith"
+    title: "人才招聘｜招聘专员"
+    avatar: "TPLogo11.png"
+    desc: "出行手续和当地生活也会跟进"
 
-  - name_en: "Tian Han Chuah"
-    name_cn: "蔡展瀚"
-    title:
-      local: "TA Specialist"
-      expat: "招聘专员"
-    avatar: ""
-    linkedin: "https://www.linkedin.com/in/jerry-chuah"
-    show_linkedin: true
-
-  - name_en: "Jocelyn Soh"
-    name_cn: "苏子凌"
-    title:
-      local: "Talent Attraction Partner"
-      expat: "人才吸引合作伙伴"
-    avatar: ""
-    linkedin: "https://www.linkedin.com/in/jocelyn-soh-11a33338/"
-    show_linkedin: true
+  - name_en: "Careen Teh"
+    title: "人才招聘｜招聘专员"
+    avatar: "TPLogo11.png"
+    desc: "一起寻找你期望的项目"
+    linkedin: "https://www.linkedin.com/in/chia-yin-teh/"
 
   - name_en: "Yong Xing Su"
-    name_cn: "PENDING"
-    title:
-      local: "PENDING"
-      expat: "PENDING"
-    avatar: ""
-    linkedin: ""
-    show_linkedin: false
+    title: "人才招聘｜招聘专员"
+    avatar: "TPLogo11.png"
+    desc: "泰国相关咨询欢迎联系"
+    linkedin: "https://www.linkedin.com/in/yong-xing-su/"
 
-  - name_en: "Chia Yin Teh"
-    name_cn: "PENDING"
-    title:
-      local: "PENDING"
-      expat: "PENDING"
-    avatar: ""
-    linkedin: ""
-    show_linkedin: false
+# Row 2
+members_row2:
+  - name_en: "Jocelyn Soh"
+    title: "人才招聘｜招聘专员"
+    avatar: "TPLogo11.png"
+    desc: "帮助你找到合适的职位"
+    linkedin: "https://www.linkedin.com/in/jocelyn-soh-11a33338/"
+
+  - name_en: "Tian Han Chuah"
+    title: "人才招聘｜招聘专员"
+    avatar: "TPLogo11.png"
+    desc: "职业规划咨询欢迎联系"
+    linkedin: "https://www.linkedin.com/in/jerry-chuah"
+
+  - name_en: "Ts. Ng Hsiang Boon"
+    title: "人才招聘｜招聘专员"
+    avatar: "TPLogo11.png"
+    desc: "技术与专业岗位咨询"
+    linkedin: "https://www.linkedin.com/in/nghsiangboon"

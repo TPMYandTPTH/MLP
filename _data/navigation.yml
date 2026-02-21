@@ -1,23 +1,26 @@
 # Main navigation
 main:
   - url: "index.html"
-    local: "Home"
+    local: "首页"
     expat: "首页"
+  - url: "open-jobs.html"
+    local: "职位列表"
+    expat: "职位列表"
   - url: "about-tp.html"
-    local: "About TP"
+    local: "关于TP"
     expat: "关于TP"
   - url: "salary-and-benefits.html"
-    local: "Benefits"
+    local: "薪资福利"
     expat: "薪资福利"
   - url: "hiring-process.html"
-    local: "Hiring Process"
+    local: "招聘流程"
     expat: "招聘流程"
   - url: "why-malaysia-thailand.html"
     local: "城市介绍"
     expat: "城市介绍"
   - url: "relocation-visa.html"
-    local: "Visa Support"
-    expat: "签证支持"
+    local: "签证·搬迁"
+    expat: "签证·搬迁"
 
 # Footer
 footer_company:
@@ -33,7 +36,7 @@ footer_company:
       text: "招聘团队"
 
 footer_jobs:
-  title: "职位申请"
+  title: "职位·申请"
   links:
     - url: "open-jobs.html"
       text: "职位列表"
@@ -42,13 +45,19 @@ footer_jobs:
     - url: "https://app.hallo.ai/teleperformance/ai-assessment/interview/zh?assessmentTypeId=VEhDOEFMRHdKWmtZdFoxREJjMHQ="
       text: "AI 能力评估"
       external: true
+    - url: "https://tpmyandtpth.github.io/LP/"
+      text: "其他语言职位"
+      external: true
 
 footer_life:
-  title: "生活资讯"
+  title: "生活信息"
   links:
     - url: "why-malaysia-thailand.html"
-      text: "城市介绍"
+      text: "工作城市"
     - url: "relocation-visa.html"
       text: "搬迁支持"
     - url: "daily-life-malaysia.html"
       text: "日常生活"
+    - url: "https://outlook.office.com/book/Chinese@teleperformance.onmicrosoft.com/s/tEpdSOHeX0SbvhMZg_dyvQ2?ismsaljsauthenabled"
+      text: "预约招聘顾问"
+      external: true
