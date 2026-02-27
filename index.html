@@ -172,6 +172,7 @@ nav a[aria-current="page"]::after{width:100%;background:var(--tp-black)}
 
 /* Social Proof */
 .social-proof-banner{background:var(--tp-black);color:var(--tp-white);padding:1rem 20px;text-align:center}
+.social-proof-banner .number{font-size:2.8rem;font-weight:900;font-family:"Noto Serif SC",serif;line-height:1}
 .social-proof-inner{max-width:var(--max-width);margin:0 auto;display:flex;justify-content:center;align-items:center;gap:2rem;flex-wrap:wrap}
 .proof-item{display:flex;align-items:center;gap:0.5rem;font-size:0.9rem}
 .proof-item .number{color:var(--gold-primary);font-weight:900;font-size:1.1rem}
@@ -206,6 +207,7 @@ nav a[aria-current="page"]::after{width:100%;background:var(--tp-black)}
 .gptw-section .section-title{color:var(--tp-black);text-align:left;margin-bottom:0.5rem}
 .gptw-section .section-subtitle{color:var(--tp-gray);text-align:left;margin-bottom:0}
 .gptw-highlight{display:inline-block;background:linear-gradient(90deg,#FFD700,#FFAA00);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-weight:900}
+.gptw-highlight .big-num{font-size:1.8em;font-weight:900;line-height:1}
 .gptw-description{max-width:800px;margin:0 auto 2.5rem;text-align:center;color:var(--tp-gray-dark);font-size:1rem;line-height:1.8}
 .gptw-banner{width:100%;max-width:900px;margin:0 auto 2.5rem;border-radius:12px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,0.3)}
 .gptw-banner img{width:100%;height:auto;display:block}
@@ -253,6 +255,7 @@ nav a[aria-current="page"]::after{width:100%;background:var(--tp-black)}
 .social-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-gold);border-color:var(--gold-primary)}
 .social-card-icon{font-size:2.5rem;margin-bottom:0.75rem}
 .social-card-title{font-size:1rem;font-weight:700;margin-bottom:0.3rem;color:var(--tp-black)}
+.social-handle{font-size:.8rem;font-weight:600;color:var(--gold-dark);margin-bottom:.75rem;font-family:monospace}
 .social-card-desc{font-size:0.8rem;color:var(--tp-gray);margin-bottom:1rem}
 .social-qr{width:120px;height:120px;background:var(--tp-off);border:1px dashed var(--tp-silver);border-radius:8px;margin:0 auto 0.75rem;display:flex;align-items:center;justify-content:center;font-size:0.7rem;color:var(--tp-gray)}
 
@@ -363,7 +366,7 @@ nav a[aria-current="page"]::after{width:100%;background:var(--tp-black)}
 .ta-leader-role{font-size:0.9rem;color:var(--tp-gray);margin-bottom:0.75rem}
 .ta-leader-desc{font-size:0.85rem;color:var(--tp-gray-dark);line-height:1.7;max-width:600px;margin:0 auto}
 .ta-links{margin-top:1rem;display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap}
-.ta-team-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1.5rem}
+.ta-team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
 .ta-member{text-align:center;background:var(--tp-white);border:1px solid var(--tp-light);border-radius:8px;padding:1.25rem;transition:all 0.3s}
 .ta-member:hover{transform:translateY(-3px);box-shadow:var(--shadow-gold);border-color:var(--gold-primary)}
 .ta-member-img{width:100px;height:100px;border-radius:50%;object-fit:cover;margin:0 auto 0.75rem;border:3px solid var(--gold-primary)}
@@ -429,7 +432,8 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
 /* Responsive */
 @media(min-width:720px){.cta-links{grid-template-columns:1fr 1fr 1fr}}
 @media(max-width:900px){nav{display:none}.mobile-toggle{display:block}.video-grid{grid-template-columns:1fr}.floating-ai{bottom:80px;right:20px}.back-to-top{bottom:140px}}
-@media(max-width:768px){.hero h1{font-size:1.8rem}.section-title{font-size:1.4rem}.hero-stats{justify-content:center}.stat-item{padding-right:1.25rem}.about-content{grid-template-columns:1fr}.cards{grid-template-columns:repeat(2,1fr)}.icon-grid-container{grid-template-columns:repeat(2,1fr)}.city-cards{grid-template-columns:1fr}.benefits-list{grid-template-columns:repeat(2,1fr)}.ta-team-grid{grid-template-columns:repeat(2,1fr)}.footer-content{grid-template-columns:1fr;text-align:center}.floating-apply{bottom:14px;right:14px;padding:0.625rem 1rem;font-size:0.8rem}.social-proof-inner{flex-direction:column;gap:0.5rem}.gptw-header{flex-direction:column;text-align:center}.gptw-title-block{text-align:center}.gptw-section .section-title,.gptw-section .section-subtitle{text-align:center}.gptw-gallery{grid-template-columns:repeat(2,1fr)}.gptw-gallery-item:nth-child(5){grid-column:span 2;max-width:50%;margin:0 auto}.gptw-stats{gap:1.5rem}.gptw-stat-number{font-size:2rem}.lifestyle-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:768px){.hero h1{font-size:1.8rem}.section-title{font-size:1.4rem}.hero-stats{justify-content:center}.stat-item{padding-right:1.25rem}.about-content{grid-template-columns:1fr}.cards{grid-template-columns:repeat(2,1fr)}.icon-grid-container{grid-template-columns:repeat(2,1fr)}.city-cards{grid-template-columns:1fr}.benefits-list{grid-template-columns:repeat(2,1fr)}.ta-team-grid{grid-template-columns:repeat(2,1fr)}.footer-content{grid-template-columns:1fr;text-align:center}.floating-apply{bottom:14px;right:14px;padding:0.625rem 1rem;font-size:0.8rem}.social-proof-banner .number{font-size:2.8rem;font-weight:900;font-family:"Noto Serif SC",serif;line-height:1}
+.social-proof-inner{flex-direction:column;gap:0.5rem}.gptw-header{flex-direction:column;text-align:center}.gptw-title-block{text-align:center}.gptw-section .section-title,.gptw-section .section-subtitle{text-align:center}.gptw-gallery{grid-template-columns:repeat(2,1fr)}.gptw-gallery-item:nth-child(5){grid-column:span 2;max-width:50%;margin:0 auto}.gptw-stats{gap:1.5rem}.gptw-stat-number{font-size:2rem}.lifestyle-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:480px){.cards{grid-template-columns:1fr}.benefits-list{grid-template-columns:1fr}.icon-grid-container{grid-template-columns:1fr}.ta-team-grid{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
 </style>
@@ -550,9 +554,9 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
         <p class="gptw-quote" data-local=""这一Certification基于Employee的Feedback与Trust，充分展现了我们Strong的Corporate Culture"" data-expat=""这一认证基于员工的反馈与信任，充分展现了我们强大的企业文化"">"这一认证基于员工的反馈与信任，充分展现了我们强大的企业文化"</p>
       </div>
       <div class="gptw-header fade-in">
-        <img src="photos/World’sBestWorkplaces.png" alt="World's Best Workplaces 2025" class="gptw-badge">
+        <img src="photos/World'sBestWorkplaces.png" alt="World's Best Workplaces 2025" class="gptw-badge">
         <div class="gptw-title-block">
-          <h2 class="section-title">World's Best Workplaces™ <span class="gptw-highlight" data-local="连续 5 年Award" data-expat="连续 5 年获奖">连续 5 年获奖</span></h2>
+          <h2 class="section-title">World's Best Workplaces™ <span class="gptw-highlight" data-local="连续 <span class='big-num'>5</span> 年Award" data-expat="连续 <span class='big-num'>5</span> 年获奖">连续 <span class="big-num">5</span> 年获奖</span></h2>
           <p class="section-subtitle fade-in" data-local="Great Place to Work® Certification" data-expat="Great Place to Work® 认证">Great Place to Work® 认证</p>
         </div>
       </div>
@@ -590,12 +594,12 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
         <a href="faq.html" class="card"><img src="photos/GTowerInside1.png" alt="常见问题" loading="lazy"><div class="card-content"><h3 data-local="FAQ·常见Question" data-expat="FAQ·常见问题">FAQ·常见问题</h3><p data-local="Apply前的疑问Answer" data-expat="申请前的疑问解答" data-local="Apply前的Question Answer" data-expat="申请前的疑问解答">申请前的疑问解答</p></div></a>
       </div>
 
-      <div class="icon-grid-container fade-in" style="margin-top:1.5rem">
-        <a href="cost-of-living.html" class="icon-card"><span class="icon-card-icon">💰</span><div class="icon-card-meta"><div class="icon-card-title" data-local="Malaysia Cost of Living" data-expat="马来西亚生活成本">马来西亚生活成本</div><div class="icon-card-desc" data-local="Food·Transport·Housing" data-expat="餐饮·交通·住房">餐饮·交通·住房</div></div></a>
-        <a href="ta-team.html" class="icon-card"><span class="icon-card-icon">🤝</span><div class="icon-card-meta"><div class="icon-card-title" data-local="TA Team Introduction" data-expat="招聘团队介绍">招聘团队介绍</div><div class="icon-card-desc" data-local="华语Support" data-expat="华语支持">华语支持</div></div></a>
-        <a href="area-around-office.html" class="icon-card"><span class="icon-card-icon">📍</span><div class="icon-card-meta"><div class="icon-card-title" data-local="Office Area" data-expat="办公室周边">办公室周边</div><div class="icon-card-desc" data-local="Area Environment Info" data-expat="周边环境信息">周边环境信息</div></div></a>
-        <a href="daily-life-malaysia.html" class="icon-card"><span class="icon-card-icon">🇲🇾</span><div class="icon-card-meta"><div class="icon-card-title" data-local="Daily Life" data-expat="当地生活">当地生活</div><div class="icon-card-desc" data-local="Food·Transport·Housing" data-expat="餐饮·交通·住房">餐饮·交通·住房</div></div></a>
-        <a href="https://tpmyandtpth.github.io/LP/" target="_blank" rel="noopener noreferrer" class="icon-card"><span class="icon-card-icon">🌐</span><div class="icon-card-meta"><div class="icon-card-title" data-local="Other Language Position" data-expat="其他语言职位">其他语言职位</div><div class="icon-card-desc" data-local="日语·韩语·English等" data-expat="日语·韩语·英语等">日语·韩语·英语等</div></div></a>
+      <div class="cards fade-in" style="margin-top:1.5rem">
+        <a href="cost-of-living.html" class="card"><img src="photos/TPLogo11.png" alt="生活成本" loading="lazy"><div class="card-content"><h3 data-local="💰 Malaysia Cost of Living" data-expat="💰 马来西亚生活成本">💰 马来西亚生活成本</h3><p data-local="Food·Transport·Housing" data-expat="餐饮·交通·住房">餐饮·交通·住房</p></div></a>
+        <a href="ta-team.html" class="card"><img src="photos/TPLogo11.png" alt="招聘团队" loading="lazy"><div class="card-content"><h3 data-local="🤝 TA Team Introduction" data-expat="🤝 招聘团队介绍">🤝 招聘团队介绍</h3><p data-local="华语Support" data-expat="华语支持">华语支持</p></div></a>
+        <a href="area-around-office.html" class="card"><img src="photos/TPLogo11.png" alt="办公室周边" loading="lazy"><div class="card-content"><h3 data-local="📍 Office Area" data-expat="📍 办公室周边">📍 办公室周边</h3><p data-local="Area Environment Info" data-expat="周边环境信息">周边环境信息</p></div></a>
+        <a href="daily-life-malaysia.html" class="card"><img src="photos/TPLogo11.png" alt="当地生活" loading="lazy"><div class="card-content"><h3 data-local="🇲🇾 Daily Life" data-expat="🇲🇾 当地生活">🇲🇾 当地生活</h3><p data-local="Food·Transport·Housing" data-expat="餐饮·交通·住房">餐饮·交通·住房</p></div></a>
+        <a href="https://tpmyandtpth.github.io/LP/" target="_blank" rel="noopener noreferrer" class="card"><img src="photos/TPLogo11.png" alt="其他语言" loading="lazy"><div class="card-content"><h3 data-local="🌐 Other Language Position" data-expat="🌐 其他语言职位">🌐 其他语言职位</h3><p data-local="日语·韩语·English等" data-expat="日语·韩语·英语等">日语·韩语·英语等</p></div></a>
       </div>
     </div>
   </section>
@@ -606,27 +610,14 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
       <h2 class="section-title section-title-decorated fade-in" data-local="Follow Us · Stay Connected" data-expat="关注我们·保持联系">关注我们·保持联系</h2>
       <p class="section-subtitle fade-in" data-local="通过social platform获取latest recruitment info" data-expat="通过社交平台获取最新招聘信息">通过社交平台获取最新招聘信息</p>
       <div class="social-grid fade-in">
-        <div class="social-card"><div class="social-card-icon">📕</div><div class="social-card-title">小红书</div><div class="social-card-desc" data-local="Check员工Life Share" data-expat="查看员工生活分享">查看员工生活分享</div><div class="social-qr">小红书<br>(即将上线)</div><a href="#" class="btn btn-sm btn-ghost" data-local="Follow Us" data-expat="关注我们">关注我们</a></div>
-        <div class="social-card"><div class="social-card-icon">📺</div><div class="social-card-title">YouTube</div><div class="social-card-desc" data-local="Watch员工Interview Video" data-expat="观看员工访谈视频">观看员工访谈视频</div><div class="social-qr">Video Channel</div><a href="https://www.youtube.com/@user-ms8fy8qm9j" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-ghost" data-local="Watch Now" data-expat="立即观看">立即观看</a></div>
-        <div class="social-card"><div class="social-card-icon">📅</div><div class="social-card-title" data-local="Book Recruiter" data-expat="预约招聘顾问">预约招聘顾问</div><div class="social-card-desc" data-local="Online预约Interview时间" data-expat="在线预约面试时间">在线预约面试时间</div><div class="social-qr">30分钟<br>在线咨询</div><a href="https://outlook.office.com/book/Chinese@teleperformance.onmicrosoft.com/s/tEpdSOHeX0SbvhMZg_dyvQ2?ismsaljsauthenabled" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-ghost" data-local="Book Now" data-expat="立即预约">立即预约</a></div>
+        <div class="social-card"><div class="social-card-icon">📕</div><div class="social-card-title">小红书</div><div class="social-card-desc" data-local="Check员工Life Share" data-expat="查看员工生活分享">查看员工生活分享</div><div class="social-handle">ID: 63890888642</div><a href="https://www.xiaohongshu.com/user/profile/63890888642" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-ghost" data-local="Follow Us" data-expat="关注我们">关注我们</a></div>
+        <div class="social-card"><div class="social-card-icon">🎵</div><div class="social-card-title">TikTok</div><div class="social-card-desc" data-local="Watch Short Video Content" data-expat="观看短视频内容">观看短视频内容</div><div class="social-handle">@tp_talentcrew</div><a href="https://www.tiktok.com/@tp_talentcrew" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-ghost" data-local="Follow Us" data-expat="关注我们">关注我们</a></div>
+        <div class="social-card"><div class="social-card-icon">📸</div><div class="social-card-title">Instagram</div><div class="social-card-desc" data-local="Employee Life和Recruitment Info" data-expat="员工生活和招聘信息">员工生活和招聘信息</div><div class="social-handle">@tp_talentcrew</div><a href="https://www.instagram.com/tp_talentcrew" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-ghost" data-local="Follow Us" data-expat="关注我们">关注我们</a></div>
+        <div class="social-card"><div class="social-card-icon">👥</div><div class="social-card-title">Facebook</div><div class="social-card-desc" data-local="Join我们的Community Group" data-expat="加入我们的社群">加入我们的社群</div><div class="social-handle" data-local="Community Group" data-expat="社群交流">社群交流</div><a href="#" class="btn btn-sm btn-ghost" data-local="Coming Soon" data-expat="即将上线">即将上线</a></div>
       </div>
     </div>
   </section>
 
-
-  <!-- Cities -->
-  <section class="cities" id="cities">
-    <div class="container">
-      <h2 class="section-title section-title-decorated fade-in" data-local="Work City Guide" data-expat="工作城市介绍">工作城市介绍</h2>
-      <p class="section-subtitle fade-in" data-local="Malaysia和Thailand的3座Charming City" data-expat="马来西亚和泰国的3座魅力城市">马来西亚和泰国的3座魅力城市</p>
-      <div class="city-cards fade-in">
-        <article class="city-card"><img src="photos/KL%201.jpg" alt="吉隆坡" loading="lazy"><div class="city-card-content"><h3 data-local="Kuala Lumpur（KL）" data-expat="吉隆坡（KL）">吉隆坡（KL）</h3><p class="city-country" data-local="Malaysia" data-expat="马来西亚">马来西亚</p><ul class="city-features"><li data-local="大量华人居住的International City" data-expat="大量华人居住的国际都市">大量华人居住的国际都市</li><li data-local="Don Quijote、AEON、ISETAN等Shopping Mall" data-expat="唐吉诃德、永旺、伊势丹等购物中心">唐吉诃德、永旺、伊势丹等购物中心</li><li data-local="华语Hospital·Clinic完善" data-expat="华语医院·诊所完善">华语医院·诊所完善</li><li data-local="MRT·Monorail Commute便利" data-expat="地铁·单轨列车通勤便利">地铁·单轨列车通勤便利</li></ul><a href="why-malaysia-thailand.html#kl" data-local="View Details →" data-expat="查看详情 →">查看详情 →</a></div></article>
-        <article class="city-card"><img src="photos/Penang.jpg" alt="槟城" loading="lazy"><div class="city-card-content"><h3>槟城（Penang）</h3><p class="city-country" data-local="Malaysia" data-expat="马来西亚">马来西亚</p><ul class="city-features"><li data-local="UNESCO Heritage George Town历史之城" data-expat="世界遗产乔治城历史之城">世界遗产乔治城历史之城</li><li data-local="Resort与City融合的Environment" data-expat="度假与都市融合的环境">度假与都市融合的环境</li><li data-local="物价非常Affordable，生活Comfortable" data-expat="物价非常实惠，生活舒适">物价非常实惠，生活舒适</li><li data-local="华人Community Active" data-expat="华人社区活跃">华人社区活跃</li></ul><a href="why-malaysia-thailand.html#penang" data-local="View Details →" data-expat="查看详情 →">查看详情 →</a></div></article>
-        <article class="city-card"><img src="photos/Bangkok%202.jpg" alt="曼谷" loading="lazy"><div class="city-card-content"><h3>曼谷（Bangkok）</h3><p class="city-country" data-local="Thailand" data-expat="泰国">泰国</p><ul class="city-features"><li data-local="超过8万华人居住的City" data-expat="超过8万华人居住的城市">超过8万华人居住的城市</li><li data-local="Chinese Supermarket、ISETAN等Complete" data-expat="华人超市、伊势丹等完善">华人超市、伊势丹等完善</li><li data-local="BTS和MRT Travel便捷" data-expat="轻轨和地铁出行便捷">轻轨和地铁出行便捷</li><li data-local="Medical Level非常高" data-expat="医疗水平非常高">医疗水平非常高</li></ul><a href="why-malaysia-thailand.html#bangkok" data-local="View Details →" data-expat="查看详情 →">查看详情 →</a></div></article>
-        <article class="city-card coming-soon"><img src="photos/KL%202.jpg" alt="柔佛" loading="lazy"><div class="city-card-content"><h3>柔佛（Johor）</h3><p class="city-country">马来西亚</p><ul class="city-features"><li data-local="Near Singapore，Transport便利" data-expat="靠近新加坡，交通便利">靠近新加坡，交通便利</li><li data-local="Cost of Living比KL更低" data-expat="生活成本比吉隆坡更低">生活成本比吉隆坡更低</li><li data-local="Emerging Development Area" data-expat="新兴发展区域">新兴发展区域</li><li data-local="Coming Soon" data-expat="即将开放">即将开放</li></ul><a href="why-malaysia-thailand.html#johor">查看详情 →</a></div></article>
-      </div>
-    </div>
-  </section>
 
   <!-- Video Section -->
   <section class="video-section" id="videos">
@@ -643,50 +634,72 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
     </div>
   </section>
 
-  <!-- World Map -->
-  <section class="world-map-section">
-    <div class="container">
-      <h2 class="section-title section-title-decorated fade-in" data-local="TP Global Network" data-expat="TP 全球网络">TP 全球网络</h2>
-      <p class="section-subtitle fade-in" data-local="在 100+ Country提供Global Service" data-expat="在 100 多个国家提供全球服务">在 100 多个国家提供全球服务</p>
-      <div class="world-map-container"><img src="photos/world map locations.png" alt="TP 全球分布地图" loading="lazy"></div>
-    </div>
-  </section>
-
-  <!-- Office Section -->
+  <!-- Work Locations -->
   <section class="office-section" id="office">
     <div class="container">
-      <h2 class="section-title section-title-decorated fade-in" data-local="Work Environment" data-expat="工作环境">工作环境</h2>
-      <p class="section-subtitle fade-in" data-local="Comfortable且Transport便利的Work Place" data-expat="舒适且交通便利的工作场所">舒适且交通便利的工作场所</p>
-      <div class="office-grid">
-        <div class="office-card"><img src="photos/G%20TOWER.jpg" alt="G Tower KL" class="office-image" loading="lazy"><div class="office-info"><h3 class="office-name">G Tower（吉隆坡）</h3><ul class="office-features"><li data-local="Ampang Park Station直达" data-expat="安邦公园站直达">安邦公园站直达</li><li data-local="Twin Towers Walk可达" data-expat="双子塔步行可达">双子塔步行可达</li><li data-local="Grade A Office" data-expat="甲级办公楼">甲级办公楼</li></ul><div class="office-links"><a href="https://maps.app.goo.gl/vd5ju3VXhxfhpJuN7" target="_blank" rel="noopener noreferrer" class="office-map-btn">📍 地图</a></div></div></div>
-        <div class="office-card"><img src="photos/Reception.png" alt="Livingston" class="office-image" loading="lazy"><div class="office-info"><h3 class="office-name">Livingston（槟城）</h3><ul class="office-features"><li data-local="Quiet Environment" data-expat="安静的环境">安静的环境</li><li data-local="Restaurant·Pharmacy Near" data-expat="餐厅·药房近在咫尺">餐厅·药房近在咫尺</li><li>交通便利</li></ul><div class="office-links"><a href="https://maps.app.goo.gl/9i841vf18KRyunQK6" target="_blank" rel="noopener noreferrer" class="office-map-btn">📍 地图</a></div></div></div>
-        <div class="office-card"><img src="photos/Reception%20(1).png" alt="One Precinct" class="office-image" loading="lazy"><div class="office-info"><h3 class="office-name">One Precinct（槟城）</h3><ul class="office-features"><li data-local="Bayan Baru Area" data-expat="峇央峇鲁区域">峇央峇鲁区域</li><li data-local="Airport 15分钟" data-expat="距机场 15 分钟">距机场 15 分钟</li><li data-local="Queensbay Mall Near" data-expat="皇后湾广场附近">皇后湾广场附近</li></ul><div class="office-links"><a href="https://maps.app.goo.gl/Nq6RKZ7spH89THG8A" target="_blank" rel="noopener noreferrer" class="office-map-btn">📍 地图</a></div></div></div>
-        <div class="office-card"><img src="photos/GBS.jpeg" alt="GBS@Mahsuri" class="office-image" loading="lazy"><div class="office-info"><h3 class="office-name">GBS@Mahsuri（槟城）</h3><ul class="office-features"><li data-local="State Global Business Centre" data-expat="州全球商务服务中心">州全球商务服务中心</li><li data-local="IT/BPO Hub" data-expat="IT/业务流程外包集聚地">IT/业务流程外包集聚地</li><li>生活设施完善</li></ul><div class="office-links"><a href="https://maps.app.goo.gl/Zpy6r8na4Wg31uhT8" target="_blank" rel="noopener noreferrer" class="office-map-btn">📍 地图</a></div></div></div>
-        <div class="office-card"><img src="photos/KL%201.jpg" alt="KCP" class="office-image" loading="lazy"><div class="office-info"><h3 class="office-name">KCP（格拉那再也中心点）</h3><ul class="office-features"><li data-local="LRT Station Near" data-expat="轻轨站附近">轻轨站附近</li><li>购物便利</li></ul><div class="office-links"><a href="https://maps.app.goo.gl/UE8tTboaukkeCWZW9" target="_blank" rel="noopener noreferrer" class="office-map-btn">📍 地图</a></div></div></div>
-        <div class="office-card"><img src="photos/Singha%20Complex1.jpg" alt="Singha Complex" class="office-image" loading="lazy"><div class="office-info"><h3 class="office-name">Singha Complex（曼谷）</h3><ul class="office-features"><li data-local="BTS/MRT Near" data-expat="轻轨/地铁附近">轻轨/地铁附近</li><li data-local="Chinese Area" data-expat="华人区域">华人区域</li><li data-local="Commercial Complex Inside" data-expat="商业综合体内">商业综合体内</li></ul><div class="office-links"><a href="https://maps.app.goo.gl/vPuRsYp5fcNzX4kb6" target="_blank" rel="noopener noreferrer" class="office-map-btn">📍 地图</a></div></div></div>
-        <div class="office-card coming-soon"><img src="photos/KL%202.jpg" alt="Sunway" class="office-image" loading="lazy"><div class="office-info"><h3 class="office-name">Sunway（双威）</h3><ul class="office-features"><li data-local="Sunway Pyramid Mall Near" data-expat="双威金字塔购物中心附近">双威金字塔购物中心附近</li><li data-local="BRT Direct" data-expat="快速公交直达">快速公交直达</li><li>新兴商业区</li></ul></div></div>
-        <div class="office-card coming-soon"><img src="photos/Penang.jpg" alt="Johor" class="office-image" loading="lazy"><div class="office-info"><h3 class="office-name">Johor（柔佛）</h3><ul class="office-features"><li>靠近新加坡</li><li>生活成本更低</li><li data-local="New Office Location" data-expat="新办公地点">新办公地点</li></ul><div class="office-links"><a href="https://careerseng-teleperformance.icims.com/jobs/50874/customer-success-specialist---mandarin---johor/job?mode=job&iis=MLP&iisn=" target="_blank" rel="noopener noreferrer" class="office-job-btn">💼 立即申请</a></div></div></div>
-        <div class="office-card coming-soon"><img src="photos/Condo.jpg" alt="WFH" class="office-image" loading="lazy"><div class="office-info"><h3 class="office-name" data-local="Work From Home" data-expat="居家办公">居家办公</h3><ul class="office-features"><li data-local="Remote Work Option" data-expat="远程工作选项">远程工作选项</li><li data-local="Flexible Work Arrangement" data-expat="灵活工作安排">灵活工作安排</li><li data-local="Selected Positions" data-expat="部分职位适用">部分职位适用</li></ul><div class="office-links"><a href="https://careerseng-teleperformance.icims.com/jobs/49561/interpreter---mandarin---work-from-home/job?mode=job&iis=MLP&iisn=" target="_blank" rel="noopener noreferrer" class="office-job-btn">💼 口译员职位</a></div></div></div>
-      </div>
-      <div style="text-align:center;margin-top:2rem"><a href="https://vtour.cloud/mh2n0j/ae5772z1/Bella%27s" target="_blank" rel="noopener noreferrer" class="btn btn-gold" data-local="Virtual Office Tour →" data-expat="虚拟办公室参观 →">虚拟办公室参观 →</a></div>
-    </div>
-  </section>
+      <h2 class="section-title section-title-decorated fade-in" data-local="Work Location & City Guide" data-expat="工作地点·城市介绍">工作地点·城市介绍</h2>
+      <p class="section-subtitle fade-in" data-local="Malaysia、Thailand和WFH，Choose适合你的Work Style" data-expat="马来西亚、泰国和居家办公，选择适合你的工作方式">马来西亚、泰国和居家办公，选择适合你的工作方式</p>
 
-  <!-- Lifestyle -->
-  <section class="lifestyle-section">
-    <div class="container">
-      <h2 class="section-title section-title-decorated fade-in" data-local="不只是Work。Fulfilling的Active Life" data-expat="不只是工作。充实的活力生活">不只是工作充实的活力生活</h2>
-      <p class="section-subtitle fade-in" data-local="Weekend去Trip，下班后Enjoy Hobby和Relax，每天都Exciting" data-expat="周末去旅行，下班后享受爱好和放松，每天都精彩">周末去旅行下班后享受爱好和放松，每天都精彩</p>
-      <div class="lifestyle-grid fade-in">
-        <div class="lifestyle-item"><img src="photos/KL%202.jpg" alt="购物" loading="lazy"><div class="lifestyle-caption" data-local="Shopping" data-expat="购物">购物</div></div>
-        <div class="lifestyle-item"><img src="photos/Penang.jpg" alt="海滩" loading="lazy"><div class="lifestyle-caption" data-local="Beach Relax" data-expat="海滩放松">海滩放松</div></div>
-        <div class="lifestyle-item"><img src="photos/Bangkok1.jpg" alt="夜市" loading="lazy"><div class="lifestyle-caption" data-local="Night Market" data-expat="夜市">夜市</div></div>
-        <div class="lifestyle-item"><img src="photos/Condo.jpg" alt="泳池" loading="lazy"><div class="lifestyle-caption" data-local="Pool·Gym Life" data-expat="泳池·健身房生活">泳池·健身房生活</div></div>
-        <div class="lifestyle-item"><img src="photos/KL%201.jpg" alt="城市" loading="lazy"><div class="lifestyle-caption" data-local="City View" data-expat="城市风光">城市风光</div></div>
-        <div class="lifestyle-item"><img src="photos/Bangkok%202.jpg" alt="文化" loading="lazy"><div class="lifestyle-caption" data-local="Culture Experience" data-expat="文化体验">文化体验</div></div>
-        <div class="lifestyle-item"><img src="photos/Penang.jpg" alt="出游" loading="lazy"><div class="lifestyle-caption" data-local="Weekend Trip" data-expat="周末出游">周末出游</div></div>
-        <div class="lifestyle-item"><img src="photos/CafepicbyKoyoriinPenang.jpg" alt="咖啡" loading="lazy"><div class="lifestyle-caption" data-local="Cafe Culture" data-expat="咖啡文化">咖啡文化</div></div>
+      <!-- Malaysia -->
+      <div class="region-block fade-in">
+        <h3 class="region-title">🇲🇾 <span data-local="Malaysia" data-expat="马来西亚">马来西亚</span></h3>
+
+        <!-- Penang -->
+        <h4 class="sub-region" data-local="Penang 槟城" data-expat="槟城（Penang）">槟城（Penang）</h4>
+        <div class="office-grid">
+          <div class="office-card"><img src="photos/Reception.png" alt="Livingston" class="office-image" loading="lazy"><div class="office-info"><h3 class="office-name">Livingston（槟城）</h3><ul class="office-features"><li data-local="Quiet Environment" data-expat="安静的环境">安静的环境</li><li data-local="Restaurant·Pharmacy Near" data-expat="餐厅·药房近在咫尺">餐厅·药房近在咫尺</li><li data-local="Transport Convenient" data-expat="交通便利">交通便利</li></ul><div class="office-links"><a href="https://maps.app.goo.gl/9i841vf18KRyunQK6" target="_blank" rel="noopener noreferrer" class="office-map-btn">📍 地图</a></div></div></div>
+          <div class="office-card"><img src="photos/Reception%20(1).png" alt="One Precinct" class="office-image" loading="lazy"><div class="office-info"><h3 class="office-name">One Precinct（槟城）</h3><ul class="office-features"><li data-local="Bayan Baru Area" data-expat="峇央峇鲁区域">峇央峇鲁区域</li><li data-local="Airport 15分钟" data-expat="距机场 15 分钟">距机场 15 分钟</li><li data-local="Queensbay Mall Near" data-expat="皇后湾广场附近">皇后湾广场附近</li></ul><div class="office-links"><a href="https://maps.app.goo.gl/Nq6RKZ7spH89THG8A" target="_blank" rel="noopener noreferrer" class="office-map-btn">📍 地图</a></div></div></div>
+          <div class="office-card"><img src="photos/GBS.jpeg" alt="GBS@Mahsuri" class="office-image" loading="lazy"><div class="office-info"><h3 class="office-name">GBS@Mahsuri（槟城）</h3><ul class="office-features"><li data-local="State Global Business Centre" data-expat="州全球商务服务中心">州全球商务服务中心</li><li data-local="IT/BPO Hub" data-expat="IT/业务流程外包集聚地">IT/业务流程外包集聚地</li><li data-local="Living Facility Complete" data-expat="生活设施完善">生活设施完善</li></ul><div class="office-links"><a href="https://maps.app.goo.gl/Zpy6r8na4Wg31uhT8" target="_blank" rel="noopener noreferrer" class="office-map-btn">📍 地图</a></div></div></div>
+        </div>
+        <div class="city-highlight fade-in">
+          <p data-local="🏖️ UNESCO Heritage George Town · Resort与City融合 · 物价Affordable · 华人Community Active" data-expat="🏖️ 世界遗产乔治城 · 度假与都市融合 · 物价实惠 · 华人社区活跃">🏖️ 世界遗产乔治城 · 度假与都市融合 · 物价实惠 · 华人社区活跃</p>
+          <a href="why-malaysia-thailand.html#penang" data-local="View Details →" data-expat="查看详情 →">查看详情 →</a>
+        </div>
+
+        <!-- KL -->
+        <h4 class="sub-region" data-local="Kuala Lumpur 吉隆坡" data-expat="吉隆坡（KL）">吉隆坡（KL）</h4>
+        <div class="office-grid">
+          <div class="office-card"><img src="photos/G%20TOWER.jpg" alt="G Tower" class="office-image" loading="lazy"><div class="office-info"><h3 class="office-name">G Tower（吉隆坡）</h3><ul class="office-features"><li data-local="Ampang Park Station直达" data-expat="安邦公园站直达">安邦公园站直达</li><li data-local="Twin Towers Walk可达" data-expat="双子塔步行可达">双子塔步行可达</li><li data-local="Grade A Office" data-expat="甲级办公楼">甲级办公楼</li></ul><div class="office-links"><a href="https://maps.app.goo.gl/vd5ju3VXhxfhpJuN7" target="_blank" rel="noopener noreferrer" class="office-map-btn">📍 地图</a></div></div></div>
+          <div class="office-card"><img src="photos/KL%201.jpg" alt="KCP" class="office-image" loading="lazy"><div class="office-info"><h3 class="office-name">KCP（格拉那再也中心点）</h3><ul class="office-features"><li data-local="LRT Station Near" data-expat="轻轨站附近">轻轨站附近</li><li data-local="Shopping Convenient" data-expat="购物便利">购物便利</li></ul><div class="office-links"><a href="https://maps.app.goo.gl/UE8tTboaukkeCWZW9" target="_blank" rel="noopener noreferrer" class="office-map-btn">📍 地图</a></div></div></div>
+          <div class="office-card coming-soon"><img src="photos/KL%202.jpg" alt="Sunway" class="office-image" loading="lazy"><div class="office-info"><h3 class="office-name">Sunway（双威）</h3><ul class="office-features"><li data-local="Sunway Pyramid Mall Near" data-expat="双威金字塔购物中心附近">双威金字塔购物中心附近</li><li data-local="BRT Direct" data-expat="快速公交直达">快速公交直达</li><li data-local="Emerging Business Area" data-expat="新兴商业区">新兴商业区</li></ul></div></div>
+        </div>
+        <div class="city-highlight fade-in">
+          <p data-local="🏙️ 大量华人居住的International City · Don Quijote、AEON等Shopping · MRT Commute便利" data-expat="🏙️ 大量华人居住的国际都市 · 唐吉诃德、永旺等购物 · 地铁通勤便利">🏙️ 大量华人居住的国际都市 · 唐吉诃德、永旺等购物 · 地铁通勤便利</p>
+          <a href="why-malaysia-thailand.html#kl" data-local="View Details →" data-expat="查看详情 →">查看详情 →</a>
+        </div>
+
+        <!-- Johor -->
+        <h4 class="sub-region" data-local="Johor 柔佛" data-expat="柔佛（Johor）">柔佛（Johor）</h4>
+        <div class="office-grid">
+          <div class="office-card coming-soon"><img src="photos/Penang.jpg" alt="Johor" class="office-image" loading="lazy"><div class="office-info"><h3 class="office-name">Johor（柔佛）</h3><ul class="office-features"><li data-local="Near Singapore" data-expat="靠近新加坡">靠近新加坡</li><li data-local="Cost of Living比KL更低" data-expat="生活成本比吉隆坡更低">生活成本比吉隆坡更低</li><li data-local="New Office Location" data-expat="新办公地点">新办公地点</li></ul><div class="office-links"><a href="https://careerseng-teleperformance.icims.com/jobs/50874/customer-success-specialist---mandarin---johor/job?mode=job&iis=MLP&iisn=" target="_blank" rel="noopener noreferrer" class="office-job-btn">💼 立即申请</a></div></div></div>
+        </div>
+        <div class="city-highlight fade-in">
+          <p data-local="🌉 Near Singapore · Transport便利 · 生活Cost更低 · Emerging发展Region" data-expat="🌉 靠近新加坡 · 交通便利 · 生活成本更低 · 新兴发展区域">🌉 靠近新加坡 · 交通便利 · 生活成本更低 · 新兴发展区域</p>
+          <a href="why-malaysia-thailand.html#johor" data-local="View Details →" data-expat="查看详情 →">查看详情 →</a>
+        </div>
       </div>
+
+      <!-- Thailand -->
+      <div class="region-block fade-in">
+        <h3 class="region-title">🇹🇭 <span data-local="Thailand" data-expat="泰国">泰国</span></h3>
+        <div class="office-grid">
+          <div class="office-card"><img src="photos/Singha%20Complex1.jpg" alt="Singha Complex" class="office-image" loading="lazy"><div class="office-info"><h3 class="office-name">Singha Complex（曼谷）</h3><ul class="office-features"><li data-local="BTS/MRT Near" data-expat="轻轨/地铁附近">轻轨/地铁附近</li><li data-local="Chinese Area" data-expat="华人区域">华人区域</li><li data-local="Commercial Complex Inside" data-expat="商业综合体内">商业综合体内</li></ul><div class="office-links"><a href="https://maps.app.goo.gl/vPuRsYp5fcNzX4kb6" target="_blank" rel="noopener noreferrer" class="office-map-btn">📍 地图</a></div></div></div>
+        </div>
+        <div class="city-highlight fade-in">
+          <p data-local="🛕 超过8万华人居住的City · BTS/MRT Travel便捷 · Medical Level非常高" data-expat="🛕 超过8万华人居住的城市 · 轻轨和地铁出行便捷 · 医疗水平非常高">🛕 超过8万华人居住的城市 · 轻轨和地铁出行便捷 · 医疗水平非常高</p>
+          <a href="why-malaysia-thailand.html#bangkok" data-local="View Details →" data-expat="查看详情 →">查看详情 →</a>
+        </div>
+      </div>
+
+      <!-- WFH -->
+      <div class="region-block fade-in">
+        <h3 class="region-title">🏠 <span data-local="Work From Home" data-expat="居家办公">居家办公</span></h3>
+        <div class="office-grid">
+          <div class="office-card"><img src="photos/Condo.jpg" alt="WFH" class="office-image" loading="lazy"><div class="office-info"><h3 class="office-name" data-local="Work From Home" data-expat="居家办公">居家办公</h3><ul class="office-features"><li data-local="Remote Work Option" data-expat="远程工作选项">远程工作选项</li><li data-local="Flexible Work Arrangement" data-expat="灵活工作安排">灵活工作安排</li><li data-local="Selected Positions" data-expat="部分职位适用">部分职位适用</li></ul><div class="office-links"><a href="https://careerseng-teleperformance.icims.com/jobs/49561/interpreter---mandarin---work-from-home/job?mode=job&iis=MLP&iisn=" target="_blank" rel="noopener noreferrer" class="office-job-btn" data-local="💼 Interpreter Position" data-expat="💼 口译员职位">💼 口译员职位</a></div></div></div>
+        </div>
+      </div>
+
+      <div style="text-align:center;margin-top:2rem"><a href="https://vtour.cloud/mh2n0j/ae5772z1/Bella%27s" target="_blank" rel="noopener noreferrer" class="btn btn-gold" data-local="Virtual Office Tour →" data-expat="虚拟办公室参观 →">虚拟办公室参观 →</a></div>
     </div>
   </section>
 
@@ -743,28 +756,13 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
       <h2 class="section-title section-title-decorated fade-in" data-local="Recruitment Team" data-expat="招聘团队">招聘团队</h2>
       <p class="section-subtitle fade-in" data-local="从Apply到Onboard，华语Full陪伴" data-expat="从申请到入职，华语全程陪伴">从申请到入职，华语全程陪伴</p>
       <div class="ta-team-container">
-        <div class="ta-leader" id="kent">
-          <img src="photos/TPLogo11.png" alt="Kent Teng" class="ta-leader-img" loading="lazy">
-          <h3 class="ta-leader-name">Kent Teng</h3>
-          <p class="ta-leader-role" data-local="Manager｜Talent Acquisition" data-expat="经理｜人才招聘">经理｜人才招聘</p>
-          <p class="ta-leader-desc" data-local="你好！我是TP Malaysia华语Recruitment Team的Kent。我们致力于Help华语Talent在Southeast Asia开启全新的Career。Overseas Work是一个Big Challenge，但也是Expand Possibility的Amazing Opportunity。我们会Sincerely Support你的每一步" data-expat="你好！我是TP马来西亚华语招聘团队的Kent。我们致力于帮助华语人才在东南亚开启全新的事业。海外工作是一个大挑战，但也是拓展可能性的绝佳机会。我们会真诚地支持你的每一步">你好！我是TP马来西亚华语招聘团队的Kent我们致力于帮助华语人才在东南亚开启全新的事业海外工作是一个大挑战，但也是拓展可能性的绝佳机会我们会真诚地支持你的每一步</p>
-          <div class="ta-links">
-            <a class="btn btn-sm btn-gold" href="https://outlook.office.com/book/Chinese@teleperformance.onmicrosoft.com/s/tEpdSOHeX0SbvhMZg_dyvQ2?ismsaljsauthenabled" target="_blank" rel="noopener noreferrer" data-local="Book Interview" data-expat="预约面谈">预约面谈</a>
-            <a class="btn btn-sm btn-ghost" href="https://app.hallo.ai/teleperformance/ai-assessment/interview/zh?assessmentTypeId=VEhDOEFMRHdKWmtZdFoxREJjMHQ=" target="_blank" rel="noopener noreferrer">AI 能力评估</a>
-            <a class="btn btn-sm btn-ghost" href="open-jobs.html" data-local="View Jobs" data-expat="查看职位">查看职位</a>
-          </div>
-        </div>
         <div class="ta-team-grid fade-in">
-          <article class="ta-member"><img src="photos/TPLogo11.png" alt="Anna Saw" class="ta-member-img" loading="lazy"><h3 class="ta-member-name">Anna Saw</h3><p class="ta-member-role" data-local="Talent Acquisition｜Recruiter" data-expat="人才招聘｜招聘专员">人才招聘｜招聘专员</p><p class="ta-member-desc" data-local="第一次Overseas就职也能华语Support" data-expat="第一次海外就职也能华语支持">第一次海外就职也能华语支持</p><div class="ta-member-links"><a href="https://outlook.office.com/book/Chinese@teleperformance.onmicrosoft.com/s/tEpdSOHeX0SbvhMZg_dyvQ2?ismsaljsauthenabled" target="_blank" rel="noopener noreferrer" class="text-link">预约面谈</a> · <a href="open-jobs.html" class="text-link" data-local="View Jobs" data-expat="查看职位">查看职位</a></div></article>
-          <article class="ta-member"><img src="photos/TPLogo11.png" alt="Melaine Sua" class="ta-member-img" loading="lazy"><h3 class="ta-member-name">Melaine Sua</h3><p class="ta-member-role" data-local="Talent Acquisition｜Recruiter" data-expat="人才招聘｜招聘专员">人才招聘｜招聘专员</p><p class="ta-member-desc" data-local="Career咨询，Anytime Welcome" data-expat="职业咨询，随时欢迎">职业咨询，随时欢迎</p><div class="ta-member-links"><a href="https://outlook.office.com/book/Chinese@teleperformance.onmicrosoft.com/s/tEpdSOHeX0SbvhMZg_dyvQ2?ismsaljsauthenabled" target="_blank" rel="noopener noreferrer" class="text-link">预约面谈</a> · <a href="open-jobs.html" class="text-link" data-local="View Jobs" data-expat="查看职位">查看职位</a></div></article>
-          <article class="ta-member"><img src="photos/TPLogo11.png" alt="Nuttaporn" class="ta-member-img" loading="lazy"><h3 class="ta-member-name">Nuttaporn Buapradith</h3><p class="ta-member-role" data-local="Talent Acquisition｜Recruiter" data-expat="人才招聘｜招聘专员">人才招聘｜招聘专员</p><p class="ta-member-desc" data-local="出行手续和Local Life也会Follow Up" data-expat="出行手续和当地生活也会跟进">出行手续和当地生活也会跟进</p><div class="ta-member-links"><a href="https://outlook.office.com/book/Chinese@teleperformance.onmicrosoft.com/s/tEpdSOHeX0SbvhMZg_dyvQ2?ismsaljsauthenabled" target="_blank" rel="noopener noreferrer" class="text-link">预约面谈</a> · <a href="open-jobs.html" class="text-link" data-local="View Jobs" data-expat="查看职位">查看职位</a></div></article>
-          <article class="ta-member"><img src="photos/TPLogo11.png" alt="Careen Teh" class="ta-member-img" loading="lazy"><h3 class="ta-member-name">Careen Teh</h3><p class="ta-member-role" data-local="Talent Acquisition｜Recruiter" data-expat="人才招聘｜招聘专员">人才招聘｜招聘专员</p><p class="ta-member-desc" data-local="一起Find你期望的Project" data-expat="一起寻找你期望的项目">一起寻找你期望的项目</p><div class="ta-member-links"><a href="https://www.linkedin.com/in/chia-yin-teh/" target="_blank" rel="noopener noreferrer" class="text-link">LinkedIn</a> · <a href="open-jobs.html" class="text-link" data-local="View Jobs" data-expat="查看职位">查看职位</a></div></article>
-          <article class="ta-member"><img src="photos/TPLogo11.png" alt="Yong Xing Su" class="ta-member-img" loading="lazy"><h3 class="ta-member-name">Yong Xing Su</h3><p class="ta-member-role" data-local="Talent Acquisition｜Recruiter" data-expat="人才招聘｜招聘专员">人才招聘｜招聘专员</p><p class="ta-member-desc" data-local="Thailand相关咨询Welcome Contact" data-expat="泰国相关咨询欢迎联系">泰国相关咨询欢迎联系</p><div class="ta-member-links"><a href="https://www.linkedin.com/in/yong-xing-su/" target="_blank" rel="noopener noreferrer" class="text-link">LinkedIn</a> · <a href="open-jobs.html" class="text-link" data-local="View Jobs" data-expat="查看职位">查看职位</a></div></article>
-        </div>
-        <div class="ta-team-grid fade-in" style="margin-top:1.5rem">
           <article class="ta-member"><img src="photos/TPLogo11.png" alt="Jocelyn Soh" class="ta-member-img" loading="lazy"><h3 class="ta-member-name">Jocelyn Soh</h3><p class="ta-member-role" data-local="Talent Acquisition｜Recruiter" data-expat="人才招聘｜招聘专员">人才招聘｜招聘专员</p><p class="ta-member-desc" data-local="Help你Find合适的Position" data-expat="帮助你找到合适的职位">帮助你找到合适的职位</p><div class="ta-member-links"><a href="open-jobs.html" class="text-link" data-local="View Jobs" data-expat="查看职位">查看职位</a></div></article>
           <article class="ta-member"><img src="photos/TPLogo11.png" alt="Tian Han Chuah" class="ta-member-img" loading="lazy"><h3 class="ta-member-name">Tian Han Chuah</h3><p class="ta-member-role" data-local="Talent Acquisition｜Recruiter" data-expat="人才招聘｜招聘专员">人才招聘｜招聘专员</p><p class="ta-member-desc" data-local="Career Planning咨询Welcome Contact" data-expat="职业规划咨询欢迎联系">职业规划咨询欢迎联系</p><div class="ta-member-links"><a href="open-jobs.html" class="text-link" data-local="View Jobs" data-expat="查看职位">查看职位</a></div></article>
           <article class="ta-member"><img src="photos/TPLogo11.png" alt="Ts. Ng Hsiang Boon" class="ta-member-img" loading="lazy"><h3 class="ta-member-name">Ts. Ng Hsiang Boon</h3><p class="ta-member-role" data-local="Talent Acquisition｜Recruiter" data-expat="人才招聘｜招聘专员">人才招聘｜招聘专员</p><p class="ta-member-desc" data-local="Technical与Professional岗位Consult" data-expat="技术与专业岗位咨询">技术与专业岗位咨询</p><div class="ta-member-links"><a href="open-jobs.html" class="text-link" data-local="View Jobs" data-expat="查看职位">查看职位</a></div></article>
+          <article class="ta-member"><img src="photos/TPLogo11.png" alt="Anne" class="ta-member-img" loading="lazy"><h3 class="ta-member-name">Anne</h3><p class="ta-member-role" data-local="Talent Acquisition｜Recruiter" data-expat="人才招聘｜招聘专员">人才招聘｜招聘专员</p><p class="ta-member-desc" data-local="华语Support，Anytime Welcome" data-expat="华语支持，随时欢迎">华语支持，随时欢迎</p><div class="ta-member-links"><a href="open-jobs.html" class="text-link" data-local="View Jobs" data-expat="查看职位">查看职位</a></div></article>
+          <article class="ta-member"><img src="photos/TPLogo11.png" alt="Miki" class="ta-member-img" loading="lazy"><h3 class="ta-member-name">Miki</h3><p class="ta-member-role" data-local="Talent Acquisition｜Recruiter" data-expat="人才招聘｜招聘专员">人才招聘｜招聘专员</p><p class="ta-member-desc" data-local="Career Consult欢迎Contact" data-expat="职业咨询欢迎联系">职业咨询欢迎联系</p><div class="ta-member-links"><a href="open-jobs.html" class="text-link" data-local="View Jobs" data-expat="查看职位">查看职位</a></div></article>
+          <article class="ta-member"><img src="photos/TPLogo11.png" alt="Su Yee" class="ta-member-img" loading="lazy"><h3 class="ta-member-name">Su Yee</h3><p class="ta-member-role" data-local="Talent Acquisition｜Recruiter" data-expat="人才招聘｜招聘专员">人才招聘｜招聘专员</p><p class="ta-member-desc" data-local="Apply Question随时Consult" data-expat="申请问题随时咨询">申请问题随时咨询</p><div class="ta-member-links"><a href="open-jobs.html" class="text-link" data-local="View Jobs" data-expat="查看职位">查看职位</a></div></article>
         </div>
       </div>
     </div>
