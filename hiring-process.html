@@ -458,6 +458,9 @@ btt.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
 // Scroll Fade
 const obs=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:.1});
 document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
+
+// UTM Parameter Persistence
+(function(){var utmKeys=['utm_source','utm_medium','utm_campaign','utm_content','utm_term','lang'];var params=new URLSearchParams(window.location.search);var stored=JSON.parse(sessionStorage.getItem('mlpUTM')||'{}');var hasNew=false;utmKeys.forEach(function(k){var v=params.get(k);if(v){stored[k]=v;hasNew=true}});if(hasNew)sessionStorage.setItem('mlpUTM',JSON.stringify(stored));function appendUTM(){var u=JSON.parse(sessionStorage.getItem('mlpUTM')||'{}');if(!Object.keys(u).length)return;document.querySelectorAll('a[href]').forEach(function(a){var h=a.getAttribute('href');if(!h||h.startsWith('#')||h.startsWith('mailto:')||h.startsWith('tel:'))return;try{var isRel=!h.match(/^https?:\/\//);var url=new URL(h,window.location.origin);Object.keys(u).forEach(function(k){if(!url.searchParams.has(k))url.searchParams.set(k,u[k])});a.setAttribute('href',isRel?url.pathname+url.search+url.hash:url.href)}catch(e){}})}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',appendUTM)}else{appendUTM()}})();
 </script>
 </body>
 </html>
