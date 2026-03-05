@@ -222,6 +222,30 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
 @media(max-width:768px){.quick-stats{gap:.75rem}.quick-stat{min-width:90px;padding:.5rem .75rem}}
 @media(prefers-reduced-motion:reduce){.fade-in,.fade-in-left,.fade-in-right{opacity:1;transform:none}}
 
+/* Page Hero */
+.page-hero{background:linear-gradient(135deg,#000 0%,#2d2d2d 100%);color:#fff;padding:3.5rem 20px;text-align:center;position:relative;overflow:hidden}
+.page-hero::before{content:'华';position:absolute;top:50%;right:5%;font-size:clamp(150px,25vw,300px);font-weight:900;font-family:'Noto Serif SC',serif;opacity:.03;transform:translateY(-50%);pointer-events:none;color:var(--gold-primary)}
+.page-hero h1{font-size:clamp(1.6rem,4vw,2.2rem);font-weight:900;color:var(--gold-primary);margin-bottom:.5rem;font-family:'Noto Serif SC',serif}
+.page-hero .hero-sub{color:rgba(255,255,255,.8);max-width:650px;margin:0 auto;font-size:1rem;line-height:1.8}
+
+/* Content Section */
+.content-section{padding:50px 20px}
+
+/* Cards Grid */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;max-width:var(--max);margin:0 auto}
+
+/* Buttons */
+.btn{padding:.75rem 1.75rem;border-radius:4px;font-weight:600;display:inline-block;transition:all .3s;text-align:center;border:2px solid var(--tp-black);cursor:pointer;font-size:.9rem}
+.btn:focus{outline:2px solid var(--gold-primary);outline-offset:4px}
+.btn-gold{background:var(--gold-primary);color:var(--tp-black);border-color:var(--gold-primary)}
+.btn-gold:hover{background:var(--tp-black);color:var(--gold-primary);transform:translateY(-2px);box-shadow:var(--shadow-lg)}
+.btn-secondary{background:var(--tp-white);color:var(--tp-black)}
+.btn-secondary:hover{background:var(--tp-black);color:var(--tp-white);transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.btn-outline{border:2px solid var(--gold-primary);color:var(--gold-primary);background:transparent}
+.btn-outline:hover{background:var(--gold-primary);color:#000}
+
+@media(max-width:768px){.cards{grid-template-columns:1fr}}
+
 </style>
 </head>
 <body>
