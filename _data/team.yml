@@ -1,32 +1,9 @@
 # TA Team Members
-# Kent = leader, Row 1 = 5 members, Row 2 = 3 members
+# Only members with LinkedIn profiles
 # All profile pictures: TPLogo11.png
-
-leader:
-  name_en: "Kent Teng"
-  name_cn: "邓伟健"
-  title: "经理｜人才招聘"
-  avatar: "TPLogo11.png"
-  bio: "Kent 是华语招聘团队负责人，拥有多年跨国招聘经验，致力于为每一位候选人提供最佳的求职体验。"
-  show_linkedin: false
 
 # Row 1
 members_row1:
-  - name_en: "Anna Saw"
-    title: "人才招聘｜招聘专员"
-    avatar: "TPLogo11.png"
-    desc: "第一次海外就职也能华语支持"
-
-  - name_en: "Melaine Sua"
-    title: "人才招聘｜招聘专员"
-    avatar: "TPLogo11.png"
-    desc: "职业咨询，随时欢迎"
-
-  - name_en: "Nuttaporn Buapradith"
-    title: "人才招聘｜招聘专员"
-    avatar: "TPLogo11.png"
-    desc: "出行手续和当地生活也会跟进"
-
   - name_en: "Careen Teh"
     title: "人才招聘｜招聘专员"
     avatar: "TPLogo11.png"
@@ -39,8 +16,6 @@ members_row1:
     desc: "泰国相关咨询欢迎联系"
     linkedin: "https://www.linkedin.com/in/yong-xing-su/"
 
-# Row 2
-members_row2:
   - name_en: "Jocelyn Soh"
     title: "人才招聘｜招聘专员"
     avatar: "TPLogo11.png"
@@ -59,6 +34,8 @@ members_row2:
     desc: "技术与专业岗位咨询"
     linkedin: "https://www.linkedin.com/in/nghsiangboon"
 
+# Row 2
+members_row2:
   - name_en: "Anne Thida Aung"
     title: "人才吸引负责人｜亚太多语言中心"
     avatar: "TPLogo11.png"
