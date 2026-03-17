@@ -160,7 +160,6 @@ def apply_all_updates(html_content):
         ('office-environment.html', '👀', 'G%20TOWER.jpg'),
         ('external-raf.html', '🎁', 'Reception.png'),
         ('blog.html', '📢', 'CafepicbyKoyoriinPenang.jpg'),
-        ('faq.html', '❓', 'GTowerInside1.png')
     ]
     
     for href, emoji, img in card_mappings:

@@ -171,12 +171,3 @@ priority_cards:
     url: "blog.html"
     image: "CafepicbyKoyoriinPenang.jpg"
     emoji: "📢"
-  - title:
-      local: "FAQ 常见问题"
-      expat: "常见问题"
-    desc:
-      local: "你想知道的都在这里"
-      expat: "你想知道的都在这里"
-    url: "faq.html"
-    image: "GTowerInside1.png"
-    emoji: "❓"

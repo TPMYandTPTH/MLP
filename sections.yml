@@ -89,10 +89,10 @@ benefits:
 # GPTW Section
 # ========================================
 gptw:
-  years_count: 6
+  years_count: 5
   title:
-    local: "连续 <span class='gptw-counter' data-target='6'>1</span> 年入选 World's Best Workplaces™"
-    expat: "连续 <span class='gptw-counter' data-target='6'>1</span> 年入选全球最佳雇主™"
+    local: "连续 <span class='gptw-counter' data-target='5'>1</span> 年入选 World's Best Workplaces™"
+    expat: "连续 <span class='gptw-counter' data-target='5'>1</span> 年入选全球最佳雇主™"
   subtitle:
     local: "Great Place to Work® 认证"
     expat: "Great Place to Work® 认证"
