@@ -227,10 +227,10 @@ nav a[aria-current="page"]::after{width:100%;background:var(--tp-black)}
 .priority-menu{padding:60px 20px;background:var(--tp-off)}
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
 .priority-menu .cards{grid-template-columns:repeat(4,1fr);gap:1rem}
-.priority-menu .card{position:relative;display:flex;flex-direction:column;justify-content:flex-end;padding:1.5rem 1.25rem;border-radius:16px;min-height:140px;overflow:hidden;border:2px solid var(--tp-light)}
+.priority-menu .card{position:relative;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:1.5rem 1.25rem;border-radius:16px;min-height:140px;overflow:hidden;border:2px solid var(--tp-light)}
 .priority-menu .card::after{content:'';position:absolute;top:50%;left:50%;width:80px;height:80px;background-image:url('photos/TPLogo11.png');background-size:contain;background-repeat:no-repeat;background-position:center;transform:translate(-50%,-60%);opacity:.15;pointer-events:none;z-index:0}
 .priority-menu .card:hover::after{opacity:.25}
-.priority-menu .card .card-content{position:relative;z-index:1;padding:0}
+.priority-menu .card .card-content{position:relative;z-index:1;padding:0;text-align:center}
 .priority-menu .card h3{font-size:1rem;font-weight:900;color:var(--tp-black);margin-bottom:0.15rem}
 .priority-menu .card p{font-size:0.78rem;color:var(--tp-gray-dark);line-height:1.4}
 .card{background:var(--tp-white);border:1px solid var(--tp-light);border-radius:8px;overflow:hidden;transition:all 0.3s;position:relative}
