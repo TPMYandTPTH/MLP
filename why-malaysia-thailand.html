@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&family=Noto+Serif+SC:wght@700;900&display=swap" rel="stylesheet">
 <style>
-:root{--tp-black:#000;--tp-dark:#1a1a1a;--tp-charcoal:#2d2d2d;--tp-gray-dark:#4a4a4a;--tp-gray:#666;--tp-gray-light:#999;--tp-silver:#ccc;--tp-light:#e5e5e5;--tp-off:#f5f5f5;--tp-white:#fff;--gold-primary:#FFD700;--gold-light:#FFAA00;--gold-dark:#E6B800;--gold-pale:#FFFBEB;--accent-green:#00a86b;--max:1050px;--shadow-sm:0 2px 4px rgba(0,0,0,.08);--shadow-md:0 4px 8px rgba(0,0,0,.12);--shadow-lg:0 8px 16px rgba(0,0,0,.16);--shadow-gold:0 4px 12px rgba(255,215,0,.3);--transition:all .3s cubic-bezier(.4,0,.2,1)}
+:root{--tp-black:#000;--tp-dark:#1a1a1a;--tp-charcoal:#2d2d2d;--tp-gray-dark:#4a4a4a;--tp-gray:#666;--tp-gray-light:#999;--tp-silver:#ccc;--tp-light:#e5e5e5;--tp-off:#f5f5f5;--tp-white:#fff;--gold-primary:#FFD700;--gold-light:#FFAA00;--gold-dark:#E6B800;--gold-pale:#FFFBEB;--accent-green:#00a86b;--max:1200px;--shadow-sm:0 2px 4px rgba(0,0,0,.08);--shadow-md:0 4px 8px rgba(0,0,0,.12);--shadow-lg:0 8px 16px rgba(0,0,0,.16);--shadow-gold:0 4px 12px rgba(255,215,0,.3);--transition:all .3s cubic-bezier(.4,0,.2,1)}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{font-family:'Noto Sans SC',-apple-system,BlinkMacSystemFont,"Microsoft YaHei",sans-serif;color:var(--tp-dark);line-height:1.8;background:var(--tp-white);-webkit-font-smoothing:antialiased}
@@ -55,10 +55,15 @@ nav a[aria-current="page"]::after{width:100%;background:var(--tp-black)}
 .mobile-menu a:hover{background:var(--gold-pale)}
 
 /* Hero */
-.hero-dark{position:relative;overflow:hidden;background:linear-gradient(135deg,#000 0%,#2d2d2d 100%);padding:3.5rem 20px;text-align:center;color:#fff}
-.hero-dark::before{content:'华';position:absolute;top:50%;right:5%;font-size:clamp(150px,25vw,300px);font-weight:900;font-family:'Noto Serif SC',serif;opacity:.03;transform:translateY(-50%);pointer-events:none;color:var(--gold-primary)}
-.hero-dark h1{font-size:clamp(1.6rem,4vw,2.2rem);font-weight:900;color:var(--gold-primary);margin-bottom:.5rem;font-family:'Noto Serif SC',serif}
-.hero-dark p{color:#ccc;max-width:700px;margin:0 auto}
+.hero{position:relative;overflow:hidden;background:linear-gradient(135deg,var(--tp-white) 0%,var(--tp-off) 100%);padding:3.75rem 20px;text-align:center}
+.hero::before{content:'';position:absolute;top:50%;right:6%;width:clamp(220px,32vw,480px);height:clamp(220px,32vw,480px);background-image:url('photos/TPLogo11.png');background-size:contain;background-repeat:no-repeat;background-position:center;opacity:.04;filter:saturate(0);transform:translateY(-50%);pointer-events:none}
+.hero h1{font-size:2.4rem;font-weight:900;color:#000;margin-bottom:.6rem;font-family:'Noto Serif SC',serif}
+.hero p{color:var(--tp-gray-dark)}
+.hero .hero-cta{margin-top:1rem;display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}
+.btn{padding:.8rem 1.2rem;font-weight:900;border-radius:999px;text-decoration:none;display:inline-block;border:2px solid var(--gold-primary);color:var(--gold-primary);transition:var(--transition)}
+.btn:hover{background:var(--gold-primary);color:#000;transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.btn-solid{background:var(--gold-primary);color:#000;border:2px solid var(--gold-primary);border-radius:999px;padding:.85rem 1.2rem;font-weight:900;display:inline-block}
+.btn-solid:hover{filter:brightness(.95);transform:translateY(-2px);box-shadow:var(--shadow-md)}
 
 /* Section */
 .section-padded{padding:50px 20px}
@@ -69,19 +74,19 @@ nav a[aria-current="page"]::after{width:100%;background:var(--tp-black)}
 /* Cards & Grid */
 .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:1.25rem;max-width:var(--max);margin:0 auto}
 .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;max-width:var(--max);margin:0 auto}
-.card{background:var(--tp-white);border:1px solid var(--tp-light);border-radius:12px;padding:1.5rem;box-shadow:var(--shadow-sm);transition:var(--transition)}
+.card{background:var(--tp-white);border:1px solid var(--tp-light);border-radius:16px;padding:1.5rem;box-shadow:var(--shadow-sm);transition:var(--transition)}
 .card:hover{box-shadow:var(--shadow-md);border-color:var(--gold-primary)}
 .card h3{font-size:1.05rem;font-weight:700;color:#000;margin-bottom:.5rem}
 .card p{color:var(--tp-gray-dark);font-size:.9rem;line-height:1.8}
 .card-icon{font-size:2rem;margin-bottom:.75rem}
-.highlight-box{background:var(--gold-pale);border:2px solid var(--gold-primary);border-radius:12px;padding:1.5rem;text-align:center;max-width:var(--max);margin:1.5rem auto 0}
+.highlight-box{background:var(--gold-pale);border:2px solid var(--gold-primary);border-radius:16px;padding:1.5rem;text-align:center;max-width:var(--max);margin:1.5rem auto 0}
 .highlight-box p{font-size:1.05rem;font-weight:700}
 .highlight-box .sub{color:var(--tp-gray);font-size:.85rem;margin-top:.5rem;font-weight:400}
 
 /* Process Rail */
 .process-rail{list-style:none;max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:repeat(5,1fr);gap:16px;position:relative;counter-reset:step}
 .process-rail::before{content:'';position:absolute;top:30px;left:8px;right:8px;height:2px;background:linear-gradient(90deg,var(--tp-light),var(--gold-primary),var(--tp-light));z-index:0}
-.step-card{background:#fff;border:1px solid var(--tp-light);border-radius:12px;padding:14px;box-shadow:var(--shadow-sm);position:relative;z-index:1;transition:var(--transition)}
+.step-card{background:#fff;border:1px solid var(--tp-light);border-radius:16px;padding:14px;box-shadow:var(--shadow-sm);position:relative;z-index:1;transition:var(--transition)}
 .step-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-gold);border-color:var(--gold-primary)}
 .step-head{display:flex;align-items:center;gap:10px;margin-bottom:6px}
 .step-dot{display:inline-grid;place-items:center;width:36px;height:36px;border-radius:999px;background:var(--gold-primary);color:#000;font-weight:800;border:3px solid #fff;box-shadow:0 2px 8px rgba(212,175,55,.25);flex-shrink:0}
@@ -102,7 +107,7 @@ nav a[aria-current="page"]::after{width:100%;background:var(--tp-black)}
 
 /* Office */
 .offices-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;max-width:var(--max);margin:0 auto}
-.office-card{background:#fff;border:1px solid var(--tp-light);border-radius:12px;overflow:hidden;transition:var(--transition)}
+.office-card{background:#fff;border:1px solid var(--tp-light);border-radius:16px;overflow:hidden;transition:var(--transition)}
 .office-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-gold);border-color:var(--gold-primary)}
 .office-image{width:100%;height:180px;object-fit:cover}
 .office-info{padding:1rem}
@@ -111,12 +116,12 @@ nav a[aria-current="page"]::after{width:100%;background:var(--tp-black)}
 .office-features li{font-size:.85rem;color:var(--tp-gray-dark);padding:.2rem 0 .2rem 1rem;position:relative}
 .office-features li::before{content:'✓';position:absolute;left:0;color:var(--gold-dark);font-weight:700}
 .office-links{display:flex;gap:.5rem;margin-top:.5rem;flex-wrap:wrap}
-.office-map-btn{display:inline-block;padding:.35rem .7rem;background:var(--gold-primary);color:#000;border-radius:4px;font-size:.75rem;font-weight:600;transition:all .3s}
+.office-map-btn{display:inline-block;padding:.35rem .7rem;background:var(--gold-primary);color:#000;border-radius:999px;font-size:.75rem;font-weight:900;transition:all .3s}
 .office-map-btn:hover{background:#000;color:var(--gold-primary)}
 .office-card.coming-soon{position:relative;opacity:.85}
 .office-card.coming-soon::after{content:'即将开放';position:absolute;top:12px;right:12px;background:linear-gradient(135deg,var(--gold-primary),var(--gold-light));color:#000;padding:.3rem .75rem;border-radius:20px;font-size:.7rem;font-weight:700;box-shadow:0 2px 8px rgba(255,215,0,.4)}
 .office-card.coming-soon .office-image{filter:grayscale(30%)}
-.office-job-btn{display:inline-block;padding:.35rem .7rem;background:#000;color:#fff;border-radius:4px;font-size:.75rem;font-weight:600;transition:all .3s}
+.office-job-btn{display:inline-block;padding:.35rem .7rem;background:#000;color:#fff;border-radius:999px;font-size:.75rem;font-weight:900;transition:all .3s}
 .office-job-btn:hover{background:var(--gold-primary);color:#000}
 
 /* TA Team */
@@ -136,20 +141,14 @@ nav a[aria-current="page"]::after{width:100%;background:var(--tp-black)}
 .text-link{color:var(--gold-dark);text-decoration:underline;font-weight:500;transition:color .2s}
 .text-link:hover{color:#000}
 
-/* CTA */
-.cta-section{padding:50px 20px;background:linear-gradient(135deg,#000 0%,#2d2d2d 100%);color:#fff;text-align:center}
-.cta-section .section-title{color:var(--gold-primary)}
-.cta-section .section-subtitle{color:#ccc}
-.cta-buttons{display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap;margin-top:1.25rem}
-.btn-cta-primary{background:var(--gold-primary);color:#000;padding:.85rem 1.5rem;border-radius:999px;font-weight:700;transition:var(--transition)}
-.btn-cta-primary:hover{transform:translateY(-2px);box-shadow:var(--shadow-gold)}
-.btn-cta-secondary{background:#fff;color:#000;padding:.85rem 1.5rem;border-radius:999px;font-weight:700;transition:var(--transition)}
-.btn-cta-secondary:hover{transform:translateY(-2px);box-shadow:var(--shadow-md)}
-.btn-cta-outline{border:2px solid var(--gold-primary);color:var(--gold-primary);padding:.85rem 1.5rem;border-radius:999px;font-weight:700;transition:var(--transition)}
-.btn-cta-outline:hover{background:var(--gold-primary);color:#000}
+/* Helper */
+.helper{background:#fff;border-top:1px solid var(--tp-light);border-bottom:1px solid var(--tp-light);padding:2rem 20px}
+.helper .inner{max-width:1000px;margin:0 auto;text-align:center}
+.helper h2{font-size:1.6rem;font-weight:900;color:#000;margin-bottom:.4rem;font-family:'Noto Serif SC',serif}
+.helper p{color:var(--tp-gray-dark)}
 
 /* Footer */
-footer{background:var(--tp-black);color:var(--tp-white);padding:40px 20px 16px;position:relative;overflow:hidden}
+footer{background:var(--tp-black);color:var(--tp-white);padding:40px 20px 16px;position:relative;overflow:hidden;margin-top:40px}
 footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,var(--gold-primary),transparent)}
 .footer-content{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:2fr repeat(3,1fr);gap:2rem;margin-bottom:2rem;padding-bottom:2rem;border-bottom:1px solid rgba(255,255,255,.1)}
 .footer-brand{display:flex;flex-direction:column;gap:.875rem}
@@ -164,7 +163,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
 .footer-section a:hover{opacity:1}
 .badges{display:flex;gap:.75rem;align-items:center;margin-top:.75rem;flex-wrap:wrap}
 .badges .badge-item{font-size:.8rem;opacity:.8}
-.btn-footer{display:inline-block;background:var(--gold-primary);color:#000;padding:.5rem 1.25rem;border-radius:4px;font-weight:600;margin-top:.5rem;transition:var(--transition)}
+.btn-footer{display:inline-block;background:var(--gold-primary);color:#000;padding:.5rem 1.25rem;border-radius:999px;font-weight:900;margin-top:.5rem;transition:var(--transition)}
 .btn-footer:hover{background:#fff}
 .footer-bottom{text-align:center;padding-top:12px;font-size:.75rem;opacity:.6}
 .footer-bottom a{color:#fff;text-decoration:underline;margin:0 .3rem}
@@ -173,15 +172,15 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
 /* Floating */
 .floating-apply{position:fixed;bottom:20px;right:20px;background:var(--tp-black);color:var(--tp-white);padding:.75rem 1.25rem;border-radius:50px;font-weight:600;box-shadow:0 4px 12px rgba(0,0,0,.3);z-index:999;transition:all .3s;border:2px solid var(--gold-primary);font-size:.85rem}
 .floating-apply:hover{transform:scale(1.05);box-shadow:var(--shadow-gold);background:var(--gold-primary);color:#000}
-.floating-ai{position:fixed;bottom:80px;right:20px;background:rgba(255,255,255,.9);color:#000;padding:.65rem 1.1rem;border-radius:50px;font-weight:600;box-shadow:0 4px 12px rgba(0,0,0,.15);z-index:998;transition:all .3s;border:2px solid #000;font-size:.8rem}
+.floating-ai{position:fixed;bottom:20px;right:130px;background:rgba(255,255,255,.9);color:#000;padding:.75rem 1.25rem;border-radius:50px;font-weight:600;box-shadow:0 4px 12px rgba(0,0,0,.15);z-index:998;transition:all .3s;border:2px solid #000;font-size:.85rem;backdrop-filter:blur(10px)}
 .floating-ai:hover{transform:scale(1.05);box-shadow:var(--shadow-gold);border-color:var(--gold-primary)}
-.back-to-top{position:fixed;bottom:140px;right:24px;width:40px;height:40px;background:rgba(255,255,255,.9);border:2px solid var(--gold-primary);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:0;visibility:hidden;transition:all .3s;z-index:997;font-size:1rem;font-weight:bold;color:var(--gold-dark)}
+.back-to-top{position:fixed;bottom:80px;right:20px;width:40px;height:40px;background:rgba(255,255,255,.9);border:2px solid var(--gold-primary);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:0;visibility:hidden;transition:all .3s;z-index:997;backdrop-filter:blur(10px);font-size:1rem;font-weight:bold;color:var(--gold-dark)}
 .back-to-top.show{opacity:1;visibility:visible}
 .back-to-top:hover{background:var(--gold-primary);color:#000}
 
 /* Responsive */
 @media(max-width:980px){.process-rail{grid-template-columns:repeat(3,1fr)}.ta-team-grid{grid-template-columns:repeat(3,1fr)}.offices-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:768px){.grid-3{grid-template-columns:1fr}.grid-2{grid-template-columns:1fr}.process-rail{grid-template-columns:1fr}.process-rail::before{display:none}.ta-team-grid{grid-template-columns:repeat(2,1fr)}.offices-grid{grid-template-columns:1fr}.footer-content{grid-template-columns:1fr;text-align:center}nav{display:none}.mobile-toggle{display:block}.floating-ai{bottom:80px;right:20px}.back-to-top{bottom:140px}.cta-buttons{flex-direction:column;align-items:center}}
+@media(max-width:768px){.grid-3{grid-template-columns:1fr}.grid-2{grid-template-columns:1fr}.process-rail{grid-template-columns:1fr}.process-rail::before{display:none}.ta-team-grid{grid-template-columns:repeat(2,1fr)}.offices-grid{grid-template-columns:1fr}.footer-content{grid-template-columns:1fr;text-align:center}nav{display:none}.mobile-toggle{display:block}.floating-ai{bottom:80px;right:20px}.back-to-top{bottom:140px}}
 @media(max-width:480px){.ta-team-grid{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
 
@@ -209,7 +208,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
 .note-box p{font-size:.85rem;color:var(--tp-gray-dark)}
 /* Quick stats */
 .quick-stats{display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;margin-bottom:2rem}
-.quick-stat{text-align:center;padding:.75rem 1.5rem;background:#fff;border-radius:12px;border:1px solid var(--tp-light);min-width:120px}
+.quick-stat{text-align:center;padding:.75rem 1.5rem;background:#fff;border-radius:16px;border:1px solid var(--tp-light);min-width:120px}
 .quick-stat-number{font-size:1.5rem;font-weight:900;color:var(--gold-dark);display:block}
 .quick-stat-label{font-size:.75rem;color:var(--tp-gray)}
 /* Numbered tips */
@@ -217,7 +216,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
 .tips-list li{padding:.75rem 0 .75rem 2.5rem;border-bottom:1px solid var(--tp-light);position:relative;font-size:.9rem;color:var(--tp-gray-dark)}
 .tips-list li::before{counter-increment:tip;content:counter(tip);position:absolute;left:0;width:28px;height:28px;background:var(--gold-primary);color:#000;border-radius:50%;display:grid;place-items:center;font-weight:700;font-size:.8rem}
 /* Blockquote */
-.testimonial-card{background:var(--tp-white);border:1px solid var(--tp-light);border-left:4px solid var(--gold-primary);border-radius:12px;padding:1.5rem;box-shadow:var(--shadow-sm)}
+.testimonial-card{background:var(--tp-white);border:1px solid var(--tp-light);border-left:4px solid var(--gold-primary);border-radius:16px;padding:1.5rem;box-shadow:var(--shadow-sm)}
 .testimonial-card blockquote{font-style:italic;line-height:1.8;margin-bottom:1rem;color:var(--tp-gray-dark)}
 .testimonial-card cite{font-style:normal;font-weight:600;font-size:.85rem}
 @media(max-width:768px){.quick-stats{gap:.75rem}.quick-stat{min-width:90px;padding:.5rem .75rem}}
@@ -236,10 +235,15 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
   <nav class="mobile-menu" id="mobileMenu" aria-label="移动端导航"><ul><li><a href="index.html" data-local="Home" data-expat="首页">首页</a></li><li><a href="open-jobs.html" data-local="Job List" data-expat="职位列表">职位列表</a></li><li><a href="about-tp.html" data-local="About TP" data-expat="关于TP">关于TP</a></li><li><a href="salary-and-benefits.html" data-local="Salary &amp; Benefits" data-expat="薪资福利">薪资福利</a></li><li><a href="hiring-process.html" data-local="Hiring Process" data-expat="招聘流程">招聘流程</a></li><li><a href="why-malaysia-thailand.html" data-local="Why MY &amp; TH" data-expat="为什么选择马来西亚和泰国">为什么选择马来西亚和泰国</a></li><li><a href="relocation-visa.html" data-local="Visa·Relocation" data-expat="签证与搬迁支持">签证与搬迁支持</a></li><li><a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=chinese" target="_blank" rel="noopener noreferrer" class="apply-btn" data-local="立即申请" data-expat="立即申请">立即申请</a></li><li class="header-lang-switch" style="display:flex;justify-content:center;gap:8px;padding:0.75rem 1.25rem;border-top:2px solid var(--tp-light)"><button class="header-lang-btn" onclick="setLanguage('local')">🇲🇾 本地版</button><button class="header-lang-btn active" onclick="setLanguage('expat')">🌏 外派版</button></li></ul></nav>
 </header>
 <main id="main">
-  <section class="page-hero"><div class="container">
-    <h1 class="fade-in" data-local="&quot;像local一样，overseas工作。&quot;" data-expat="&quot;像本地人一样，在海外工作。&quot;">"像本地人一样，在海外工作。"</h1>
-    <p class="hero-sub fade-in" data-local="你的new career舞台，Malaysia / Thailand是个好choice。Multinational的environment、华语可以用的job、affordable的生活cost、设备齐全的住所。" data-expat="你的新职业舞台，马来西亚 / 泰国是个好选择。多国籍的环境、华语可以用的工作、实惠的生活成本、设备齐全的住所。">你的新职业舞台，马来西亚 / 泰国是个好选择。多国籍的环境、华语可以用的工作、实惠的生活成本、设备齐全的住所。</p>
-  </div></section>
+  <section class="hero">
+    <h1 data-local="&quot;像local一样，overseas工作。&quot;" data-expat="&quot;像本地人一样，在海外工作。&quot;">"像本地人一样，在海外工作。"</h1>
+    <p data-local="你的new career舞台，Malaysia / Thailand是个好choice。Multinational的environment、华语可以用的job、affordable的生活cost、设备齐全的住所。" data-expat="你的新职业舞台，马来西亚 / 泰国是个好选择。多国籍的环境、华语可以用的工作、实惠的生活成本、设备齐全的住所。">你的新职业舞台，马来西亚 / 泰国是个好选择。多国籍的环境、华语可以用的工作、实惠的生活成本、设备齐全的住所。</p>
+    <div class="hero-cta" role="group" aria-label="快捷链接">
+      <a class="btn" href="open-jobs.html" data-local="View Jobs" data-expat="查看职位">查看职位</a>
+      <a class="btn-solid" href="salary-and-benefits.html" data-local="Salary & Benefits" data-expat="薪资福利">薪资福利</a>
+      <a class="btn" href="https://outlook.office.com/book/Chinese@teleperformance.onmicrosoft.com/s/tEpdSOHeX0SbvhMZg_dyvQ2?ismsaljsauthenabled" target="_blank" rel="noopener noreferrer" data-local="Book Chat" data-expat="预约面谈">预约面谈</a>
+    </div>
+  </section>
 
   <section class="content-section" style="padding:50px 20px"><div class="container">
     <h2 class="section-title fade-in" data-local="Malaysia和Thailand被选择的Reason" data-expat="马来西亚和泰国被选择的理由">马来西亚和泰国被选择的理由</h2>
@@ -354,20 +358,23 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
 
   <section class="content-section" style="padding:40px 20px"><div class="container">
     <h2 class="section-title fade-in" data-local="Related Links" data-expat="相关链接">相关链接</h2>
-    <div class="cta-buttons fade-in">
-      <a href="cost-of-living.html" class="btn btn-outline" data-local="生活Cost详细" data-expat="生活成本详细">生活成本详细</a>
-      <a href="daily-life-malaysia.html" class="btn btn-outline" data-local="现地生活Guide" data-expat="当地生活指南">当地生活指南</a>
+    <div class="fade-in" style="display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap;margin-top:1rem">
+      <a href="cost-of-living.html" class="btn" data-local="生活Cost详细" data-expat="生活成本详细">生活成本详细</a>
+      <a href="daily-life-malaysia.html" class="btn" data-local="现地生活Guide" data-expat="当地生活指南">当地生活指南</a>
     </div>
   </div></section>
 
-  <section class="cta-section"><div class="container">
-    <h2 class="fade-in">What's Next?</h2>
-    <div class="cta-buttons fade-in">
-      <a href="open-jobs.html" class="btn btn-gold" data-local="View Jobs" data-expat="查看职位">查看职位</a>
-      <a href="relocation-visa.html" class="btn btn-secondary" data-local="Relocation Support" data-expat="搬迁支持">搬迁支持</a>
-      <a href="https://outlook.office.com/book/Chinese@teleperformance.onmicrosoft.com/s/tEpdSOHeX0SbvhMZg_dyvQ2?ismsaljsauthenabled" target="_blank" rel="noopener noreferrer" class="btn btn-outline" data-local="Book Casual Chat" data-expat="预约面谈">预约面谈</a>
+  <section class="helper">
+    <div class="inner">
+      <h2 data-local="What's Next?" data-expat="下一步？">What's Next?</h2>
+      <p data-local="准备好了？Check available positions或book一个casual chat。" data-expat="准备好了？查看可用职位或预约一个轻松面谈。">准备好了？查看可用职位或预约一个轻松面谈。</p>
+      <div style="margin-top:.8rem">
+        <a class="btn" href="open-jobs.html" data-local="View Jobs" data-expat="查看职位">查看职位</a>
+        <a class="btn-solid" href="relocation-visa.html" style="margin-left:.5rem" data-local="Relocation Support" data-expat="搬迁支持">搬迁支持</a>
+        <a class="btn" href="https://outlook.office.com/book/Chinese@teleperformance.onmicrosoft.com/s/tEpdSOHeX0SbvhMZg_dyvQ2?ismsaljsauthenabled" target="_blank" rel="noopener noreferrer" style="margin-left:.5rem" data-local="Book Chat" data-expat="预约面谈">预约面谈</a>
+      </div>
     </div>
-  </div></section>
+  </section>
 </main>
 <footer>
   <div class="footer-content">
