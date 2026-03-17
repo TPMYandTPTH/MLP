@@ -109,9 +109,6 @@ a{color:inherit;text-decoration:none}
 .header-lang-btn{padding:.25rem .6rem;border-radius:14px;font-size:.7rem;font-weight:600;cursor:pointer;border:1.5px solid var(--tp-light);background:transparent;color:var(--tp-gray);transition:all .3s;white-space:nowrap}
 .header-lang-btn:hover{border-color:var(--gold-primary);color:#000}
 .header-lang-btn.active{background:var(--gold-primary);color:#000;border-color:var(--gold-primary)}
-/* Instagram embed */
-.ig-embed-wrapper{max-width:400px;margin:0 auto}
-.ig-embed-wrapper blockquote{margin:0!important}
 
 /* Header */
 header{position:sticky;top:0;background:rgba(255,255,255,0.97);border-bottom:1px solid var(--tp-light);z-index:1000;backdrop-filter:blur(10px);box-shadow:var(--shadow-sm)}
@@ -229,6 +226,13 @@ nav a[aria-current="page"]::after{width:100%;background:var(--tp-black)}
 /* Priority Menu */
 .priority-menu{padding:60px 20px;background:var(--tp-off)}
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+.priority-menu .cards{grid-template-columns:repeat(4,1fr);gap:1rem}
+.priority-menu .card{position:relative;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:1.5rem 1.25rem;border-radius:16px;min-height:140px;overflow:hidden;border:2px solid var(--tp-light)}
+.priority-menu .card::after{content:'';position:absolute;top:50%;left:50%;width:80px;height:80px;background-image:url('photos/TPLogo11.png');background-size:contain;background-repeat:no-repeat;background-position:center;transform:translate(-50%,-60%);opacity:.15;pointer-events:none;z-index:0}
+.priority-menu .card:hover::after{opacity:.25}
+.priority-menu .card .card-content{position:relative;z-index:1;padding:0;text-align:center}
+.priority-menu .card h3{font-size:1rem;font-weight:900;color:var(--tp-black);margin-bottom:0.15rem}
+.priority-menu .card p{font-size:0.78rem;color:var(--tp-gray-dark);line-height:1.4}
 .card{background:var(--tp-white);border:1px solid var(--tp-light);border-radius:8px;overflow:hidden;transition:all 0.3s;position:relative}
 .card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--gold-primary);transform:scaleX(0);transition:transform 0.3s}
 .card:hover::before,.card:focus-within::before{transform:scaleX(1)}
@@ -309,17 +313,17 @@ nav a[aria-current="page"]::after{width:100%;background:var(--tp-black)}
 .city-card.coming-soon{position:relative}
 .city-card.coming-soon::before{content:'即将开放';position:absolute;top:12px;right:12px;background:linear-gradient(135deg,var(--gold-primary),var(--gold-light));color:var(--tp-black);padding:0.3rem 0.75rem;border-radius:20px;font-size:0.7rem;font-weight:700;z-index:2;box-shadow:0 2px 8px rgba(255,215,0,0.4)}
 
-/* Video */
+/* Video / Instagram */
 .video-section{padding:60px 20px;background:var(--tp-white)}
-.video-grid{max-width:var(--max-width);margin:1.5rem auto 0;display:grid;grid-template-columns:repeat(2,1fr);gap:1.25rem}
-.video-card{background:var(--tp-white);border:1px solid var(--tp-light);border-radius:12px;overflow:hidden;box-shadow:var(--shadow-sm);transition:transform 0.25s ease,box-shadow 0.25s ease,border-color 0.25s ease}
-.video-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg);border-color:var(--gold-primary)}
-.video-embed{aspect-ratio:16/9;background:#000}
-.video-embed iframe{width:100%;height:100%;border:0;display:block}
-.video-meta{padding:12px 14px 16px}
-.video-title{font-size:0.98rem;font-weight:800;color:var(--tp-black);margin:2px 0 6px}
-.video-desc{font-size:0.82rem;color:var(--tp-gray);margin-bottom:8px}
-.video-link{font-size:0.85rem;color:var(--gold-dark);text-decoration:underline}
+.ig-showcase{max-width:600px;margin:1.5rem auto 0}
+.ig-showcase .ig-card{background:var(--tp-white);border:2px solid var(--tp-light);border-radius:16px;overflow:hidden;box-shadow:var(--shadow-sm);transition:all .3s}
+.ig-showcase .ig-card:hover{box-shadow:var(--shadow-gold);border-color:var(--gold-primary)}
+.ig-showcase .ig-card blockquote{margin:0!important;max-width:100%!important;min-width:0!important;width:100%!important}
+.ig-showcase .ig-meta{padding:1.25rem;text-align:center}
+.ig-showcase .ig-meta h3{font-size:1.1rem;font-weight:900;color:var(--tp-black);margin-bottom:.4rem}
+.ig-showcase .ig-meta p{font-size:.88rem;color:var(--tp-gray);margin-bottom:.75rem}
+.ig-showcase .ig-meta a{display:inline-block;padding:.6rem 1.5rem;background:var(--gold-primary);color:#000;border-radius:999px;font-weight:700;font-size:.88rem;transition:all .3s}
+.ig-showcase .ig-meta a:hover{transform:translateY(-2px);box-shadow:var(--shadow-gold)}
 
 /* Testimonials */
 .testimonials{padding:60px 20px;background:var(--tp-off)}
@@ -432,9 +436,9 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
 /* Responsive */
 @media(min-width:720px){.cta-links{grid-template-columns:1fr 1fr 1fr}}
 @media(max-width:900px){nav{display:none}.mobile-toggle{display:block}.video-grid{grid-template-columns:1fr}.floating-ai{bottom:80px;right:20px}.back-to-top{bottom:140px}}
-@media(max-width:768px){.hero h1{font-size:1.8rem}.section-title{font-size:1.4rem}.hero-stats{justify-content:center}.stat-item{padding-right:1.25rem}.about-content{grid-template-columns:1fr}.cards{grid-template-columns:repeat(2,1fr)}.icon-grid-container{grid-template-columns:repeat(2,1fr)}.city-cards{grid-template-columns:1fr}.benefits-list{grid-template-columns:repeat(2,1fr)}.ta-team-grid{grid-template-columns:repeat(2,1fr)}.footer-content{grid-template-columns:1fr;text-align:center}.floating-apply{bottom:14px;right:14px;padding:0.625rem 1rem;font-size:0.8rem}.social-proof-banner .number{font-size:2.8rem;font-weight:900;font-family:"Noto Serif SC",serif;line-height:1}
+@media(max-width:768px){.hero h1{font-size:1.8rem}.section-title{font-size:1.4rem}.hero-stats{justify-content:center}.stat-item{padding-right:1.25rem}.about-content{grid-template-columns:1fr}.cards{grid-template-columns:repeat(2,1fr)}.priority-menu .cards{grid-template-columns:repeat(2,1fr)}.icon-grid-container{grid-template-columns:repeat(2,1fr)}.city-cards{grid-template-columns:1fr}.benefits-list{grid-template-columns:repeat(2,1fr)}.ta-team-grid{grid-template-columns:repeat(2,1fr)}.footer-content{grid-template-columns:1fr;text-align:center}.floating-apply{bottom:14px;right:14px;padding:0.625rem 1rem;font-size:0.8rem}.social-proof-banner .number{font-size:2.8rem;font-weight:900;font-family:"Noto Serif SC",serif;line-height:1}
 .social-proof-inner{flex-direction:column;gap:0.5rem}.gptw-header{flex-direction:column;text-align:center}.gptw-title-block{text-align:center}.gptw-section .section-title,.gptw-section .section-subtitle{text-align:center}.gptw-gallery{grid-template-columns:repeat(2,1fr)}.gptw-gallery-item:nth-child(5){grid-column:span 2;max-width:50%;margin:0 auto}.gptw-stats{gap:1.5rem}.gptw-stat-number{font-size:2rem}.lifestyle-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:480px){.cards{grid-template-columns:1fr}.benefits-list{grid-template-columns:1fr}.icon-grid-container{grid-template-columns:1fr}.ta-team-grid{grid-template-columns:1fr}}
+@media(max-width:480px){.cards{grid-template-columns:1fr}.priority-menu .cards{grid-template-columns:repeat(2,1fr)}.benefits-list{grid-template-columns:1fr}.icon-grid-container{grid-template-columns:1fr}.ta-team-grid{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
 </style>
 </head>
@@ -465,39 +469,11 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
 <!-- Header -->
 <header role="banner">
   <div class="header-inner">
-    <a class="brand" href="index.html">
-      <img src="photos/TPLogo11.png" alt="TP" width="40" height="40">
-      <div class="brand-text">
-        <span class="brand-name">TP</span>
-        <span class="brand-tagline" data-local="Malaysia·Thailand" data-expat="马来西亚·泰国">马来西亚·泰国</span>
-      </div>
-    </a>
-    <nav aria-label="主导航">
-      <ul>
-        <li><a href="index.html" aria-current="page" data-local="Home" data-expat="首页">首页</a></li>
-        <li><a href="open-jobs.html" data-local="Job List" data-expat="职位列表" data-local="Job List" data-expat="职位列表">职位列表</a></li>
-        <li><a href="about-tp.html" data-local="About TP" data-expat="关于TP">关于TP</a></li>
-        <li><a href="salary-and-benefits.html" data-local="Salary & Benefits" data-expat="薪资福利">薪资福利</a></li>
-        <li><a href="hiring-process.html" data-local="Hiring Process" data-expat="招聘流程" data-local="Hiring Process" data-expat="招聘流程">招聘流程</a></li>
-        <li><a href="why-malaysia-thailand.html" data-local="Why MY & TH" data-expat="为什么选择马来西亚和泰国">为什么选择马来西亚和泰国</a></li>
-        <li><a href="relocation-visa.html" data-local="Visa·Relocation" data-expat="签证·搬迁">签证·搬迁</a></li>
-        <li><a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=chinese" target="_blank" rel="noopener noreferrer" class="apply-btn">立即申请</a></li>
-      </ul>
-    </nav>
+    <a class="brand" href="index.html"><img src="photos/TPLogo11.png" alt="TP" width="40" height="40"><div class="brand-text"><span class="brand-name">TP</span><span class="brand-tagline" data-local="Malaysia·Thailand" data-expat="马来西亚·泰国">马来西亚·泰国</span></div></a>
+    <nav aria-label="主导航"><ul><li><a href="index.html" aria-current="page" data-local="Home" data-expat="首页">首页</a></li><li><a href="open-jobs.html" data-local="Job List" data-expat="职位列表">职位列表</a></li><li><a href="about-tp.html" data-local="About TP" data-expat="关于TP">关于TP</a></li><li><a href="salary-and-benefits.html" data-local="Salary &amp; Benefits" data-expat="薪资福利">薪资福利</a></li><li><a href="hiring-process.html" data-local="Hiring Process" data-expat="招聘流程">招聘流程</a></li><li><a href="why-malaysia-thailand.html" data-local="Why MY &amp; TH" data-expat="为什么选择马来西亚和泰国">为什么选择马来西亚和泰国</a></li><li><a href="relocation-visa.html" data-local="Visa·Relocation" data-expat="签证与搬迁支持">签证与搬迁支持</a></li><li><a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=chinese" target="_blank" rel="noopener noreferrer" class="apply-btn" data-local="立即申请" data-expat="立即申请">立即申请</a></li><li class="header-lang-switch"><button class="header-lang-btn" id="hdrLocal" onclick="setLanguage('local')">🇲🇾</button><button class="header-lang-btn active" id="hdrExpat" onclick="setLanguage('expat')">🌏</button></li></ul></nav>
     <button class="mobile-toggle" id="mobileToggle" aria-label="打开菜单" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
-  <nav class="mobile-menu" id="mobileMenu" aria-label="移动端导航">
-    <ul>
-      <li><a href="index.html" data-local="Home" data-expat="首页">首页</a></li>
-      <li><a href="open-jobs.html" data-local="Job List" data-expat="职位列表">职位列表</a></li>
-      <li><a href="about-tp.html" data-local="About TP" data-expat="关于TP">关于TP</a></li>
-      <li><a href="salary-and-benefits.html" data-local="Salary & Benefits" data-expat="薪资福利">薪资福利</a></li>
-      <li><a href="hiring-process.html" data-local="Hiring Process" data-expat="招聘流程">招聘流程</a></li>
-      <li><a href="why-malaysia-thailand.html" data-local="Why MY & TH" data-expat="为什么选择马来西亚和泰国">为什么选择马来西亚和泰国</a></li>
-      <li><a href="relocation-visa.html" data-local="Visa·Relocation" data-expat="签证·搬迁">签证·搬迁</a></li>
-      <li><a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=chinese" target="_blank" rel="noopener noreferrer" class="apply-btn" data-local="Apply Now" data-expat="立即申请">立即申请</a></li>
-    </ul>
-  </nav>
+  <nav class="mobile-menu" id="mobileMenu" aria-label="移动端导航"><ul><li><a href="index.html" data-local="Home" data-expat="首页">首页</a></li><li><a href="open-jobs.html" data-local="Job List" data-expat="职位列表">职位列表</a></li><li><a href="about-tp.html" data-local="About TP" data-expat="关于TP">关于TP</a></li><li><a href="salary-and-benefits.html" data-local="Salary &amp; Benefits" data-expat="薪资福利">薪资福利</a></li><li><a href="hiring-process.html" data-local="Hiring Process" data-expat="招聘流程">招聘流程</a></li><li><a href="why-malaysia-thailand.html" data-local="Why MY &amp; TH" data-expat="为什么选择马来西亚和泰国">为什么选择马来西亚和泰国</a></li><li><a href="relocation-visa.html" data-local="Visa·Relocation" data-expat="签证与搬迁支持">签证与搬迁支持</a></li><li><a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=chinese" target="_blank" rel="noopener noreferrer" class="apply-btn" data-local="立即申请" data-expat="立即申请">立即申请</a></li><li class="header-lang-switch" style="display:flex;justify-content:center;gap:8px;padding:0.75rem 1.25rem;border-top:2px solid var(--tp-light)"><button class="header-lang-btn" onclick="setLanguage('local')">🇲🇾 本地版</button><button class="header-lang-btn active" onclick="setLanguage('expat')">🌏 外派版</button></li></ul></nav>
 </header>
 
 <main id="main">
@@ -512,7 +488,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
       </div>
       <div class="hero-stats">
         <div class="stat-item"><span class="stat-number">100+</span><span class="stat-label" data-local="运营Country" data-expat="运营国家">运营国家</span></div>
-        <div class="stat-item"><span class="stat-number">500K+</span><span class="stat-label" data-local="全球Employee" data-expat="全球员工">全球员工</span></div>
+        <div class="stat-item"><span class="stat-number">500K+</span><span class="stat-label" data-local="全球员工规模" data-expat="全球员工规模">全球员工规模</span></div>
         <div class="stat-item"><span class="stat-number">7,000+</span><span class="stat-label" data-local="Malaysia/Thailand员工" data-expat="马来西亚/泰国员工">马来西亚/泰国员工</span></div>
       </div>
     </div>
@@ -521,8 +497,8 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
   <!-- Social Proof -->
   <section class="social-proof-banner">
     <div class="social-proof-inner">
-      <div class="proof-item"><span class="number">6</span><span data-local="年连续Best Workplace认证" data-expat="年连续最佳职场认证">年连续最佳职场认证</span></div>
-      <div class="proof-item"><span class="number">5</span><span data-local="年Global Best Workplace" data-expat="年全球最佳职场">年全球最佳职场</span></div>
+      <div class="proof-item"><span class="number">6</span><span data-local="年连续Best Workplace认证" data-expat="连续多年荣获最佳职场认证">连续多年荣获最佳职场认证</span></div>
+      <div class="proof-item"><span class="number">5</span><span data-local="年Global Best Workplace" data-expat="年度全球最佳职场">年度全球最佳职场</span></div>
     </div>
   </section>
 
@@ -560,7 +536,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
           <p class="section-subtitle fade-in" data-local="Great Place to Work® Certification" data-expat="Great Place to Work® 认证">Great Place to Work® 认证</p>
         </div>
       </div>
-      <p class="gptw-description" data-local="TP 荣获 Great Place to Work® 评选的「World's Best Workplaces™」，并已<strong>连续 5 年</strong>获得Certification<br>这一Certification基于Employee的Feedback与Trust，体现了我们Outstanding而Solid的Corporate Culture<br>我们携手并进，Empower Employee，Respect多元Culture，并每天为Society带来Positive Impact" data-expat="TP 荣获 Great Place to Work® 评选的「World's Best Workplaces™」，并已<strong>连续 5 年</strong>获得认证<br>这一认证基于员工的反馈与信任，体现了我们卓越而稳固的企业文化<br>我们携手并进，赋能员工，尊重多元文化，并每天为社会带来积极影响">TP 荣获 Great Place to Work® 评选的「World's Best Workplaces™」，并已<strong>连续 5 年</strong>获得认证<br>这一认证基于员工的反馈与信任，体现了我们卓越而稳固的企业文化<br>我们携手并进，赋能员工，尊重多元文化，并每天为社会带来积极影响</p>
+      <p class="gptw-description" data-local="TP 荣获 Great Place to Work® 评选的「World's Best Workplaces™」，并已<strong>连续 5 年</strong>获得Certification<br>这一Certification基于Employee的Feedback与Trust，体现了我们Outstanding而Solid的Corporate Culture<br>我们携手并进，支持员工成长与发展，Respect多元Culture，并每天为Society带来Positive Impact" data-expat="TP 荣获 Great Place to Work® 评选的「World's Best Workplaces™」，并已<strong>连续 5 年</strong>获得认证<br>这一认证基于员工的反馈与信任，体现了我们卓越而稳固的企业文化<br>我们携手并进，支持员工成长与发展，尊重多元文化，并每天为社会带来积极影响">TP 荣获 Great Place to Work® 评选的「World's Best Workplaces™」，并已<strong>连续 5 年</strong>获得认证<br>这一认证基于员工的反馈与信任，体现了我们卓越而稳固的企业文化<br>我们携手并进，赋能员工，尊重多元文化，并每天为社会带来积极影响</p>
       <div class="gptw-banner"><img src="photos/GMT_SoMe_GPTWWorldBestWorkplacesKit_November_2025_Banner.png" alt="GPTW Banner" loading="lazy"></div>
       <div class="gptw-gallery fade-in">
         <div class="gptw-gallery-item"><img src="photos/GMT_SoMe_GPTWWorldBestWorkplacesKit_November_2025_1.png" alt="GPTW 1" loading="lazy"></div>
@@ -582,24 +558,20 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
       <h2 class="section-title section-title-decorated fade-in" data-local="Quick Navigation" data-expat="快速导航">快速导航</h2>
       <p class="section-subtitle fade-in" data-local="Quick access你想了解的information" data-expat="快速访问你想了解的信息">快速访问你想了解的信息</p>
       <div class="cards fade-in">
-        <a href="about-tp.html" class="card"><img src="photos/GBS.jpeg" alt="关于TP" loading="lazy"><div class="card-content"><h3 data-local="About TP" data-expat="关于TP">关于TP</h3><p data-local="Global最大BPO Enterprise之一" data-expat="全球最大业务流程外包企业之一">全球最大业务流程外包企业之一</p></div></a>
-        <a href="open-jobs.html" class="card"><img src="photos/Reception.png" alt="职位信息" loading="lazy"><div class="card-content"><h3 data-local="Job List" data-expat="职位列表">职位列表</h3><p data-local="华语Talent Position" data-expat="华语人才职位">华语人才职位</p></div></a>
-        <a href="salary-and-benefits.html" class="card"><img src="photos/Reception%20(1).png" alt="福利待遇" loading="lazy"><div class="card-content"><h3 data-local="Salary & Benefits" data-expat="薪资福利">薪资福利</h3><p data-local="Complete的待遇和Support" data-expat="完善的待遇和支持">完善的待遇和支持</p></div></a>
-        <a href="relocation-visa.html" class="card"><img src="photos/Condo.jpg" alt="搬迁支持" loading="lazy"><div class="card-content"><h3 data-local="Visa·Relocation Support" data-expat="签证·搬迁支持">签证·搬迁支持</h3><p data-local="Full Support System" data-expat="全程支持体系">全程支持体系</p></div></a>
-        <a href="why-malaysia-thailand.html" class="card"><img src="photos/KL%202.jpg" alt="工作地点" loading="lazy"><div class="card-content"><h3 data-local="Why Malaysia & Thailand" data-expat="为什么选择马来西亚和泰国">为什么选择马来西亚和泰国</h3><p data-local="Livable Life与Growth机会" data-expat="宜居生活与成长机会">宜居生活与成长机会</p></div></a>
-        <a href="https://app.hallo.ai/teleperformance/ai-assessment/interview/zh?assessmentTypeId=VEhDOEFMRHdKWmtZdFoxREJjMHQ=" target="_blank" rel="noopener noreferrer" class="card"><img src="photos/GTowerInside1.png" alt="AI 能力评估" loading="lazy"><div class="card-content"><h3>🤖 AI 能力评估</h3><p data-local="Online AI Interview，Quick了解你的Ability" data-expat="在线AI面试，快速了解你的能力">在线AI面试，快速了解你的能力</p></div></a>
-        <a href="hiring-process.html" class="card"><img src="photos/Reception%20(2).png" alt="招聘流程" loading="lazy"><div class="card-content"><h3 data-local="Hiring Process" data-expat="招聘流程">招聘流程</h3><p data-local="Online完成All流程" data-expat="在线完成全部流程">在线完成全部流程</p></div></a>
-        <a href="office-environment.html" class="card"><img src="photos/G%20TOWER.jpg" alt="办公环境" loading="lazy"><div class="card-content"><h3 data-local="Office Environment·Virtual Tour" data-expat="办公环境·虚拟参观">办公环境·虚拟参观</h3><p data-local="Office Environment与Career发展" data-expat="办公环境与职业发展">办公环境与职业发展</p></div></a>
-        <a href="external-raf.html" class="card"><img src="photos/Reception.png" alt="推荐奖励" loading="lazy"><div class="card-content"><h3 data-local="Referral Reward" data-expat="推荐奖励">推荐奖励</h3><p data-local="Refer Friend获得Reward" data-expat="推荐朋友获得奖励">推荐朋友获得奖励</p></div></a>
-        <a href="faq.html" class="card"><img src="photos/GTowerInside1.png" alt="常见问题" loading="lazy"><div class="card-content"><h3 data-local="FAQ·常见Question" data-expat="FAQ·常见问题">FAQ·常见问题</h3><p data-local="Apply前的疑问Answer" data-expat="申请前的疑问解答" data-local="Apply前的Question Answer" data-expat="申请前的疑问解答">申请前的疑问解答</p></div></a>
-      </div>
-
-      <div class="cards fade-in" style="margin-top:1.5rem">
-        <a href="cost-of-living.html" class="card"><img src="photos/TPLogo11.png" alt="生活成本" loading="lazy"><div class="card-content"><h3 data-local="💰 Malaysia Cost of Living" data-expat="💰 马来西亚生活成本">💰 马来西亚生活成本</h3><p data-local="Food·Transport·Housing" data-expat="餐饮·交通·住房">餐饮·交通·住房</p></div></a>
-        <a href="ta-team.html" class="card"><img src="photos/TPLogo11.png" alt="招聘团队" loading="lazy"><div class="card-content"><h3 data-local="🤝 TA Team Introduction" data-expat="🤝 招聘团队介绍">🤝 招聘团队介绍</h3><p data-local="华语Support" data-expat="华语支持">华语支持</p></div></a>
-        <a href="area-around-office.html" class="card"><img src="photos/TPLogo11.png" alt="办公室周边" loading="lazy"><div class="card-content"><h3 data-local="📍 Office Area" data-expat="📍 办公室周边">📍 办公室周边</h3><p data-local="Area Environment Info" data-expat="周边环境信息">周边环境信息</p></div></a>
-        <a href="daily-life-malaysia.html" class="card"><img src="photos/TPLogo11.png" alt="当地生活" loading="lazy"><div class="card-content"><h3 data-local="🇲🇾 Daily Life" data-expat="🇲🇾 当地生活">🇲🇾 当地生活</h3><p data-local="Food·Transport·Housing" data-expat="餐饮·交通·住房">餐饮·交通·住房</p></div></a>
-        <a href="https://tpmyandtpth.github.io/LP/" target="_blank" rel="noopener noreferrer" class="card"><img src="photos/TPLogo11.png" alt="其他语言" loading="lazy"><div class="card-content"><h3 data-local="🌐 Other Language Position" data-expat="🌐 其他语言职位">🌐 其他语言职位</h3><p data-local="日语·韩语·English等" data-expat="日语·韩语·英语等">日语·韩语·英语等</p></div></a>
+        <a href="about-tp.html" class="card"><div class="card-content"><h3 data-local="About TP" data-expat="关于TP">关于TP</h3><p data-local="Global最大BPO Enterprise之一" data-expat="全球最大业务流程外包企业之一">全球最大业务流程外包企业之一</p></div></a>
+        <a href="open-jobs.html" class="card"><div class="card-content"><h3 data-local="Job List" data-expat="职位列表">职位列表</h3><p data-local="华语Talent Position" data-expat="华语人才职位">华语人才职位</p></div></a>
+        <a href="salary-and-benefits.html" class="card"><div class="card-content"><h3 data-local="Salary & Benefits" data-expat="薪资福利">薪资福利</h3><p data-local="Complete的待遇和Support" data-expat="完善的待遇和支持">完善的待遇和支持</p></div></a>
+        <a href="relocation-visa.html" class="card"><div class="card-content"><h3 data-local="Visa·Relocation" data-expat="签证·搬迁">签证·搬迁</h3><p data-local="Full Support System" data-expat="全程支持体系">全程支持体系</p></div></a>
+        <a href="why-malaysia-thailand.html" class="card"><div class="card-content"><h3 data-local="Why MY & TH" data-expat="城市介绍">城市介绍</h3><p data-local="Livable Life与Growth机会" data-expat="宜居生活与成长机会">宜居生活与成长机会</p></div></a>
+        <a href="https://app.hallo.ai/teleperformance/ai-assessment/interview/zh?assessmentTypeId=VEhDOEFMRHdKWmtZdFoxREJjMHQ=" target="_blank" rel="noopener noreferrer" class="card"><div class="card-content"><h3>AI 能力评估</h3><p data-local="Online AI Interview" data-expat="在线AI面试，快速了解你的能力">在线AI面试，快速了解你的能力</p></div></a>
+        <a href="hiring-process.html" class="card"><div class="card-content"><h3 data-local="Hiring Process" data-expat="招聘流程">招聘流程</h3><p data-local="Online完成All流程" data-expat="全流程线上完成">全流程线上完成</p></div></a>
+        <a href="office-environment.html" class="card"><div class="card-content"><h3 data-local="Office Environment" data-expat="办公环境">办公环境</h3><p data-local="Office Environment与Career发展" data-expat="办公环境与职业发展">办公环境与职业发展</p></div></a>
+        <a href="external-raf.html" class="card"><div class="card-content"><h3 data-local="Referral Reward" data-expat="推荐奖励">推荐奖励</h3><p data-local="Refer Friend获得Reward" data-expat="推荐朋友获得奖励">推荐朋友获得奖励</p></div></a>
+        <a href="cost-of-living.html" class="card"><div class="card-content"><h3 data-local="Cost of Living" data-expat="生活成本">生活成本</h3><p data-local="Food·Transport·Housing" data-expat="餐饮·交通·住房">餐饮·交通·住房</p></div></a>
+        <a href="ta-team.html" class="card"><div class="card-content"><h3 data-local="TA Team" data-expat="招聘团队">招聘团队</h3><p data-local="华语Support" data-expat="华语全程支持">华语全程支持</p></div></a>
+        <a href="area-around-office.html" class="card"><div class="card-content"><h3 data-local="Office Area" data-expat="办公室周边">办公室周边</h3><p data-local="Area Environment Info" data-expat="周边环境信息">周边环境信息</p></div></a>
+        <a href="daily-life-malaysia.html" class="card"><div class="card-content"><h3 data-local="Daily Life" data-expat="当地生活">当地生活</h3><p data-local="Food·Transport·Housing" data-expat="餐饮·交通·住房">餐饮·交通·住房</p></div></a>
+        <a href="https://tpmyandtpth.github.io/LP/" target="_blank" rel="noopener noreferrer" class="card"><div class="card-content"><h3 data-local="Other Languages" data-expat="其他语言职位">其他语言职位</h3><p data-local="日语·韩语·English等" data-expat="日语·韩语·英语等">日语·韩语·英语等</p></div></a>
       </div>
     </div>
   </section>
@@ -624,12 +596,15 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
     <div class="container">
       <h2 class="section-title section-title-decorated fade-in" data-local="Employee Interview（Video）" data-expat="员工访谈（视频）">员工访谈（视频）</h2>
       <p class="section-subtitle fade-in" data-local="通过short video了解real的work experience" data-expat="通过短视频了解真实的工作体验">通过短视频了解真实的工作体验</p>
-      <div class="video-grid fade-in">
-        <article class="video-card"><div class="video-embed ig-embed-wrapper"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DP0IccCksyo/" data-instgrm-version="14" style="background:#FFF;border:0;border-radius:3px;box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15);margin:1px;max-width:540px;min-width:326px;padding:0;width:99.375%;width:-webkit-calc(100% - 2px);width:calc(100% - 2px);"></blockquote></div><header class="video-meta"><h3 class="video-title" data-local="TP Latest Update" data-expat="TP 最新动态">TP 最新动态</h3><p class="video-desc" data-local="Follow我们的Instagram获取More" data-expat="关注我们的Instagram获取更多">关注我们的Instagram获取更多</p><a class="video-link" href="https://www.instagram.com/p/DP0IccCksyo/" target="_blank" rel="noopener noreferrer" data-local="View on Instagram →" data-expat="在Instagram查看 →">在Instagram查看 →</a></header></article>
-        <article class="video-card"><div class="video-embed"><iframe src="https://www.youtube.com/embed/N6l7PUQR0tw" title="TP员工访谈" loading="lazy" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div><header class="video-meta"><h3 class="video-title" data-local="TP Employee Interview：Latest Video" data-expat="TP员工访谈：最新视频">TP员工访谈：最新视频</h3><p class="video-desc" data-local="Listen to Real Employee的Voice" data-expat="听听真实员工的声音">听听真实员工的声音</p><a class="video-link" href="https://youtu.be/N6l7PUQR0tw" target="_blank" rel="noopener noreferrer" data-local="Watch on YouTube →" data-expat="在YouTube观看 →" data-local="Watch on YouTube →" data-expat="在YouTube观看 →">在YouTube观看 →</a></header></article>
-        <article class="video-card"><div class="video-embed"><iframe src="https://www.youtube.com/embed/H4SVUrCjTPM" title="客服代表篇" loading="lazy" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div><header class="video-meta"><h3 class="video-title" data-local="TP Employee Interview：CSR篇" data-expat="TP员工访谈：客服代表篇">TP员工访谈：客服代表篇</h3><p class="video-desc" data-local="Frontline CSR的Work Daily" data-expat="一线客服代表的工作日常">一线客服代表的工作日常</p><a class="video-link" href="https://youtu.be/H4SVUrCjTPM" target="_blank" rel="noopener noreferrer" data-local="Watch on YouTube →" data-expat="在YouTube观看 →">在YouTube观看 →</a></header></article>
-        <article class="video-card"><div class="video-embed"><iframe src="https://www.youtube.com/embed/VB6KSdFYLdE" title="团队主管篇" loading="lazy" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div><header class="video-meta"><h3 class="video-title" data-local="TP Employee Interview：Team Lead篇" data-expat="TP员工访谈：团队主管篇">TP员工访谈：团队主管篇</h3><p class="video-desc" data-local="On-site Management和Talent培养的Real情况" data-expat="现场管理和人才培养的真实情况">现场管理和人才培养的真实情况</p><a class="video-link" href="https://youtu.be/VB6KSdFYLdE" target="_blank" rel="noopener noreferrer" data-local="Watch on YouTube →" data-expat="在YouTube观看 →">在YouTube观看 →</a></header></article>
-        <article class="video-card"><div class="video-embed"><iframe src="https://www.youtube.com/embed/pa-qdCGkxA4" title="运营经理篇" loading="lazy" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div><header class="video-meta"><h3 class="video-title" data-local="TP Employee Interview：Operations Manager篇" data-expat="TP员工访谈：运营经理篇">TP员工访谈：运营经理篇</h3><p class="video-desc" data-local="Quality和Productivity的Behind-the-scenes Support" data-expat="质量和生产力的幕后支持">质量和生产力的幕后支持</p><a class="video-link" href="https://youtu.be/pa-qdCGkxA4" target="_blank" rel="noopener noreferrer" data-local="Watch on YouTube →" data-expat="在YouTube观看 →">在YouTube观看 →</a></header></article>
+      <div class="ig-showcase fade-in">
+        <div class="ig-card">
+          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DP0IccCksyo/" data-instgrm-version="14" style="background:#FFF;border:0;border-radius:0;box-shadow:none;margin:0;max-width:100%;min-width:0;padding:0;width:100%;"></blockquote>
+          <div class="ig-meta">
+            <h3 data-local="TP Latest Update" data-expat="TP 最新动态">TP 最新动态</h3>
+            <p data-local="Follow我们的Instagram获取More" data-expat="关注我们的Instagram获取更多">关注我们的Instagram获取更多</p>
+            <a href="https://www.instagram.com/tp_talentcrew" target="_blank" rel="noopener noreferrer" data-local="Follow Instagram →" data-expat="关注 Instagram →">关注 Instagram →</a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -695,7 +670,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
       <div class="region-block fade-in">
         <h3 class="region-title">🏠 <span data-local="Work From Home" data-expat="居家办公">居家办公</span></h3>
         <div class="office-grid">
-          <div class="office-card"><img src="photos/Condo.jpg" alt="WFH" class="office-image" loading="lazy"><div class="office-info"><h3 class="office-name" data-local="Work From Home" data-expat="居家办公">居家办公</h3><ul class="office-features"><li data-local="Remote Work Option" data-expat="远程工作选项">远程工作选项</li><li data-local="Flexible Work Arrangement" data-expat="灵活工作安排">灵活工作安排</li><li data-local="Selected Positions" data-expat="部分职位适用">部分职位适用</li></ul><div class="office-links"><a href="https://careerseng-teleperformance.icims.com/jobs/49561/interpreter---mandarin---work-from-home/job?mode=job&iis=MLP&iisn=" target="_blank" rel="noopener noreferrer" class="office-job-btn" data-local="💼 Interpreter Position" data-expat="💼 口译员职位">💼 口译员职位</a></div></div></div>
+          <div class="office-card"><img src="photos/Condo.jpg" alt="WFH" class="office-image" loading="lazy"><div class="office-info"><h3 class="office-name" data-local="Work From Home" data-expat="居家办公">居家办公</h3><ul class="office-features"><li data-local="远程工作选项" data-expat="远程工作选项">远程工作选项</li><li data-local="Flexible Work Arrangement" data-expat="灵活工作安排">灵活工作安排</li><li data-local="Selected Positions" data-expat="部分职位适用">部分职位适用</li></ul><div class="office-links"><a href="https://careerseng-teleperformance.icims.com/jobs/49561/interpreter---mandarin---work-from-home/job?mode=job&iis=MLP&iisn=" target="_blank" rel="noopener noreferrer" class="office-job-btn" data-local="💼 Interpreter Position" data-expat="💼 口译员职位">💼 口译员职位</a></div></div></div>
         </div>
       </div>
 
@@ -757,9 +732,9 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
       <p class="section-subtitle fade-in" data-local="从Apply到Onboard，华语Full陪伴" data-expat="从申请到入职，华语全程陪伴">从申请到入职，华语全程陪伴</p>
       <div class="ta-team-container">
         <div class="ta-team-grid fade-in">
-          <article class="ta-member"><img src="photos/TPLogo11.png" alt="Jocelyn Soh" class="ta-member-img" loading="lazy"><h3 class="ta-member-name">Jocelyn Soh</h3><p class="ta-member-role" data-local="Talent Acquisition｜Recruiter" data-expat="人才招聘｜招聘专员">人才招聘｜招聘专员</p><p class="ta-member-desc" data-local="Help你Find合适的Position" data-expat="帮助你找到合适的职位">帮助你找到合适的职位</p><div class="ta-member-links"><a href="open-jobs.html" class="text-link" data-local="View Jobs" data-expat="查看职位">查看职位</a></div></article>
-          <article class="ta-member"><img src="photos/TPLogo11.png" alt="Tian Han Chuah" class="ta-member-img" loading="lazy"><h3 class="ta-member-name">Tian Han Chuah</h3><p class="ta-member-role" data-local="Talent Acquisition｜Recruiter" data-expat="人才招聘｜招聘专员">人才招聘｜招聘专员</p><p class="ta-member-desc" data-local="Career Planning咨询Welcome Contact" data-expat="职业规划咨询欢迎联系">职业规划咨询欢迎联系</p><div class="ta-member-links"><a href="open-jobs.html" class="text-link" data-local="View Jobs" data-expat="查看职位">查看职位</a></div></article>
-          <article class="ta-member"><img src="photos/TPLogo11.png" alt="Ts. Ng Hsiang Boon" class="ta-member-img" loading="lazy"><h3 class="ta-member-name">Ts. Ng Hsiang Boon</h3><p class="ta-member-role" data-local="Talent Acquisition｜Recruiter" data-expat="人才招聘｜招聘专员">人才招聘｜招聘专员</p><p class="ta-member-desc" data-local="Technical与Professional岗位Consult" data-expat="技术与专业岗位咨询">技术与专业岗位咨询</p><div class="ta-member-links"><a href="open-jobs.html" class="text-link" data-local="View Jobs" data-expat="查看职位">查看职位</a></div></article>
+          <article class="ta-member"><img src="photos/TPLogo11.png" alt="Jocelyn Soh" class="ta-member-img" loading="lazy"><h3 class="ta-member-name">Jocelyn Soh 苏子凌</h3><p class="ta-member-role" data-local="Talent Acquisition｜Recruiter" data-expat="人才招聘｜招聘专员">人才招聘｜招聘专员</p><p class="ta-member-desc" data-local="Help你Find合适的Position" data-expat="帮助你找到合适的职位">帮助你找到合适的职位</p><div class="ta-member-links"><a href="open-jobs.html" class="text-link" data-local="View Jobs" data-expat="查看职位">查看职位</a> <a href="https://www.linkedin.com/in/jocelyn-soh-11a33338/" target="_blank" rel="noopener noreferrer" class="text-link">LinkedIn</a></div></article>
+          <article class="ta-member"><img src="photos/TPLogo11.png" alt="Tian Han Chuah" class="ta-member-img" loading="lazy"><h3 class="ta-member-name">Tian Han Chuah 蔡展瀚</h3><p class="ta-member-role" data-local="Talent Acquisition｜Recruiter" data-expat="人才招聘｜招聘专员">人才招聘｜招聘专员</p><p class="ta-member-desc" data-local="Career Planning咨询Welcome Contact" data-expat="职业规划咨询欢迎联系">职业规划咨询欢迎联系</p><div class="ta-member-links"><a href="open-jobs.html" class="text-link" data-local="View Jobs" data-expat="查看职位">查看职位</a> <a href="https://www.linkedin.com/in/jerry-chuah" target="_blank" rel="noopener noreferrer" class="text-link">LinkedIn</a></div></article>
+          <article class="ta-member"><img src="photos/TPLogo11.png" alt="Ts. Ng Hsiang Boon" class="ta-member-img" loading="lazy"><h3 class="ta-member-name">Ts. Ng Hsiang Boon 黄湘文</h3><p class="ta-member-role" data-local="Talent Acquisition｜Recruiter" data-expat="人才招聘｜招聘专员">人才招聘｜招聘专员</p><p class="ta-member-desc" data-local="Technical与Professional岗位Consult" data-expat="技术与专业岗位咨询">技术与专业岗位咨询</p><div class="ta-member-links"><a href="open-jobs.html" class="text-link" data-local="View Jobs" data-expat="查看职位">查看职位</a> <a href="https://www.linkedin.com/in/nghsiangboon" target="_blank" rel="noopener noreferrer" class="text-link">LinkedIn</a></div></article>
           <article class="ta-member"><img src="photos/TPLogo11.png" alt="Anne" class="ta-member-img" loading="lazy"><h3 class="ta-member-name">Anne</h3><p class="ta-member-role" data-local="Talent Acquisition｜Recruiter" data-expat="人才招聘｜招聘专员">人才招聘｜招聘专员</p><p class="ta-member-desc" data-local="华语Support，Anytime Welcome" data-expat="华语支持，随时欢迎">华语支持，随时欢迎</p><div class="ta-member-links"><a href="open-jobs.html" class="text-link" data-local="View Jobs" data-expat="查看职位">查看职位</a></div></article>
           <article class="ta-member"><img src="photos/TPLogo11.png" alt="Miki" class="ta-member-img" loading="lazy"><h3 class="ta-member-name">Miki</h3><p class="ta-member-role" data-local="Talent Acquisition｜Recruiter" data-expat="人才招聘｜招聘专员">人才招聘｜招聘专员</p><p class="ta-member-desc" data-local="Career Consult欢迎Contact" data-expat="职业咨询欢迎联系">职业咨询欢迎联系</p><div class="ta-member-links"><a href="open-jobs.html" class="text-link" data-local="View Jobs" data-expat="查看职位">查看职位</a></div></article>
           <article class="ta-member"><img src="photos/TPLogo11.png" alt="Su Yee" class="ta-member-img" loading="lazy"><h3 class="ta-member-name">Su Yee</h3><p class="ta-member-role" data-local="Talent Acquisition｜Recruiter" data-expat="人才招聘｜招聘专员">人才招聘｜招聘专员</p><p class="ta-member-desc" data-local="Apply Question随时Consult" data-expat="申请问题随时咨询">申请问题随时咨询</p><div class="ta-member-links"><a href="open-jobs.html" class="text-link" data-local="View Jobs" data-expat="查看职位">查看职位</a></div></article>
@@ -805,20 +780,19 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
       <div class="footer-logo"><img src="photos/TPLogo11.png" alt="TP"><span class="footer-logo-text">TP</span></div>
       <p class="footer-desc" data-local="在Global 100+个Country运营的BPO Enterprise<br>Support华语Talent开启New Career" data-expat="在全球100多个国家运营的全球业务流程外包企业<br>支持华语人才开启新事业">在全球100多个国家运营的全球业务流程外包企业<br>支持华语人才开启新事业</p>
       <div class="badges"><span class="badge-item" data-local="🏆 Malaysia Best Workplace 连续6年" data-expat="🏆 马来西亚最佳职场 连续6年">🏆 马来西亚最佳职场 连续6年</span><span class="badge-item" data-local="🏆 Global Best Workplace 连续5年" data-expat="🏆 全球最佳职场 连续5年">🏆 全球最佳职场 连续5年</span></div>
-      <div class="footer-cta"><a href="https://www.tp.com/en-my/locations/malaysia/careers/?page=1#contactusmalaysia" target="_blank" rel="noopener noreferrer" class="btn btn-gold">TP.COM</a></div>
     </div>
-    <div class="footer-section"><h3 data-local="Company Info" data-expat="公司信息">公司信息</h3><ul><li><a href="about-tp.html" data-local="Company Intro" data-expat="公司介绍">公司介绍</a></li><li><a href="salary-and-benefits.html#benefits" data-local="Benefits" data-expat="福利待遇">福利待遇</a></li><li><a href="office-environment.html" data-local="Office Environment" data-expat="办公环境">办公环境</a></li><li><a href="ta-team.html" data-local="Recruitment Team" data-expat="招聘团队">招聘团队</a></li></ul></div>
-    <div class="footer-section"><h3 data-local="Jobs·Apply" data-expat="职位·申请">职位·申请</h3><ul><li><a href="open-jobs.html">职位列表</a></li><li><a href="hiring-process.html">招聘流程</a></li><li><a href="https://app.hallo.ai/teleperformance/ai-assessment/interview/zh?assessmentTypeId=VEhDOEFMRHdKWmtZdFoxREJjMHQ=" target="_blank" rel="noopener noreferrer">AI 能力评估</a></li><li><a href="https://tpmyandtpth.github.io/LP/" target="_blank" rel="noopener noreferrer" data-local="Other Language Jobs" data-expat="其他语言职位">其他语言职位</a></li></ul></div>
+    <div class="footer-section"><h3 data-local="Company Info" data-expat="公司信息">公司信息</h3><ul><li><a href="about-tp.html" data-local="Company Intro" data-expat="公司介绍">公司介绍</a></li><li><a href="salary-and-benefits.html" data-local="Benefits" data-expat="福利待遇">福利待遇</a></li><li><a href="office-environment.html" data-local="Office Environment" data-expat="办公环境">办公环境</a></li><li><a href="ta-team.html" data-local="Recruitment Team" data-expat="招聘团队">招聘团队</a></li></ul></div>
+    <div class="footer-section"><h3 data-local="Jobs·Apply" data-expat="职位·申请">职位·申请</h3><ul><li><a href="open-jobs.html" data-local="Job List" data-expat="职位列表">职位列表</a></li><li><a href="hiring-process.html" data-local="Hiring Process" data-expat="招聘流程">招聘流程</a></li><li><a href="https://app.hallo.ai/teleperformance/ai-assessment/interview/zh?assessmentTypeId=VEhDOEFMRHdKWmtZdFoxREJjMHQ=" target="_blank" rel="noopener noreferrer">AI 能力评估</a></li><li><a href="https://tpmyandtpth.github.io/LP/" target="_blank" rel="noopener noreferrer" data-local="Other Language Jobs" data-expat="其他语言职位">其他语言职位</a></li></ul></div>
     <div class="footer-section"><h3 data-local="Life Info" data-expat="生活信息">生活信息</h3><ul><li><a href="why-malaysia-thailand.html" data-local="Work Cities" data-expat="工作城市">工作城市</a></li><li><a href="relocation-visa.html" data-local="Relocation Support" data-expat="搬迁支持">搬迁支持</a></li><li><a href="daily-life-malaysia.html" data-local="Daily Life" data-expat="日常生活">日常生活</a></li><li><a href="https://outlook.office.com/book/Chinese@teleperformance.onmicrosoft.com/s/tEpdSOHeX0SbvhMZg_dyvQ2?ismsaljsauthenabled" target="_blank" rel="noopener noreferrer" data-local="Book Recruiter" data-expat="预约招聘顾问">预约招聘顾问</a></li></ul></div>
   </div>
   <div class="footer-bottom">
     <p class="ssm-info">Teleperformance Malaysia Sdn Bhd 的 SSM（马来西亚公司委员会）注册号为 201601023769 (1194708-K)</p>
-    <p>&copy; 2026 TP. All rights reserved. | <a href="#" data-local="Privacy Policy" data-expat="隐私政策">隐私政策</a> | <a href="#" data-local="Terms of Use" data-expat="使用条款">使用条款</a></p>
+    <p>&copy; 2026 TP. All rights reserved. <!-- | <a href="#" data-local="Privacy Policy" data-expat="隐私政策">隐私政策</a> | <a href="#" data-local="Terms of Use" data-expat="使用条款">使用条款</a> --></p>
   </div>
 </footer>
 
 <!-- Floating Buttons -->
-<a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=chinese" target="_blank" rel="noopener noreferrer" class="floating-apply" data-local="Apply Now" data-expat="立即申请">立即申请</a>
+<a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=chinese" target="_blank" rel="noopener noreferrer" class="floating-apply" data-local="立即申请" data-expat="立即申请">立即申请</a>
 <a href="https://app.hallo.ai/teleperformance/ai-assessment/interview/zh?assessmentTypeId=VEhDOEFMRHdKWmtZdFoxREJjMHQ=" target="_blank" rel="noopener noreferrer" class="floating-ai" data-local="🤖 AI Assessment" data-expat="🤖 AI 能力评估">🤖 AI 能力评估</a>
 <button class="back-to-top" id="backToTop">↑</button>
 
@@ -952,6 +926,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 })();
 </script>
-<script async src="//www.instagram.com/embed.js"></script>
+<script async src="//www.instagram.com/embed.js">
+// UTM Parameter Persistence
+(function(){var utmKeys=['utm_source','utm_medium','utm_campaign','utm_content','utm_term','lang'];var params=new URLSearchParams(window.location.search);var stored=JSON.parse(sessionStorage.getItem('mlpUTM')||'{}');var hasNew=false;utmKeys.forEach(function(k){var v=params.get(k);if(v){stored[k]=v;hasNew=true}});if(hasNew)sessionStorage.setItem('mlpUTM',JSON.stringify(stored));function appendUTM(){var u=JSON.parse(sessionStorage.getItem('mlpUTM')||'{}');if(!Object.keys(u).length)return;document.querySelectorAll('a[href]').forEach(function(a){var h=a.getAttribute('href');if(!h||h.startsWith('#')||h.startsWith('mailto:')||h.startsWith('tel:'))return;try{var isRel=!h.match(/^https?:\/\//);var url=new URL(h,window.location.origin);Object.keys(u).forEach(function(k){if(!url.searchParams.has(k))url.searchParams.set(k,u[k])});a.setAttribute('href',isRel?url.pathname+url.search+url.hash:url.href)}catch(e){}})}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',appendUTM)}else{appendUTM()}})();
+</script>
 </body>
 </html>

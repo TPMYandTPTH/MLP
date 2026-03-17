@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&family=Noto+Serif+SC:wght@700;900&display=swap" rel="stylesheet">
 <style>
-:root{--tp-black:#000;--tp-dark:#1a1a1a;--tp-charcoal:#2d2d2d;--tp-gray-dark:#4a4a4a;--tp-gray:#666;--tp-gray-light:#999;--tp-silver:#ccc;--tp-light:#e5e5e5;--tp-off:#f5f5f5;--tp-white:#fff;--gold-primary:#FFD700;--gold-light:#FFAA00;--gold-dark:#E6B800;--gold-pale:#FFFBEB;--accent-green:#00a86b;--max:1050px;--shadow-sm:0 2px 4px rgba(0,0,0,.08);--shadow-md:0 4px 8px rgba(0,0,0,.12);--shadow-lg:0 8px 16px rgba(0,0,0,.16);--shadow-gold:0 4px 12px rgba(255,215,0,.3);--transition:all .3s cubic-bezier(.4,0,.2,1)}
+:root{--tp-black:#000;--tp-dark:#1a1a1a;--tp-charcoal:#2d2d2d;--tp-gray-dark:#4a4a4a;--tp-gray:#666;--tp-gray-light:#999;--tp-silver:#ccc;--tp-light:#e5e5e5;--tp-off:#f5f5f5;--tp-white:#fff;--gold-primary:#FFD700;--gold-light:#FFAA00;--gold-dark:#E6B800;--gold-pale:#FFFBEB;--accent-green:#00a86b;--max:1200px;--shadow-sm:0 2px 4px rgba(0,0,0,.08);--shadow-md:0 4px 8px rgba(0,0,0,.12);--shadow-lg:0 8px 16px rgba(0,0,0,.16);--shadow-gold:0 4px 12px rgba(255,215,0,.3);--transition:all .3s cubic-bezier(.4,0,.2,1)}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{font-family:'Noto Sans SC',-apple-system,BlinkMacSystemFont,"Microsoft YaHei",sans-serif;color:var(--tp-dark);line-height:1.8;background:var(--tp-white);-webkit-font-smoothing:antialiased}
@@ -59,16 +59,15 @@ nav a[aria-current="page"]::after{width:100%;background:var(--tp-black)}
 .header-lang-btn.active{background:var(--gold-primary);color:#000;border-color:var(--gold-primary)}
 
 /* Hero */
-.hero-dark{position:relative;overflow:hidden;background:linear-gradient(135deg,#000 0%,#1a1a2e 50%,#16213e 100%);padding:4rem 20px 3.5rem;text-align:center;color:#fff}
-.hero-dark::before{content:'流';position:absolute;top:50%;right:5%;font-size:clamp(150px,25vw,300px);font-weight:900;font-family:'Noto Serif SC',serif;opacity:.03;transform:translateY(-50%);pointer-events:none;color:var(--gold-primary)}
-.hero-dark::after{content:'';position:absolute;bottom:0;left:0;right:0;height:60px;background:linear-gradient(to top,var(--tp-white),transparent);pointer-events:none}
-.hero-dark h1{font-size:clamp(1.8rem,4.5vw,2.5rem);font-weight:900;color:var(--gold-primary);margin-bottom:.75rem;font-family:'Noto Serif SC',serif;letter-spacing:-.02em}
-.hero-dark .hero-sub{color:rgba(255,255,255,.8);max-width:650px;margin:0 auto .75rem;font-size:1rem;line-height:1.8}
-.hero-cta{display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap;margin-top:1.5rem}
-.btn-hero-gold{display:inline-flex;align-items:center;gap:.4rem;background:var(--gold-primary);color:#000;padding:.75rem 1.5rem;border-radius:999px;font-weight:700;font-size:.9rem;transition:var(--transition)}
-.btn-hero-gold:hover{transform:translateY(-2px);box-shadow:var(--shadow-gold)}
-.btn-hero-outline{display:inline-flex;align-items:center;gap:.4rem;border:2px solid rgba(255,255,255,.4);color:#fff;padding:.7rem 1.5rem;border-radius:999px;font-weight:600;font-size:.9rem;transition:var(--transition)}
-.btn-hero-outline:hover{border-color:var(--gold-primary);color:var(--gold-primary)}
+.hero{position:relative;overflow:hidden;background:linear-gradient(135deg,var(--tp-white) 0%,var(--tp-off) 100%);padding:3.75rem 20px;text-align:center}
+.hero::before{content:'';position:absolute;top:50%;right:6%;width:clamp(220px,32vw,480px);height:clamp(220px,32vw,480px);background-image:url('photos/TPLogo11.png');background-size:contain;background-repeat:no-repeat;background-position:center;opacity:.04;filter:saturate(0);transform:translateY(-50%);pointer-events:none}
+.hero h1{font-size:2.4rem;font-weight:900;color:#000;margin-bottom:.6rem;font-family:'Noto Serif SC',serif}
+.hero p{color:var(--tp-gray-dark)}
+.hero .hero-cta{margin-top:1rem;display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}
+.btn{padding:.8rem 1.2rem;font-weight:900;border-radius:999px;text-decoration:none;display:inline-block;border:2px solid var(--gold-primary);color:var(--gold-primary);transition:var(--transition)}
+.btn:hover{background:var(--gold-primary);color:#000;transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.btn-solid{background:var(--gold-primary);color:#000;border:2px solid var(--gold-primary);border-radius:999px;padding:.85rem 1.2rem;font-weight:900;display:inline-block}
+.btn-solid:hover{filter:brightness(.95);transform:translateY(-2px);box-shadow:var(--shadow-md)}
 
 /* Section */
 .section-padded{padding:3.5rem 20px}
@@ -81,7 +80,7 @@ nav a[aria-current="page"]::after{width:100%;background:var(--tp-black)}
 
 /* Glance Cards */
 .glance-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;max-width:var(--max);margin:0 auto}
-.glance-card{background:var(--tp-white);border:1px solid var(--tp-light);border-radius:14px;padding:1.75rem 1.5rem;text-align:center;transition:var(--transition);position:relative;overflow:hidden}
+.glance-card{background:var(--tp-white);border:1px solid var(--tp-light);border-radius:16px;padding:1.75rem 1.5rem;text-align:center;transition:var(--transition);position:relative;overflow:hidden}
 .glance-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold-primary),var(--gold-light));transform:scaleX(0);transition:transform .3s;transform-origin:left}
 .glance-card:hover{box-shadow:var(--shadow-gold);border-color:var(--gold-primary)}
 .glance-card:hover::before{transform:scaleX(1)}
@@ -97,7 +96,7 @@ nav a[aria-current="page"]::after{width:100%;background:var(--tp-black)}
 .timeline-step:last-child{margin-bottom:0}
 .step-number{width:56px;height:56px;border-radius:50%;background:var(--tp-white);border:3px solid var(--gold-primary);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:1.1rem;color:var(--gold-dark);flex-shrink:0;position:relative;z-index:2;box-shadow:0 2px 8px rgba(255,215,0,.2);transition:var(--transition)}
 .timeline-step:hover .step-number{background:var(--gold-primary);color:#000;transform:scale(1.08)}
-.step-content{flex:1;background:var(--tp-white);border:1px solid var(--tp-light);border-radius:12px;padding:1.25rem 1.5rem;transition:var(--transition)}
+.step-content{flex:1;background:var(--tp-white);border:1px solid var(--tp-light);border-radius:16px;padding:1.25rem 1.5rem;transition:var(--transition)}
 .timeline-step:hover .step-content{box-shadow:var(--shadow-gold);border-color:var(--gold-primary)}
 .step-content h3{font-size:1rem;font-weight:700;margin-bottom:.3rem;color:#000}
 .step-content p{font-size:.85rem;color:var(--tp-gray-dark);line-height:1.7}
@@ -105,7 +104,7 @@ nav a[aria-current="page"]::after{width:100%;background:var(--tp-black)}
 
 /* Online Interview Tips */
 .tips-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;max-width:var(--max);margin:0 auto}
-.tip-card{background:var(--tp-white);border:1px solid var(--tp-light);border-radius:14px;padding:1.75rem 1.5rem;transition:var(--transition);position:relative}
+.tip-card{background:var(--tp-white);border:1px solid var(--tp-light);border-radius:16px;padding:1.75rem 1.5rem;transition:var(--transition);position:relative}
 .tip-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-gold);border-color:var(--gold-primary)}
 .tip-icon{width:48px;height:48px;border-radius:12px;background:var(--gold-pale);display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:1rem}
 .tip-card h3{font-size:1rem;font-weight:700;color:#000;margin-bottom:.4rem}
@@ -113,7 +112,7 @@ nav a[aria-current="page"]::after{width:100%;background:var(--tp-black)}
 
 /* Accordion */
 .acc-container{max-width:800px;margin:0 auto}
-.acc-item{background:var(--tp-white);border:1px solid var(--tp-light);border-radius:10px;margin-bottom:.75rem;overflow:hidden;transition:var(--transition)}
+.acc-item{background:var(--tp-white);border:1px solid var(--tp-light);border-radius:16px;margin-bottom:.75rem;overflow:hidden;transition:var(--transition)}
 .acc-item:hover{border-color:var(--gold-primary)}
 .acc-q{display:flex;justify-content:space-between;align-items:center;padding:1.1rem 1.25rem;font-weight:700;font-size:.95rem;color:#000;cursor:pointer;background:transparent;border:none;width:100%;text-align:left;font-family:inherit;transition:background .3s}
 .acc-q:hover{background:var(--gold-pale)}
@@ -125,18 +124,18 @@ nav a[aria-current="page"]::after{width:100%;background:var(--tp-black)}
 .acc-a li{font-size:.88rem;color:var(--tp-gray-dark);padding:.4rem 0 .4rem 1.25rem;position:relative;line-height:1.7}
 .acc-a li::before{content:'▸';position:absolute;left:0;color:var(--gold-dark);font-weight:700}
 
-/* Helper CTA */
-.helper-section{background:linear-gradient(135deg,#000 0%,#1a1a2e 100%);padding:3.5rem 20px;text-align:center;color:#fff}
-.helper-section h2{font-size:clamp(1.2rem,3vw,1.6rem);font-weight:900;color:var(--gold-primary);margin-bottom:.5rem;font-family:'Noto Serif SC',serif}
-.helper-section p{color:rgba(255,255,255,.75);max-width:600px;margin:0 auto;font-size:.9rem}
-.helper-btns{display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap;margin-top:1.5rem}
+/* Helper */
+.helper{background:#fff;border-top:1px solid var(--tp-light);border-bottom:1px solid var(--tp-light);padding:2rem 20px}
+.helper .inner{max-width:1000px;margin:0 auto;text-align:center}
+.helper h2{font-size:1.6rem;font-weight:900;color:#000;margin-bottom:.4rem;font-family:'Noto Serif SC',serif}
+.helper p{color:var(--tp-gray-dark)}
 
 /* Disclaimer */
 .disclaimer{max-width:var(--max);margin:1.5rem auto;padding:0 20px}
 .disclaimer-box{background:var(--tp-off);border:1px solid var(--tp-light);border-radius:8px;padding:1rem 1.25rem;font-size:.8rem;color:var(--tp-gray);text-align:center}
 
 /* Footer */
-footer{background:var(--tp-black);color:var(--tp-white);padding:40px 20px 16px;position:relative;overflow:hidden}
+footer{background:var(--tp-black);color:var(--tp-white);padding:40px 20px 16px;position:relative;overflow:hidden;margin-top:40px}
 footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,var(--gold-primary),transparent)}
 .footer-content{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:2fr repeat(3,1fr);gap:2rem;margin-bottom:2rem;padding-bottom:2rem;border-bottom:1px solid rgba(255,255,255,.1)}
 .footer-brand{display:flex;flex-direction:column;gap:.875rem}
@@ -158,9 +157,9 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
 /* Floating */
 .floating-apply{position:fixed;bottom:20px;right:20px;background:var(--tp-black);color:var(--tp-white);padding:.75rem 1.25rem;border-radius:50px;font-weight:600;box-shadow:0 4px 12px rgba(0,0,0,.3);z-index:999;transition:all .3s;border:2px solid var(--gold-primary);font-size:.85rem}
 .floating-apply:hover{transform:scale(1.05);box-shadow:var(--shadow-gold);background:var(--gold-primary);color:#000}
-.floating-ai{position:fixed;bottom:80px;right:20px;background:rgba(255,255,255,.9);color:#000;padding:.65rem 1.1rem;border-radius:50px;font-weight:600;box-shadow:0 4px 12px rgba(0,0,0,.15);z-index:998;transition:all .3s;border:2px solid #000;font-size:.8rem}
+.floating-ai{position:fixed;bottom:20px;right:130px;background:rgba(255,255,255,.9);color:#000;padding:.65rem 1.1rem;border-radius:50px;font-weight:600;box-shadow:0 4px 12px rgba(0,0,0,.15);z-index:998;transition:all .3s;border:2px solid #000;font-size:.8rem}
 .floating-ai:hover{transform:scale(1.05);box-shadow:var(--shadow-gold);border-color:var(--gold-primary)}
-.back-to-top{position:fixed;bottom:140px;right:24px;width:40px;height:40px;background:rgba(255,255,255,.9);border:2px solid var(--gold-primary);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:0;visibility:hidden;transition:all .3s;z-index:997;font-size:1rem;font-weight:bold;color:var(--gold-dark)}
+.back-to-top{position:fixed;bottom:80px;right:20px;width:40px;height:40px;background:rgba(255,255,255,.9);border:2px solid var(--gold-primary);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:0;visibility:hidden;transition:all .3s;z-index:997;font-size:1rem;font-weight:bold;color:var(--gold-dark)}
 .back-to-top.show{opacity:1;visibility:visible}
 .back-to-top:hover{background:var(--gold-primary);color:#000}
 
@@ -170,7 +169,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
 
 /* Responsive */
 @media(max-width:980px){.glance-grid{grid-template-columns:repeat(2,1fr)}.tips-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:768px){nav{display:none}.mobile-toggle{display:block}.glance-grid{grid-template-columns:1fr}.tips-grid{grid-template-columns:1fr}.timeline::before{left:20px}.step-number{width:40px;height:40px;font-size:.9rem}.footer-content{grid-template-columns:1fr;text-align:center}.hero-cta{flex-direction:column;align-items:center}.helper-btns{flex-direction:column;align-items:center}}
+@media(max-width:768px){nav{display:none}.mobile-toggle{display:block}.glance-grid{grid-template-columns:1fr}.tips-grid{grid-template-columns:1fr}.timeline::before{left:20px}.step-number{width:40px;height:40px;font-size:.9rem}.footer-content{grid-template-columns:1fr;text-align:center}.hero-cta{flex-direction:column;align-items:center}.floating-ai{bottom:80px;right:20px}.back-to-top{bottom:140px}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
 </style>
 </head>
@@ -195,8 +194,8 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
         <li><a href="salary-and-benefits.html" data-local="Salary & Benefits" data-expat="薪资福利">薪资福利</a></li>
         <li><a href="hiring-process.html" aria-current="page" data-local="Hiring Process" data-expat="招聘流程">招聘流程</a></li>
         <li><a href="why-malaysia-thailand.html" data-local="Why MY & TH" data-expat="为什么选择马来西亚和泰国">为什么选择马来西亚和泰国</a></li>
-        <li><a href="relocation-visa.html" data-local="Visa·Relocation" data-expat="签证·搬迁">签证·搬迁</a></li>
-        <li><a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=chinese" target="_blank" rel="noopener noreferrer" class="apply-btn" data-local="Apply Now" data-expat="立即申请">立即申请</a></li>
+        <li><a href="relocation-visa.html" data-local="Visa·Relocation" data-expat="签证与搬迁支持">签证与搬迁支持</a></li>
+        <li><a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=chinese" target="_blank" rel="noopener noreferrer" class="apply-btn" data-local="立即申请" data-expat="立即申请">立即申请</a></li>
         <li class="header-lang-switch"><button class="header-lang-btn" id="hdrLocal" onclick="setLanguage('local')">🇲🇾</button><button class="header-lang-btn active" id="hdrExpat" onclick="setLanguage('expat')">🌏</button></li>
       </ul>
     </nav>
@@ -210,8 +209,9 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
       <li><a href="salary-and-benefits.html" data-local="Salary & Benefits" data-expat="薪资福利">薪资福利</a></li>
       <li><a href="hiring-process.html" data-local="Hiring Process" data-expat="招聘流程">招聘流程</a></li>
       <li><a href="why-malaysia-thailand.html" data-local="Why MY & TH" data-expat="为什么选择马来西亚和泰国">为什么选择马来西亚和泰国</a></li>
-      <li><a href="relocation-visa.html" data-local="Visa·Relocation" data-expat="签证·搬迁">签证·搬迁</a></li>
-      <li><a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=chinese" target="_blank" rel="noopener noreferrer" class="apply-btn" data-local="Apply Now" data-expat="立即申请">立即申请</a></li>
+      <li><a href="relocation-visa.html" data-local="Visa·Relocation" data-expat="签证与搬迁支持">签证与搬迁支持</a></li>
+      <li><a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=chinese" target="_blank" rel="noopener noreferrer" class="apply-btn" data-local="立即申请" data-expat="立即申请">立即申请</a></li>
+      <li class="header-lang-switch" style="display:flex;justify-content:center;gap:8px;padding:0.75rem 1.25rem;border-top:2px solid var(--tp-light)"><button class="header-lang-btn" onclick="setLanguage('local')">🇲🇾 本地版</button><button class="header-lang-btn active" onclick="setLanguage('expat')">🌏 外派版</button></li>
     </ul>
   </nav>
 </header>
@@ -219,13 +219,13 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
 <main id="main">
 
   <!-- Hero -->
-  <section class="hero-dark">
+  <section class="hero">
     <h1 data-local="Hiring Process" data-expat="招聘流程">招聘流程</h1>
-    <p class="hero-sub" data-local="我们的中文Team会一路陪伴你。从Apply到Onboard，全程关怀和Support。" data-expat="华语招聘团队全程协助。从投递简历到成功入职，每一步都有专业指导。">华语招聘团队全程协助。从投递简历到成功入职，每一步都有专业指导。</p>
+    <p data-local="我们的中文Team会一路陪伴你。从Apply到Onboard，全程关怀和Support。" data-expat="华语招聘团队全程协助。从投递简历到成功入职，每一步都有专业指导。">华语招聘团队全程协助。从投递简历到成功入职，每一步都有专业指导。</p>
     <div class="hero-cta">
-      <a class="btn-hero-gold" href="open-jobs.html" data-local="🔍 View Jobs" data-expat="🔍 查看职位">🔍 查看职位</a>
-      <a class="btn-hero-outline" href="https://outlook.office.com/book/Chinese@teleperformance.onmicrosoft.com/s/tEpdSOHeX0SbvhMZg_dyvQ2?ismsaljsauthenabled" target="_blank" rel="noopener noreferrer" data-local="🗓️ Book Recruiter" data-expat="🗓️ 预约招聘顾问">🗓️ 预约招聘顾问</a>
-      <a class="btn-hero-outline" href="relocation-visa.html" data-local="✈️ Visa Support" data-expat="✈️ 签证支持">✈️ 签证支持</a>
+      <a class="btn" href="open-jobs.html" data-local="🔍 View Jobs" data-expat="🔍 查看职位">🔍 查看职位</a>
+      <a class="btn-solid" href="https://outlook.office.com/book/Chinese@teleperformance.onmicrosoft.com/s/tEpdSOHeX0SbvhMZg_dyvQ2?ismsaljsauthenabled" target="_blank" rel="noopener noreferrer" data-local="🗓️ Book Recruiter" data-expat="🗓️ 预约招聘顾问">🗓️ 预约招聘顾问</a>
+      <a class="btn" href="relocation-visa.html" data-local="✈️ Visa Support" data-expat="✈️ 签证支持">✈️ 签证支持</a>
     </div>
   </section>
 
@@ -402,13 +402,15 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
   </div>
 
   <!-- Helper CTA -->
-  <section class="helper-section">
-    <h2 data-local="想先Chat一下？" data-expat="想先了解一下？">想先了解一下？</h2>
-    <p data-local="非正式Casual Chat（约30分钟），可以Consult工作、Life、Visa等各种Question。没有Pressure，随时Welcome。" data-expat="轻松对话（约30分钟），可以咨询工作、生活、签证等各种问题。没有压力，随时欢迎。">轻松对话（约30分钟），可以咨询工作、生活、签证等各种问题。没有压力，随时欢迎。</p>
-    <div class="helper-btns">
-      <a class="btn-hero-gold" href="https://outlook.office.com/book/Chinese@teleperformance.onmicrosoft.com/s/tEpdSOHeX0SbvhMZg_dyvQ2?ismsaljsauthenabled" target="_blank" rel="noopener noreferrer" data-local="🗓️ Book Recruiter" data-expat="🗓️ 预约招聘顾问">🗓️ 预约招聘顾问</a>
-      <a class="btn-hero-outline" href="https://app.hallo.ai/teleperformance/ai-assessment/interview/zh?assessmentTypeId=VEhDOEFMRHdKWmtZdFoxREJjMHQ=" target="_blank" rel="noopener noreferrer" data-local="🤖 AI Assessment" data-expat="🤖 AI 能力评估">🤖 AI 能力评估</a>
-      <a class="btn-hero-outline" href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=chinese" target="_blank" rel="noopener noreferrer" data-local="✍️ Apply Now" data-expat="✍️ 立即申请">✍️ 立即申请</a>
+  <section class="helper">
+    <div class="inner">
+      <h2 data-local="想先Chat一下？" data-expat="想先了解一下？">想先了解一下？</h2>
+      <p data-local="非正式Casual Chat（约30分钟），可以Consult工作、Life、Visa等各种Question。没有Pressure，随时Welcome。" data-expat="轻松对话（约30分钟），可以咨询工作、生活、签证等各种问题。没有压力，随时欢迎。">轻松对话（约30分钟），可以咨询工作、生活、签证等各种问题。没有压力，随时欢迎。</p>
+      <div style="margin-top:.8rem">
+        <a class="btn-solid" href="https://outlook.office.com/book/Chinese@teleperformance.onmicrosoft.com/s/tEpdSOHeX0SbvhMZg_dyvQ2?ismsaljsauthenabled" target="_blank" rel="noopener noreferrer" data-local="🗓️ Book Recruiter" data-expat="🗓️ 预约招聘顾问">🗓️ 预约招聘顾问</a>
+        <a class="btn" href="https://app.hallo.ai/teleperformance/ai-assessment/interview/zh?assessmentTypeId=VEhDOEFMRHdKWmtZdFoxREJjMHQ=" target="_blank" rel="noopener noreferrer" style="margin-left:.5rem" data-local="🤖 AI Assessment" data-expat="🤖 AI 能力评估">🤖 AI 能力评估</a>
+        <a class="btn" href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=chinese" target="_blank" rel="noopener noreferrer" style="margin-left:.5rem" data-local="✍️ 立即申请" data-expat="✍️ 立即申请">✍️ 立即申请</a>
+      </div>
     </div>
   </section>
 
@@ -428,12 +430,12 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
   </div>
   <div class="footer-bottom">
     <p class="ssm-info">Teleperformance Malaysia Sdn Bhd 的 SSM（马来西亚公司委员会）注册号为 201601023769 (1194708-K)</p>
-    <p>&copy; 2026 TP. All rights reserved. | <a href="#" data-local="Privacy Policy" data-expat="隐私政策">隐私政策</a> | <a href="#" data-local="Terms of Use" data-expat="使用条款">使用条款</a></p>
+    <p>&copy; 2026 TP. All rights reserved. <!-- | <a href="#" data-local="Privacy Policy" data-expat="隐私政策">隐私政策</a> | <a href="#" data-local="Terms of Use" data-expat="使用条款">使用条款</a> --></p>
   </div>
 </footer>
 
 <!-- Floating Buttons -->
-<a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=chinese" target="_blank" rel="noopener noreferrer" class="floating-apply" data-local="Apply Now" data-expat="立即申请">立即申请</a>
+<a href="https://careerseng-teleperformance.icims.com/jobs/search?ss=1&searchKeyword=chinese" target="_blank" rel="noopener noreferrer" class="floating-apply" data-local="立即申请" data-expat="立即申请">立即申请</a>
 <a href="https://app.hallo.ai/teleperformance/ai-assessment/interview/zh?assessmentTypeId=VEhDOEFMRHdKWmtZdFoxREJjMHQ=" target="_blank" rel="noopener noreferrer" class="floating-ai" data-local="🤖 AI Assessment" data-expat="🤖 AI 能力评估">🤖 AI 能力评估</a>
 <button class="back-to-top" id="backToTop">↑</button>
 
@@ -458,6 +460,9 @@ btt.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
 // Scroll Fade
 const obs=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:.1});
 document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
+
+// UTM Parameter Persistence
+(function(){var utmKeys=['utm_source','utm_medium','utm_campaign','utm_content','utm_term','lang'];var params=new URLSearchParams(window.location.search);var stored=JSON.parse(sessionStorage.getItem('mlpUTM')||'{}');var hasNew=false;utmKeys.forEach(function(k){var v=params.get(k);if(v){stored[k]=v;hasNew=true}});if(hasNew)sessionStorage.setItem('mlpUTM',JSON.stringify(stored));function appendUTM(){var u=JSON.parse(sessionStorage.getItem('mlpUTM')||'{}');if(!Object.keys(u).length)return;document.querySelectorAll('a[href]').forEach(function(a){var h=a.getAttribute('href');if(!h||h.startsWith('#')||h.startsWith('mailto:')||h.startsWith('tel:'))return;try{var isRel=!h.match(/^https?:\/\//);var url=new URL(h,window.location.origin);Object.keys(u).forEach(function(k){if(!url.searchParams.has(k))url.searchParams.set(k,u[k])});a.setAttribute('href',isRel?url.pathname+url.search+url.hash:url.href)}catch(e){}})}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',appendUTM)}else{appendUTM()}})();
 </script>
 </body>
 </html>
