@@ -1,0 +1,50 @@
+# TP 马来西亚·泰国 华语人才招聘 (Mandarin)
+
+> TP（Teleperformance）马来西亚·泰国华语人才官方招聘页面。在槟城、吉隆坡、柔佛、曼谷及居家办公岗位，用华语工作，提供签证与搬迁支持。页面提供本地版与外派版两个中文版本。运营：TP Talent Acquisition。
+> Official Mandarin-language careers page of TP (formerly Teleperformance) Malaysia and Thailand for Mandarin speakers in Penang, Kuala Lumpur, Johor, Bangkok and work-from-home, with visa and relocation support.
+
+TP于1978年在法国巴黎成立，是全球领先的业务流程外包企业，在全球100多个国家运营，拥有超过50万名员工，并连续5年获得 Great Place to Work®「World's Best Workplaces™」认证。马来西亚法人：Teleperformance Malaysia Sdn Bhd（SSM 201601023769 (1194708-K)）。
+
+## 重点信息
+
+- 工作地点：槟城（Livingston、One Precinct、GBS@Mahsuri）、吉隆坡（G Tower、KCP、Sunway）、柔佛（新办公地点）、曼谷（Singha Complex）以及部分职位居家办公。
+- 语言：很多职位以华语为主；公司内部沟通有时需要基础英语，并提供GoFluent等语言支持。
+- 福利：医疗保险、搬迁支持（单程机票·初期住宿）、各类津贴（夜班·住房·加班）、语言培训（GoFluent·Bootcamp）、职业支持（内部调动·晋升制度）、带薪年假。
+- 签证：公司代办申请，从文件准备到批准全程华语支持。
+- 住房：介绍当地中介并在入职培训中提供建议；马来西亚会安排临时住宿。
+- 工作时间：根据项目而异，有日班项目，也有轮班制项目。
+- AI 能力评估：在线AI面试工具，约15-20分钟，可随时完成。
+
+## 招聘流程（全部在线完成，每个步骤都有华语支持）
+
+1. 简历筛选
+2. 在线测试：语言·能力简短测试
+3. 一面（招聘面试）
+4. 二面（运营面试）：与配属团队面谈
+5. 录用·签证手续：从签证申请到出行全程陪同
+
+## 页面
+
+- [首页](https://tpmyandtpth.github.io/MLP/)
+- [职位列表](https://tpmyandtpth.github.io/MLP/open-jobs.html)
+- [关于TP](https://tpmyandtpth.github.io/MLP/about-tp.html)
+- [薪资福利](https://tpmyandtpth.github.io/MLP/salary-and-benefits.html)
+- [招聘流程](https://tpmyandtpth.github.io/MLP/hiring-process.html)
+- [签证与搬迁支持](https://tpmyandtpth.github.io/MLP/relocation-visa.html)
+- [为什么选择马来西亚和泰国](https://tpmyandtpth.github.io/MLP/why-malaysia-thailand.html)
+- [生活成本](https://tpmyandtpth.github.io/MLP/cost-of-living.html)
+- [当地生活](https://tpmyandtpth.github.io/MLP/daily-life-malaysia.html)
+- [办公室周边](https://tpmyandtpth.github.io/MLP/area-around-office.html)
+- [办公环境](https://tpmyandtpth.github.io/MLP/office-environment.html)
+- [招聘团队](https://tpmyandtpth.github.io/MLP/ta-team.html)
+- [AI 能力评估](https://tpmyandtpth.github.io/MLP/casual-interview.html)：在线AI面试，约15-20分钟
+- [推荐好友奖励](https://tpmyandtpth.github.io/MLP/external-raf.html)
+
+## 申请与联系
+
+- [搜索并申请职位（iCIMS）](https://careerseng-teleperformance.icims.com/jobs/search)
+
+## 其他语言
+
+- [TP 马来西亚·泰国 职位中心](https://tpmyandtpth.github.io/LP/)
+- [English](https://tpmyandtpth.github.io/ELP/llms.txt) · [Japanese](https://tpmyandtpth.github.io/JLP/llms.txt) · [Korean](https://tpmyandtpth.github.io/KLP/llms.txt) · [Thailand](https://tpmyandtpth.github.io/TLP/llms.txt)
